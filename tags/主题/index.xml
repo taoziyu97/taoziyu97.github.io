@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>主题 on Hugo Future Imperfect Slim</title>
+    <title>主题 on ZIYU的博客</title>
     <link>https://taoziyu97.github.io/tags/%E4%B8%BB%E9%A2%98/</link>
-    <description>Recent content in 主题 on Hugo Future Imperfect Slim</description>
+    <description>Recent content in 主题 on ZIYU的博客</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language><atom:link href="https://taoziyu97.github.io/tags/%E4%B8%BB%E9%A2%98/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language>
+    <lastBuildDate>Mon, 11 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://taoziyu97.github.io/tags/%E4%B8%BB%E9%A2%98/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hugo&#43;Github&#43;阿里云域名搭建个人博客</title>
       <link>https://taoziyu97.github.io/post/2021-1-11-build_blog/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 11 Jan 2021 00:00:00 +0000</pubDate>
       
       <guid>https://taoziyu97.github.io/post/2021-1-11-build_blog/</guid>
       <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;

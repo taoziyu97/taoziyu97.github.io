@@ -57,60 +57,6 @@
   </url>
   
   <url>
-    <loc>https://taoziyu97.github.io/ja/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://taoziyu97.github.io/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="https://taoziyu97.github.io/fr/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pl"
-                href="https://taoziyu97.github.io/pl/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="https://taoziyu97.github.io/pt/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="de"
-                href="https://taoziyu97.github.io/de/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://taoziyu97.github.io/es/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://taoziyu97.github.io/zh-cn/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-tw"
-                href="https://taoziyu97.github.io/zh-tw/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="nl"
-                href="https://taoziyu97.github.io/nl/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://taoziyu97.github.io/ja/"
-                />
-  </url>
-  
-  <url>
     <loc>https://taoziyu97.github.io/ja/tags/</loc>
     <xhtml:link
                 rel="alternate"
@@ -161,6 +107,60 @@
                 rel="alternate"
                 hreflang="ja"
                 href="https://taoziyu97.github.io/ja/tags/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://taoziyu97.github.io/ja/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://taoziyu97.github.io/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://taoziyu97.github.io/fr/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pl"
+                href="https://taoziyu97.github.io/pl/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="https://taoziyu97.github.io/pt/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="de"
+                href="https://taoziyu97.github.io/de/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://taoziyu97.github.io/es/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://taoziyu97.github.io/zh-cn/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-tw"
+                href="https://taoziyu97.github.io/zh-tw/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="nl"
+                href="https://taoziyu97.github.io/nl/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://taoziyu97.github.io/ja/"
                 />
   </url>
   

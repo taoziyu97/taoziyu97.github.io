@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>markdown on ZIYU的博客</title>
-    <link>https://taoziyu97.github.io/tags/markdown/</link>
-    <description>Recent content in markdown on ZIYU的博客</description>
+    <title>实用技术 on ZIYU的博客</title>
+    <link>https://taoziyu97.github.io/categories/%E5%AE%9E%E7%94%A8%E6%8A%80%E6%9C%AF/</link>
+    <description>Recent content in 实用技术 on ZIYU的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 11 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://taoziyu97.github.io/tags/markdown/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 11 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://taoziyu97.github.io/categories/%E5%AE%9E%E7%94%A8%E6%8A%80%E6%9C%AF/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hugo&#43;Github&#43;阿里云域名搭建个人博客</title>
       <link>https://taoziyu97.github.io/post/2021-1-11-build_blog/</link>
