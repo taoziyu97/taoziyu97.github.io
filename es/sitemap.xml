@@ -57,6 +57,30 @@
   </url>
   
   <url>
+    <loc>https://taoziyu97.github.io/es/contact/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://taoziyu97.github.io/contact/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="de"
+                href="https://taoziyu97.github.io/de/contact/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://taoziyu97.github.io/zh-cn/contact/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://taoziyu97.github.io/es/contact/"
+                />
+  </url>
+  
+  <url>
     <loc>https://taoziyu97.github.io/es/tags/</loc>
     <xhtml:link
                 rel="alternate"
