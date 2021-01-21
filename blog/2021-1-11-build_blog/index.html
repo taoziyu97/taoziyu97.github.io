@@ -330,9 +330,10 @@ cp themes/hugo-future-imperfect-slim/exampleSite/config.toml . <span style="colo
 <p>像轩哥用的主题  <a href="https://github.com/spf13/hyde">hyde</a>，根据其在github上的安装提示，对blog目录下的config文件首行增加<code>theme = &quot;hyde&quot;</code> 即可，无需拷贝模板的config文件。</p>
 <p>以及主题 <a href="https://github.com/ahmedsaadxyzz/npq-hugo">npq-hugo</a>，它的模板config文件不在exampleSite目录下，而是<code>themes/npq-hugo/example-config.toml</code>。</p>
 <ul>
-<li>创建新博文</li>
+<li>回到blog目录下创建新博文</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">hugo new posts/test.md <span style="color:#75715e">#会在content/post文件夹下创建test.md的文件，可以直接对其进行修改</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">cd ..
+hugo new posts/test.md <span style="color:#75715e">#会在content/post文件夹下创建test.md的文件，可以直接对其进行修改</span>
 </code></pre></div><p>开始可能不会修改，可以根据主题目录中的范例进行模仿，我选择主题的范例文件储存在：</p>
 <p><code>blog/themes/hugo-future-imperfect-slim/exampleSite/content/blog</code></p>
 <ul>
