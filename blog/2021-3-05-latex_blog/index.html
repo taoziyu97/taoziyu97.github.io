@@ -1,0 +1,743 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+<title>使用Latex写论文 - ZIYU的博客</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<meta name="generator" content="Hugo 0.80.0" /><meta property="og:site_name" content="ZIYU的博客">
+  <meta property="og:title" content="使用Latex写论文">
+  <meta property="og:description" content="使用Latex写论文可以减少排版的时间，对文献引用以及排序非常友好。 last update：2021-03-05">
+  <meta property="description" content="使用Latex写论文可以减少排版的时间，对文献引用以及排序非常友好。 last update：2021-03-05">
+  <meta property="og:url" content="https://taoziyu97.github.io/blog/2021-3-05-latex_blog/">
+  <meta property="og:type" content="article">
+  
+    
+      <meta property="og:image" content="https://taoziyu97.github.io/img/2021/buildblog/Latex.jpg">
+      <meta property="og:image:alt" content="Mountain Range Through Clouds">
+    
+  
+  <link rel="stylesheet" href="/css/bundle.min.d9e04ae08c9b3049b766dbd4aeab7d862c5ea1d13679b621490e0f5df5507497.css" integrity="sha256-2eBK4IybMEm3ZtvUrqt9hixeodE2ebYhSQ4PXfVQdJc="><link rel="stylesheet" href="/css/add-on.css">
+</head>
+
+  <body>
+    
+
+<header id="site-header">
+  <nav id="site-nav">
+    <h1 class="nav-title">
+      <a href="/" class="nav">
+        
+          Blog
+        
+      </a>
+    </h1>
+    <menu id="site-nav-menu" class="flyout-menu menu">
+      
+        
+          
+          <a href="/" class="nav link"><i class='fa fa-home'></i> Home</a>
+        
+      
+        
+          
+          <a href="/about/" class="nav link"><i class='far fa-id-card'></i> About</a>
+        
+      
+        
+          
+          <a href="/categories/" class="nav link"><i class='fas fa-sitemap'></i> Categories</a>
+        
+      
+        
+          
+          <a href="/book/" class="nav link"><i class='far fa-newspaper'></i> BOOK</a>
+        
+      
+        
+          
+          <a href="/contact/" class="nav link"><i class='far fa-envelope'></i> Contact</a>
+        
+      
+      <a href="#share-menu" class="nav link share-toggle"><i class="fas fa-share-alt">&nbsp;</i>Share</a>
+      <a href="#search-input" class="nav link search-toggle"><i class="fas fa-search">&nbsp;</i>Search</a>
+    </menu>
+    <a href="#search-input" class="nav search-toggle"><i class="fas fa-search fa-2x">&nbsp;</i></a>
+    <a href="#share-menu" class="nav share-toggle"><i class="fas fa-share-alt fa-2x">&nbsp;</i></a>
+    <a href="#lang-menu" class="nav lang-toggle" lang="en">en</a>
+    <a href="#site-nav" class="nav nav-toggle"><i class="fas fa-bars fa-2x"></i></a>
+  </nav>
+  <menu id="search" class="menu"><input id="search-input" class="search-input menu"></input><div id="search-results" class="search-results menu"></div></menu>
+  <menu id="lang-menu" class="flyout-menu menu">
+  <a href="#" lang="en" class="nav link active">English (en)</a>
+  
+    
+      
+    
+      
+        <a href="/fr" lang="fr" class="nav no-lang link">Français (fr)</a>
+      
+    
+      
+        <a href="/pl" lang="pl" class="nav no-lang link">Polski (pl)</a>
+      
+    
+      
+        <a href="/pt" lang="pt" class="nav no-lang link">Português (pt)</a>
+      
+    
+      
+        <a href="/de" lang="de" class="nav no-lang link">Deutsche (de)</a>
+      
+    
+      
+        <a href="/es" lang="es" class="nav no-lang link">Española (es)</a>
+      
+    
+      
+        <a href="/zh-cn" lang="zh-cn" class="nav no-lang link">中文 (zh-cn)</a>
+      
+    
+      
+        <a href="/zh-tw" lang="zh-tw" class="nav no-lang link">中文 (zh-tw)</a>
+      
+    
+      
+        <a href="/ja" lang="ja" class="nav no-lang link">日本語 (ja)</a>
+      
+    
+      
+        <a href="/nl" lang="nl" class="nav no-lang link">Nederlands (nl)</a>
+      
+    
+  
+</menu>
+
+  
+    <menu id="share-menu" class="flyout-menu menu">
+      <h1>Share Post</h1>
+      
+
+
+
+
+  
+    
+    <a href="//twitter.com/share?text=%e4%bd%bf%e7%94%a8Latex%e5%86%99%e8%ae%ba%e6%96%87&amp;url=https%3a%2f%2ftaoziyu97.github.io%2fblog%2f2021-3-05-latex_blog%2f" target="_blank" rel="noopener" class="nav share-btn twitter">
+        <p>Twitter</p>
+      </a>
+  
+
+  
+      <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2ftaoziyu97.github.io%2fblog%2f2021-3-05-latex_blog%2f" target="_blank" rel="noopener" class="nav share-btn facebook">
+        <p>Facebook</p>
+        </a>
+  
+
+  
+    <a href="//www.reddit.com/submit?url=https%3a%2f%2ftaoziyu97.github.io%2fblog%2f2021-3-05-latex_blog%2f&amp;title=%e4%bd%bf%e7%94%a8Latex%e5%86%99%e8%ae%ba%e6%96%87" target="_blank" rel="noopener" class="nav share-btn reddit">
+          <p>Reddit</p>
+        </a>
+  
+
+  
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2ftaoziyu97.github.io%2fblog%2f2021-3-05-latex_blog%2f&amp;title=%e4%bd%bf%e7%94%a8Latex%e5%86%99%e8%ae%ba%e6%96%87" target="_blank" rel="noopener" class="nav share-btn linkedin">
+            <p>LinkedIn</p>
+          </a>
+  
+
+  
+        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2ftaoziyu97.github.io%2fblog%2f2021-3-05-latex_blog%2f&amp;description=%e4%bd%bf%e7%94%a8Latex%e5%86%99%e8%ae%ba%e6%96%87" target="_blank" rel="noopener" class="nav share-btn pinterest">
+          <p>Pinterest</p>
+        </a>
+  
+
+  
+        <a href="mailto:?subject=Check%20out%20this%20post%20by Ziyu&amp;body=https%3a%2f%2ftaoziyu97.github.io%2fblog%2f2021-3-05-latex_blog%2f" target="_blank" class="nav share-btn email" data-proofer-ignore>
+          <p>Email</p>
+        </a>
+  
+
+
+    </menu>
+  
+</header>
+
+    <div id="wrapper">
+      <section id="site-intro" >
+  <a href="/"><img src="https://taoziyu97.github.io/img/main/taoziyu.jpg" class="circle" width="200" alt="Hugo Future Imperfect Slim" /></a>
+  <header>
+    <h1>Ziyu Blog</h1>
+  </header>
+  <main>
+    <p>Another fine, responsive site template by <a href='http://html5up.net'>HTML5 UP</a>.</p>
+  </main>
+  
+    <footer>
+      <ul class="socnet-icons">
+        
+
+        <li><a href="//github.com/taoziyu97" target="_blank" rel="noopener" title="GitHub" class="fab fa-github"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="//orcid.org/https://orcid.org/0000-0003-3272-1227" target="_blank" rel="noopener" title="ORCID"><i class="ai ai-orcid"></i></a></li>
+
+
+
+<li><a href="mailto:baomihai@sina.com" target="_blank" title="Email" class="far fa-envelope"></a></li>
+
+      </ul>
+    </footer>
+  
+</section>
+
+      <main id="site-main">
+        
+  <article class="post">
+    <header>
+  <div class="title">
+    
+      <h2><a href="/blog/2021-3-05-latex_blog/">使用Latex写论文</a></h2>
+    
+    
+      <p>使用Latex写论文可以减少排版的时间，对文献引用以及排序非常友好。 last update：2021-03-05</p>
+    
+  </div>
+  <div class="meta">
+    <time datetime="0001-01-01 00:00:00 &#43;0000 UTC">January 1, 0001</time>
+    <p>Ziyu</p>
+    <p>2-Minute Read</p>
+  </div>
+</header>
+
+    <div id="socnet-share">
+      
+
+
+
+
+  
+    
+    <a href="//twitter.com/share?text=%e4%bd%bf%e7%94%a8Latex%e5%86%99%e8%ae%ba%e6%96%87&amp;url=https%3a%2f%2ftaoziyu97.github.io%2fblog%2f2021-3-05-latex_blog%2f" target="_blank" rel="noopener" class="nav share-btn twitter">
+        <p>Twitter</p>
+      </a>
+  
+
+  
+      <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2ftaoziyu97.github.io%2fblog%2f2021-3-05-latex_blog%2f" target="_blank" rel="noopener" class="nav share-btn facebook">
+        <p>Facebook</p>
+        </a>
+  
+
+  
+    <a href="//www.reddit.com/submit?url=https%3a%2f%2ftaoziyu97.github.io%2fblog%2f2021-3-05-latex_blog%2f&amp;title=%e4%bd%bf%e7%94%a8Latex%e5%86%99%e8%ae%ba%e6%96%87" target="_blank" rel="noopener" class="nav share-btn reddit">
+          <p>Reddit</p>
+        </a>
+  
+
+  
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2ftaoziyu97.github.io%2fblog%2f2021-3-05-latex_blog%2f&amp;title=%e4%bd%bf%e7%94%a8Latex%e5%86%99%e8%ae%ba%e6%96%87" target="_blank" rel="noopener" class="nav share-btn linkedin">
+            <p>LinkedIn</p>
+          </a>
+  
+
+  
+        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2ftaoziyu97.github.io%2fblog%2f2021-3-05-latex_blog%2f&amp;description=%e4%bd%bf%e7%94%a8Latex%e5%86%99%e8%ae%ba%e6%96%87" target="_blank" rel="noopener" class="nav share-btn pinterest">
+          <p>Pinterest</p>
+        </a>
+  
+
+  
+        <a href="mailto:?subject=Check%20out%20this%20post%20by Ziyu&amp;body=https%3a%2f%2ftaoziyu97.github.io%2fblog%2f2021-3-05-latex_blog%2f" target="_blank" class="nav share-btn email" data-proofer-ignore>
+          <p>Email</p>
+        </a>
+  
+
+
+    </div>
+    <div class="content">
+      <a href="/blog/2021-3-05-latex_blog/" class="image" style="--bg-image: url('https://taoziyu97.github.io/img/2021/buildblog/Latex.jpg');">
+    <img class="stretchH" src="https://taoziyu97.github.io/img/2021/buildblog/Latex.jpg" alt="Mountain Range Through Clouds">
+  </a>
+      <h2 id="前言">前言</h2>
+<p>最近写文章的时候，发现修改时调整参考文献的引用，是一件非常麻烦的事情，于是找到了一种简便的方法进行调整，发现了用Latex写论文原来这么好用。</p>
+<h2 id="主要内容">主要内容</h2>
+<ul>
+<li>模板的使用</li>
+<li>文献的引用</li>
+<li>排版的调整</li>
+<li>特殊符号的引用</li>
+<li>图片表格的插入</li>
+</ul>
+<h2 id="使用的工具">使用的工具</h2>
+<ul>
+<li>Oneleaf —— Online LaTeX Editor</li>
+</ul>
+<p>优点：不用本地搭建环境；在线编辑并渲染；部分投稿期刊直接提供链接模板。</p>
+<ul>
+<li>
+<p>MacTeX—— For mac</p>
+</li>
+<li>
+<p>TexWorks —— For windows</p>
+</li>
+</ul>
+<p>先来个简单的应用示例感受一下实用性。</p>
+<h2 id="oneleaf-示例">Oneleaf 示例</h2>
+<h3 id="1-模板的使用">1. 模板的使用</h3>
+<h4 id="进入-oneleaf模板httpswwwoverleafcomlatextemplates选择合适的模板">进入 <a href="https://www.overleaf.com/latex/templates">Oneleaf模板</a>，选择合适的模板</h4>
+<p>这其中包括<a href="https://www.overleaf.com/latex/templates/thesis-template-for-the-university-of-chinese-academy-of-sciences/fhbvbjrrgtwx">国科大的毕业论文模板</a>、<a href="https://www.overleaf.com/latex/templates/research-proposal-template-for-ucas/tcjqfcxgsbfr">开题报告模板</a>，以及各种杂志期刊、简历、信件、海报、报告、作业和写书的模板等等（部分期刊杂志会提供Oneleaf的模板）。</p>
+<center class="half">
+    <img src="https://i.loli.net/2021/03/05/SoAgT5dBGfaK3Y1.png" width="400"/>
+    <img src="https://i.loli.net/2021/03/05/osz41c38kgprZf6.png" width="400"/>
+</center>
+<h4 id="以论文写作为例">以论文写作为例</h4>
+<p>随便打开一个<a href="https://www.overleaf.com/latex/templates/submission-template-for-journal-of-photonics-research/jhgrbsdsmdpw">模板</a>，打开模板，可以看到在右边是实时的渲染结果，左边就是可以编辑的部分。</p>
+<center>
+    <img src= "https://i.loli.net/2021/03/05/VEvczSxWZDHLP4m.png" width="800"/>
+</center>
+<p>左边的当前目录下存储了4个文件：</p>
+<ul>
+<li>以<code>.bib</code>结尾的文件</li>
+</ul>
+<p>通常用来存储引用文献的信息，其中引用文献都需要用特定的格式，可以通过谷歌学术、百度学术或者其它方式进行导出（谷歌学术的导出功能经常会崩溃）。</p>
+<ul>
+<li>以<code>.bst</code>结尾的文件</li>
+</ul>
+<p>这个文件通常由期刊或杂志提供，设置了参考文献出现的文章结尾的方式，比如：设置排序方式，设置作者名称是缩写还是全称，标题的大小写等等，一般不需要自行维护，而且可以根据自己的需求来直接在<code>.tex</code>中重新调整。</p>
+<ul>
+<li>以<code>.tex</code>结尾的文件</li>
+</ul>
+<p>这个是我们进行文档内容编辑的文件，可以在这个文件中加载宏包，进行内容以及格式的更改。</p>
+<ul>
+<li>以<code>.cls</code>结尾的文件</li>
+</ul>
+<p>这个文件通常是类文件，通过文档最前面的<code>\documentclass</code>导入，这里的<code>\documentclass[options]{class}</code>是用来指定文档类型的，可以通过options参数来定制文档类的属性，不同的选项之间需要用逗号隔开，比如这里的<code>\documentclass[final,3p]{CSP}</code>，其中<code>final</code>指的不在页面的边缘标记一个黑色框，这个3p对它的解释是：</p>
+<blockquote>
+<p>formats the article to the look and feel of the final format of model 3+ journals.</p>
+</blockquote>
+<p>我没明白这个3+model是什么意思，但是通过调试，发现这个数字越大，页面距就越大。</p>
+<p>另外别的模板中还存在这些文件：</p>
+<ul>
+<li><code>.bbl</code>文件</li>
+</ul>
+<p>这是编译之后形成的文件，这里直接就显示了编译后的形式，可以直接下载PDF文件。</p>
+<ul>
+<li><code>.sty</code>文件</li>
+</ul>
+<p>这是包文件，通常使用<code>\usepackage</code>导入，在本地使用的时候可能会用到这个。</p>
+<h3 id="2-内容的编辑以及参考文献的引用">2. 内容的编辑以及参考文献的引用</h3>
+<h4 id="内容的编辑">内容的编辑</h4>
+<p>载入宏包的方法是在文档开始前<code>\begin{document}</code>，写入<code>\usepackage{package}</code></p>
+<p>这里介绍几个常用的宏包：</p>
+<ul>
+<li>
+<p>数学公式 - amsmath</p>
+</li>
+<li>
+<p>插图 - graphicx</p>
+</li>
+<li>
+<p>颜色 - xcolor</p>
+</li>
+<li>
+<p>表格 - array</p>
+</li>
+<li>
+<p>中文 - ctex, xecjk</p>
+</li>
+<li>
+<p>西文 otf 字体 - fontspec</p>
+</li>
+<li>
+<p>英文下划线 - geometry</p>
+</li>
+</ul>
+<p>特别的，当要使用英文下划线<code>-</code>时，比如写入sigminer包中的函数名<code>read_maf</code>时，并不能直接识别下划线，需要载入该包来处理，或者给每处下划线改成<code>\_</code>也可以不用载入包来识别。</p>
+<ul>
+<li>超链接 - hyperref</li>
+</ul>
+<p>语法：<code>\usepackage[backref, colorlinks,linkcolor=blue]{hyperref}</code></p>
+<p>加入超链接，同时将文献也超链接到reference中，并且设置超链接的颜色，常用的设为蓝色或者黑色。</p>
+<h4 id="文献的引用">文献的引用</h4>
+<ul>
+<li>
+<p>保存引用文献信息
+谷歌学术中可以直接得到BibTex这种引用格式，将文献信息存储在<code>.txt</code>中，然后更改后缀为<code>.bib</code>即可。</p>
+</li>
+<li>
+<p>在<strong>tex</strong>文件中对引用格式进行设置</p>
+</li>
+</ul>
+<p>在文档结束位置<code>\end{document}</code>前，增加对参考文献格式以及引用的设置，比如：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">\bibliographystyle{bibft}\it
+\bibliography{bibfile}
+</code></pre></div><p><strong>bibft</strong>表示的调用模板自带的格式，这是由<code>.cls</code>文件定义的，bibfile就是制作好的<strong>bibtex</strong>文件，</p>
+<p>注意这里的文献引用格式有很多种，除了模板中定义的格式，可以通过参数的调整将格式更改为自己想要的，比如常用的，在方括号中标注数字，并且根据文献引用的先后顺序对reference排序：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">\<span style="color:#66d9ef">begin</span>{document}
+\bibliographystyle{unsrt}
+
+\bibliographystyle{unsrt}
+\bibliography{bibfile.bib}
+\<span style="color:#66d9ef">end</span>{document}
+</code></pre></div><p>我认为LaTex对我来说最方便的地方就是这里，<font color=red>能够根据文献引用的顺序对reference进行自动排序</font></p>
+<ul>
+<li>在<strong>tex</strong>文件中进行引用</li>
+</ul>
+<p>通常在正文中有很常见的几种文献引用格式：
+温哥华格式（上标形式）
+哈佛格式（直接显示作者和发表年份）
+IEEE 格式（方括号内标注引用顺序）</p>
+<p>在文中一般使用<code>\cite{}</code>进行引用，括号中的内容就是BibTex中的第一个参数，这个是可以自定义的，通常都是作者的姓或者名+发表年份+论文题目的首个单词。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">@inproceedings{song2013hierarchical,
+  title={Hierarchical representation using NMF},
+  author={Song, Hyun Ah and Lee, Soo-Young},
+  booktitle={International conference on neural information processing},
+  pages={466--473},
+  year={2013},
+  organization={Springer}
+}
+</code></pre></div><p>另外还有宏包<code>natbib</code>，通过不同形式的cite比如：</p>
+<p><code>\citet</code>：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">\citet{jon90}
+<span style="color:#75715e">##</span>
+Jones et al. (1990)
+</code></pre></div><p><code>\citep</code>：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">\citep{jon90}	
+<span style="color:#75715e">##</span>
+(Jones et al., 1990)
+</code></pre></div><p><code>\citeyear</code>：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">\citeyearpar{jon90}
+<span style="color:#75715e">##</span>
+(1990)
+</code></pre></div><p>&hellip;&hellip;</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">\usepackage<span style="color:#66d9ef">[option]</span>{natbib}
+
+\bibliographystyle{natbib}
+\bibliography{bibfile}
+</code></pre></div><h3 id="3-表格的制作">3. 表格的制作</h3>
+<p>以sigminer的function表格为例，基本格式和要素如下（2行2列表格）：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">\documentclass{article} 
+\usepackage{float}<span style="color:#66d9ef">%</span>提供float浮动环境
+\usepackage{makecell} %<span style="color:#66d9ef">%</span>用来基线
+\<span style="color:#66d9ef">begin</span>{table}<span style="color:#66d9ef">[h]</span>
+\centering %<span style="color:#66d9ef">%</span>表居中
+\caption{table} %<span style="color:#66d9ef">%</span>表格标题
+
+\<span style="color:#66d9ef">begin</span>{tabular}{|c|c|} %%{cc} 表示各列元素对齐方式<span style="color:#960050;background-color:#1e0010">，</span>left-l,right-r,center-c<span style="color:#960050;background-color:#1e0010">，</span>两个c表示两列<span style="color:#960050;background-color:#1e0010">，｜</span>表示增加垂直方向基线
+\hline %%\hline 在此行下面画一横线
+a &amp; b \\\hline
+c &amp; d\\
+\hline
+\<span style="color:#66d9ef">end</span>{tabular}
+\<span style="color:#66d9ef">end</span>{table}
+ 
+\<span style="color:#66d9ef">end</span>{document}
+</code></pre></div><p>当表格太大或者太小的时候，有非常多的解决办法，可以通过调整字体的长或宽，也可以直接整体调整表格的大小，本质都是通过在<code>tabular</code>类外，套上调整表格的参数设置。</p>
+<p>通过调整字体的宽度（mm是百分比，60mm就是60%）：</p>
+<pre><code>\resizebox{\textwidth}{60mm}{}
+</code></pre><p>通过调整表格的大小：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">\usepackage{graphicx}
+\<span style="color:#66d9ef">begin</span>{table}
+
+\caption{表格标题}
+\scalebox{0.9}{ <span style="color:#66d9ef">%</span>缩小至原来的90%
+\<span style="color:#66d9ef">begin</span>{tabular}
+<span style="color:#960050;background-color:#1e0010">……</span>
+\<span style="color:#66d9ef">end</span>{tabular}}
+\<span style="color:#66d9ef">end</span>{table}
+</code></pre></div><p>文献中常用的三线表可以通过以下Latex实现：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">\documentclass{article} 
+\usepackage{float}<span style="color:#66d9ef">%</span>提供float浮动环境
+\usepackage{booktabs} %<span style="color:#66d9ef">%</span>提供命令\toprule<span style="color:#960050;background-color:#1e0010">、</span>\midrule<span style="color:#960050;background-color:#1e0010">、</span>\bottomrule
+\usepackage{makecell} %<span style="color:#66d9ef">%</span>用来基线
+\usepackage{geometry}
+\usepackage{amsmath}
+%\geometry{papersize={40cm,80cm}}
+\geometry{left=1cm,right=1cm,top=3cm,bottom=1cm}
+\<span style="color:#66d9ef">begin</span>{document}
+ 
+<span style="color:#66d9ef">%</span>经典三线表
+\<span style="color:#66d9ef">begin</span>{table}<span style="color:#66d9ef">[H]</span>
+\caption{\textbf{test title}}<span style="color:#66d9ef">%</span>标题
+\centering<span style="color:#66d9ef">%</span>把表居中
+\<span style="color:#66d9ef">begin</span>{tabular}{ccc}<span style="color:#66d9ef">%</span>四个c代表该表一共四列<span style="color:#960050;background-color:#1e0010">，</span>内容全部居中
+\toprule[1.5pt]<span style="color:#66d9ef">%</span>第一道横线
+year &amp; month &amp; day \\
+\midrule<span style="color:#66d9ef">%</span>第二道横线 
+2021 &amp; 3 &amp; 5 \\
+
+\bottomrule[1.5pt]<span style="color:#66d9ef">%</span>第三道横线
+\<span style="color:#66d9ef">end</span>{tabular}
+\<span style="color:#66d9ef">end</span>{table}
+
+\<span style="color:#66d9ef">end</span>{document}
+</code></pre></div><h3 id="4-图片的引入">4. 图片的引入</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">\<span style="color:#66d9ef">begin</span>{figure}   %%<span style="color:#66d9ef">%</span>旋转子系统姿态角
+  \centering
+  \subfigure{
+    \label{fig<span style="color:#960050;background-color:#1e0010">:</span>subfig<span style="color:#960050;background-color:#1e0010">:</span>a} % label <span style="color:#66d9ef">for</span> first subfigure
+    \includegraphics[width=7cm,height=4cm]{ftattitude.eps}}
+  \hspace{1in}
+  \subfigure{
+    \label{fig<span style="color:#960050;background-color:#1e0010">:</span>subfig<span style="color:#960050;background-color:#1e0010">:</span>b} % label <span style="color:#66d9ef">for</span> second subfigure
+    \includegraphics[width=7cm,height=4cm]{pdattitude.eps}}
+  \caption{Response curves of Euler angles <span style="color:#66d9ef">for</span> the translational subsystem <span style="color:#66d9ef">in</span> the presence of external disturbances. (a) Euler angles $\bm{\Theta}$ under the finite - time control scheme. (b) Euler angles $\bm{\Theta}$ under the PD control scheme}
+  \label{fig<span style="color:#960050;background-color:#1e0010">:</span>attitude}  % label <span style="color:#66d9ef">for</span> entire figure
+\<span style="color:#66d9ef">end</span>{figure}
+</code></pre></div><h2 id="参考资料">参考资料</h2>
+<ul>
+<li><a href="https://www.overleaf.com/learn">Oneleaf官方文档</a></li>
+<li><a href="https://www.cnblogs.com/parrynee/archive/2010/03/02/1676369.html">BibTex的使用方法</a></li>
+<li><a href="https://blog.csdn.net/wei_love_2017/article/details/86617235">latex documentclass 及相关布局</a></li>
+<li><a href="https://latexref.xyz/Document-class-options.html">document class</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/43981639">LaTex - 从出门到掉到坑</a></li>
+<li><a href="https://blog.csdn.net/miracle_fans/article/details/78233304">LaTex插入图形，表格</a></li>
+</ul>
+    </div>
+    <footer>
+      <div class="stats">
+  
+    <ul class="categories">
+      
+        
+          <li><a class="article-terms-link" href="/categories/%e6%8a%80%e6%9c%af/">技术</a></li>
+        
+      
+    </ul>
+  
+  
+    <ul class="tags">
+      
+        
+          <li><a class="article-terms-link" href="/tags/latex/">Latex</a></li>
+        
+          <li><a class="article-terms-link" href="/tags/%e6%8a%80%e6%9c%af/">技术</a></li>
+        
+      
+    </ul>
+  
+</div>
+
+    </footer>
+  </article>
+  
+    
+  <article class="post">
+    
+    <div>
+      <h2 id="say-something">Say Something</h2>
+        <form id="comment-form" class="new-comment" method="POST">
+          
+          <h3 class='reply-notice hidden'>
+            <span class='reply-name'></span>
+          </h3>
+
+          
+          <input type="hidden" name="options[entryId]" value="e1126df8e5abbda54e8be467967d226f">
+          <input type='hidden' name='fields[replyThread]' value=''>
+          <input type='hidden' name='fields[replyID]' value=''>
+          <input type='hidden' name='fields[replyName]' value=''>
+
+          
+          <input required name='fields[name]' type='text' placeholder='Your Name'>
+          <input name='fields[website]' type='text' placeholder='Your Website'>
+          <input required name='fields[email]' type='email' placeholder='Your Email'>
+          <textarea required name='fields[body]' placeholder='Your Message' rows='10'></textarea>
+
+          
+          
+
+          
+          <div class='submit-notice'>
+            <strong class='submit-notice-text submit-success hidden'>Thanks for your comment! It will be shown on the site once it has been approved.</strong>
+            <strong class='submit-notice-text submit-failed hidden'>Sorry, there was an error with your submission. Please make sure all required fields have been completed and try again.</strong>
+          </div>
+
+          
+          <input type='submit' value='Submit' class='button'>
+          <input type='submit' value='Submitted' class='hidden button' disabled>
+          <input type='reset' value='Reset' class='button'>
+        </form>
+    </div>
+
+    
+    <div>
+      <h2>Comments</h2>
+    </div>
+  </article>
+
+
+  
+  <div class="pagination">
+    
+      <a href="/blog/2021-1-11-build_blog/" class="button left"><span>Hugo&#43;Github&#43;阿里云域名搭建个人博客</span></a>
+    
+    
+  </div>
+
+      </main>
+      <section id="site-sidebar">
+  
+    <section id="recent-posts">
+      <header>
+        <h1>Recent Posts</h1>
+      </header>
+      
+      <article class="mini-post">
+          <a href="/blog/2021-1-11-build_blog/" class="image" style="--bg-image: url('https://taoziyu97.github.io/img/2019/03/pic01.jpg');">
+    <img class="stretchH" src="https://taoziyu97.github.io/img/2019/03/pic01.jpg" alt="Mountain Range Through Clouds">
+  </a>
+        <header>
+          <h2><a href="/blog/2021-1-11-build_blog/">Hugo&#43;Github&#43;阿里云域名搭建个人博客</a></h2>
+          <time class="published" datetime="2021-01-11 00:00:00 &#43;0000 UTC">January 11, 2021</time>
+        </header>
+      </article>
+      
+      <article class="mini-post">
+          <a href="/blog/2021-3-05-latex_blog/" class="image" style="--bg-image: url('https://taoziyu97.github.io/img/2021/buildblog/Latex.jpg');">
+    <img class="stretchH" src="https://taoziyu97.github.io/img/2021/buildblog/Latex.jpg" alt="Mountain Range Through Clouds">
+  </a>
+        <header>
+          <h2><a href="/blog/2021-3-05-latex_blog/">使用Latex写论文</a></h2>
+          <time class="published" datetime="0001-01-01 00:00:00 &#43;0000 UTC">January 1, 0001</time>
+        </header>
+      </article>
+      
+      
+    </section>
+  
+
+  
+    
+
+      <section id="categories">
+        <header>
+          <h1><a href="/categories">Categories</a></h1>
+        </header>
+        <ul>
+          
+          
+          <li>
+              <a href="/categories/%E6%8A%80%E6%9C%AF/">技术<span class="count">2</span></a>
+          
+          <li>
+              <a href="/categories/%E5%8D%9A%E5%AE%A2/">博客<span class="count">1</span></a>
+          
+          </li>
+        </ul>
+      </section>
+    
+  
+
+  
+    <section id="mini-bio">
+      <header>
+        <h1>About</h1>
+      </header>
+      <p>This theme was developed for Hugo static site generator.</p>
+      <footer>
+        <a href="/about" class="button">Learn More</a>
+      </footer>
+    </section>
+  
+</section>
+
+      <footer id="site-footer">
+  
+      <ul class="socnet-icons">
+        
+
+        <li><a href="//github.com/taoziyu97" target="_blank" rel="noopener" title="GitHub" class="fab fa-github"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="//orcid.org/https://orcid.org/0000-0003-3272-1227" target="_blank" rel="noopener" title="ORCID"><i class="ai ai-orcid"></i></a></li>
+
+
+
+<li><a href="mailto:baomihai@sina.com" target="_blank" title="Email" class="far fa-envelope"></a></li>
+
+      </ul>
+  
+  <p class="copyright">
+    © 2021 ZIYU的博客
+      <br>
+    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.80.0' target='_blank' rel='noopener'>Hugo</a>
+  </p>
+</footer>
+<a id="back-to-top" href="#" class="fas fa-arrow-up fa-2x"></a>
+
+      <script src="/js/highlight.js"></script>
+    
+    <script>hljs.initHighlightingOnLoad();</script><script src="/js/bundle.min.5955090a3253deadcd66071270aa2274dabe15ffc97094cec252d87b6f3f00bf.js" integrity="sha256-WVUJCjJT3q3NZgcScKoidNq&#43;Ff/JcJTOwlLYe28/AL8="></script>
+    <script src="/js/add-on.js"></script>
+    </div>
+  </body>
+</html>
