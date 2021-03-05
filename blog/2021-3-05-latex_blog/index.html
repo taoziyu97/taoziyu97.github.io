@@ -467,7 +467,10 @@ c &amp; d\\
 \<span style="color:#66d9ef">end</span>{table}
  
 \<span style="color:#66d9ef">end</span>{document}
-</code></pre></div><p>当表格太大或者太小的时候，有非常多的解决办法，可以通过调整字体的长或宽，也可以直接整体调整表格的大小，本质都是通过在<code>tabular</code>类外，套上调整表格的参数设置。</p>
+</code></pre></div><center>
+    <img src= "https://i.loli.net/2021/03/05/NL1CgnIHEfRGp9k.png" width="400"/>
+</center>
+<p>当表格太大或者太小的时候，有非常多的解决办法，可以通过调整字体的长或宽，也可以直接整体调整表格的大小，本质都是通过在<code>tabular</code>类外，套上调整表格的参数设置。</p>
 <p>通过调整字体的宽度（mm是百分比，60mm就是60%）：</p>
 <pre><code>\resizebox{\textwidth}{60mm}{}
 </code></pre><p>通过调整表格的大小：</p>
@@ -492,7 +495,7 @@ c &amp; d\\
 \<span style="color:#66d9ef">begin</span>{document}
  
 <span style="color:#66d9ef">%</span>经典三线表
-\<span style="color:#66d9ef">begin</span>{table}<span style="color:#66d9ef">[H]</span>
+\<span style="color:#66d9ef">begin</span>{table}<span style="color:#66d9ef">[H]</span> %<span style="color:#66d9ef">%</span>H为当前位置
 \caption{\textbf{test title}}<span style="color:#66d9ef">%</span>标题
 \centering<span style="color:#66d9ef">%</span>把表居中
 \<span style="color:#66d9ef">begin</span>{tabular}{ccc}<span style="color:#66d9ef">%</span>四个c代表该表一共四列<span style="color:#960050;background-color:#1e0010">，</span>内容全部居中
@@ -506,8 +509,22 @@ year &amp; month &amp; day \\
 \<span style="color:#66d9ef">end</span>{table}
 
 \<span style="color:#66d9ef">end</span>{document}
-</code></pre></div><h3 id="4-图片的引入">4. 图片的引入</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">\<span style="color:#66d9ef">begin</span>{figure}   %%<span style="color:#66d9ef">%</span>旋转子系统姿态角
+</code></pre></div><center>
+    <img src= "https://i.loli.net/2021/03/05/1CZlSqB8jIXNmED.png" width="400"/>
+</center>
+<h3 id="4-图片的引入">4. 图片的引入</h3>
+<p>LaTeX插入图片时，支持格式有各种：png, pdf, jpg, eps等等。</p>
+<ul>
+<li>准备图片</li>
+</ul>
+<p>将图片全部保存在目录下的同一个文件夹下，方便查找，注意图片的命名尽量避免中文，特殊字符等等。</p>
+<ul>
+<li></li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">\usepackage{graphicx} %<span style="color:#66d9ef">%</span>插入图片的宏包
+\usepackage{float} %<span style="color:#66d9ef">%</span>设置图片浮动位置的宏包
+\usepackage{subfigure} %<span style="color:#66d9ef">%</span>插入多图时用子图显示的宏包
+\<span style="color:#66d9ef">begin</span>{figure}   %<span style="color:#66d9ef">%</span>旋转子系统姿态角
   \centering
   \subfigure{
     \label{fig<span style="color:#960050;background-color:#1e0010">:</span>subfig<span style="color:#960050;background-color:#1e0010">:</span>a} % label <span style="color:#66d9ef">for</span> first subfigure
@@ -517,6 +534,7 @@ year &amp; month &amp; day \\
     \label{fig<span style="color:#960050;background-color:#1e0010">:</span>subfig<span style="color:#960050;background-color:#1e0010">:</span>b} % label <span style="color:#66d9ef">for</span> second subfigure
     \includegraphics[width=7cm,height=4cm]{pdattitude.eps}}
   \caption{Response curves of Euler angles <span style="color:#66d9ef">for</span> the translational subsystem <span style="color:#66d9ef">in</span> the presence of external disturbances. (a) Euler angles $\bm{\Theta}$ under the finite - time control scheme. (b) Euler angles $\bm{\Theta}$ under the PD control scheme}
+  %% caption用于图表的标题
   \label{fig<span style="color:#960050;background-color:#1e0010">:</span>attitude}  % label <span style="color:#66d9ef">for</span> entire figure
 \<span style="color:#66d9ef">end</span>{figure}
 </code></pre></div><h2 id="参考资料">参考资料</h2>
@@ -527,6 +545,7 @@ year &amp; month &amp; day \\
 <li><a href="https://latexref.xyz/Document-class-options.html">document class</a></li>
 <li><a href="https://zhuanlan.zhihu.com/p/43981639">LaTex - 从出门到掉到坑</a></li>
 <li><a href="https://blog.csdn.net/miracle_fans/article/details/78233304">LaTex插入图形，表格</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/32925549">LaTeX排版札记</a></li>
 </ul>
     </div>
     <footer>
