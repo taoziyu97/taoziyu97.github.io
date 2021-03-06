@@ -5,15 +5,16 @@
     <link>https://taoziyu97.github.io/tags/latex/</link>
     <description>Recent content in Latex on ZIYU的博客</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language><atom:link href="https://taoziyu97.github.io/tags/latex/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language>
+    <lastBuildDate>Fri, 05 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://taoziyu97.github.io/tags/latex/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>使用Latex写论文</title>
       <link>https://taoziyu97.github.io/blog/2021-3-05-latex_blog/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 05 Mar 2021 00:00:00 +0000</pubDate>
       
       <guid>https://taoziyu97.github.io/blog/2021-3-05-latex_blog/</guid>
       <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
-&lt;p&gt;最近写文章的时候，发现修改时调整参考文献的引用，是一件非常麻烦的事情，于是找到了一种简便的方法进行调整，发现了用Latex写论文原来这么好用。&lt;/p&gt;</description>
+&lt;p&gt;最近写文章的时候，发现修改时调整参考文献的引用，是一件非常麻烦的事情，于是找到了一种简便的方法进行调整，发现了用Latex写论文原来这么好用（据涛哥和翔哥说，word也可以自动调整引用文献顺序，而我一直不知道&amp;hellip;）。&lt;/p&gt;</description>
     </item>
     
   </channel>

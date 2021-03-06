@@ -8,8 +8,8 @@
 
 <meta name="generator" content="Hugo 0.80.0" /><meta property="og:site_name" content="ZIYU的博客">
   <meta property="og:title" content="使用Latex写论文">
-  <meta property="og:description" content="使用Latex写论文可以减少排版的时间，对文献引用以及排序非常友好。 last update：2021-03-05">
-  <meta property="description" content="使用Latex写论文可以减少排版的时间，对文献引用以及排序非常友好。 last update：2021-03-05">
+  <meta property="og:description" content="使用Latex写论文可以减少排版的时间，它对文献的引用以及排序非常友好。last update：2021-03-06">
+  <meta property="description" content="使用Latex写论文可以减少排版的时间，它对文献的引用以及排序非常友好。last update：2021-03-06">
   <meta property="og:url" content="https://taoziyu97.github.io/blog/2021-3-05-latex_blog/">
   <meta property="og:type" content="article">
   
@@ -234,11 +234,11 @@
       <h2><a href="/blog/2021-3-05-latex_blog/">使用Latex写论文</a></h2>
     
     
-      <p>使用Latex写论文可以减少排版的时间，对文献引用以及排序非常友好。 last update：2021-03-05</p>
+      <p>使用Latex写论文可以减少排版的时间，它对文献的引用以及排序非常友好。last update：2021-03-06</p>
     
   </div>
   <div class="meta">
-    <time datetime="0001-01-01 00:00:00 &#43;0000 UTC">January 1, 0001</time>
+    <time datetime="2021-03-05 00:00:00 &#43;0000 UTC">March 5, 2021</time>
     <p>Ziyu</p>
     <p>2-Minute Read</p>
   </div>
@@ -294,7 +294,7 @@
     <img class="stretchH" src="https://taoziyu97.github.io/img/2021/buildblog/Latex.jpg" alt="Mountain Range Through Clouds">
   </a>
       <h2 id="前言">前言</h2>
-<p>最近写文章的时候，发现修改时调整参考文献的引用，是一件非常麻烦的事情，于是找到了一种简便的方法进行调整，发现了用Latex写论文原来这么好用。</p>
+<p>最近写文章的时候，发现修改时调整参考文献的引用，是一件非常麻烦的事情，于是找到了一种简便的方法进行调整，发现了用Latex写论文原来这么好用（据涛哥和翔哥说，word也可以自动调整引用文献顺序，而我一直不知道&hellip;）。</p>
 <h2 id="主要内容">主要内容</h2>
 <ul>
 <li>LaTex基本语法</li>
@@ -306,17 +306,17 @@
 </ul>
 <h2 id="使用的工具">使用的工具</h2>
 <ul>
-<li>Oneleaf —— Online LaTeX Editor</li>
+<li>Oneleaf —— Online LaTeX Editor（推荐）</li>
 </ul>
 <p>优点：不用本地搭建环境；在线编辑并渲染；部分投稿期刊直接提供链接模板。</p>
 <ul>
-<li>
-<p>MacTeX—— For mac</p>
-</li>
-<li>
-<p>TexWorks —— For windows</p>
-</li>
+<li>MacTeX—— For mac</li>
 </ul>
+<p>mac的我还没有安过，仅列出来供参考。</p>
+<ul>
+<li>TexWorks —— For windows（我觉得很好用）。</li>
+</ul>
+<p>除了上面列出来的，还有很多其他的，根据自己的喜好使用吧。</p>
 <h2 id="基本语法">基本语法</h2>
 <ul>
 <li>整体框架</li>
@@ -332,60 +332,56 @@ extra parameters or packages included.
 <li>preamble</li>
 </ul>
 <p>在LaTex中，所有在document内容之前的都称为<strong>preamble</strong>,在<strong>preamble</strong>中可以定义整个文档的格式、使用的语言、你需要使用到的宏包、以及其他的元素。举例：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">\documentclass[12pt, letterpaper]{article} 
-\usepackage<span style="color:#66d9ef">[utf8]</span>{inputenc}
-</code></pre></div><p>在<code>[]</code>方括号中都是一些参数的选择，<strong>documentclass</strong>中设置了字体大小为12pt（默认的字体大小是10pt），纸张大小为信纸，其他的设置可以看<a href="https://www.overleaf.com/learn/latex/Page_size_and_margins">Oneleaf的文档说明</a>。加载了名叫<strong>inputenc</strong>的宏包，设置使用utf-8来编码。</p>
-<p>在填充document内容之前，这些内容也属于preamble：</p>
-<ul>
-<li>标题</li>
-</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">\documentclass[12pt, letterpaper]{article} <span style="color:#66d9ef">%</span>设置
+\usepackage<span style="color:#66d9ef">[utf8]</span>{inputenc} <span style="color:#66d9ef">%</span>加载了名叫inputenc的宏包<span style="color:#960050;background-color:#1e0010">，</span>设置使用utf-8来编码<span style="color:#960050;background-color:#1e0010">。</span>
+</code></pre></div><p>在<code>[]</code>方括号中都是一些参数的选择，<strong>documentclass</strong>中设置了字体大小为12pt（默认的字体大小是10pt），纸张大小为信纸，其他的设置可以看<a href="https://www.overleaf.com/learn/latex/Page_size_and_margins"><font color=blue>Oneleaf的文档说明</font></a>。</p>
+<p>这些内容也属于preamble：</p>
+<p>标题</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">\title{First document}
-</code></pre></div><ul>
-<li>作者</li>
-</ul>
+</code></pre></div><p>作者</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">\author{cat}
-</code></pre></div><ul>
-<li>日期</li>
-</ul>
+</code></pre></div><p>日期</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">\date{March 2021}
-</code></pre></div><ul>
-<li>谢言</li>
-</ul>
+</code></pre></div><p>谢言</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">\thanks{funded by the Overleaf team}
 </code></pre></div><ul>
 <li>document内容</li>
 </ul>
 <p>字体的简单格式可以通过以下代码实现：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Some of the \textbf{greatest}
-discoveries <span style="color:#66d9ef">in</span> \underline{science} 
-were made by \textbf{\textit{accident}}.
-</code></pre></div><p>先来个简单的应用示例感受一下实用性。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Some of the \textbf{greatest} <span style="color:#66d9ef">%</span>字体加粗
+discoveries <span style="color:#66d9ef">in</span> \underline{science} <span style="color:#66d9ef">%</span>加入下划线
+were made by \textbf{\textit{accident}}. <span style="color:#66d9ef">%</span>斜体
+</code></pre></div><center>
+    <img src= "https://i.loli.net/2021/03/06/TwKB3A8SGqklEPn.png" width="800"/>
+</center>
+<p>还有更多的字体变换可以更改，具体参考<a href="https://www.overleaf.com/learn/latex/Bold,_italics_and_underlining"><font color=blue>字体格式</font></a>，来个简单的应用示例感受一下它的实用性。</p>
 <h2 id="oneleaf-示例">Oneleaf 示例</h2>
 <h3 id="1-模板的使用">1. 模板的使用</h3>
-<h4 id="进入-oneleaf模板httpswwwoverleafcomlatextemplates选择合适的模板">进入 <a href="https://www.overleaf.com/latex/templates">Oneleaf模板</a>，选择合适的模板</h4>
-<p>这其中包括<a href="https://www.overleaf.com/latex/templates/thesis-template-for-the-university-of-chinese-academy-of-sciences/fhbvbjrrgtwx">国科大的毕业论文模板</a>、<a href="https://www.overleaf.com/latex/templates/research-proposal-template-for-ucas/tcjqfcxgsbfr">开题报告模板</a>，以及各种杂志期刊、简历、信件、海报、报告、作业和写书的模板等等（部分期刊杂志会提供Oneleaf的模板）。</p>
+<h4 id="进入-font-colorblueoneleaf模板fonthttpswwwoverleafcomlatextemplates选择合适的模板">进入 <a href="https://www.overleaf.com/latex/templates"><font color=blue>Oneleaf模板</font></a>，选择合适的模板</h4>
+<p>这其中包括<a href="https://www.overleaf.com/latex/templates/thesis-template-for-the-university-of-chinese-academy-of-sciences/fhbvbjrrgtwx"><font color=blue>国科大的毕业论文模板</font></a>、<a href="https://www.overleaf.com/latex/templates/research-proposal-template-for-ucas/tcjqfcxgsbfr"><font color=blue>开题报告模板</font></a>，以及各种杂志期刊、简历、信件、海报、报告、作业和写书的模板等等（部分期刊杂志会提供Oneleaf的模板）。</p>
 <center class="half">
     <img src="https://i.loli.net/2021/03/05/SoAgT5dBGfaK3Y1.png" width="400"/>
     <img src="https://i.loli.net/2021/03/05/osz41c38kgprZf6.png" width="400"/>
 </center>
 <h4 id="以论文写作为例">以论文写作为例</h4>
-<p>随便打开一个<a href="https://www.overleaf.com/latex/templates/submission-template-for-journal-of-photonics-research/jhgrbsdsmdpw">模板</a>，打开模板，可以看到在右边是实时的渲染结果，左边就是可以编辑的部分。</p>
+<p>随便打开一个<a href="https://www.overleaf.com/latex/templates/submission-template-for-journal-of-photonics-research/jhgrbsdsmdpw"><font color=blue>模板</font></a>，最右边是实时的渲染结果，中间是可以编辑的部分，左边是模板的目录下文件。</p>
 <center>
     <img src= "https://i.loli.net/2021/03/05/VEvczSxWZDHLP4m.png" width="800"/>
 </center>
-<p>左边的当前目录下存储了4个文件：</p>
+<p>左边的目录下存储了4个文件：</p>
 <ul>
 <li>以<code>.bib</code>结尾的文件</li>
 </ul>
-<p>通常用来存储引用文献的信息，其中引用文献都需要用特定的格式，可以通过谷歌学术、百度学术或者其它方式进行导出（谷歌学术的导出功能经常会崩溃）。</p>
+<p>通常用来存储引用文献的信息，其中引用文献需要用特定的格式——BibTex存储，可以通过谷歌学术、百度学术或者其它方式进行导出（谷歌学术的导出功能经常会崩溃），如何使用Bibtex格式进行文献引用请跳转
+<a href="#jump"><font color=blue>点击跳转</font></a>。</p>
 <ul>
 <li>以<code>.bst</code>结尾的文件</li>
 </ul>
-<p>这个文件通常由期刊或杂志提供，设置了参考文献出现的文章结尾的方式，比如：设置排序方式，设置作者名称是缩写还是全称，标题的大小写等等，一般不需要自行维护，而且可以根据自己的需求来直接在<code>.tex</code>中重新调整。</p>
+<p>这个文件通常由期刊或杂志提供，设置了参考文献出现的文章结尾的方式，比如：设置排序方式，设置作者名称是缩写还是全称，标题的大小写等等，一般不需要自行维护，而且可以根据自己的需求来在<code>.tex</code>中重新调整。</p>
 <ul>
 <li>以<code>.tex</code>结尾的文件</li>
 </ul>
-<p>这个是我们进行文档内容编辑的文件，可以在这个文件中加载宏包，进行内容以及格式的更改。</p>
+<p>这个是进行文档内容编辑的文件，可以在这个文件中加载宏包，进行内容以及格式的更改。</p>
 <ul>
 <li>以<code>.cls</code>结尾的文件</li>
 </ul>
@@ -402,7 +398,7 @@ were made by \textbf{\textit{accident}}.
 <ul>
 <li><code>.sty</code>文件</li>
 </ul>
-<p>这是包文件，通常使用<code>\usepackage</code>导入，在本地使用的时候可能会用到这个。</p>
+<p>这是包文件，通常使用<code>\usepackage</code>导入。</p>
 <h3 id="2-内容的编辑以及参考文献的引用">2. 内容的编辑以及参考文献的引用</h3>
 <h4 id="内容的编辑">内容的编辑</h4>
 <p>载入宏包的方法是在文档开始前<code>\begin{document}</code>，写入<code>\usepackage{package}</code></p>
@@ -434,33 +430,40 @@ were made by \textbf{\textit{accident}}.
 <ul>
 <li>超链接 - hyperref</li>
 </ul>
-<p>语法：<code>\usepackage[backref, colorlinks,linkcolor=blue]{hyperref}</code></p>
-<p>加入超链接，同时将文献也超链接到reference中，并且设置超链接的颜色，常用的设为蓝色或者黑色。</p>
-<center>
+<p>语法：<code>\usepackage[options]{hyperref}</code></p>
+<p>示例：加入超链接，同时将文献也超链接到reference中，并且设置超链接的颜色，常用的设为蓝色或者黑色。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">\usepackage[backref, colorlinks,linkcolor=blue]{hyperref}
+</code></pre></div><center>
     <img src= "https://i.loli.net/2021/03/05/SOYXw9Rno5UtEp8.png" width="600"/>
 </center>
+<p><span id="jump"></span></p>
 <h4 id="文献的引用">文献的引用</h4>
 <ul>
-<li>
-<p>保存引用文献信息
-谷歌学术中可以直接得到BibTex这种引用格式，将文献信息存储在<code>.txt</code>中，然后更改后缀为<code>.bib</code>即可。</p>
-</li>
-<li>
-<p>在<strong>tex</strong>文件中对引用格式进行设置</p>
-</li>
+<li>保存引用文献信息</li>
+</ul>
+<p>如下图所示，谷歌学术中可以直接得到BibTex这种引用格式，将文献信息存储在<code>.txt</code>中，然后更改后缀为<code>.bib</code>即可。</p>
+<center>
+    <img src= "https://i.loli.net/2021/03/05/axyi3UvhgADkQHP.png" width="800"/>
+</center>
+<p>点击 <strong>BibTex</strong> 后会弹出下图所示页面，复制内容至<code>.bib</code>文件内即可。</p>
+<center>
+    <img src= "https://i.loli.net/2021/03/06/tQrgZIBhNTMbuwa.png" width="650"/>
+</center>
+<ul>
+<li>在<strong>tex</strong>文件中对引用格式进行设置</li>
 </ul>
 <p>在文档结束位置<code>\end{document}</code>前，增加对参考文献格式以及引用的设置，比如：</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">\bibliographystyle{bibft}\it
 \bibliography{bibfile}
-</code></pre></div><p><strong>bibft</strong>表示的调用模板自带的格式，这是由<code>.cls</code>文件定义的，bibfile就是制作好的<strong>bibtex</strong>文件，</p>
+</code></pre></div><p><strong>bibft</strong>是模板自带并自己命名的格式文件，这是由<code>.cls</code>文件定义的，bibfile就是制作好的<strong>bibtex</strong>文件，</p>
 <p>注意这里的文献引用格式有很多种，除了模板中定义的格式，可以通过参数的调整将格式更改为自己想要的，比如常用的，在方括号中标注数字，并且根据文献引用的先后顺序对reference排序：</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">\<span style="color:#66d9ef">begin</span>{document}
 \bibliographystyle{unsrt}
 
-\bibliographystyle{unsrt}
-\bibliography{bibfile.bib}
+\bibliographystyle{unsrt} <span style="color:#66d9ef">%</span>根据引用顺序自动排序
+\bibliography{bibfile.bib} <span style="color:#66d9ef">%</span>引用文献的文件
 \<span style="color:#66d9ef">end</span>{document}
-</code></pre></div><p>我认为LaTex对我来说最方便的地方就是这里，<font color=red>能够根据文献引用的顺序对reference进行自动排序</font></p>
+</code></pre></div><p>我认为最方便的地方就是这里，<font color=red>能够根据文献引用的顺序对reference进行自动排序</font>。</p>
 <ul>
 <li>在<strong>tex</strong>文件中进行引用</li>
 </ul>
@@ -491,12 +494,13 @@ Jones et al. (1990)
 <span style="color:#75715e">##</span>
 (1990)
 </code></pre></div><p>&hellip;&hellip;</p>
+<p>该宏包的使用方式如下。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">\usepackage<span style="color:#66d9ef">[option]</span>{natbib}
 
 \bibliographystyle{natbib}
 \bibliography{bibfile}
 </code></pre></div><h3 id="3-表格的制作">3. 表格的制作</h3>
-<p>以sigminer的function表格为例，基本格式和要素如下（2行2列表格）：</p>
+<p>表格的基本格式和要素如下（2行2列表格）：</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">\documentclass{article} 
 \usepackage{float}<span style="color:#66d9ef">%</span>提供float浮动环境
 \usepackage{makecell} %<span style="color:#66d9ef">%</span>用来基线
@@ -604,13 +608,23 @@ There's a picture of a galaxy above
 \<span style="color:#66d9ef">end</span>{figure}
 </code></pre></div><h2 id="参考资料">参考资料</h2>
 <ul>
-<li><a href="https://www.overleaf.com/learn">Oneleaf官方文档</a></li>
-<li><a href="https://www.cnblogs.com/parrynee/archive/2010/03/02/1676369.html">BibTex的使用方法</a></li>
-<li><a href="https://blog.csdn.net/wei_love_2017/article/details/86617235">latex documentclass 及相关布局</a></li>
-<li><a href="https://latexref.xyz/Document-class-options.html">document class</a></li>
-<li><a href="https://zhuanlan.zhihu.com/p/43981639">LaTex - 从出门到掉到坑</a></li>
-<li><a href="https://blog.csdn.net/miracle_fans/article/details/78233304">LaTex插入图形，表格</a></li>
-<li><a href="https://zhuanlan.zhihu.com/p/32925549">LaTeX排版札记</a></li>
+<li><a href="https://www.overleaf.com/learn"><font color=blue>Oneleaf官方文档</font></a></li>
+<li><a href="https://www.cnblogs.com/parrynee/archive/2010/03/02/1676369.html"><font color=blue>BibTex的使用方法</font></a></li>
+<li><a href="https://blog.csdn.net/wei_love_2017/article/details/86617235"><font color=blue>latex documentclass 及相关布局</font></a></li>
+<li><a href="https://latexref.xyz/Document-class-options.html"><font color=blue>document class</font></a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/43981639"><font color=blue>LaTex - 从出门到掉到坑</font></a></li>
+<li><a href="https://blog.csdn.net/miracle_fans/article/details/78233304"><font color=blue>LaTex插入图形，表格</font></a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/32925549"><font color=blue>LaTeX排版札记</font></a></li>
+</ul>
+<h2 id="题外之言">题外之言</h2>
+<p>该markdown文档中新使用了以下几个有趣的功能：</p>
+<ul>
+<li>自定义锚实现页内跳转</li>
+</ul>
+<p>在跳转目的地附近加上<code>&lt;span id=&quot;jump&quot;&gt;目的地&lt;/span&gt;</code>，在需要点击跳转的地方加上<code>[点击跳转](#jump)</code></p>
+<ul>
+<li>更改超链接颜色，更改字体颜色</li>
+<li>多图片并列</li>
 </ul>
     </div>
     <footer>
@@ -689,8 +703,8 @@ There's a picture of a galaxy above
   
   <div class="pagination">
     
-      <a href="/blog/2021-1-11-build_blog/" class="button left"><span>Hugo&#43;Github&#43;阿里云域名搭建个人博客</span></a>
     
+      <a href="/blog/2021-1-11-build_blog/" class="button right"><span>Hugo&#43;Github&#43;阿里云域名搭建个人博客</span></a>
     
   </div>
 
@@ -703,22 +717,22 @@ There's a picture of a galaxy above
       </header>
       
       <article class="mini-post">
+          <a href="/blog/2021-3-05-latex_blog/" class="image" style="--bg-image: url('https://taoziyu97.github.io/img/2021/buildblog/Latex.jpg');">
+    <img class="stretchH" src="https://taoziyu97.github.io/img/2021/buildblog/Latex.jpg" alt="Mountain Range Through Clouds">
+  </a>
+        <header>
+          <h2><a href="/blog/2021-3-05-latex_blog/">使用Latex写论文</a></h2>
+          <time class="published" datetime="2021-03-05 00:00:00 &#43;0000 UTC">March 5, 2021</time>
+        </header>
+      </article>
+      
+      <article class="mini-post">
           <a href="/blog/2021-1-11-build_blog/" class="image" style="--bg-image: url('https://taoziyu97.github.io/img/2019/03/pic01.jpg');">
     <img class="stretchH" src="https://taoziyu97.github.io/img/2019/03/pic01.jpg" alt="Mountain Range Through Clouds">
   </a>
         <header>
           <h2><a href="/blog/2021-1-11-build_blog/">Hugo&#43;Github&#43;阿里云域名搭建个人博客</a></h2>
           <time class="published" datetime="2021-01-11 00:00:00 &#43;0000 UTC">January 11, 2021</time>
-        </header>
-      </article>
-      
-      <article class="mini-post">
-          <a href="/blog/2021-3-05-latex_blog/" class="image" style="--bg-image: url('https://taoziyu97.github.io/img/2021/buildblog/Latex.jpg');">
-    <img class="stretchH" src="https://taoziyu97.github.io/img/2021/buildblog/Latex.jpg" alt="Mountain Range Through Clouds">
-  </a>
-        <header>
-          <h2><a href="/blog/2021-3-05-latex_blog/">使用Latex写论文</a></h2>
-          <time class="published" datetime="0001-01-01 00:00:00 &#43;0000 UTC">January 1, 0001</time>
         </header>
       </article>
       

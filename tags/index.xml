@@ -6,7 +6,25 @@
     <description>Recent content in Tags on ZIYU的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 16 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://taoziyu97.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 05 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://taoziyu97.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Latex</title>
+      <link>https://taoziyu97.github.io/tags/latex/</link>
+      <pubDate>Fri, 05 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://taoziyu97.github.io/tags/latex/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>技术</title>
+      <link>https://taoziyu97.github.io/tags/%E6%8A%80%E6%9C%AF/</link>
+      <pubDate>Fri, 05 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://taoziyu97.github.io/tags/%E6%8A%80%E6%9C%AF/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>书籍</title>
       <link>https://taoziyu97.github.io/tags/%E4%B9%A6%E7%B1%8D/</link>
@@ -58,24 +76,6 @@
       <pubDate>Mon, 11 Jan 2021 00:00:00 +0000</pubDate>
       
       <guid>https://taoziyu97.github.io/tags/%E5%8D%9A%E5%AE%A2/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Latex</title>
-      <link>https://taoziyu97.github.io/tags/latex/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://taoziyu97.github.io/tags/latex/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>技术</title>
-      <link>https://taoziyu97.github.io/tags/%E6%8A%80%E6%9C%AF/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://taoziyu97.github.io/tags/%E6%8A%80%E6%9C%AF/</guid>
       <description></description>
     </item>
     

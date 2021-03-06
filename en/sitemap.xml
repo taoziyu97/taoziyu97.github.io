@@ -3,68 +3,18 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://taoziyu97.github.io/book/</loc>
-    <lastmod>2021-01-16T00:00:00+00:00</lastmod>
+    <loc>https://taoziyu97.github.io/posts/2021-3-06-bug_git_push/</loc>
+    <lastmod>2021-03-06T16:59:38+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://taoziyu97.github.io/tags/</loc>
-    <lastmod>2021-01-16T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="https://taoziyu97.github.io/fr/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pl"
-                href="https://taoziyu97.github.io/pl/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="https://taoziyu97.github.io/pt/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="de"
-                href="https://taoziyu97.github.io/de/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://taoziyu97.github.io/es/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://taoziyu97.github.io/zh-cn/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-tw"
-                href="https://taoziyu97.github.io/zh-tw/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://taoziyu97.github.io/ja/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="nl"
-                href="https://taoziyu97.github.io/nl/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://taoziyu97.github.io/tags/"
-                />
+    <loc>https://taoziyu97.github.io/posts/</loc>
+    <lastmod>2021-03-06T16:59:38+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://taoziyu97.github.io/</loc>
-    <lastmod>2021-01-16T00:00:00+00:00</lastmod>
+    <lastmod>2021-03-06T16:59:38+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
@@ -118,28 +68,13 @@
   </url>
   
   <url>
-    <loc>https://taoziyu97.github.io/tags/%E4%B9%A6%E7%B1%8D/</loc>
-    <lastmod>2021-01-16T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://taoziyu97.github.io/book/2021-1-16/</loc>
-    <lastmod>2021-01-16T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://taoziyu97.github.io/tags/%E9%9A%8F%E6%83%B3/</loc>
-    <lastmod>2021-01-16T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://taoziyu97.github.io/blog/</loc>
-    <lastmod>2021-01-11T00:00:00+00:00</lastmod>
+    <lastmod>2021-03-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://taoziyu97.github.io/categories/</loc>
-    <lastmod>2021-01-11T00:00:00+00:00</lastmod>
+    <lastmod>2021-03-05T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
@@ -193,6 +128,101 @@
   </url>
   
   <url>
+    <loc>https://taoziyu97.github.io/tags/latex/</loc>
+    <lastmod>2021-03-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://taoziyu97.github.io/tags/</loc>
+    <lastmod>2021-03-05T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://taoziyu97.github.io/fr/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pl"
+                href="https://taoziyu97.github.io/pl/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="https://taoziyu97.github.io/pt/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="de"
+                href="https://taoziyu97.github.io/de/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://taoziyu97.github.io/es/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://taoziyu97.github.io/zh-cn/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-tw"
+                href="https://taoziyu97.github.io/zh-tw/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://taoziyu97.github.io/ja/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="nl"
+                href="https://taoziyu97.github.io/nl/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://taoziyu97.github.io/tags/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://taoziyu97.github.io/blog/2021-3-05-latex_blog/</loc>
+    <lastmod>2021-03-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://taoziyu97.github.io/tags/%E6%8A%80%E6%9C%AF/</loc>
+    <lastmod>2021-03-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://taoziyu97.github.io/categories/%E6%8A%80%E6%9C%AF/</loc>
+    <lastmod>2021-03-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://taoziyu97.github.io/book/</loc>
+    <lastmod>2021-01-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://taoziyu97.github.io/tags/%E4%B9%A6%E7%B1%8D/</loc>
+    <lastmod>2021-01-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://taoziyu97.github.io/book/2021-1-16/</loc>
+    <lastmod>2021-01-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://taoziyu97.github.io/tags/%E9%9A%8F%E6%83%B3/</loc>
+    <lastmod>2021-01-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://taoziyu97.github.io/tags/html/</loc>
     <lastmod>2021-01-11T00:00:00+00:00</lastmod>
   </url>
@@ -223,11 +253,6 @@
   </url>
   
   <url>
-    <loc>https://taoziyu97.github.io/categories/%E6%8A%80%E6%9C%AF/</loc>
-    <lastmod>2021-01-11T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://taoziyu97.github.io/about/</loc>
     <lastmod>2019-02-28T00:00:00+00:00</lastmod>
   </url>
@@ -254,18 +279,6 @@
                 hreflang="en"
                 href="https://taoziyu97.github.io/contact/"
                 />
-  </url>
-  
-  <url>
-    <loc>https://taoziyu97.github.io/tags/latex/</loc>
-  </url>
-  
-  <url>
-    <loc>https://taoziyu97.github.io/blog/2021-3-05-latex_blog/</loc>
-  </url>
-  
-  <url>
-    <loc>https://taoziyu97.github.io/tags/%E6%8A%80%E6%9C%AF/</loc>
   </url>
   
 </urlset>
