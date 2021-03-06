@@ -297,6 +297,7 @@
 <p>最近写文章的时候，发现修改时调整参考文献的引用，是一件非常麻烦的事情，于是找到了一种简便的方法进行调整，发现了用Latex写论文原来这么好用。</p>
 <h2 id="主要内容">主要内容</h2>
 <ul>
+<li>LaTex基本语法</li>
 <li>模板的使用</li>
 <li>文献的引用</li>
 <li>排版的调整</li>
@@ -316,7 +317,49 @@
 <p>TexWorks —— For windows</p>
 </li>
 </ul>
-<p>先来个简单的应用示例感受一下实用性。</p>
+<h2 id="基本语法">基本语法</h2>
+<ul>
+<li>整体框架</li>
+</ul>
+<p>注意到一个部分有开始也有结束，中间就是这个部分的内容。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">\documentclass{article}
+
+\<span style="color:#66d9ef">begin</span>{document}
+First document. This is a simple example, with no 
+extra parameters or packages included.
+\<span style="color:#66d9ef">end</span>{document}
+</code></pre></div><ul>
+<li>preamble</li>
+</ul>
+<p>在LaTex中，所有在document内容之前的都称为<strong>preamble</strong>,在<strong>preamble</strong>中可以定义整个文档的格式、使用的语言、你需要使用到的宏包、以及其他的元素。举例：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">\documentclass[12pt, letterpaper]{article} 
+\usepackage<span style="color:#66d9ef">[utf8]</span>{inputenc}
+</code></pre></div><p>在<code>[]</code>方括号中都是一些参数的选择，<strong>documentclass</strong>中设置了字体大小为12pt（默认的字体大小是10pt），纸张大小为信纸，其他的设置可以看<a href="https://www.overleaf.com/learn/latex/Page_size_and_margins">Oneleaf的文档说明</a>。加载了名叫<strong>inputenc</strong>的宏包，设置使用utf-8来编码。</p>
+<p>在填充document内容之前，这些内容也属于preamble：</p>
+<ul>
+<li>标题</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">\title{First document}
+</code></pre></div><ul>
+<li>作者</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">\author{cat}
+</code></pre></div><ul>
+<li>日期</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">\date{March 2021}
+</code></pre></div><ul>
+<li>谢言</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">\thanks{funded by the Overleaf team}
+</code></pre></div><ul>
+<li>document内容</li>
+</ul>
+<p>字体的简单格式可以通过以下代码实现：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Some of the \textbf{greatest}
+discoveries <span style="color:#66d9ef">in</span> \underline{science} 
+were made by \textbf{\textit{accident}}.
+</code></pre></div><p>先来个简单的应用示例感受一下实用性。</p>
 <h2 id="oneleaf-示例">Oneleaf 示例</h2>
 <h3 id="1-模板的使用">1. 模板的使用</h3>
 <h4 id="进入-oneleaf模板httpswwwoverleafcomlatextemplates选择合适的模板">进入 <a href="https://www.overleaf.com/latex/templates">Oneleaf模板</a>，选择合适的模板</h4>
@@ -393,6 +436,9 @@
 </ul>
 <p>语法：<code>\usepackage[backref, colorlinks,linkcolor=blue]{hyperref}</code></p>
 <p>加入超链接，同时将文献也超链接到reference中，并且设置超链接的颜色，常用的设为蓝色或者黑色。</p>
+<center>
+    <img src= "https://i.loli.net/2021/03/05/SOYXw9Rno5UtEp8.png" width="600"/>
+</center>
 <h4 id="文献的引用">文献的引用</h4>
 <ul>
 <li>
@@ -517,25 +563,44 @@ year &amp; month &amp; day \\
 <ul>
 <li>准备图片</li>
 </ul>
-<p>将图片全部保存在目录下的同一个文件夹下，方便查找，注意图片的命名尽量避免中文，特殊字符等等。</p>
+<p>将图片全部保存在目录下的同一个文件夹下，方便查找，注意图片的命名尽量避免中文，特殊字符等等(这里就只用了一个文件，我就直接放在目录下了)。</p>
 <ul>
-<li></li>
+<li>图片基本语法</li>
 </ul>
+<p>必须加载graphicx等包来支持图片的导入。</p>
+<pre><code>\documentclass{article}
+\usepackage{graphicx}
+\graphicspath{ {images/} }
+
+\begin{document}
+The universe is immense and it seems to be homogeneous, 
+in a large scale, everywhere we look at.
+
+\includegraphics{universe}
+
+There's a picture of a galaxy above
+\end{document}
+</code></pre><ul>
+<li>给图片进行排版（排版有很多种，现在展示的是两个图片并排）</li>
+</ul>
+<center>
+    <img src= "https://i.loli.net/2021/03/05/FdrtzSjuc7I9mDg.png" width="400"/>
+</center>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">\usepackage{graphicx} %<span style="color:#66d9ef">%</span>插入图片的宏包
 \usepackage{float} %<span style="color:#66d9ef">%</span>设置图片浮动位置的宏包
 \usepackage{subfigure} %<span style="color:#66d9ef">%</span>插入多图时用子图显示的宏包
 \<span style="color:#66d9ef">begin</span>{figure}   %<span style="color:#66d9ef">%</span>旋转子系统姿态角
   \centering
   \subfigure{
-    \label{fig<span style="color:#960050;background-color:#1e0010">:</span>subfig<span style="color:#960050;background-color:#1e0010">:</span>a} % label <span style="color:#66d9ef">for</span> first subfigure
-    \includegraphics[width=7cm,height=4cm]{ftattitude.eps}}
+    \label{fig<span style="color:#960050;background-color:#1e0010">:</span>subfig<span style="color:#960050;background-color:#1e0010">:</span>a} %% label <span style="color:#66d9ef">for</span> first subfigure
+    \includegraphics[width=4cm,height=4cm]{taoziyu.jpg}}
   \hspace{1in}
   \subfigure{
     \label{fig<span style="color:#960050;background-color:#1e0010">:</span>subfig<span style="color:#960050;background-color:#1e0010">:</span>b} % label <span style="color:#66d9ef">for</span> second subfigure
-    \includegraphics[width=7cm,height=4cm]{pdattitude.eps}}
-  \caption{Response curves of Euler angles <span style="color:#66d9ef">for</span> the translational subsystem <span style="color:#66d9ef">in</span> the presence of external disturbances. (a) Euler angles $\bm{\Theta}$ under the finite - time control scheme. (b) Euler angles $\bm{\Theta}$ under the PD control scheme}
+    \includegraphics[width=4cm,height=4cm]{taoziyu.jpg}}
+  \caption{The same cute cat (a) cute cat1. (b) cute cat2.}
   %% caption用于图表的标题
-  \label{fig<span style="color:#960050;background-color:#1e0010">:</span>attitude}  % label <span style="color:#66d9ef">for</span> entire figure
+  \label{fig<span style="color:#960050;background-color:#1e0010">:</span>attitude}  %% label <span style="color:#66d9ef">for</span> entire figure
 \<span style="color:#66d9ef">end</span>{figure}
 </code></pre></div><h2 id="参考资料">参考资料</h2>
 <ul>
