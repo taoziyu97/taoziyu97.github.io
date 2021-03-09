@@ -3,71 +3,6 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://taoziyu97.github.io/posts/2021-3-06-bug_git_push/</loc>
-    <lastmod>2021-03-06T16:59:38+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://taoziyu97.github.io/posts/</loc>
-    <lastmod>2021-03-06T16:59:38+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://taoziyu97.github.io/</loc>
-    <lastmod>2021-03-06T16:59:38+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="https://taoziyu97.github.io/fr/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pl"
-                href="https://taoziyu97.github.io/pl/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="https://taoziyu97.github.io/pt/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="de"
-                href="https://taoziyu97.github.io/de/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://taoziyu97.github.io/es/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://taoziyu97.github.io/zh-cn/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-tw"
-                href="https://taoziyu97.github.io/zh-tw/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://taoziyu97.github.io/ja/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="nl"
-                href="https://taoziyu97.github.io/nl/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://taoziyu97.github.io/"
-                />
-  </url>
-  
-  <url>
     <loc>https://taoziyu97.github.io/blog/</loc>
     <lastmod>2021-03-05T00:00:00+00:00</lastmod>
   </url>
@@ -184,6 +119,61 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://taoziyu97.github.io/tags/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://taoziyu97.github.io/</loc>
+    <lastmod>2021-03-05T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://taoziyu97.github.io/fr/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pl"
+                href="https://taoziyu97.github.io/pl/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="https://taoziyu97.github.io/pt/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="de"
+                href="https://taoziyu97.github.io/de/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://taoziyu97.github.io/es/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://taoziyu97.github.io/zh-cn/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-tw"
+                href="https://taoziyu97.github.io/zh-tw/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://taoziyu97.github.io/ja/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="nl"
+                href="https://taoziyu97.github.io/nl/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://taoziyu97.github.io/"
                 />
   </url>
   
