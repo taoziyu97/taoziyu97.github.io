@@ -6,7 +6,28 @@
     <description>Recent content in Blog on ZIYU的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 05 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://taoziyu97.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 14 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://taoziyu97.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>NGS-涉及到的生物信息学方法</title>
+      <link>https://taoziyu97.github.io/blog/2021-3-14_ngs1_methods/</link>
+      <pubDate>Sun, 14 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://taoziyu97.github.io/blog/2021-3-14_ngs1_methods/</guid>
+      <description>深度测序即第二代测序（NGS）。reads mapping涉及到：质量好坏；速度快慢；双序列比对问题（和经典双序列比对非常不同）
+  序列长度问题 在needleman-Wunsch和Smith-Waterman算法中，都基于假定：两条序列长度相差不大，但是reads mapping中，两者的长度会有跨数量级的差异：reads的长度不超过200bp，但是参考基因组却通常上百Mb
+  数据量问题 深度测序产生的reads达到几百Gb，相当于几十个人类基因组
+  数据质量问题 双序列比对中假定：序列本身没有错误，但是深度测序的reads质量不同，而且错误率较高。 因此需要混合全局比对和局部比对的混合型alignment，对于read是全局比对，对于参考基因组是局部比对，因此可以直接在比对隐马尔可夫模型中进行调整，比如：降低向短序列上的gap状态的转移概率，或者直接将相关状态直接挪掉，可以避免对短序列上过高的罚分，但是会影响最终序列的比对质量，而且计算量很大。
+  考虑除了少数多拷贝的基因，一个给定的reads通常只来自基因组的特定位置，即从绝大多数位置起始进行尝试都是无效的，而且浪费时间，因此借鉴BLAST的思路，采用seeding-and-extending的策略，即：先通过对基因组建立索引，将read快速定位，再通过标准的动态规划算法，构建最终的alignment。这个索引本质上是对数据的分组，基于对原始数据中的key应用索引函数处理，将原始数据划分成若干更小的组，通过将与key相关的检索限制在某个小组里来缩小搜索空间并进而降低搜索的时间。比如哈希（Hash）就是一种常见的索引方法。 抽屉原理 ；数据压缩算法中的 前缀树和后缀树
+  BWA涉及算法 BWT算法是BWA软件所使用的压缩算法，可以对数据进行无损压缩，对字符串轮转之后的字符矩阵进行排序和变换，使得数据可以进行无损压缩。
+hash函数  哈希函数，也称为散列函数或散列算法，是一种从任何一种数据中创建小的数字“指纹”的方法。散列函数把消息或数据压缩成摘要，使得数据量变小，将数据的格式固定下来。该函数将数据打乱混合，重新创建一个叫做散列值的指纹，散列值通常用一个短的随机字母和数字组成的字符串来代表。好的散列函数在输入域中很少出现散列冲突。
+  ——维基百科
+ 原始数据 --- 输入 --&amp;gt; 哈希函数 --- 输出 --&amp;gt; 数据指纹   定义 哈希函数是一种数据转换函数，将输入的数据映射成输出的索引，哈希表是一种数据结构，是根据关键码值（key-Value）直接进行访问记录的数据结构，它将数据对象映射到一个便于存储和检索的特定内存空间，加快了寻找的速度，编程中的哈希表是可逆的，常见的哈希函数有MD5、SHA等等。
+  哈希函数
+  对不同的输出值得到一个固定长度的消息摘要，理想的哈希函数应具有的特点：对不同的输入应该产生不同的结构；散列结果应当具有同一性（输出值尽量均匀？？？）和雪崩效应（微小的输入值变化使得输出值发生巨大的变化）。
+ 冲突解决  这里的冲突值得是，现实中的哈希函数并不完美，当不同的输入值对应一个输出值时，会产生“碰撞”，需要解决冲突。常见的解决方法有：开放定址法，链地址法，建立公共溢出区，实际实现中，使用最多的是链地址法。
+ 我的问题1:reads mapping中的哈希函数是什么？  抽屉原理  参考资料：  [学习笔记] 哈希函数和 SHA256 alibaba-interview 有空看一下这个（https://www.huaweicloud.com/articles/68ee6628394c5b8e1e03b2c6106a5ee6.html） 有空看一下这个-关于10年测序的综述（http://www.cib.ac.cn/xwdt/kjqy/201606/t20160606_4617425.html） 课程 https://www.</description>
+    </item>
+    
     <item>
       <title>使用Latex写论文</title>
       <link>https://taoziyu97.github.io/blog/2021-3-05-latex_blog/</link>

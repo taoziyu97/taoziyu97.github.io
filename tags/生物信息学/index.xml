@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>博客 on ZIYU的博客</title>
-    <link>https://taoziyu97.github.io/categories/%E5%8D%9A%E5%AE%A2/</link>
-    <description>Recent content in 博客 on ZIYU的博客</description>
+    <title>生物信息学 on ZIYU的博客</title>
+    <link>https://taoziyu97.github.io/tags/%E7%94%9F%E7%89%A9%E4%BF%A1%E6%81%AF%E5%AD%A6/</link>
+    <description>Recent content in 生物信息学 on ZIYU的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 14 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://taoziyu97.github.io/categories/%E5%8D%9A%E5%AE%A2/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 14 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://taoziyu97.github.io/tags/%E7%94%9F%E7%89%A9%E4%BF%A1%E6%81%AF%E5%AD%A6/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>NGS-涉及到的生物信息学方法</title>
       <link>https://taoziyu97.github.io/blog/2021-3-14_ngs1_methods/</link>
@@ -26,16 +26,6 @@ hash函数  哈希函数，也称为散列函数或散列算法，是一种从�
   对不同的输出值得到一个固定长度的消息摘要，理想的哈希函数应具有的特点：对不同的输入应该产生不同的结构；散列结果应当具有同一性（输出值尽量均匀？？？）和雪崩效应（微小的输入值变化使得输出值发生巨大的变化）。
  冲突解决  这里的冲突值得是，现实中的哈希函数并不完美，当不同的输入值对应一个输出值时，会产生“碰撞”，需要解决冲突。常见的解决方法有：开放定址法，链地址法，建立公共溢出区，实际实现中，使用最多的是链地址法。
  我的问题1:reads mapping中的哈希函数是什么？  抽屉原理  参考资料：  [学习笔记] 哈希函数和 SHA256 alibaba-interview 有空看一下这个（https://www.huaweicloud.com/articles/68ee6628394c5b8e1e03b2c6106a5ee6.html） 有空看一下这个-关于10年测序的综述（http://www.cib.ac.cn/xwdt/kjqy/201606/t20160606_4617425.html） 课程 https://www.</description>
-    </item>
-    
-    <item>
-      <title>Hugo&#43;Github&#43;阿里云域名搭建个人博客</title>
-      <link>https://taoziyu97.github.io/blog/2021-1-11-build_blog/</link>
-      <pubDate>Mon, 11 Jan 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://taoziyu97.github.io/blog/2021-1-11-build_blog/</guid>
-      <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
-&lt;p&gt;最近师兄和涛哥都分享了这个流程：如何使用了R包blogdown搭建个人博客，但是我和轩哥在使用的过程中发现一个小问题，有一些主题似乎并不能很好的被blogdown安装的hugo来应用，几番求解无果，暂时将这个问题搁置，因为太喜欢这个theme不想放弃，所以找了一种不用blogdown的方法去搭建，终于取得成果。&lt;/p&gt;</description>
     </item>
     
   </channel>
