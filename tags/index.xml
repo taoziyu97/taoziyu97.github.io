@@ -6,22 +6,22 @@
     <description>Recent content in Tags on ZIYU的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 14 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://taoziyu97.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 06 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://taoziyu97.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>博客</title>
-      <link>https://taoziyu97.github.io/tags/%E5%8D%9A%E5%AE%A2/</link>
-      <pubDate>Sun, 14 Mar 2021 00:00:00 +0000</pubDate>
+      <title>技术</title>
+      <link>https://taoziyu97.github.io/tags/%E6%8A%80%E6%9C%AF/</link>
+      <pubDate>Tue, 06 Apr 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://taoziyu97.github.io/tags/%E5%8D%9A%E5%AE%A2/</guid>
+      <guid>https://taoziyu97.github.io/tags/%E6%8A%80%E6%9C%AF/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>生物信息学</title>
-      <link>https://taoziyu97.github.io/tags/%E7%94%9F%E7%89%A9%E4%BF%A1%E6%81%AF%E5%AD%A6/</link>
-      <pubDate>Sun, 14 Mar 2021 00:00:00 +0000</pubDate>
+      <title>生信</title>
+      <link>https://taoziyu97.github.io/tags/%E7%94%9F%E4%BF%A1/</link>
+      <pubDate>Tue, 06 Apr 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://taoziyu97.github.io/tags/%E7%94%9F%E7%89%A9%E4%BF%A1%E6%81%AF%E5%AD%A6/</guid>
+      <guid>https://taoziyu97.github.io/tags/%E7%94%9F%E4%BF%A1/</guid>
       <description></description>
     </item>
     
@@ -31,15 +31,6 @@
       <pubDate>Fri, 05 Mar 2021 00:00:00 +0000</pubDate>
       
       <guid>https://taoziyu97.github.io/tags/latex/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>技术</title>
-      <link>https://taoziyu97.github.io/tags/%E6%8A%80%E6%9C%AF/</link>
-      <pubDate>Fri, 05 Mar 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://taoziyu97.github.io/tags/%E6%8A%80%E6%9C%AF/</guid>
       <description></description>
     </item>
     
@@ -85,6 +76,15 @@
       <pubDate>Mon, 11 Jan 2021 00:00:00 +0000</pubDate>
       
       <guid>https://taoziyu97.github.io/tags/%E4%B8%BB%E9%A2%98/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>博客</title>
+      <link>https://taoziyu97.github.io/tags/%E5%8D%9A%E5%AE%A2/</link>
+      <pubDate>Mon, 11 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://taoziyu97.github.io/tags/%E5%8D%9A%E5%AE%A2/</guid>
       <description></description>
     </item>
     
