@@ -1,56 +1,149 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  
-  <sitemap>
-    <loc>https://taoziyu97.github.io/en/sitemap.xml</loc>
-    
-      <lastmod>2021-04-06T00:00:00+00:00</lastmod>
-    
-  </sitemap>
-  
-  <sitemap>
-    <loc>https://taoziyu97.github.io/fr/sitemap.xml</loc>
-    
-  </sitemap>
-  
-  <sitemap>
-    <loc>https://taoziyu97.github.io/pl/sitemap.xml</loc>
-    
-  </sitemap>
-  
-  <sitemap>
-    <loc>https://taoziyu97.github.io/pt/sitemap.xml</loc>
-    
-  </sitemap>
-  
-  <sitemap>
-    <loc>https://taoziyu97.github.io/de/sitemap.xml</loc>
-    
-  </sitemap>
-  
-  <sitemap>
-    <loc>https://taoziyu97.github.io/es/sitemap.xml</loc>
-    
-  </sitemap>
-  
-  <sitemap>
-    <loc>https://taoziyu97.github.io/zh-cn/sitemap.xml</loc>
-    
-  </sitemap>
-  
-  <sitemap>
-    <loc>https://taoziyu97.github.io/zh-tw/sitemap.xml</loc>
-    
-  </sitemap>
-  
-  <sitemap>
-    <loc>https://taoziyu97.github.io/ja/sitemap.xml</loc>
-    
-  </sitemap>
-  
-  <sitemap>
-    <loc>https://taoziyu97.github.io/nl/sitemap.xml</loc>
-    
-  </sitemap>
-  
-</sitemapindex>
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+    xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+       http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
+>
+
+<url>
+ <loc>https://taozyblog.com.cn/tags/latex</loc>
+ <priority>0.3</priority>
+ <lastmod>2021-04-07</lastmod>
+ <changefreq>weekly</changefreq>
+</url>
+
+<url>
+ <loc>https://taozyblog.com.cn/categories/%e6%8a%80%e6%9c%af</loc>
+ <priority>0.3</priority>
+ <lastmod>2021-04-07</lastmod>
+ <changefreq>weekly</changefreq>
+</url>
+
+<url>
+ <loc>https://taozyblog.com.cn/categories</loc>
+ <priority>0.3</priority>
+ <lastmod>2021-04-07</lastmod>
+ <changefreq>weekly</changefreq>
+</url>
+
+<url>
+ <loc>https://taozyblog.com.cn/contact</loc>
+ <priority>0.3</priority>
+ <lastmod>2021-04-07</lastmod>
+ <changefreq>weekly</changefreq>
+</url>
+
+<url>
+ <loc>https://taozyblog.com.cn/about</loc>
+ <priority>0.3</priority>
+ <lastmod>2021-04-07</lastmod>
+ <changefreq>weekly</changefreq>
+</url>
+
+<url>
+ <loc>https://taozyblog.com.cn/blog/2021-4-06-cibersort</loc>
+ <priority>0.3</priority>
+ <lastmod>2021-04-07</lastmod>
+ <changefreq>weekly</changefreq>
+</url>
+
+<url>
+ <loc>https://taozyblog.com.cn/categories/%e5%8d%9a%e5%ae%a2</loc>
+ <priority>0.3</priority>
+ <lastmod>2021-04-07</lastmod>
+ <changefreq>weekly</changefreq>
+</url>
+
+<url>
+ <loc>https://taozyblog.com.cn/tags/html</loc>
+ <priority>0.3</priority>
+ <lastmod>2021-04-07</lastmod>
+ <changefreq>weekly</changefreq>
+</url>
+
+<url>
+ <loc>https://taozyblog.com.cn/tags/markdown</loc>
+ <priority>0.3</priority>
+ <lastmod>2021-04-07</lastmod>
+ <changefreq>weekly</changefreq>
+</url>
+
+<url>
+ <loc>https://taozyblog.com.cn/blog/2021-3-05-latex_blog</loc>
+ <priority>0.3</priority>
+ <lastmod>2021-04-07</lastmod>
+ <changefreq>weekly</changefreq>
+</url>
+
+<url>
+ <loc>https://taozyblog.com.cn/tags/%e4%b8%bb%e9%a2%98</loc>
+ <priority>0.3</priority>
+ <lastmod>2021-04-07</lastmod>
+ <changefreq>weekly</changefreq>
+</url>
+
+<url>
+ <loc>https://taozyblog.com.cn/index.xml</loc>
+ <priority>0.3</priority>
+ <lastmod>2021-04-07</lastmod>
+ <changefreq>weekly</changefreq>
+</url>
+
+<url>
+ <loc>https://taozyblog.com.cn/tags/%e5%8d%9a%e5%ae%a2</loc>
+ <priority>0.3</priority>
+ <lastmod>2021-04-07</lastmod>
+ <changefreq>weekly</changefreq>
+</url>
+
+<url>
+ <loc>https://taozyblog.com.cn/</loc>
+ <priority>0.3</priority>
+ <lastmod>2021-04-07</lastmod>
+ <changefreq>weekly</changefreq>
+</url>
+
+<url>
+ <loc>https://taozyblog.com.cn/categories/%E5%8D%9A%E5%AE%A2</loc>
+ <priority>0.3</priority>
+ <lastmod>2021-04-07</lastmod>
+ <changefreq>weekly</changefreq>
+</url>
+
+<url>
+ <loc>https://taozyblog.com.cn/categories/%E6%8A%80%E6%9C%AF</loc>
+ <priority>0.3</priority>
+ <lastmod>2021-04-07</lastmod>
+ <changefreq>weekly</changefreq>
+</url>
+
+<url>
+ <loc>https://taozyblog.com.cn/tags/%e6%8a%80%e6%9c%af</loc>
+ <priority>0.3</priority>
+ <lastmod>2021-04-07</lastmod>
+ <changefreq>weekly</changefreq>
+</url>
+
+<url>
+ <loc>https://taozyblog.com.cn/tags/%e7%94%9f%e4%bf%a1</loc>
+ <priority>0.3</priority>
+ <lastmod>2021-04-07</lastmod>
+ <changefreq>weekly</changefreq>
+</url>
+
+<url>
+ <loc>https://taozyblog.com.cn/blog/2021-1-11-build_blog</loc>
+ <priority>0.3</priority>
+ <lastmod>2021-04-07</lastmod>
+ <changefreq>weekly</changefreq>
+</url>
+
+<url>
+ <loc>https://taozyblog.com.cn/book</loc>
+ <priority>0.3</priority>
+ <lastmod>2021-04-07</lastmod>
+ <changefreq>weekly</changefreq>
+</url>
+
+</urlset>
