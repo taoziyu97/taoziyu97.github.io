@@ -2,12 +2,12 @@
 <html lang="en">
   <head>
   <meta charset="utf-8">
-<title>Hugo&#43;Github&#43;阿里云域名搭建个人博客 - ZIYU的博客</title>
+<title>Hugo&#43;Github&#43;阿里云域名搭建个人博客（附Netlify部署方法） - ZIYU的博客</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
 <meta name="generator" content="Hugo 0.80.0" /><meta property="og:site_name" content="ZIYU的博客">
-  <meta property="og:title" content="Hugo&#43;Github&#43;阿里云域名搭建个人博客">
+  <meta property="og:title" content="Hugo&#43;Github&#43;阿里云域名搭建个人博客（附Netlify部署方法）">
   <meta property="og:description" content="这是我第一次搭建个人博客，记录一下搭建过程。last update：2021-01-21">
   <meta property="description" content="这是我第一次搭建个人博客，记录一下搭建过程。last update：2021-01-21">
   <meta property="og:url" content="https://taoziyu97.github.io/blog/2021-1-11-build_blog/">
@@ -124,7 +124,7 @@
 
   
     
-    <a href="//twitter.com/share?text=Hugo%2bGithub%2b%e9%98%bf%e9%87%8c%e4%ba%91%e5%9f%9f%e5%90%8d%e6%90%ad%e5%bb%ba%e4%b8%aa%e4%ba%ba%e5%8d%9a%e5%ae%a2&amp;url=https%3a%2f%2ftaoziyu97.github.io%2fblog%2f2021-1-11-build_blog%2f" target="_blank" rel="noopener" class="nav share-btn twitter">
+    <a href="//twitter.com/share?text=Hugo%2bGithub%2b%e9%98%bf%e9%87%8c%e4%ba%91%e5%9f%9f%e5%90%8d%e6%90%ad%e5%bb%ba%e4%b8%aa%e4%ba%ba%e5%8d%9a%e5%ae%a2%ef%bc%88%e9%99%84Netlify%e9%83%a8%e7%bd%b2%e6%96%b9%e6%b3%95%ef%bc%89&amp;url=https%3a%2f%2ftaoziyu97.github.io%2fblog%2f2021-1-11-build_blog%2f" target="_blank" rel="noopener" class="nav share-btn twitter">
         <p>Twitter</p>
       </a>
   
@@ -136,19 +136,19 @@
   
 
   
-    <a href="//www.reddit.com/submit?url=https%3a%2f%2ftaoziyu97.github.io%2fblog%2f2021-1-11-build_blog%2f&amp;title=Hugo%2bGithub%2b%e9%98%bf%e9%87%8c%e4%ba%91%e5%9f%9f%e5%90%8d%e6%90%ad%e5%bb%ba%e4%b8%aa%e4%ba%ba%e5%8d%9a%e5%ae%a2" target="_blank" rel="noopener" class="nav share-btn reddit">
+    <a href="//www.reddit.com/submit?url=https%3a%2f%2ftaoziyu97.github.io%2fblog%2f2021-1-11-build_blog%2f&amp;title=Hugo%2bGithub%2b%e9%98%bf%e9%87%8c%e4%ba%91%e5%9f%9f%e5%90%8d%e6%90%ad%e5%bb%ba%e4%b8%aa%e4%ba%ba%e5%8d%9a%e5%ae%a2%ef%bc%88%e9%99%84Netlify%e9%83%a8%e7%bd%b2%e6%96%b9%e6%b3%95%ef%bc%89" target="_blank" rel="noopener" class="nav share-btn reddit">
           <p>Reddit</p>
         </a>
   
 
   
-        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2ftaoziyu97.github.io%2fblog%2f2021-1-11-build_blog%2f&amp;title=Hugo%2bGithub%2b%e9%98%bf%e9%87%8c%e4%ba%91%e5%9f%9f%e5%90%8d%e6%90%ad%e5%bb%ba%e4%b8%aa%e4%ba%ba%e5%8d%9a%e5%ae%a2" target="_blank" rel="noopener" class="nav share-btn linkedin">
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2ftaoziyu97.github.io%2fblog%2f2021-1-11-build_blog%2f&amp;title=Hugo%2bGithub%2b%e9%98%bf%e9%87%8c%e4%ba%91%e5%9f%9f%e5%90%8d%e6%90%ad%e5%bb%ba%e4%b8%aa%e4%ba%ba%e5%8d%9a%e5%ae%a2%ef%bc%88%e9%99%84Netlify%e9%83%a8%e7%bd%b2%e6%96%b9%e6%b3%95%ef%bc%89" target="_blank" rel="noopener" class="nav share-btn linkedin">
             <p>LinkedIn</p>
           </a>
   
 
   
-        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2ftaoziyu97.github.io%2fblog%2f2021-1-11-build_blog%2f&amp;description=Hugo%2bGithub%2b%e9%98%bf%e9%87%8c%e4%ba%91%e5%9f%9f%e5%90%8d%e6%90%ad%e5%bb%ba%e4%b8%aa%e4%ba%ba%e5%8d%9a%e5%ae%a2" target="_blank" rel="noopener" class="nav share-btn pinterest">
+        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2ftaoziyu97.github.io%2fblog%2f2021-1-11-build_blog%2f&amp;description=Hugo%2bGithub%2b%e9%98%bf%e9%87%8c%e4%ba%91%e5%9f%9f%e5%90%8d%e6%90%ad%e5%bb%ba%e4%b8%aa%e4%ba%ba%e5%8d%9a%e5%ae%a2%ef%bc%88%e9%99%84Netlify%e9%83%a8%e7%bd%b2%e6%96%b9%e6%b3%95%ef%bc%89" target="_blank" rel="noopener" class="nav share-btn pinterest">
           <p>Pinterest</p>
         </a>
   
@@ -231,7 +231,7 @@
     <header>
   <div class="title">
     
-      <h2><a href="/blog/2021-1-11-build_blog/">Hugo&#43;Github&#43;阿里云域名搭建个人博客</a></h2>
+      <h2><a href="/blog/2021-1-11-build_blog/">Hugo&#43;Github&#43;阿里云域名搭建个人博客（附Netlify部署方法）</a></h2>
     
     
       <p>这是我第一次搭建个人博客，记录一下搭建过程。last update：2021-01-21</p>
@@ -252,7 +252,7 @@
 
   
     
-    <a href="//twitter.com/share?text=Hugo%2bGithub%2b%e9%98%bf%e9%87%8c%e4%ba%91%e5%9f%9f%e5%90%8d%e6%90%ad%e5%bb%ba%e4%b8%aa%e4%ba%ba%e5%8d%9a%e5%ae%a2&amp;url=https%3a%2f%2ftaoziyu97.github.io%2fblog%2f2021-1-11-build_blog%2f" target="_blank" rel="noopener" class="nav share-btn twitter">
+    <a href="//twitter.com/share?text=Hugo%2bGithub%2b%e9%98%bf%e9%87%8c%e4%ba%91%e5%9f%9f%e5%90%8d%e6%90%ad%e5%bb%ba%e4%b8%aa%e4%ba%ba%e5%8d%9a%e5%ae%a2%ef%bc%88%e9%99%84Netlify%e9%83%a8%e7%bd%b2%e6%96%b9%e6%b3%95%ef%bc%89&amp;url=https%3a%2f%2ftaoziyu97.github.io%2fblog%2f2021-1-11-build_blog%2f" target="_blank" rel="noopener" class="nav share-btn twitter">
         <p>Twitter</p>
       </a>
   
@@ -264,19 +264,19 @@
   
 
   
-    <a href="//www.reddit.com/submit?url=https%3a%2f%2ftaoziyu97.github.io%2fblog%2f2021-1-11-build_blog%2f&amp;title=Hugo%2bGithub%2b%e9%98%bf%e9%87%8c%e4%ba%91%e5%9f%9f%e5%90%8d%e6%90%ad%e5%bb%ba%e4%b8%aa%e4%ba%ba%e5%8d%9a%e5%ae%a2" target="_blank" rel="noopener" class="nav share-btn reddit">
+    <a href="//www.reddit.com/submit?url=https%3a%2f%2ftaoziyu97.github.io%2fblog%2f2021-1-11-build_blog%2f&amp;title=Hugo%2bGithub%2b%e9%98%bf%e9%87%8c%e4%ba%91%e5%9f%9f%e5%90%8d%e6%90%ad%e5%bb%ba%e4%b8%aa%e4%ba%ba%e5%8d%9a%e5%ae%a2%ef%bc%88%e9%99%84Netlify%e9%83%a8%e7%bd%b2%e6%96%b9%e6%b3%95%ef%bc%89" target="_blank" rel="noopener" class="nav share-btn reddit">
           <p>Reddit</p>
         </a>
   
 
   
-        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2ftaoziyu97.github.io%2fblog%2f2021-1-11-build_blog%2f&amp;title=Hugo%2bGithub%2b%e9%98%bf%e9%87%8c%e4%ba%91%e5%9f%9f%e5%90%8d%e6%90%ad%e5%bb%ba%e4%b8%aa%e4%ba%ba%e5%8d%9a%e5%ae%a2" target="_blank" rel="noopener" class="nav share-btn linkedin">
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2ftaoziyu97.github.io%2fblog%2f2021-1-11-build_blog%2f&amp;title=Hugo%2bGithub%2b%e9%98%bf%e9%87%8c%e4%ba%91%e5%9f%9f%e5%90%8d%e6%90%ad%e5%bb%ba%e4%b8%aa%e4%ba%ba%e5%8d%9a%e5%ae%a2%ef%bc%88%e9%99%84Netlify%e9%83%a8%e7%bd%b2%e6%96%b9%e6%b3%95%ef%bc%89" target="_blank" rel="noopener" class="nav share-btn linkedin">
             <p>LinkedIn</p>
           </a>
   
 
   
-        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2ftaoziyu97.github.io%2fblog%2f2021-1-11-build_blog%2f&amp;description=Hugo%2bGithub%2b%e9%98%bf%e9%87%8c%e4%ba%91%e5%9f%9f%e5%90%8d%e6%90%ad%e5%bb%ba%e4%b8%aa%e4%ba%ba%e5%8d%9a%e5%ae%a2" target="_blank" rel="noopener" class="nav share-btn pinterest">
+        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2ftaoziyu97.github.io%2fblog%2f2021-1-11-build_blog%2f&amp;description=Hugo%2bGithub%2b%e9%98%bf%e9%87%8c%e4%ba%91%e5%9f%9f%e5%90%8d%e6%90%ad%e5%bb%ba%e4%b8%aa%e4%ba%ba%e5%8d%9a%e5%ae%a2%ef%bc%88%e9%99%84Netlify%e9%83%a8%e7%bd%b2%e6%96%b9%e6%b3%95%ef%bc%89" target="_blank" rel="noopener" class="nav share-btn pinterest">
           <p>Pinterest</p>
         </a>
   
@@ -399,11 +399,32 @@ Total in 209 ms
 <p>在仓库主页找到<code>Setting</code>，在<code>Options</code>中对<code>Github Pages</code>进行设置，如果你没有购买域名，那么你就可以在这步直接使用github提供的网址，作为你的博客网页，如果你有自己的域名（比如我从阿里云买了<code>.cn</code>的域名，我就将Custom domain设置为自己的域名）</p>
 <p><img src="https://i.loli.net/2021/01/11/C4UFS9VTo1eyzdJ.png" alt=""></p>
 <ul>
-<li>解析域名</li>
+<li>解析域名方法1</li>
 </ul>
 <p>打开域名解析，进行解析设置，添加两条记录，主机记录分别为<code>@</code>和<code>www</code>，记录类型为<code>CNAME</code>，记录值都指向github的网址，<code>your_git_name.github.io</code></p>
 <p><img src="https://i.loli.net/2021/01/11/FI8AWOn9uqRVre6.png" alt=""></p>
 <p>现在打开个人主页试一试效果吧！</p>
+<ul>
+<li>解析域名方法2（推荐，相对方法1速度更快一些）</li>
+</ul>
+<p>Netlify 是一个提供静态资源网络托管的综合平台。</p>
+<p>通过github账号登陆并绑定已经保存了静态网页内容的仓库，为了让我购买的阿里云域名生效，需要使用DNS解析服务，Netlify中看到DNS还未configure，点击带有黄色感叹号标志的连接，出现DNS的设置指南，去阿里云的域名控制台进行配置。</p>
+<center>
+    <img src= "https://i.loli.net/2021/04/07/PIaZ4R3GbjCMueB.png" width="700"/>
+</center>
+<p>设置指南如下，将下图黑色框内的4条DNS记录写入阿里云DNS修改中。</p>
+<center>
+    <img src= "https://i.loli.net/2021/04/07/w8fGnhLWUxyoJOF.png" width="700"/>
+</center>
+<p>在阿里云控制台修改DNS，如下：</p>
+<center>
+    <img src= "https://i.loli.net/2021/04/07/YhvdTyWnxaCrH2E.png" width="700"/>
+</center>
+<p>回到Netlify查看DNS状态：</p>
+<center>
+    <img src= "https://i.loli.net/2021/04/07/5OSk2nKg4jM9zrE.png" width="700"/>
+</center>
+<p>可以开始访问了。</p>
     </div>
     <footer>
       <div class="stats">
@@ -525,7 +546,7 @@ Total in 209 ms
     <img class="stretchH" src="https://taoziyu97.github.io/img/2019/03/pic01.jpg" alt="Mountain Range Through Clouds">
   </a>
         <header>
-          <h2><a href="/blog/2021-1-11-build_blog/">Hugo&#43;Github&#43;阿里云域名搭建个人博客</a></h2>
+          <h2><a href="/blog/2021-1-11-build_blog/">Hugo&#43;Github&#43;阿里云域名搭建个人博客（附Netlify部署方法）</a></h2>
           <time class="published" datetime="2021-01-11 00:00:00 &#43;0000 UTC">January 11, 2021</time>
         </header>
       </article>
