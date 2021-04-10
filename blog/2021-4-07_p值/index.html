@@ -2,19 +2,19 @@
 <html lang="en">
   <head>
   <meta charset="utf-8">
-<title>使用CIBERSORTx网页版分析免疫浸润 - ziyu&#39;s blog</title>
+<title>p值 - ziyu&#39;s blog</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
 <meta name="generator" content="Hugo 0.80.0" /><meta property="og:site_name" content="ziyu&#39;s blog">
-  <meta property="og:title" content="使用CIBERSORTx网页版分析免疫浸润">
-  <meta property="og:description" content="申请cibersort.R总是没搞清楚，决定还是先使用网页版进行免疫浸润分析，记录一下。last update：2021-04-06">
-  <meta property="description" content="申请cibersort.R总是没搞清楚，决定还是先使用网页版进行免疫浸润分析，记录一下。last update：2021-04-06">
-  <meta property="og:url" content="https://taoziyu97.github.io/blog/2021-4-06-cibersort/">
+  <meta property="og:title" content="p值">
+  <meta property="og:description" content="什么是p值，记录一下。last update：2021-04-10">
+  <meta property="description" content="什么是p值，记录一下。last update：2021-04-10">
+  <meta property="og:url" content="https://taoziyu97.github.io/blog/2021-4-07_p%E5%80%BC/">
   <meta property="og:type" content="article">
   
     
-      <meta property="og:image" content="https://i.loli.net/2021/04/06/eKij82VuzspFhmN.png">
+      <meta property="og:image" content="https://i.loli.net/2021/04/10/kCqSWDjp8VZaI9A.png">
       <meta property="og:image:alt" content="Mountain Range Through Clouds">
     
   
@@ -124,37 +124,37 @@
 
   
     
-    <a href="//twitter.com/share?text=%e4%bd%bf%e7%94%a8CIBERSORTx%e7%bd%91%e9%a1%b5%e7%89%88%e5%88%86%e6%9e%90%e5%85%8d%e7%96%ab%e6%b5%b8%e6%b6%a6&amp;url=https%3a%2f%2ftaoziyu97.github.io%2fblog%2f2021-4-06-cibersort%2f" target="_blank" rel="noopener" class="nav share-btn twitter">
+    <a href="//twitter.com/share?text=p%e5%80%bc&amp;url=https%3a%2f%2ftaoziyu97.github.io%2fblog%2f2021-4-07_p%25E5%2580%25BC%2f" target="_blank" rel="noopener" class="nav share-btn twitter">
         <p>Twitter</p>
       </a>
   
 
   
-      <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2ftaoziyu97.github.io%2fblog%2f2021-4-06-cibersort%2f" target="_blank" rel="noopener" class="nav share-btn facebook">
+      <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2ftaoziyu97.github.io%2fblog%2f2021-4-07_p%25E5%2580%25BC%2f" target="_blank" rel="noopener" class="nav share-btn facebook">
         <p>Facebook</p>
         </a>
   
 
   
-    <a href="//www.reddit.com/submit?url=https%3a%2f%2ftaoziyu97.github.io%2fblog%2f2021-4-06-cibersort%2f&amp;title=%e4%bd%bf%e7%94%a8CIBERSORTx%e7%bd%91%e9%a1%b5%e7%89%88%e5%88%86%e6%9e%90%e5%85%8d%e7%96%ab%e6%b5%b8%e6%b6%a6" target="_blank" rel="noopener" class="nav share-btn reddit">
+    <a href="//www.reddit.com/submit?url=https%3a%2f%2ftaoziyu97.github.io%2fblog%2f2021-4-07_p%25E5%2580%25BC%2f&amp;title=p%e5%80%bc" target="_blank" rel="noopener" class="nav share-btn reddit">
           <p>Reddit</p>
         </a>
   
 
   
-        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2ftaoziyu97.github.io%2fblog%2f2021-4-06-cibersort%2f&amp;title=%e4%bd%bf%e7%94%a8CIBERSORTx%e7%bd%91%e9%a1%b5%e7%89%88%e5%88%86%e6%9e%90%e5%85%8d%e7%96%ab%e6%b5%b8%e6%b6%a6" target="_blank" rel="noopener" class="nav share-btn linkedin">
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2ftaoziyu97.github.io%2fblog%2f2021-4-07_p%25E5%2580%25BC%2f&amp;title=p%e5%80%bc" target="_blank" rel="noopener" class="nav share-btn linkedin">
             <p>LinkedIn</p>
           </a>
   
 
   
-        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2ftaoziyu97.github.io%2fblog%2f2021-4-06-cibersort%2f&amp;description=%e4%bd%bf%e7%94%a8CIBERSORTx%e7%bd%91%e9%a1%b5%e7%89%88%e5%88%86%e6%9e%90%e5%85%8d%e7%96%ab%e6%b5%b8%e6%b6%a6" target="_blank" rel="noopener" class="nav share-btn pinterest">
+        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2ftaoziyu97.github.io%2fblog%2f2021-4-07_p%25E5%2580%25BC%2f&amp;description=p%e5%80%bc" target="_blank" rel="noopener" class="nav share-btn pinterest">
           <p>Pinterest</p>
         </a>
   
 
   
-        <a href="mailto:?subject=Check%20out%20this%20post%20by Ziyu&amp;body=https%3a%2f%2ftaoziyu97.github.io%2fblog%2f2021-4-06-cibersort%2f" target="_blank" class="nav share-btn email" data-proofer-ignore>
+        <a href="mailto:?subject=Check%20out%20this%20post%20by Ziyu&amp;body=https%3a%2f%2ftaoziyu97.github.io%2fblog%2f2021-4-07_p%25E5%2580%25BC%2f" target="_blank" class="nav share-btn email" data-proofer-ignore>
           <p>Email</p>
         </a>
   
@@ -231,14 +231,14 @@
     <header>
   <div class="title">
     
-      <h2><a href="/blog/2021-4-06-cibersort/">使用CIBERSORTx网页版分析免疫浸润</a></h2>
+      <h2><a href="/blog/2021-4-07_p%E5%80%BC/">p值</a></h2>
     
     
-      <p>申请cibersort.R总是没搞清楚，决定还是先使用网页版进行免疫浸润分析，记录一下。last update：2021-04-06</p>
+      <p>什么是p值，记录一下。last update：2021-04-10</p>
     
   </div>
   <div class="meta">
-    <time datetime="2021-04-06 00:00:00 &#43;0000 UTC">April 6, 2021</time>
+    <time datetime="2021-04-10 00:00:00 &#43;0000 UTC">April 10, 2021</time>
     <p>Ziyu</p>
     <p>1-Minute Read</p>
   </div>
@@ -252,37 +252,37 @@
 
   
     
-    <a href="//twitter.com/share?text=%e4%bd%bf%e7%94%a8CIBERSORTx%e7%bd%91%e9%a1%b5%e7%89%88%e5%88%86%e6%9e%90%e5%85%8d%e7%96%ab%e6%b5%b8%e6%b6%a6&amp;url=https%3a%2f%2ftaoziyu97.github.io%2fblog%2f2021-4-06-cibersort%2f" target="_blank" rel="noopener" class="nav share-btn twitter">
+    <a href="//twitter.com/share?text=p%e5%80%bc&amp;url=https%3a%2f%2ftaoziyu97.github.io%2fblog%2f2021-4-07_p%25E5%2580%25BC%2f" target="_blank" rel="noopener" class="nav share-btn twitter">
         <p>Twitter</p>
       </a>
   
 
   
-      <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2ftaoziyu97.github.io%2fblog%2f2021-4-06-cibersort%2f" target="_blank" rel="noopener" class="nav share-btn facebook">
+      <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2ftaoziyu97.github.io%2fblog%2f2021-4-07_p%25E5%2580%25BC%2f" target="_blank" rel="noopener" class="nav share-btn facebook">
         <p>Facebook</p>
         </a>
   
 
   
-    <a href="//www.reddit.com/submit?url=https%3a%2f%2ftaoziyu97.github.io%2fblog%2f2021-4-06-cibersort%2f&amp;title=%e4%bd%bf%e7%94%a8CIBERSORTx%e7%bd%91%e9%a1%b5%e7%89%88%e5%88%86%e6%9e%90%e5%85%8d%e7%96%ab%e6%b5%b8%e6%b6%a6" target="_blank" rel="noopener" class="nav share-btn reddit">
+    <a href="//www.reddit.com/submit?url=https%3a%2f%2ftaoziyu97.github.io%2fblog%2f2021-4-07_p%25E5%2580%25BC%2f&amp;title=p%e5%80%bc" target="_blank" rel="noopener" class="nav share-btn reddit">
           <p>Reddit</p>
         </a>
   
 
   
-        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2ftaoziyu97.github.io%2fblog%2f2021-4-06-cibersort%2f&amp;title=%e4%bd%bf%e7%94%a8CIBERSORTx%e7%bd%91%e9%a1%b5%e7%89%88%e5%88%86%e6%9e%90%e5%85%8d%e7%96%ab%e6%b5%b8%e6%b6%a6" target="_blank" rel="noopener" class="nav share-btn linkedin">
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2ftaoziyu97.github.io%2fblog%2f2021-4-07_p%25E5%2580%25BC%2f&amp;title=p%e5%80%bc" target="_blank" rel="noopener" class="nav share-btn linkedin">
             <p>LinkedIn</p>
           </a>
   
 
   
-        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2ftaoziyu97.github.io%2fblog%2f2021-4-06-cibersort%2f&amp;description=%e4%bd%bf%e7%94%a8CIBERSORTx%e7%bd%91%e9%a1%b5%e7%89%88%e5%88%86%e6%9e%90%e5%85%8d%e7%96%ab%e6%b5%b8%e6%b6%a6" target="_blank" rel="noopener" class="nav share-btn pinterest">
+        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2ftaoziyu97.github.io%2fblog%2f2021-4-07_p%25E5%2580%25BC%2f&amp;description=p%e5%80%bc" target="_blank" rel="noopener" class="nav share-btn pinterest">
           <p>Pinterest</p>
         </a>
   
 
   
-        <a href="mailto:?subject=Check%20out%20this%20post%20by Ziyu&amp;body=https%3a%2f%2ftaoziyu97.github.io%2fblog%2f2021-4-06-cibersort%2f" target="_blank" class="nav share-btn email" data-proofer-ignore>
+        <a href="mailto:?subject=Check%20out%20this%20post%20by Ziyu&amp;body=https%3a%2f%2ftaoziyu97.github.io%2fblog%2f2021-4-07_p%25E5%2580%25BC%2f" target="_blank" class="nav share-btn email" data-proofer-ignore>
           <p>Email</p>
         </a>
   
@@ -290,25 +290,81 @@
 
     </div>
     <div class="content">
-      <a href="/blog/2021-4-06-cibersort/" class="image" style="--bg-image: url('https://i.loli.net/2021/04/06/eKij82VuzspFhmN.png');">
-    <img class="stretchH" src="https://i.loli.net/2021/04/06/eKij82VuzspFhmN.png" alt="Mountain Range Through Clouds">
+      <a href="/blog/2021-4-07_p%E5%80%BC/" class="image" style="--bg-image: url('https://i.loli.net/2021/04/10/kCqSWDjp8VZaI9A.png');">
+    <img class="stretchH" src="https://i.loli.net/2021/04/10/kCqSWDjp8VZaI9A.png" alt="Mountain Range Through Clouds">
   </a>
-      <h2 id="前言">前言</h2>
-<p>最近需要对TCGA和PCAWG的表达数据进行免疫浸润水平分析，使用了R包immunedeconv,其中TCGA已经有文献的supplement给出了不同免疫浸润工具进行分析的结果，PCAWG需要自己手动分析，其中CIBERSORT在immunedeconv包中运行需要两个文件：<code>LM22.txt</code>，<code>CIBERSORT.R</code>，需要在官网：https://cibersortx.stanford.edu/ 进行申请。</p>
-<h3 id="上传数据">上传数据</h3>
+      <h2 id="介绍">介绍</h2>
 <ul>
-<li>mixture file</li>
+<li>p值的含义</li>
 </ul>
-<p>官网上会列出上传数据的要求，我上传了PCAWG的基因表达counts矩阵，数据的第一列是genesymbol的名称，而且第一列的列名需要加上：“GeneSymbol”，数据的第一行是样本的名称。</p>
-<p><img src="https://i.loli.net/2021/04/06/kMFHE574mujaAbQ.png" alt=""></p>
-<p>注意上传数据的时候，需要勾选自己上传的数据属于哪种类型，否则在分析数据中无法选择到自己上传的数据。</p>
-<h3 id="进行分析">进行分析</h3>
-<p>选择cell fraction的custom，得到免疫浸润细胞比例结果，选择custom分析自己的数据。</p>
-<p><img src="https://i.loli.net/2021/04/06/KNXAoq1aPhBjSvi.png" alt=""></p>
-<p>勾选LM22作为参考matrix，选择自己上传的matrix作为mixture matrix，需要比较样本间时记住勾选<code>abs</code>。</p>
-<p><img src="https://i.loli.net/2021/04/06/JZI5pNfjL427FlX.png" alt=""></p>
-<p>运行过程中，可以看到报错信息和输出信息。</p>
-<p><img src="https://i.loli.net/2021/04/06/X15mTklseugfiFY.png" alt=""></p>
+<center>
+    <img src= "https://i.loli.net/2021/04/10/5QE3jxcyDpa7Mth.png" width="400"/>
+</center>
+<p>假设存在药物A和药物B，想知道两种药物的区别？</p>
+<p>维基百科定义：p值是假设检验中假设零假设为真时观测到至少与实际观测样本相同极端的样本的概率（似乎很拗口）。</p>
+<p>p值是介于0-1之间的数字，量化我们相信两种药物不同的信心，p值越接近0，越相信两者不同。当p的阈值为0.05意味着，假设两种药物之间没有差异，执行多次且相同的实验，那么只有5%的实验会得出错误决定，简单来说，p值是对意外的测量。</p>
+<p>p值能够帮助确定两种药物是否不同，但是不能告诉我们有什么不同，不管差异是都大还是小，都可以使用较小的p值，即较小的p值不代表差异是大还是小，只是代表意外的结果概率更小 。</p>
+<ul>
+<li>阈值0.05的由来</li>
+</ul>
+<p>不出于逻辑或统计原因，只是科学惯例。</p>
+<ul>
+<li>术语：假阳性</li>
+</ul>
+<p>指的是没有差异时却获得小的p值的情况。</p>
+<ul>
+<li>术语：假设检验（Hypothesis testing）</li>
+</ul>
+<p>试图确定这些药物是否相同的想法。</p>
+<ul>
+<li>术语：零假设（Null Hypothesis）</li>
+</ul>
+<p>零假设是药物相同，p值帮助我们决定是否拒绝零假设。</p>
+<h2 id="统计显著性检验分支">统计显著性检验分支</h2>
+<p>分为以下两个主要的：</p>
+<ul>
+<li>
+<p>R.A.Fisher</p>
+</li>
+<li>
+<p>Neyman and Pearson</p>
+</li>
+</ul>
+<p>控制假设检验的两类错误很重要：</p>
+<ol>
+<li>第一类错误</li>
+</ol>
+<p>无效说成有效（取伪）。</p>
+<ol start="2">
+<li>第二类错误。</li>
+</ol>
+<p>有效判成无效（弃真）。</p>
+<p>这两种错误不能同时消除，但是可以给出一种规范的决策过程来确保第一类错误的可能性只在预先确定的比率下发生（奈曼和皮尔逊），这个比率为显著性水平α（false positive rate），可以根据经验和期望基础设置合适的α，举例：</p>
+<p>建立10%的第一类错误率，设置α = 0.1，当希望决策更加保守，可以将α设置成0.01或更小。确定α后，可以考察哪个 <strong>检验过程</strong> 的第二类错误的比率更低。</p>
+<p>该体系下，定义一个原假设，即“无效”的假设，再定义一个备择假设，“效应大于0”，构建一个检验去比较这两个假设，假设使用p值，如果p&lt;α，拒绝原假设（费希尔的检验过程把注意力放在揭示任何一个特定的试验证据的强度），p值的大小只用来是否“拒绝原假设”。</p>
+<h2 id="误区">误区</h2>
+<p><font color=red>误区1：一次试验的第一类错误率为3.2%</font></p>
+<p>注意，仅仅通过一次试验不能得到第一类错误率，这是由检验过程决定的，不是一次试验的结果得到的，一个检验过程得到的是一个长期的第一类错误率，不能对应到每一次试验得到的真实p值和对应的第一类错误率。</p>
+<p><font color=red>误区2：p值越小，差异越大</font></p>
+<p>p值仅仅反应我们相信我们存在差异的信心，p值越小，越有信心拒绝零假设，不管差异是大还是小。</p>
+<p><font color=red>误区3：P值就是假阳性率</font></p>
+<p>拒绝原假设犯错属于一类错误，错误的概率就是我们的α，p值只是我们根据一次抽样结果计算出来的值。P &lt; α）表达的是在一次抽样中出现当前结果及更极端结果的可能性比我们认为的在一次抽样中不可能发生的小概率事件的概率更小。</p>
+<h2 id="置信区间">置信区间</h2>
+<p>一个置信区间包含一个点估计，和该估计的不确定性。举例：</p>
+<p>如果想检验这个效应量是否显著区别于0，可以构建一个95%的置信区间来检验这个区间是否包含0。</p>
+<h2 id="参考">参考：</h2>
+<ul>
+<li>
+<p>《StatQuest》</p>
+</li>
+<li>
+<p>《统计会犯错：如何避免数据分析中的统计陷阱》</p>
+</li>
+<li>
+<p><a href="https://zhuanlan.zhihu.com/p/42821554">统计知识|谈谈P值和α水平</a></p>
+</li>
+</ul>
+
     </div>
     <footer>
       <div class="stats">
@@ -349,7 +405,7 @@
           </h3>
 
           
-          <input type="hidden" name="options[entryId]" value="ffe00891876d62af22f10060528ffc31">
+          <input type="hidden" name="options[entryId]" value="fdafba9a8be7bd0ed6495fb5bf02217c">
           <input type='hidden' name='fields[replyThread]' value=''>
           <input type='hidden' name='fields[replyID]' value=''>
           <input type='hidden' name='fields[replyName]' value=''>
@@ -386,10 +442,8 @@
   
   <div class="pagination">
     
-      <a href="/blog/2021-4-07_p%E5%80%BC/" class="button left"><span>p值</span></a>
     
-    
-      <a href="/blog/2021-3-05-latex_blog/" class="button right"><span>使用Latex写论文</span></a>
+      <a href="/blog/2021-4-06-cibersort/" class="button right"><span>使用CIBERSORTx网页版分析免疫浸润</span></a>
     
   </div>
 
