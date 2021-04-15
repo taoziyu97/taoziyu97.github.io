@@ -2,15 +2,15 @@
 <html lang="en">
   <head>
   <meta charset="utf-8">
-<title>p值 - ziyu&#39;s blog</title>
+<title>逻辑回归 - ziyu&#39;s blog</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
 <meta name="generator" content="Hugo 0.80.0" /><meta property="og:site_name" content="ziyu&#39;s blog">
-  <meta property="og:title" content="p值">
-  <meta property="og:description" content="什么是p值，记录一下。last update：2021-04-10">
-  <meta property="description" content="什么是p值，记录一下。last update：2021-04-10">
-  <meta property="og:url" content="https://taoziyu97.github.io/blog/2021-4-07_p%E5%80%BC/">
+  <meta property="og:title" content="逻辑回归">
+  <meta property="og:description" content="logistic regression  last update：2021-04-12">
+  <meta property="description" content="logistic regression  last update：2021-04-12">
+  <meta property="og:url" content="https://taoziyu97.github.io/blog/2021-4-11_%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92/">
   <meta property="og:type" content="article">
   
     
@@ -124,37 +124,37 @@
 
   
     
-    <a href="//twitter.com/share?text=p%e5%80%bc&amp;url=https%3a%2f%2ftaoziyu97.github.io%2fblog%2f2021-4-07_p%25E5%2580%25BC%2f" target="_blank" rel="noopener" class="nav share-btn twitter">
+    <a href="//twitter.com/share?text=%e9%80%bb%e8%be%91%e5%9b%9e%e5%bd%92&amp;url=https%3a%2f%2ftaoziyu97.github.io%2fblog%2f2021-4-11_%25E9%2580%25BB%25E8%25BE%2591%25E5%259B%259E%25E5%25BD%2592%2f" target="_blank" rel="noopener" class="nav share-btn twitter">
         <p>Twitter</p>
       </a>
   
 
   
-      <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2ftaoziyu97.github.io%2fblog%2f2021-4-07_p%25E5%2580%25BC%2f" target="_blank" rel="noopener" class="nav share-btn facebook">
+      <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2ftaoziyu97.github.io%2fblog%2f2021-4-11_%25E9%2580%25BB%25E8%25BE%2591%25E5%259B%259E%25E5%25BD%2592%2f" target="_blank" rel="noopener" class="nav share-btn facebook">
         <p>Facebook</p>
         </a>
   
 
   
-    <a href="//www.reddit.com/submit?url=https%3a%2f%2ftaoziyu97.github.io%2fblog%2f2021-4-07_p%25E5%2580%25BC%2f&amp;title=p%e5%80%bc" target="_blank" rel="noopener" class="nav share-btn reddit">
+    <a href="//www.reddit.com/submit?url=https%3a%2f%2ftaoziyu97.github.io%2fblog%2f2021-4-11_%25E9%2580%25BB%25E8%25BE%2591%25E5%259B%259E%25E5%25BD%2592%2f&amp;title=%e9%80%bb%e8%be%91%e5%9b%9e%e5%bd%92" target="_blank" rel="noopener" class="nav share-btn reddit">
           <p>Reddit</p>
         </a>
   
 
   
-        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2ftaoziyu97.github.io%2fblog%2f2021-4-07_p%25E5%2580%25BC%2f&amp;title=p%e5%80%bc" target="_blank" rel="noopener" class="nav share-btn linkedin">
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2ftaoziyu97.github.io%2fblog%2f2021-4-11_%25E9%2580%25BB%25E8%25BE%2591%25E5%259B%259E%25E5%25BD%2592%2f&amp;title=%e9%80%bb%e8%be%91%e5%9b%9e%e5%bd%92" target="_blank" rel="noopener" class="nav share-btn linkedin">
             <p>LinkedIn</p>
           </a>
   
 
   
-        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2ftaoziyu97.github.io%2fblog%2f2021-4-07_p%25E5%2580%25BC%2f&amp;description=p%e5%80%bc" target="_blank" rel="noopener" class="nav share-btn pinterest">
+        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2ftaoziyu97.github.io%2fblog%2f2021-4-11_%25E9%2580%25BB%25E8%25BE%2591%25E5%259B%259E%25E5%25BD%2592%2f&amp;description=%e9%80%bb%e8%be%91%e5%9b%9e%e5%bd%92" target="_blank" rel="noopener" class="nav share-btn pinterest">
           <p>Pinterest</p>
         </a>
   
 
   
-        <a href="mailto:?subject=Check%20out%20this%20post%20by Ziyu&amp;body=https%3a%2f%2ftaoziyu97.github.io%2fblog%2f2021-4-07_p%25E5%2580%25BC%2f" target="_blank" class="nav share-btn email" data-proofer-ignore>
+        <a href="mailto:?subject=Check%20out%20this%20post%20by Ziyu&amp;body=https%3a%2f%2ftaoziyu97.github.io%2fblog%2f2021-4-11_%25E9%2580%25BB%25E8%25BE%2591%25E5%259B%259E%25E5%25BD%2592%2f" target="_blank" class="nav share-btn email" data-proofer-ignore>
           <p>Email</p>
         </a>
   
@@ -231,14 +231,14 @@
     <header>
   <div class="title">
     
-      <h2><a href="/blog/2021-4-07_p%E5%80%BC/">p值</a></h2>
+      <h2><a href="/blog/2021-4-11_%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92/">逻辑回归</a></h2>
     
     
-      <p>什么是p值，记录一下。last update：2021-04-10</p>
+      <p>logistic regression  last update：2021-04-12</p>
     
   </div>
   <div class="meta">
-    <time datetime="2021-04-10 00:00:00 &#43;0000 UTC">April 10, 2021</time>
+    <time datetime="2021-04-12 00:00:00 &#43;0000 UTC">April 12, 2021</time>
     <p>Ziyu</p>
     <p>1-Minute Read</p>
   </div>
@@ -252,37 +252,37 @@
 
   
     
-    <a href="//twitter.com/share?text=p%e5%80%bc&amp;url=https%3a%2f%2ftaoziyu97.github.io%2fblog%2f2021-4-07_p%25E5%2580%25BC%2f" target="_blank" rel="noopener" class="nav share-btn twitter">
+    <a href="//twitter.com/share?text=%e9%80%bb%e8%be%91%e5%9b%9e%e5%bd%92&amp;url=https%3a%2f%2ftaoziyu97.github.io%2fblog%2f2021-4-11_%25E9%2580%25BB%25E8%25BE%2591%25E5%259B%259E%25E5%25BD%2592%2f" target="_blank" rel="noopener" class="nav share-btn twitter">
         <p>Twitter</p>
       </a>
   
 
   
-      <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2ftaoziyu97.github.io%2fblog%2f2021-4-07_p%25E5%2580%25BC%2f" target="_blank" rel="noopener" class="nav share-btn facebook">
+      <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2ftaoziyu97.github.io%2fblog%2f2021-4-11_%25E9%2580%25BB%25E8%25BE%2591%25E5%259B%259E%25E5%25BD%2592%2f" target="_blank" rel="noopener" class="nav share-btn facebook">
         <p>Facebook</p>
         </a>
   
 
   
-    <a href="//www.reddit.com/submit?url=https%3a%2f%2ftaoziyu97.github.io%2fblog%2f2021-4-07_p%25E5%2580%25BC%2f&amp;title=p%e5%80%bc" target="_blank" rel="noopener" class="nav share-btn reddit">
+    <a href="//www.reddit.com/submit?url=https%3a%2f%2ftaoziyu97.github.io%2fblog%2f2021-4-11_%25E9%2580%25BB%25E8%25BE%2591%25E5%259B%259E%25E5%25BD%2592%2f&amp;title=%e9%80%bb%e8%be%91%e5%9b%9e%e5%bd%92" target="_blank" rel="noopener" class="nav share-btn reddit">
           <p>Reddit</p>
         </a>
   
 
   
-        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2ftaoziyu97.github.io%2fblog%2f2021-4-07_p%25E5%2580%25BC%2f&amp;title=p%e5%80%bc" target="_blank" rel="noopener" class="nav share-btn linkedin">
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2ftaoziyu97.github.io%2fblog%2f2021-4-11_%25E9%2580%25BB%25E8%25BE%2591%25E5%259B%259E%25E5%25BD%2592%2f&amp;title=%e9%80%bb%e8%be%91%e5%9b%9e%e5%bd%92" target="_blank" rel="noopener" class="nav share-btn linkedin">
             <p>LinkedIn</p>
           </a>
   
 
   
-        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2ftaoziyu97.github.io%2fblog%2f2021-4-07_p%25E5%2580%25BC%2f&amp;description=p%e5%80%bc" target="_blank" rel="noopener" class="nav share-btn pinterest">
+        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2ftaoziyu97.github.io%2fblog%2f2021-4-11_%25E9%2580%25BB%25E8%25BE%2591%25E5%259B%259E%25E5%25BD%2592%2f&amp;description=%e9%80%bb%e8%be%91%e5%9b%9e%e5%bd%92" target="_blank" rel="noopener" class="nav share-btn pinterest">
           <p>Pinterest</p>
         </a>
   
 
   
-        <a href="mailto:?subject=Check%20out%20this%20post%20by Ziyu&amp;body=https%3a%2f%2ftaoziyu97.github.io%2fblog%2f2021-4-07_p%25E5%2580%25BC%2f" target="_blank" class="nav share-btn email" data-proofer-ignore>
+        <a href="mailto:?subject=Check%20out%20this%20post%20by Ziyu&amp;body=https%3a%2f%2ftaoziyu97.github.io%2fblog%2f2021-4-11_%25E9%2580%25BB%25E8%25BE%2591%25E5%259B%259E%25E5%25BD%2592%2f" target="_blank" class="nav share-btn email" data-proofer-ignore>
           <p>Email</p>
         </a>
   
@@ -290,68 +290,71 @@
 
     </div>
     <div class="content">
-      <a href="/blog/2021-4-07_p%E5%80%BC/" class="image" style="--bg-image: url('https://i.loli.net/2021/04/10/kCqSWDjp8VZaI9A.png');">
+      <a href="/blog/2021-4-11_%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92/" class="image" style="--bg-image: url('https://i.loli.net/2021/04/10/kCqSWDjp8VZaI9A.png');">
     <img class="stretchH" src="https://i.loli.net/2021/04/10/kCqSWDjp8VZaI9A.png" alt="Mountain Range Through Clouds">
   </a>
-      <h2 id="介绍">介绍</h2>
-<ul>
-<li>p值的含义</li>
-</ul>
-<center>
-    <img src= "https://i.loli.net/2021/04/10/5QE3jxcyDpa7Mth.png" width="400"/>
-</center>
-<p>假设存在药物A和药物B，想知道两种药物的区别？</p>
-<p>维基百科定义：p值是假设检验中假设零假设为真时观测到至少与实际观测样本相同极端的样本的概率（似乎很拗口）。</p>
-<p>p值是介于0-1之间的数字，量化我们相信两种药物不同的信心，p值越接近0，越相信两者不同。当p的阈值为0.05意味着，假设两种药物之间没有差异，执行多次且相同的实验，那么只有5%的实验会得出错误决定，简单来说，p值是对意外的测量。</p>
-<p>p值能够帮助确定两种药物是否不同，但是不能告诉我们有什么不同，不管差异是都大还是小，都可以使用较小的p值，即较小的p值不代表差异是大还是小，只是代表意外的结果概率更小 。</p>
-<ul>
-<li>阈值0.05的由来</li>
-</ul>
-<p>不出于逻辑或统计原因，只是科学惯例。</p>
-<ul>
-<li>术语：假阳性</li>
-</ul>
-<p>指的是没有差异时却获得小的p值的情况。</p>
-<ul>
-<li>术语：假设检验（Hypothesis testing）</li>
-</ul>
-<p>试图确定这些药物是否相同的想法。</p>
-<ul>
-<li>术语：零假设（Null Hypothesis）</li>
-</ul>
-<p>零假设是药物相同，p值帮助我们决定是否拒绝零假设。</p>
-<h2 id="统计显著性检验分支">统计显著性检验分支</h2>
-<p>分为以下两个主要的：</p>
-<ul>
-<li>
-<p>R.A.Fisher</p>
-</li>
-<li>
-<p>Neyman and Pearson</p>
-</li>
-</ul>
-<p>控制假设检验的两类错误很重要：</p>
+      <h2 id="引言">引言</h2>
 <ol>
-<li>第一类错误</li>
+<li>线性回归</li>
 </ol>
-<p>无效说成有效（取伪）。</p>
+<p><img src="https://i.loli.net/2021/04/12/cJAdRZi5IE4pBUg.png" alt=""></p>
+<p>假设数据包含 <strong>尺寸</strong> 和 <strong>重量</strong> 两组，根据这两组数据用 <strong>最小二乘法</strong> 拟合一条线后，我们可以做如下的事情：</p>
+<ul>
+<li>
+<p>计算r平方来确定两个变量是否相关</p>
+</li>
+<li>
+<p>计算p值确定R平方是否具有统计显著性</p>
+</li>
+<li>
+<p>用于预测，如果一个新鼠标有某重量，可以根据这个线来预测其大小</p>
+</li>
+</ul>
 <ol start="2">
-<li>第二类错误。</li>
+<li>多元回归</li>
 </ol>
-<p>有效判成无效（弃真）。</p>
-<p>这两种错误不能同时消除，但是可以给出一种规范的决策过程来确保第一类错误的可能性只在预先确定的比率下发生（奈曼和皮尔逊），这个比率为显著性水平α（false positive rate），可以根据经验和期望基础设置合适的α，举例：</p>
-<p>建立10%的第一类错误率，设置α = 0.1，当希望决策更加保守，可以将α设置成0.01或更小。确定α后，可以考察哪个 <strong>检验过程</strong> 的第二类错误的比率更低。</p>
-<p>该体系下，定义一个原假设，即“无效”的假设，再定义一个备择假设，“效应大于0”，构建一个检验去比较这两个假设，假设使用p值，如果p&lt;α，拒绝原假设（费希尔的检验过程把注意力放在揭示任何一个特定的试验证据的强度），p值的大小只用来是否“拒绝原假设”。</p>
-<h2 id="误区">误区</h2>
-<p><font color=red>误区1：一次试验的第一类错误率为3.2%</font></p>
-<p>注意，仅仅通过一次试验不能得到第一类错误率，这是由检验过程决定的，不是一次试验的结果得到的，一个检验过程得到的是一个长期的第一类错误率，不能对应到每一次试验得到的真实p值和对应的第一类错误率。</p>
-<p><font color=red>误区2：p值越小，差异越大</font></p>
-<p>p值仅仅反应我们相信我们存在差异的信心，p值越小，越有信心拒绝零假设，不管差异是大还是小。</p>
-<p><font color=red>误区3：P值就是假阳性率</font></p>
-<p>拒绝原假设犯错属于一类错误，错误的概率就是我们的α，p值只是我们根据一次抽样结果计算出来的值。P &lt; α）表达的是在一次抽样中出现当前结果及更极端结果的可能性比我们认为的在一次抽样中不可能发生的小概率事件的概率更小。</p>
-<h2 id="置信区间">置信区间</h2>
-<p>一个置信区间包含一个点估计，和该估计的不确定性。举例：</p>
-<p>如果想检验这个效应量是否显著区别于0，可以构建一个95%的置信区间来检验这个区间是否包含0。</p>
+<p><img src="https://i.loli.net/2021/04/12/j2KTLR1fHlrYGoC.png" alt=""></p>
+<p>假设用 <strong>体重</strong> 和 <strong>血容量</strong> 来预测大小，拟合曲线可做上述三个同样的事情，还可以用离散型数值来预测大小。</p>
+<ol start="3">
+<li>比较模型</li>
+</ol>
+<p>进行正态回归，使用权重来预测大小。</p>
+<h2 id="介绍">介绍</h2>
+<p><img src="https://i.loli.net/2021/04/12/wAgRHX9TnbKVyG3.png" alt=""></p>
+<p>逻辑回归预测事物是对还是错，而不是连续的事物，通常用于分类，根据该目的拟合了“S”形曲线，可以给出概率。</p>
+<p>假设这里用体重来预测肥胖，或者基因型和体重来预测肥胖，即不仅可以处理体重和年龄等连续数值，还可以处理离散数值，可以测试每个变量是否对预测肥胖有用。</p>
+<ul>
+<li>最大似然法拟合曲线</li>
+</ul>
+<p>本质就是不停的计算，选择具有最大似然的曲线。</p>
+<h2 id="最大似然">最大似然</h2>
+<p>最大似然的目标是找到使分布适合数据的最佳方法。不同类型的数据存在不同类型的分布，让分布适合数据可以让数据的使用更轻松，更通用，使它适用于相同类型的每个实验，假设称重了一批老鼠如下：</p>
+<p><img src="https://i.loli.net/2021/04/15/u6Ttidm8NBRzaDo.png" alt=""></p>
+<p>在这种情况下，认为老鼠体重可能呈正态分布，正态分布意味着：</p>
+<ol>
+<li>
+<p>老鼠的重量 <strong>接近均值</strong> 或平均值。</p>
+</li>
+<li>
+<p>期望测量值围绕平均值相对对称。（虽然看起来不是完全对称，但是也没有非常明显的偏向）</p>
+</li>
+</ol>
+<p>正态分布存在多种大小和形状，如下：</p>
+<p><img src="https://i.loli.net/2021/04/15/8DaxZbhowpREd6O.png" alt=""></p>
+<p>当确定形状之后，要找出居中的位置。</p>
+<p><img src="https://i.loli.net/2021/04/15/ONxT23Rar7E9Kth.png" alt=""></p>
+<p>假设选任何一个旧的正态分布，下图分布表示测量的大多数值应该接近平均值，看看它对数据的拟合程度（黑色虚线处是分布平均值）：</p>
+<p><img src="https://i.loli.net/2021/04/15/O91ABv4hDT6oxLM.png" alt=""></p>
+<p>发现测量的大多数值和分布的均值相差很大（右边多数的测量值的似然很低），如果将正态分布移到其均值和平均体重相同的位置：</p>
+<p><img src="https://i.loli.net/2021/04/15/xmryuT7bYNIJSXO.png" alt=""></p>
+<p>发现红色圈出部分的似然相对高，继续移动正态分布，这些测量值的似然再次下降：</p>
+<p><img src="https://i.loli.net/2021/04/15/Eo3DVRz2LFSN6wQ.png" alt=""></p>
+<p>可以在分布中心的位置，绘制观察到数据的似然，从左侧开始，计算观察数据的似然，将分布向右移动并重新计算似然：</p>
+<p><img src="https://i.loli.net/2021/04/15/hj2l4aZRyNov7WB.png" alt=""></p>
+<p>当尝试了所有可能的位置，就可以将正态分布置于需要的位置，即最大化观察我们所测量值的似然的位置，以上都是平均值的最大似然估计，这里讨论的是分布的均值，不是数据的均值吗，接下来找出标准差的最大似然估计：</p>
+<p><img src="https://i.loli.net/2021/04/15/Atod1eI4lW9Uxvb.png" alt=""></p>
+<p><img src="https://i.loli.net/2021/04/15/YNTBhSyZbCnV89U.png" alt=""></p>
+<p>日常对话中，概率和似然（likelihood）可能指的是同一个概念，但是在统计学中，似然（likelihood）指的是：尝试针对给定的一组观察到的测量值，找到分布的最佳均值或标准差，这就是找到适合数据分布的过程。</p>
 <h2 id="参考">参考：</h2>
 <ul>
 <li>
@@ -359,9 +362,6 @@
 </li>
 <li>
 <p>《统计会犯错：如何避免数据分析中的统计陷阱》</p>
-</li>
-<li>
-<p><a href="https://zhuanlan.zhihu.com/p/42821554">统计知识|谈谈P值和α水平</a></p>
 </li>
 </ul>
 
@@ -403,7 +403,7 @@
           </h3>
 
           
-          <input type="hidden" name="options[entryId]" value="fdafba9a8be7bd0ed6495fb5bf02217c">
+          <input type="hidden" name="options[entryId]" value="bfd71219fdb21980ea4a2c5b91ca1b98">
           <input type='hidden' name='fields[replyThread]' value=''>
           <input type='hidden' name='fields[replyID]' value=''>
           <input type='hidden' name='fields[replyName]' value=''>
@@ -440,10 +440,8 @@
   
   <div class="pagination">
     
-      <a href="/blog/2021-4-11_%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92/" class="button left"><span>逻辑回归</span></a>
     
-    
-      <a href="/blog/2021-4-13%E7%9B%B8%E5%85%B3%E6%80%A7/" class="button right"><span>p值</span></a>
+      <a href="/blog/2021-4-07_p%E5%80%BC/" class="button right"><span>p值</span></a>
     
   </div>
 
