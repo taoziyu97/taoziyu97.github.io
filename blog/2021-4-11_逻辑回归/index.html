@@ -319,7 +319,22 @@
 <li>比较模型</li>
 </ol>
 <p>进行正态回归，使用权重来预测大小。</p>
-<h2 id="介绍">介绍</h2>
+<h2 id="逻辑回归">逻辑回归</h2>
+<p>S型函数定义：</p>
+<center>
+    <img src= "https://i.loli.net/2021/04/19/pHmzxDXVZaYyi5w.png" width="200"/>
+</center>
+<p>S 型函数会产生以下曲线图：</p>
+<ul>
+<li>y' 是逻辑回归模型针对特定样本的输出。</li>
+<li>z 是 b + w1x1 + w2x2 + … wNxN</li>
+<li>w 的值是该模型学习的权重，b 是偏差。</li>
+<li>x 的值是特定样本的特征值。</li>
+</ul>
+<p>线性回归的损失函数是平方损失。逻辑回归的损失函数是对数损失函数。</p>
+<center>
+    <img src= "https://i.loli.net/2021/04/19/ljY3baotdBLWMP5.png" width="600"/>
+</center>
 <p><img src="https://i.loli.net/2021/04/12/wAgRHX9TnbKVyG3.png" alt=""></p>
 <p>逻辑回归预测事物是对还是错，而不是连续的事物，通常用于分类，根据该目的拟合了“S”形曲线，可以给出概率。</p>
 <p>假设这里用体重来预测肥胖，或者基因型和体重来预测肥胖，即不仅可以处理体重和年龄等连续数值，还可以处理离散数值，可以测试每个变量是否对预测肥胖有用。</p>
@@ -362,6 +377,9 @@
 </li>
 <li>
 <p>《统计会犯错：如何避免数据分析中的统计陷阱》</p>
+</li>
+<li>
+<p><a href="https://developers.google.com/machine-learning/crash-course/logistic-regression/calculating-a-probability?hl=zh-cn">逻辑回归(Logistic Regression)：计算概率|机器学习速成课程</a></p>
 </li>
 </ul>
 
