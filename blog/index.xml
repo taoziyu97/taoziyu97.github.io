@@ -6,7 +6,30 @@
     <description>Recent content in Blog on ziyu&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 12 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://taoziyu97.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 24 May 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://taoziyu97.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>进程和线程</title>
+      <link>https://taoziyu97.github.io/blog/2021-5-24_threads_and_processes/</link>
+      <pubDate>Mon, 24 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://taoziyu97.github.io/blog/2021-5-24_threads_and_processes/</guid>
+      <description>引言 看了一下廖雪峰的官方网站中对多线程和多进程的讲解，写的真是又简洁又明了，结合今天workshop中zk提到的并行计算，简单汇总写个学习笔记。
+操作系统可以同时执行多任务，比如同时运行浏览器、QQ和word，CPU执行代码是按照顺序一条条的执行。
+操作系统执行多任务是让CPU对多个任务轮流进行交替执行，比如让浏览器执行0.1秒，让word执行0.1秒。
+不管是单核还是多核的CPU，都可以同时运行多个任务，单核CPU执行任务交替进行，多核CPU在任务数量多于CPU的核数时，也是交替执行任务。
+一、进程 计算机中一个任务为一个进程，浏览器时一个进程，word也是一个进程。部分进程内部需要同时执行多个子任务，比如使用word一边打字一边检查拼写，一边后台打印，子任务就是线程。
+操作系统调度的最小任务单位是线程。由于一个应用程序可以有，多个进程，也可以有多个线程，实现任务的方法包括：
+多进程模式（每个进程只有一个线程）：
+  多线程模式（一个进程有多个线程）：
+  多进程＋多线程模式（复杂度最高）：
+  二、线程 线程包含在进程内，多任务既可以多进程来实现，也可以单进程内的多线程实现，也可以混合多进程和多线程。
+和多线程相比，多进程的缺点在于：
+ 创建进程比创建线程开销大，尤其是在Windows系统上； 进程间通信比线程间通信要慢，因为线程间通信就是读写同一个变量，速度很快。  多进程的优点在于：
+多进程稳定性比多线程高，因为在多进程的情况下，一个进程崩溃不会影响其他进程，而在多线程的情况下，任何一个线程崩溃会直接导致整个进程崩溃。
+多线程编程的特点在于：
+ 经常需要读写共享数据，并且需要同步，比如播放电影时一个线程播视频，一个线程播音频，两个线程需要协调运行保持音画同步，因此多线程编程的复杂度高，调试更困难。  参考资料：  [廖雪峰的官方网站-多线程](  </description>
+    </item>
+    
     <item>
       <title>逻辑回归</title>
       <link>https://taoziyu97.github.io/blog/2021-4-11_%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92/</link>
