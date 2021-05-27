@@ -6,7 +6,19 @@
     <description>Recent content in 技术 on ziyu&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 06 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://taoziyu97.github.io/categories/%E6%8A%80%E6%9C%AF/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 27 May 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://taoziyu97.github.io/categories/%E6%8A%80%E6%9C%AF/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Excel数字长度超13位尾号变0</title>
+      <link>https://taoziyu97.github.io/blog/2021-5-27_excel_number/</link>
+      <pubDate>Thu, 27 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://taoziyu97.github.io/blog/2021-5-27_excel_number/</guid>
+      <description>引言 小雨毕业填各种表格，发现数字很长的时候会直接用0替代超长位数的数字，检索之后，给她解决了这个小问题。
+操作方法 设置数字格式，在自定义中输入@
+ 重新输入可以发现已经可以了
+  参考资料：  Excel数字长度超13位尾号变0或E+，教你这招只用一个0就能搞定  </description>
+    </item>
+    
     <item>
       <title>使用CIBERSORTx网页版分析免疫浸润</title>
       <link>https://taoziyu97.github.io/blog/2021-4-06-cibersort/</link>

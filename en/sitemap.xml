@@ -4,12 +4,12 @@
   
   <url>
     <loc>https://taoziyu97.github.io/blog/</loc>
-    <lastmod>2021-05-24T00:00:00+00:00</lastmod>
+    <lastmod>2021-05-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://taoziyu97.github.io/categories/</loc>
-    <lastmod>2021-05-24T00:00:00+00:00</lastmod>
+    <lastmod>2021-05-27T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
@@ -63,8 +63,18 @@
   </url>
   
   <url>
+    <loc>https://taoziyu97.github.io/tags/excel/</loc>
+    <lastmod>2021-05-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://taoziyu97.github.io/blog/2021-5-27_excel_number/</loc>
+    <lastmod>2021-05-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://taoziyu97.github.io/tags/</loc>
-    <lastmod>2021-05-24T00:00:00+00:00</lastmod>
+    <lastmod>2021-05-27T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
@@ -119,7 +129,7 @@
   
   <url>
     <loc>https://taoziyu97.github.io/</loc>
-    <lastmod>2021-05-24T00:00:00+00:00</lastmod>
+    <lastmod>2021-05-27T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
@@ -173,6 +183,11 @@
   </url>
   
   <url>
+    <loc>https://taoziyu97.github.io/categories/%E6%8A%80%E6%9C%AF/</loc>
+    <lastmod>2021-05-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://taoziyu97.github.io/blog/2021-5-24_threads_and_processes/</loc>
     <lastmod>2021-05-24T00:00:00+00:00</lastmod>
   </url>
@@ -214,11 +229,6 @@
   
   <url>
     <loc>https://taoziyu97.github.io/tags/%E6%8A%80%E6%9C%AF/</loc>
-    <lastmod>2021-04-06T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://taoziyu97.github.io/categories/%E6%8A%80%E6%9C%AF/</loc>
     <lastmod>2021-04-06T00:00:00+00:00</lastmod>
   </url>
   

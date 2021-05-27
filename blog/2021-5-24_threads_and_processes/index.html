@@ -8,8 +8,8 @@
 
 <meta name="generator" content="Hugo 0.80.0" /><meta property="og:site_name" content="ziyu&#39;s blog">
   <meta property="og:title" content="线程和进程">
-  <meta property="og:description" content="Threads and Processes  last update：2021-05-24">
-  <meta property="description" content="Threads and Processes  last update：2021-05-24">
+  <meta property="og:description" content="Threads and Processes  last update：2021-05-26">
+  <meta property="description" content="Threads and Processes  last update：2021-05-26">
   <meta property="og:url" content="https://taoziyu97.github.io/blog/2021-5-24_threads_and_processes/">
   <meta property="og:type" content="article">
   
@@ -234,7 +234,7 @@
       <h2><a href="/blog/2021-5-24_threads_and_processes/">线程和进程</a></h2>
     
     
-      <p>Threads and Processes  last update：2021-05-24</p>
+      <p>Threads and Processes  last update：2021-05-26</p>
     
   </div>
   <div class="meta">
@@ -326,9 +326,43 @@
 <ul>
 <li>经常需要读写共享数据，并且需要同步，比如播放电影时一个线程播视频，一个线程播音频，两个线程需要协调运行保持音画同步，因此多线程编程的复杂度高，调试更困难。</li>
 </ul>
+<h3 id="三串行并发与并行">三、串行，并发与并行</h3>
+<ul>
+<li>
+<p>串行
+多个任务，执行时一个执行完再执行另一个。</p>
+</li>
+<li>
+<p>并发
+多个线程在单个核心运行，同一时间一个线程运行，系统不停切换线程，看起来像同时运行，实际上是线程不停切换。</p>
+</li>
+<li>
+<p>并行
+每个线程分配给独立的核心，线程同时运行。</p>
+</li>
+</ul>
+<h3 id="四cpu与核心">四、CPU与核心</h3>
+<ul>
+<li>物理核</li>
+</ul>
+<p>物理核数量=cpu数(机子上装的cpu的数量)*每个cpu的核心数</p>
+<ul>
+<li>虚拟核</li>
+</ul>
+<p>所谓的4核8线程，4核指的是物理核心。通过超线程技术，用一个物理核模拟两个虚拟核，每个核两个线程，总数为8线程。在操作系统看来是8个核，但是实际上是4个物理核。
+通过超线程技术可以实现单个物理核实现线程级别的并行计算，但是比不上性能两个物理核。</p>
+<ul>
+<li>单核cpu和多核cpu</li>
+</ul>
+<p>都是一个cpu，不同的是每个cpu上的核心数，多核cpu是多个单核cpu的替代方案，多核cpu减小了体积，同时也减少了功耗，一个核心只能同时执行一个线程。</p>
 <h4 id="参考资料">参考资料：</h4>
 <ul>
-<li>[廖雪峰的官方网站-多线程](</li>
+<li>
+<p><a href="https://www.liaoxuefeng.com/wiki/1252599548343744/1304521607217185">廖雪峰的官方网站-多线程</a></p>
+</li>
+<li>
+<p><a href="https://www.cnblogs.com/-new/p/7234332.html">认识cpu、核与线程</a></p>
+</li>
 </ul>
 
     </div>
@@ -406,6 +440,8 @@
   
   <div class="pagination">
     
+      <a href="/blog/2021-5-27_excel_number/" class="button left"><span>Excel数字长度超13位尾号变0</span></a>
+    
     
       <a href="/blog/2021-4-11_%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92/" class="button right"><span>逻辑回归</span></a>
     
@@ -418,6 +454,16 @@
       <header>
         <h1>Recent Posts</h1>
       </header>
+      
+      <article class="mini-post">
+          <a href="/blog/2021-5-27_excel_number/" class="image" style="--bg-image: url('https://i.loli.net/2021/05/27/RFLAN7blT3UIi6o.png');">
+    <img class="stretchH" src="https://i.loli.net/2021/05/27/RFLAN7blT3UIi6o.png" alt="Mountain Range Through Clouds">
+  </a>
+        <header>
+          <h2><a href="/blog/2021-5-27_excel_number/">Excel数字长度超13位尾号变0</a></h2>
+          <time class="published" datetime="2021-05-27 00:00:00 &#43;0000 UTC">May 27, 2021</time>
+        </header>
+      </article>
       
       <article class="mini-post">
           <a href="/blog/2021-5-24_threads_and_processes/" class="image" style="--bg-image: url('https://i.loli.net/2021/05/24/McUfHKWSi1FY6wZ.png');">
@@ -459,16 +505,6 @@
         </header>
       </article>
       
-      <article class="mini-post">
-          <a href="/blog/2021-3-05-latex_blog/" class="image" style="--bg-image: url('https://taoziyu97.github.io/img/2021/buildblog/Latex.jpg');">
-    <img class="stretchH" src="https://taoziyu97.github.io/img/2021/buildblog/Latex.jpg" alt="Mountain Range Through Clouds">
-  </a>
-        <header>
-          <h2><a href="/blog/2021-3-05-latex_blog/">使用Latex写论文</a></h2>
-          <time class="published" datetime="2021-03-05 00:00:00 &#43;0000 UTC">March 5, 2021</time>
-        </header>
-      </article>
-      
       
         <footer>
           <a href="/blog/" class="button">See More</a>
@@ -488,7 +524,7 @@
           
           
           <li>
-              <a href="/categories/%E6%8A%80%E6%9C%AF/">技术<span class="count">3</span></a>
+              <a href="/categories/%E6%8A%80%E6%9C%AF/">技术<span class="count">4</span></a>
           
           <li>
               <a href="/categories/%E7%94%9F%E7%89%A9%E7%BB%9F%E8%AE%A1/">生物统计<span class="count">2</span></a>
