@@ -6,7 +6,40 @@
     <description>Recent content in Blog on ziyu&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 27 May 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://taoziyu97.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 07 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://taoziyu97.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>hugo博客配置归档页面</title>
+      <link>https://taoziyu97.github.io/blog/2021-6-7_%E9%85%8D%E7%BD%AE%E5%BD%92%E6%A1%A3/</link>
+      <pubDate>Mon, 07 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://taoziyu97.github.io/blog/2021-6-7_%E9%85%8D%E7%BD%AE%E5%BD%92%E6%A1%A3/</guid>
+      <description>引言 hugo没有自带的归档设置，需要手动添加。
+操作步骤   在taozy_blog/layouts/_default/目录下创建 archives.html 文件
+  将taozy_blog/layouts/_default/目录下的 single.html 内容复制进 archives.html 文件（single.html的格式就是每篇博文的格式，也可以采用主题的contact.html的格式或者about.html的格式）
+  找到archives.html 文件中的{{ .Content }} 替换为下面的内容:
+  {{ range (.Site.RegularPages.GroupByDate &amp;#34;2006&amp;#34;) }} &amp;lt;h3&amp;gt;{{ .Key }}&amp;lt;/h3&amp;gt; &amp;lt;ul class=&amp;#34;archive-list&amp;#34;&amp;gt; {{ range (where .Pages &amp;#34;Type&amp;#34; &amp;#34;blog&amp;#34;) }} &amp;lt;li&amp;gt; {{ .PublishDate.Format &amp;#34;2006-01-02&amp;#34; }} -&amp;gt; &amp;lt;a href=&amp;#34;{{ .RelPermalink }}&amp;#34;&amp;gt;{{ .Title }}&amp;lt;/a&amp;gt; &amp;lt;/li&amp;gt; {{ end }} &amp;lt;/ul&amp;gt; {{ end }} 对上述代码进行解读:
+ 归档目录  Pages &amp;ldquo;Type&amp;rdquo; &amp;ldquo;blog&amp;quot;即归档目录设置为content/blog/下的内容，如果去掉blog，引号内留空，就会自动归档根目录下的文件，也就是content目录的文件。
+ 可选归档时间  .</description>
+    </item>
+    
+    <item>
+      <title>ERROR: Could not find a version that satisfies the requirement torch==1.5.1 </title>
+      <link>https://taoziyu97.github.io/blog/2021-6-4_torch1.5.1_error/</link>
+      <pubDate>Fri, 04 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://taoziyu97.github.io/blog/2021-6-4_torch1.5.1_error/</guid>
+      <description>引言 为了在集群上跑1000个模拟样本的SigprofilerExtractor工具，在集群上自己新建的环境里安装，解决安装bug，并成功使用。
+解决bug思路   发现依赖torch1.5.1版本
+  通过pip install安装失败
+  使用whl安装发现没有对应python3.9的版本
+  根据版本推测1.5.1不能在python3.9安装
+  重建新环境，安装python3.8，进而安装1.5.1
+  成功
+  具体实施 使用sigprofilerextractor发现报错如下：
+ERROR: Could not find a version that satisfies the requirement torch==1.5.1 (from sigprofilerextractor) (from versions: 0.1.2, 0.1.2.post1, 0.1.2.post2, 1.7.1, 1.8.0, 1.8.1) ERROR: No matching distribution found for torch==1.5.1 需要安装torch1.5.1版本，直接conda安装和pip安装都失败了 另外提示中表明可以通过source使用whl安装，网址如下：
+Cannot install torch just with pip, try again with source from https://download.pytorch.org/whl/torch_stable.html Looking in links: https://download.</description>
+    </item>
+    
     <item>
       <title>Excel数字长度超13位尾号变0</title>
       <link>https://taoziyu97.github.io/blog/2021-5-27_excel_number/</link>

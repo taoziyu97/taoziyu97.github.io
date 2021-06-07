@@ -4,12 +4,12 @@
   
   <url>
     <loc>https://taoziyu97.github.io/blog/</loc>
-    <lastmod>2021-05-27T00:00:00+00:00</lastmod>
+    <lastmod>2021-06-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://taoziyu97.github.io/categories/</loc>
-    <lastmod>2021-05-27T00:00:00+00:00</lastmod>
+    <lastmod>2021-06-07T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
@@ -63,18 +63,13 @@
   </url>
   
   <url>
-    <loc>https://taoziyu97.github.io/tags/excel/</loc>
-    <lastmod>2021-05-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://taoziyu97.github.io/blog/2021-5-27_excel_number/</loc>
-    <lastmod>2021-05-27T00:00:00+00:00</lastmod>
+    <loc>https://taoziyu97.github.io/blog/2021-6-7_%E9%85%8D%E7%BD%AE%E5%BD%92%E6%A1%A3/</loc>
+    <lastmod>2021-06-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://taoziyu97.github.io/tags/</loc>
-    <lastmod>2021-05-27T00:00:00+00:00</lastmod>
+    <lastmod>2021-06-07T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
@@ -129,7 +124,7 @@
   
   <url>
     <loc>https://taoziyu97.github.io/</loc>
-    <lastmod>2021-05-27T00:00:00+00:00</lastmod>
+    <lastmod>2021-06-07T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
@@ -180,6 +175,41 @@
                 hreflang="en"
                 href="https://taoziyu97.github.io/"
                 />
+  </url>
+  
+  <url>
+    <loc>https://taoziyu97.github.io/tags/%E5%8D%9A%E5%AE%A2/</loc>
+    <lastmod>2021-06-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://taoziyu97.github.io/categories/%E5%8D%9A%E5%AE%A2/</loc>
+    <lastmod>2021-06-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://taoziyu97.github.io/tags/bug/</loc>
+    <lastmod>2021-06-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://taoziyu97.github.io/categories/bug/</loc>
+    <lastmod>2021-06-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://taoziyu97.github.io/blog/2021-6-4_torch1.5.1_error/</loc>
+    <lastmod>2021-06-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://taoziyu97.github.io/tags/excel/</loc>
+    <lastmod>2021-05-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://taoziyu97.github.io/blog/2021-5-27_excel_number/</loc>
+    <lastmod>2021-05-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -248,6 +278,11 @@
   </url>
   
   <url>
+    <loc>https://taoziyu97.github.io/about/</loc>
+    <lastmod>2021-02-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://taoziyu97.github.io/book/</loc>
     <lastmod>2021-01-16T00:00:00+00:00</lastmod>
   </url>
@@ -288,18 +323,7 @@
   </url>
   
   <url>
-    <loc>https://taoziyu97.github.io/tags/%E5%8D%9A%E5%AE%A2/</loc>
-    <lastmod>2021-01-11T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://taoziyu97.github.io/categories/%E5%8D%9A%E5%AE%A2/</loc>
-    <lastmod>2021-01-11T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://taoziyu97.github.io/about/</loc>
-    <lastmod>2019-02-28T00:00:00+00:00</lastmod>
+    <loc>https://taoziyu97.github.io/archives/</loc>
   </url>
   
   <url>
@@ -324,6 +348,10 @@
                 hreflang="en"
                 href="https://taoziyu97.github.io/contact/"
                 />
+  </url>
+  
+  <url>
+    <loc>https://taoziyu97.github.io/posts/</loc>
   </url>
   
 </urlset>
