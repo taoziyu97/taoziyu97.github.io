@@ -45,7 +45,7 @@ toc = true # 默认显示toc tocWords = 400 #超过400字显示toc 2. 更改 mai
   更改归档页面时间0001
   每篇博文的分享页面超链接到对应网址
       删除不需要的语言支持，只保留英文和中文
-  增加评论功能Valine
+  增加评论功能Valine（已完成）
   参考：https://www.smslit.top/2018/07/08/hugo-valine/
     分类更加细化，最好能有层层分类
   ABOUT页面填充自己的个人信息
