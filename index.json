@@ -1,9 +1,21 @@
 [{
+    "title": "hugo主题增加valine评论功能",
+    "date": "",
+    "description": "增加评论功能，可以匿名 last update：2021-06-08",
+    "body": "步骤 1. 配置Leancloud 这部分详细参考：hugo博客添加评论系统Valine\n2. 更改 comments.html 文件 将整体内容替换成如下代码：\n\u0026lt;!-- valine change from origin code--\u0026gt; {{- if .Site.Params.valine.enable -}} \u0026lt;!-- id 将作为查询条件 --\u0026gt; \u0026lt;div id=\u0026#34;vcomments\u0026#34;\u0026gt;\u0026lt;/div\u0026gt; \u0026lt;script src=\u0026#34;//cdn1.lncld.net/static/js/3.0.4/av-min.js\u0026#34;\u0026gt;\u0026lt;/script\u0026gt; \u0026lt;script src=\u0026#39;//unpkg.com/valine/dist/Valine.min.js\u0026#39;\u0026gt;\u0026lt;/script\u0026gt; \u0026lt;script type=\u0026#34;text/javascript\u0026#34;\u0026gt; new Valine({ el: \u0026#39;#vcomments\u0026#39; , appId: \u0026#39;{{ .Site.Params.valine.appId }}\u0026#39;, appKey: \u0026#39;{{ .Site.Params.valine.appKey }}\u0026#39;, notify: \u0026#39;{{ .Site.Params.valine.notify }}\u0026#39;, verify: \u0026#39;{{ .Site.Params.valine.verify }}\u0026#39;, avatar:\u0026#39;{{ .Site.Params.valine.avatar }}\u0026#39;, placeholder: \u0026#39;{{ .Site.Params.valine.placeholder }}\u0026#39;, visitor: \u0026#39;{{ .Site.Params.valine.visitor }}\u0026#39; }); \u0026lt;/script\u0026gt; {{- end -}} 3. 引入评论 layouts/_default/single.html 中引入评论，本主题已有配置：\n{{ if not ( eq .Params.comments false) }} {{ .Render \u0026#34;comments\u0026#34; }} {{ end }} 参考   Hugo评论插件集成之Valine\n  hugo博客添加评论系统Valine\n  关于该主题已有的配置：给Hugo个人博客添加Valine评论系统\n  Valine配置项\n  ",
+    "ref": "/blog/2021-6-8_comment/"
+  },{
+    "title": "hugo增加TOC",
+    "date": "",
+    "description": "增加文章内标题导航 last update：2021-06-08",
+    "body": "引言 根据hugo-future-imperfect-slim主题中issue提到的TOC更改版本，改进后进行配置应用。\n步骤 1. 更改 config.html 文件 在[params] 内容下加入以下参数：\ntoc = true # 默认显示toc tocWords = 400 #超过400字显示toc 2. 更改 main.scss 文件 添加TableOfContents：\n#TableOfContents { border: $secondary-border; ul { list-style-type: none; padding-inline-start: 1.5em; } } /* ========================================================================== Add-Ons ========================================================================== */ /* reCaptcha */ 3. 更改 single.html 文件 在content内容中添加{{ .TableOfContents }}\n\u0026lt;div class=\u0026#34;content\u0026#34;\u0026gt; {{ .Render \u0026#34;featured\u0026#34; }} {{ .TableOfContents }} #此处添加一行 {{ .Content }} \u0026lt;/div\u0026gt; 参考   图片来源\n  hugo官方文档\n  github issue\n  可以尝试的其他方法：HuGo中文章加入目录\n  Hugo博客侧边导航栏\n  Hugo添加文章目录toc\n  ",
+    "ref": "/blog/2021-6-8_toc/"
+  },{
     "title": "博客优化计划",
     "date": "",
     "description": "仍然有很多需要做的，更上一层楼 last update：2021-06-08",
-    "body": "引言 分为功能改进、美观改进。\n博客功能改进   个人博客归档（已完成）\n  date的时间更换成自动化填充，每次手动填写很麻烦\n  搜索中文优化，目前速度较慢\n  更改归档页面时间0001\n  每篇博文的分享页面超链接到对应网址\n      删除不需要的语言支持，只保留英文和中文\n  增加评论功能\n      分类更加细化，最好能有层层分类\n  ABOUT页面填充自己的个人信息\n  翻页添加页码\n  博客整体美观   每个博文的图片选取大小合适的\n  标题的英文或中文的字距过大，比如下图的 引言 和 博客功能改进\n    ",
-    "ref": "/blog/2021-6-7_optimization_of_the_blog/"
+    "body": "引言 分为功能改进、美观改进。\n1. 博客功能改进   个人博客归档（已完成）\n  date的时间更换成自动化填充，每次手动填写很麻烦\n  搜索中文优化，目前速度较慢\n  更改归档页面时间0001\n  每篇博文的分享页面超链接到对应网址\n      删除不需要的语言支持，只保留英文和中文\n  增加评论功能Valine\n  参考：https://www.smslit.top/2018/07/08/hugo-valine/\n    分类更加细化，最好能有层层分类\n  ABOUT页面填充自己的个人信息\n  翻页添加页码\n  博文添加目录（已完成）\n  2. 博客整体美观   每个博文的图片选取大小合适的\n  标题的英文或中文的字距过大，比如下图的 引言 和 博客功能改进\n    ",
+    "ref": "/blog/2021-6-8_optimization_of_the_blog/"
   },{
     "title": "hugo博客配置归档页面",
     "date": "",

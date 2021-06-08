@@ -18,7 +18,7 @@
       <meta property="og:image:alt" content="Mountain Range Through Clouds">
     
   
-  <link rel="stylesheet" href="/css/bundle.min.d9e04ae08c9b3049b766dbd4aeab7d862c5ea1d13679b621490e0f5df5507497.css" integrity="sha256-2eBK4IybMEm3ZtvUrqt9hixeodE2ebYhSQ4PXfVQdJc="><link rel="stylesheet" href="/css/add-on.css">
+  <link rel="stylesheet" href="/css/bundle.min.ee524de897caffec0cb74f1c397c84966cda166166488aa22fe6a4b08076ec82.css" integrity="sha256-7lJN6JfK/&#43;wMt08cOXyElmzaFmFmSIqiL&#43;aksIB27II="><link rel="stylesheet" href="/css/add-on.css">
 </head>
 
   <body>
@@ -298,6 +298,18 @@
       <a href="/blog/2021-6-4_torch1.5.1_error/" class="image" style="--bg-image: url('https://i.loli.net/2021/06/04/cKZw3EgRCt6Vy4u.png');">
     <img class="stretchH" src="https://i.loli.net/2021/06/04/cKZw3EgRCt6Vy4u.png" alt="Mountain Range Through Clouds">
   </a>
+      <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#引言">引言</a></li>
+        <li><a href="#解决bug思路">解决bug思路</a></li>
+        <li><a href="#具体实施">具体实施</a></li>
+        <li><a href="#参考">参考：</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
       <h3 id="引言">引言</h3>
 <p>为了在集群上跑1000个模拟样本的SigprofilerExtractor工具，在集群上自己新建的环境里安装，解决安装bug，并成功使用。</p>
 <h3 id="解决bug思路">解决bug思路</h3>
@@ -444,51 +456,23 @@ The matrix normalizig cutoff is 17600
   </article>
   
     
-  <article class="post">
-    
-    <div>
-      <h2 id="say-something">Say Something</h2>
-        <form id="comment-form" class="new-comment" method="POST">
-          
-          <h3 class='reply-notice hidden'>
-            <span class='reply-name'></span>
-          </h3>
+  
+  <div id="vcomments"></div>
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
 
-          
-          <input type="hidden" name="options[entryId]" value="97977b3e2df461259ad1093705eb08ff">
-          <input type='hidden' name='fields[replyThread]' value=''>
-          <input type='hidden' name='fields[replyID]' value=''>
-          <input type='hidden' name='fields[replyName]' value=''>
-
-          
-          <input required name='fields[name]' type='text' placeholder='Your Name'>
-          <input name='fields[website]' type='text' placeholder='Your Website'>
-          <input required name='fields[email]' type='email' placeholder='Your Email'>
-          <textarea required name='fields[body]' placeholder='Your Message' rows='10'></textarea>
-
-          
-          
-
-          
-          <div class='submit-notice'>
-            <strong class='submit-notice-text submit-success hidden'>Thanks for your comment! It will be shown on the site once it has been approved.</strong>
-            <strong class='submit-notice-text submit-failed hidden'>Sorry, there was an error with your submission. Please make sure all required fields have been completed and try again.</strong>
-          </div>
-
-          
-          <input type='submit' value='Submit' class='button'>
-          <input type='submit' value='Submitted' class='hidden button' disabled>
-          <input type='reset' value='Reset' class='button'>
-        </form>
-    </div>
-
-    
-    <div>
-      <h2>Comments</h2>
-    </div>
-  </article>
-
-
+  <script type="text/javascript">
+    new Valine({
+        el: '#vcomments' ,
+        appId: 'OiGVbgHqcHtvLUpCg3hhcky5-gzGzoHsz',
+        appKey: 'JDVkS9wP5RFaNjhV2Ccof15G',
+        notify: 'false', 
+        verify: 'false', 
+        avatar:'mm', 
+        placeholder: '说点什么吧...',
+        visitor: 'true'
+    });
+  </script>
   
   <div class="pagination">
     
@@ -508,11 +492,31 @@ The matrix normalizig cutoff is 17600
       </header>
       
       <article class="mini-post">
-          <a href="/blog/2021-6-7_optimization_of_the_blog/" class="image" style="--bg-image: url('https://i.loli.net/2021/06/08/7LyKU6QrzC1iwo9.jpg');">
+          <a href="/blog/2021-6-8_comment/" class="image" style="--bg-image: url('https://i.loli.net/2021/06/08/FYvw1rAKx9EVpGW.png');">
+    <img class="stretchH" src="https://i.loli.net/2021/06/08/FYvw1rAKx9EVpGW.png" alt="Mountain Range Through Clouds">
+  </a>
+        <header>
+          <h2><a href="/blog/2021-6-8_comment/">hugo主题增加valine评论功能</a></h2>
+          <time class="published" datetime="2021-06-08 00:00:00 &#43;0000 UTC">June 8, 2021</time>
+        </header>
+      </article>
+      
+      <article class="mini-post">
+          <a href="/blog/2021-6-8_toc/" class="image" style="--bg-image: url('https://i.loli.net/2021/06/08/AZwjqMiFQksz8ef.png');">
+    <img class="stretchH" src="https://i.loli.net/2021/06/08/AZwjqMiFQksz8ef.png" alt="Mountain Range Through Clouds">
+  </a>
+        <header>
+          <h2><a href="/blog/2021-6-8_toc/">hugo增加TOC</a></h2>
+          <time class="published" datetime="2021-06-08 00:00:00 &#43;0000 UTC">June 8, 2021</time>
+        </header>
+      </article>
+      
+      <article class="mini-post">
+          <a href="/blog/2021-6-8_optimization_of_the_blog/" class="image" style="--bg-image: url('https://i.loli.net/2021/06/08/7LyKU6QrzC1iwo9.jpg');">
     <img class="stretchH" src="https://i.loli.net/2021/06/08/7LyKU6QrzC1iwo9.jpg" alt="Mountain Range Through Clouds">
   </a>
         <header>
-          <h2><a href="/blog/2021-6-7_optimization_of_the_blog/">博客优化计划</a></h2>
+          <h2><a href="/blog/2021-6-8_optimization_of_the_blog/">博客优化计划</a></h2>
           <time class="published" datetime="2021-06-08 00:00:00 &#43;0000 UTC">June 8, 2021</time>
         </header>
       </article>
@@ -537,26 +541,6 @@ The matrix normalizig cutoff is 17600
         </header>
       </article>
       
-      <article class="mini-post">
-          <a href="/blog/2021-5-27_excel_number/" class="image" style="--bg-image: url('https://i.loli.net/2021/05/27/RFLAN7blT3UIi6o.png');">
-    <img class="stretchH" src="https://i.loli.net/2021/05/27/RFLAN7blT3UIi6o.png" alt="Mountain Range Through Clouds">
-  </a>
-        <header>
-          <h2><a href="/blog/2021-5-27_excel_number/">Excel数字长度超13位尾号变0</a></h2>
-          <time class="published" datetime="2021-05-27 00:00:00 &#43;0000 UTC">May 27, 2021</time>
-        </header>
-      </article>
-      
-      <article class="mini-post">
-          <a href="/blog/2021-5-24_threads_and_processes/" class="image" style="--bg-image: url('https://i.loli.net/2021/05/24/McUfHKWSi1FY6wZ.png');">
-    <img class="stretchH" src="https://i.loli.net/2021/05/24/McUfHKWSi1FY6wZ.png" alt="Mountain Range Through Clouds">
-  </a>
-        <header>
-          <h2><a href="/blog/2021-5-24_threads_and_processes/">线程和进程</a></h2>
-          <time class="published" datetime="2021-05-24 00:00:00 &#43;0000 UTC">May 24, 2021</time>
-        </header>
-      </article>
-      
       
         <footer>
           <a href="/blog/" class="button">See More</a>
@@ -576,10 +560,10 @@ The matrix normalizig cutoff is 17600
           
           
           <li>
-              <a href="/categories/%E6%8A%80%E6%9C%AF/">技术<span class="count">4</span></a>
+              <a href="/categories/%E5%8D%9A%E5%AE%A2/">博客<span class="count">5</span></a>
           
           <li>
-              <a href="/categories/%E5%8D%9A%E5%AE%A2/">博客<span class="count">3</span></a>
+              <a href="/categories/%E6%8A%80%E6%9C%AF/">技术<span class="count">4</span></a>
           
           <li>
               <a href="/categories/%E7%94%9F%E7%89%A9%E7%BB%9F%E8%AE%A1/">生物统计<span class="count">2</span></a>
