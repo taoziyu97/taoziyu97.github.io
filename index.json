@@ -1,5 +1,41 @@
 [{
-    "title": "hugo主题增加valine评论功能",
+    "title": "R：批量读入文件并合并",
+    "date": "",
+    "description": "字符串处理 last update：2021-11-17",
+    "body": "引言 使用do.call批量读入文件并合并。\n1. 基本处理步骤 source_dir \u0026lt;- \u0026#34;文件所在路径\u0026#34; file \u0026lt;- list.files( path = source_dir, pattern = \u0026#34;*.txt\u0026#34;, # 目标文件夹下需要的文件的格式 all.files = F, full.names = F, recursive = F, include.dirs = F ) allfile \u0026lt;- lapply(file, function(x){read.csv2(paste0(source_dir, x), sep = \u0026#34;\\t\u0026#34;)}) combine \u0026lt;- do.call(rbind, allfile) 2. 涉及到的需求和参数设定   文件名作为新列补充进数据框\n  对文件名进行更改\n  参考    ",
+    "ref": "/blog/2021-11-17_docall/"
+  },{
+    "title": "synapser",
+    "date": "",
+    "description": "字符串处理 last update：2021-07-24",
+    "body": "引言 一个提供批量下载Synapser数据的R包。\n1. 登陆 synLogin(\u0026#34;baomihai@sina.com\u0026#34;,\u0026#34;******\u0026#34;) Welcome, baomihai@sina.com!NULL 参考  biostars-How to install gdc-client in Ubnutu  ",
+    "ref": "/blog/2021-8-31_synapser/"
+  },{
+    "title": "处理字符串的两个R包:stringi和stringr",
+    "date": "",
+    "description": "字符串处理 last update：2021-07-24",
+    "body": "引言 stringr包是建立在stringi上的，stringi包使用ICU C库提供准确、快速的常见字符串操作，stringr提供了最重要和最常用的字符串处理函数。\nstringr stringr包中所有的函数都以str_开头，第一个参数为字符串向量。对应的在base函数中也有功能一致的函数，记得对比两者之间的异同。\n1. 找到自己需要的数据 tcga_mut \u0026lt;- read.csv2(\u0026#34;/home/tzy/projects/CNX-method/data/TCGA/mc3.v0.2.8.PUBLIC.nonsilentGene.xena\u0026#34;,sep = \u0026#34;\\t\u0026#34;) saveRDS(tcga_mut, file = \u0026#34;/home/tzy/projects/CNX-method/data/TCGA/tcga_mut.rds\u0026#34;) save(tcga_mut, file = \u0026#34;/home/tzy/projects/CNX-method/data/TCGA/tcga_mut.RData\u0026#34;) 参考  biostars-How to install gdc-client in Ubnutu  ",
+    "ref": "/blog/2021-7-24_stringr_stringi/"
+  },{
+    "title": "gdc-client",
+    "date": "",
+    "description": "gdc-client加入环境变量 last update：2021-07-20",
+    "body": "引言 之前一直用别的方法下载数据，这次使用了gdc-client命令行去下载GDC上TCGA driver gene mutation的一批数据。\n步骤 1. 找到自己需要的数据 这是我本次要下载的数据\n点击数据下载地址发现出现如下界面，其中id就是使用gdc-client下载的文件对应的id\n对于Open access data，使用这两种方法下载\n下载了MAC的Client版本\n2. 安装 解压下载的文件，如果双击会发现出现erro：\n且常规的对~/.bash_profile文件添加环境变量也不可以，正确做法是：\n./gdc-client #(to verify that program works) cp -pi ./gdc-client /usr/local/bin #(if this does not work) sudo cp -pi ./gdc-client /usr/local/bin 在任何路径都可以打开。\n3. 使用  下载单个文件  gdc-client download id  下载多个文件  将含有多个文件的id和名字等信息的页面存储为txt，download加上-m，进行批量下载。\ngdc-client download -m ./PanCan-Driver_Open_GDC-Manifest.txt 参考  biostars-How to install gdc-client in Ubnutu  ",
+    "ref": "/blog/2021-7-20_gdc_client/"
+  },{
+    "title": "R储存数据",
+    "date": "",
+    "description": "R储存数据 last update：2021-07-20",
+    "body": "引言 rds比RData省空间，为什么？\n步骤 1. 找到自己需要的数据 tcga_mut \u0026lt;- read.csv2(\u0026#34;/home/tzy/projects/CNX-method/data/TCGA/mc3.v0.2.8.PUBLIC.nonsilentGene.xena\u0026#34;,sep = \u0026#34;\\t\u0026#34;) saveRDS(tcga_mut, file = \u0026#34;/home/tzy/projects/CNX-method/data/TCGA/tcga_mut.rds\u0026#34;) save(tcga_mut, file = \u0026#34;/home/tzy/projects/CNX-method/data/TCGA/tcga_mut.RData\u0026#34;) 参考  biostars-How to install gdc-client in Ubnutu  ",
+    "ref": "/blog/2021-7-20_rdata/"
+  },{
+    "title": "orthogonal sequencing techology",
+    "date": "",
+    "description": "什么是正交测序技术 last update：2021-07-15",
+    "body": "引言 看文献的时候看到这个词\u0026quot;orthogonal sequencing techology\u0026quot;，好奇这是什么技术，去了解了一下。以及为什么通过这个技术得到的重测序数据能够用来验证signature的存在？\n步骤 1. 更改 config.html 文件 2. 更改 main.scss 文件 参考  图片来源  ",
+    "ref": "/blog/2021-7-15_orthogonal_sequencing_tech/"
+  },{
+    "title": "hugo主题增加valine评论功能_test",
     "date": "",
     "description": "增加评论功能，可以匿名 last update：2021-06-08",
     "body": "步骤 1. 配置Leancloud 这部分详细参考：hugo博客添加评论系统Valine\n2. 更改 comments.html 文件 将整体内容替换成如下代码：\n\u0026lt;!-- valine change from origin code--\u0026gt; {{- if .Site.Params.valine.enable -}} \u0026lt;!-- id 将作为查询条件 --\u0026gt; \u0026lt;div id=\u0026#34;vcomments\u0026#34;\u0026gt;\u0026lt;/div\u0026gt; \u0026lt;script src=\u0026#34;//cdn1.lncld.net/static/js/3.0.4/av-min.js\u0026#34;\u0026gt;\u0026lt;/script\u0026gt; \u0026lt;script src=\u0026#39;//unpkg.com/valine/dist/Valine.min.js\u0026#39;\u0026gt;\u0026lt;/script\u0026gt; \u0026lt;script type=\u0026#34;text/javascript\u0026#34;\u0026gt; new Valine({ el: \u0026#39;#vcomments\u0026#39; , appId: \u0026#39;{{ .Site.Params.valine.appId }}\u0026#39;, appKey: \u0026#39;{{ .Site.Params.valine.appKey }}\u0026#39;, notify: \u0026#39;{{ .Site.Params.valine.notify }}\u0026#39;, verify: \u0026#39;{{ .Site.Params.valine.verify }}\u0026#39;, avatar:\u0026#39;{{ .Site.Params.valine.avatar }}\u0026#39;, placeholder: \u0026#39;{{ .Site.Params.valine.placeholder }}\u0026#39;, visitor: \u0026#39;{{ .Site.Params.valine.visitor }}\u0026#39; }); \u0026lt;/script\u0026gt; {{- end -}} 3. 引入评论 layouts/_default/single.html 中引入评论，本主题已有配置：\n{{ if not ( eq .Params.comments false) }} {{ .Render \u0026#34;comments\u0026#34; }} {{ end }} 参考   Hugo评论插件集成之Valine\n  hugo博客添加评论系统Valine\n  关于该主题已有的配置：给Hugo个人博客添加Valine评论系统\n  Valine配置项\n  ",

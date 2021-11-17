@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>R语言 on ziyu&#39;s blog</title>
+    <link>https://taoziyu97.github.io/tags/r%E8%AF%AD%E8%A8%80/</link>
+    <description>Recent content in R语言 on ziyu&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 17 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://taoziyu97.github.io/tags/r%E8%AF%AD%E8%A8%80/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>R：批量读入文件并合并</title>
+      <link>https://taoziyu97.github.io/blog/2021-11-17_docall/</link>
+      <pubDate>Wed, 17 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://taoziyu97.github.io/blog/2021-11-17_docall/</guid>
+      <description>引言 使用do.call批量读入文件并合并。
+1. 基本处理步骤 source_dir &amp;lt;- &amp;#34;文件所在路径&amp;#34; file &amp;lt;- list.files( path = source_dir, pattern = &amp;#34;*.txt&amp;#34;, # 目标文件夹下需要的文件的格式 all.files = F, full.names = F, recursive = F, include.dirs = F ) allfile &amp;lt;- lapply(file, function(x){read.csv2(paste0(source_dir, x), sep = &amp;#34;\t&amp;#34;)}) combine &amp;lt;- do.call(rbind, allfile) 2. 涉及到的需求和参数设定   文件名作为新列补充进数据框
+  对文件名进行更改
+  参考    </description>
+    </item>
+    
+  </channel>
+</rss>

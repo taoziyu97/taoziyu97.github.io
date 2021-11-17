@@ -6,9 +6,80 @@
     <description>Recent content in Blog on ziyu&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 08 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://taoziyu97.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 17 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://taoziyu97.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>hugo主题增加valine评论功能</title>
+      <title>R：批量读入文件并合并</title>
+      <link>https://taoziyu97.github.io/blog/2021-11-17_docall/</link>
+      <pubDate>Wed, 17 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://taoziyu97.github.io/blog/2021-11-17_docall/</guid>
+      <description>引言 使用do.call批量读入文件并合并。
+1. 基本处理步骤 source_dir &amp;lt;- &amp;#34;文件所在路径&amp;#34; file &amp;lt;- list.files( path = source_dir, pattern = &amp;#34;*.txt&amp;#34;, # 目标文件夹下需要的文件的格式 all.files = F, full.names = F, recursive = F, include.dirs = F ) allfile &amp;lt;- lapply(file, function(x){read.csv2(paste0(source_dir, x), sep = &amp;#34;\t&amp;#34;)}) combine &amp;lt;- do.call(rbind, allfile) 2. 涉及到的需求和参数设定   文件名作为新列补充进数据框
+  对文件名进行更改
+  参考    </description>
+    </item>
+    
+    <item>
+      <title>synapser</title>
+      <link>https://taoziyu97.github.io/blog/2021-8-31_synapser/</link>
+      <pubDate>Sat, 24 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://taoziyu97.github.io/blog/2021-8-31_synapser/</guid>
+      <description>引言 一个提供批量下载Synapser数据的R包。
+1. 登陆 synLogin(&amp;#34;baomihai@sina.com&amp;#34;,&amp;#34;******&amp;#34;) Welcome, baomihai@sina.com!NULL 参考  biostars-How to install gdc-client in Ubnutu  </description>
+    </item>
+    
+    <item>
+      <title>处理字符串的两个R包:stringi和stringr</title>
+      <link>https://taoziyu97.github.io/blog/2021-7-24_stringr_stringi/</link>
+      <pubDate>Sat, 24 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://taoziyu97.github.io/blog/2021-7-24_stringr_stringi/</guid>
+      <description>引言 stringr包是建立在stringi上的，stringi包使用ICU C库提供准确、快速的常见字符串操作，stringr提供了最重要和最常用的字符串处理函数。
+stringr stringr包中所有的函数都以str_开头，第一个参数为字符串向量。对应的在base函数中也有功能一致的函数，记得对比两者之间的异同。
+1. 找到自己需要的数据 tcga_mut &amp;lt;- read.csv2(&amp;#34;/home/tzy/projects/CNX-method/data/TCGA/mc3.v0.2.8.PUBLIC.nonsilentGene.xena&amp;#34;,sep = &amp;#34;\t&amp;#34;) saveRDS(tcga_mut, file = &amp;#34;/home/tzy/projects/CNX-method/data/TCGA/tcga_mut.rds&amp;#34;) save(tcga_mut, file = &amp;#34;/home/tzy/projects/CNX-method/data/TCGA/tcga_mut.RData&amp;#34;) 参考  biostars-How to install gdc-client in Ubnutu  </description>
+    </item>
+    
+    <item>
+      <title>gdc-client</title>
+      <link>https://taoziyu97.github.io/blog/2021-7-20_gdc_client/</link>
+      <pubDate>Tue, 20 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://taoziyu97.github.io/blog/2021-7-20_gdc_client/</guid>
+      <description>引言 之前一直用别的方法下载数据，这次使用了gdc-client命令行去下载GDC上TCGA driver gene mutation的一批数据。
+步骤 1. 找到自己需要的数据 这是我本次要下载的数据
+点击数据下载地址发现出现如下界面，其中id就是使用gdc-client下载的文件对应的id
+对于Open access data，使用这两种方法下载
+下载了MAC的Client版本
+2. 安装 解压下载的文件，如果双击会发现出现erro：
+且常规的对~/.bash_profile文件添加环境变量也不可以，正确做法是：
+./gdc-client #(to verify that program works) cp -pi ./gdc-client /usr/local/bin #(if this does not work) sudo cp -pi ./gdc-client /usr/local/bin 在任何路径都可以打开。
+3. 使用  下载单个文件  gdc-client download id  下载多个文件  将含有多个文件的id和名字等信息的页面存储为txt，download加上-m，进行批量下载。
+gdc-client download -m ./PanCan-Driver_Open_GDC-Manifest.txt 参考  biostars-How to install gdc-client in Ubnutu  </description>
+    </item>
+    
+    <item>
+      <title>R储存数据</title>
+      <link>https://taoziyu97.github.io/blog/2021-7-20_rdata/</link>
+      <pubDate>Tue, 20 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://taoziyu97.github.io/blog/2021-7-20_rdata/</guid>
+      <description>引言 rds比RData省空间，为什么？
+步骤 1. 找到自己需要的数据 tcga_mut &amp;lt;- read.csv2(&amp;#34;/home/tzy/projects/CNX-method/data/TCGA/mc3.v0.2.8.PUBLIC.nonsilentGene.xena&amp;#34;,sep = &amp;#34;\t&amp;#34;) saveRDS(tcga_mut, file = &amp;#34;/home/tzy/projects/CNX-method/data/TCGA/tcga_mut.rds&amp;#34;) save(tcga_mut, file = &amp;#34;/home/tzy/projects/CNX-method/data/TCGA/tcga_mut.RData&amp;#34;) 参考  biostars-How to install gdc-client in Ubnutu  </description>
+    </item>
+    
+    <item>
+      <title>orthogonal sequencing techology</title>
+      <link>https://taoziyu97.github.io/blog/2021-7-15_orthogonal_sequencing_tech/</link>
+      <pubDate>Thu, 15 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://taoziyu97.github.io/blog/2021-7-15_orthogonal_sequencing_tech/</guid>
+      <description>引言 看文献的时候看到这个词&amp;quot;orthogonal sequencing techology&amp;quot;，好奇这是什么技术，去了解了一下。以及为什么通过这个技术得到的重测序数据能够用来验证signature的存在？
+步骤 1. 更改 config.html 文件 2. 更改 main.scss 文件 参考  图片来源  </description>
+    </item>
+    
+    <item>
+      <title>hugo主题增加valine评论功能_test</title>
       <link>https://taoziyu97.github.io/blog/2021-6-8_comment/</link>
       <pubDate>Tue, 08 Jun 2021 00:00:00 +0000</pubDate>
       
