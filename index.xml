@@ -6,7 +6,31 @@
     <description>Recent content on ziyu&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 17 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://taoziyu97.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 19 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://taoziyu97.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>隐马尔可夫模型（HMM）</title>
+      <link>https://taoziyu97.github.io/blog/2021-11-19_hmm/</link>
+      <pubDate>Fri, 19 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://taoziyu97.github.io/blog/2021-11-19_hmm/</guid>
+      <description>引言 1. 马尔可夫模型的基本概念 来对2段氨基酸序列x和y进行残基比对，认为存在3种比对关系的状态：
+ M：残基能够比对上但不一定相等 X：序列x的残基比对到1个空位，或x上发生了1次插入 Y：序列y的残基比对到1个空位，或y上发生了1次插入  序列比对就是在上述3个状态中不断转换的过程：
+ $M(i,j)$ : $x_i$比对到$y_j$时，序列x从1到$i$和序列$y$从1到$j$最好的比对分数 $X(i,j)$ : $x_i$比对到空位时，序列x从1到$i$最好的比对分数 $Y(i,j)$ : $y_j$比对到空位时，序列y从1到$j$最好的比对分数  转移（从一个状态到另外一个状态）概率： $$ a_{kl} = P (X_t=S_l|X_{t-1}=S_k) $$
+$$ a_{lk} = P (X_t=S_k|X_{t-1}=S_l) $$
+转移矩阵：
+ 
+ 设定：
+ $\delta$ ：Gap open（d）的概率 $\epsilon$ ：Gap extension（e）的概率   马尔可夫链
+ 先根据转移概率得到一个转移概率矩阵：
+ 转移矩阵
+ 假设匹配状态是XMMY：
+ 匹配状态
+ 计算匹配状态的概率： $$ P(XMMY)=\alpha_{XM}\alpha_{MM}\alpha_{MY} = (1-\epsilon)(1-2\delta)\delta $$
+通过上面的例子，下面介绍马尔可夫模型的一些概念：
+  马尔可夫过程：
+马尔可夫过程是一类随机过程，该过程的“将来”仅依赖“现在”，而不依赖“过去”，把一个总随机过程看作是状态的不断转移，表达式为： $$ x(t+1)=f(x(t)) $$</description>
+    </item>
+    
     <item>
       <title>R：批量读入文件并合并</title>
       <link>https://taoziyu97.github.io/blog/2021-11-17_docall/</link>
