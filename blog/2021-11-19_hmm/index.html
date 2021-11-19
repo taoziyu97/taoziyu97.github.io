@@ -6,6 +6,42 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
+
+  <script type="text/javascript"
+        async
+        src="https://cdn.bootcss.com/mathjax/2.7.3/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[\[','\]\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+
+MathJax.Hub.Queue(function() {
+    
+    
+    
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+<style>
+code.has-jax {
+    font: inherit;
+    font-size: 100%;
+    background: inherit;
+    border: inherit;
+    color: #515151;
+}
+</style>
 <meta name="generator" content="Hugo 0.80.0" /><meta property="og:site_name" content="ziyu&#39;s blog">
   <meta property="og:title" content="隐马尔可夫模型（HMM）">
   <meta property="og:description" content="隐马尔可夫模型的介绍以及在获取拷贝数变异中的应用 last update：2021-11-19">
@@ -322,8 +358,8 @@
 <li>$X(i,j)$ : $x_i$比对到空位时，序列x从1到$i$最好的比对分数</li>
 <li>$Y(i,j)$ : $y_j$比对到空位时，序列y从1到$j$最好的比对分数</li>
 </ol>
-<p>转移（从一个状态到另外一个状态）概率：
-$$
+<p>转移（从一个状态到另外一个状态）概率：</p>
+<p>$$
 a_{kl} = P (X_t=S_l|X_{t-1}=S_k)
 $$</p>
 <p>$$
@@ -388,10 +424,12 @@ $$</p>
 </li>
 <li>
 <p>由于马氏链在时刻 $t$ 从任何一个状态$S_i$出发，到下一时刻 $t+1$，必然转移到$S_j$，$j=1,2,…$，诸状</p>
-<p>态中的某一个，所以有：
+<p>态中的某一个，所以有：</p>
+<div>
 $$
-\forall <em>{i^{\forall}}\sum</em>{j}P_{ij}(t,t+1)=1
-$$</p>
+\forall _{i^{\forall}}\sum_{j}P_{ij}(t,t+1)=1
+$$
+</div
 </li>
 <li>
 <p>当$P_{ij}(t,t+1)$与$t$无关时，为齐次马尔可夫链，通常说到的马尔可夫链都是指齐次的。马尔可夫链除了仅依赖于上一次观测值的一阶马尔可夫链，还可以依赖多个连续观测数据，后者称之为高阶马尔可夫链。</p>
@@ -584,14 +622,16 @@ $(\phi·；·)$是均值为$\mu_{r,z}$，标准差为$S_{r,z}$的正态分布，
 </li>
 <li>
 <p>隐状态的转移概率：</p>
-<p>即两个相邻SNP发生拷贝数状态改变的概率，一般来讲，临近的SNPs拷贝数状态不太可能发生变化，但是较远的SNPs的拷贝数状态更容易发生改变。因此需要找到转移概率和距离的关系，那么转移概率为：
+<p>即两个相邻SNP发生拷贝数状态改变的概率，一般来讲，临近的SNPs拷贝数状态不太可能发生变化，但是较远的SNPs的拷贝数状态更容易发生改变。因此需要找到转移概率和距离的关系，那么转移概率为：</p>
+<div>
 $$
-p(z_i=l|z_{i-1}=j)=\left{\begin{matrix}
-1-\sum_{k=2}^{b}p_{j,k-1}(1-e^{d_i/D}),if \space l=j \
+p(z_i=l|z_{i-1}=j)=\left\{\begin{matrix}
+1-\sum_{k=2}^{b}p_{j,k-1}(1-e^{d_i/D}),if \space l=j \\ 
 p_{j,l-1}(1-e^{d_i/D}),if \space l\neq j
 \end{matrix}\right.
 $$
-$D$是一个常数，当状态为4时设为100Mb，其他状态为100kb，p是未知参数，用Baum-Welch算法进行估计，得到最优的参数后，再使用Viterbi算法进行隐状态的判断。在PennCNV的分析中，排除了所有包含小于等于2个SNP的CNV，因为这些CNV中可能存在较高的假阳性比例。</p>
+</div
+<p>$D$是一个常数，当状态为4时设为100Mb，其他状态为100kb，p是未知参数，用Baum-Welch算法进行估计，得到最优的参数后，再使用Viterbi算法进行隐状态的判断。在PennCNV的分析中，排除了所有包含小于等于2个SNP的CNV，因为这些CNV中可能存在较高的假阳性比例。</p>
 </li>
 </ul>
 <p>介绍算法之前先定义几个概念：</p>
