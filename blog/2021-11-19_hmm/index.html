@@ -482,7 +482,7 @@ $$</p>
 </ul>
 <p>给出这五个参数就能够确定一个隐马尔可夫模型，通常用参数$\lambda=\begin{Bmatrix}A,B,\pi\end{Bmatrix}$来指代。</p>
 <p>举一个新的例子：基因预测——给定序列预测编码区</p>
-<p>隐马尔可夫模型在==状态==的基础上，增加==符号==的概念，每个状态可以以不同的概率产生可观测到的符号。在例子中，给定的基因组序列为观测到的符号串，编码和非编码为2种隐状态，即编码与否是未知的，需要通过已知的符号来推测。</p>
+<p>隐马尔可夫模型在<font color=red>状态</font>的基础上，增加<font color=red>符号</font>的概念，每个状态可以以不同的概率产生可观测到的符号。在例子中，给定的基因组序列为观测到的符号串，编码和非编码为2种隐状态，即编码与否是未知的，需要通过已知的符号来推测。</p>
 <center>
     <img src= "https://i.loli.net/2021/10/26/HhznapOF2cvDXx1.png" width="700"/>
     <p><font color="grey">示例：马尔可夫链</font></p>
@@ -556,12 +556,12 @@ $$
 </li>
 </ul>
 <h2 id="4-隐马尔可夫模型判断cnv">4. 隐马尔可夫模型判断CNV</h2>
-<p>以PennCNV为例介绍HMM在实际判断CNV中的应用。PennCNV是一个免费的检测SNP分型阵列芯片的==拷贝数变异==的工具，目前可以处理Illumina和Affymetrix array的数据来得到信号强度，若使用其他类型的SNP芯片数据和寡核苷酸芯片需要预先处理文件的格式。PennCNV使用==隐马尔可夫模型==整合<u>多个来源的信息</u>来对单个样本推断CNV。它与基于分割的算法不同，除了单独考虑信号强度外，还考虑了SNP等位基因比例分布等因素。</p>
+<p>以PennCNV为例介绍HMM在实际判断CNV中的应用。PennCNV是一个免费的检测SNP分型阵列芯片的<font color=red>拷贝数变异</font>的工具，目前可以处理Illumina和Affymetrix array的数据来得到信号强度，若使用其他类型的SNP芯片数据和寡核苷酸芯片需要预先处理文件的格式。PennCNV使用<font color=red>隐马尔可夫模型</font>整合<u>多个来源的信息</u>来对单个样本推断CNV。它与基于分割的算法不同，除了单独考虑信号强度外，还考虑了SNP等位基因比例分布等因素。</p>
 <center>
     <img src= "https://i.loli.net/2021/10/27/fv1EkONB9oHqVwI.png" width="500"/>
     <p><font color="grey">PennCNV通过基因型来检测拷贝数变异的算法流程（Wang K et al. 2007）</font></p>
 </center>
-<p>在PennCNV中使用的是一阶HMM，==隐状态==是人为设定的离散值1，2，3，4，5，6，各自对应的总拷贝数数值和CNV基因型如上表所示。注意这里最大的拷贝数状态设定为拷贝数为4，因为4个和4个以上的拷贝无法进行区分。==符号==是信号强度值的两种形式：BAF和LRR。结合BAF和LRR可以判断<u>不同的拷贝数</u>以及区分出<u>拷贝中性的LOH</u>（文章中没有具体说怎么结合BAF和LRR数据的，但是通过公示我的理解是BAF和LRR同时发生的联合概率作为HMM的生成概率）。</p>
+<p>在PennCNV中使用的是一阶HMM，<font color=red>隐状态</font>是人为设定的离散值1，2，3，4，5，6，各自对应的总拷贝数数值和CNV基因型如上表所示。注意这里最大的拷贝数状态设定为拷贝数为4，因为4个和4个以上的拷贝无法进行区分。<font color=red>符号</font>是信号强度值的两种形式：BAF和LRR。结合BAF和LRR可以判断<u>不同的拷贝数</u>以及区分出<u>拷贝中性的LOH</u>（文章中没有具体说怎么结合BAF和LRR数据的，但是通过公示我的理解是BAF和LRR同时发生的联合概率作为HMM的生成概率）。</p>
 <center>
     <img src= "https://i.loli.net/2021/10/27/nvQYj1mxLXahdU5.png" width="500"/>
     <p><font color="grey">隐状态，拷贝数数值及其对应的描述（Wang K et al. 2007）</font></p>
@@ -642,7 +642,7 @@ $$
 <li>$b_j(O_t)$		在状态$S_j$时，输出$O_t$的概率</li>
 <li>$a_t(j)$		输出部分符号序号$O = O_1,O_2,&hellip;,O_t$达到状态$S_j$时的前向概率</li>
 </ul>
-<p>==前向算法==：</p>
+<p><font color=red>前向算法</font>：</p>
 <center>
     <img src= "https://i.loli.net/2021/10/29/dWlPmjsLfUN6k1i.png" width="400"/>
     <p><font color="grey">前向算法</font></p>
@@ -651,7 +651,7 @@ $$
     <img src= "https://i.loli.net/2021/10/29/ymVYrZazGJei2ND.png" width="600"/>
     <p><font color="grey">前向算法步骤</font></p>
 </center>
-<p>==Vertibi算法==</p>
+<p><font color=red>Vertibi算法</font></p>
 <p>介绍完定义，明确完我们的五元组，我们再明确一下我们的问题是解码问题，解码问题对应的解法是Viterbi算法，介绍一下该算法具体过程：</p>
 <center>
     <img src= "https://i.loli.net/2021/10/29/1eVK7QIgZunxz4M.png" width="600"/>
