@@ -9,10 +9,10 @@
     <lastBuildDate>Fri, 26 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://taoziyu97.github.io/tags/%E7%94%9F%E7%89%A9%E7%BB%9F%E8%AE%A1/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>潜在语义分析（LSA）</title>
-      <link>https://taoziyu97.github.io/blog/2021-11-26_statistic-lsa/</link>
+      <link>https://taoziyu97.github.io/blog/2021-11-26_statistic-lsa.mmark/</link>
       <pubDate>Fri, 26 Nov 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://taoziyu97.github.io/blog/2021-11-26_statistic-lsa/</guid>
+      <guid>https://taoziyu97.github.io/blog/2021-11-26_statistic-lsa.mmark/</guid>
       <description>引言 潜在语义分析（Latent sematic analysis, LSA）是一种无监督的学习方法。特点是通过矩阵分解来完成，使用的是非概率的话题分析模型，可以通过奇异值分解的方法进行矩阵因子分解，特点是分解的矩阵正交，非负矩阵分解是另一种矩阵的因子分解方法，特点是分解的矩阵非负。
 1. 单词向量空间和话题向量空间 1.1 单词向量空间 给定一个含有$n$个文本的集合$D=\left { d_1,d_2,&amp;hellip;,d_n \right }$，在所有文本中出现的$m$个单词的集合$W=\left { w_1,w_2,&amp;hellip;,w_m \right }$，将单词在文本中出现的数据用一个单词-文本矩阵表示，记作$X$: $$ \begin{bmatrix} x_{11} &amp;amp;x_{12} &amp;amp;&amp;hellip; &amp;amp;x_{1n} \ x_{21} &amp;amp;x_{22} &amp;amp;&amp;hellip; &amp;amp;x_{2n} \ \vdots &amp;amp;\vdots &amp;amp; &amp;amp;\vdots \ x_{m1} &amp;amp;x_{m2} &amp;amp;&amp;hellip; &amp;amp;x_{mn} \end{bmatrix} $$
 元素$x_{ij}$表示单词$w_i$在文本$d_j$中出现的频数或权值，由于单词的种类很多，每个文本出现单词的种类通常较少，所以单词-文本矩阵是一个稀疏矩阵。

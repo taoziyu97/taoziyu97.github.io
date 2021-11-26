@@ -1,0 +1,709 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+<title>潜在语义分析（LSA） - ziyu&#39;s blog</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+  <script type="text/javascript"
+        async
+        src="https://cdn.bootcss.com/mathjax/2.7.3/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[\[','\]\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+
+MathJax.Hub.Queue(function() {
+    
+    
+    
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+<style>
+code.has-jax {
+    font: inherit;
+    font-size: 100%;
+    background: inherit;
+    border: inherit;
+    color: #515151;
+}
+</style>
+<meta name="generator" content="Hugo 0.80.0" /><meta property="og:site_name" content="ziyu&#39;s blog">
+  <meta property="og:title" content="潜在语义分析（LSA）">
+  <meta property="og:description" content="潜在语义分析 last update：2021-11-26">
+  <meta property="description" content="潜在语义分析 last update：2021-11-26">
+  <meta property="og:url" content="https://taoziyu97.github.io/blog/2021-11-26_statistic-lsa.mmark/">
+  <meta property="og:type" content="article">
+  
+    
+      <meta property="og:image" content="https://i.loli.net/2021/11/26/qgC23iprGfZ1Wkt.png">
+      <meta property="og:image:alt" content="Mountain Range Through Clouds">
+    
+  
+  <link rel="stylesheet" href="/css/bundle.min.ee524de897caffec0cb74f1c397c84966cda166166488aa22fe6a4b08076ec82.css" integrity="sha256-7lJN6JfK/&#43;wMt08cOXyElmzaFmFmSIqiL&#43;aksIB27II="><link rel="stylesheet" href="/css/add-on.css">
+</head>
+
+  <body>
+    
+
+<header id="site-header">
+  <nav id="site-nav">
+    <h1 class="nav-title">
+      <a href="/" class="nav">
+        
+          Blog
+        
+      </a>
+    </h1>
+    <menu id="site-nav-menu" class="flyout-menu menu">
+      
+        
+          
+          <a href="/" class="nav link"><i class='fa fa-home'></i> Home</a>
+        
+      
+        
+          
+          <a href="/about/" class="nav link"><i class='far fa-id-card'></i> About</a>
+        
+      
+        
+          
+          <a href="/categories/" class="nav link"><i class='fas fa-sitemap'></i> Categories</a>
+        
+      
+        
+          
+          <a href="/book/" class="nav link"><i class='far fa-newspaper'></i> BOOK</a>
+        
+      
+        
+          
+          <a href="/contact/" class="nav link"><i class='far fa-envelope'></i> Contact</a>
+        
+      
+        
+          
+          <a href="/archives/" class="nav link"><i class='fa fa-newspaper'></i> Archives</a>
+        
+      
+      <a href="#share-menu" class="nav link share-toggle"><i class="fas fa-share-alt">&nbsp;</i>Share</a>
+      <a href="#search-input" class="nav link search-toggle"><i class="fas fa-search">&nbsp;</i>Search</a>
+    </menu>
+    <a href="#search-input" class="nav search-toggle"><i class="fas fa-search fa-2x">&nbsp;</i></a>
+    <a href="#share-menu" class="nav share-toggle"><i class="fas fa-share-alt fa-2x">&nbsp;</i></a>
+    <a href="#lang-menu" class="nav lang-toggle" lang="en">en</a>
+    <a href="#site-nav" class="nav nav-toggle"><i class="fas fa-bars fa-2x"></i></a>
+  </nav>
+  <menu id="search" class="menu"><input id="search-input" class="search-input menu"></input><div id="search-results" class="search-results menu"></div></menu>
+  <menu id="lang-menu" class="flyout-menu menu">
+  <a href="#" lang="en" class="nav link active">English (en)</a>
+  
+    
+      
+    
+      
+        <a href="/fr" lang="fr" class="nav no-lang link">Français (fr)</a>
+      
+    
+      
+        <a href="/pl" lang="pl" class="nav no-lang link">Polski (pl)</a>
+      
+    
+      
+        <a href="/pt" lang="pt" class="nav no-lang link">Português (pt)</a>
+      
+    
+      
+        <a href="/de" lang="de" class="nav no-lang link">Deutsche (de)</a>
+      
+    
+      
+        <a href="/es" lang="es" class="nav no-lang link">Española (es)</a>
+      
+    
+      
+        <a href="/zh-cn" lang="zh-cn" class="nav no-lang link">中文 (zh-cn)</a>
+      
+    
+      
+        <a href="/zh-tw" lang="zh-tw" class="nav no-lang link">中文 (zh-tw)</a>
+      
+    
+      
+        <a href="/ja" lang="ja" class="nav no-lang link">日本語 (ja)</a>
+      
+    
+      
+        <a href="/nl" lang="nl" class="nav no-lang link">Nederlands (nl)</a>
+      
+    
+  
+</menu>
+
+  
+    <menu id="share-menu" class="flyout-menu menu">
+      <h1>Share Post</h1>
+      
+
+
+
+
+  
+    
+    <a href="//twitter.com/share?text=%e6%bd%9c%e5%9c%a8%e8%af%ad%e4%b9%89%e5%88%86%e6%9e%90%ef%bc%88LSA%ef%bc%89&amp;url=https%3a%2f%2ftaoziyu97.github.io%2fblog%2f2021-11-26_statistic-lsa.mmark%2f" target="_blank" rel="noopener" class="nav share-btn twitter">
+        <p>Twitter</p>
+      </a>
+  
+
+  
+      <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2ftaoziyu97.github.io%2fblog%2f2021-11-26_statistic-lsa.mmark%2f" target="_blank" rel="noopener" class="nav share-btn facebook">
+        <p>Facebook</p>
+        </a>
+  
+
+  
+    <a href="//www.reddit.com/submit?url=https%3a%2f%2ftaoziyu97.github.io%2fblog%2f2021-11-26_statistic-lsa.mmark%2f&amp;title=%e6%bd%9c%e5%9c%a8%e8%af%ad%e4%b9%89%e5%88%86%e6%9e%90%ef%bc%88LSA%ef%bc%89" target="_blank" rel="noopener" class="nav share-btn reddit">
+          <p>Reddit</p>
+        </a>
+  
+
+  
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2ftaoziyu97.github.io%2fblog%2f2021-11-26_statistic-lsa.mmark%2f&amp;title=%e6%bd%9c%e5%9c%a8%e8%af%ad%e4%b9%89%e5%88%86%e6%9e%90%ef%bc%88LSA%ef%bc%89" target="_blank" rel="noopener" class="nav share-btn linkedin">
+            <p>LinkedIn</p>
+          </a>
+  
+
+  
+        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2ftaoziyu97.github.io%2fblog%2f2021-11-26_statistic-lsa.mmark%2f&amp;description=%e6%bd%9c%e5%9c%a8%e8%af%ad%e4%b9%89%e5%88%86%e6%9e%90%ef%bc%88LSA%ef%bc%89" target="_blank" rel="noopener" class="nav share-btn pinterest">
+          <p>Pinterest</p>
+        </a>
+  
+
+  
+        <a href="mailto:?subject=Check%20out%20this%20post%20by Ziyu&amp;body=https%3a%2f%2ftaoziyu97.github.io%2fblog%2f2021-11-26_statistic-lsa.mmark%2f" target="_blank" class="nav share-btn email" data-proofer-ignore>
+          <p>Email</p>
+        </a>
+  
+
+
+    </menu>
+  
+</header>
+
+    <div id="wrapper">
+      <section id="site-intro" >
+  <a href="/"><img src="https://taoziyu97.github.io/img/main/taoziyu.jpg" class="circle" width="200" alt="Hugo Future Imperfect Slim" /></a>
+  <header>
+    <h1>ZIYU's Blog</h1>
+  </header>
+  <main>
+    <p>Another fine, responsive site template by <a href='http://html5up.net'>HTML5 UP</a>.</p>
+  </main>
+  
+    <footer>
+      <ul class="socnet-icons">
+        
+
+        <li><a href="//github.com/taoziyu97" target="_blank" rel="noopener" title="GitHub" class="fab fa-github"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="//orcid.org/https://orcid.org/0000-0003-3272-1227" target="_blank" rel="noopener" title="ORCID"><i class="ai ai-orcid"></i></a></li>
+
+
+
+<li><a href="mailto:baomihai@sina.com" target="_blank" title="Email" class="far fa-envelope"></a></li>
+
+      </ul>
+    </footer>
+  
+</section>
+
+      <main id="site-main">
+        
+  <article class="post">
+    <header>
+  <div class="title">
+    
+      <h2><a href="/blog/2021-11-26_statistic-lsa.mmark/">潜在语义分析（LSA）</a></h2>
+    
+    
+      <p>潜在语义分析 last update：2021-11-26</p>
+    
+  </div>
+  <div class="meta">
+    <time datetime="2021-11-26 00:00:00 &#43;0000 UTC">November 26, 2021</time>
+    <p>Ziyu</p>
+    <p>1-Minute Read</p>
+  </div>
+</header>
+
+    <div id="socnet-share">
+      
+
+
+
+
+  
+    
+    <a href="//twitter.com/share?text=%e6%bd%9c%e5%9c%a8%e8%af%ad%e4%b9%89%e5%88%86%e6%9e%90%ef%bc%88LSA%ef%bc%89&amp;url=https%3a%2f%2ftaoziyu97.github.io%2fblog%2f2021-11-26_statistic-lsa.mmark%2f" target="_blank" rel="noopener" class="nav share-btn twitter">
+        <p>Twitter</p>
+      </a>
+  
+
+  
+      <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2ftaoziyu97.github.io%2fblog%2f2021-11-26_statistic-lsa.mmark%2f" target="_blank" rel="noopener" class="nav share-btn facebook">
+        <p>Facebook</p>
+        </a>
+  
+
+  
+    <a href="//www.reddit.com/submit?url=https%3a%2f%2ftaoziyu97.github.io%2fblog%2f2021-11-26_statistic-lsa.mmark%2f&amp;title=%e6%bd%9c%e5%9c%a8%e8%af%ad%e4%b9%89%e5%88%86%e6%9e%90%ef%bc%88LSA%ef%bc%89" target="_blank" rel="noopener" class="nav share-btn reddit">
+          <p>Reddit</p>
+        </a>
+  
+
+  
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2ftaoziyu97.github.io%2fblog%2f2021-11-26_statistic-lsa.mmark%2f&amp;title=%e6%bd%9c%e5%9c%a8%e8%af%ad%e4%b9%89%e5%88%86%e6%9e%90%ef%bc%88LSA%ef%bc%89" target="_blank" rel="noopener" class="nav share-btn linkedin">
+            <p>LinkedIn</p>
+          </a>
+  
+
+  
+        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2ftaoziyu97.github.io%2fblog%2f2021-11-26_statistic-lsa.mmark%2f&amp;description=%e6%bd%9c%e5%9c%a8%e8%af%ad%e4%b9%89%e5%88%86%e6%9e%90%ef%bc%88LSA%ef%bc%89" target="_blank" rel="noopener" class="nav share-btn pinterest">
+          <p>Pinterest</p>
+        </a>
+  
+
+  
+        <a href="mailto:?subject=Check%20out%20this%20post%20by Ziyu&amp;body=https%3a%2f%2ftaoziyu97.github.io%2fblog%2f2021-11-26_statistic-lsa.mmark%2f" target="_blank" class="nav share-btn email" data-proofer-ignore>
+          <p>Email</p>
+        </a>
+  
+
+
+    </div>
+    <div class="content">
+      <a href="/blog/2021-11-26_statistic-lsa.mmark/" class="image" style="--bg-image: url('https://i.loli.net/2021/11/26/qgC23iprGfZ1Wkt.png');">
+    <img class="stretchH" src="https://i.loli.net/2021/11/26/qgC23iprGfZ1Wkt.png" alt="Mountain Range Through Clouds">
+  </a>
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#引言">引言</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#11-单词向量空间">1.1 单词向量空间</a></li>
+    <li><a href="#12-话题向量空间">1.2 话题向量空间</a>
+      <ul>
+        <li><a href="#121-什么是话题向量空间">1.2.1 什么是话题向量空间</a></li>
+        <li><a href="#122-文本在话题向量空间的表示">1.2.2 文本在话题向量空间的表示</a></li>
+        <li><a href="#123-从单词向量空间到话题向量空间的线性变换">1.2.3 从单词向量空间到话题向量空间的线性变换</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#21-矩阵奇异值分解算法">2.1 矩阵奇异值分解算法</a></li>
+    <li><a href="#22-非负矩阵分解">2.2 非负矩阵分解</a>
+      <ul>
+        <li><a href="#221-损失函数或代价函数">2.2.1 损失函数或代价函数</a></li>
+        <li><a href="#222-算法">2.2.2 算法</a></li>
+      </ul>
+    </li>
+    <li><a href="#文献">文献</a></li>
+  </ul>
+</nav>
+      <h2 id="引言">引言</h2>
+<p>潜在语义分析（Latent sematic analysis, LSA）是一种无监督的学习方法。特点是通过矩阵分解来完成，使用的是非概率的话题分析模型，可以通过奇异值分解的方法进行矩阵因子分解，特点是分解的矩阵正交，非负矩阵分解是另一种矩阵的因子分解方法，特点是分解的矩阵非负。</p>
+<h1 id="1-单词向量空间和话题向量空间">1. 单词向量空间和话题向量空间</h1>
+<h2 id="11-单词向量空间">1.1 单词向量空间</h2>
+<p>给定一个含有$n$个文本的集合$D=\left { d_1,d_2,&hellip;,d_n \right }$，在所有文本中出现的$m$个单词的集合$W=\left { w_1,w_2,&hellip;,w_m \right }$，将单词在文本中出现的数据用一个单词-文本矩阵表示，记作$X$:
+$$
+\begin{bmatrix}
+x_{11} &amp;x_{12}  &amp;&hellip;  &amp;x_{1n} \
+x_{21} &amp;x_{22}  &amp;&hellip;  &amp;x_{2n} \
+\vdots  &amp;\vdots   &amp;   &amp;\vdots  \
+x_{m1} &amp;x_{m2}  &amp;&hellip;  &amp;x_{mn}
+\end{bmatrix}
+$$</p>
+<p>元素$x_{ij}$表示单词$w_i$在文本$d_j$中出现的频数或权值，由于单词的种类很多，每个文本出现单词的种类通常较少，所以单词-文本矩阵是一个稀疏矩阵。</p>
+<p><font color=red>权值</font>通常用单词频率-逆文本频率（TF-IDF）表示，定义是：
+$$
+TFIDF_{ij}=\frac{tf_{ij}}{tf_{·j}}log\frac{df}{df_i} \space i=1,2,&hellip;,m; \space j=1,2,&hellip;,n
+$$
+$\frac{tf_{ij}}{tf_{·j}}$表示单词$w_i$出现在文本$d_j$中的频数比上文本$d_j$中出现的所有单词的频数之和，一个单词在一个文本中出现的频数越高，这个单词在文本中的重要度就越高；$\frac{df}{df_i}$表示全部文本数比上含有单词$w_i$的文本数，一个单词在整个文本集合中出现的文本数越少，这个单词就越能代表其所在文本的特点，重要度就越高。<u>TF-IDF是两种重要度的积，表示综合重要度。</u></p>
+<p><font color=red>单词向量空间模型</font>直接使用<font color=red>单词-文本矩阵</font>的信息，第$j$列向量$x_j$表示文本$d_j$：
+$$
+x_j=\begin{bmatrix}
+x_{1j}\
+x_{2j}\
+\vdots\
+x_{mj}
+\end{bmatrix}
+$$
+其中$x_{ij}$是单词$w_i$在文本$d_j$的权值，两个单词向量的内积货标准化内积（余弦）表示对应的文本之间的语义相似度，因此文本$d_i$ 与$d_j$ 之间的相似度为:
+$$
+x_i·x_j，\frac{x_{i}·x_{j}}{\left |  x_{i}\right |\left |  x_{j}\right |}
+$$
+$\cdot $表示向量的内积，$\left |  \cdot\right |$表示向量的范数，向量的1-范数即向量元素绝对值之和。两个文本中共同出现的单词越多，其语义就越接近，这个是文本信息处理的一个基本原理。</p>
+<p>单词向量空间的优点是模型简单，计算效率高，局限性是内积相似度未必能够准确表达两个文本的语义相似度，因为自然语言的单词具有一词多义性以及多词一义性，因此基于单词向量的相似度计算存在不精确的问题。</p>
+<h2 id="12-话题向量空间">1.2 话题向量空间</h2>
+<h3 id="121-什么是话题向量空间">1.2.1 什么是话题向量空间</h3>
+<p>两个文本的语义相似度可以体现在两者的话题相似度上，话题就是文本所讨论的内容或主题，文本一般含有若干个话题，如果两个文本的话题相似，那么两者的语义应该也相似。话题可以由若干个语义相关的单词表示，则能够解决基于单词的模型存在的问题。话题的个数通常远远小于单词的个数。</p>
+<p>给定一个含有$n$个文本的集合$D=\left { d_1,d_2,&hellip;,d_n \right }$，在所有文本中出现的$m$个单词的集合$W=\left { w_1,w_2,&hellip;,w_m \right }$，将单词在文本中出现的数据用一个单词-文本矩阵表示，记作$X$，同上单词向量空间中的表示。假设所有的文本共含有$k$个话题，假设每个话题由一个定义在单词集合$W$上的$m$维向量表示，称为话题向量：
+$$
+t_l=\begin{bmatrix}
+t_{1l}\
+t_{2l}\
+\vdots\
+t_{ml}
+\end{bmatrix},l=1,2,&hellip;,k
+$$
+其中$t_{il}$是单词$w_i$在话题$t_l$的权值，权值越大，单词在话题中的重要度就越高，$k$个话题向量张成一个话题向量空间，话题向量空间$T$是单词向量空间$X$的一个字空间。</p>
+<p><font color=red>单词-话题矩阵</font>：
+$$
+T=\begin{bmatrix}
+t_{11} &amp;t_{12}  &amp;&hellip;  &amp;t_{1k} \
+t_{21} &amp;t_{22}  &amp;&hellip;  &amp;t_{2k} \
+\vdots  &amp;\vdots   &amp;   &amp;\vdots  \
+t_{m1} &amp;t_{m2}  &amp;&hellip;  &amp;t_{mk}
+\end{bmatrix}
+$$</p>
+<h3 id="122-文本在话题向量空间的表示">1.2.2 文本在话题向量空间的表示</h3>
+<p>将单词向量投影到话题向量空间$T$中，得到话题向量空间的一个向量$y_j$
+$$
+y_j=\begin{bmatrix}
+y_{1j}\
+y_{2j}\
+\vdots\
+y_{mj}
+\end{bmatrix},j=1,2,&hellip;,n
+$$
+其中$y_{lj}$是文本$d_j$在话题$t_l$的权值，$l=1,2,&hellip;,k$，权值越大，该话题在该文本中的重要度就越高。</p>
+<p><font color=red>话题-文本矩阵</font>：
+$$
+Y=\begin{bmatrix}
+y_{11} &amp;y_{12}  &amp;&hellip;  &amp;y_{1n} \
+y_{21} &amp;y_{22}  &amp;&hellip;  &amp;y_{2n} \
+\vdots  &amp;\vdots   &amp;   &amp;\vdots  \
+y_{k1} &amp;y_{k2}  &amp;&hellip;  &amp;y_{kn}
+\end{bmatrix}
+$$</p>
+<h3 id="123-从单词向量空间到话题向量空间的线性变换">1.2.3 从单词向量空间到话题向量空间的线性变换</h3>
+<p>单词-文本矩阵$X$可以近似的表示为单词-话题矩阵与话题-文本矩阵的乘积形式，这就是潜在语义分析：
+$$
+X\approx TY
+$$
+直观上潜在语义分析是将文本在单词向量空间的表示通过线性变换转换为在话题向量空间中的表示：</p>
+<p>原始的单词向量空间中，两个文本的相似度可以由对应的向量的内积表示$x_i·x_j$，经过潜在语义分析，在话题向量空间中，两个文本的相似度可以由对应的向量的内积表示：$y_i·y_j$。</p>
+<h1 id="2-潜在语义分析">2. 潜在语义分析</h1>
+<h2 id="21-矩阵奇异值分解算法">2.1 矩阵奇异值分解算法</h2>
+<p>奇异值分解（SVD）是一种矩阵因子分解方法，任何一个$m\times n$矩阵，都可以表示为三个矩阵的乘积形式，分别是$m$阶正交矩阵、由降序排列的非负的对角线元素组成的$m\times n$矩阵对角矩阵和$n$阶正交矩阵，成为该矩阵的奇异值分解，矩阵的奇异值分解一定存在但不唯一，可以看做是矩阵<font color=red>数据压缩</font>的一种方法。奇异值分解不要求矩阵是方阵。</p>
+<blockquote>
+<p>正交矩阵：正交矩阵（Orthogonal Matrix）是指其转置等于其逆的矩阵。</p>
+</blockquote>
+<p>奇异值分解是在平方损失（弗罗贝尼乌斯范数）意义下对矩阵的最优近似，紧奇异值分解对应着无损压缩，截断奇异值分解对应着有损压缩。潜在语义分析根据确定的话题个数$k$对单词-文本矩阵$X$进行截断奇异值分解：
+$$
+X\approx U_k（\Sigma_k V{k}^{T}）
+$$
+矩阵的奇异值分解可以看作是将其对应的线性变换分解为旋转变换、缩放变换及旋转变换的组合，得到话题空间$U_k$，以及文本在话题空间的表示$\Sigma_k V{k}^{T}$。</p>
+<h2 id="22-非负矩阵分解">2.2 非负矩阵分解</h2>
+<p>$$
+X\approx WH
+$$</p>
+<h3 id="221-损失函数或代价函数">2.2.1 损失函数或代价函数</h3>
+<p>损失函数可以有以下几种：</p>
+<ul>
+<li>
+<p>平方损失</p>
+<p><img src="https://i.loli.net/2021/11/23/rZONdazn5Vw6FLE.png" alt=""></p>
+</li>
+<li>
+<p>散度</p>
+<p><img src="https://i.loli.net/2021/11/23/EGkcAsJeUdNCRv6.png" alt=""></p>
+</li>
+</ul>
+<h3 id="222-算法">2.2.2 算法</h3>
+<p>以上两个目标函数：平方损失和散度知识对变量$W$和$H$之一的凸函数，而不是同时对两个变量的凸函数，因此找到全局最优比较困难。Lee提出的基于“乘法更新规则”的优化算法，交替地对$W$和$H$进行更新。</p>
+<h2 id="文献">文献</h2>
+<ul>
+<li>《统计学习方法》第2版 李航</li>
+</ul>
+
+    </div>
+    <footer>
+      <div class="stats">
+  
+    <ul class="categories">
+      
+        
+          <li><a class="article-terms-link" href="/categories/%e7%94%9f%e7%89%a9%e7%bb%9f%e8%ae%a1/">生物统计</a></li>
+        
+      
+    </ul>
+  
+  
+    <ul class="tags">
+      
+        
+          <li><a class="article-terms-link" href="/tags/%e7%94%9f%e7%89%a9%e7%bb%9f%e8%ae%a1/">生物统计</a></li>
+        
+      
+    </ul>
+  
+</div>
+
+    </footer>
+  </article>
+  
+    
+  
+  <div id="vcomments"></div>
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+
+  <script type="text/javascript">
+    new Valine({
+        el: '#vcomments' ,
+        appId: 'OiGVbgHqcHtvLUpCg3hhcky5-gzGzoHsz',
+        appKey: 'JDVkS9wP5RFaNjhV2Ccof15G',
+        notify: 'false', 
+        verify: 'false', 
+        avatar:'mm', 
+        placeholder: '说点什么吧...',
+        visitor: 'true'
+    });
+  </script>
+  
+  <div class="pagination">
+    
+    
+      <a href="/blog/2021-11-19_hmm/" class="button right"><span>隐马尔可夫模型（HMM）</span></a>
+    
+  </div>
+
+      </main>
+      <section id="site-sidebar">
+  
+    <section id="recent-posts">
+      <header>
+        <h1>Recent Posts</h1>
+      </header>
+      
+      <article class="mini-post">
+          <a href="/blog/2021-11-26_statistic-lsa.mmark/" class="image" style="--bg-image: url('https://i.loli.net/2021/11/26/qgC23iprGfZ1Wkt.png');">
+    <img class="stretchH" src="https://i.loli.net/2021/11/26/qgC23iprGfZ1Wkt.png" alt="Mountain Range Through Clouds">
+  </a>
+        <header>
+          <h2><a href="/blog/2021-11-26_statistic-lsa.mmark/">潜在语义分析（LSA）</a></h2>
+          <time class="published" datetime="2021-11-26 00:00:00 &#43;0000 UTC">November 26, 2021</time>
+        </header>
+      </article>
+      
+      <article class="mini-post">
+          <a href="/blog/2021-11-19_hmm/" class="image" style="--bg-image: url('https://i.loli.net/2021/11/19/eqhtIiLVGNgTuRb.png');">
+    <img class="stretchH" src="https://i.loli.net/2021/11/19/eqhtIiLVGNgTuRb.png" alt="Mountain Range Through Clouds">
+  </a>
+        <header>
+          <h2><a href="/blog/2021-11-19_hmm/">隐马尔可夫模型（HMM）</a></h2>
+          <time class="published" datetime="2021-11-19 00:00:00 &#43;0000 UTC">November 19, 2021</time>
+        </header>
+      </article>
+      
+      <article class="mini-post">
+          <a href="/blog/2021-11-17_docall/" class="image" style="--bg-image: url('https://i.loli.net/2021/11/17/7Gdf5WhtenJazm1.png');">
+    <img class="stretchH" src="https://i.loli.net/2021/11/17/7Gdf5WhtenJazm1.png" alt="Mountain Range Through Clouds">
+  </a>
+        <header>
+          <h2><a href="/blog/2021-11-17_docall/">R：批量读入文件并合并</a></h2>
+          <time class="published" datetime="2021-11-17 00:00:00 &#43;0000 UTC">November 17, 2021</time>
+        </header>
+      </article>
+      
+      <article class="mini-post">
+          <a href="/blog/2021-8-31_synapser/" class="image" style="--bg-image: url('https://i.loli.net/2021/11/17/7Gdf5WhtenJazm1.png');">
+    <img class="stretchH" src="https://i.loli.net/2021/11/17/7Gdf5WhtenJazm1.png" alt="Mountain Range Through Clouds">
+  </a>
+        <header>
+          <h2><a href="/blog/2021-8-31_synapser/">synapser</a></h2>
+          <time class="published" datetime="2021-07-24 00:00:00 &#43;0000 UTC">July 24, 2021</time>
+        </header>
+      </article>
+      
+      <article class="mini-post">
+          <a href="/blog/2021-7-24_stringr_stringi/" class="image" style="--bg-image: url('https://i.loli.net/2021/11/17/7Gdf5WhtenJazm1.png');">
+    <img class="stretchH" src="https://i.loli.net/2021/11/17/7Gdf5WhtenJazm1.png" alt="Mountain Range Through Clouds">
+  </a>
+        <header>
+          <h2><a href="/blog/2021-7-24_stringr_stringi/">处理字符串的两个R包:stringi和stringr</a></h2>
+          <time class="published" datetime="2021-07-24 00:00:00 &#43;0000 UTC">July 24, 2021</time>
+        </header>
+      </article>
+      
+      
+        <footer>
+          <a href="/blog/" class="button">See More</a>
+        </footer>
+      
+    </section>
+  
+
+  
+    
+
+      <section id="categories">
+        <header>
+          <h1><a href="/categories">Categories</a></h1>
+        </header>
+        <ul>
+          
+          
+          <li>
+              <a href="/categories/%E5%8D%9A%E5%AE%A2/">博客<span class="count">6</span></a>
+          
+          <li>
+              <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/">计算机基础<span class="count">5</span></a>
+          
+          <li>
+              <a href="/categories/%E6%8A%80%E6%9C%AF/">技术<span class="count">4</span></a>
+          
+          <li>
+              <a href="/categories/%E7%94%9F%E7%89%A9%E7%BB%9F%E8%AE%A1/">生物统计<span class="count">4</span></a>
+          
+          <li>
+              <a href="/categories/bug/">bug<span class="count">1</span></a>
+          
+          <li>
+              <a href="/categories/r%E8%AF%AD%E8%A8%80/">r语言<span class="count">1</span></a>
+          
+          </li>
+        </ul>
+      </section>
+    
+  
+
+  
+    <section id="mini-bio">
+      <header>
+        <h1>About</h1>
+      </header>
+      <p>This theme was developed for Hugo static site generator.</p>
+      <footer>
+        <a href="/about" class="button">Learn More</a>
+      </footer>
+    </section>
+  
+</section>
+
+      <footer id="site-footer">
+  
+      <ul class="socnet-icons">
+        
+
+        <li><a href="//github.com/taoziyu97" target="_blank" rel="noopener" title="GitHub" class="fab fa-github"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="//orcid.org/https://orcid.org/0000-0003-3272-1227" target="_blank" rel="noopener" title="ORCID"><i class="ai ai-orcid"></i></a></li>
+
+
+
+<li><a href="mailto:baomihai@sina.com" target="_blank" title="Email" class="far fa-envelope"></a></li>
+
+      </ul>
+  
+  <p class="copyright">
+    © 2021 ziyu&#39;s blog
+      <br>
+    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.80.0' target='_blank' rel='noopener'>Hugo</a>
+  </p>
+</footer>
+<a id="back-to-top" href="#" class="fas fa-arrow-up fa-2x"></a>
+
+      <script src="/js/highlight.js"></script>
+    
+    <script>hljs.initHighlightingOnLoad();</script><script src="/js/bundle.min.5955090a3253deadcd66071270aa2274dabe15ffc97094cec252d87b6f3f00bf.js" integrity="sha256-WVUJCjJT3q3NZgcScKoidNq&#43;Ff/JcJTOwlLYe28/AL8="></script>
+    <script src="/js/add-on.js"></script>
+    </div>
+  </body>
+</html>
