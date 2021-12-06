@@ -353,7 +353,7 @@ code.has-jax {
 <p>操作系统执行多任务是让CPU对多个任务<strong>轮流进行交替执行</strong>，比如让浏览器执行0.1秒，让word执行0.1秒。</p>
 <p>不管是单核还是多核的CPU，都可以同时运行多个任务，单核CPU执行任务交替进行，多核CPU在任务数量多于CPU的核数时，也是交替执行任务。</p>
 <h3 id="一进程">一、进程</h3>
-<p>计算机中一个任务为一个进程，浏览器时一个进程，word也是一个进程。部分进程内部需要同时执行多个子任务，比如使用word一边打字一边检查拼写，一边后台打印，子任务就是线程。</p>
+<p>计算机中一个任务为一个进程，浏览器是一个进程，word也是一个进程。部分进程内部需要同时执行多个子任务，比如使用word一边打字一边检查拼写，一边后台打印，子任务就是线程。</p>
 <p>操作系统调度的最小任务单位是线程。由于一个应用程序可以有，多个进程，也可以有多个线程，实现任务的方法包括：</p>
 <p>多进程模式（每个进程只有一个线程）：</p>
 <center>
@@ -365,7 +365,7 @@ code.has-jax {
 </center>
 <p>多进程＋多线程模式（复杂度最高）：</p>
 <center>
-<img src="https://i.loli.net/2021/05/24/eFrEWyzOPNqV6tb.png" style="zoom:40%;" />
+<img src="https://s2.loli.net/2021/12/06/HyNbWmiLdBzeMJ2.png" style="zoom:40%;" />
 </center>
 <h3 id="二线程">二、线程</h3>
 <p>线程包含在进程内，多任务既可以多进程来实现，也可以单进程内的多线程实现，也可以混合多进程和多线程。</p>
@@ -482,11 +482,21 @@ code.has-jax {
       </header>
       
       <article class="mini-post">
-          <a href="/blog/2021-11-26_statistic-lsa.mmark/" class="image" style="--bg-image: url('https://i.loli.net/2021/11/26/qgC23iprGfZ1Wkt.png');">
+          <a href="/blog/2021-11-26_statistic-lsa/" class="image" style="--bg-image: url('https://i.loli.net/2021/11/26/qgC23iprGfZ1Wkt.png');">
     <img class="stretchH" src="https://i.loli.net/2021/11/26/qgC23iprGfZ1Wkt.png" alt="Mountain Range Through Clouds">
   </a>
         <header>
-          <h2><a href="/blog/2021-11-26_statistic-lsa.mmark/">潜在语义分析（LSA）</a></h2>
+          <h2><a href="/blog/2021-11-26_statistic-lsa/">潜在语义分析（LSA）</a></h2>
+          <time class="published" datetime="2021-11-26 00:00:00 &#43;0000 UTC">November 26, 2021</time>
+        </header>
+      </article>
+      
+      <article class="mini-post">
+          <a href="/blog/some-name/" class="image" style="--bg-image: url('https://i.loli.net/2021/11/26/qgC23iprGfZ1Wkt.png');">
+    <img class="stretchH" src="https://i.loli.net/2021/11/26/qgC23iprGfZ1Wkt.png" alt="Mountain Range Through Clouds">
+  </a>
+        <header>
+          <h2><a href="/blog/some-name/">潜在语义分析（LSA）</a></h2>
           <time class="published" datetime="2021-11-26 00:00:00 &#43;0000 UTC">November 26, 2021</time>
         </header>
       </article>
@@ -521,16 +531,6 @@ code.has-jax {
         </header>
       </article>
       
-      <article class="mini-post">
-          <a href="/blog/2021-7-24_stringr_stringi/" class="image" style="--bg-image: url('https://i.loli.net/2021/11/17/7Gdf5WhtenJazm1.png');">
-    <img class="stretchH" src="https://i.loli.net/2021/11/17/7Gdf5WhtenJazm1.png" alt="Mountain Range Through Clouds">
-  </a>
-        <header>
-          <h2><a href="/blog/2021-7-24_stringr_stringi/">处理字符串的两个R包:stringi和stringr</a></h2>
-          <time class="published" datetime="2021-07-24 00:00:00 &#43;0000 UTC">July 24, 2021</time>
-        </header>
-      </article>
-      
       
         <footer>
           <a href="/blog/" class="button">See More</a>
@@ -553,13 +553,13 @@ code.has-jax {
               <a href="/categories/%E5%8D%9A%E5%AE%A2/">博客<span class="count">6</span></a>
           
           <li>
+              <a href="/categories/%E7%94%9F%E7%89%A9%E7%BB%9F%E8%AE%A1/">生物统计<span class="count">5</span></a>
+          
+          <li>
               <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/">计算机基础<span class="count">5</span></a>
           
           <li>
               <a href="/categories/%E6%8A%80%E6%9C%AF/">技术<span class="count">4</span></a>
-          
-          <li>
-              <a href="/categories/%E7%94%9F%E7%89%A9%E7%BB%9F%E8%AE%A1/">生物统计<span class="count">4</span></a>
           
           <li>
               <a href="/categories/bug/">bug<span class="count">1</span></a>
