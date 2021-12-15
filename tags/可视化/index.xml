@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>可视化 on ziyu&#39;s blog</title>
+    <link>https://taoziyu97.github.io/tags/%E5%8F%AF%E8%A7%86%E5%8C%96/</link>
+    <description>Recent content in 可视化 on ziyu&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 15 Dec 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://taoziyu97.github.io/tags/%E5%8F%AF%E8%A7%86%E5%8C%96/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>使用posterdown制作学术海报</title>
+      <link>https://taoziyu97.github.io/blog/2021-12-15_posterdown/</link>
+      <pubDate>Wed, 15 Dec 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://taoziyu97.github.io/blog/2021-12-15_posterdown/</guid>
+      <description>引言 posterdown自动排版，通过调节参数满足个人制作海报的需要。
+1. 介绍 目前posterdown支持3种风格的海报模板：posterdown_html、posterdown_betterland和posterdown_betterport。以posterdown_betterport为例进行阐述。
+ 目前支持的三种模板风格
+ 2. 创建海报 2.1 创建模板 直接通过新建R Markdown文件，选择posterdown模板则自动导入模板代码，如下：
+ 创建模板
+ 2.2 添加内容 按照R Markdown语法进行代码块、图片、文字等等的添加，通过点击knit进行渲染，查看在模板基础上更改的内容。点击knit后自动生成包含html在内的如下文件：
+. ├── A\ Better\ Reproducible\ Poster\ Title.pdf ├── packages.bib ├── poster.Rmd ├── poster.html └── poster_files ├── figure-html │ ├── irisfigure-1.png │ └── myprettycode-1.png ├── header-attrs-2.11 │ └── header-attrs.js └── paged-0.15 4 directories, 7 files  图片  可以在该目录下再建立一个Figures文件夹存放Rmd中使用到的图片。
+ html文件  默认生成的html文件名前缀和Rmd文件一致，可以通过在Rmd文档开头添加代码自定义生成的html文件名，这里为index.html：
+knit: (function(inputFile, encoding) { rmarkdown::render(inputFile, encoding = encoding, output_file = file.</description>
+    </item>
+    
+  </channel>
+</rss>

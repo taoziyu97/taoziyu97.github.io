@@ -6,7 +6,41 @@
     <description>Recent content on ziyu&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 26 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://taoziyu97.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 15 Dec 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://taoziyu97.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>使用posterdown制作学术海报</title>
+      <link>https://taoziyu97.github.io/blog/2021-12-15_posterdown/</link>
+      <pubDate>Wed, 15 Dec 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://taoziyu97.github.io/blog/2021-12-15_posterdown/</guid>
+      <description>引言 posterdown自动排版，通过调节参数满足个人制作海报的需要。
+1. 介绍 目前posterdown支持3种风格的海报模板：posterdown_html、posterdown_betterland和posterdown_betterport。以posterdown_betterport为例进行阐述。
+ 目前支持的三种模板风格
+ 2. 创建海报 2.1 创建模板 直接通过新建R Markdown文件，选择posterdown模板则自动导入模板代码，如下：
+ 创建模板
+ 2.2 添加内容 按照R Markdown语法进行代码块、图片、文字等等的添加，通过点击knit进行渲染，查看在模板基础上更改的内容。点击knit后自动生成包含html在内的如下文件：
+. ├── A\ Better\ Reproducible\ Poster\ Title.pdf ├── packages.bib ├── poster.Rmd ├── poster.html └── poster_files ├── figure-html │ ├── irisfigure-1.png │ └── myprettycode-1.png ├── header-attrs-2.11 │ └── header-attrs.js └── paged-0.15 4 directories, 7 files  图片  可以在该目录下再建立一个Figures文件夹存放Rmd中使用到的图片。
+ html文件  默认生成的html文件名前缀和Rmd文件一致，可以通过在Rmd文档开头添加代码自定义生成的html文件名，这里为index.html：
+knit: (function(inputFile, encoding) { rmarkdown::render(inputFile, encoding = encoding, output_file = file.</description>
+    </item>
+    
+    <item>
+      <title>计算机组成</title>
+      <link>https://taoziyu97.github.io/blog/2021-12-06_consist_of_computer/</link>
+      <pubDate>Mon, 06 Dec 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://taoziyu97.github.io/blog/2021-12-06_consist_of_computer/</guid>
+      <description>引言 1. 计算机组成 计算机的组成部件可以分为三大类：中央处理单元（CPU）、主存储器和输入/输出子系统。
+中央处理单元 用于数据的运算。在大多数体系结构中，它有3个组成部分：算术逻辑单元（ALU）、控制单元、寄存器组、快速存储定位。
+  算术逻辑单元
+对数据进行逻辑、移位和算术运算。
+  寄存器
+用来存放临时数据的高速独立的存储单元。
+  控制单元
+控制各个子系统的操作。控制是通过从控制单元到其他子系统的信号来进行。
+  主存储器 是存储单元的集合，每一个存储单元都有唯一的标识，称为地址。</description>
+    </item>
+    
     <item>
       <title>潜在语义分析（LSA）</title>
       <link>https://taoziyu97.github.io/blog/2021-11-26_statistic-lsa/</link>
@@ -18,23 +52,6 @@
 元素$x_{ij}$表示单词$w_i$在文本$d_j$中出现的频数或权值，由于单词的种类很多，每个文本出现单词的种类通常较少，所以单词-文本矩阵是一个稀疏矩阵。
 权值通常用单词频率-逆文本频率（TF-IDF）表示，定义是： $$ TFIDF_{ij}=\frac{tf_{ij}}{tf_{·j}}log\frac{df}{df_i} \space i=1,2,&amp;hellip;,m; \space j=1,2,&amp;hellip;,n $$ $\frac{tf_{ij}}{tf_{·j}}$表示单词$w_i$出现在文本$d_j$中的频数比上文本$d_j$中出现的所有单词的频数之和，一个单词在一个文本中出现的频数越高，这个单词在文本中的重要度就越高；$\frac{df}{df_i}$表示全部文本数比上含有单词$w_i$的文本数，一个单词在整个文本集合中出现的文本数越少，这个单词就越能代表其所在文本的特点，重要度就越高。TF-IDF是两种重要度的积，表示综合重要度。
 单词向量空间模型直接使用单词-文本矩阵的信息，第$j$列向量$x_j$表示文本$d_j$： $$ x_j=\begin{bmatrix} x_{1j}\ x_{2j}\ \vdots\ x_{mj} \end{bmatrix} $$ 其中$x_{ij}$是单词$w_i$在文本$d_j$的权值，两个单词向量的内积货标准化内积（余弦）表示对应的文本之间的语义相似度，因此文本$d_i$ 与$d_j$ 之间的相似度为: $$ x_i·x_j，\frac{x_{i}·x_{j}}{\left | x_{i}\right |\left | x_{j}\right |} $$ $\cdot $表示向量的内积，$\left | \cdot\right |$表示向量的范数，向量的1-范数即向量元素绝对值之和。两个文本中共同出现的单词越多，其语义就越接近，这个是文本信息处理的一个基本原理。</description>
-    </item>
-    
-    <item>
-      <title>潜在语义分析（LSA）</title>
-      <link>https://taoziyu97.github.io/blog/some-name/</link>
-      <pubDate>Fri, 26 Nov 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://taoziyu97.github.io/blog/some-name/</guid>
-      <description>[_{1}^{d}]
-引言 潜在语义分析（Latent sematic analysis, LSA）是一种无监督的学习方法。特点是通过矩阵分解来完成，使用的是非概率的话题分析模型，可以通过奇异值分解的方法进行矩阵因子分解，特点是分解的矩阵正交，非负矩阵分解是另一种矩阵的因子分解方法，特点是分解的矩阵非负。
-1. 单词向量空间和话题向量空间 1.1 单词向量空间 给定一个含有$n$个文本的集合$D=\left { d_1,d_2,...,d_n \right }$，在所有文本中出现的$m$个单词的集合$W=\left { w_1,w_2,...,wm \right }$，将单词在文本中出现的数据用一个单词-文本矩阵表示，记作$X$: $$ \begin{bmatrix} x{11} &amp;amp;x_{12} &amp;amp;... &amp;amp;x_{1n} \ x_{21} &amp;amp;x_{22} &amp;amp;... &amp;amp;x_{2n} \ \vdots &amp;amp;\vdots &amp;amp; &amp;amp;\vdots \ x_{m1} &amp;amp;x_{m2} &amp;amp;... &amp;amp;x_{mn} \end{bmatrix} $$
-元素$x_{ij}$表示单词$w_i$在文本$d_j$中出现的频数或权值，由于单词的种类很多，每个文本出现单词的种类通常较少，所以单词-文本矩阵是一个稀疏矩阵。
-{tf_{·j}}log\frac{df}{dfi} \space i=1,2,...,m; \space j=1,2,...,n $$ $\frac{tf{ij}}{tf_{·j}}$表示单词$w_i$出现在文本$d_j$中的频数比上文本$d_j$中出现的所有单词的频数之和，一个单词在一个文本中出现的频数越高，这个单词在文本中的重要度就越高；$\frac{df}{df_i}$表示全部文本数比上含有单词$w_i$的文本数，一个单词在整个文本集合中出现的文本数越少，这个单词就越能代表其所在文本的特点，重要度就越高。TF-IDF是两种重要度的积，表示综合重要度。
-{\left | x_{i}\right |\left | x_{j}\right |} $$ $\cdot $表示向量的内积，$\left | \cdot\right |$表示向量的范数，向量的1-范数即向量元素绝对值之和。两个文本中共同出现的单词越多，其语义就越接近，这个是文本信息处理的一个基本原理。
-单词向量空间的优点是模型简单，计算效率高，局限性是内积相似度未必能够准确表达两个文本的语义相似度，因为自然语言的单词具有一词多义性以及多词一义性，因此基于单词向量的相似度计算存在不精确的问题。
-1.2 话题向量空间 1.2.1 什么是话题向量空间 两个文本的语义相似度可以体现在两者的话题相似度上，话题就是文本所讨论的内容或主题，文本一般含有若干个话题，如果两个文本的话题相似，那么两者的语义应该也相似。话题可以由若干个语义相关的单词表示，则能够解决基于单词的模型存在的问题。话题的个数通常远远小于单词的个数。
-给定一个含有$n$个文本的集合$D=\left { d_1,d_2,.</description>
     </item>
     
     <item>

@@ -6,7 +6,24 @@
     <description>Recent content in 计算机基础 on ziyu&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 24 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://taoziyu97.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 06 Dec 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://taoziyu97.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>计算机组成</title>
+      <link>https://taoziyu97.github.io/blog/2021-12-06_consist_of_computer/</link>
+      <pubDate>Mon, 06 Dec 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://taoziyu97.github.io/blog/2021-12-06_consist_of_computer/</guid>
+      <description>引言 1. 计算机组成 计算机的组成部件可以分为三大类：中央处理单元（CPU）、主存储器和输入/输出子系统。
+中央处理单元 用于数据的运算。在大多数体系结构中，它有3个组成部分：算术逻辑单元（ALU）、控制单元、寄存器组、快速存储定位。
+  算术逻辑单元
+对数据进行逻辑、移位和算术运算。
+  寄存器
+用来存放临时数据的高速独立的存储单元。
+  控制单元
+控制各个子系统的操作。控制是通过从控制单元到其他子系统的信号来进行。
+  主存储器 是存储单元的集合，每一个存储单元都有唯一的标识，称为地址。</description>
+    </item>
+    
     <item>
       <title>synapser</title>
       <link>https://taoziyu97.github.io/blog/2021-8-31_synapser/</link>
