@@ -440,15 +440,6 @@ p值仅仅反应我们相信我们存在差异的信心，p值越小，越有信
     </item>
     
     <item>
-      <title>等待天使的妹妹</title>
-      <link>https://taoziyu97.github.io/book/2021-1-16/</link>
-      <pubDate>Sat, 16 Jan 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://taoziyu97.github.io/book/2021-1-16/</guid>
-      <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;</description>
-    </item>
-    
-    <item>
       <title>Hugo&#43;Github&#43;阿里云域名搭建个人博客（附Netlify部署方法）</title>
       <link>https://taoziyu97.github.io/blog/2021-1-11-build_blog/</link>
       <pubDate>Mon, 11 Jan 2021 00:00:00 +0000</pubDate>
@@ -473,7 +464,7 @@ p值仅仅反应我们相信我们存在差异的信心，p值越小，越有信
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://taoziyu97.github.io/contact/</guid>
-      <description></description>
+      <description> </description>
     </item>
     
   </channel>

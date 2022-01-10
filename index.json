@@ -149,12 +149,6 @@
     "body": "test page\n",
     "ref": "/about/"
   },{
-    "title": "等待天使的妹妹",
-    "date": "",
-    "description": "2020年疫情期间漫长的寒假，这本书是那个时候在家读的。",
-    "body": "前言",
-    "ref": "/book/2021-1-16/"
-  },{
     "title": "Hugo+Github+阿里云域名搭建个人博客（附Netlify部署方法）",
     "date": "",
     "description": "这是我第一次搭建个人博客，记录一下搭建过程。last update：2021-01-21",
@@ -170,6 +164,6 @@
     "title": "Contact",
     "date": "",
     "description": "",
-    "body": "",
+    "body": " ",
     "ref": "/contact/"
   }]
