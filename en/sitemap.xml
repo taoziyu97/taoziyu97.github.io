@@ -4,12 +4,12 @@
   
   <url>
     <loc>https://taoziyu97.github.io/blog/</loc>
-    <lastmod>2021-12-15T00:00:00+00:00</lastmod>
+    <lastmod>2021-12-23T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://taoziyu97.github.io/categories/</loc>
-    <lastmod>2021-12-15T00:00:00+00:00</lastmod>
+    <lastmod>2021-12-23T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
@@ -63,13 +63,23 @@
   </url>
   
   <url>
+    <loc>https://taoziyu97.github.io/blog/2021-12-23_basic_r/</loc>
+    <lastmod>2021-12-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://taoziyu97.github.io/tags/r%E8%AF%AD%E8%A8%80/</loc>
+    <lastmod>2021-12-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://taoziyu97.github.io/categories/r%E8%AF%AD%E8%A8%80/</loc>
-    <lastmod>2021-12-15T00:00:00+00:00</lastmod>
+    <lastmod>2021-12-23T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://taoziyu97.github.io/tags/</loc>
-    <lastmod>2021-12-15T00:00:00+00:00</lastmod>
+    <lastmod>2021-12-23T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
@@ -124,7 +134,7 @@
   
   <url>
     <loc>https://taoziyu97.github.io/</loc>
-    <lastmod>2021-12-15T00:00:00+00:00</lastmod>
+    <lastmod>2021-12-23T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
@@ -178,6 +188,26 @@
   </url>
   
   <url>
+    <loc>https://taoziyu97.github.io/blog/2021-12-19_cnv_tools2/</loc>
+    <lastmod>2021-12-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://taoziyu97.github.io/tags/%E7%94%9F%E4%BF%A1%E5%B7%A5%E5%85%B7%E7%B1%BB/</loc>
+    <lastmod>2021-12-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://taoziyu97.github.io/categories/%E7%94%9F%E4%BF%A1%E5%B7%A5%E5%85%B7%E7%B1%BB/</loc>
+    <lastmod>2021-12-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://taoziyu97.github.io/blog/2021-12-16_cnv_tools/</loc>
+    <lastmod>2021-12-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://taoziyu97.github.io/blog/2021-12-15_posterdown/</loc>
     <lastmod>2021-12-15T00:00:00+00:00</lastmod>
   </url>
@@ -220,11 +250,6 @@
   <url>
     <loc>https://taoziyu97.github.io/blog/2021-11-19_hmm/</loc>
     <lastmod>2021-11-19T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://taoziyu97.github.io/tags/r%E8%AF%AD%E8%A8%80/</loc>
-    <lastmod>2021-11-17T00:00:00+00:00</lastmod>
   </url>
   
   <url>

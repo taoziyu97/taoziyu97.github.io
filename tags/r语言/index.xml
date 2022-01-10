@@ -6,7 +6,23 @@
     <description>Recent content in R语言 on ziyu&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 17 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://taoziyu97.github.io/tags/r%E8%AF%AD%E8%A8%80/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 23 Dec 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://taoziyu97.github.io/tags/r%E8%AF%AD%E8%A8%80/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>R基础——读入和写出数据</title>
+      <link>https://taoziyu97.github.io/blog/2021-12-23_basic_r/</link>
+      <pubDate>Thu, 23 Dec 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://taoziyu97.github.io/blog/2021-12-23_basic_r/</guid>
+      <description>基本内容   Excel文件的读入
+  txt和csv文件的读入
+  文件的写出
+  批量读入数据并合并
+  RData和rds的储存形式
+  read.csv和read.csv2的区别
+  Excel文件的读入 在R语言实战实战这本书中表示，读取Excel文件最好的方式，是在Excel中将其导出为一个逗号分隔文件（csv），并使用读取csv的方法读取数据。或者采用xlsx包直接读取数据。xlsx包可以用来对Exceln97/2000/XP/2003/2007文件进行读取、写入和格式转换。还可以使用readxl包来读取Excel的.xls和.xlsx文件。
+read_xlsx(path, sheet = NULL, range = NULL, col_names = TRUE, col_types = NULL, na = &amp;quot;&amp;quot;, trim_ws = TRUE, skip = 0, n_max = Inf, guess_max = min(1000, n_max), progress = readxl_progress(), .name_repair = &amp;quot;unique&amp;quot;) read.xlsx( xlsxFile, sheet = 1, startRow = 1, colNames = TRUE, rowNames = FALSE, detectDates = FALSE, skipEmptyRows = TRUE, skipEmptyCols = TRUE, rows = NULL, cols = NULL, check.</description>
+    </item>
+    
     <item>
       <title>R：批量读入文件并合并</title>
       <link>https://taoziyu97.github.io/blog/2021-11-17_docall/</link>
