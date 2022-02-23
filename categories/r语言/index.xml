@@ -6,7 +6,48 @@
     <description>Recent content in R语言 on ziyu&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 23 Dec 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://taoziyu97.github.io/categories/r%E8%AF%AD%E8%A8%80/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 23 Feb 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://taoziyu97.github.io/categories/r%E8%AF%AD%E8%A8%80/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>R包开发【2】——编写函数</title>
+      <link>https://taoziyu97.github.io/blog/2022-2-23_function/</link>
+      <pubDate>Wed, 23 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://taoziyu97.github.io/blog/2022-2-23_function/</guid>
+      <description>R包功能的实现需要各种函数，函数应该如何编写？什么样的步骤可以被包括在函数里？函数需要哪些基本的功能？函数应该如何命名？函数可以通过调用函数并且给定参数来代替对代码的重复操作（当一个操作需要重复2次时），通过自定义的函数命名来使得功能易懂，并且方便后续的更新和更改，对功能进行更改只需要变更函数，而非在所有的代码中一一修改。
+1. 基本步骤 写函数的基本步骤如下：
+1.1 函数命名   命名要尽量短，而且指示函数的功能，长一点能够清楚的展示功能也无妨。
+  函数名尽可能是动词，不过相比使用get、compute、calculate、 determine这样宽泛的动词来说，名词相对更好，函数的参数尽可能是名词。想到好的名字随时去更改掉它。
+  当函数名包含很多单词时，可以统一选取一种使用，可以使用snake_case，或者camelCase的形式，两者不要混着用。
+  同类的功能名称保持一定的一致性。
+  # Good input_select() input_checkbox() input_text() # Not so good select_input() checkbox_input()   尽量避免和已有的函数名称重复，尤其是基本包里的。
+  习惯使用注释把文件分割，快捷键是：cmd/ctrl + shift + R
+  # Load data -------------------------------------- # Plot data -------------------------------------- 1.2 列出输入数据或参数 1.3 函数内部功能 我觉得还需要加上一个步骤就是，确定函数的输出是什么。写完函数还需要对函数进行交互式测试，参考这本书的测试章节。通过下面的简化过程比较容易理解：
+初始未简化：
+df &amp;lt;- tibble::tibble( a = rnorm(10), b = rnorm(10), c = rnorm(10), d = rnorm(10) ) df$a &amp;lt;- (df$a - min(df$a, na.</description>
+    </item>
+    
+    <item>
+      <title>R包开发【1】——基本流程</title>
+      <link>https://taoziyu97.github.io/blog/2022-2-22_rpkg/</link>
+      <pubDate>Tue, 22 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://taoziyu97.github.io/blog/2022-2-22_rpkg/</guid>
+      <description>任何可以被自动化的，都应该让它自动化，给自己省时间，也可以方便任何人使用。devtools的目的是使得开发工具变得容易，囊括了多个包来支持开发的各个功能。
+前言：R包开发书籍的基本内容   第二章 示例包
+  第三章 为包开发准备系统
+  第四章 包的基本结构，不同的状态下结构不同（？）
+  第五章 回顾核心的工作流程，介绍核心工具之间的联系：devtools和usethis，Rstudio
+  其余章节 开发细节
+  通过示例入门 1. 在制定路径下新建R包，创建了新的项目 library(usethis) create_package(&amp;quot;/Volumes/home /project/Immarker&amp;quot;) 目录下有这些文件
+    .Rbuildignore
+  .Rproj.user
+  DESCRIPTION 文档说明
+  NAMESPACE 列出了外部和内部使用到的函数
+  The R/ directory
+  Immarker.Rproj 不使用Rstudio的话这个可以在创建时，使用参数rstudio = FALSE去除
+  2. 目前创建的目录是一个R包以及RStudio的项目，现在我们再将其增添为Git仓库。 library(devtools) use_git() 3. 写第一个函数 根据自己的需求写函数，这本书不涉及到函数应该如何写，但是可以参考Functions chapter of R for Data Science and the Functions chapter of Advanced R.</description>
+    </item>
+    
     <item>
       <title>R基础——读入和写出数据</title>
       <link>https://taoziyu97.github.io/blog/2021-12-23_basic_r/</link>

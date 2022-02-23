@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
   <meta charset="utf-8">
-<title>逻辑回归 - ziyu&#39;s blog</title>
+<title>R包开发【1】——基本流程 - ziyu&#39;s blog</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
@@ -43,14 +43,14 @@ code.has-jax {
 }
 </style>
 <meta name="generator" content="Hugo 0.80.0" /><meta property="og:site_name" content="ziyu&#39;s blog">
-  <meta property="og:title" content="逻辑回归">
-  <meta property="og:description" content="logistic regression  last update：2021-04-12">
-  <meta property="description" content="logistic regression  last update：2021-04-12">
-  <meta property="og:url" content="https://taoziyu97.github.io/blog/2021-4-11_%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92/">
+  <meta property="og:title" content="R包开发【1】——基本流程">
+  <meta property="og:description" content="介绍如何开发R包。 last update：2022-02-22">
+  <meta property="description" content="介绍如何开发R包。 last update：2022-02-22">
+  <meta property="og:url" content="https://taoziyu97.github.io/blog/2022-2-22_rpkg/">
   <meta property="og:type" content="article">
   
     
-      <meta property="og:image" content="https://i.loli.net/2021/04/15/FMqBY6morl1hzvD.png">
+      <meta property="og:image" content="https://i.loli.net/2021/11/17/7Gdf5WhtenJazm1.png">
       <meta property="og:image:alt" content="Mountain Range Through Clouds">
     
   
@@ -164,13 +164,13 @@ code.has-jax {
 
 
   
-        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2ftaoziyu97.github.io%2fblog%2f2021-4-11_%25E9%2580%25BB%25E8%25BE%2591%25E5%259B%259E%25E5%25BD%2592%2f&amp;title=%e9%80%bb%e8%be%91%e5%9b%9e%e5%bd%92" target="_blank" rel="noopener" class="nav share-btn linkedin">
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2ftaoziyu97.github.io%2fblog%2f2022-2-22_rpkg%2f&amp;title=R%e5%8c%85%e5%bc%80%e5%8f%91%e3%80%901%e3%80%91%e2%80%94%e2%80%94%e5%9f%ba%e6%9c%ac%e6%b5%81%e7%a8%8b" target="_blank" rel="noopener" class="nav share-btn linkedin">
             <p>LinkedIn</p>
           </a>
   
 
   
-        <a href="mailto:?subject=Check%20out%20this%20post%20by Ziyu&amp;body=https%3a%2f%2ftaoziyu97.github.io%2fblog%2f2021-4-11_%25E9%2580%25BB%25E8%25BE%2591%25E5%259B%259E%25E5%25BD%2592%2f" target="_blank" class="nav share-btn email" data-proofer-ignore>
+        <a href="mailto:?subject=Check%20out%20this%20post%20by Ziyu&amp;body=https%3a%2f%2ftaoziyu97.github.io%2fblog%2f2022-2-22_rpkg%2f" target="_blank" class="nav share-btn email" data-proofer-ignore>
           <p>Email</p>
         </a>
   
@@ -247,16 +247,16 @@ code.has-jax {
     <header>
   <div class="title">
     
-      <h2><a href="/blog/2021-4-11_%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92/">逻辑回归</a></h2>
+      <h2><a href="/blog/2022-2-22_rpkg/">R包开发【1】——基本流程</a></h2>
     
     
-      <p>logistic regression  last update：2021-04-12</p>
+      <p>介绍如何开发R包。 last update：2022-02-22</p>
     
   </div>
   <div class="meta">
-    <time datetime="2021-04-12 00:00:00 &#43;0000 UTC">April 12, 2021</time>
+    <time datetime="2022-02-22 00:00:00 &#43;0000 UTC">February 22, 2022</time>
     <p>Ziyu</p>
-    <p>1-Minute Read</p>
+    <p>2-Minute Read</p>
   </div>
 </header>
 
@@ -267,13 +267,13 @@ code.has-jax {
 
 
   
-        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2ftaoziyu97.github.io%2fblog%2f2021-4-11_%25E9%2580%25BB%25E8%25BE%2591%25E5%259B%259E%25E5%25BD%2592%2f&amp;title=%e9%80%bb%e8%be%91%e5%9b%9e%e5%bd%92" target="_blank" rel="noopener" class="nav share-btn linkedin">
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2ftaoziyu97.github.io%2fblog%2f2022-2-22_rpkg%2f&amp;title=R%e5%8c%85%e5%bc%80%e5%8f%91%e3%80%901%e3%80%91%e2%80%94%e2%80%94%e5%9f%ba%e6%9c%ac%e6%b5%81%e7%a8%8b" target="_blank" rel="noopener" class="nav share-btn linkedin">
             <p>LinkedIn</p>
           </a>
   
 
   
-        <a href="mailto:?subject=Check%20out%20this%20post%20by Ziyu&amp;body=https%3a%2f%2ftaoziyu97.github.io%2fblog%2f2021-4-11_%25E9%2580%25BB%25E8%25BE%2591%25E5%259B%259E%25E5%25BD%2592%2f" target="_blank" class="nav share-btn email" data-proofer-ignore>
+        <a href="mailto:?subject=Check%20out%20this%20post%20by Ziyu&amp;body=https%3a%2f%2ftaoziyu97.github.io%2fblog%2f2022-2-22_rpkg%2f" target="_blank" class="nav share-btn email" data-proofer-ignore>
           <p>Email</p>
         </a>
   
@@ -281,105 +281,160 @@ code.has-jax {
 
     </div>
     <div class="content">
-      <a href="/blog/2021-4-11_%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92/" class="image" style="--bg-image: url('https://i.loli.net/2021/04/15/FMqBY6morl1hzvD.png');">
-    <img class="stretchH" src="https://i.loli.net/2021/04/15/FMqBY6morl1hzvD.png" alt="Mountain Range Through Clouds">
+      <a href="/blog/2022-2-22_rpkg/" class="image" style="--bg-image: url('https://i.loli.net/2021/11/17/7Gdf5WhtenJazm1.png');">
+    <img class="stretchH" src="https://i.loli.net/2021/11/17/7Gdf5WhtenJazm1.png" alt="Mountain Range Through Clouds">
   </a>
       <nav id="TableOfContents">
   <ul>
-    <li><a href="#引言">引言</a></li>
-    <li><a href="#逻辑回归">逻辑回归</a></li>
-    <li><a href="#最大似然">最大似然</a></li>
-    <li><a href="#参考">参考：</a></li>
+    <li><a href="#前言r包开发书籍的基本内容">前言：R包开发书籍的基本内容</a></li>
+    <li><a href="#通过示例入门">通过示例入门</a>
+      <ul>
+        <li><a href="#1-在制定路径下新建r包创建了新的项目">1. 在制定路径下新建R包，创建了新的项目</a></li>
+        <li><a href="#2-目前创建的目录是一个r包以及rstudio的项目现在我们再将其增添为git仓库">2. 目前创建的目录是一个R包以及RStudio的项目，现在我们再将其增添为Git仓库。</a></li>
+        <li><a href="#3-写第一个函数">3. 写第一个函数</a></li>
+        <li><a href="#4-定义r函数">4. 定义R函数</a></li>
+        <li><a href="#5-测试函数功能">5. 测试函数功能</a></li>
+        <li><a href="#6-commit该函数">6. commit该函数</a></li>
+        <li><a href="#7-检查">7. 检查</a></li>
+        <li><a href="#8-编辑对包的描述description文件">8. 编辑对包的描述DESCRIPTION文件</a></li>
+        <li><a href="#9-设置license">9. 设置license</a></li>
+        <li><a href="#10-函数使用文档">10. 函数使用文档</a></li>
+        <li><a href="#11-再次check">11. 再次check()</a></li>
+        <li><a href="#12-安装该包">12. 安装该包</a></li>
+      </ul>
+    </li>
+    <li><a href="#参考资料">参考资料</a></li>
   </ul>
 </nav>
-      <h2 id="引言">引言</h2>
-<ol>
-<li>线性回归</li>
-</ol>
-<p><img src="https://i.loli.net/2021/04/12/cJAdRZi5IE4pBUg.png" alt=""></p>
-<p>假设数据包含 <strong>尺寸</strong> 和 <strong>重量</strong> 两组，根据这两组数据用 <strong>最小二乘法</strong> 拟合一条线后，我们可以做如下的事情：</p>
+      <p>任何可以被自动化的，都应该让它自动化，给自己省时间，也可以方便任何人使用。devtools的目的是使得开发工具变得容易，囊括了多个包来支持开发的各个功能。</p>
+<h2 id="前言r包开发书籍的基本内容">前言：R包开发书籍的基本内容</h2>
 <ul>
 <li>
-<p>计算r平方来确定两个变量是否相关</p>
+<p>第二章 示例包</p>
 </li>
 <li>
-<p>计算p值确定R平方是否具有统计显著性</p>
+<p>第三章 为包开发准备系统</p>
 </li>
 <li>
-<p>用于预测，如果一个新鼠标有某重量，可以根据这个线来预测其大小</p>
+<p>第四章 包的基本结构，不同的状态下结构不同（？）</p>
+</li>
+<li>
+<p>第五章 回顾核心的工作流程，介绍核心工具之间的联系：devtools和usethis，Rstudio</p>
+</li>
+<li>
+<p>其余章节 开发细节</p>
 </li>
 </ul>
-<ol start="2">
-<li>多元回归</li>
-</ol>
-<p><img src="https://i.loli.net/2021/04/12/j2KTLR1fHlrYGoC.png" alt=""></p>
-<p>假设用 <strong>体重</strong> 和 <strong>血容量</strong> 来预测大小，拟合曲线可做上述三个同样的事情，还可以用离散型数值来预测大小。</p>
-<ol start="3">
-<li>比较模型</li>
-</ol>
-<p>进行正态回归，使用权重来预测大小。</p>
-<h2 id="逻辑回归">逻辑回归</h2>
-<p>S型函数定义：</p>
+<h2 id="通过示例入门">通过示例入门</h2>
+<h3 id="1-在制定路径下新建r包创建了新的项目">1. 在制定路径下新建R包，创建了新的项目</h3>
+<pre><code>library(usethis)
+create_package(&quot;/Volumes/home /project/Immarker&quot;)
+</code></pre><p>目录下有这些文件</p>
 <center>
-    <img src= "https://i.loli.net/2021/04/19/pHmzxDXVZaYyi5w.png" width="200"/>
+    <img src= "https://gitee.com/taoziyu97/picgo_img/raw/master/images/%E6%88%AA%E5%B1%8F2022-02-22%20%E4%B8%8B%E5%8D%881.42.30.png" width="200"/>
 </center>
-<p>S 型函数会产生以下曲线图：</p>
 <ul>
-<li>y' 是逻辑回归模型针对特定样本的输出。</li>
-<li>z 是 b + w1x1 + w2x2 + … wNxN</li>
-<li>w 的值是该模型学习的权重，b 是偏差。</li>
-<li>x 的值是特定样本的特征值。</li>
+<li>
+<p><code>.Rbuildignore</code></p>
+</li>
+<li>
+<p><code>.Rproj.user</code></p>
+</li>
+<li>
+<p><code>DESCRIPTION</code> 文档说明</p>
+</li>
+<li>
+<p><code>NAMESPACE </code>列出了外部和内部使用到的函数</p>
+</li>
+<li>
+<p><code>The R/ directory</code></p>
+</li>
+<li>
+<p><code>Immarker.Rproj</code> 不使用Rstudio的话这个可以在创建时，使用参数<code>rstudio = FALSE</code>去除</p>
+</li>
 </ul>
-<p>线性回归的损失函数是平方损失。逻辑回归的损失函数是对数损失函数。</p>
-<center>
-    <img src= "https://i.loli.net/2021/04/19/ljY3baotdBLWMP5.png" width="600"/>
-</center>
-<p><img src="https://i.loli.net/2021/04/12/wAgRHX9TnbKVyG3.png" alt=""></p>
-<p>逻辑回归预测事物是对还是错，而不是连续的事物，通常用于分类，根据该目的拟合了“S”形曲线，可以给出概率。</p>
-<p>假设这里用体重来预测肥胖，或者基因型和体重来预测肥胖，即不仅可以处理体重和年龄等连续数值，还可以处理离散数值，可以测试每个变量是否对预测肥胖有用。</p>
+<h3 id="2-目前创建的目录是一个r包以及rstudio的项目现在我们再将其增添为git仓库">2. 目前创建的目录是一个R包以及RStudio的项目，现在我们再将其增添为Git仓库。</h3>
+<pre><code>library(devtools)
+use_git()
+</code></pre><h3 id="3-写第一个函数">3. 写第一个函数</h3>
+<p>根据自己的需求写函数，这本书不涉及到函数应该如何写，但是可以参考Functions chapter of <a href="https://r4ds.had.co.nz/functions.html">R for Data Science</a> and the Functions chapter of <a href="https://adv-r.hadley.nz/functions.html">Advanced  R</a>.</p>
+<p>举个例子：</p>
+<pre><code>strsplit1 &lt;- function(x, split) {
+  strsplit(x, split = split)[[1]]
+}
+</code></pre><h3 id="4-定义r函数">4. 定义R函数</h3>
+<p>把R函数保存在R文件中，存放在R目录下。</p>
+<pre><code>&gt; use_r(&quot;strsplit1&quot;)
+✓ Setting active project to '/Volumes/home /project/Immarker'
+• Modify 'R/strsplit1.R'
+• Call `use_test()` to create a matching test file
+</code></pre><p>只在这个文件中写入函数的function，不能包含任何library(devtools)，x，use_git()等其他，R包依赖的函数会在后面详细说明。</p>
+<h3 id="5-测试函数功能">5. 测试函数功能</h3>
+<p>先使用load_all让函数能够被测试，load_all能够模拟构建、安装和载入我们创建的R包的过程，而且load_all比实际的这个过程迭代速度更快。</p>
+<pre><code>load_all()
+</code></pre><p>测试函数功能</p>
+<pre><code>(x &lt;- &quot;alfa,bravo,charlie,delta&quot;)
+#&gt; [1] &quot;alfa,bravo,charlie,delta&quot;
+strsplit1(x, split = &quot;,&quot;)
+#&gt; [1] &quot;alfa&quot;    &quot;bravo&quot;   &quot;charlie&quot; &quot;delta&quot;
+</code></pre><p>该函数能够运行，不过它并不在全局的环境中存在。</p>
+<pre><code>exists(&quot;strsplit1&quot;, where = globalenv(), inherits = FALSE)
+#&gt; [1] FALSE
+</code></pre><h3 id="6-commit该函数">6. commit该函数</h3>
+<p>如果使用Git，可以使用自己熟悉的方法把新的R函数commit上去。记得规范化commit的message。 <a href="https://zj-git-guide.readthedocs.io/zh_CN/latest/message/Angular%E6%8F%90%E4%BA%A4%E4%BF%A1%E6%81%AF%E8%A7%84%E8%8C%83/">Angular 提交信息规范</a></p>
+<h3 id="7-检查">7. 检查</h3>
+<p>检查所建R包的是否能够正常运行。check的时间一般比较久，但是check是一个好习惯。</p>
+<pre><code>check()
+</code></pre><p>处理check输出的结果。</p>
+<pre><code>0 errors ✔ | 1 warning ✖ | 0 notes ✔
+</code></pre><h3 id="8-编辑对包的描述description文件">8. 编辑对包的描述DESCRIPTION文件</h3>
+<p>修改包的作者为自己的名字或ORCID号，</p>
+<p>第八章会详细描述。文件内容看上去类似下面的形式：</p>
+<pre><code>Package: regexcite
+Title: Make Regular Expressions More Exciting
+Version: 0.0.0.9000
+Authors@R: 
+    person(&quot;Jane&quot;, &quot;Doe&quot;, , &quot;jane@example.com&quot;, role = c(&quot;aut&quot;, &quot;cre&quot;))
+Description: Convenience functions to make some common tasks with string
+    manipulation and regular expressions a bit easier.
+License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
+    license
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.2
+</code></pre><h3 id="9-设置license">9. 设置license</h3>
+<p>任意选择一个license，默认的似乎是MIT的。</p>
+<pre><code>use_mit_license()
+</code></pre><h3 id="10-函数使用文档">10. 函数使用文档</h3>
+<p>在原文件中开发者对函数进行特殊格式的注释，并使用roxygen2包处理函数注释文档<code>man/strsplit1.Rd</code>的建立。关于这个包的具体使用在第十章有描述。使用RStudio可以直接打开函数R文件，每一行的开头为<code>#'</code>，不使用RStudio时，可以自己写comment。</p>
+<p>把光标放在函数内部(必须是括号内部！这样才能确定注释的是哪个函数)，使用快捷键ctrl+alt+shift+R，会在函数的开头自动生成注释文档的格式如下：</p>
+<pre><code>#' Title
+#'
+#' @param x
+#' @param split
+#'
+#' @return
+#' @export
+#'
+#' @examples
+strsplit1 &lt;- function(x, split) {
+  strsplit(x, split = split)[[1]]
+}
+</code></pre><p>随后使用document将注释转化为函数的Rd文档，并保存在man文件夹下：</p>
+<pre><code>document()
+</code></pre><p>此时可以使用<code>?strsplit1</code>来预览函数的帮助文档。在正式构建和安装包之前，不会正确连接包的文档。这消除了帮助文件之间的链接和包索引的创建等细节。</p>
+<p>另外，document还基于<code>@export</code>更新了NAMESPACE文件，这个文件是只读模式不能够进行更改的，NAMESPACE的文档内容如下：</p>
+<pre><code># Generated by roxygen2: do not edit by hand
+
+export(strsplit1)
+</code></pre><p>export意味着使用者可以通过载入该包来使用这个函数。</p>
+<h3 id="11-再次check">11. 再次check()</h3>
+<h3 id="12-安装该包">12. 安装该包</h3>
+<pre><code>install()
+</code></pre><p>安装完之后就可以和其他包一样的使用了，可以restart R然后重新载入该包。</p>
+<h2 id="参考资料">参考资料</h2>
 <ul>
-<li>最大似然法拟合曲线</li>
-</ul>
-<p>本质就是不停的计算，选择具有最大似然的曲线。</p>
-<h2 id="最大似然">最大似然</h2>
-<p>最大似然的目标是找到使分布适合数据的最佳方法。不同类型的数据存在不同类型的分布，让分布适合数据可以让数据的使用更轻松，更通用，使它适用于相同类型的每个实验，假设称重了一批老鼠如下：</p>
-<p><img src="https://i.loli.net/2021/04/15/u6Ttidm8NBRzaDo.png" alt=""></p>
-<p>在这种情况下，认为老鼠体重可能呈正态分布，正态分布意味着：</p>
-<ol>
-<li>
-<p>老鼠的重量 <strong>接近均值</strong> 或平均值。</p>
-</li>
-<li>
-<p>期望测量值围绕平均值相对对称。（虽然看起来不是完全对称，但是也没有非常明显的偏向）</p>
-</li>
-</ol>
-<p>正态分布存在多种大小和形状，如下：</p>
-<p><img src="https://i.loli.net/2021/04/15/8DaxZbhowpREd6O.png" alt=""></p>
-<p>当确定形状之后，要找出居中的位置。</p>
-<p><img src="https://i.loli.net/2021/04/15/ONxT23Rar7E9Kth.png" alt=""></p>
-<p>假设选任何一个旧的正态分布，下图分布表示测量的大多数值应该接近平均值，看看它对数据的拟合程度（黑色虚线处是分布平均值）：</p>
-<p><img src="https://i.loli.net/2021/04/15/O91ABv4hDT6oxLM.png" alt=""></p>
-<p>发现测量的大多数值和分布的均值相差很大（右边多数的测量值的似然很低），如果将正态分布移到其均值和平均体重相同的位置：</p>
-<p><img src="https://i.loli.net/2021/04/15/xmryuT7bYNIJSXO.png" alt=""></p>
-<p>发现红色圈出部分的似然相对高，继续移动正态分布，这些测量值的似然再次下降：</p>
-<p><img src="https://i.loli.net/2021/04/15/Eo3DVRz2LFSN6wQ.png" alt=""></p>
-<p>可以在分布中心的位置，绘制观察到数据的似然，从左侧开始，计算观察数据的似然，将分布向右移动并重新计算似然：</p>
-<p><img src="https://i.loli.net/2021/04/15/hj2l4aZRyNov7WB.png" alt=""></p>
-<p>当尝试了所有可能的位置，就可以将正态分布置于需要的位置，即最大化观察我们所测量值的似然的位置，以上都是平均值的最大似然估计，这里讨论的是分布的均值，不是数据的均值吗，接下来找出标准差的最大似然估计：</p>
-<p><img src="https://i.loli.net/2021/04/15/Atod1eI4lW9Uxvb.png" alt=""></p>
-<p><img src="https://i.loli.net/2021/04/15/YNTBhSyZbCnV89U.png" alt=""></p>
-<p>日常对话中，概率和似然（likelihood）可能指的是同一个概念，但是在统计学中，似然（likelihood）指的是：尝试针对给定的一组观察到的测量值，找到分布的最佳均值或标准差，这就是找到适合数据分布的过程。</p>
-<h2 id="参考">参考：</h2>
-<ul>
-<li>
-<p>《StatQuest》</p>
-</li>
-<li>
-<p>《统计会犯错：如何避免数据分析中的统计陷阱》</p>
-</li>
-<li>
-<p><a href="https://developers.google.com/machine-learning/crash-course/logistic-regression/calculating-a-probability?hl=zh-cn">逻辑回归(Logistic Regression)：计算概率|机器学习速成课程</a></p>
-</li>
+<li>rpkg</li>
 </ul>
 
     </div>
@@ -389,7 +444,7 @@ code.has-jax {
     <ul class="categories">
       
         
-          <li><a class="article-terms-link" href="/categories/%e7%94%9f%e7%89%a9%e7%bb%9f%e8%ae%a1/">生物统计</a></li>
+          <li><a class="article-terms-link" href="/categories/r%e8%af%ad%e8%a8%80/">R语言</a></li>
         
       
     </ul>
@@ -398,7 +453,7 @@ code.has-jax {
     <ul class="tags">
       
         
-          <li><a class="article-terms-link" href="/tags/%e7%94%9f%e7%89%a9%e7%bb%9f%e8%ae%a1/">生物统计</a></li>
+          <li><a class="article-terms-link" href="/tags/r%e8%af%ad%e8%a8%80/">R语言</a></li>
         
       
     </ul>
@@ -429,10 +484,10 @@ code.has-jax {
   
   <div class="pagination">
     
-      <a href="/blog/2021-5-24_threads_and_processes/" class="button left"><span>线程和进程</span></a>
+      <a href="/blog/2022-2-23_function/" class="button left"><span>R包开发【2】——编写函数</span></a>
     
     
-      <a href="/blog/2021-4-07_p%E5%80%BC/" class="button right"><span>p值</span></a>
+      <a href="/blog/2021-12-23_basic_r/" class="button right"><span>R基础——读入和写出数据</span></a>
     
   </div>
 
