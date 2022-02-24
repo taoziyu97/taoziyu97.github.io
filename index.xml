@@ -6,7 +6,36 @@
     <description>Recent content on ziyu&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 23 Feb 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://taoziyu97.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 24 Feb 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://taoziyu97.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>R包caret基本功能【1】——六种基本功能</title>
+      <link>https://taoziyu97.github.io/blog/2022-2-24_caret1/</link>
+      <pubDate>Thu, 24 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://taoziyu97.github.io/blog/2022-2-24_caret1/</guid>
+      <description>介绍机器学习R包。
+1. 数据分割 基于输出变量的分割 在建模之前，需要对样本数据进行分割分为训练集和测试集。在之前建模过程中，我发现我使用sample进行分割存在一定的问题，比如我分割出来的数据中response的占比在训练集和测试集中差别很大等等。caret包中可以解决这个问题，通过设置p值，同时确定训练集和测试集的占比，并各个因子水平下取占比（表述的有点问题）。
+createDataPartition(y, times = 1, p = 0.5, list = TRUE, groups = min(5, length(y))) 2. 预处理 2.1 虚拟变量处理 数据预处理又包括：对因子型变量进行虚拟变量处理（比如response在数据中是yes或no的形式表示，那么可以在这一步转换为虚拟变量0,1，这一步骤尤其适合多个因子型变量都需要处理的情况，可以节约时间）；
+caret包假定所有的数据都是数值型的，比如因子型的可以通过model.matrix和dummyVars转换为dummy的变量。 dummyVars：
+dummyVars(formula, data, sep = &amp;quot;.&amp;quot;, levelsOnly = FALSE, fullRank = FALSE, ...) predict(object, newdata, na.action = na.pass, ...) formula：y~x1+x2，公式右边需要处理为哑变量的因子型变量，不确定哪些是因子型变量的话，可以直接使用y~.来制定所有的列，自动把因子型变量的进行处理。
+2.2 近零方差变量的删除 比如有些变量存在一些很特殊的值，这些值的占比很少，假设response中yes的为99个，no的为1个，那么一些模型来说，模型会崩溃(crash)或者fit to be unstable. 当数据做交叉验证时进行分割以及bootstrap采样的时候，这些变量可能是零方差的，举个例子：
+data(mdrr) data.frame(table(mdrrDescr$nR11)) ## Var1 Freq ## 1 0 501 ## 2 1 4 ## 3 2 23 当存在很多变量时，可以用过这个函数批量处理：</description>
+    </item>
+    
+    <item>
+      <title>R包mlr3基本功能【1】——R6类——需要修订</title>
+      <link>https://taoziyu97.github.io/blog/2022-2-24_mlr31/</link>
+      <pubDate>Thu, 24 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://taoziyu97.github.io/blog/2022-2-24_mlr31/</guid>
+      <description>介绍机器学习R包mlr3，该包提供了分类、回归、生存分析以及其他的机器学习任务，包含超参的调节以及特征的选择，本地支持很多操作的并行化。
+1. mlr3 Quickstart install.packages(&amp;#34;mlr3&amp;#34;) 对iris数据集的前120行训练一个决策树，并且对后30行进行最终的预测，最后判断预测模型的准确性。
+library(&amp;#34;mlr3&amp;#34;) task = tsk(&amp;#34;iris&amp;#34;) learner = lrn(&amp;#34;classif.rpart&amp;#34;) # train a model of this learner for a subset of the task learner$train(task, row_ids = 1:120) # this is what the decision tree looks like learner$model 预测
+predictions = learner$predict(task, row_ids = 121:150) predictions 准确性
+# accuracy of our model on the test set of the final 30 rows predictions$score(msr(&amp;#34;classif.acc&amp;#34;))   2. R6 mlr3提供的所有基本构建块都是R6类，因此需要了解一下R6类。R6是R用于面向对象编程(OO)的语言之一，面向对象是以功能来划分问题，而不是步骤。
+  object是通过R6::R6Class()创建的，foo = Foo$new(bar = 1)就是创建了一个新的Foo类的object，设定bar这个参数值为1，在mlr3中很多object都是通过特殊的功能来创建的。e.</description>
+    </item>
+    
     <item>
       <title>R包开发【2】——编写函数</title>
       <link>https://taoziyu97.github.io/blog/2022-2-23_function/</link>
@@ -27,6 +56,21 @@ df &amp;lt;- tibble::tibble( a = rnorm(10), b = rnorm(10), c = rnorm(10), d = rn
     </item>
     
     <item>
+      <title>R包开发【3】——R包开发细节</title>
+      <link>https://taoziyu97.github.io/blog/2022-2-23_rpkg2/</link>
+      <pubDate>Wed, 23 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://taoziyu97.github.io/blog/2022-2-23_rpkg2/</guid>
+      <description>R包开发的各种细节。
+1. 命名   尽量避免同时使用大小写字母
+  使用该包测试命名是否能用（？？？）。
+  library(available) available(&amp;quot;doofus&amp;quot;) 2. 依赖包 在DESCRIPTION中对依赖包进行注释：
+Imports: randomForest, stats 在函数中使用依赖包中的函数时，需要标注pkg::fun。
+ 是在roxygen注释中添加@import pkg。这种方法会在R包的NAMESPACE文件中添加import域，在加载R包时，第三方包的所有函数都会被导入。在使用函数时必须用pkg::fun的方法，以防函数名冲突。第二种方法，是在roxygen注释中添加@importFrom pkg fun。这种方法会在NAMESPACE文件中添加importFrom域，在使用时可以直接使用函数名，就像在.GlobalEnv中创建的函数一样。这里推荐第二种引用方法，因为可以大幅减少函数冲突。
+ 参考资料：  r4ds  </description>
+    </item>
+    
+    <item>
       <title>R包开发【1】——基本流程</title>
       <link>https://taoziyu97.github.io/blog/2022-2-22_rpkg/</link>
       <pubDate>Tue, 22 Feb 2022 00:00:00 +0000</pubDate>
@@ -38,7 +82,8 @@ df &amp;lt;- tibble::tibble( a = rnorm(10), b = rnorm(10), c = rnorm(10), d = rn
   第四章 包的基本结构，不同的状态下结构不同（？）
   第五章 回顾核心的工作流程，介绍核心工具之间的联系：devtools和usethis，Rstudio
   其余章节 开发细节
-  通过示例入门 1. 在制定路径下新建R包，创建了新的项目 library(usethis) create_package(&amp;quot;/Volumes/home /project/Immarker&amp;quot;) 目录下有这些文件
+  通过示例入门 1. 在制定路径下新建R包，创建了新的项目 先安装一些包
+install.packages(c(&amp;quot;devtools&amp;quot;, &amp;quot;roxygen2&amp;quot;, &amp;quot;testthat&amp;quot;, &amp;quot;knitr&amp;quot;)) library(usethis) create_package(&amp;quot;/Volumes/home /project/Immarker&amp;quot;) 目录下有这些文件
     .Rbuildignore
   .Rproj.user
   DESCRIPTION 文档说明
