@@ -1,135 +1,73 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on ziyu&#39;s blog</title>
+    <title>Tags on LogBook | Hugo Personal Blog Template</title>
     <link>https://taoziyu97.github.io/tags/</link>
-    <description>Recent content in Tags on ziyu&#39;s blog</description>
+    <description>Recent content in Tags on LogBook | Hugo Personal Blog Template</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <lastBuildDate>Thu, 24 Feb 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://taoziyu97.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <copyright>Design By [Themefisher](https://themefisher.com/) Develop By [Gethugothemes](https://gethugothemes.com/)</copyright>
+    <lastBuildDate>Sun, 15 Mar 2020 15:40:24 +0600</lastBuildDate><atom:link href="https://taoziyu97.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>R语言</title>
-      <link>https://taoziyu97.github.io/tags/r%E8%AF%AD%E8%A8%80/</link>
-      <pubDate>Thu, 24 Feb 2022 00:00:00 +0000</pubDate>
+      <title>image</title>
+      <link>https://taoziyu97.github.io/tags/image/</link>
+      <pubDate>Sun, 15 Mar 2020 15:40:24 +0600</pubDate>
       
-      <guid>https://taoziyu97.github.io/tags/r%E8%AF%AD%E8%A8%80/</guid>
+      <guid>https://taoziyu97.github.io/tags/image/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>生信工具类</title>
-      <link>https://taoziyu97.github.io/tags/%E7%94%9F%E4%BF%A1%E5%B7%A5%E5%85%B7%E7%B1%BB/</link>
-      <pubDate>Sun, 19 Dec 2021 00:00:00 +0000</pubDate>
+      <title>photo</title>
+      <link>https://taoziyu97.github.io/tags/photo/</link>
+      <pubDate>Sun, 15 Mar 2020 15:40:24 +0600</pubDate>
       
-      <guid>https://taoziyu97.github.io/tags/%E7%94%9F%E4%BF%A1%E5%B7%A5%E5%85%B7%E7%B1%BB/</guid>
+      <guid>https://taoziyu97.github.io/tags/photo/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>可视化</title>
-      <link>https://taoziyu97.github.io/tags/%E5%8F%AF%E8%A7%86%E5%8C%96/</link>
-      <pubDate>Wed, 15 Dec 2021 00:00:00 +0000</pubDate>
+      <title>booth</title>
+      <link>https://taoziyu97.github.io/tags/booth/</link>
+      <pubDate>Sat, 14 Mar 2020 15:40:24 +0600</pubDate>
       
-      <guid>https://taoziyu97.github.io/tags/%E5%8F%AF%E8%A7%86%E5%8C%96/</guid>
+      <guid>https://taoziyu97.github.io/tags/booth/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>计算机基础</title>
-      <link>https://taoziyu97.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/</link>
-      <pubDate>Mon, 06 Dec 2021 00:00:00 +0000</pubDate>
+      <title>city</title>
+      <link>https://taoziyu97.github.io/tags/city/</link>
+      <pubDate>Sat, 14 Mar 2020 15:40:24 +0600</pubDate>
       
-      <guid>https://taoziyu97.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/</guid>
+      <guid>https://taoziyu97.github.io/tags/city/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>生物统计</title>
-      <link>https://taoziyu97.github.io/tags/%E7%94%9F%E7%89%A9%E7%BB%9F%E8%AE%A1/</link>
-      <pubDate>Fri, 26 Nov 2021 00:00:00 +0000</pubDate>
+      <title>new</title>
+      <link>https://taoziyu97.github.io/tags/new/</link>
+      <pubDate>Sat, 14 Mar 2020 15:40:24 +0600</pubDate>
       
-      <guid>https://taoziyu97.github.io/tags/%E7%94%9F%E7%89%A9%E7%BB%9F%E8%AE%A1/</guid>
+      <guid>https://taoziyu97.github.io/tags/new/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>博客</title>
-      <link>https://taoziyu97.github.io/tags/%E5%8D%9A%E5%AE%A2/</link>
-      <pubDate>Thu, 15 Jul 2021 00:00:00 +0000</pubDate>
+      <title>seasone</title>
+      <link>https://taoziyu97.github.io/tags/seasone/</link>
+      <pubDate>Sat, 14 Mar 2020 15:40:24 +0600</pubDate>
       
-      <guid>https://taoziyu97.github.io/tags/%E5%8D%9A%E5%AE%A2/</guid>
+      <guid>https://taoziyu97.github.io/tags/seasone/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>BUG</title>
-      <link>https://taoziyu97.github.io/tags/bug/</link>
-      <pubDate>Fri, 04 Jun 2021 00:00:00 +0000</pubDate>
+      <title>video</title>
+      <link>https://taoziyu97.github.io/tags/video/</link>
+      <pubDate>Sat, 14 Mar 2020 15:40:24 +0600</pubDate>
       
-      <guid>https://taoziyu97.github.io/tags/bug/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Excel</title>
-      <link>https://taoziyu97.github.io/tags/excel/</link>
-      <pubDate>Thu, 27 May 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://taoziyu97.github.io/tags/excel/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>技术</title>
-      <link>https://taoziyu97.github.io/tags/%E6%8A%80%E6%9C%AF/</link>
-      <pubDate>Tue, 06 Apr 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://taoziyu97.github.io/tags/%E6%8A%80%E6%9C%AF/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>生信</title>
-      <link>https://taoziyu97.github.io/tags/%E7%94%9F%E4%BF%A1/</link>
-      <pubDate>Tue, 06 Apr 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://taoziyu97.github.io/tags/%E7%94%9F%E4%BF%A1/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Latex</title>
-      <link>https://taoziyu97.github.io/tags/latex/</link>
-      <pubDate>Fri, 05 Mar 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://taoziyu97.github.io/tags/latex/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>html</title>
-      <link>https://taoziyu97.github.io/tags/html/</link>
-      <pubDate>Mon, 11 Jan 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://taoziyu97.github.io/tags/html/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>markdown</title>
-      <link>https://taoziyu97.github.io/tags/markdown/</link>
-      <pubDate>Mon, 11 Jan 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://taoziyu97.github.io/tags/markdown/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>主题</title>
-      <link>https://taoziyu97.github.io/tags/%E4%B8%BB%E9%A2%98/</link>
-      <pubDate>Mon, 11 Jan 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://taoziyu97.github.io/tags/%E4%B8%BB%E9%A2%98/</guid>
+      <guid>https://taoziyu97.github.io/tags/video/</guid>
       <description></description>
     </item>
     

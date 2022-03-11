@@ -1,556 +1,300 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>ziyu&#39;s blog</title>
+    <title>LogBook | Hugo Personal Blog Template</title>
     <link>https://taoziyu97.github.io/</link>
-    <description>Recent content on ziyu&#39;s blog</description>
+    <description>Recent content on LogBook | Hugo Personal Blog Template</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <lastBuildDate>Thu, 24 Feb 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://taoziyu97.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <copyright>Design By [Themefisher](https://themefisher.com/) Develop By [Gethugothemes](https://gethugothemes.com/)</copyright>
+    <lastBuildDate>Tue, 14 Apr 2020 15:40:24 +0600</lastBuildDate><atom:link href="https://taoziyu97.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>R包caret基本功能【1】——六种基本功能</title>
-      <link>https://taoziyu97.github.io/blog/2022-2-24_caret1/</link>
-      <pubDate>Thu, 24 Feb 2022 00:00:00 +0000</pubDate>
+      <title>School Bag</title>
+      <link>https://taoziyu97.github.io/shop/product-3/</link>
+      <pubDate>Tue, 14 Apr 2020 15:40:24 +0600</pubDate>
       
-      <guid>https://taoziyu97.github.io/blog/2022-2-24_caret1/</guid>
-      <description>介绍机器学习R包。
-1. 数据分割 基于输出变量的分割 在建模之前，需要对样本数据进行分割分为训练集和测试集。在之前建模过程中，我发现我使用sample进行分割存在一定的问题，比如我分割出来的数据中response的占比在训练集和测试集中差别很大等等。caret包中可以解决这个问题，通过设置p值，同时确定训练集和测试集的占比，并各个因子水平下取占比（表述的有点问题）。
-createDataPartition(y, times = 1, p = 0.5, list = TRUE, groups = min(5, length(y))) 2. 预处理 2.1 虚拟变量处理 数据预处理又包括：对因子型变量进行虚拟变量处理（比如response在数据中是yes或no的形式表示，那么可以在这一步转换为虚拟变量0,1，这一步骤尤其适合多个因子型变量都需要处理的情况，可以节约时间）；
-caret包假定所有的数据都是数值型的，比如因子型的可以通过model.matrix和dummyVars转换为dummy的变量。 dummyVars：
-dummyVars(formula, data, sep = &amp;quot;.&amp;quot;, levelsOnly = FALSE, fullRank = FALSE, ...) predict(object, newdata, na.action = na.pass, ...) formula：y~x1+x2，公式右边需要处理为哑变量的因子型变量，不确定哪些是因子型变量的话，可以直接使用y~.来制定所有的列，自动把因子型变量的进行处理。
-2.2 近零方差变量的删除 比如有些变量存在一些很特殊的值，这些值的占比很少，假设response中yes的为99个，no的为1个，那么一些模型来说，模型会崩溃(crash)或者fit to be unstable. 当数据做交叉验证时进行分割以及bootstrap采样的时候，这些变量可能是零方差的，举个例子：
-data(mdrr) data.frame(table(mdrrDescr$nR11)) ## Var1 Freq ## 1 0 501 ## 2 1 4 ## 3 2 23 当存在很多变量时，可以用过这个函数批量处理：</description>
+      <guid>https://taoziyu97.github.io/shop/product-3/</guid>
+      <description>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</description>
     </item>
     
     <item>
-      <title>R包mlr3基本功能【1】——R6类——需要修订</title>
-      <link>https://taoziyu97.github.io/blog/2022-2-24_mlr31/</link>
-      <pubDate>Thu, 24 Feb 2022 00:00:00 +0000</pubDate>
+      <title>Elements That You Can Use To Create A New Post On This Template.</title>
+      <link>https://taoziyu97.github.io/post/elements/</link>
+      <pubDate>Sun, 15 Mar 2020 15:40:24 +0600</pubDate>
       
-      <guid>https://taoziyu97.github.io/blog/2022-2-24_mlr31/</guid>
-      <description>介绍机器学习R包mlr3，该包提供了分类、回归、生存分析以及其他的机器学习任务，包含超参的调节以及特征的选择，本地支持很多操作的并行化。
-1. mlr3 Quickstart install.packages(&amp;#34;mlr3&amp;#34;) 对iris数据集的前120行训练一个决策树，并且对后30行进行最终的预测，最后判断预测模型的准确性。
-library(&amp;#34;mlr3&amp;#34;) task = tsk(&amp;#34;iris&amp;#34;) learner = lrn(&amp;#34;classif.rpart&amp;#34;) # train a model of this learner for a subset of the task learner$train(task, row_ids = 1:120) # this is what the decision tree looks like learner$model 预测
-predictions = learner$predict(task, row_ids = 121:150) predictions 准确性
-# accuracy of our model on the test set of the final 30 rows predictions$score(msr(&amp;#34;classif.acc&amp;#34;))   2. R6 mlr3提供的所有基本构建块都是R6类，因此需要了解一下R6类。R6是R用于面向对象编程(OO)的语言之一，面向对象是以功能来划分问题，而不是步骤。
-  object是通过R6::R6Class()创建的，foo = Foo$new(bar = 1)就是创建了一个新的Foo类的object，设定bar这个参数值为1，在mlr3中很多object都是通过特殊的功能来创建的。e.</description>
+      <guid>https://taoziyu97.github.io/post/elements/</guid>
+      <description>Heading example Here is example of hedings. You can use this heading by following markdownify rules. For example: use # for heading 1 and use ###### for heading 6.
+Heading 1 Heading 2 Heading 3 Heading 4 Heading 5 Heading 6  Emphasis Emphasis, aka italics, with asterisks or underscores.</description>
     </item>
     
     <item>
-      <title>R包开发【2】——编写函数</title>
-      <link>https://taoziyu97.github.io/blog/2022-2-23_function/</link>
-      <pubDate>Wed, 23 Feb 2022 00:00:00 +0000</pubDate>
+      <title>Blue Jacket</title>
+      <link>https://taoziyu97.github.io/shop/product-7/</link>
+      <pubDate>Sat, 14 Mar 2020 15:40:24 +0600</pubDate>
       
-      <guid>https://taoziyu97.github.io/blog/2022-2-23_function/</guid>
-      <description>R包功能的实现需要各种函数，函数应该如何编写？什么样的步骤可以被包括在函数里？函数需要哪些基本的功能？函数应该如何命名？函数可以通过调用函数并且给定参数来代替对代码的重复操作（当一个操作需要重复2次时），通过自定义的函数命名来使得功能易懂，并且方便后续的更新和更改，对功能进行更改只需要变更函数，而非在所有的代码中一一修改。
-1. 基本步骤 写函数的基本步骤如下：
-1.1 函数命名   命名要尽量短，而且指示函数的功能，长一点能够清楚的展示功能也无妨。
-  函数名尽可能是动词，不过相比使用get、compute、calculate、 determine这样宽泛的动词来说，名词相对更好，函数的参数尽可能是名词。想到好的名字随时去更改掉它。
-  当函数名包含很多单词时，可以统一选取一种使用，可以使用snake_case，或者camelCase的形式，两者不要混着用。
-  同类的功能名称保持一定的一致性。
-  # Good input_select() input_checkbox() input_text() # Not so good select_input() checkbox_input()   尽量避免和已有的函数名称重复，尤其是基本包里的。
-  习惯使用注释把文件分割，快捷键是：cmd/ctrl + shift + R
-  # Load data -------------------------------------- # Plot data -------------------------------------- 1.2 列出输入数据或参数 1.3 函数内部功能 我觉得还需要加上一个步骤就是，确定函数的输出是什么。写完函数还需要对函数进行交互式测试，参考这本书的测试章节。通过下面的简化过程比较容易理解：
-初始未简化：
-df &amp;lt;- tibble::tibble( a = rnorm(10), b = rnorm(10), c = rnorm(10), d = rnorm(10) ) df$a &amp;lt;- (df$a - min(df$a, na.</description>
+      <guid>https://taoziyu97.github.io/shop/product-7/</guid>
+      <description>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</description>
     </item>
     
     <item>
-      <title>R包开发【3】——R包开发细节</title>
-      <link>https://taoziyu97.github.io/blog/2022-2-23_rpkg2/</link>
-      <pubDate>Wed, 23 Feb 2022 00:00:00 +0000</pubDate>
+      <title>Cheerful Loving Couple Bakers Drinking Coffee</title>
+      <link>https://taoziyu97.github.io/post/post-2/</link>
+      <pubDate>Sat, 14 Mar 2020 15:40:24 +0600</pubDate>
       
-      <guid>https://taoziyu97.github.io/blog/2022-2-23_rpkg2/</guid>
-      <description>R包开发的各种细节。
-1. 命名   尽量避免同时使用大小写字母
-  使用该包测试命名是否能用（？？？）。
-  library(available) available(&amp;quot;doofus&amp;quot;) 2. 依赖包 在DESCRIPTION中对依赖包进行注释：
-Imports: randomForest, stats 在函数中使用依赖包中的函数时，需要标注pkg::fun。
- 是在roxygen注释中添加@import pkg。这种方法会在R包的NAMESPACE文件中添加import域，在加载R包时，第三方包的所有函数都会被导入。在使用函数时必须用pkg::fun的方法，以防函数名冲突。第二种方法，是在roxygen注释中添加@importFrom pkg fun。这种方法会在NAMESPACE文件中添加importFrom域，在使用时可以直接使用函数名，就像在.GlobalEnv中创建的函数一样。这里推荐第二种引用方法，因为可以大幅减少函数冲突。
- 参考资料：  r4ds  </description>
+      <guid>https://taoziyu97.github.io/post/post-2/</guid>
+      <description>It’s no secret that the digital industry is booming. From exciting startups to global brands, companies are reaching out to digital agencies, responding to the new possibilities available. However, the industry is fast becoming overcrowded, heaving with agencies offering similar services — on the surface, at least. Producing creative, fresh projects is the key to standing out.</description>
     </item>
     
     <item>
-      <title>R包开发【1】——基本流程</title>
-      <link>https://taoziyu97.github.io/blog/2022-2-22_rpkg/</link>
-      <pubDate>Tue, 22 Feb 2022 00:00:00 +0000</pubDate>
+      <title>Cheerful Loving Couple Bakers Drinking Coffee</title>
+      <link>https://taoziyu97.github.io/post/post-3/</link>
+      <pubDate>Sat, 14 Mar 2020 15:40:24 +0600</pubDate>
       
-      <guid>https://taoziyu97.github.io/blog/2022-2-22_rpkg/</guid>
-      <description>任何可以被自动化的，都应该让它自动化，给自己省时间，也可以方便任何人使用。devtools的目的是使得开发工具变得容易，囊括了多个包来支持开发的各个功能。
-前言：R包开发书籍的基本内容   第二章 示例包
-  第三章 为包开发准备系统
-  第四章 包的基本结构，不同的状态下结构不同（？）
-  第五章 回顾核心的工作流程，介绍核心工具之间的联系：devtools和usethis，Rstudio
-  其余章节 开发细节
-  通过示例入门 1. 在制定路径下新建R包，创建了新的项目 先安装一些包
-install.packages(c(&amp;quot;devtools&amp;quot;, &amp;quot;roxygen2&amp;quot;, &amp;quot;testthat&amp;quot;, &amp;quot;knitr&amp;quot;)) library(usethis) create_package(&amp;quot;/Volumes/home /project/Immarker&amp;quot;) 目录下有这些文件
-    .Rbuildignore
-  .Rproj.user
-  DESCRIPTION 文档说明
-  NAMESPACE 列出了外部和内部使用到的函数
-  The R/ directory
-  Immarker.Rproj 不使用Rstudio的话这个可以在创建时，使用参数rstudio = FALSE去除
-  2. 目前创建的目录是一个R包以及RStudio的项目，现在我们再将其增添为Git仓库。 library(devtools) use_git() 3. 写第一个函数 根据自己的需求写函数，这本书不涉及到函数应该如何写，但是可以参考Functions chapter of R for Data Science and the Functions chapter of Advanced R.</description>
+      <guid>https://taoziyu97.github.io/post/post-3/</guid>
+      <description>It’s no secret that the digital industry is booming. From exciting startups to global brands, companies are reaching out to digital agencies, responding to the new possibilities available. However, the industry is fast becoming overcrowded, heaving with agencies offering similar services — on the surface, at least. Producing creative, fresh projects is the key to standing out.</description>
     </item>
     
     <item>
-      <title>R基础——读入和写出数据</title>
-      <link>https://taoziyu97.github.io/blog/2021-12-23_basic_r/</link>
-      <pubDate>Thu, 23 Dec 2021 00:00:00 +0000</pubDate>
+      <title>Cheerful Loving Couple Bakers Drinking Coffee</title>
+      <link>https://taoziyu97.github.io/post/post-4/</link>
+      <pubDate>Sat, 14 Mar 2020 15:40:24 +0600</pubDate>
       
-      <guid>https://taoziyu97.github.io/blog/2021-12-23_basic_r/</guid>
-      <description>基本内容   Excel文件的读入
-  txt和csv文件的读入
-  文件的写出
-  批量读入数据并合并
-  RData和rds的储存形式
-  read.csv和read.csv2的区别
-  Excel文件的读入 在R语言实战实战这本书中表示，读取Excel文件最好的方式，是在Excel中将其导出为一个逗号分隔文件（csv），并使用读取csv的方法读取数据。或者采用xlsx包直接读取数据。xlsx包可以用来对Exceln97/2000/XP/2003/2007文件进行读取、写入和格式转换。还可以使用readxl包来读取Excel的.xls和.xlsx文件。
-read_xlsx(path, sheet = NULL, range = NULL, col_names = TRUE, col_types = NULL, na = &amp;quot;&amp;quot;, trim_ws = TRUE, skip = 0, n_max = Inf, guess_max = min(1000, n_max), progress = readxl_progress(), .name_repair = &amp;quot;unique&amp;quot;) read.xlsx( xlsxFile, sheet = 1, startRow = 1, colNames = TRUE, rowNames = FALSE, detectDates = FALSE, skipEmptyRows = TRUE, skipEmptyCols = TRUE, rows = NULL, cols = NULL, check.</description>
+      <guid>https://taoziyu97.github.io/post/post-4/</guid>
+      <description>It’s no secret that the digital industry is booming. From exciting startups to global brands, companies are reaching out to digital agencies, responding to the new possibilities available. However, the industry is fast becoming overcrowded, heaving with agencies offering similar services — on the surface, at least. Producing creative, fresh projects is the key to standing out.</description>
     </item>
     
     <item>
-      <title>检测拷贝数变异的工具及算法【2】-ABSOLUTE</title>
-      <link>https://taoziyu97.github.io/blog/2021-12-19_cnv_tools2/</link>
-      <pubDate>Sun, 19 Dec 2021 00:00:00 +0000</pubDate>
+      <title>Cheerful Loving Couple Bakers Drinking Coffee</title>
+      <link>https://taoziyu97.github.io/post/post-5/</link>
+      <pubDate>Sat, 14 Mar 2020 15:40:24 +0600</pubDate>
       
-      <guid>https://taoziyu97.github.io/blog/2021-12-19_cnv_tools2/</guid>
-      <description>背景介绍 1. 获取绝对拷贝数数值的难点 （1）采样过程中癌细胞混合了未知比例的正常细胞——肿瘤纯度；
-（2）由于染色体数量和结构异常导致的癌细胞的实际DNA含量(倍性)是未知的；
-（3）由于正在进行的亚克隆进化，癌细胞群可能是异质性的。
-理论上，如果知道每个肿瘤细胞中DNA的含量，则可通过测得的相对拷贝数获得绝对拷贝数，或者通过单细胞测序技术解决。
-2. 芯片原始原始数据格式.CEL 对于芯片数据来说，Affymetrix SNP芯片的原始文件为CEL文件，一个CEL文件即是一个个体的全部SNP分型结果。Affymetrix基因芯片是一种生物芯片，它包含一个对一个实验有效的微阵列。为了制造这些芯片，玻璃或硅载玻片上排列有探针，根据它们是否与原始DNA样本互补，探针将表达水平(强度)报告为完全匹配(PM)和不匹配(MM)值。.CEL文件格式有多个版本，使用不同的格式。例如，版本3使用ASCII文本格式，而版本4使用二进制格式。 注意：.CEL 文件需要相应的.CDF 文件，它是存储在.CEL文件中的原始探测级数据的字典。MATLAB有一个名为affyread的内置函数，可以用来读取Windows版本软件中的.CEL 文件。
-3. SNP6.0拷贝数变异检测流程 这里介绍Affymetrix SNP6 Copy Number Inference Pipeline。
-输入：CEL文件
-输出：每个样本的片段化的拷贝数结果：genotype calls；相对的拷贝数数值且经过标准化处理，使得每个样本接近双倍体；拷贝数变异区域
-流程：
-  校准信号强度
-  计算基因型
-  将信号强度转换为拷贝数数值
-  计算拷贝数噪音
-  移除离群的探针减少噪音
-  通过减去一组预先定义的正常样本中的变化，进一步降低噪声
-  将拷贝数片段化
-  计算基因组中片段的数量，并与定义的阈值进行比较，以检查超分割情况
-  工具介绍 1. ABSOLUTE 可以评估癌细胞的纯度和倍性，计算出绝对的拷贝数和突变倍数。
-输入数据：
-可以是HAPSEG，也可以是segmentation文件，前者需要安装HAPSEG包，后者segmentation文件来自芯片CGH或大量平行测序实验的结果，可以包含其他信息，但必须包含的信息有：&amp;ldquo;Chromosome&amp;rdquo;,&amp;ldquo;Start&amp;rdquo;,&amp;ldquo;End&amp;rdquo;,&amp;ldquo;Num_Probes&amp;rdquo;,&amp;ldquo;Segment_Mean&amp;rdquo;，该模式下需要将copy_num_type参数设定为total。
-（1）HAPSEG输入：HAPSEG是一种解释癌症样本中双等位基因标记数据的概率方法。HAPSEG的工作原理是将基因组划分为不同拷贝数的片段，并在每个片段中建模四个不同的基因型。
-（2）segmentation文件：测序的结果。
-输出数据：
-步骤：
- 使用ABSOLUTE分析肿瘤DNA
- ABSOLUTE是如何进行分割片段的？
-2. ACEseq 3. Battenberg 4.</description>
+      <guid>https://taoziyu97.github.io/post/post-5/</guid>
+      <description>It’s no secret that the digital industry is booming. From exciting startups to global brands, companies are reaching out to digital agencies, responding to the new possibilities available. However, the industry is fast becoming overcrowded, heaving with agencies offering similar services — on the surface, at least. Producing creative, fresh projects is the key to standing out.</description>
     </item>
     
     <item>
-      <title>检测拷贝数变异的工具及算法【1】-PCAWG consensus copy number</title>
-      <link>https://taoziyu97.github.io/blog/2021-12-16_cnv_tools/</link>
-      <pubDate>Thu, 16 Dec 2021 00:00:00 +0000</pubDate>
+      <title>Cheerful Loving Couple Bakers Drinking Coffee</title>
+      <link>https://taoziyu97.github.io/post/post-6/</link>
+      <pubDate>Sat, 14 Mar 2020 15:40:24 +0600</pubDate>
       
-      <guid>https://taoziyu97.github.io/blog/2021-12-16_cnv_tools/</guid>
-      <description>引言 PCAWG提供的拷贝数变异文件是综合6种不同的拷贝数变异提取工具的结果：
-  ABSOLUTE
-  ACEseq
-  Battenberg
-  CloneHD
-  JaBbA
-  Sclust
-  由于拷贝数结果的不同取决于segmentation的不同，而对大部分基因组的拷贝数状态的分歧来自于是否发生了整个基因组复制的分歧。因此针对6种方法中的5种首先构建了完整的断点数据，针对一致的断点数据使用6种方法得到拷贝数变异结果，解决了倍性结果的不统一后，对6种方法得到的每个segment寻求major allele和minor allele的状态的一致性，最后对每个肿瘤综合6种方法得到纯度结果，对每种方法都给予置信区间和质量星号：克隆性通过（3星），多数投票同意，协议后四舍五入亚克隆拷贝数（2星），调用最好的方法（1星）。3星代表结果非常一致，1星则是结果不那么一致的情况下选一种方法的结果输出。这样来得到最终的完整的拷贝数图谱，包含以下所有列：
-major_cn minor_cn position sampleID star total_cn value 工具介绍 1. ABSOLUTE 使用ABSOLUTE算法计算每个样本的纯度、倍性以及绝对DNA拷贝数，在基因组上收集基于片段的覆盖度(来自完整的阅读模板跨度)在基因组上收集，并校正GC含量和匹配偏差。【？】使用PCAWG的正常样本来进行切线归一化(tangent-normalization)处理。基于杂合性位点计算位点特异的拷贝数，使用CBS算法来得到segmentation。采用Nelder-Mead算法搜索可能的纯度和倍性解的空间，并对它们进行排序。对亚克隆拷贝数片段进行Dirichlet过程聚类，以标注相同的亚克隆拷贝数聚类状态。
-2. ACEseq 使用ACEseq计算绝对拷贝数，肿瘤纯度，并估计肿瘤细胞内容，通过结合肿瘤和基因组窗中匹配的正常基因的覆盖率以及相应SNPs的b等位基因频率(BAF)来确定绝对拷贝数。基因组使用PSBCBS包得到segmentation，在分割之前，结构变异断点通过一致的结构变异数据判断，
-利用PSCBS包将基因组分割为平等覆盖和不平衡状态的区域，在分割之前，将共识结构变异集定义的结构变异断点合并成片段边界，片段提交到共识断点估计集，通过共识断点得到的片段使用覆盖度和BAF值注释来估计样本的肿瘤细胞内容和倍性。
-注：配对的双亲特定CBS(配对的PSCBS)算法利用了CBS方法用于将总CN数据分割为来自SNP阵列的2D非阶段数据。该算法依赖于配对测试(肿瘤)和参考(正常)样本杂交到单独的阵列。
-3. Battenberg 使用Battenberg得到绝对拷贝数。针对每个SNP计算BAF和相对logR值，使用GC含量矫正logR值，匹配的正常样本用来获得种系的杂合性SNP，使用分段常数拟合(PCF)对数据进行分段，将结构变异(sv)作为先前建立的中断点，通过对纯度和倍性组合进行网格搜索，拟合克隆拷贝数图谱。
-4. CloneHD 使用CloneHD得到绝对拷贝数。cloneHD使用了隐马尔可夫模型来描述样本的拷贝数状态。cloneHD流程的第一步使用的是filterHD算法，filterHD不寻求解释数据中的亚克隆结构，是一种用于模糊分割的通用算法，是一个通用的一维离散数据概率滤波算法，类似于卡尔曼滤波。它是一个具有泊松或二项发射和跳跃扩散传播子的连续状态空间隐马尔可夫模型。它可以用于无标度平滑、模糊数据分割和数据滤波。
-5. JaBbA JaBbA整合paire-end和read depth信号来推断基因组间隔的拷贝数以及重构junction。在PCAWG共识拷贝数分析中，使用了两轮JaBbA，JbBbA的输入数据是bam文件，junction call set，以及初步分割（可选）和纯度/倍性输入，针对初步分割的结果，进一步使用CBS算法来分割得到低维度的常数拷贝数区域。
-6. Sclust 使用Sclust进行拷贝数分割，计算肿瘤纯度，肿瘤倍性以及位点特异的拷贝数（包含克隆性的和非克隆性的）。输入数据是肿瘤样本和匹配的正常样本的read counts。read counts后续用来计算肿瘤和正常样本的GC含量，接下来Sclust使用SNP数据，计算正常样本的杂合性位点的B位点频率，随后基于read ratio在数据中找到明显的跳跃来进行初次分割。
-共识拷贝数获取步骤 6种拷贝数检测的方法都使用了两步步骤：
-  第一步是把基因组分割为具有恒定拷贝状态的区域
-  第一步是确定每个片段的克隆和亚克隆拷贝数状态
-  6种方法产生的分歧结果主要是以下两个元素：</description>
+      <guid>https://taoziyu97.github.io/post/post-6/</guid>
+      <description>It’s no secret that the digital industry is booming. From exciting startups to global brands, companies are reaching out to digital agencies, responding to the new possibilities available. However, the industry is fast becoming overcrowded, heaving with agencies offering similar services — on the surface, at least. Producing creative, fresh projects is the key to standing out.</description>
     </item>
     
     <item>
-      <title>使用posterdown制作学术海报</title>
-      <link>https://taoziyu97.github.io/blog/2021-12-15_posterdown/</link>
-      <pubDate>Wed, 15 Dec 2021 00:00:00 +0000</pubDate>
+      <title>Cotton T-Shirt</title>
+      <link>https://taoziyu97.github.io/shop/product-6/</link>
+      <pubDate>Sat, 14 Mar 2020 15:40:24 +0600</pubDate>
       
-      <guid>https://taoziyu97.github.io/blog/2021-12-15_posterdown/</guid>
-      <description>引言 posterdown自动排版，通过调节参数满足个人制作海报的需要。
-1. 介绍 目前posterdown支持3种风格的海报模板：posterdown_html、posterdown_betterland和posterdown_betterport。以posterdown_betterport为例进行阐述。
- 目前支持的三种模板风格
- 2. 创建海报 2.1 创建模板 直接通过新建R Markdown文件，选择posterdown模板则自动导入模板代码，如下：
- 创建模板
- 2.2 添加内容 按照R Markdown语法进行代码块、图片、文字等等的添加，通过点击knit进行渲染，查看在模板基础上更改的内容。点击knit后自动生成包含html在内的如下文件：
-. ├── A\ Better\ Reproducible\ Poster\ Title.pdf ├── packages.bib ├── poster.Rmd ├── poster.html └── poster_files ├── figure-html │ ├── irisfigure-1.png │ └── myprettycode-1.png ├── header-attrs-2.11 │ └── header-attrs.js └── paged-0.15 4 directories, 7 files  图片  可以在该目录下再建立一个Figures文件夹存放Rmd中使用到的图片。
- html文件  默认生成的html文件名前缀和Rmd文件一致，可以通过在Rmd文档开头添加代码自定义生成的html文件名，这里为index.html：
-knit: (function(inputFile, encoding) { rmarkdown::render(inputFile, encoding = encoding, output_file = file.</description>
+      <guid>https://taoziyu97.github.io/shop/product-6/</guid>
+      <description>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</description>
     </item>
     
     <item>
-      <title>计算机组成</title>
-      <link>https://taoziyu97.github.io/blog/2021-12-06_consist_of_computer/</link>
-      <pubDate>Mon, 06 Dec 2021 00:00:00 +0000</pubDate>
+      <title>Linen Bag</title>
+      <link>https://taoziyu97.github.io/shop/product-1/</link>
+      <pubDate>Sat, 14 Mar 2020 15:40:24 +0600</pubDate>
       
-      <guid>https://taoziyu97.github.io/blog/2021-12-06_consist_of_computer/</guid>
-      <description>引言 1. 计算机组成 计算机的组成部件可以分为三大类：中央处理单元（CPU）、主存储器和输入/输出子系统。
-中央处理单元 用于数据的运算。在大多数体系结构中，它有3个组成部分：算术逻辑单元（ALU）、控制单元、寄存器组、快速存储定位。
-  算术逻辑单元
-对数据进行逻辑、移位和算术运算。
-  寄存器
-用来存放临时数据的高速独立的存储单元。
-  控制单元
-控制各个子系统的操作。控制是通过从控制单元到其他子系统的信号来进行。
-  主存储器 是存储单元的集合，每一个存储单元都有唯一的标识，称为地址。</description>
+      <guid>https://taoziyu97.github.io/shop/product-1/</guid>
+      <description>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</description>
     </item>
     
     <item>
-      <title>潜在语义分析（LSA）</title>
-      <link>https://taoziyu97.github.io/blog/2021-11-26_statistic-lsa/</link>
-      <pubDate>Fri, 26 Nov 2021 00:00:00 +0000</pubDate>
+      <title>Pink T-Shirt</title>
+      <link>https://taoziyu97.github.io/shop/product-4/</link>
+      <pubDate>Sat, 14 Mar 2020 15:40:24 +0600</pubDate>
       
-      <guid>https://taoziyu97.github.io/blog/2021-11-26_statistic-lsa/</guid>
-      <description>引言 潜在语义分析（Latent sematic analysis, LSA）是一种无监督的学习方法。特点是通过矩阵分解来完成，使用的是非概率的话题分析模型，可以通过奇异值分解的方法进行矩阵因子分解，特点是分解的矩阵正交，非负矩阵分解是另一种矩阵的因子分解方法，特点是分解的矩阵非负。
-1. 单词向量空间和话题向量空间 1.1 单词向量空间 给定一个含有$n$个文本的集合$D=\left { d_1,d_2,&amp;hellip;,d_n \right }$，在所有文本中出现的$m$个单词的集合$W=\left { w_1,w_2,&amp;hellip;,w_m \right }$，将单词在文本中出现的数据用一个单词-文本矩阵表示，记作$X$: $$ \begin{bmatrix} x_{11} &amp;amp;x_{12} &amp;amp;&amp;hellip; &amp;amp;x_{1n} \ x_{21} &amp;amp;x_{22} &amp;amp;&amp;hellip; &amp;amp;x_{2n} \ \vdots &amp;amp;\vdots &amp;amp; &amp;amp;\vdots \ x_{m1} &amp;amp;x_{m2} &amp;amp;&amp;hellip; &amp;amp;x_{mn} \end{bmatrix} $$
-元素$x_{ij}$表示单词$w_i$在文本$d_j$中出现的频数或权值，由于单词的种类很多，每个文本出现单词的种类通常较少，所以单词-文本矩阵是一个稀疏矩阵。
-权值通常用单词频率-逆文本频率（TF-IDF）表示，定义是： $$ TFIDF_{ij}=\frac{tf_{ij}}{tf_{·j}}log\frac{df}{df_i} \space i=1,2,&amp;hellip;,m; \space j=1,2,&amp;hellip;,n $$ $\frac{tf_{ij}}{tf_{·j}}$表示单词$w_i$出现在文本$d_j$中的频数比上文本$d_j$中出现的所有单词的频数之和，一个单词在一个文本中出现的频数越高，这个单词在文本中的重要度就越高；$\frac{df}{df_i}$表示全部文本数比上含有单词$w_i$的文本数，一个单词在整个文本集合中出现的文本数越少，这个单词就越能代表其所在文本的特点，重要度就越高。TF-IDF是两种重要度的积，表示综合重要度。
-单词向量空间模型直接使用单词-文本矩阵的信息，第$j$列向量$x_j$表示文本$d_j$： $$ x_j=\begin{bmatrix} x_{1j}\ x_{2j}\ \vdots\ x_{mj} \end{bmatrix} $$ 其中$x_{ij}$是单词$w_i$在文本$d_j$的权值，两个单词向量的内积货标准化内积（余弦）表示对应的文本之间的语义相似度，因此文本$d_i$ 与$d_j$ 之间的相似度为: $$ x_i·x_j，\frac{x_{i}·x_{j}}{\left | x_{i}\right |\left | x_{j}\right |} $$ $\cdot $表示向量的内积，$\left | \cdot\right |$表示向量的范数，向量的1-范数即向量元素绝对值之和。两个文本中共同出现的单词越多，其语义就越接近，这个是文本信息处理的一个基本原理。</description>
+      <guid>https://taoziyu97.github.io/shop/product-4/</guid>
+      <description>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</description>
     </item>
     
     <item>
-      <title>隐马尔可夫模型（HMM）</title>
-      <link>https://taoziyu97.github.io/blog/2021-11-19_hmm/</link>
-      <pubDate>Fri, 19 Nov 2021 00:00:00 +0000</pubDate>
+      <title>Side Bag</title>
+      <link>https://taoziyu97.github.io/shop/product-2/</link>
+      <pubDate>Sat, 14 Mar 2020 15:40:24 +0600</pubDate>
       
-      <guid>https://taoziyu97.github.io/blog/2021-11-19_hmm/</guid>
-      <description>引言 1. 马尔可夫模型的基本概念 来对2段氨基酸序列x和y进行残基比对，认为存在3种比对关系的状态：
- M：残基能够比对上但不一定相等 X：序列x的残基比对到1个空位，或x上发生了1次插入 Y：序列y的残基比对到1个空位，或y上发生了1次插入  序列比对就是在上述3个状态中不断转换的过程：
- $M(i,j)$ : $x_i$比对到$y_j$时，序列x从1到$i$和序列$y$从1到$j$最好的比对分数 $X(i,j)$ : $x_i$比对到空位时，序列x从1到$i$最好的比对分数 $Y(i,j)$ : $y_j$比对到空位时，序列y从1到$j$最好的比对分数  转移（从一个状态到另外一个状态）概率：
-$$ a_{kl} = P (X_t=S_l|X_{t-1}=S_k) $$
-$$ a_{lk} = P (X_t=S_k|X_{t-1}=S_l) $$
-转移矩阵：
- 
- 设定：
- $\delta$ ：Gap open（d）的概率 $\epsilon$ ：Gap extension（e）的概率   马尔可夫链
- 先根据转移概率得到一个转移概率矩阵：
- 转移矩阵
- 假设匹配状态是XMMY：
- 匹配状态
- 计算匹配状态的概率： $$ P(XMMY)=\alpha_{XM}\alpha_{MM}\alpha_{MY} = (1-\epsilon)(1-2\delta)\delta $$
-通过上面的例子，下面介绍马尔可夫模型的一些概念：
-  马尔可夫过程：
-马尔可夫过程是一类随机过程，该过程的“将来”仅依赖“现在”，而不依赖“过去”，把一个总随机过程看作是状态的不断转移，表达式为： $$ x(t+1)=f(x(t)) $$</description>
+      <guid>https://taoziyu97.github.io/shop/product-2/</guid>
+      <description>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</description>
     </item>
     
     <item>
-      <title>R：批量读入文件并合并</title>
-      <link>https://taoziyu97.github.io/blog/2021-11-17_docall/</link>
-      <pubDate>Wed, 17 Nov 2021 00:00:00 +0000</pubDate>
+      <title>Travel Carrier</title>
+      <link>https://taoziyu97.github.io/shop/product-8/</link>
+      <pubDate>Sat, 14 Mar 2020 15:40:24 +0600</pubDate>
       
-      <guid>https://taoziyu97.github.io/blog/2021-11-17_docall/</guid>
-      <description>引言 使用do.call批量读入文件并合并。
-1. 基本处理步骤 source_dir &amp;lt;- &amp;#34;文件所在路径&amp;#34; file &amp;lt;- list.files( path = source_dir, pattern = &amp;#34;*.txt&amp;#34;, # 目标文件夹下需要的文件的格式 all.files = F, full.names = F, recursive = F, include.dirs = F ) allfile &amp;lt;- lapply(file, function(x){read.csv2(paste0(source_dir, x), sep = &amp;#34;\t&amp;#34;)}) combine &amp;lt;- do.call(rbind, allfile) 2. 涉及到的需求和参数设定   文件名作为新列补充进数据框
-  对文件名进行更改
-  参考    </description>
+      <guid>https://taoziyu97.github.io/shop/product-8/</guid>
+      <description>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</description>
     </item>
     
     <item>
-      <title>synapser</title>
-      <link>https://taoziyu97.github.io/blog/2021-8-31_synapser/</link>
-      <pubDate>Sat, 24 Jul 2021 00:00:00 +0000</pubDate>
+      <title>看看中文如何</title>
+      <link>https://taoziyu97.github.io/post/post-1/</link>
+      <pubDate>Sat, 14 Mar 2020 15:40:24 +0600</pubDate>
       
-      <guid>https://taoziyu97.github.io/blog/2021-8-31_synapser/</guid>
-      <description>引言 一个提供批量下载Synapser数据的R包。
-1. 登陆 synLogin(&amp;#34;baomihai@sina.com&amp;#34;,&amp;#34;******&amp;#34;) Welcome, baomihai@sina.com!NULL 参考  biostars-How to install gdc-client in Ubnutu  </description>
+      <guid>https://taoziyu97.github.io/post/post-1/</guid>
+      <description>It’s no secret that the digital industry is booming. From exciting startups to global brands, companies are reaching out to digital agencies, responding to the new possibilities available. However, the industry is fast becoming overcrowded, heaving with agencies offering similar services — on the surface, at least. Producing creative, fresh projects is the key to standing out.</description>
     </item>
     
     <item>
-      <title>处理字符串的两个R包:stringi和stringr</title>
-      <link>https://taoziyu97.github.io/blog/2021-7-24_stringr_stringi/</link>
-      <pubDate>Sat, 24 Jul 2021 00:00:00 +0000</pubDate>
+      <title>Travel Bag</title>
+      <link>https://taoziyu97.github.io/shop/product-5/</link>
+      <pubDate>Fri, 14 Feb 2020 15:40:24 +0600</pubDate>
       
-      <guid>https://taoziyu97.github.io/blog/2021-7-24_stringr_stringi/</guid>
-      <description>引言 stringr包是建立在stringi上的，stringi包使用ICU C库提供准确、快速的常见字符串操作，stringr提供了最重要和最常用的字符串处理函数。
-stringr stringr包中所有的函数都以str_开头，第一个参数为字符串向量。对应的在base函数中也有功能一致的函数，记得对比两者之间的异同。
-1. 找到自己需要的数据 tcga_mut &amp;lt;- read.csv2(&amp;#34;/home/tzy/projects/CNX-method/data/TCGA/mc3.v0.2.8.PUBLIC.nonsilentGene.xena&amp;#34;,sep = &amp;#34;\t&amp;#34;) saveRDS(tcga_mut, file = &amp;#34;/home/tzy/projects/CNX-method/data/TCGA/tcga_mut.rds&amp;#34;) save(tcga_mut, file = &amp;#34;/home/tzy/projects/CNX-method/data/TCGA/tcga_mut.RData&amp;#34;) 参考  biostars-How to install gdc-client in Ubnutu  </description>
+      <guid>https://taoziyu97.github.io/shop/product-5/</guid>
+      <description>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</description>
     </item>
     
     <item>
-      <title>gdc-client</title>
-      <link>https://taoziyu97.github.io/blog/2021-7-20_gdc_client/</link>
-      <pubDate>Tue, 20 Jul 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://taoziyu97.github.io/blog/2021-7-20_gdc_client/</guid>
-      <description>引言 之前一直用别的方法下载数据，这次使用了gdc-client命令行去下载GDC上TCGA driver gene mutation的一批数据。
-步骤 1. 找到自己需要的数据 这是我本次要下载的数据
-点击数据下载地址发现出现如下界面，其中id就是使用gdc-client下载的文件对应的id
-对于Open access data，使用这两种方法下载
-下载了MAC的Client版本
-2. 安装 解压下载的文件，如果双击会发现出现erro：
-且常规的对~/.bash_profile文件添加环境变量也不可以，正确做法是：
-./gdc-client #(to verify that program works) cp -pi ./gdc-client /usr/local/bin #(if this does not work) sudo cp -pi ./gdc-client /usr/local/bin 在任何路径都可以打开。
-3. 使用  下载单个文件  gdc-client download id  下载多个文件  将含有多个文件的id和名字等信息的页面存储为txt，download加上-m，进行批量下载。
-gdc-client download -m ./PanCan-Driver_Open_GDC-Manifest.txt 参考  biostars-How to install gdc-client in Ubnutu  </description>
-    </item>
-    
-    <item>
-      <title>R储存数据</title>
-      <link>https://taoziyu97.github.io/blog/2021-7-20_rdata/</link>
-      <pubDate>Tue, 20 Jul 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://taoziyu97.github.io/blog/2021-7-20_rdata/</guid>
-      <description>引言 rds比RData省空间，为什么？
-步骤 1. 找到自己需要的数据 tcga_mut &amp;lt;- read.csv2(&amp;#34;/home/tzy/projects/CNX-method/data/TCGA/mc3.v0.2.8.PUBLIC.nonsilentGene.xena&amp;#34;,sep = &amp;#34;\t&amp;#34;) saveRDS(tcga_mut, file = &amp;#34;/home/tzy/projects/CNX-method/data/TCGA/tcga_mut.rds&amp;#34;) save(tcga_mut, file = &amp;#34;/home/tzy/projects/CNX-method/data/TCGA/tcga_mut.RData&amp;#34;) 参考  biostars-How to install gdc-client in Ubnutu  </description>
-    </item>
-    
-    <item>
-      <title>orthogonal sequencing techology</title>
-      <link>https://taoziyu97.github.io/blog/2021-7-15_orthogonal_sequencing_tech/</link>
-      <pubDate>Thu, 15 Jul 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://taoziyu97.github.io/blog/2021-7-15_orthogonal_sequencing_tech/</guid>
-      <description>引言 看文献的时候看到这个词&amp;quot;orthogonal sequencing techology&amp;quot;，好奇这是什么技术，去了解了一下。以及为什么通过这个技术得到的重测序数据能够用来验证signature的存在？
-步骤 1. 更改 config.html 文件 2. 更改 main.scss 文件 参考  图片来源  </description>
-    </item>
-    
-    <item>
-      <title>hugo主题增加valine评论功能_test</title>
-      <link>https://taoziyu97.github.io/blog/2021-6-8_comment/</link>
-      <pubDate>Tue, 08 Jun 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://taoziyu97.github.io/blog/2021-6-8_comment/</guid>
-      <description>步骤 1. 配置Leancloud 这部分详细参考：hugo博客添加评论系统Valine
-2. 更改 comments.html 文件 将整体内容替换成如下代码：
-&amp;lt;!-- valine change from origin code--&amp;gt; {{- if .Site.Params.valine.enable -}} &amp;lt;!-- id 将作为查询条件 --&amp;gt; &amp;lt;div id=&amp;#34;vcomments&amp;#34;&amp;gt;&amp;lt;/div&amp;gt; &amp;lt;script src=&amp;#34;//cdn1.lncld.net/static/js/3.0.4/av-min.js&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;script src=&amp;#39;//unpkg.com/valine/dist/Valine.min.js&amp;#39;&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;script type=&amp;#34;text/javascript&amp;#34;&amp;gt; new Valine({ el: &amp;#39;#vcomments&amp;#39; , appId: &amp;#39;{{ .Site.Params.valine.appId }}&amp;#39;, appKey: &amp;#39;{{ .Site.Params.valine.appKey }}&amp;#39;, notify: &amp;#39;{{ .Site.Params.valine.notify }}&amp;#39;, verify: &amp;#39;{{ .Site.Params.valine.verify }}&amp;#39;, avatar:&amp;#39;{{ .Site.Params.valine.avatar }}&amp;#39;, placeholder: &amp;#39;{{ .Site.Params.valine.placeholder }}&amp;#39;, visitor: &amp;#39;{{ .Site.Params.valine.visitor }}&amp;#39; }); &amp;lt;/script&amp;gt; {{- end -}} 3. 引入评论 layouts/_default/single.</description>
-    </item>
-    
-    <item>
-      <title>hugo增加TOC</title>
-      <link>https://taoziyu97.github.io/blog/2021-6-8_toc/</link>
-      <pubDate>Tue, 08 Jun 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://taoziyu97.github.io/blog/2021-6-8_toc/</guid>
-      <description>引言 根据hugo-future-imperfect-slim主题中issue提到的TOC更改版本，改进后进行配置应用。
-步骤 1. 更改 config.html 文件 在[params] 内容下加入以下参数：
-toc = true # 默认显示toc tocWords = 400 #超过400字显示toc 2. 更改 main.scss 文件 添加TableOfContents：
-#TableOfContents { border: $secondary-border; ul { list-style-type: none; padding-inline-start: 1.5em; } } /* ========================================================================== Add-Ons ========================================================================== */ /* reCaptcha */ 3. 更改 single.html 文件 在content内容中添加{{ .TableOfContents }}
-&amp;lt;div class=&amp;#34;content&amp;#34;&amp;gt; {{ .Render &amp;#34;featured&amp;#34; }} {{ .TableOfContents }} #此处添加一行 {{ .Content }} &amp;lt;/div&amp;gt; 参考   图片来源
-  hugo官方文档</description>
-    </item>
-    
-    <item>
-      <title>博客优化计划</title>
-      <link>https://taoziyu97.github.io/blog/2021-6-8_optimization_of_the_blog/</link>
-      <pubDate>Tue, 08 Jun 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://taoziyu97.github.io/blog/2021-6-8_optimization_of_the_blog/</guid>
-      <description>引言 分为功能改进、美观改进。
-1. 博客功能改进   个人博客归档（已完成）
-  date的时间更换成自动化填充，每次手动填写很麻烦
-  搜索中文优化，目前速度较慢
-  更改归档页面时间0001
-  每篇博文的分享页面超链接到对应网址
-      删除不需要的语言支持，只保留英文和中文
-  增加评论功能Valine（已完成）
-  参考：https://www.smslit.top/2018/07/08/hugo-valine/
-    分类更加细化，最好能有层层分类
-  ABOUT页面填充自己的个人信息
-  翻页添加页码
-  博文添加目录（已完成）
-  2. 博客整体美观   每个博文的图片选取大小合适的
-  标题的英文或中文的字距过大，比如下图的 引言 和 博客功能改进
-    </description>
-    </item>
-    
-    <item>
-      <title>hugo博客配置归档页面</title>
-      <link>https://taoziyu97.github.io/blog/2021-6-7_%E9%85%8D%E7%BD%AE%E5%BD%92%E6%A1%A3/</link>
-      <pubDate>Mon, 07 Jun 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://taoziyu97.github.io/blog/2021-6-7_%E9%85%8D%E7%BD%AE%E5%BD%92%E6%A1%A3/</guid>
-      <description>引言 hugo没有自带的归档设置，需要手动添加。
-操作步骤   在taozy_blog/layouts/_default/目录下创建 archives.html 文件
-  将taozy_blog/layouts/_default/目录下的 single.html 内容复制进 archives.html 文件（single.html的格式就是每篇博文的格式，也可以采用主题的contact.html的格式或者about.html的格式）
-  找到archives.html 文件中的{{ .Content }} 替换为下面的内容:
-  {{ range (.Site.RegularPages.GroupByDate &amp;#34;2006&amp;#34;) }} &amp;lt;h3&amp;gt;{{ .Key }}&amp;lt;/h3&amp;gt; &amp;lt;ul class=&amp;#34;archive-list&amp;#34;&amp;gt; {{ range (where .Pages &amp;#34;Type&amp;#34; &amp;#34;blog&amp;#34;) }} &amp;lt;li&amp;gt; {{ .PublishDate.Format &amp;#34;2006-01-02&amp;#34; }} -&amp;gt; &amp;lt;a href=&amp;#34;{{ .RelPermalink }}&amp;#34;&amp;gt;{{ .Title }}&amp;lt;/a&amp;gt; &amp;lt;/li&amp;gt; {{ end }} &amp;lt;/ul&amp;gt; {{ end }} 对上述代码进行解读:
- 归档目录  Pages &amp;ldquo;Type&amp;rdquo; &amp;ldquo;blog&amp;quot;即归档目录设置为content/blog/下的内容，如果去掉blog，引号内留空，就会自动归档根目录下的文件，也就是content目录的文件。
- 可选归档时间  .</description>
-    </item>
-    
-    <item>
-      <title>ERROR: Could not find a version that satisfies the requirement torch==1.5.1 </title>
-      <link>https://taoziyu97.github.io/blog/2021-6-4_torch1.5.1_error/</link>
-      <pubDate>Fri, 04 Jun 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://taoziyu97.github.io/blog/2021-6-4_torch1.5.1_error/</guid>
-      <description>引言 为了在集群上跑1000个模拟样本的SigprofilerExtractor工具，在集群上自己新建的环境里安装，解决安装bug，并成功使用。
-解决bug思路   发现依赖torch1.5.1版本
-  通过pip install安装失败
-  使用whl安装发现没有对应python3.9的版本
-  根据版本推测1.5.1不能在python3.9安装
-  重建新环境，安装python3.8，进而安装1.5.1
-  成功
-  具体实施 使用sigprofilerextractor发现报错如下：
-ERROR: Could not find a version that satisfies the requirement torch==1.5.1 (from sigprofilerextractor) (from versions: 0.1.2, 0.1.2.post1, 0.1.2.post2, 1.7.1, 1.8.0, 1.8.1) ERROR: No matching distribution found for torch==1.5.1 需要安装torch1.5.1版本，直接conda安装和pip安装都失败了 另外提示中表明可以通过source使用whl安装，网址如下：
-Cannot install torch just with pip, try again with source from https://download.pytorch.org/whl/torch_stable.html Looking in links: https://download.</description>
-    </item>
-    
-    <item>
-      <title>Excel数字长度超13位尾号变0</title>
-      <link>https://taoziyu97.github.io/blog/2021-5-27_excel_number/</link>
-      <pubDate>Thu, 27 May 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://taoziyu97.github.io/blog/2021-5-27_excel_number/</guid>
-      <description>引言 小雨毕业填各种表格，发现数字很长的时候会直接用0替代超长位数的数字，检索之后，给她解决了这个小问题。
-操作方法 设置数字格式，在自定义中输入@
- 重新输入可以发现已经可以了
-  参考资料：  Excel数字长度超13位尾号变0或E+，教你这招只用一个0就能搞定  </description>
-    </item>
-    
-    <item>
-      <title>线程和进程</title>
-      <link>https://taoziyu97.github.io/blog/2021-5-24_threads_and_processes/</link>
-      <pubDate>Mon, 24 May 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://taoziyu97.github.io/blog/2021-5-24_threads_and_processes/</guid>
-      <description>引言 看了一下廖雪峰的官方网站中对多线程和多进程的讲解，写的真是又简洁又明了，结合今天workshop中zk提到的并行计算，简单汇总写个学习笔记。
-操作系统可以同时执行多任务，比如同时运行浏览器、QQ和word，CPU执行代码是按照顺序一条条的执行。
-操作系统执行多任务是让CPU对多个任务轮流进行交替执行，比如让浏览器执行0.1秒，让word执行0.1秒。
-不管是单核还是多核的CPU，都可以同时运行多个任务，单核CPU执行任务交替进行，多核CPU在任务数量多于CPU的核数时，也是交替执行任务。
-一、进程 计算机中一个任务为一个进程，浏览器是一个进程，word也是一个进程。部分进程内部需要同时执行多个子任务，比如使用word一边打字一边检查拼写，一边后台打印，子任务就是线程。
-操作系统调度的最小任务单位是线程。由于一个应用程序可以有，多个进程，也可以有多个线程，实现任务的方法包括：
-多进程模式（每个进程只有一个线程）：
-  多线程模式（一个进程有多个线程）：
-  多进程＋多线程模式（复杂度最高）：
-  二、线程 线程包含在进程内，多任务既可以多进程来实现，也可以单进程内的多线程实现，也可以混合多进程和多线程。
-和多线程相比，多进程的缺点在于：
- 创建进程比创建线程开销大，尤其是在Windows系统上； 进程间通信比线程间通信要慢，因为线程间通信就是读写同一个变量，速度很快。  多进程的优点在于：
-多进程稳定性比多线程高，因为在多进程的情况下，一个进程崩溃不会影响其他进程，而在多线程的情况下，任何一个线程崩溃会直接导致整个进程崩溃。
-多线程编程的特点在于：
- 经常需要读写共享数据，并且需要同步，比如播放电影时一个线程播视频，一个线程播音频，两个线程需要协调运行保持音画同步，因此多线程编程的复杂度高，调试更困难。  三、串行，并发与并行   串行 多个任务，执行时一个执行完再执行另一个。
-  并发 多个线程在单个核心运行，同一时间一个线程运行，系统不停切换线程，看起来像同时运行，实际上是线程不停切换。
-  并行 每个线程分配给独立的核心，线程同时运行。
-  四、CPU与核心  物理核  物理核数量=cpu数(机子上装的cpu的数量)*每个cpu的核心数
- 虚拟核  所谓的4核8线程，4核指的是物理核心。通过超线程技术，用一个物理核模拟两个虚拟核，每个核两个线程，总数为8线程。在操作系统看来是8个核，但是实际上是4个物理核。 通过超线程技术可以实现单个物理核实现线程级别的并行计算，但是比不上性能两个物理核。
- 单核cpu和多核cpu  都是一个cpu，不同的是每个cpu上的核心数，多核cpu是多个单核cpu的替代方案，多核cpu减小了体积，同时也减少了功耗，一个核心只能同时执行一个线程。
-参考资料：   廖雪峰的官方网站-多线程
-  认识cpu、核与线程
-  </description>
-    </item>
-    
-    <item>
-      <title>逻辑回归</title>
-      <link>https://taoziyu97.github.io/blog/2021-4-11_%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92/</link>
-      <pubDate>Mon, 12 Apr 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://taoziyu97.github.io/blog/2021-4-11_%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92/</guid>
-      <description>引言  线性回归  假设数据包含 尺寸 和 重量 两组，根据这两组数据用 最小二乘法 拟合一条线后，我们可以做如下的事情：
-  计算r平方来确定两个变量是否相关
-  计算p值确定R平方是否具有统计显著性
-  用于预测，如果一个新鼠标有某重量，可以根据这个线来预测其大小
-  多元回归  假设用 体重 和 血容量 来预测大小，拟合曲线可做上述三个同样的事情，还可以用离散型数值来预测大小。
-比较模型  进行正态回归，使用权重来预测大小。
-逻辑回归 S型函数定义：
-  S 型函数会产生以下曲线图：
- y&#39; 是逻辑回归模型针对特定样本的输出。 z 是 b + w1x1 + w2x2 + … wNxN w 的值是该模型学习的权重，b 是偏差。 x 的值是特定样本的特征值。  线性回归的损失函数是平方损失。逻辑回归的损失函数是对数损失函数。
-  逻辑回归预测事物是对还是错，而不是连续的事物，通常用于分类，根据该目的拟合了“S”形曲线，可以给出概率。
-假设这里用体重来预测肥胖，或者基因型和体重来预测肥胖，即不仅可以处理体重和年龄等连续数值，还可以处理离散数值，可以测试每个变量是否对预测肥胖有用。
- 最大似然法拟合曲线  本质就是不停的计算，选择具有最大似然的曲线。
-最大似然 最大似然的目标是找到使分布适合数据的最佳方法。不同类型的数据存在不同类型的分布，让分布适合数据可以让数据的使用更轻松，更通用，使它适用于相同类型的每个实验，假设称重了一批老鼠如下：
-在这种情况下，认为老鼠体重可能呈正态分布，正态分布意味着：
-  老鼠的重量 接近均值 或平均值。</description>
-    </item>
-    
-    <item>
-      <title>p值</title>
-      <link>https://taoziyu97.github.io/blog/2021-4-07_p%E5%80%BC/</link>
-      <pubDate>Sat, 10 Apr 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://taoziyu97.github.io/blog/2021-4-07_p%E5%80%BC/</guid>
-      <description>介绍  p值的含义    假设存在药物A和药物B，想知道两种药物的区别？
-维基百科定义：p值是假设检验中假设零假设为真时观测到至少与实际观测样本相同极端的样本的概率（似乎很拗口）。
-p值是介于0-1之间的数字，量化我们相信两种药物不同的信心，p值越接近0，越相信两者不同。当p的阈值为0.05意味着，假设两种药物之间没有差异，执行多次且相同的实验，那么只有5%的实验会得出错误决定，简单来说，p值是对意外的测量。
-p值能够帮助确定两种药物是否不同，但是不能告诉我们有什么不同，不管差异是都大还是小，都可以使用较小的p值，即较小的p值不代表差异是大还是小，只是代表意外的结果概率更小 。
- 阈值0.05的由来  不出于逻辑或统计原因，只是科学惯例。
- 术语：假阳性  指的是没有差异时却获得小的p值的情况。
- 术语：假设检验（Hypothesis testing）  试图确定这些药物是否相同的想法。
- 术语：零假设（Null Hypothesis）  零假设是药物相同，p值帮助我们决定是否拒绝零假设。
-统计显著性检验分支 分为以下两个主要的：
-  R.A.Fisher
-  Neyman and Pearson
-  控制假设检验的两类错误很重要：
- 第一类错误  无效说成有效（取伪）。
-第二类错误。  有效判成无效（弃真）。
-这两种错误不能同时消除，但是可以给出一种规范的决策过程来确保第一类错误的可能性只在预先确定的比率下发生（奈曼和皮尔逊），这个比率为显著性水平α（false positive rate），可以根据经验和期望基础设置合适的α，举例：
-建立10%的第一类错误率，设置α = 0.1，当希望决策更加保守，可以将α设置成0.01或更小。确定α后，可以考察哪个 检验过程 的第二类错误的比率更低。
-该体系下，定义一个原假设，即“无效”的假设，再定义一个备择假设，“效应大于0”，构建一个检验去比较这两个假设，假设使用p值，如果p&amp;lt;α，拒绝原假设（费希尔的检验过程把注意力放在揭示任何一个特定的试验证据的强度），p值的大小只用来是否“拒绝原假设”。
-误区 误区1：一次试验的第一类错误率为3.2%
-注意，仅仅通过一次试验不能得到第一类错误率，这是由检验过程决定的，不是一次试验的结果得到的，一个检验过程得到的是一个长期的第一类错误率，不能对应到每一次试验得到的真实p值和对应的第一类错误率。
-误区2：p值越小，差异越大
-p值仅仅反应我们相信我们存在差异的信心，p值越小，越有信心拒绝零假设，不管差异是大还是小。
-误区3：P值就是假阳性率
-拒绝原假设犯错属于一类错误，错误的概率就是我们的α，p值只是我们根据一次抽样结果计算出来的值。P &amp;lt; α）表达的是在一次抽样中出现当前结果及更极端结果的可能性比我们认为的在一次抽样中不可能发生的小概率事件的概率更小。
-置信区间 一个置信区间包含一个点估计，和该估计的不确定性。举例：
-如果想检验这个效应量是否显著区别于0，可以构建一个95%的置信区间来检验这个区间是否包含0。</description>
-    </item>
-    
-    <item>
-      <title>使用CIBERSORTx网页版分析免疫浸润</title>
-      <link>https://taoziyu97.github.io/blog/2021-4-06-cibersort/</link>
-      <pubDate>Tue, 06 Apr 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://taoziyu97.github.io/blog/2021-4-06-cibersort/</guid>
-      <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
-&lt;p&gt;最近需要对TCGA和PCAWG的表达数据进行免疫浸润水平分析，使用了R包immunedeconv,其中TCGA已经有文献的supplement给出了不同免疫浸润工具进行分析的结果，PCAWG需要自己手动分析，其中CIBERSORT在immunedeconv包中运行需要两个文件：&lt;code&gt;LM22.txt&lt;/code&gt;，&lt;code&gt;CIBERSORT.R&lt;/code&gt;，需要在官网：https://cibersortx.stanford.edu/ 进行申请。&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>使用Latex写论文</title>
-      <link>https://taoziyu97.github.io/blog/2021-3-05-latex_blog/</link>
-      <pubDate>Fri, 05 Mar 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://taoziyu97.github.io/blog/2021-3-05-latex_blog/</guid>
-      <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
-&lt;p&gt;最近写文章的时候，发现修改时调整参考文献的引用，是一件非常麻烦的事情，于是找到了一种简便的方法进行调整，发现了用Latex写论文原来这么好用（据涛哥和翔哥说，word也可以自动调整引用文献顺序，而我一直不知道&amp;hellip;）。&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>About</title>
-      <link>https://taoziyu97.github.io/about/</link>
-      <pubDate>Sun, 28 Feb 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://taoziyu97.github.io/about/</guid>
-      <description>test page</description>
-    </item>
-    
-    <item>
-      <title>Hugo&#43;Github&#43;阿里云域名搭建个人博客（附Netlify部署方法）</title>
-      <link>https://taoziyu97.github.io/blog/2021-1-11-build_blog/</link>
-      <pubDate>Mon, 11 Jan 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://taoziyu97.github.io/blog/2021-1-11-build_blog/</guid>
-      <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
-&lt;p&gt;最近师兄和涛哥都分享了这个流程：如何使用了R包blogdown搭建个人博客，但是我和轩哥在使用的过程中发现一个小问题，有一些主题似乎并不能很好的被blogdown安装的hugo来应用，几番求解无果，暂时将这个问题搁置，因为太喜欢这个theme不想放弃，所以找了一种不用blogdown的方法去搭建，终于取得成果。&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>archives</title>
-      <link>https://taoziyu97.github.io/archives/</link>
+      <title>Elements</title>
+      <link>https://taoziyu97.github.io/elements/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://taoziyu97.github.io/archives/</guid>
+      <guid>https://taoziyu97.github.io/elements/</guid>
+      <description>H1 Heading H2 Heading H3 Heading H4 Heading H5 Heading H6 Heading  Paragraph Did you come here for something in particular or just general Riker-bashing? And blowing into maximum warp speed, you appeared for an instant to be in two places at once. We have a saboteur aboard. We know you’re dealing in stolen ore.</description>
+    </item>
+    
+    <item>
+      <title>Hi, I Am John Doe</title>
+      <link>https://taoziyu97.github.io/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://taoziyu97.github.io/about/</guid>
+      <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Condimentum in urna justo elit turpis risus vitae viverra enim. Augue quis vitae in non nisi, posuere ultrices tempus. Feugiat consequat suspendisse laoreet vitae enim adipiscing cursus. Duis nunc vitae tincidunt sed nibh id. Egestas erat consequat, ornare etiam donec faucibus. Lorem ut enim nunc, senectus adipiscing sed.</description>
+    </item>
+    
+    <item>
+      <title>Homepage Full</title>
+      <link>https://taoziyu97.github.io/homepage/full/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://taoziyu97.github.io/homepage/full/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Contact</title>
+      <title>Homepage Full Left</title>
+      <link>https://taoziyu97.github.io/homepage/full-left/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://taoziyu97.github.io/homepage/full-left/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Homepage Full Right</title>
+      <link>https://taoziyu97.github.io/homepage/full-right/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://taoziyu97.github.io/homepage/full-right/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Homepage Grid</title>
+      <link>https://taoziyu97.github.io/homepage/grid/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://taoziyu97.github.io/homepage/grid/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Homepage Grid Left</title>
+      <link>https://taoziyu97.github.io/homepage/grid-left/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://taoziyu97.github.io/homepage/grid-left/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Homepage Grid Right</title>
+      <link>https://taoziyu97.github.io/homepage/grid-right/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://taoziyu97.github.io/homepage/grid-right/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Homepage List</title>
+      <link>https://taoziyu97.github.io/homepage/list/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://taoziyu97.github.io/homepage/list/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Homepage List Left</title>
+      <link>https://taoziyu97.github.io/homepage/list-left/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://taoziyu97.github.io/homepage/list-left/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Homepage List Right</title>
+      <link>https://taoziyu97.github.io/homepage/list-right/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://taoziyu97.github.io/homepage/list-right/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>John Doe</title>
+      <link>https://taoziyu97.github.io/author/john-doe/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://taoziyu97.github.io/author/john-doe/</guid>
+      <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sit amet vulputate augue. Duis auctor lacus id vehicula gravida. Nam suscipit vitae purus et laoreet. Donec nisi dolor, consequat vel pretium id, auctor in dui. Nam iaculis, neque ac ullamcorper. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sit amet vulputate augue.</description>
+    </item>
+    
+    <item>
+      <title>No Search Found</title>
+      <link>https://taoziyu97.github.io/404/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://taoziyu97.github.io/404/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Our Privacy Policy</title>
+      <link>https://taoziyu97.github.io/privacy-policy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://taoziyu97.github.io/privacy-policy/</guid>
+      <description>Responsibility of Contributors Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus, donec nunc eros, ullamcorper id feugiat quisque aliquam sagittis. Sem turpis sed viverra massa gravida pharetra. Non dui dolor potenti eu dignissim fusce. Ultrices amet, in curabitur a arcu a lectus morbi id. Iaculis erat sagittis in tortor cursus.</description>
+    </item>
+    
+    <item>
+      <title>Our Terms And Conditions</title>
+      <link>https://taoziyu97.github.io/terms-conditions/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://taoziyu97.github.io/terms-conditions/</guid>
+      <description>Responsibility of Contributors Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus, donec nunc eros, ullamcorper id feugiat quisque aliquam sagittis. Sem turpis sed viverra massa gravida pharetra. Non dui dolor potenti eu dignissim fusce. Ultrices amet, in curabitur a arcu a lectus morbi id. Iaculis erat sagittis in tortor cursus.</description>
+    </item>
+    
+    <item>
+      <title>Search Results</title>
+      <link>https://taoziyu97.github.io/search/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://taoziyu97.github.io/search/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Talk To Me Anytime :)</title>
       <link>https://taoziyu97.github.io/contact/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://taoziyu97.github.io/contact/</guid>
-      <description> </description>
+      <description>Ask Us Anything Or just Say Hi, Rather than just filling out a form, Sleeknote also offers help to the user with links directing them to find additional information or take popular actions.</description>
     </item>
     
   </channel>

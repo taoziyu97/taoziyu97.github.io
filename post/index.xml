@@ -1,29 +1,75 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Post on ZIYU的博客</title>
+    <title>Blogs on LogBook | Hugo Personal Blog Template</title>
     <link>https://taoziyu97.github.io/post/</link>
-    <description>Recent content in Post on ZIYU的博客</description>
+    <description>Recent content in Blogs on LogBook | Hugo Personal Blog Template</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <lastBuildDate>Mon, 11 Jan 2021 18:27:57 +0800</lastBuildDate><atom:link href="https://taoziyu97.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <copyright>Design By [Themefisher](https://themefisher.com/) Develop By [Gethugothemes](https://gethugothemes.com/)</copyright>
+    <lastBuildDate>Sun, 15 Mar 2020 15:40:24 +0600</lastBuildDate><atom:link href="https://taoziyu97.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Hello</title>
-      <link>https://taoziyu97.github.io/post/hello/</link>
-      <pubDate>Mon, 11 Jan 2021 18:27:57 +0800</pubDate>
+      <title>Elements That You Can Use To Create A New Post On This Template.</title>
+      <link>https://taoziyu97.github.io/post/elements/</link>
+      <pubDate>Sun, 15 Mar 2020 15:40:24 +0600</pubDate>
       
-      <guid>https://taoziyu97.github.io/post/hello/</guid>
-      <description></description>
+      <guid>https://taoziyu97.github.io/post/elements/</guid>
+      <description>Heading example Here is example of hedings. You can use this heading by following markdownify rules. For example: use # for heading 1 and use ###### for heading 6.
+Heading 1 Heading 2 Heading 3 Heading 4 Heading 5 Heading 6  Emphasis Emphasis, aka italics, with asterisks or underscores.</description>
     </item>
     
     <item>
-      <title>Hugo&#43;Github&#43;阿里云域名搭建个人博客</title>
-      <link>https://taoziyu97.github.io/post/2021-1-11-build_blog/</link>
-      <pubDate>Mon, 11 Jan 2021 00:00:00 +0000</pubDate>
+      <title>Cheerful Loving Couple Bakers Drinking Coffee</title>
+      <link>https://taoziyu97.github.io/post/post-2/</link>
+      <pubDate>Sat, 14 Mar 2020 15:40:24 +0600</pubDate>
       
-      <guid>https://taoziyu97.github.io/post/2021-1-11-build_blog/</guid>
-      <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
-&lt;p&gt;最近师兄和涛哥都分享了这个流程：如何使用了R包blogdown搭建个人博客，但是我和轩哥在使用的过程中发现一个小问题，有一些主题似乎并不能很好的被blogdown安装的hugo来应用，几番求解无果，暂时将这个问题搁置，因为太喜欢这个theme不想放弃，所以找了一种不用blogdown的方法去搭建，终于取得成果。&lt;/p&gt;</description>
+      <guid>https://taoziyu97.github.io/post/post-2/</guid>
+      <description>It’s no secret that the digital industry is booming. From exciting startups to global brands, companies are reaching out to digital agencies, responding to the new possibilities available. However, the industry is fast becoming overcrowded, heaving with agencies offering similar services — on the surface, at least. Producing creative, fresh projects is the key to standing out.</description>
+    </item>
+    
+    <item>
+      <title>Cheerful Loving Couple Bakers Drinking Coffee</title>
+      <link>https://taoziyu97.github.io/post/post-3/</link>
+      <pubDate>Sat, 14 Mar 2020 15:40:24 +0600</pubDate>
+      
+      <guid>https://taoziyu97.github.io/post/post-3/</guid>
+      <description>It’s no secret that the digital industry is booming. From exciting startups to global brands, companies are reaching out to digital agencies, responding to the new possibilities available. However, the industry is fast becoming overcrowded, heaving with agencies offering similar services — on the surface, at least. Producing creative, fresh projects is the key to standing out.</description>
+    </item>
+    
+    <item>
+      <title>Cheerful Loving Couple Bakers Drinking Coffee</title>
+      <link>https://taoziyu97.github.io/post/post-4/</link>
+      <pubDate>Sat, 14 Mar 2020 15:40:24 +0600</pubDate>
+      
+      <guid>https://taoziyu97.github.io/post/post-4/</guid>
+      <description>It’s no secret that the digital industry is booming. From exciting startups to global brands, companies are reaching out to digital agencies, responding to the new possibilities available. However, the industry is fast becoming overcrowded, heaving with agencies offering similar services — on the surface, at least. Producing creative, fresh projects is the key to standing out.</description>
+    </item>
+    
+    <item>
+      <title>Cheerful Loving Couple Bakers Drinking Coffee</title>
+      <link>https://taoziyu97.github.io/post/post-5/</link>
+      <pubDate>Sat, 14 Mar 2020 15:40:24 +0600</pubDate>
+      
+      <guid>https://taoziyu97.github.io/post/post-5/</guid>
+      <description>It’s no secret that the digital industry is booming. From exciting startups to global brands, companies are reaching out to digital agencies, responding to the new possibilities available. However, the industry is fast becoming overcrowded, heaving with agencies offering similar services — on the surface, at least. Producing creative, fresh projects is the key to standing out.</description>
+    </item>
+    
+    <item>
+      <title>Cheerful Loving Couple Bakers Drinking Coffee</title>
+      <link>https://taoziyu97.github.io/post/post-6/</link>
+      <pubDate>Sat, 14 Mar 2020 15:40:24 +0600</pubDate>
+      
+      <guid>https://taoziyu97.github.io/post/post-6/</guid>
+      <description>It’s no secret that the digital industry is booming. From exciting startups to global brands, companies are reaching out to digital agencies, responding to the new possibilities available. However, the industry is fast becoming overcrowded, heaving with agencies offering similar services — on the surface, at least. Producing creative, fresh projects is the key to standing out.</description>
+    </item>
+    
+    <item>
+      <title>看看中文如何</title>
+      <link>https://taoziyu97.github.io/post/post-1/</link>
+      <pubDate>Sat, 14 Mar 2020 15:40:24 +0600</pubDate>
+      
+      <guid>https://taoziyu97.github.io/post/post-1/</guid>
+      <description>It’s no secret that the digital industry is booming. From exciting startups to global brands, companies are reaching out to digital agencies, responding to the new possibilities available. However, the industry is fast becoming overcrowded, heaving with agencies offering similar services — on the surface, at least. Producing creative, fresh projects is the key to standing out.</description>
     </item>
     
   </channel>
