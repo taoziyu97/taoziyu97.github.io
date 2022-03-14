@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>R包开发 on LogBook | Hugo Personal Blog Template</title>
+    <link>https://taoziyu97.github.io/fr/tags/r%E5%8C%85%E5%BC%80%E5%8F%91/</link>
+    <description>Recent content in R包开发 on LogBook | Hugo Personal Blog Template</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 23 Feb 2022 15:40:24 +0600</lastBuildDate><atom:link href="https://taoziyu97.github.io/fr/tags/r%E5%8C%85%E5%BC%80%E5%8F%91/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>R包开发【2】——编写函数</title>
+      <link>https://taoziyu97.github.io/fr/english/post/2022-2-23_function/</link>
+      <pubDate>Wed, 23 Feb 2022 15:40:24 +0600</pubDate>
+      
+      <guid>https://taoziyu97.github.io/fr/english/post/2022-2-23_function/</guid>
+      <description>R包功能的实现需要各种函数，函数应该如何编写？什么样的步骤可以被包括在函数里？函数需要哪些基本的功能？函数应该如何命名？函数可以通过调用函数并且给定参数来代替对代码的重复操作（当一个操作需要重复2次时），通过自定义的函数命名来使得功能易懂，并且方便后续的更新和更改，对功能进行更改只需要变更函数，而非在所有的代码中一一修改。
+1. 基本步骤 写函数的基本步骤如下：
+1.1 函数命名   命名要尽量短，而且指示函数的功能，长一点能够清楚的展示功能也无妨。
+  函数名尽可能是动词，不过相比使用get、compute、calculate、 determine这样宽泛的动词来说，名词相对更好，函数的参数尽可能是名词。想到好的名字随时去更改掉它。
+  当函数名包含很多单词时，可以统一选取一种使用，可以使用snake_case，或者camelCase的形式，两者不要混着用。
+  同类的功能名称保持一定的一致性。
+  # Good input_select() input_checkbox() input_text()  # Not so good select_input() checkbox_input()   尽量避免和已有的函数名称重复，尤其是基本包里的。
+  习惯使用注释把文件分割，快捷键是：cmd/ctrl + shift + R
+  # Load data --------------------------------------  # Plot data -------------------------------------- 1.</description>
+    </item>
+    
+    <item>
+      <title>R包开发【3】——R包开发细节</title>
+      <link>https://taoziyu97.github.io/fr/english/post/2022-2-23_rpkg2/</link>
+      <pubDate>Wed, 23 Feb 2022 15:40:24 +0600</pubDate>
+      
+      <guid>https://taoziyu97.github.io/fr/english/post/2022-2-23_rpkg2/</guid>
+      <description>R包开发的各种细节。
+1. 命名   尽量避免同时使用大小写字母
+  使用该包测试命名是否能用（？？？）。
+  library(available) available(&amp;#34;doofus&amp;#34;) 2. 依赖包 如果只是使用其他的包中的少量函数时，建议在DESCRIPTION文件中的Imports:中标注包的名称，并且在使用函数过程中使用pkg::fun()。如果需要重复使用函数，可以避免繁琐的::可以@importFrom pkg fun，这样可以更快速，因为::增加了5us去使用函数，管道符号也可以使用同样的方法使用@importFrom magrittr %&amp;gt;%。如果重复使用很多其他包中的函数，可以把这个包中所有的函数全部导入@import pkg，不过这样会使得包的代码比较不容易阅读。
+Imports部分并不是把function导入到namespace中，它只确保包的安装。无论是否附加包，您都需要以完全相同的方式导入函数。
+在DESCRIPTION中对依赖包进行注释：
+Imports: randomForest, stats 在函数中使用依赖包中的函数时，需要标注pkg::fun。
+ 是在roxygen注释中添加@import pkg。这种方法会在R包的NAMESPACE文件中添加import域，在加载R包时，第三方包的所有函数都会被导入。在使用函数时必须用pkg::fun的方法，以防函数名冲突。第二种方法，是在roxygen注释中添加@importFrom pkg fun。这种方法会在NAMESPACE文件中添加importFrom域，在使用时可以直接使用函数名，就像在.GlobalEnv中创建的函数一样。这里推荐第二种引用方法，因为可以大幅减少函数冲突。
+ check之后存在warning：
+&amp;gt; checking dependencies in R code ... WARNING &amp;#39;::&amp;#39; or &amp;#39;:::&amp;#39; imports not declared from: ‘cli’ ‘dplyr’ ‘furrr’ ‘future’ ‘purrr’ ‘tibble’ 它说的是:&amp;rsquo;::&amp;lsquo;或&amp;rsquo;:::&amp;rsquo; import没有从‘cli’ ‘dplyr’ ‘furrr’ ‘future’ ‘purrr’ ‘tibble’中声明。这里重要的词是“import”。就像我们在包中导出函数一样，我们需要明确何时在另一个包中使用函数。为此，我们可以使用usethis::use_package()。</description>
+    </item>
+    
+    <item>
+      <title>R包开发【1】——基本流程</title>
+      <link>https://taoziyu97.github.io/fr/english/post/2022-2-22_rpkg/</link>
+      <pubDate>Tue, 22 Feb 2022 15:40:24 +0600</pubDate>
+      
+      <guid>https://taoziyu97.github.io/fr/english/post/2022-2-22_rpkg/</guid>
+      <description>任何可以被自动化的，都应该让它自动化，给自己省时间，也可以方便任何人使用。devtools的目的是使得开发工具变得容易，囊括了多个包来支持开发的各个功能。
+前言：R包开发书籍的基本内容   第二章 示例包
+  第三章 为包开发准备系统
+  第四章 包的基本结构，不同的状态下结构不同（？）
+  第五章 回顾核心的工作流程，介绍核心工具之间的联系：devtools和usethis，Rstudio
+  其余章节 开发细节
+  通过示例入门 1. 在制定路径下新建R包，创建了新的项目 先安装一些包
+install.packages(c(&amp;#34;devtools&amp;#34;, &amp;#34;roxygen2&amp;#34;, &amp;#34;testthat&amp;#34;, &amp;#34;knitr&amp;#34;)) library(usethis) create_package(&amp;#34;/Volumes/home /project/Immarker&amp;#34;) 目录下有这些文件
+    .Rbuildignore
+  .Rproj.user
+  DESCRIPTION 文档说明
+  NAMESPACE 列出了外部和内部使用到的函数</description>
+    </item>
+    
+  </channel>
+</rss>

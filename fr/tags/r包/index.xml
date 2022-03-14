@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>R包 on LogBook | Hugo Personal Blog Template</title>
+    <link>https://taoziyu97.github.io/fr/tags/r%E5%8C%85/</link>
+    <description>Recent content in R包 on LogBook | Hugo Personal Blog Template</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 24 Feb 2022 15:40:24 +0600</lastBuildDate><atom:link href="https://taoziyu97.github.io/fr/tags/r%E5%8C%85/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>R包mlr3基本功能【1】——R6类——需要修订</title>
+      <link>https://taoziyu97.github.io/fr/english/post/2022-2-24_mlr31/</link>
+      <pubDate>Thu, 24 Feb 2022 15:40:24 +0600</pubDate>
+      
+      <guid>https://taoziyu97.github.io/fr/english/post/2022-2-24_mlr31/</guid>
+      <description>介绍机器学习R包mlr3，该包提供了分类、回归、生存分析以及其他的机器学习任务，包含超参的调节以及特征的选择，本地支持很多操作的并行化。
+1. mlr3 Quickstart install.packages(&amp;#34;mlr3&amp;#34;) 对iris数据集的前120行训练一个决策树，并且对后30行进行最终的预测，最后判断预测模型的准确性。
+library(&amp;#34;mlr3&amp;#34;) task = tsk(&amp;#34;iris&amp;#34;) learner = lrn(&amp;#34;classif.rpart&amp;#34;)  # train a model of this learner for a subset of the task learner$train(task, row_ids = 1:120) # this is what the decision tree looks like learner$model 预测
+predictions = learner$predict(task, row_ids = 121:150) predictions 准确性</description>
+    </item>
+    
+  </channel>
+</rss>

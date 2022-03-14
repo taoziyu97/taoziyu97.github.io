@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>latex on LogBook | Hugo Personal Blog Template</title>
+    <link>https://taoziyu97.github.io/fr/tags/latex/</link>
+    <description>Recent content in latex on LogBook | Hugo Personal Blog Template</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 05 Mar 2021 15:40:24 +0600</lastBuildDate><atom:link href="https://taoziyu97.github.io/fr/tags/latex/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>使用Latex写论文</title>
+      <link>https://taoziyu97.github.io/fr/english/post/2021-3-05-latex_blog/</link>
+      <pubDate>Fri, 05 Mar 2021 15:40:24 +0600</pubDate>
+      
+      <guid>https://taoziyu97.github.io/fr/english/post/2021-3-05-latex_blog/</guid>
+      <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
+&lt;p&gt;最近写文章的时候，发现修改时调整参考文献的引用，是一件非常麻烦的事情，于是找到了一种简便的方法进行调整，发现了用Latex写论文原来这么好用（据涛哥和翔哥说，word也可以自动调整引用文献顺序，而我一直不知道&amp;hellip;）。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

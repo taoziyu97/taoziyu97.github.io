@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>软件使用 on LogBook | Hugo Personal Blog Template</title>
+    <link>https://taoziyu97.github.io/tags/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/</link>
+    <description>Recent content in 软件使用 on LogBook | Hugo Personal Blog Template</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Design By [Themefisher](https://themefisher.com/) Develop By [Gethugothemes](https://gethugothemes.com/)</copyright>
+    <lastBuildDate>Thu, 24 Feb 2022 15:40:24 +0600</lastBuildDate><atom:link href="https://taoziyu97.github.io/tags/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>R包caret基本功能【1】——六种基本功能</title>
+      <link>https://taoziyu97.github.io/post/2022-2-24_caret1/</link>
+      <pubDate>Thu, 24 Feb 2022 15:40:24 +0600</pubDate>
+      
+      <guid>https://taoziyu97.github.io/post/2022-2-24_caret1/</guid>
+      <description>介绍机器学习R包。
+1. 数据分割 基于输出变量的分割 在建模之前，需要对样本数据进行分割分为训练集和测试集。在之前建模过程中，我发现我使用sample进行分割存在一定的问题，比如我分割出来的数据中response的占比在训练集和测试集中差别很大等等。caret包中可以解决这个问题，通过设置p值，同时确定训练集和测试集的占比，并各个因子水平下取占比（表述的有点问题）。
+createDataPartition(y, times = 1, p = 0.5, list = TRUE, groups = min(5, length(y))) 2. 预处理 2.1 虚拟变量处理 数据预处理又包括：对因子型变量进行虚拟变量处理（比如response在数据中是yes或no的形式表示，那么可以在这一步转换为虚拟变量0,1，这一步骤尤其适合多个因子型变量都需要处理的情况，可以节约时间）；
+caret包假定所有的数据都是数值型的，比如因子型的可以通过model.matrix和dummyVars转换为dummy的变量。 dummyVars：
+dummyVars(formula, data, sep = &amp;#34;.&amp;#34;, levelsOnly = FALSE, fullRank = FALSE, ...) predict(object, newdata, na.action = na.pass, ...) formula：y~x1+x2，公式右边需要处理为哑变量的因子型变量，不确定哪些是因子型变量的话，可以直接使用y~.来制定所有的列，自动把因子型变量的进行处理。
+2.2 近零方差变量的删除 比如有些变量存在一些很特殊的值，这些值的占比很少，假设response中yes的为99个，no的为1个，那么一些模型来说，模型会崩溃(crash)或者fit to be unstable.</description>
+    </item>
+    
+    <item>
+      <title>检测拷贝数变异的工具及算法【2】-ABSOLUTE</title>
+      <link>https://taoziyu97.github.io/post/2021-12-19_cnv_tools2/</link>
+      <pubDate>Sun, 19 Dec 2021 15:40:24 +0600</pubDate>
+      
+      <guid>https://taoziyu97.github.io/post/2021-12-19_cnv_tools2/</guid>
+      <description>背景介绍 1. 获取绝对拷贝数数值的难点 （1）采样过程中癌细胞混合了未知比例的正常细胞——肿瘤纯度；
+（2）由于染色体数量和结构异常导致的癌细胞的实际DNA含量(倍性)是未知的；
+（3）由于正在进行的亚克隆进化，癌细胞群可能是异质性的。
+理论上，如果知道每个肿瘤细胞中DNA的含量，则可通过测得的相对拷贝数获得绝对拷贝数，或者通过单细胞测序技术解决。
+2. 芯片原始原始数据格式.CEL 对于芯片数据来说，Affymetrix SNP芯片的原始文件为CEL文件，一个CEL文件即是一个个体的全部SNP分型结果。Affymetrix基因芯片是一种生物芯片，它包含一个对一个实验有效的微阵列。为了制造这些芯片，玻璃或硅载玻片上排列有探针，根据它们是否与原始DNA样本互补，探针将表达水平(强度)报告为完全匹配(PM)和不匹配(MM)值。.CEL文件格式有多个版本，使用不同的格式。例如，版本3使用ASCII文本格式，而版本4使用二进制格式。 注意：.CEL 文件需要相应的.CDF 文件，它是存储在.CEL文件中的原始探测级数据的字典。MATLAB有一个名为affyread的内置函数，可以用来读取Windows版本软件中的.CEL 文件。
+3. SNP6.0拷贝数变异检测流程 这里介绍Affymetrix SNP6 Copy Number Inference Pipeline。
+输入：CEL文件
+输出：每个样本的片段化的拷贝数结果：genotype calls；相对的拷贝数数值且经过标准化处理，使得每个样本接近双倍体；拷贝数变异区域
+流程：
+  校准信号强度
+  计算基因型
+  将信号强度转换为拷贝数数值
+  计算拷贝数噪音
+  移除离群的探针减少噪音
+  通过减去一组预先定义的正常样本中的变化，进一步降低噪声
+  将拷贝数片段化
+  计算基因组中片段的数量，并与定义的阈值进行比较，以检查超分割情况</description>
+    </item>
+    
+    <item>
+      <title>检测拷贝数变异的工具及算法【1】-PCAWG consensus copy number</title>
+      <link>https://taoziyu97.github.io/post/2021-12-16_cnv_tools/</link>
+      <pubDate>Thu, 16 Dec 2021 15:40:24 +0600</pubDate>
+      
+      <guid>https://taoziyu97.github.io/post/2021-12-16_cnv_tools/</guid>
+      <description>引言 PCAWG提供的拷贝数变异文件是综合6种不同的拷贝数变异提取工具的结果：
+  ABSOLUTE
+  ACEseq
+  Battenberg
+  CloneHD
+  JaBbA
+  Sclust
+  由于拷贝数结果的不同取决于segmentation的不同，而对大部分基因组的拷贝数状态的分歧来自于是否发生了整个基因组复制的分歧。因此针对6种方法中的5种首先构建了完整的断点数据，针对一致的断点数据使用6种方法得到拷贝数变异结果，解决了倍性结果的不统一后，对6种方法得到的每个segment寻求major allele和minor allele的状态的一致性，最后对每个肿瘤综合6种方法得到纯度结果，对每种方法都给予置信区间和质量星号：克隆性通过（3星），多数投票同意，协议后四舍五入亚克隆拷贝数（2星），调用最好的方法（1星）。3星代表结果非常一致，1星则是结果不那么一致的情况下选一种方法的结果输出。这样来得到最终的完整的拷贝数图谱，包含以下所有列：
+major_cn minor_cn position sampleID star total_cn value 工具介绍 1. ABSOLUTE 使用ABSOLUTE算法计算每个样本的纯度、倍性以及绝对DNA拷贝数，在基因组上收集基于片段的覆盖度(来自完整的阅读模板跨度)在基因组上收集，并校正GC含量和匹配偏差。【？】使用PCAWG的正常样本来进行切线归一化(tangent-normalization)处理。基于杂合性位点计算位点特异的拷贝数，使用CBS算法来得到segmentation。采用Nelder-Mead算法搜索可能的纯度和倍性解的空间，并对它们进行排序。对亚克隆拷贝数片段进行Dirichlet过程聚类，以标注相同的亚克隆拷贝数聚类状态。
+2. ACEseq 使用ACEseq计算绝对拷贝数，肿瘤纯度，并估计肿瘤细胞内容，通过结合肿瘤和基因组窗中匹配的正常基因的覆盖率以及相应SNPs的b等位基因频率(BAF)来确定绝对拷贝数。基因组使用PSBCBS包得到segmentation，在分割之前，结构变异断点通过一致的结构变异数据判断，
+利用PSCBS包将基因组分割为平等覆盖和不平衡状态的区域，在分割之前，将共识结构变异集定义的结构变异断点合并成片段边界，片段提交到共识断点估计集，通过共识断点得到的片段使用覆盖度和BAF值注释来估计样本的肿瘤细胞内容和倍性。
+注：配对的双亲特定CBS(配对的PSCBS)算法利用了CBS方法用于将总CN数据分割为来自SNP阵列的2D非阶段数据。该算法依赖于配对测试(肿瘤)和参考(正常)样本杂交到单独的阵列。
+3. Battenberg 使用Battenberg得到绝对拷贝数。针对每个SNP计算BAF和相对logR值，使用GC含量矫正logR值，匹配的正常样本用来获得种系的杂合性SNP，使用分段常数拟合(PCF)对数据进行分段，将结构变异(sv)作为先前建立的中断点，通过对纯度和倍性组合进行网格搜索，拟合克隆拷贝数图谱。
+4. CloneHD 使用CloneHD得到绝对拷贝数。cloneHD使用了隐马尔可夫模型来描述样本的拷贝数状态。cloneHD流程的第一步使用的是filterHD算法，filterHD不寻求解释数据中的亚克隆结构，是一种用于模糊分割的通用算法，是一个通用的一维离散数据概率滤波算法，类似于卡尔曼滤波。它是一个具有泊松或二项发射和跳跃扩散传播子的连续状态空间隐马尔可夫模型。它可以用于无标度平滑、模糊数据分割和数据滤波。
+5. JaBbA JaBbA整合paire-end和read depth信号来推断基因组间隔的拷贝数以及重构junction。在PCAWG共识拷贝数分析中，使用了两轮JaBbA，JbBbA的输入数据是bam文件，junction call set，以及初步分割（可选）和纯度/倍性输入，针对初步分割的结果，进一步使用CBS算法来分割得到低维度的常数拷贝数区域。</description>
+    </item>
+    
+    <item>
+      <title>synapser</title>
+      <link>https://taoziyu97.github.io/post/2021-8-31_synapser/</link>
+      <pubDate>Sat, 24 Jul 2021 15:40:24 +0600</pubDate>
+      
+      <guid>https://taoziyu97.github.io/post/2021-8-31_synapser/</guid>
+      <description>引言 一个提供批量下载Synapser数据的R包。
+1. 登陆 synLogin(&amp;#34;baomihai@sina.com&amp;#34;,&amp;#34;******&amp;#34;) Welcome, baomihai@sina.com!NULL 参考  biostars-How to install gdc-client in Ubnutu  </description>
+    </item>
+    
+    <item>
+      <title>gdc-client</title>
+      <link>https://taoziyu97.github.io/post/2021-7-20_gdc_client/</link>
+      <pubDate>Tue, 20 Jul 2021 15:40:24 +0600</pubDate>
+      
+      <guid>https://taoziyu97.github.io/post/2021-7-20_gdc_client/</guid>
+      <description>引言 之前一直用别的方法下载数据，这次使用了gdc-client命令行去下载GDC上TCGA driver gene mutation的一批数据。
+步骤 1. 找到自己需要的数据 这是我本次要下载的数据
+点击数据下载地址发现出现如下界面，其中id就是使用gdc-client下载的文件对应的id
+对于Open access data，使用这两种方法下载
+下载了MAC的Client版本
+2. 安装 解压下载的文件，如果双击会发现出现erro：
+且常规的对~/.bash_profile文件添加环境变量也不可以，正确做法是：
+./gdc-client #(to verify that program works) cp -pi ./gdc-client /usr/local/bin #(if this does not work) sudo cp -pi ./gdc-client /usr/local/bin 在任何路径都可以打开。
+3. 使用  下载单个文件  gdc-client download id  下载多个文件  将含有多个文件的id和名字等信息的页面存储为txt，download加上-m，进行批量下载。</description>
+    </item>
+    
+    <item>
+      <title>使用CIBERSORTx网页版分析免疫浸润</title>
+      <link>https://taoziyu97.github.io/post/2021-4-06-cibersort/</link>
+      <pubDate>Tue, 06 Apr 2021 15:40:24 +0600</pubDate>
+      
+      <guid>https://taoziyu97.github.io/post/2021-4-06-cibersort/</guid>
+      <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
+&lt;p&gt;最近需要对TCGA和PCAWG的表达数据进行免疫浸润水平分析，使用了R包immunedeconv,其中TCGA已经有文献的supplement给出了不同免疫浸润工具进行分析的结果，PCAWG需要自己手动分析，其中CIBERSORT在immunedeconv包中运行需要两个文件：&lt;code&gt;LM22.txt&lt;/code&gt;，&lt;code&gt;CIBERSORT.R&lt;/code&gt;，需要在官网：https://cibersortx.stanford.edu/ 进行申请。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

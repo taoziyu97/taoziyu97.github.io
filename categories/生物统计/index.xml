@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>生物统计 on LogBook | Hugo Personal Blog Template</title>
+    <link>https://taoziyu97.github.io/categories/%E7%94%9F%E7%89%A9%E7%BB%9F%E8%AE%A1/</link>
+    <description>Recent content in 生物统计 on LogBook | Hugo Personal Blog Template</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Design By [Themefisher](https://themefisher.com/) Develop By [Gethugothemes](https://gethugothemes.com/)</copyright>
+    <lastBuildDate>Fri, 26 Nov 2021 15:40:24 +0600</lastBuildDate><atom:link href="https://taoziyu97.github.io/categories/%E7%94%9F%E7%89%A9%E7%BB%9F%E8%AE%A1/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>潜在语义分析（LSA）</title>
+      <link>https://taoziyu97.github.io/post/2021-11-26_statistic-lsa/</link>
+      <pubDate>Fri, 26 Nov 2021 15:40:24 +0600</pubDate>
+      
+      <guid>https://taoziyu97.github.io/post/2021-11-26_statistic-lsa/</guid>
+      <description>引言 潜在语义分析（Latent sematic analysis, LSA）是一种无监督的学习方法。特点是通过矩阵分解来完成，使用的是非概率的话题分析模型，可以通过奇异值分解的方法进行矩阵因子分解，特点是分解的矩阵正交，非负矩阵分解是另一种矩阵的因子分解方法，特点是分解的矩阵非负。
+1. 单词向量空间和话题向量空间 1.1 单词向量空间 给定一个含有$n$个文本的集合$D=\left { d_1,d_2,&amp;hellip;,d_n \right }$，在所有文本中出现的$m$个单词的集合$W=\left { w_1,w_2,&amp;hellip;,w_m \right }$，将单词在文本中出现的数据用一个单词-文本矩阵表示，记作$X$: $$ \begin{bmatrix} x_{11} &amp;amp;x_{12} &amp;amp;&amp;hellip; &amp;amp;x_{1n} \ x_{21} &amp;amp;x_{22} &amp;amp;&amp;hellip; &amp;amp;x_{2n} \ \vdots &amp;amp;\vdots &amp;amp; &amp;amp;\vdots \ x_{m1} &amp;amp;x_{m2} &amp;amp;&amp;hellip; &amp;amp;x_{mn} \end{bmatrix} $$
+元素$x_{ij}$表示单词$w_i$在文本$d_j$中出现的频数或权值，由于单词的种类很多，每个文本出现单词的种类通常较少，所以单词-文本矩阵是一个稀疏矩阵。
+权值通常用单词频率-逆文本频率（TF-IDF）表示，定义是： $$ TFIDF_{ij}=\frac{tf_{ij}}{tf_{·j}}log\frac{df}{df_i} \space i=1,2,&amp;hellip;,m; \space j=1,2,&amp;hellip;,n $$ $\frac{tf_{ij}}{tf_{·j}}$表示单词$w_i$出现在文本$d_j$中的频数比上文本$d_j$中出现的所有单词的频数之和，一个单词在一个文本中出现的频数越高，这个单词在文本中的重要度就越高；$\frac{df}{df_i}$表示全部文本数比上含有单词$w_i$的文本数，一个单词在整个文本集合中出现的文本数越少，这个单词就越能代表其所在文本的特点，重要度就越高。TF-IDF是两种重要度的积，表示综合重要度。</description>
+    </item>
+    
+    <item>
+      <title>隐马尔可夫模型（HMM）</title>
+      <link>https://taoziyu97.github.io/post/2021-11-19_hmm/</link>
+      <pubDate>Fri, 19 Nov 2021 15:40:24 +0600</pubDate>
+      
+      <guid>https://taoziyu97.github.io/post/2021-11-19_hmm/</guid>
+      <description>引言 1. 马尔可夫模型的基本概念 来对2段氨基酸序列x和y进行残基比对，认为存在3种比对关系的状态：
+ M：残基能够比对上但不一定相等 X：序列x的残基比对到1个空位，或x上发生了1次插入 Y：序列y的残基比对到1个空位，或y上发生了1次插入  序列比对就是在上述3个状态中不断转换的过程：
+ $M(i,j)$ : $x_i$比对到$y_j$时，序列x从1到$i$和序列$y$从1到$j$最好的比对分数 $X(i,j)$ : $x_i$比对到空位时，序列x从1到$i$最好的比对分数 $Y(i,j)$ : $y_j$比对到空位时，序列y从1到$j$最好的比对分数  转移（从一个状态到另外一个状态）概率：
+$$ a_{kl} = P (X_t=S_l|X_{t-1}=S_k) $$
+$$ a_{lk} = P (X_t=S_k|X_{t-1}=S_l) $$
+转移矩阵：
+ 
+ 设定：
+ $\delta$ ：Gap open（d）的概率 $\epsilon$ ：Gap extension（e）的概率   马尔可夫链
+ 先根据转移概率得到一个转移概率矩阵：</description>
+    </item>
+    
+    <item>
+      <title>p值</title>
+      <link>https://taoziyu97.github.io/post/2021-4-07_p%E5%80%BC/</link>
+      <pubDate>Sat, 10 Apr 2021 15:40:24 +0600</pubDate>
+      
+      <guid>https://taoziyu97.github.io/post/2021-4-07_p%E5%80%BC/</guid>
+      <description>介绍  p值的含义    假设存在药物A和药物B，想知道两种药物的区别？
+维基百科定义：p值是假设检验中假设零假设为真时观测到至少与实际观测样本相同极端的样本的概率（似乎很拗口）。
+p值是介于0-1之间的数字，量化我们相信两种药物不同的信心，p值越接近0，越相信两者不同。当p的阈值为0.05意味着，假设两种药物之间没有差异，执行多次且相同的实验，那么只有5%的实验会得出错误决定，简单来说，p值是对意外的测量。
+p值能够帮助确定两种药物是否不同，但是不能告诉我们有什么不同，不管差异是都大还是小，都可以使用较小的p值，即较小的p值不代表差异是大还是小，只是代表意外的结果概率更小 。
+ 阈值0.05的由来  不出于逻辑或统计原因，只是科学惯例。
+ 术语：假阳性  指的是没有差异时却获得小的p值的情况。
+ 术语：假设检验（Hypothesis testing）  试图确定这些药物是否相同的想法。
+ 术语：零假设（Null Hypothesis）  零假设是药物相同，p值帮助我们决定是否拒绝零假设。
+统计显著性检验分支 分为以下两个主要的：
+  R.A.Fisher
+  Neyman and Pearson
+  控制假设检验的两类错误很重要：
+ 第一类错误  无效说成有效（取伪）。
+第二类错误。  有效判成无效（弃真）。
+这两种错误不能同时消除，但是可以给出一种规范的决策过程来确保第一类错误的可能性只在预先确定的比率下发生（奈曼和皮尔逊），这个比率为显著性水平α（false positive rate），可以根据经验和期望基础设置合适的α，举例：</description>
+    </item>
+    
+    <item>
+      <title>逻辑回归</title>
+      <link>https://taoziyu97.github.io/post/2021-4-11_%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92/</link>
+      <pubDate>Tue, 06 Apr 2021 15:40:24 +0600</pubDate>
+      
+      <guid>https://taoziyu97.github.io/post/2021-4-11_%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92/</guid>
+      <description>引言  线性回归  假设数据包含 尺寸 和 重量 两组，根据这两组数据用 最小二乘法 拟合一条线后，我们可以做如下的事情：
+  计算r平方来确定两个变量是否相关
+  计算p值确定R平方是否具有统计显著性
+  用于预测，如果一个新鼠标有某重量，可以根据这个线来预测其大小
+  多元回归  假设用 体重 和 血容量 来预测大小，拟合曲线可做上述三个同样的事情，还可以用离散型数值来预测大小。
+比较模型  进行正态回归，使用权重来预测大小。
+逻辑回归 S型函数定义：
+  S 型函数会产生以下曲线图：
+ y&amp;rsquo; 是逻辑回归模型针对特定样本的输出。 z 是 b + w1x1 + w2x2 + … wNxN w 的值是该模型学习的权重，b 是偏差。 x 的值是特定样本的特征值。  线性回归的损失函数是平方损失。逻辑回归的损失函数是对数损失函数。</description>
+    </item>
+    
+  </channel>
+</rss>

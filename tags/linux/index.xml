@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>linux on LogBook | Hugo Personal Blog Template</title>
+    <link>https://taoziyu97.github.io/tags/linux/</link>
+    <description>Recent content in linux on LogBook | Hugo Personal Blog Template</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Design By [Themefisher](https://themefisher.com/) Develop By [Gethugothemes](https://gethugothemes.com/)</copyright>
+    <lastBuildDate>Tue, 20 Jul 2021 15:40:24 +0600</lastBuildDate><atom:link href="https://taoziyu97.github.io/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>gdc-client</title>
+      <link>https://taoziyu97.github.io/post/2021-7-20_gdc_client/</link>
+      <pubDate>Tue, 20 Jul 2021 15:40:24 +0600</pubDate>
+      
+      <guid>https://taoziyu97.github.io/post/2021-7-20_gdc_client/</guid>
+      <description>引言 之前一直用别的方法下载数据，这次使用了gdc-client命令行去下载GDC上TCGA driver gene mutation的一批数据。
+步骤 1. 找到自己需要的数据 这是我本次要下载的数据
+点击数据下载地址发现出现如下界面，其中id就是使用gdc-client下载的文件对应的id
+对于Open access data，使用这两种方法下载
+下载了MAC的Client版本
+2. 安装 解压下载的文件，如果双击会发现出现erro：
+且常规的对~/.bash_profile文件添加环境变量也不可以，正确做法是：
+./gdc-client #(to verify that program works) cp -pi ./gdc-client /usr/local/bin #(if this does not work) sudo cp -pi ./gdc-client /usr/local/bin 在任何路径都可以打开。
+3. 使用  下载单个文件  gdc-client download id  下载多个文件  将含有多个文件的id和名字等信息的页面存储为txt，download加上-m，进行批量下载。</description>
+    </item>
+    
+  </channel>
+</rss>

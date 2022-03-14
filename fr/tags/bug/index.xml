@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>BUG on LogBook | Hugo Personal Blog Template</title>
+    <link>https://taoziyu97.github.io/fr/tags/bug/</link>
+    <description>Recent content in BUG on LogBook | Hugo Personal Blog Template</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 04 Jun 2021 15:40:24 +0600</lastBuildDate><atom:link href="https://taoziyu97.github.io/fr/tags/bug/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ERROR: Could not find a version that satisfies the requirement torch==1.5.1</title>
+      <link>https://taoziyu97.github.io/fr/english/post/2021-6-4_torch1.5.1_error/</link>
+      <pubDate>Fri, 04 Jun 2021 15:40:24 +0600</pubDate>
+      
+      <guid>https://taoziyu97.github.io/fr/english/post/2021-6-4_torch1.5.1_error/</guid>
+      <description>引言 为了在集群上跑1000个模拟样本的SigprofilerExtractor工具，在集群上自己新建的环境里安装，解决安装bug，并成功使用。
+解决bug思路   发现依赖torch1.5.1版本
+  通过pip install安装失败
+  使用whl安装发现没有对应python3.9的版本
+  根据版本推测1.5.1不能在python3.9安装
+  重建新环境，安装python3.8，进而安装1.5.1
+  成功
+  具体实施 使用sigprofilerextractor发现报错如下：
+ERROR: Could not find a version that satisfies the requirement torch==1.5.1 (from sigprofilerextractor) (from versions: 0.1.2, 0.1.2.post1, 0.1.2.post2, 1.7.1, 1.8.0, 1.8.1) ERROR: No matching distribution found for torch==1.</description>
+    </item>
+    
+  </channel>
+</rss>

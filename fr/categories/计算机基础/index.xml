@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>计算机基础 on LogBook | Hugo Personal Blog Template</title>
+    <link>https://taoziyu97.github.io/fr/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/</link>
+    <description>Recent content in 计算机基础 on LogBook | Hugo Personal Blog Template</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 06 Dec 2021 15:40:24 +0600</lastBuildDate><atom:link href="https://taoziyu97.github.io/fr/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>计算机组成</title>
+      <link>https://taoziyu97.github.io/fr/english/post/2021-12-06_consist_of_computer/</link>
+      <pubDate>Mon, 06 Dec 2021 15:40:24 +0600</pubDate>
+      
+      <guid>https://taoziyu97.github.io/fr/english/post/2021-12-06_consist_of_computer/</guid>
+      <description>引言 1. 计算机组成 计算机的组成部件可以分为三大类：中央处理单元（CPU）、主存储器和输入/输出子系统。
+中央处理单元 用于数据的运算。在大多数体系结构中，它有3个组成部分：算术逻辑单元（ALU）、控制单元、寄存器组、快速存储定位。
+  算术逻辑单元
+对数据进行逻辑、移位和算术运算。
+  寄存器
+用来存放临时数据的高速独立的存储单元。
+  控制单元
+控制各个子系统的操作。控制是通过从控制单元到其他子系统的信号来进行。
+  主存储器 是存储单元的集合，每一个存储单元都有唯一的标识，称为地址。</description>
+    </item>
+    
+    <item>
+      <title>线程和进程</title>
+      <link>https://taoziyu97.github.io/fr/english/post/2021-5-24_threads_and_processes/</link>
+      <pubDate>Mon, 24 May 2021 15:40:24 +0600</pubDate>
+      
+      <guid>https://taoziyu97.github.io/fr/english/post/2021-5-24_threads_and_processes/</guid>
+      <description>引言 看了一下廖雪峰的官方网站中对多线程和多进程的讲解，写的真是又简洁又明了，结合今天workshop中zk提到的并行计算，简单汇总写个学习笔记。
+操作系统可以同时执行多任务，比如同时运行浏览器、QQ和word，CPU执行代码是按照顺序一条条的执行。
+操作系统执行多任务是让CPU对多个任务轮流进行交替执行，比如让浏览器执行0.1秒，让word执行0.1秒。
+不管是单核还是多核的CPU，都可以同时运行多个任务，单核CPU执行任务交替进行，多核CPU在任务数量多于CPU的核数时，也是交替执行任务。
+一、进程 计算机中一个任务为一个进程，浏览器是一个进程，word也是一个进程。部分进程内部需要同时执行多个子任务，比如使用word一边打字一边检查拼写，一边后台打印，子任务就是线程。
+操作系统调度的最小任务单位是线程。由于一个应用程序可以有，多个进程，也可以有多个线程，实现任务的方法包括：
+多进程模式（每个进程只有一个线程）：
+  多线程模式（一个进程有多个线程）：
+  多进程＋多线程模式（复杂度最高）：
+  二、线程 线程包含在进程内，多任务既可以多进程来实现，也可以单进程内的多线程实现，也可以混合多进程和多线程。
+和多线程相比，多进程的缺点在于：
+ 创建进程比创建线程开销大，尤其是在Windows系统上； 进程间通信比线程间通信要慢，因为线程间通信就是读写同一个变量，速度很快。  多进程的优点在于：
+多进程稳定性比多线程高，因为在多进程的情况下，一个进程崩溃不会影响其他进程，而在多线程的情况下，任何一个线程崩溃会直接导致整个进程崩溃。
+多线程编程的特点在于：
+ 经常需要读写共享数据，并且需要同步，比如播放电影时一个线程播视频，一个线程播音频，两个线程需要协调运行保持音画同步，因此多线程编程的复杂度高，调试更困难。  三、串行，并发与并行   串行 多个任务，执行时一个执行完再执行另一个。
+  并发 多个线程在单个核心运行，同一时间一个线程运行，系统不停切换线程，看起来像同时运行，实际上是线程不停切换。
+  并行 每个线程分配给独立的核心，线程同时运行。
+  四、CPU与核心  物理核  物理核数量=cpu数(机子上装的cpu的数量)*每个cpu的核心数</description>
+    </item>
+    
+  </channel>
+</rss>
