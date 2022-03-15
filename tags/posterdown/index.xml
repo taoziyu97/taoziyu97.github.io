@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>posterdown on LogBook | Hugo Personal Blog Template</title>
+    <title>posterdown on Ziyu&#39;s Blog | Welcome to my world!</title>
     <link>https://taoziyu97.github.io/tags/posterdown/</link>
-    <description>Recent content in posterdown on LogBook | Hugo Personal Blog Template</description>
+    <description>Recent content in posterdown on Ziyu&#39;s Blog | Welcome to my world!</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Design By [Themefisher](https://themefisher.com/) Develop By [Gethugothemes](https://gethugothemes.com/)</copyright>
@@ -19,8 +19,7 @@
  目前支持的三种模板风格
  2. 创建海报 2.1 创建模板 直接通过新建R Markdown文件，选择posterdown模板则自动导入模板代码，如下：
  创建模板
- 2.2 添加内容 按照R Markdown语法进行代码块、图片、文字等等的添加，通过点击knit进行渲染，查看在模板基础上更改的内容。点击knit后自动生成包含html在内的如下文件：
-. ├── A\ Better\ Reproducible\ Poster\ Title.pdf ├── packages.bib ├── poster.Rmd ├── poster.html └── poster_files  ├── figure-html  │ ├── irisfigure-1.png  │ └── myprettycode-1.png  ├── header-attrs-2.11  │ └── header-attrs.</description>
+ 2.2 添加内容 按照R Markdown语法进行代码块、图片、文字等等的添加，通过点击knit进行渲染，查看在模板基础上更改的内容。点击knit后自动生成包含html在内的如下文件：</description>
     </item>
     
   </channel>

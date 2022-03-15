@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>BUG on LogBook | Hugo Personal Blog Template</title>
+    <title>BUG on Ziyu&#39;s Blog | Welcome to my world!</title>
     <link>https://taoziyu97.github.io/tags/bug/</link>
-    <description>Recent content in BUG on LogBook | Hugo Personal Blog Template</description>
+    <description>Recent content in BUG on Ziyu&#39;s Blog | Welcome to my world!</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Design By [Themefisher](https://themefisher.com/) Develop By [Gethugothemes](https://gethugothemes.com/)</copyright>
@@ -20,9 +20,7 @@
   使用whl安装发现没有对应python3.9的版本
   根据版本推测1.5.1不能在python3.9安装
   重建新环境，安装python3.8，进而安装1.5.1
-  成功
-  具体实施 使用sigprofilerextractor发现报错如下：
-ERROR: Could not find a version that satisfies the requirement torch==1.5.1 (from sigprofilerextractor) (from versions: 0.1.2, 0.1.2.post1, 0.1.2.post2, 1.7.1, 1.8.0, 1.8.1) ERROR: No matching distribution found for torch==1.</description>
+  成功</description>
     </item>
     
   </channel>

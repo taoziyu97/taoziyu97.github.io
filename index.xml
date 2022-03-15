@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>LogBook | Hugo Personal Blog Template</title>
+    <title>Ziyu&#39;s Blog | Welcome to my world!</title>
     <link>https://taoziyu97.github.io/</link>
-    <description>Recent content on LogBook | Hugo Personal Blog Template</description>
+    <description>Recent content on Ziyu&#39;s Blog | Welcome to my world!</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Design By [Themefisher](https://themefisher.com/) Develop By [Gethugothemes](https://gethugothemes.com/)</copyright>
@@ -16,10 +16,7 @@
       <guid>https://taoziyu97.github.io/post/2022-2-24_caret1/</guid>
       <description>介绍机器学习R包。
 1. 数据分割 基于输出变量的分割 在建模之前，需要对样本数据进行分割分为训练集和测试集。在之前建模过程中，我发现我使用sample进行分割存在一定的问题，比如我分割出来的数据中response的占比在训练集和测试集中差别很大等等。caret包中可以解决这个问题，通过设置p值，同时确定训练集和测试集的占比，并各个因子水平下取占比（表述的有点问题）。
-createDataPartition(y, times = 1, p = 0.5, list = TRUE, groups = min(5, length(y))) 2. 预处理 2.1 虚拟变量处理 数据预处理又包括：对因子型变量进行虚拟变量处理（比如response在数据中是yes或no的形式表示，那么可以在这一步转换为虚拟变量0,1，这一步骤尤其适合多个因子型变量都需要处理的情况，可以节约时间）；
-caret包假定所有的数据都是数值型的，比如因子型的可以通过model.matrix和dummyVars转换为dummy的变量。 dummyVars：
-dummyVars(formula, data, sep = &amp;#34;.&amp;#34;, levelsOnly = FALSE, fullRank = FALSE, ...) predict(object, newdata, na.action = na.pass, ...) formula：y~x1+x2，公式右边需要处理为哑变量的因子型变量，不确定哪些是因子型变量的话，可以直接使用y~.来制定所有的列，自动把因子型变量的进行处理。
-2.2 近零方差变量的删除 比如有些变量存在一些很特殊的值，这些值的占比很少，假设response中yes的为99个，no的为1个，那么一些模型来说，模型会崩溃(crash)或者fit to be unstable.</description>
+createDataPartition(y, times = 1, p = 0.5, list = TRUE, groups = min(5, length(y))) 2. 预处理 2.</description>
     </item>
     
     <item>
@@ -30,8 +27,7 @@ dummyVars(formula, data, sep = &amp;#34;.&amp;#34;, levelsOnly = FALSE, fullRank
       <guid>https://taoziyu97.github.io/post/2022-2-24_mlr31/</guid>
       <description>介绍机器学习R包mlr3，该包提供了分类、回归、生存分析以及其他的机器学习任务，包含超参的调节以及特征的选择，本地支持很多操作的并行化。
 1. mlr3 Quickstart install.packages(&amp;#34;mlr3&amp;#34;) 对iris数据集的前120行训练一个决策树，并且对后30行进行最终的预测，最后判断预测模型的准确性。
-library(&amp;#34;mlr3&amp;#34;) task = tsk(&amp;#34;iris&amp;#34;) learner = lrn(&amp;#34;classif.rpart&amp;#34;)  # train a model of this learner for a subset of the task learner$train(task, row_ids = 1:120) # this is what the decision tree looks like learner$model 预测
-predictions = learner$predict(task, row_ids = 121:150) predictions 准确性</description>
+library(&amp;#34;mlr3&amp;#34;) task = tsk(&amp;#34;iris&amp;#34;) learner = lrn(&amp;#34;classif.rpart&amp;#34;)  # train a model of this learner for a subset of the task learner$train(task, row_ids = 1:120) # this is what the decision tree looks like learner$model 预测</description>
     </item>
     
     <item>
@@ -46,9 +42,7 @@ predictions = learner$predict(task, row_ids = 121:150) predictions 准确性</de
   函数名尽可能是动词，不过相比使用get、compute、calculate、 determine这样宽泛的动词来说，名词相对更好，函数的参数尽可能是名词。想到好的名字随时去更改掉它。
   当函数名包含很多单词时，可以统一选取一种使用，可以使用snake_case，或者camelCase的形式，两者不要混着用。
   同类的功能名称保持一定的一致性。
-  # Good input_select() input_checkbox() input_text()  # Not so good select_input() checkbox_input()   尽量避免和已有的函数名称重复，尤其是基本包里的。
-  习惯使用注释把文件分割，快捷键是：cmd/ctrl + shift + R
-  # Load data --------------------------------------  # Plot data -------------------------------------- 1.</description>
+  # Good input_select() input_checkbox() input_text()  # Not so good select_input() checkbox_input()   尽量避免和已有的函数名称重复，尤其是基本包里的。</description>
     </item>
     
     <item>
@@ -60,13 +54,7 @@ predictions = learner$predict(task, row_ids = 121:150) predictions 准确性</de
       <description>R包开发的各种细节。
 1. 命名   尽量避免同时使用大小写字母
   使用该包测试命名是否能用（？？？）。
-  library(available) available(&amp;#34;doofus&amp;#34;) 2. 依赖包 如果只是使用其他的包中的少量函数时，建议在DESCRIPTION文件中的Imports:中标注包的名称，并且在使用函数过程中使用pkg::fun()。如果需要重复使用函数，可以避免繁琐的::可以@importFrom pkg fun，这样可以更快速，因为::增加了5us去使用函数，管道符号也可以使用同样的方法使用@importFrom magrittr %&amp;gt;%。如果重复使用很多其他包中的函数，可以把这个包中所有的函数全部导入@import pkg，不过这样会使得包的代码比较不容易阅读。
-Imports部分并不是把function导入到namespace中，它只确保包的安装。无论是否附加包，您都需要以完全相同的方式导入函数。
-在DESCRIPTION中对依赖包进行注释：
-Imports: randomForest, stats 在函数中使用依赖包中的函数时，需要标注pkg::fun。
- 是在roxygen注释中添加@import pkg。这种方法会在R包的NAMESPACE文件中添加import域，在加载R包时，第三方包的所有函数都会被导入。在使用函数时必须用pkg::fun的方法，以防函数名冲突。第二种方法，是在roxygen注释中添加@importFrom pkg fun。这种方法会在NAMESPACE文件中添加importFrom域，在使用时可以直接使用函数名，就像在.GlobalEnv中创建的函数一样。这里推荐第二种引用方法，因为可以大幅减少函数冲突。
- check之后存在warning：
-&amp;gt; checking dependencies in R code ... WARNING &amp;#39;::&amp;#39; or &amp;#39;:::&amp;#39; imports not declared from: ‘cli’ ‘dplyr’ ‘furrr’ ‘future’ ‘purrr’ ‘tibble’ 它说的是:&amp;rsquo;::&amp;lsquo;或&amp;rsquo;:::&amp;rsquo; import没有从‘cli’ ‘dplyr’ ‘furrr’ ‘future’ ‘purrr’ ‘tibble’中声明。这里重要的词是“import”。就像我们在包中导出函数一样，我们需要明确何时在另一个包中使用函数。为此，我们可以使用usethis::use_package()。</description>
+  library(available) available(&amp;#34;doofus&amp;#34;) 2. 依赖包 如果只是使用其他的包中的少量函数时，建议在DESCRIPTION文件中的Imports:中标注包的名称，并且在使用函数过程中使用pkg::fun()。如果需要重复使用函数，可以避免繁琐的::可以@importFrom pkg fun，这样可以更快速，因为::增加了5us去使用函数，管道符号也可以使用同样的方法使用@importFrom magrittr %&amp;gt;%。如果重复使用很多其他包中的函数，可以把这个包中所有的函数全部导入@import pkg，不过这样会使得包的代码比较不容易阅读。</description>
     </item>
     
     <item>
@@ -80,13 +68,7 @@ Imports: randomForest, stats 在函数中使用依赖包中的函数时，需要
   第三章 为包开发准备系统
   第四章 包的基本结构，不同的状态下结构不同（？）
   第五章 回顾核心的工作流程，介绍核心工具之间的联系：devtools和usethis，Rstudio
-  其余章节 开发细节
-  通过示例入门 1. 在制定路径下新建R包，创建了新的项目 先安装一些包
-install.packages(c(&amp;#34;devtools&amp;#34;, &amp;#34;roxygen2&amp;#34;, &amp;#34;testthat&amp;#34;, &amp;#34;knitr&amp;#34;)) library(usethis) create_package(&amp;#34;/Volumes/home /project/Immarker&amp;#34;) 目录下有这些文件
-    .Rbuildignore
-  .Rproj.user
-  DESCRIPTION 文档说明
-  NAMESPACE 列出了外部和内部使用到的函数</description>
+  其余章节 开发细节</description>
     </item>
     
     <item>
@@ -101,8 +83,7 @@ install.packages(c(&amp;#34;devtools&amp;#34;, &amp;#34;roxygen2&amp;#34;, &amp;
   批量读入数据并合并
   RData和rds的储存形式
   read.csv和read.csv2的区别
-  Excel文件的读入 在R语言实战实战这本书中表示，读取Excel文件最好的方式，是在Excel中将其导出为一个逗号分隔文件（csv），并使用读取csv的方法读取数据。或者采用xlsx包直接读取数据。xlsx包可以用来对Exceln97/2000/XP/2003/2007文件进行读取、写入和格式转换。还可以使用readxl包来读取Excel的.xls和.xlsx文件。
-read_xlsx(path, sheet = NULL, range = NULL, col_names = TRUE, col_types = NULL, na = &amp;#34;&amp;#34;, trim_ws = TRUE, skip = 0, n_max = Inf, guess_max = min(1000, n_max), progress = readxl_progress(), .</description>
+  Excel文件的读入 在R语言实战实战这本书中表示，读取Excel文件最好的方式，是在Excel中将其导出为一个逗号分隔文件（csv），并使用读取csv的方法读取数据。或者采用xlsx包直接读取数据。xlsx包可以用来对Exceln97/2000/XP/2003/2007文件进行读取、写入和格式转换。还可以使用readxl包来读取Excel的.</description>
     </item>
     
     <item>
@@ -116,18 +97,7 @@ read_xlsx(path, sheet = NULL, range = NULL, col_names = TRUE, col_types = NULL, 
 （3）由于正在进行的亚克隆进化，癌细胞群可能是异质性的。
 理论上，如果知道每个肿瘤细胞中DNA的含量，则可通过测得的相对拷贝数获得绝对拷贝数，或者通过单细胞测序技术解决。
 2. 芯片原始原始数据格式.CEL 对于芯片数据来说，Affymetrix SNP芯片的原始文件为CEL文件，一个CEL文件即是一个个体的全部SNP分型结果。Affymetrix基因芯片是一种生物芯片，它包含一个对一个实验有效的微阵列。为了制造这些芯片，玻璃或硅载玻片上排列有探针，根据它们是否与原始DNA样本互补，探针将表达水平(强度)报告为完全匹配(PM)和不匹配(MM)值。.CEL文件格式有多个版本，使用不同的格式。例如，版本3使用ASCII文本格式，而版本4使用二进制格式。 注意：.CEL 文件需要相应的.CDF 文件，它是存储在.CEL文件中的原始探测级数据的字典。MATLAB有一个名为affyread的内置函数，可以用来读取Windows版本软件中的.CEL 文件。
-3. SNP6.0拷贝数变异检测流程 这里介绍Affymetrix SNP6 Copy Number Inference Pipeline。
-输入：CEL文件
-输出：每个样本的片段化的拷贝数结果：genotype calls；相对的拷贝数数值且经过标准化处理，使得每个样本接近双倍体；拷贝数变异区域
-流程：
-  校准信号强度
-  计算基因型
-  将信号强度转换为拷贝数数值
-  计算拷贝数噪音
-  移除离群的探针减少噪音
-  通过减去一组预先定义的正常样本中的变化，进一步降低噪声
-  将拷贝数片段化
-  计算基因组中片段的数量，并与定义的阈值进行比较，以检查超分割情况</description>
+3. SNP6.0拷贝数变异检测流程 这里介绍Affymetrix SNP6 Copy Number Inference Pipeline。</description>
     </item>
     
     <item>
@@ -142,15 +112,7 @@ read_xlsx(path, sheet = NULL, range = NULL, col_names = TRUE, col_types = NULL, 
   Battenberg
   CloneHD
   JaBbA
-  Sclust
-  由于拷贝数结果的不同取决于segmentation的不同，而对大部分基因组的拷贝数状态的分歧来自于是否发生了整个基因组复制的分歧。因此针对6种方法中的5种首先构建了完整的断点数据，针对一致的断点数据使用6种方法得到拷贝数变异结果，解决了倍性结果的不统一后，对6种方法得到的每个segment寻求major allele和minor allele的状态的一致性，最后对每个肿瘤综合6种方法得到纯度结果，对每种方法都给予置信区间和质量星号：克隆性通过（3星），多数投票同意，协议后四舍五入亚克隆拷贝数（2星），调用最好的方法（1星）。3星代表结果非常一致，1星则是结果不那么一致的情况下选一种方法的结果输出。这样来得到最终的完整的拷贝数图谱，包含以下所有列：
-major_cn minor_cn position sampleID star total_cn value 工具介绍 1. ABSOLUTE 使用ABSOLUTE算法计算每个样本的纯度、倍性以及绝对DNA拷贝数，在基因组上收集基于片段的覆盖度(来自完整的阅读模板跨度)在基因组上收集，并校正GC含量和匹配偏差。【？】使用PCAWG的正常样本来进行切线归一化(tangent-normalization)处理。基于杂合性位点计算位点特异的拷贝数，使用CBS算法来得到segmentation。采用Nelder-Mead算法搜索可能的纯度和倍性解的空间，并对它们进行排序。对亚克隆拷贝数片段进行Dirichlet过程聚类，以标注相同的亚克隆拷贝数聚类状态。
-2. ACEseq 使用ACEseq计算绝对拷贝数，肿瘤纯度，并估计肿瘤细胞内容，通过结合肿瘤和基因组窗中匹配的正常基因的覆盖率以及相应SNPs的b等位基因频率(BAF)来确定绝对拷贝数。基因组使用PSBCBS包得到segmentation，在分割之前，结构变异断点通过一致的结构变异数据判断，
-利用PSCBS包将基因组分割为平等覆盖和不平衡状态的区域，在分割之前，将共识结构变异集定义的结构变异断点合并成片段边界，片段提交到共识断点估计集，通过共识断点得到的片段使用覆盖度和BAF值注释来估计样本的肿瘤细胞内容和倍性。
-注：配对的双亲特定CBS(配对的PSCBS)算法利用了CBS方法用于将总CN数据分割为来自SNP阵列的2D非阶段数据。该算法依赖于配对测试(肿瘤)和参考(正常)样本杂交到单独的阵列。
-3. Battenberg 使用Battenberg得到绝对拷贝数。针对每个SNP计算BAF和相对logR值，使用GC含量矫正logR值，匹配的正常样本用来获得种系的杂合性SNP，使用分段常数拟合(PCF)对数据进行分段，将结构变异(sv)作为先前建立的中断点，通过对纯度和倍性组合进行网格搜索，拟合克隆拷贝数图谱。
-4. CloneHD 使用CloneHD得到绝对拷贝数。cloneHD使用了隐马尔可夫模型来描述样本的拷贝数状态。cloneHD流程的第一步使用的是filterHD算法，filterHD不寻求解释数据中的亚克隆结构，是一种用于模糊分割的通用算法，是一个通用的一维离散数据概率滤波算法，类似于卡尔曼滤波。它是一个具有泊松或二项发射和跳跃扩散传播子的连续状态空间隐马尔可夫模型。它可以用于无标度平滑、模糊数据分割和数据滤波。
-5. JaBbA JaBbA整合paire-end和read depth信号来推断基因组间隔的拷贝数以及重构junction。在PCAWG共识拷贝数分析中，使用了两轮JaBbA，JbBbA的输入数据是bam文件，junction call set，以及初步分割（可选）和纯度/倍性输入，针对初步分割的结果，进一步使用CBS算法来分割得到低维度的常数拷贝数区域。</description>
+  Sclust</description>
     </item>
     
     <item>
@@ -164,8 +126,7 @@ major_cn minor_cn position sampleID star total_cn value 工具介绍 1. ABSOLUTE
  目前支持的三种模板风格
  2. 创建海报 2.1 创建模板 直接通过新建R Markdown文件，选择posterdown模板则自动导入模板代码，如下：
  创建模板
- 2.2 添加内容 按照R Markdown语法进行代码块、图片、文字等等的添加，通过点击knit进行渲染，查看在模板基础上更改的内容。点击knit后自动生成包含html在内的如下文件：
-. ├── A\ Better\ Reproducible\ Poster\ Title.pdf ├── packages.bib ├── poster.Rmd ├── poster.html └── poster_files  ├── figure-html  │ ├── irisfigure-1.png  │ └── myprettycode-1.png  ├── header-attrs-2.11  │ └── header-attrs.</description>
+ 2.2 添加内容 按照R Markdown语法进行代码块、图片、文字等等的添加，通过点击knit进行渲染，查看在模板基础上更改的内容。点击knit后自动生成包含html在内的如下文件：</description>
     </item>
     
     <item>
@@ -192,9 +153,7 @@ major_cn minor_cn position sampleID star total_cn value 工具介绍 1. ABSOLUTE
       
       <guid>https://taoziyu97.github.io/post/2021-11-26_statistic-lsa/</guid>
       <description>引言 潜在语义分析（Latent sematic analysis, LSA）是一种无监督的学习方法。特点是通过矩阵分解来完成，使用的是非概率的话题分析模型，可以通过奇异值分解的方法进行矩阵因子分解，特点是分解的矩阵正交，非负矩阵分解是另一种矩阵的因子分解方法，特点是分解的矩阵非负。
-1. 单词向量空间和话题向量空间 1.1 单词向量空间 给定一个含有$n$个文本的集合$D=\left { d_1,d_2,&amp;hellip;,d_n \right }$，在所有文本中出现的$m$个单词的集合$W=\left { w_1,w_2,&amp;hellip;,w_m \right }$，将单词在文本中出现的数据用一个单词-文本矩阵表示，记作$X$: $$ \begin{bmatrix} x_{11} &amp;amp;x_{12} &amp;amp;&amp;hellip; &amp;amp;x_{1n} \ x_{21} &amp;amp;x_{22} &amp;amp;&amp;hellip; &amp;amp;x_{2n} \ \vdots &amp;amp;\vdots &amp;amp; &amp;amp;\vdots \ x_{m1} &amp;amp;x_{m2} &amp;amp;&amp;hellip; &amp;amp;x_{mn} \end{bmatrix} $$
-元素$x_{ij}$表示单词$w_i$在文本$d_j$中出现的频数或权值，由于单词的种类很多，每个文本出现单词的种类通常较少，所以单词-文本矩阵是一个稀疏矩阵。
-权值通常用单词频率-逆文本频率（TF-IDF）表示，定义是： $$ TFIDF_{ij}=\frac{tf_{ij}}{tf_{·j}}log\frac{df}{df_i} \space i=1,2,&amp;hellip;,m; \space j=1,2,&amp;hellip;,n $$ $\frac{tf_{ij}}{tf_{·j}}$表示单词$w_i$出现在文本$d_j$中的频数比上文本$d_j$中出现的所有单词的频数之和，一个单词在一个文本中出现的频数越高，这个单词在文本中的重要度就越高；$\frac{df}{df_i}$表示全部文本数比上含有单词$w_i$的文本数，一个单词在整个文本集合中出现的文本数越少，这个单词就越能代表其所在文本的特点，重要度就越高。TF-IDF是两种重要度的积，表示综合重要度。</description>
+1. 单词向量空间和话题向量空间 1.1 单词向量空间 给定一个含有$n$个文本的集合$D=\left { d_1,d_2,&amp;hellip;,d_n \right }$，在所有文本中出现的$m$个单词的集合$W=\left { w_1,w_2,&amp;hellip;,w_m \right }$，将单词在文本中出现的数据用一个单词-文本矩阵表示，记作$X$: $$ \begin{bmatrix} x_{11} &amp;amp;x_{12} &amp;amp;&amp;hellip; &amp;amp;x_{1n} \ x_{21} &amp;amp;x_{22} &amp;amp;&amp;hellip; &amp;amp;x_{2n} \ \vdots &amp;amp;\vdots &amp;amp; &amp;amp;\vdots \ x_{m1} &amp;amp;x_{m2} &amp;amp;&amp;hellip; &amp;amp;x_{mn} \end{bmatrix} $$</description>
     </item>
     
     <item>
@@ -205,14 +164,7 @@ major_cn minor_cn position sampleID star total_cn value 工具介绍 1. ABSOLUTE
       <guid>https://taoziyu97.github.io/post/2021-11-19_hmm/</guid>
       <description>引言 1. 马尔可夫模型的基本概念 来对2段氨基酸序列x和y进行残基比对，认为存在3种比对关系的状态：
  M：残基能够比对上但不一定相等 X：序列x的残基比对到1个空位，或x上发生了1次插入 Y：序列y的残基比对到1个空位，或y上发生了1次插入  序列比对就是在上述3个状态中不断转换的过程：
- $M(i,j)$ : $x_i$比对到$y_j$时，序列x从1到$i$和序列$y$从1到$j$最好的比对分数 $X(i,j)$ : $x_i$比对到空位时，序列x从1到$i$最好的比对分数 $Y(i,j)$ : $y_j$比对到空位时，序列y从1到$j$最好的比对分数  转移（从一个状态到另外一个状态）概率：
-$$ a_{kl} = P (X_t=S_l|X_{t-1}=S_k) $$
-$$ a_{lk} = P (X_t=S_k|X_{t-1}=S_l) $$
-转移矩阵：
- 
- 设定：
- $\delta$ ：Gap open（d）的概率 $\epsilon$ ：Gap extension（e）的概率   马尔可夫链
- 先根据转移概率得到一个转移概率矩阵：</description>
+ $M(i,j)$ : $x_i$比对到$y_j$时，序列x从1到$i$和序列$y$从1到$j$最好的比对分数 $X(i,j)$ : $x_i$比对到空位时，序列x从1到$i$最好的比对分数 $Y(i,j)$ : $y_j$比对到空位时，序列y从1到$j$最好的比对分数  转移（从一个状态到另外一个状态）概率：</description>
     </item>
     
     <item>
@@ -222,7 +174,7 @@ $$ a_{lk} = P (X_t=S_k|X_{t-1}=S_l) $$
       
       <guid>https://taoziyu97.github.io/post/2021-11-17_docall/</guid>
       <description>引言 使用do.call批量读入文件并合并。
-1. 基本处理步骤 source_dir &amp;lt;- &amp;#34;文件所在路径&amp;#34; file &amp;lt;- list.files(  path = source_dir,  pattern = &amp;#34;*.txt&amp;#34;, # 目标文件夹下需要的文件的格式  all.files = F,  full.names = F,  recursive = F,  include.dirs = F ) allfile &amp;lt;- lapply(file, function(x){read.csv2(paste0(source_dir, x), sep = &amp;#34;\t&amp;#34;)}) combine &amp;lt;- do.call(rbind, allfile) 2. 涉及到的需求和参数设定   文件名作为新列补充进数据框</description>
+1. 基本处理步骤 source_dir &amp;lt;- &amp;#34;文件所在路径&amp;#34; file &amp;lt;- list.files(  path = source_dir,  pattern = &amp;#34;*.txt&amp;#34;, # 目标文件夹下需要的文件的格式  all.</description>
     </item>
     
     <item>
@@ -243,7 +195,7 @@ $$ a_{lk} = P (X_t=S_k|X_{t-1}=S_l) $$
       <guid>https://taoziyu97.github.io/post/2021-7-24_stringr_stringi/</guid>
       <description>引言 stringr包是建立在stringi上的，stringi包使用ICU C库提供准确、快速的常见字符串操作，stringr提供了最重要和最常用的字符串处理函数。
 stringr stringr包中所有的函数都以str_开头，第一个参数为字符串向量。对应的在base函数中也有功能一致的函数，记得对比两者之间的异同。
-1. 找到自己需要的数据 tcga_mut &amp;lt;- read.csv2(&amp;#34;/home/tzy/projects/CNX-method/data/TCGA/mc3.v0.2.8.PUBLIC.nonsilentGene.xena&amp;#34;,sep = &amp;#34;\t&amp;#34;)  saveRDS(tcga_mut, file = &amp;#34;/home/tzy/projects/CNX-method/data/TCGA/tcga_mut.rds&amp;#34;) save(tcga_mut, file = &amp;#34;/home/tzy/projects/CNX-method/data/TCGA/tcga_mut.RData&amp;#34;) 参考  biostars-How to install gdc-client in Ubnutu  </description>
+1. 找到自己需要的数据 tcga_mut &amp;lt;- read.csv2(&amp;#34;/home/tzy/projects/CNX-method/data/TCGA/mc3.v0.2.8.PUBLIC.nonsilentGene.xena&amp;#34;,sep = &amp;#34;\t&amp;#34;)  saveRDS(tcga_mut, file = &amp;#34;/home/tzy/projects/CNX-method/data/TCGA/tcga_mut.rds&amp;#34;) save(tcga_mut, file = &amp;#34;/home/tzy/projects/CNX-method/data/TCGA/tcga_mut.</description>
     </item>
     
     <item>
@@ -259,8 +211,7 @@ stringr stringr包中所有的函数都以str_开头，第一个参数为字符�
 下载了MAC的Client版本
 2. 安装 解压下载的文件，如果双击会发现出现erro：
 且常规的对~/.bash_profile文件添加环境变量也不可以，正确做法是：
-./gdc-client #(to verify that program works) cp -pi ./gdc-client /usr/local/bin #(if this does not work) sudo cp -pi ./gdc-client /usr/local/bin 在任何路径都可以打开。
-3. 使用  下载单个文件  gdc-client download id  下载多个文件  将含有多个文件的id和名字等信息的页面存储为txt，download加上-m，进行批量下载。</description>
+./gdc-client #(to verify that program works) cp -pi .</description>
     </item>
     
     <item>
@@ -281,7 +232,7 @@ stringr stringr包中所有的函数都以str_开头，第一个参数为字符�
       <guid>https://taoziyu97.github.io/post/2021-6-8_comment/</guid>
       <description>步骤 1. 配置Leancloud 这部分详细参考：hugo博客添加评论系统Valine
 2. 更改 comments.html 文件 将整体内容替换成如下代码：
-&amp;lt;!-- valine change from origin code--&amp;gt;  {{- if .Site.Params.valine.enable -}}  &amp;lt;!-- id 将作为查询条件 --&amp;gt;   &amp;lt;div id=&amp;#34;vcomments&amp;#34;&amp;gt;&amp;lt;/div&amp;gt;  &amp;lt;script src=&amp;#34;//cdn1.lncld.net/static/js/3.0.4/av-min.js&amp;#34;&amp;gt;&amp;lt;/script&amp;gt;  &amp;lt;script src=&amp;#39;//unpkg.com/valine/dist/Valine.min.js&amp;#39;&amp;gt;&amp;lt;/script&amp;gt;   &amp;lt;script type=&amp;#34;text/javascript&amp;#34;&amp;gt;  new Valine({  el: &amp;#39;#vcomments&amp;#39; ,  appId: &amp;#39;{{ .Site.Params.valine.appId }}&amp;#39;,  appKey: &amp;#39;{{ .</description>
+&amp;lt;!-- valine change from origin code--&amp;gt;  {{- if .Site.Params.valine.enable -}}  &amp;lt;!</description>
     </item>
     
     <item>
@@ -292,8 +243,7 @@ stringr stringr包中所有的函数都以str_开头，第一个参数为字符�
       <guid>https://taoziyu97.github.io/post/2021-6-8_toc/</guid>
       <description>引言 根据hugo-future-imperfect-slim主题中issue提到的TOC更改版本，改进后进行配置应用。
 步骤 1. 更改 config.html 文件 在[params] 内容下加入以下参数：
- toc = true # 默认显示toc  tocWords = 400 #超过400字显示toc 2. 更改 main.scss 文件 添加TableOfContents：
-#TableOfContents {  border: $secondary-border;   ul {  list-style-type: none;  padding-inline-start: 1.5em;  } } /* ==========================================================================  Add-Ons  ========================================================================== */  /* reCaptcha */ 3.</description>
+ toc = true # 默认显示toc  tocWords = 400 #超过400字显示toc 2.</description>
     </item>
     
     <item>
@@ -308,14 +258,7 @@ stringr stringr包中所有的函数都以str_开头，第一个参数为字符�
   搜索中文优化，目前速度较慢
   更改归档页面时间0001
   每篇博文的分享页面超链接到对应网址
-      删除不需要的语言支持，只保留英文和中文
-  增加评论功能Valine（已完成）
-  参考：https://www.smslit.top/2018/07/08/hugo-valine/
-    分类更加细化，最好能有层层分类
-  ABOUT页面填充自己的个人信息
-  翻页添加页码
-  博文添加目录（已完成）
-  2. 博客整体美观   每个博文的图片选取大小合适的</description>
+      删除不需要的语言支持，只保留英文和中文</description>
     </item>
     
     <item>
@@ -327,8 +270,7 @@ stringr stringr包中所有的函数都以str_开头，第一个参数为字符�
       <description>引言 hugo没有自带的归档设置，需要手动添加。
 操作步骤   在taozy_blog/layouts/_default/目录下创建 archives.html 文件
   将taozy_blog/layouts/_default/目录下的 single.html 内容复制进 archives.html 文件（single.html的格式就是每篇博文的格式，也可以采用主题的contact.html的格式或者about.html的格式）
-  找到archives.html 文件中的{{ .Content }} 替换为下面的内容:
-  {{ range (.Site.RegularPages.GroupByDate &amp;#34;2006&amp;#34;) }}  &amp;lt;h3&amp;gt;{{ .Key }}&amp;lt;/h3&amp;gt;   &amp;lt;ul class=&amp;#34;archive-list&amp;#34;&amp;gt;  {{ range (where .Pages &amp;#34;Type&amp;#34; &amp;#34;blog&amp;#34;) }}  &amp;lt;li&amp;gt;  {{ .PublishDate.Format &amp;#34;2006-01-02&amp;#34; }}  -&amp;gt;  &amp;lt;a href=&amp;#34;{{ .</description>
+  找到archives.html 文件中的{{ .Content }} 替换为下面的内容:</description>
     </item>
     
     <item>
@@ -343,9 +285,7 @@ stringr stringr包中所有的函数都以str_开头，第一个参数为字符�
   使用whl安装发现没有对应python3.9的版本
   根据版本推测1.5.1不能在python3.9安装
   重建新环境，安装python3.8，进而安装1.5.1
-  成功
-  具体实施 使用sigprofilerextractor发现报错如下：
-ERROR: Could not find a version that satisfies the requirement torch==1.5.1 (from sigprofilerextractor) (from versions: 0.1.2, 0.1.2.post1, 0.1.2.post2, 1.7.1, 1.8.0, 1.8.1) ERROR: No matching distribution found for torch==1.</description>
+  成功</description>
     </item>
     
     <item>
@@ -376,14 +316,7 @@ ERROR: Could not find a version that satisfies the requirement torch==1.5.1 (fro
   多线程模式（一个进程有多个线程）：
   多进程＋多线程模式（复杂度最高）：
   二、线程 线程包含在进程内，多任务既可以多进程来实现，也可以单进程内的多线程实现，也可以混合多进程和多线程。
-和多线程相比，多进程的缺点在于：
- 创建进程比创建线程开销大，尤其是在Windows系统上； 进程间通信比线程间通信要慢，因为线程间通信就是读写同一个变量，速度很快。  多进程的优点在于：
-多进程稳定性比多线程高，因为在多进程的情况下，一个进程崩溃不会影响其他进程，而在多线程的情况下，任何一个线程崩溃会直接导致整个进程崩溃。
-多线程编程的特点在于：
- 经常需要读写共享数据，并且需要同步，比如播放电影时一个线程播视频，一个线程播音频，两个线程需要协调运行保持音画同步，因此多线程编程的复杂度高，调试更困难。  三、串行，并发与并行   串行 多个任务，执行时一个执行完再执行另一个。
-  并发 多个线程在单个核心运行，同一时间一个线程运行，系统不停切换线程，看起来像同时运行，实际上是线程不停切换。
-  并行 每个线程分配给独立的核心，线程同时运行。
-  四、CPU与核心  物理核  物理核数量=cpu数(机子上装的cpu的数量)*每个cpu的核心数</description>
+和多线程相比，多进程的缺点在于：</description>
     </item>
     
     <item>
@@ -398,15 +331,7 @@ p值是介于0-1之间的数字，量化我们相信两种药物不同的信心�
 p值能够帮助确定两种药物是否不同，但是不能告诉我们有什么不同，不管差异是都大还是小，都可以使用较小的p值，即较小的p值不代表差异是大还是小，只是代表意外的结果概率更小 。
  阈值0.05的由来  不出于逻辑或统计原因，只是科学惯例。
  术语：假阳性  指的是没有差异时却获得小的p值的情况。
- 术语：假设检验（Hypothesis testing）  试图确定这些药物是否相同的想法。
- 术语：零假设（Null Hypothesis）  零假设是药物相同，p值帮助我们决定是否拒绝零假设。
-统计显著性检验分支 分为以下两个主要的：
-  R.A.Fisher
-  Neyman and Pearson
-  控制假设检验的两类错误很重要：
- 第一类错误  无效说成有效（取伪）。
-第二类错误。  有效判成无效（弃真）。
-这两种错误不能同时消除，但是可以给出一种规范的决策过程来确保第一类错误的可能性只在预先确定的比率下发生（奈曼和皮尔逊），这个比率为显著性水平α（false positive rate），可以根据经验和期望基础设置合适的α，举例：</description>
+ 术语：假设检验（Hypothesis testing）  试图确定这些药物是否相同的想法。</description>
     </item>
     
     <item>
@@ -428,12 +353,7 @@ p值能够帮助确定两种药物是否不同，但是不能告诉我们有什�
       <description>引言  线性回归  假设数据包含 尺寸 和 重量 两组，根据这两组数据用 最小二乘法 拟合一条线后，我们可以做如下的事情：
   计算r平方来确定两个变量是否相关
   计算p值确定R平方是否具有统计显著性
-  用于预测，如果一个新鼠标有某重量，可以根据这个线来预测其大小
-  多元回归  假设用 体重 和 血容量 来预测大小，拟合曲线可做上述三个同样的事情，还可以用离散型数值来预测大小。
-比较模型  进行正态回归，使用权重来预测大小。
-逻辑回归 S型函数定义：
-  S 型函数会产生以下曲线图：
- y&amp;rsquo; 是逻辑回归模型针对特定样本的输出。 z 是 b + w1x1 + w2x2 + … wNxN w 的值是该模型学习的权重，b 是偏差。 x 的值是特定样本的特征值。  线性回归的损失函数是平方损失。逻辑回归的损失函数是对数损失函数。</description>
+  用于预测，如果一个新鼠标有某重量，可以根据这个线来预测其大小</description>
     </item>
     
     <item>
@@ -462,8 +382,7 @@ p值能够帮助确定两种药物是否不同，但是不能告诉我们有什�
       <pubDate>Sun, 15 Mar 2020 15:40:24 +0600</pubDate>
       
       <guid>https://taoziyu97.github.io/post/elements/</guid>
-      <description>Heading example Here is example of hedings. You can use this heading by following markdownify rules. For example: use # for heading 1 and use ###### for heading 6.
-Heading 1 Heading 2 Heading 3 Heading 4 Heading 5 Heading 6  Emphasis Emphasis, aka italics, with asterisks or underscores.</description>
+      <description>Heading example Here is example of hedings. You can use this heading by following markdownify rules. For example: use # for heading 1 and use ###### for heading 6.</description>
     </item>
     
     <item>
@@ -472,16 +391,18 @@ Heading 1 Heading 2 Heading 3 Heading 4 Heading 5 Heading 6  Emphasis Emphasis, 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://taoziyu97.github.io/elements/</guid>
-      <description>H1 Heading H2 Heading H3 Heading H4 Heading H5 Heading H6 Heading  Paragraph Did you come here for something in particular or just general Riker-bashing? And blowing into maximum warp speed, you appeared for an instant to be in two places at once. We have a saboteur aboard. We know you’re dealing in stolen ore.</description>
+      <description>H1 Heading H2 Heading H3 Heading H4 Heading H5 Heading H6 Heading  Paragraph Did you come here for something in particular or just general Riker-bashing?</description>
     </item>
     
     <item>
-      <title>Hi, I Am John Doe</title>
+      <title>Hi, I Am Ziyu Tao</title>
       <link>https://taoziyu97.github.io/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://taoziyu97.github.io/about/</guid>
-      <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Condimentum in urna justo elit turpis risus vitae viverra enim. Augue quis vitae in non nisi, posuere ultrices tempus. Feugiat consequat suspendisse laoreet vitae enim adipiscing cursus. Duis nunc vitae tincidunt sed nibh id. Egestas erat consequat, ornare etiam donec faucibus. Lorem ut enim nunc, senectus adipiscing sed.</description>
+      <description>上海科技大学在读博士生。
+研究方向：癌症基因组学。
+  Find your passion and then aim to be the best on the planet at what you do by having a ferocious hunger for learning.</description>
     </item>
     
     <item>
@@ -571,7 +492,7 @@ Heading 1 Heading 2 Heading 3 Heading 4 Heading 5 Heading 6  Emphasis Emphasis, 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://taoziyu97.github.io/author/john-doe/</guid>
-      <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sit amet vulputate augue. Duis auctor lacus id vehicula gravida. Nam suscipit vitae purus et laoreet. Donec nisi dolor, consequat vel pretium id, auctor in dui. Nam iaculis, neque ac ullamcorper. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sit amet vulputate augue.</description>
+      <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sit amet vulputate augue. Duis auctor lacus id vehicula gravida. Nam suscipit vitae purus et laoreet.</description>
     </item>
     
     <item>
@@ -589,7 +510,7 @@ Heading 1 Heading 2 Heading 3 Heading 4 Heading 5 Heading 6  Emphasis Emphasis, 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://taoziyu97.github.io/privacy-policy/</guid>
-      <description>Responsibility of Contributors Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus, donec nunc eros, ullamcorper id feugiat quisque aliquam sagittis. Sem turpis sed viverra massa gravida pharetra. Non dui dolor potenti eu dignissim fusce. Ultrices amet, in curabitur a arcu a lectus morbi id. Iaculis erat sagittis in tortor cursus.</description>
+      <description>Responsibility of Contributors Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus, donec nunc eros, ullamcorper id feugiat quisque aliquam sagittis.</description>
     </item>
     
     <item>
@@ -598,25 +519,7 @@ Heading 1 Heading 2 Heading 3 Heading 4 Heading 5 Heading 6  Emphasis Emphasis, 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://taoziyu97.github.io/terms-conditions/</guid>
-      <description>Responsibility of Contributors Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus, donec nunc eros, ullamcorper id feugiat quisque aliquam sagittis. Sem turpis sed viverra massa gravida pharetra. Non dui dolor potenti eu dignissim fusce. Ultrices amet, in curabitur a arcu a lectus morbi id. Iaculis erat sagittis in tortor cursus.</description>
-    </item>
-    
-    <item>
-      <title>Posts Archive</title>
-      <link>https://taoziyu97.github.io/archive/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://taoziyu97.github.io/archive/</guid>
-      <description>This page contains an archive of all posts.</description>
-    </item>
-    
-    <item>
-      <title>Posts Archive</title>
-      <link>https://taoziyu97.github.io/post/archive/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://taoziyu97.github.io/post/archive/</guid>
-      <description>This page contains an archive of all posts.</description>
+      <description>Responsibility of Contributors Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus, donec nunc eros, ullamcorper id feugiat quisque aliquam sagittis.</description>
     </item>
     
     <item>
@@ -635,6 +538,15 @@ Heading 1 Heading 2 Heading 3 Heading 4 Heading 5 Heading 6  Emphasis Emphasis, 
       
       <guid>https://taoziyu97.github.io/contact/</guid>
       <description>Ask Us Anything Or just Say Hi, Rather than just filling out a form, Sleeknote also offers help to the user with links directing them to find additional information or take popular actions.</description>
+    </item>
+    
+    <item>
+      <title>This page contains an archive of all posts</title>
+      <link>https://taoziyu97.github.io/archives/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://taoziyu97.github.io/archives/</guid>
+      <description></description>
     </item>
     
   </channel>

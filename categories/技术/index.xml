@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>技术 on LogBook | Hugo Personal Blog Template</title>
+    <title>技术 on Ziyu&#39;s Blog | Welcome to my world!</title>
     <link>https://taoziyu97.github.io/categories/%E6%8A%80%E6%9C%AF/</link>
-    <description>Recent content in 技术 on LogBook | Hugo Personal Blog Template</description>
+    <description>Recent content in 技术 on Ziyu&#39;s Blog | Welcome to my world!</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Design By [Themefisher](https://themefisher.com/) Develop By [Gethugothemes](https://gethugothemes.com/)</copyright>
@@ -16,7 +16,7 @@
       <guid>https://taoziyu97.github.io/post/2021-6-8_comment/</guid>
       <description>步骤 1. 配置Leancloud 这部分详细参考：hugo博客添加评论系统Valine
 2. 更改 comments.html 文件 将整体内容替换成如下代码：
-&amp;lt;!-- valine change from origin code--&amp;gt;  {{- if .Site.Params.valine.enable -}}  &amp;lt;!-- id 将作为查询条件 --&amp;gt;   &amp;lt;div id=&amp;#34;vcomments&amp;#34;&amp;gt;&amp;lt;/div&amp;gt;  &amp;lt;script src=&amp;#34;//cdn1.lncld.net/static/js/3.0.4/av-min.js&amp;#34;&amp;gt;&amp;lt;/script&amp;gt;  &amp;lt;script src=&amp;#39;//unpkg.com/valine/dist/Valine.min.js&amp;#39;&amp;gt;&amp;lt;/script&amp;gt;   &amp;lt;script type=&amp;#34;text/javascript&amp;#34;&amp;gt;  new Valine({  el: &amp;#39;#vcomments&amp;#39; ,  appId: &amp;#39;{{ .Site.Params.valine.appId }}&amp;#39;,  appKey: &amp;#39;{{ .</description>
+&amp;lt;!-- valine change from origin code--&amp;gt;  {{- if .Site.Params.valine.enable -}}  &amp;lt;!</description>
     </item>
     
     <item>
@@ -27,8 +27,7 @@
       <guid>https://taoziyu97.github.io/post/2021-6-8_toc/</guid>
       <description>引言 根据hugo-future-imperfect-slim主题中issue提到的TOC更改版本，改进后进行配置应用。
 步骤 1. 更改 config.html 文件 在[params] 内容下加入以下参数：
- toc = true # 默认显示toc  tocWords = 400 #超过400字显示toc 2. 更改 main.scss 文件 添加TableOfContents：
-#TableOfContents {  border: $secondary-border;   ul {  list-style-type: none;  padding-inline-start: 1.5em;  } } /* ==========================================================================  Add-Ons  ========================================================================== */  /* reCaptcha */ 3.</description>
+ toc = true # 默认显示toc  tocWords = 400 #超过400字显示toc 2.</description>
     </item>
     
     <item>
@@ -43,14 +42,7 @@
   搜索中文优化，目前速度较慢
   更改归档页面时间0001
   每篇博文的分享页面超链接到对应网址
-      删除不需要的语言支持，只保留英文和中文
-  增加评论功能Valine（已完成）
-  参考：https://www.smslit.top/2018/07/08/hugo-valine/
-    分类更加细化，最好能有层层分类
-  ABOUT页面填充自己的个人信息
-  翻页添加页码
-  博文添加目录（已完成）
-  2. 博客整体美观   每个博文的图片选取大小合适的</description>
+      删除不需要的语言支持，只保留英文和中文</description>
     </item>
     
     <item>
@@ -62,8 +54,7 @@
       <description>引言 hugo没有自带的归档设置，需要手动添加。
 操作步骤   在taozy_blog/layouts/_default/目录下创建 archives.html 文件
   将taozy_blog/layouts/_default/目录下的 single.html 内容复制进 archives.html 文件（single.html的格式就是每篇博文的格式，也可以采用主题的contact.html的格式或者about.html的格式）
-  找到archives.html 文件中的{{ .Content }} 替换为下面的内容:
-  {{ range (.Site.RegularPages.GroupByDate &amp;#34;2006&amp;#34;) }}  &amp;lt;h3&amp;gt;{{ .Key }}&amp;lt;/h3&amp;gt;   &amp;lt;ul class=&amp;#34;archive-list&amp;#34;&amp;gt;  {{ range (where .Pages &amp;#34;Type&amp;#34; &amp;#34;blog&amp;#34;) }}  &amp;lt;li&amp;gt;  {{ .PublishDate.Format &amp;#34;2006-01-02&amp;#34; }}  -&amp;gt;  &amp;lt;a href=&amp;#34;{{ .</description>
+  找到archives.html 文件中的{{ .Content }} 替换为下面的内容:</description>
     </item>
     
     <item>

@@ -8,9 +8,6 @@
     <loc>https://taoziyu97.github.io/categories/</loc>
     <lastmod>2022-02-24T15:40:24+06:00</lastmod>
   </url><url>
-    <loc>https://taoziyu97.github.io/</loc>
-    <lastmod>2022-02-24T15:40:24+06:00</lastmod>
-  </url><url>
     <loc>https://taoziyu97.github.io/tags/r/</loc>
     <lastmod>2022-02-24T15:40:24+06:00</lastmod>
   </url><url>
@@ -27,6 +24,9 @@
     <lastmod>2022-02-24T15:40:24+06:00</lastmod>
   </url><url>
     <loc>https://taoziyu97.github.io/tags/</loc>
+    <lastmod>2022-02-24T15:40:24+06:00</lastmod>
+  </url><url>
+    <loc>https://taoziyu97.github.io/</loc>
     <lastmod>2022-02-24T15:40:24+06:00</lastmod>
   </url><url>
     <loc>https://taoziyu97.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</loc>
@@ -225,12 +225,10 @@
   </url><url>
     <loc>https://taoziyu97.github.io/terms-conditions/</loc>
   </url><url>
-    <loc>https://taoziyu97.github.io/archive/</loc>
-  </url><url>
-    <loc>https://taoziyu97.github.io/post/archive/</loc>
-  </url><url>
     <loc>https://taoziyu97.github.io/search/</loc>
   </url><url>
     <loc>https://taoziyu97.github.io/contact/</loc>
+  </url><url>
+    <loc>https://taoziyu97.github.io/archives/</loc>
   </url>
 </urlset>

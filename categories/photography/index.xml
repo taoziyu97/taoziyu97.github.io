@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>photography on LogBook | Hugo Personal Blog Template</title>
+    <title>photography on Ziyu&#39;s Blog | Welcome to my world!</title>
     <link>https://taoziyu97.github.io/categories/photography/</link>
-    <description>Recent content in photography on LogBook | Hugo Personal Blog Template</description>
+    <description>Recent content in photography on Ziyu&#39;s Blog | Welcome to my world!</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Design By [Themefisher](https://themefisher.com/) Develop By [Gethugothemes](https://gethugothemes.com/)</copyright>
@@ -14,8 +14,7 @@
       <pubDate>Sun, 15 Mar 2020 15:40:24 +0600</pubDate>
       
       <guid>https://taoziyu97.github.io/post/elements/</guid>
-      <description>Heading example Here is example of hedings. You can use this heading by following markdownify rules. For example: use # for heading 1 and use ###### for heading 6.
-Heading 1 Heading 2 Heading 3 Heading 4 Heading 5 Heading 6  Emphasis Emphasis, aka italics, with asterisks or underscores.</description>
+      <description>Heading example Here is example of hedings. You can use this heading by following markdownify rules. For example: use # for heading 1 and use ###### for heading 6.</description>
     </item>
     
   </channel>

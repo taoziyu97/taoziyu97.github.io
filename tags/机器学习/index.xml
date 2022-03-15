@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>机器学习 on LogBook | Hugo Personal Blog Template</title>
+    <title>机器学习 on Ziyu&#39;s Blog | Welcome to my world!</title>
     <link>https://taoziyu97.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</link>
-    <description>Recent content in 机器学习 on LogBook | Hugo Personal Blog Template</description>
+    <description>Recent content in 机器学习 on Ziyu&#39;s Blog | Welcome to my world!</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Design By [Themefisher](https://themefisher.com/) Develop By [Gethugothemes](https://gethugothemes.com/)</copyright>
@@ -16,10 +16,7 @@
       <guid>https://taoziyu97.github.io/post/2022-2-24_caret1/</guid>
       <description>介绍机器学习R包。
 1. 数据分割 基于输出变量的分割 在建模之前，需要对样本数据进行分割分为训练集和测试集。在之前建模过程中，我发现我使用sample进行分割存在一定的问题，比如我分割出来的数据中response的占比在训练集和测试集中差别很大等等。caret包中可以解决这个问题，通过设置p值，同时确定训练集和测试集的占比，并各个因子水平下取占比（表述的有点问题）。
-createDataPartition(y, times = 1, p = 0.5, list = TRUE, groups = min(5, length(y))) 2. 预处理 2.1 虚拟变量处理 数据预处理又包括：对因子型变量进行虚拟变量处理（比如response在数据中是yes或no的形式表示，那么可以在这一步转换为虚拟变量0,1，这一步骤尤其适合多个因子型变量都需要处理的情况，可以节约时间）；
-caret包假定所有的数据都是数值型的，比如因子型的可以通过model.matrix和dummyVars转换为dummy的变量。 dummyVars：
-dummyVars(formula, data, sep = &amp;#34;.&amp;#34;, levelsOnly = FALSE, fullRank = FALSE, ...) predict(object, newdata, na.action = na.pass, ...) formula：y~x1+x2，公式右边需要处理为哑变量的因子型变量，不确定哪些是因子型变量的话，可以直接使用y~.来制定所有的列，自动把因子型变量的进行处理。
-2.2 近零方差变量的删除 比如有些变量存在一些很特殊的值，这些值的占比很少，假设response中yes的为99个，no的为1个，那么一些模型来说，模型会崩溃(crash)或者fit to be unstable.</description>
+createDataPartition(y, times = 1, p = 0.5, list = TRUE, groups = min(5, length(y))) 2. 预处理 2.</description>
     </item>
     
   </channel>

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>R on LogBook | Hugo Personal Blog Template</title>
+    <title>R on Ziyu&#39;s Blog | Welcome to my world!</title>
     <link>https://taoziyu97.github.io/tags/r/</link>
-    <description>Recent content in R on LogBook | Hugo Personal Blog Template</description>
+    <description>Recent content in R on Ziyu&#39;s Blog | Welcome to my world!</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Design By [Themefisher](https://themefisher.com/) Develop By [Gethugothemes](https://gethugothemes.com/)</copyright>
@@ -16,10 +16,7 @@
       <guid>https://taoziyu97.github.io/post/2022-2-24_caret1/</guid>
       <description>介绍机器学习R包。
 1. 数据分割 基于输出变量的分割 在建模之前，需要对样本数据进行分割分为训练集和测试集。在之前建模过程中，我发现我使用sample进行分割存在一定的问题，比如我分割出来的数据中response的占比在训练集和测试集中差别很大等等。caret包中可以解决这个问题，通过设置p值，同时确定训练集和测试集的占比，并各个因子水平下取占比（表述的有点问题）。
-createDataPartition(y, times = 1, p = 0.5, list = TRUE, groups = min(5, length(y))) 2. 预处理 2.1 虚拟变量处理 数据预处理又包括：对因子型变量进行虚拟变量处理（比如response在数据中是yes或no的形式表示，那么可以在这一步转换为虚拟变量0,1，这一步骤尤其适合多个因子型变量都需要处理的情况，可以节约时间）；
-caret包假定所有的数据都是数值型的，比如因子型的可以通过model.matrix和dummyVars转换为dummy的变量。 dummyVars：
-dummyVars(formula, data, sep = &amp;#34;.&amp;#34;, levelsOnly = FALSE, fullRank = FALSE, ...) predict(object, newdata, na.action = na.pass, ...) formula：y~x1+x2，公式右边需要处理为哑变量的因子型变量，不确定哪些是因子型变量的话，可以直接使用y~.来制定所有的列，自动把因子型变量的进行处理。
-2.2 近零方差变量的删除 比如有些变量存在一些很特殊的值，这些值的占比很少，假设response中yes的为99个，no的为1个，那么一些模型来说，模型会崩溃(crash)或者fit to be unstable.</description>
+createDataPartition(y, times = 1, p = 0.5, list = TRUE, groups = min(5, length(y))) 2. 预处理 2.</description>
     </item>
     
     <item>
@@ -34,9 +31,7 @@ dummyVars(formula, data, sep = &amp;#34;.&amp;#34;, levelsOnly = FALSE, fullRank
   函数名尽可能是动词，不过相比使用get、compute、calculate、 determine这样宽泛的动词来说，名词相对更好，函数的参数尽可能是名词。想到好的名字随时去更改掉它。
   当函数名包含很多单词时，可以统一选取一种使用，可以使用snake_case，或者camelCase的形式，两者不要混着用。
   同类的功能名称保持一定的一致性。
-  # Good input_select() input_checkbox() input_text()  # Not so good select_input() checkbox_input()   尽量避免和已有的函数名称重复，尤其是基本包里的。
-  习惯使用注释把文件分割，快捷键是：cmd/ctrl + shift + R
-  # Load data --------------------------------------  # Plot data -------------------------------------- 1.</description>
+  # Good input_select() input_checkbox() input_text()  # Not so good select_input() checkbox_input()   尽量避免和已有的函数名称重复，尤其是基本包里的。</description>
     </item>
     
     <item>
@@ -48,13 +43,7 @@ dummyVars(formula, data, sep = &amp;#34;.&amp;#34;, levelsOnly = FALSE, fullRank
       <description>R包开发的各种细节。
 1. 命名   尽量避免同时使用大小写字母
   使用该包测试命名是否能用（？？？）。
-  library(available) available(&amp;#34;doofus&amp;#34;) 2. 依赖包 如果只是使用其他的包中的少量函数时，建议在DESCRIPTION文件中的Imports:中标注包的名称，并且在使用函数过程中使用pkg::fun()。如果需要重复使用函数，可以避免繁琐的::可以@importFrom pkg fun，这样可以更快速，因为::增加了5us去使用函数，管道符号也可以使用同样的方法使用@importFrom magrittr %&amp;gt;%。如果重复使用很多其他包中的函数，可以把这个包中所有的函数全部导入@import pkg，不过这样会使得包的代码比较不容易阅读。
-Imports部分并不是把function导入到namespace中，它只确保包的安装。无论是否附加包，您都需要以完全相同的方式导入函数。
-在DESCRIPTION中对依赖包进行注释：
-Imports: randomForest, stats 在函数中使用依赖包中的函数时，需要标注pkg::fun。
- 是在roxygen注释中添加@import pkg。这种方法会在R包的NAMESPACE文件中添加import域，在加载R包时，第三方包的所有函数都会被导入。在使用函数时必须用pkg::fun的方法，以防函数名冲突。第二种方法，是在roxygen注释中添加@importFrom pkg fun。这种方法会在NAMESPACE文件中添加importFrom域，在使用时可以直接使用函数名，就像在.GlobalEnv中创建的函数一样。这里推荐第二种引用方法，因为可以大幅减少函数冲突。
- check之后存在warning：
-&amp;gt; checking dependencies in R code ... WARNING &amp;#39;::&amp;#39; or &amp;#39;:::&amp;#39; imports not declared from: ‘cli’ ‘dplyr’ ‘furrr’ ‘future’ ‘purrr’ ‘tibble’ 它说的是:&amp;rsquo;::&amp;lsquo;或&amp;rsquo;:::&amp;rsquo; import没有从‘cli’ ‘dplyr’ ‘furrr’ ‘future’ ‘purrr’ ‘tibble’中声明。这里重要的词是“import”。就像我们在包中导出函数一样，我们需要明确何时在另一个包中使用函数。为此，我们可以使用usethis::use_package()。</description>
+  library(available) available(&amp;#34;doofus&amp;#34;) 2. 依赖包 如果只是使用其他的包中的少量函数时，建议在DESCRIPTION文件中的Imports:中标注包的名称，并且在使用函数过程中使用pkg::fun()。如果需要重复使用函数，可以避免繁琐的::可以@importFrom pkg fun，这样可以更快速，因为::增加了5us去使用函数，管道符号也可以使用同样的方法使用@importFrom magrittr %&amp;gt;%。如果重复使用很多其他包中的函数，可以把这个包中所有的函数全部导入@import pkg，不过这样会使得包的代码比较不容易阅读。</description>
     </item>
     
     <item>
@@ -68,13 +57,7 @@ Imports: randomForest, stats 在函数中使用依赖包中的函数时，需要
   第三章 为包开发准备系统
   第四章 包的基本结构，不同的状态下结构不同（？）
   第五章 回顾核心的工作流程，介绍核心工具之间的联系：devtools和usethis，Rstudio
-  其余章节 开发细节
-  通过示例入门 1. 在制定路径下新建R包，创建了新的项目 先安装一些包
-install.packages(c(&amp;#34;devtools&amp;#34;, &amp;#34;roxygen2&amp;#34;, &amp;#34;testthat&amp;#34;, &amp;#34;knitr&amp;#34;)) library(usethis) create_package(&amp;#34;/Volumes/home /project/Immarker&amp;#34;) 目录下有这些文件
-    .Rbuildignore
-  .Rproj.user
-  DESCRIPTION 文档说明
-  NAMESPACE 列出了外部和内部使用到的函数</description>
+  其余章节 开发细节</description>
     </item>
     
     <item>
@@ -89,8 +72,7 @@ install.packages(c(&amp;#34;devtools&amp;#34;, &amp;#34;roxygen2&amp;#34;, &amp;
   批量读入数据并合并
   RData和rds的储存形式
   read.csv和read.csv2的区别
-  Excel文件的读入 在R语言实战实战这本书中表示，读取Excel文件最好的方式，是在Excel中将其导出为一个逗号分隔文件（csv），并使用读取csv的方法读取数据。或者采用xlsx包直接读取数据。xlsx包可以用来对Exceln97/2000/XP/2003/2007文件进行读取、写入和格式转换。还可以使用readxl包来读取Excel的.xls和.xlsx文件。
-read_xlsx(path, sheet = NULL, range = NULL, col_names = TRUE, col_types = NULL, na = &amp;#34;&amp;#34;, trim_ws = TRUE, skip = 0, n_max = Inf, guess_max = min(1000, n_max), progress = readxl_progress(), .</description>
+  Excel文件的读入 在R语言实战实战这本书中表示，读取Excel文件最好的方式，是在Excel中将其导出为一个逗号分隔文件（csv），并使用读取csv的方法读取数据。或者采用xlsx包直接读取数据。xlsx包可以用来对Exceln97/2000/XP/2003/2007文件进行读取、写入和格式转换。还可以使用readxl包来读取Excel的.</description>
     </item>
     
     <item>
@@ -104,8 +86,7 @@ read_xlsx(path, sheet = NULL, range = NULL, col_names = TRUE, col_types = NULL, 
  目前支持的三种模板风格
  2. 创建海报 2.1 创建模板 直接通过新建R Markdown文件，选择posterdown模板则自动导入模板代码，如下：
  创建模板
- 2.2 添加内容 按照R Markdown语法进行代码块、图片、文字等等的添加，通过点击knit进行渲染，查看在模板基础上更改的内容。点击knit后自动生成包含html在内的如下文件：
-. ├── A\ Better\ Reproducible\ Poster\ Title.pdf ├── packages.bib ├── poster.Rmd ├── poster.html └── poster_files  ├── figure-html  │ ├── irisfigure-1.png  │ └── myprettycode-1.png  ├── header-attrs-2.11  │ └── header-attrs.</description>
+ 2.2 添加内容 按照R Markdown语法进行代码块、图片、文字等等的添加，通过点击knit进行渲染，查看在模板基础上更改的内容。点击knit后自动生成包含html在内的如下文件：</description>
     </item>
     
     <item>
@@ -115,7 +96,7 @@ read_xlsx(path, sheet = NULL, range = NULL, col_names = TRUE, col_types = NULL, 
       
       <guid>https://taoziyu97.github.io/post/2021-11-17_docall/</guid>
       <description>引言 使用do.call批量读入文件并合并。
-1. 基本处理步骤 source_dir &amp;lt;- &amp;#34;文件所在路径&amp;#34; file &amp;lt;- list.files(  path = source_dir,  pattern = &amp;#34;*.txt&amp;#34;, # 目标文件夹下需要的文件的格式  all.files = F,  full.names = F,  recursive = F,  include.dirs = F ) allfile &amp;lt;- lapply(file, function(x){read.csv2(paste0(source_dir, x), sep = &amp;#34;\t&amp;#34;)}) combine &amp;lt;- do.call(rbind, allfile) 2. 涉及到的需求和参数设定   文件名作为新列补充进数据框</description>
+1. 基本处理步骤 source_dir &amp;lt;- &amp;#34;文件所在路径&amp;#34; file &amp;lt;- list.files(  path = source_dir,  pattern = &amp;#34;*.txt&amp;#34;, # 目标文件夹下需要的文件的格式  all.</description>
     </item>
     
     <item>
@@ -136,7 +117,7 @@ read_xlsx(path, sheet = NULL, range = NULL, col_names = TRUE, col_types = NULL, 
       <guid>https://taoziyu97.github.io/post/2021-7-24_stringr_stringi/</guid>
       <description>引言 stringr包是建立在stringi上的，stringi包使用ICU C库提供准确、快速的常见字符串操作，stringr提供了最重要和最常用的字符串处理函数。
 stringr stringr包中所有的函数都以str_开头，第一个参数为字符串向量。对应的在base函数中也有功能一致的函数，记得对比两者之间的异同。
-1. 找到自己需要的数据 tcga_mut &amp;lt;- read.csv2(&amp;#34;/home/tzy/projects/CNX-method/data/TCGA/mc3.v0.2.8.PUBLIC.nonsilentGene.xena&amp;#34;,sep = &amp;#34;\t&amp;#34;)  saveRDS(tcga_mut, file = &amp;#34;/home/tzy/projects/CNX-method/data/TCGA/tcga_mut.rds&amp;#34;) save(tcga_mut, file = &amp;#34;/home/tzy/projects/CNX-method/data/TCGA/tcga_mut.RData&amp;#34;) 参考  biostars-How to install gdc-client in Ubnutu  </description>
+1. 找到自己需要的数据 tcga_mut &amp;lt;- read.csv2(&amp;#34;/home/tzy/projects/CNX-method/data/TCGA/mc3.v0.2.8.PUBLIC.nonsilentGene.xena&amp;#34;,sep = &amp;#34;\t&amp;#34;)  saveRDS(tcga_mut, file = &amp;#34;/home/tzy/projects/CNX-method/data/TCGA/tcga_mut.rds&amp;#34;) save(tcga_mut, file = &amp;#34;/home/tzy/projects/CNX-method/data/TCGA/tcga_mut.</description>
     </item>
     
     <item>
