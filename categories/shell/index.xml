@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>shell on Ziyu&#39;s Blog | Welcome to my world!</title>
+    <link>https://taoziyu97.github.io/categories/shell/</link>
+    <description>Recent content in shell on Ziyu&#39;s Blog | Welcome to my world!</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Design By [Themefisher](https://themefisher.com/) Develop By [Gethugothemes](https://gethugothemes.com/)</copyright>
+    <lastBuildDate>Thu, 07 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://taoziyu97.github.io/categories/shell/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>如何去除文本注释</title>
+      <link>https://taoziyu97.github.io/post/2022-4-06_%E6%B3%A8%E9%87%8A/</link>
+      <pubDate>Thu, 07 Apr 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://taoziyu97.github.io/post/2022-4-06_%E6%B3%A8%E9%87%8A/</guid>
+      <description>注释类型 首先我们应该明确注释是在什么样的文件中？
+1．代码中的注释
+2．文本中的注释
+其次我们应该明确，我们需要去除的注释都是什么样子的？
+1．注释行前有特定字符，比如R代码中的注释#
+2．注释被包含在特定字符之间，比如Python代码中的 ```，以及SRIM软件输出结果开头的注释包含的两行===
+根据注释的类型不同，去除注释的方法也不同，接下来介绍一下如何去除注释。
+ 特定字符的注释 使用read.table()读入数据时，设置参数comment.char = &#39;#&#39;，就可以把开头为#的行跳过。
+ comment.</description>
+    </item>
+    
+  </channel>
+</rss>

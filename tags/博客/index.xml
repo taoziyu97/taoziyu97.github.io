@@ -16,7 +16,7 @@
       <guid>https://taoziyu97.github.io/post/2021-6-8_comment/</guid>
       <description>步骤 1. 配置Leancloud 这部分详细参考：hugo博客添加评论系统Valine
 2. 更改 comments.html 文件 将整体内容替换成如下代码：
-&amp;lt;!-- valine change from origin code--&amp;gt;  {{- if .Site.Params.valine.enable -}}  &amp;lt;!</description>
+&amp;lt;!-- valine change from origin code--&amp;gt;  {{- if .</description>
     </item>
     
     <item>
@@ -40,9 +40,7 @@
 1. 博客功能改进   个人博客归档（已完成）
   date的时间更换成自动化填充，每次手动填写很麻烦
   搜索中文优化，目前速度较慢
-  更改归档页面时间0001
-  每篇博文的分享页面超链接到对应网址
-      删除不需要的语言支持，只保留英文和中文</description>
+  更改归档页面时间0001</description>
     </item>
     
     <item>
@@ -53,8 +51,7 @@
       <guid>https://taoziyu97.github.io/post/2021-6-7_%E9%85%8D%E7%BD%AE%E5%BD%92%E6%A1%A3/</guid>
       <description>引言 hugo没有自带的归档设置，需要手动添加。
 操作步骤   在taozy_blog/layouts/_default/目录下创建 archives.html 文件
-  将taozy_blog/layouts/_default/目录下的 single.html 内容复制进 archives.html 文件（single.html的格式就是每篇博文的格式，也可以采用主题的contact.html的格式或者about.html的格式）
-  找到archives.html 文件中的{{ .Content }} 替换为下面的内容:</description>
+  将taozy_blog/layouts/_default/目录下的 single.html 内容复制进 archives.html 文件（single.html的格式就是每篇博文的格式，也可以采用主题的contact.html的格式或者about.html的格式）</description>
     </item>
     
     <item>

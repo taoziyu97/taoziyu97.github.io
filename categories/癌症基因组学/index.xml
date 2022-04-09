@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>癌症基因组学 on Ziyu&#39;s Blog | Welcome to my world!</title>
+    <link>https://taoziyu97.github.io/categories/%E7%99%8C%E7%97%87%E5%9F%BA%E5%9B%A0%E7%BB%84%E5%AD%A6/</link>
+    <description>Recent content in 癌症基因组学 on Ziyu&#39;s Blog | Welcome to my world!</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Design By [Themefisher](https://themefisher.com/) Develop By [Gethugothemes](https://gethugothemes.com/)</copyright>
+    <lastBuildDate>Sun, 03 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://taoziyu97.github.io/categories/%E7%99%8C%E7%97%87%E5%9F%BA%E5%9B%A0%E7%BB%84%E5%AD%A6/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>癌症预后</title>
+      <link>https://taoziyu97.github.io/post/2022-3-21_prognosis/</link>
+      <pubDate>Sun, 03 Apr 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://taoziyu97.github.io/post/2022-3-21_prognosis/</guid>
+      <description>基本框架（按照从大到细）   预后标志物背景介绍
+  预后标志物的类型（分类标准有作用；存在性质等等），主要关注基因组预后标志物
+  泛癌、特定癌种的预后标志物，这部分聚焦于特定的例子
+  如何开发一个预后标志物，好的预后标志物应该包含哪些特征，预后标志物目前存在哪些问题
+  生物信息学在研究预后标志物中的作用，聚焦于分析手段</description>
+    </item>
+    
+    <item>
+      <title>CNV</title>
+      <link>https://taoziyu97.github.io/post/2022-3-29_cnv/</link>
+      <pubDate>Sat, 19 Mar 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://taoziyu97.github.io/post/2022-3-29_cnv/</guid>
+      <description>一、 拷贝数变异的介绍 1.1 结构变异和拷贝数变异 结构变异（structure variation, SV）是指基因组上大片段碱基的缺失、插入、重复、倒位和易位。这部分变异的频率，和疾病或者表型的关系等等都不明确，另外还有一部分的变异也属于结构变异，比如异态性（heteromorphisms），脆性位点（fragile sites），marker染色体，等臂染色体（isochromosomes），双微体（double minutes）等等，这部分的结构不正常和疾病有关。
+ 等臂染色体，是两条基因和形态都一致的染色体臂。
+双微体，是无着丝粒的，染色体外扩增的核染色质，通常包含特定的染色体片段或基因，在癌细胞中常出现。
+marker染色体，也被称为结构外异常染色体或“多余”染色体。在荧光原位杂交实验中，除了正常的染色体补体外的染色体。
+ 拷贝数变异可以看成是特殊的结构变异。鉴定SV对DNA测序深度有较高的要求（一般要&amp;gt;30x），而较低深度的（&amp;gt;5x）覆盖均一的DNA测序就可以鉴定到CNV。对于肿瘤样本中的体细胞CNV和SV，需要比较肿瘤样本和正常样本来得到肿瘤样本特有的变异。基因芯片技术分辨率较低，能检测到的片段都是大片段的（比如1kb以上）。二代测序对于比较大片段的SV，比如是超过150bp长的变异，一个reads是无法涵盖这个变异的，这种情况下会有不同的策略进行间接地推断。</description>
+    </item>
+    
+    <item>
+      <title>拷贝数变异机制</title>
+      <link>https://taoziyu97.github.io/post/2022-3-16_mechanism_of_cnv/</link>
+      <pubDate>Wed, 16 Mar 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://taoziyu97.github.io/post/2022-3-16_mechanism_of_cnv/</guid>
+      <description>基本框架 拷贝数变异的博客框架：
+  介绍拷贝数变异的从属关系，和结构变异的关系；克隆性拷贝数变异和亚克隆拷贝数变异
+  拷贝数变异检测手段，拷贝数变异检测方法/算法（这个比较多，可以分多点讲）
+  结构变异的检测手段等等
+  引发拷贝数变异的机制
+  拷贝数变异的应用价值</description>
+    </item>
+    
+  </channel>
+</rss>

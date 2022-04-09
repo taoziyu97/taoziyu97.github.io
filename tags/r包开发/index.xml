@@ -18,9 +18,7 @@
 1. 基本步骤 写函数的基本步骤如下：
 1.1 函数命名   命名要尽量短，而且指示函数的功能，长一点能够清楚的展示功能也无妨。
   函数名尽可能是动词，不过相比使用get、compute、calculate、 determine这样宽泛的动词来说，名词相对更好，函数的参数尽可能是名词。想到好的名字随时去更改掉它。
-  当函数名包含很多单词时，可以统一选取一种使用，可以使用snake_case，或者camelCase的形式，两者不要混着用。
-  同类的功能名称保持一定的一致性。
-  # Good input_select() input_checkbox() input_text()  # Not so good select_input() checkbox_input()   尽量避免和已有的函数名称重复，尤其是基本包里的。</description>
+  当函数名包含很多单词时，可以统一选取一种使用，可以使用snake_case，或者camelCase的形式，两者不要混着用。</description>
     </item>
     
     <item>
@@ -45,8 +43,7 @@
 前言：R包开发书籍的基本内容   第二章 示例包
   第三章 为包开发准备系统
   第四章 包的基本结构，不同的状态下结构不同（？）
-  第五章 回顾核心的工作流程，介绍核心工具之间的联系：devtools和usethis，Rstudio
-  其余章节 开发细节</description>
+  第五章 回顾核心的工作流程，介绍核心工具之间的联系：devtools和usethis，Rstudio</description>
     </item>
     
   </channel>

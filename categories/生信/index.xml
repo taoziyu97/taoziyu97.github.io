@@ -7,7 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Design By [Themefisher](https://themefisher.com/) Develop By [Gethugothemes](https://gethugothemes.com/)</copyright>
-    <lastBuildDate>Sun, 19 Dec 2021 15:40:24 +0600</lastBuildDate><atom:link href="https://taoziyu97.github.io/categories/%E7%94%9F%E4%BF%A1/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 19 Mar 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://taoziyu97.github.io/categories/%E7%94%9F%E4%BF%A1/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>聚类分析之cola包【没写完】</title>
+      <link>https://taoziyu97.github.io/post/2022-3-24_cluster/</link>
+      <pubDate>Sat, 19 Mar 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://taoziyu97.github.io/post/2022-3-24_cluster/</guid>
+      <description>自问   是否有方法的比较
+  比较的标准是什么，如何判断应该使用哪种
+  聚类的共性如何展示
+  核心的算法是什么
+  仔细分析这个包的目的是什么？【一个包为什么可以被开发出来的，开发出来使用的优势在于？一个包可以包含的内容，一个包为了一种类型的分析可以提供哪些？】</description>
+    </item>
+    
     <item>
       <title>检测拷贝数变异的工具及算法【2】-ABSOLUTE</title>
       <link>https://taoziyu97.github.io/post/2021-12-19_cnv_tools2/</link>
@@ -18,8 +31,7 @@
 （2）由于染色体数量和结构异常导致的癌细胞的实际DNA含量(倍性)是未知的；
 （3）由于正在进行的亚克隆进化，癌细胞群可能是异质性的。
 理论上，如果知道每个肿瘤细胞中DNA的含量，则可通过测得的相对拷贝数获得绝对拷贝数，或者通过单细胞测序技术解决。
-2. 芯片原始原始数据格式.CEL 对于芯片数据来说，Affymetrix SNP芯片的原始文件为CEL文件，一个CEL文件即是一个个体的全部SNP分型结果。Affymetrix基因芯片是一种生物芯片，它包含一个对一个实验有效的微阵列。为了制造这些芯片，玻璃或硅载玻片上排列有探针，根据它们是否与原始DNA样本互补，探针将表达水平(强度)报告为完全匹配(PM)和不匹配(MM)值。.CEL文件格式有多个版本，使用不同的格式。例如，版本3使用ASCII文本格式，而版本4使用二进制格式。 注意：.CEL 文件需要相应的.CDF 文件，它是存储在.CEL文件中的原始探测级数据的字典。MATLAB有一个名为affyread的内置函数，可以用来读取Windows版本软件中的.CEL 文件。
-3. SNP6.0拷贝数变异检测流程 这里介绍Affymetrix SNP6 Copy Number Inference Pipeline。</description>
+2. 芯片原始原始数据格式.CEL 对于芯片数据来说，Affymetrix SNP芯片的原始文件为CEL文件，一个CEL文件即是一个个体的全部SNP分型结果。Affymetrix基因芯片是一种生物芯片，它包含一个对一个实验有效的微阵列。为了制造这些芯片，玻璃或硅载玻片上排列有探针，根据它们是否与原始DNA样本互补，探针将表达水平(强度)报告为完全匹配(PM)和不匹配(MM)值。.CEL文件格式有多个版本，使用不同的格式。例如，版本3使用ASCII文本格式，而版本4使用二进制格式。 注意：.CEL 文件需要相应的.CDF 文件，它是存储在.CEL文件中的原始探测级数据的字典。MATLAB有一个名为affyread的内置函数，可以用来读取Windows版本软件中的.CEL 文件。</description>
     </item>
     
     <item>
@@ -33,8 +45,7 @@
   ACEseq
   Battenberg
   CloneHD
-  JaBbA
-  Sclust</description>
+  JaBbA</description>
     </item>
     
     <item>
@@ -55,7 +66,7 @@
       <guid>https://taoziyu97.github.io/post/2021-11-19_hmm/</guid>
       <description>引言 1. 马尔可夫模型的基本概念 来对2段氨基酸序列x和y进行残基比对，认为存在3种比对关系的状态：
  M：残基能够比对上但不一定相等 X：序列x的残基比对到1个空位，或x上发生了1次插入 Y：序列y的残基比对到1个空位，或y上发生了1次插入  序列比对就是在上述3个状态中不断转换的过程：
- $M(i,j)$ : $x_i$比对到$y_j$时，序列x从1到$i$和序列$y$从1到$j$最好的比对分数 $X(i,j)$ : $x_i$比对到空位时，序列x从1到$i$最好的比对分数 $Y(i,j)$ : $y_j$比对到空位时，序列y从1到$j$最好的比对分数  转移（从一个状态到另外一个状态）概率：</description>
+ \( M(i,j) \) : \( x_i \)比对到\( y_j \)时，序列x从1到\( i \)和序列\( y \)从1到\( j \)最好的比对分数 \( X(i,j) \) : \( x_i \)比对到空位时，序列x从1到\( i \)最好的比对分数 \( Y(i,j) \) : \( y_j \)比对到空位时，序列y从1到\( j \)最好的比对分数  转移（从一个状态到另外一个状态）概率：</description>
     </item>
     
     <item>
@@ -79,9 +90,7 @@
 点击数据下载地址发现出现如下界面，其中id就是使用gdc-client下载的文件对应的id
 对于Open access data，使用这两种方法下载
 下载了MAC的Client版本
-2. 安装 解压下载的文件，如果双击会发现出现erro：
-且常规的对~/.bash_profile文件添加环境变量也不可以，正确做法是：
-./gdc-client #(to verify that program works) cp -pi .</description>
+2. 安装 解压下载的文件，如果双击会发现出现erro：</description>
     </item>
     
     <item>

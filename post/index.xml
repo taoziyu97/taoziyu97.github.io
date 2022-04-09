@@ -7,7 +7,112 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Design By [Themefisher](https://themefisher.com/) Develop By [Gethugothemes](https://gethugothemes.com/)</copyright>
-    <lastBuildDate>Thu, 24 Feb 2022 15:40:24 +0600</lastBuildDate><atom:link href="https://taoziyu97.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 07 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://taoziyu97.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>如何去除文本注释</title>
+      <link>https://taoziyu97.github.io/post/2022-4-06_%E6%B3%A8%E9%87%8A/</link>
+      <pubDate>Thu, 07 Apr 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://taoziyu97.github.io/post/2022-4-06_%E6%B3%A8%E9%87%8A/</guid>
+      <description>注释类型 首先我们应该明确注释是在什么样的文件中？
+1．代码中的注释
+2．文本中的注释
+其次我们应该明确，我们需要去除的注释都是什么样子的？
+1．注释行前有特定字符，比如R代码中的注释#
+2．注释被包含在特定字符之间，比如Python代码中的 ```，以及SRIM软件输出结果开头的注释包含的两行===
+根据注释的类型不同，去除注释的方法也不同，接下来介绍一下如何去除注释。
+ 特定字符的注释 使用read.table()读入数据时，设置参数comment.char = &#39;#&#39;，就可以把开头为#的行跳过。
+ comment.</description>
+    </item>
+    
+    <item>
+      <title>癌症预后</title>
+      <link>https://taoziyu97.github.io/post/2022-3-21_prognosis/</link>
+      <pubDate>Sun, 03 Apr 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://taoziyu97.github.io/post/2022-3-21_prognosis/</guid>
+      <description>基本框架（按照从大到细）   预后标志物背景介绍
+  预后标志物的类型（分类标准有作用；存在性质等等），主要关注基因组预后标志物
+  泛癌、特定癌种的预后标志物，这部分聚焦于特定的例子
+  如何开发一个预后标志物，好的预后标志物应该包含哪些特征，预后标志物目前存在哪些问题
+  生物信息学在研究预后标志物中的作用，聚焦于分析手段</description>
+    </item>
+    
+    <item>
+      <title>CNV</title>
+      <link>https://taoziyu97.github.io/post/2022-3-29_cnv/</link>
+      <pubDate>Sat, 19 Mar 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://taoziyu97.github.io/post/2022-3-29_cnv/</guid>
+      <description>一、 拷贝数变异的介绍 1.1 结构变异和拷贝数变异 结构变异（structure variation, SV）是指基因组上大片段碱基的缺失、插入、重复、倒位和易位。这部分变异的频率，和疾病或者表型的关系等等都不明确，另外还有一部分的变异也属于结构变异，比如异态性（heteromorphisms），脆性位点（fragile sites），marker染色体，等臂染色体（isochromosomes），双微体（double minutes）等等，这部分的结构不正常和疾病有关。
+ 等臂染色体，是两条基因和形态都一致的染色体臂。
+双微体，是无着丝粒的，染色体外扩增的核染色质，通常包含特定的染色体片段或基因，在癌细胞中常出现。
+marker染色体，也被称为结构外异常染色体或“多余”染色体。在荧光原位杂交实验中，除了正常的染色体补体外的染色体。
+ 拷贝数变异可以看成是特殊的结构变异。鉴定SV对DNA测序深度有较高的要求（一般要&amp;gt;30x），而较低深度的（&amp;gt;5x）覆盖均一的DNA测序就可以鉴定到CNV。对于肿瘤样本中的体细胞CNV和SV，需要比较肿瘤样本和正常样本来得到肿瘤样本特有的变异。基因芯片技术分辨率较低，能检测到的片段都是大片段的（比如1kb以上）。二代测序对于比较大片段的SV，比如是超过150bp长的变异，一个reads是无法涵盖这个变异的，这种情况下会有不同的策略进行间接地推断。</description>
+    </item>
+    
+    <item>
+      <title>如何进行科研写作——【转载】</title>
+      <link>https://taoziyu97.github.io/post/2022-3-28_%E7%A7%91%E7%A0%94%E5%86%99%E4%BD%9C/</link>
+      <pubDate>Sat, 19 Mar 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://taoziyu97.github.io/post/2022-3-28_%E7%A7%91%E7%A0%94%E5%86%99%E4%BD%9C/</guid>
+      <description>最近在修改文章，感觉自己的英文表达能力和学术写作能力太弱，刚巧看到施一公教授分享的公众号文章，觉得收获很大，记录一下。
+如何写论文 1．要写好科研论文，必须先养成读英文文章的习惯，争取每天30-60分钟。刚开始可以选择以读英文报纸、英文新闻为主，逐渐转为读专业杂志。我会在近期专门写一篇博客文章介绍一套行之有效的增强读专业杂志能力的办法。
+2．写科研论文，最重要的是逻辑。逻辑的形成来自对实验数据的总体分析。必须先讨论出一套清晰的思路，然后按照思路来做图(Figures)，最后才能执笔。
+3．具体写作时，先按照思路（即Figures）写一个以subheading为主的框架，然后开始具体写作。第一稿，切忌追求每一句话的完美，更不要追求词语的华丽，而主要留心逻辑（logic flow），注意前后句的逻辑关系、相邻两段的逻辑关系。写作时，全力以赴，尽可能不受外界事情干扰（关闭手机、座机），争取在最短时间内拿出第一稿。还要注意：一句话不可太长。
+4．学会照葫芦画瓢。没有人天生会写优秀的科研论文，都是从别人那里学来的。学习别人的文章要注意专业领域的不同，有些领域（包括我所在的结构生物学）有它内在的写作规律。科研文章里的一些话是定式，比如 “To investigate the mechanism of …, we performed …”, “These results support the former, but not the latter, hypothesis …”, “Despite recent progress, how … remains to be elucidated …” 等等。用两次以后，就逐渐学会灵活运用了。在向别人学习时，切忌抄袭。在美国一些机构，连续7个英文单词在一起和别人的完全一样，原则上就被认为抄袭（plagiarism）。</description>
+    </item>
+    
+    <item>
+      <title>聚类分析之cola包【没写完】</title>
+      <link>https://taoziyu97.github.io/post/2022-3-24_cluster/</link>
+      <pubDate>Sat, 19 Mar 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://taoziyu97.github.io/post/2022-3-24_cluster/</guid>
+      <description>自问   是否有方法的比较
+  比较的标准是什么，如何判断应该使用哪种
+  聚类的共性如何展示
+  核心的算法是什么
+  仔细分析这个包的目的是什么？【一个包为什么可以被开发出来的，开发出来使用的优势在于？一个包可以包含的内容，一个包为了一种类型的分析可以提供哪些？】</description>
+    </item>
+    
+    <item>
+      <title>Python实现自动定场</title>
+      <link>https://taoziyu97.github.io/post/2022-3-17_sport/</link>
+      <pubDate>Wed, 16 Mar 2022 15:40:24 +0600</pubDate>
+      
+      <guid>https://taoziyu97.github.io/post/2022-3-17_sport/</guid>
+      <description>安装包   pyexecjs：这个库主要是将 JS 代码运行在本地的 JS 环境中
+  lxml
+  参考资料：   https://juejin.</description>
+    </item>
+    
+    <item>
+      <title>拷贝数变异机制</title>
+      <link>https://taoziyu97.github.io/post/2022-3-16_mechanism_of_cnv/</link>
+      <pubDate>Wed, 16 Mar 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://taoziyu97.github.io/post/2022-3-16_mechanism_of_cnv/</guid>
+      <description>基本框架 拷贝数变异的博客框架：
+  介绍拷贝数变异的从属关系，和结构变异的关系；克隆性拷贝数变异和亚克隆拷贝数变异
+  拷贝数变异检测手段，拷贝数变异检测方法/算法（这个比较多，可以分多点讲）
+  结构变异的检测手段等等
+  引发拷贝数变异的机制
+  拷贝数变异的应用价值</description>
+    </item>
+    
+    <item>
+      <title>什么是鲁棒性(robustness)</title>
+      <link>https://taoziyu97.github.io/post/2022-3-15_robustness/</link>
+      <pubDate>Tue, 15 Mar 2022 15:40:24 +0600</pubDate>
+      
+      <guid>https://taoziyu97.github.io/post/2022-3-15_robustness/</guid>
+      <description>通过搜索发现，鲁棒性是一个应用很广泛的词汇，我们主要关注它在计算机科学的算法和统计学中代表的含义。
+维基百科上这样描述：稳健性（英语：Robustness）是指一个计算机系统在执行过程中处理错误，以及算法在遭遇输入、运算等异常时继续正常运行的能力。
+ Robustness is the capacity of a method to remain unaffected by small, deliberate variations in method parameters.</description>
+    </item>
+    
     <item>
       <title>R包caret基本功能【1】——六种基本功能</title>
       <link>https://taoziyu97.github.io/post/2022-2-24_caret1/</link>
@@ -16,7 +121,7 @@
       <guid>https://taoziyu97.github.io/post/2022-2-24_caret1/</guid>
       <description>介绍机器学习R包。
 1. 数据分割 基于输出变量的分割 在建模之前，需要对样本数据进行分割分为训练集和测试集。在之前建模过程中，我发现我使用sample进行分割存在一定的问题，比如我分割出来的数据中response的占比在训练集和测试集中差别很大等等。caret包中可以解决这个问题，通过设置p值，同时确定训练集和测试集的占比，并各个因子水平下取占比（表述的有点问题）。
-createDataPartition(y, times = 1, p = 0.5, list = TRUE, groups = min(5, length(y))) 2. 预处理 2.</description>
+createDataPartition(y, times = 1, p = 0.5, list = TRUE, groups = min(5, length(y))) 2.</description>
     </item>
     
     <item>
@@ -40,9 +145,7 @@ library(&amp;#34;mlr3&amp;#34;) task = tsk(&amp;#34;iris&amp;#34;) learner = lrn
 1. 基本步骤 写函数的基本步骤如下：
 1.1 函数命名   命名要尽量短，而且指示函数的功能，长一点能够清楚的展示功能也无妨。
   函数名尽可能是动词，不过相比使用get、compute、calculate、 determine这样宽泛的动词来说，名词相对更好，函数的参数尽可能是名词。想到好的名字随时去更改掉它。
-  当函数名包含很多单词时，可以统一选取一种使用，可以使用snake_case，或者camelCase的形式，两者不要混着用。
-  同类的功能名称保持一定的一致性。
-  # Good input_select() input_checkbox() input_text()  # Not so good select_input() checkbox_input()   尽量避免和已有的函数名称重复，尤其是基本包里的。</description>
+  当函数名包含很多单词时，可以统一选取一种使用，可以使用snake_case，或者camelCase的形式，两者不要混着用。</description>
     </item>
     
     <item>
@@ -67,8 +170,7 @@ library(&amp;#34;mlr3&amp;#34;) task = tsk(&amp;#34;iris&amp;#34;) learner = lrn
 前言：R包开发书籍的基本内容   第二章 示例包
   第三章 为包开发准备系统
   第四章 包的基本结构，不同的状态下结构不同（？）
-  第五章 回顾核心的工作流程，介绍核心工具之间的联系：devtools和usethis，Rstudio
-  其余章节 开发细节</description>
+  第五章 回顾核心的工作流程，介绍核心工具之间的联系：devtools和usethis，Rstudio</description>
     </item>
     
     <item>
@@ -81,9 +183,7 @@ library(&amp;#34;mlr3&amp;#34;) task = tsk(&amp;#34;iris&amp;#34;) learner = lrn
   txt和csv文件的读入
   文件的写出
   批量读入数据并合并
-  RData和rds的储存形式
-  read.csv和read.csv2的区别
-  Excel文件的读入 在R语言实战实战这本书中表示，读取Excel文件最好的方式，是在Excel中将其导出为一个逗号分隔文件（csv），并使用读取csv的方法读取数据。或者采用xlsx包直接读取数据。xlsx包可以用来对Exceln97/2000/XP/2003/2007文件进行读取、写入和格式转换。还可以使用readxl包来读取Excel的.</description>
+  RData和rds的储存形式</description>
     </item>
     
     <item>
@@ -96,8 +196,7 @@ library(&amp;#34;mlr3&amp;#34;) task = tsk(&amp;#34;iris&amp;#34;) learner = lrn
 （2）由于染色体数量和结构异常导致的癌细胞的实际DNA含量(倍性)是未知的；
 （3）由于正在进行的亚克隆进化，癌细胞群可能是异质性的。
 理论上，如果知道每个肿瘤细胞中DNA的含量，则可通过测得的相对拷贝数获得绝对拷贝数，或者通过单细胞测序技术解决。
-2. 芯片原始原始数据格式.CEL 对于芯片数据来说，Affymetrix SNP芯片的原始文件为CEL文件，一个CEL文件即是一个个体的全部SNP分型结果。Affymetrix基因芯片是一种生物芯片，它包含一个对一个实验有效的微阵列。为了制造这些芯片，玻璃或硅载玻片上排列有探针，根据它们是否与原始DNA样本互补，探针将表达水平(强度)报告为完全匹配(PM)和不匹配(MM)值。.CEL文件格式有多个版本，使用不同的格式。例如，版本3使用ASCII文本格式，而版本4使用二进制格式。 注意：.CEL 文件需要相应的.CDF 文件，它是存储在.CEL文件中的原始探测级数据的字典。MATLAB有一个名为affyread的内置函数，可以用来读取Windows版本软件中的.CEL 文件。
-3. SNP6.0拷贝数变异检测流程 这里介绍Affymetrix SNP6 Copy Number Inference Pipeline。</description>
+2. 芯片原始原始数据格式.CEL 对于芯片数据来说，Affymetrix SNP芯片的原始文件为CEL文件，一个CEL文件即是一个个体的全部SNP分型结果。Affymetrix基因芯片是一种生物芯片，它包含一个对一个实验有效的微阵列。为了制造这些芯片，玻璃或硅载玻片上排列有探针，根据它们是否与原始DNA样本互补，探针将表达水平(强度)报告为完全匹配(PM)和不匹配(MM)值。.CEL文件格式有多个版本，使用不同的格式。例如，版本3使用ASCII文本格式，而版本4使用二进制格式。 注意：.CEL 文件需要相应的.CDF 文件，它是存储在.CEL文件中的原始探测级数据的字典。MATLAB有一个名为affyread的内置函数，可以用来读取Windows版本软件中的.CEL 文件。</description>
     </item>
     
     <item>
@@ -111,8 +210,7 @@ library(&amp;#34;mlr3&amp;#34;) task = tsk(&amp;#34;iris&amp;#34;) learner = lrn
   ACEseq
   Battenberg
   CloneHD
-  JaBbA
-  Sclust</description>
+  JaBbA</description>
     </item>
     
     <item>
@@ -125,8 +223,7 @@ library(&amp;#34;mlr3&amp;#34;) task = tsk(&amp;#34;iris&amp;#34;) learner = lrn
 1. 介绍 目前posterdown支持3种风格的海报模板：posterdown_html、posterdown_betterland和posterdown_betterport。以posterdown_betterport为例进行阐述。
  目前支持的三种模板风格
  2. 创建海报 2.1 创建模板 直接通过新建R Markdown文件，选择posterdown模板则自动导入模板代码，如下：
- 创建模板
- 2.2 添加内容 按照R Markdown语法进行代码块、图片、文字等等的添加，通过点击knit进行渲染，查看在模板基础上更改的内容。点击knit后自动生成包含html在内的如下文件：</description>
+ 创建模板</description>
     </item>
     
     <item>
@@ -141,9 +238,7 @@ library(&amp;#34;mlr3&amp;#34;) task = tsk(&amp;#34;iris&amp;#34;) learner = lrn
 对数据进行逻辑、移位和算术运算。
   寄存器
 用来存放临时数据的高速独立的存储单元。
-  控制单元
-控制各个子系统的操作。控制是通过从控制单元到其他子系统的信号来进行。
-  主存储器 是存储单元的集合，每一个存储单元都有唯一的标识，称为地址。</description>
+  控制单元</description>
     </item>
     
     <item>
@@ -164,7 +259,7 @@ library(&amp;#34;mlr3&amp;#34;) task = tsk(&amp;#34;iris&amp;#34;) learner = lrn
       <guid>https://taoziyu97.github.io/post/2021-11-19_hmm/</guid>
       <description>引言 1. 马尔可夫模型的基本概念 来对2段氨基酸序列x和y进行残基比对，认为存在3种比对关系的状态：
  M：残基能够比对上但不一定相等 X：序列x的残基比对到1个空位，或x上发生了1次插入 Y：序列y的残基比对到1个空位，或y上发生了1次插入  序列比对就是在上述3个状态中不断转换的过程：
- $M(i,j)$ : $x_i$比对到$y_j$时，序列x从1到$i$和序列$y$从1到$j$最好的比对分数 $X(i,j)$ : $x_i$比对到空位时，序列x从1到$i$最好的比对分数 $Y(i,j)$ : $y_j$比对到空位时，序列y从1到$j$最好的比对分数  转移（从一个状态到另外一个状态）概率：</description>
+ \( M(i,j) \) : \( x_i \)比对到\( y_j \)时，序列x从1到\( i \)和序列\( y \)从1到\( j \)最好的比对分数 \( X(i,j) \) : \( x_i \)比对到空位时，序列x从1到\( i \)最好的比对分数 \( Y(i,j) \) : \( y_j \)比对到空位时，序列y从1到\( j \)最好的比对分数  转移（从一个状态到另外一个状态）概率：</description>
     </item>
     
     <item>
@@ -174,7 +269,7 @@ library(&amp;#34;mlr3&amp;#34;) task = tsk(&amp;#34;iris&amp;#34;) learner = lrn
       
       <guid>https://taoziyu97.github.io/post/2021-11-17_docall/</guid>
       <description>引言 使用do.call批量读入文件并合并。
-1. 基本处理步骤 source_dir &amp;lt;- &amp;#34;文件所在路径&amp;#34; file &amp;lt;- list.files(  path = source_dir,  pattern = &amp;#34;*.txt&amp;#34;, # 目标文件夹下需要的文件的格式  all.</description>
+1. 基本处理步骤 source_dir &amp;lt;- &amp;#34;文件所在路径&amp;#34; file &amp;lt;- list.files(  path = source_dir,  pattern = &amp;#34;*.</description>
     </item>
     
     <item>
@@ -195,7 +290,7 @@ library(&amp;#34;mlr3&amp;#34;) task = tsk(&amp;#34;iris&amp;#34;) learner = lrn
       <guid>https://taoziyu97.github.io/post/2021-7-24_stringr_stringi/</guid>
       <description>引言 stringr包是建立在stringi上的，stringi包使用ICU C库提供准确、快速的常见字符串操作，stringr提供了最重要和最常用的字符串处理函数。
 stringr stringr包中所有的函数都以str_开头，第一个参数为字符串向量。对应的在base函数中也有功能一致的函数，记得对比两者之间的异同。
-1. 找到自己需要的数据 tcga_mut &amp;lt;- read.csv2(&amp;#34;/home/tzy/projects/CNX-method/data/TCGA/mc3.v0.2.8.PUBLIC.nonsilentGene.xena&amp;#34;,sep = &amp;#34;\t&amp;#34;)  saveRDS(tcga_mut, file = &amp;#34;/home/tzy/projects/CNX-method/data/TCGA/tcga_mut.rds&amp;#34;) save(tcga_mut, file = &amp;#34;/home/tzy/projects/CNX-method/data/TCGA/tcga_mut.</description>
+1. 找到自己需要的数据 tcga_mut &amp;lt;- read.csv2(&amp;#34;/home/tzy/projects/CNX-method/data/TCGA/mc3.v0.2.8.PUBLIC.nonsilentGene.xena&amp;#34;,sep = &amp;#34;\t&amp;#34;)  saveRDS(tcga_mut, file = &amp;#34;/home/tzy/projects/CNX-method/data/TCGA/tcga_mut.</description>
     </item>
     
     <item>
@@ -209,9 +304,7 @@ stringr stringr包中所有的函数都以str_开头，第一个参数为字符�
 点击数据下载地址发现出现如下界面，其中id就是使用gdc-client下载的文件对应的id
 对于Open access data，使用这两种方法下载
 下载了MAC的Client版本
-2. 安装 解压下载的文件，如果双击会发现出现erro：
-且常规的对~/.bash_profile文件添加环境变量也不可以，正确做法是：
-./gdc-client #(to verify that program works) cp -pi .</description>
+2. 安装 解压下载的文件，如果双击会发现出现erro：</description>
     </item>
     
     <item>
@@ -221,7 +314,7 @@ stringr stringr包中所有的函数都以str_开头，第一个参数为字符�
       
       <guid>https://taoziyu97.github.io/post/2021-7-20_rdata/</guid>
       <description>引言 rds比RData省空间，为什么？
-步骤 1. 找到自己需要的数据 tcga_mut &amp;lt;- read.csv2(&amp;#34;/home/tzy/projects/CNX-method/data/TCGA/mc3.v0.2.8.PUBLIC.nonsilentGene.xena&amp;#34;,sep = &amp;#34;\t&amp;#34;)  saveRDS(tcga_mut, file = &amp;#34;/home/tzy/projects/CNX-method/data/TCGA/tcga_mut.rds&amp;#34;) save(tcga_mut, file = &amp;#34;/home/tzy/projects/CNX-method/data/TCGA/tcga_mut.RData&amp;#34;) 参考  biostars-How to install gdc-client in Ubnutu  </description>
+步骤 1. 找到自己需要的数据 tcga_mut &amp;lt;- read.csv2(&amp;#34;/home/tzy/projects/CNX-method/data/TCGA/mc3.v0.2.8.PUBLIC.nonsilentGene.xena&amp;#34;,sep = &amp;#34;\t&amp;#34;)  saveRDS(tcga_mut, file = &amp;#34;/home/tzy/projects/CNX-method/data/TCGA/tcga_mut.rds&amp;#34;) save(tcga_mut, file = &amp;#34;/home/tzy/projects/CNX-method/data/TCGA/tcga_mut.</description>
     </item>
     
     <item>
@@ -232,7 +325,7 @@ stringr stringr包中所有的函数都以str_开头，第一个参数为字符�
       <guid>https://taoziyu97.github.io/post/2021-6-8_comment/</guid>
       <description>步骤 1. 配置Leancloud 这部分详细参考：hugo博客添加评论系统Valine
 2. 更改 comments.html 文件 将整体内容替换成如下代码：
-&amp;lt;!-- valine change from origin code--&amp;gt;  {{- if .Site.Params.valine.enable -}}  &amp;lt;!</description>
+&amp;lt;!-- valine change from origin code--&amp;gt;  {{- if .</description>
     </item>
     
     <item>
@@ -256,9 +349,7 @@ stringr stringr包中所有的函数都以str_开头，第一个参数为字符�
 1. 博客功能改进   个人博客归档（已完成）
   date的时间更换成自动化填充，每次手动填写很麻烦
   搜索中文优化，目前速度较慢
-  更改归档页面时间0001
-  每篇博文的分享页面超链接到对应网址
-      删除不需要的语言支持，只保留英文和中文</description>
+  更改归档页面时间0001</description>
     </item>
     
     <item>
@@ -269,8 +360,7 @@ stringr stringr包中所有的函数都以str_开头，第一个参数为字符�
       <guid>https://taoziyu97.github.io/post/2021-6-7_%E9%85%8D%E7%BD%AE%E5%BD%92%E6%A1%A3/</guid>
       <description>引言 hugo没有自带的归档设置，需要手动添加。
 操作步骤   在taozy_blog/layouts/_default/目录下创建 archives.html 文件
-  将taozy_blog/layouts/_default/目录下的 single.html 内容复制进 archives.html 文件（single.html的格式就是每篇博文的格式，也可以采用主题的contact.html的格式或者about.html的格式）
-  找到archives.html 文件中的{{ .Content }} 替换为下面的内容:</description>
+  将taozy_blog/layouts/_default/目录下的 single.html 内容复制进 archives.html 文件（single.html的格式就是每篇博文的格式，也可以采用主题的contact.html的格式或者about.html的格式）</description>
     </item>
     
     <item>
@@ -283,9 +373,7 @@ stringr stringr包中所有的函数都以str_开头，第一个参数为字符�
 解决bug思路   发现依赖torch1.5.1版本
   通过pip install安装失败
   使用whl安装发现没有对应python3.9的版本
-  根据版本推测1.5.1不能在python3.9安装
-  重建新环境，安装python3.8，进而安装1.5.1
-  成功</description>
+  根据版本推测1.</description>
     </item>
     
     <item>
@@ -314,9 +402,7 @@ stringr stringr包中所有的函数都以str_开头，第一个参数为字符�
 操作系统调度的最小任务单位是线程。由于一个应用程序可以有，多个进程，也可以有多个线程，实现任务的方法包括：
 多进程模式（每个进程只有一个线程）：
   多线程模式（一个进程有多个线程）：
-  多进程＋多线程模式（复杂度最高）：
-  二、线程 线程包含在进程内，多任务既可以多进程来实现，也可以单进程内的多线程实现，也可以混合多进程和多线程。
-和多线程相比，多进程的缺点在于：</description>
+  多进程＋多线程模式（复杂度最高）：</description>
     </item>
     
     <item>
@@ -329,9 +415,7 @@ stringr stringr包中所有的函数都以str_开头，第一个参数为字符�
 维基百科定义：p值是假设检验中假设零假设为真时观测到至少与实际观测样本相同极端的样本的概率（似乎很拗口）。
 p值是介于0-1之间的数字，量化我们相信两种药物不同的信心，p值越接近0，越相信两者不同。当p的阈值为0.05意味着，假设两种药物之间没有差异，执行多次且相同的实验，那么只有5%的实验会得出错误决定，简单来说，p值是对意外的测量。
 p值能够帮助确定两种药物是否不同，但是不能告诉我们有什么不同，不管差异是都大还是小，都可以使用较小的p值，即较小的p值不代表差异是大还是小，只是代表意外的结果概率更小 。
- 阈值0.05的由来  不出于逻辑或统计原因，只是科学惯例。
- 术语：假阳性  指的是没有差异时却获得小的p值的情况。
- 术语：假设检验（Hypothesis testing）  试图确定这些药物是否相同的想法。</description>
+ 阈值0.05的由来  不出于逻辑或统计原因，只是科学惯例。</description>
     </item>
     
     <item>
@@ -352,8 +436,7 @@ p值能够帮助确定两种药物是否不同，但是不能告诉我们有什�
       <guid>https://taoziyu97.github.io/post/2021-4-11_%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92/</guid>
       <description>引言  线性回归  假设数据包含 尺寸 和 重量 两组，根据这两组数据用 最小二乘法 拟合一条线后，我们可以做如下的事情：
   计算r平方来确定两个变量是否相关
-  计算p值确定R平方是否具有统计显著性
-  用于预测，如果一个新鼠标有某重量，可以根据这个线来预测其大小</description>
+  计算p值确定R平方是否具有统计显著性</description>
     </item>
     
     <item>
@@ -379,10 +462,10 @@ p值能够帮助确定两种药物是否不同，但是不能告诉我们有什�
     <item>
       <title>Elements That You Can Use To Create A New Post On This Template.</title>
       <link>https://taoziyu97.github.io/post/elements/</link>
-      <pubDate>Sun, 15 Mar 2020 15:40:24 +0600</pubDate>
+      <pubDate>Fri, 01 Jan 2021 15:40:24 +0600</pubDate>
       
       <guid>https://taoziyu97.github.io/post/elements/</guid>
-      <description>Heading example Here is example of hedings. You can use this heading by following markdownify rules. For example: use # for heading 1 and use ###### for heading 6.</description>
+      <description>Heading example Here is example of hedings. You can use this heading by following markdownify rules.</description>
     </item>
     
   </channel>

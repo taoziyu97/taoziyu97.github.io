@@ -16,7 +16,7 @@
       <guid>https://taoziyu97.github.io/post/2022-2-24_caret1/</guid>
       <description>介绍机器学习R包。
 1. 数据分割 基于输出变量的分割 在建模之前，需要对样本数据进行分割分为训练集和测试集。在之前建模过程中，我发现我使用sample进行分割存在一定的问题，比如我分割出来的数据中response的占比在训练集和测试集中差别很大等等。caret包中可以解决这个问题，通过设置p值，同时确定训练集和测试集的占比，并各个因子水平下取占比（表述的有点问题）。
-createDataPartition(y, times = 1, p = 0.5, list = TRUE, groups = min(5, length(y))) 2. 预处理 2.</description>
+createDataPartition(y, times = 1, p = 0.5, list = TRUE, groups = min(5, length(y))) 2.</description>
     </item>
     
     <item>
@@ -29,8 +29,7 @@ createDataPartition(y, times = 1, p = 0.5, list = TRUE, groups = min(5, length(y
 （2）由于染色体数量和结构异常导致的癌细胞的实际DNA含量(倍性)是未知的；
 （3）由于正在进行的亚克隆进化，癌细胞群可能是异质性的。
 理论上，如果知道每个肿瘤细胞中DNA的含量，则可通过测得的相对拷贝数获得绝对拷贝数，或者通过单细胞测序技术解决。
-2. 芯片原始原始数据格式.CEL 对于芯片数据来说，Affymetrix SNP芯片的原始文件为CEL文件，一个CEL文件即是一个个体的全部SNP分型结果。Affymetrix基因芯片是一种生物芯片，它包含一个对一个实验有效的微阵列。为了制造这些芯片，玻璃或硅载玻片上排列有探针，根据它们是否与原始DNA样本互补，探针将表达水平(强度)报告为完全匹配(PM)和不匹配(MM)值。.CEL文件格式有多个版本，使用不同的格式。例如，版本3使用ASCII文本格式，而版本4使用二进制格式。 注意：.CEL 文件需要相应的.CDF 文件，它是存储在.CEL文件中的原始探测级数据的字典。MATLAB有一个名为affyread的内置函数，可以用来读取Windows版本软件中的.CEL 文件。
-3. SNP6.0拷贝数变异检测流程 这里介绍Affymetrix SNP6 Copy Number Inference Pipeline。</description>
+2. 芯片原始原始数据格式.CEL 对于芯片数据来说，Affymetrix SNP芯片的原始文件为CEL文件，一个CEL文件即是一个个体的全部SNP分型结果。Affymetrix基因芯片是一种生物芯片，它包含一个对一个实验有效的微阵列。为了制造这些芯片，玻璃或硅载玻片上排列有探针，根据它们是否与原始DNA样本互补，探针将表达水平(强度)报告为完全匹配(PM)和不匹配(MM)值。.CEL文件格式有多个版本，使用不同的格式。例如，版本3使用ASCII文本格式，而版本4使用二进制格式。 注意：.CEL 文件需要相应的.CDF 文件，它是存储在.CEL文件中的原始探测级数据的字典。MATLAB有一个名为affyread的内置函数，可以用来读取Windows版本软件中的.CEL 文件。</description>
     </item>
     
     <item>
@@ -44,8 +43,7 @@ createDataPartition(y, times = 1, p = 0.5, list = TRUE, groups = min(5, length(y
   ACEseq
   Battenberg
   CloneHD
-  JaBbA
-  Sclust</description>
+  JaBbA</description>
     </item>
     
     <item>
@@ -69,9 +67,7 @@ createDataPartition(y, times = 1, p = 0.5, list = TRUE, groups = min(5, length(y
 点击数据下载地址发现出现如下界面，其中id就是使用gdc-client下载的文件对应的id
 对于Open access data，使用这两种方法下载
 下载了MAC的Client版本
-2. 安装 解压下载的文件，如果双击会发现出现erro：
-且常规的对~/.bash_profile文件添加环境变量也不可以，正确做法是：
-./gdc-client #(to verify that program works) cp -pi .</description>
+2. 安装 解压下载的文件，如果双击会发现出现erro：</description>
     </item>
     
     <item>

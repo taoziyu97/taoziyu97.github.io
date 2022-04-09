@@ -16,7 +16,7 @@
       <guid>https://taoziyu97.github.io/post/2022-2-24_caret1/</guid>
       <description>介绍机器学习R包。
 1. 数据分割 基于输出变量的分割 在建模之前，需要对样本数据进行分割分为训练集和测试集。在之前建模过程中，我发现我使用sample进行分割存在一定的问题，比如我分割出来的数据中response的占比在训练集和测试集中差别很大等等。caret包中可以解决这个问题，通过设置p值，同时确定训练集和测试集的占比，并各个因子水平下取占比（表述的有点问题）。
-createDataPartition(y, times = 1, p = 0.5, list = TRUE, groups = min(5, length(y))) 2. 预处理 2.</description>
+createDataPartition(y, times = 1, p = 0.5, list = TRUE, groups = min(5, length(y))) 2.</description>
     </item>
     
     <item>
@@ -29,9 +29,7 @@ createDataPartition(y, times = 1, p = 0.5, list = TRUE, groups = min(5, length(y
 1. 基本步骤 写函数的基本步骤如下：
 1.1 函数命名   命名要尽量短，而且指示函数的功能，长一点能够清楚的展示功能也无妨。
   函数名尽可能是动词，不过相比使用get、compute、calculate、 determine这样宽泛的动词来说，名词相对更好，函数的参数尽可能是名词。想到好的名字随时去更改掉它。
-  当函数名包含很多单词时，可以统一选取一种使用，可以使用snake_case，或者camelCase的形式，两者不要混着用。
-  同类的功能名称保持一定的一致性。
-  # Good input_select() input_checkbox() input_text()  # Not so good select_input() checkbox_input()   尽量避免和已有的函数名称重复，尤其是基本包里的。</description>
+  当函数名包含很多单词时，可以统一选取一种使用，可以使用snake_case，或者camelCase的形式，两者不要混着用。</description>
     </item>
     
     <item>
@@ -56,8 +54,7 @@ createDataPartition(y, times = 1, p = 0.5, list = TRUE, groups = min(5, length(y
 前言：R包开发书籍的基本内容   第二章 示例包
   第三章 为包开发准备系统
   第四章 包的基本结构，不同的状态下结构不同（？）
-  第五章 回顾核心的工作流程，介绍核心工具之间的联系：devtools和usethis，Rstudio
-  其余章节 开发细节</description>
+  第五章 回顾核心的工作流程，介绍核心工具之间的联系：devtools和usethis，Rstudio</description>
     </item>
     
     <item>
@@ -70,9 +67,7 @@ createDataPartition(y, times = 1, p = 0.5, list = TRUE, groups = min(5, length(y
   txt和csv文件的读入
   文件的写出
   批量读入数据并合并
-  RData和rds的储存形式
-  read.csv和read.csv2的区别
-  Excel文件的读入 在R语言实战实战这本书中表示，读取Excel文件最好的方式，是在Excel中将其导出为一个逗号分隔文件（csv），并使用读取csv的方法读取数据。或者采用xlsx包直接读取数据。xlsx包可以用来对Exceln97/2000/XP/2003/2007文件进行读取、写入和格式转换。还可以使用readxl包来读取Excel的.</description>
+  RData和rds的储存形式</description>
     </item>
     
     <item>
@@ -85,8 +80,7 @@ createDataPartition(y, times = 1, p = 0.5, list = TRUE, groups = min(5, length(y
 1. 介绍 目前posterdown支持3种风格的海报模板：posterdown_html、posterdown_betterland和posterdown_betterport。以posterdown_betterport为例进行阐述。
  目前支持的三种模板风格
  2. 创建海报 2.1 创建模板 直接通过新建R Markdown文件，选择posterdown模板则自动导入模板代码，如下：
- 创建模板
- 2.2 添加内容 按照R Markdown语法进行代码块、图片、文字等等的添加，通过点击knit进行渲染，查看在模板基础上更改的内容。点击knit后自动生成包含html在内的如下文件：</description>
+ 创建模板</description>
     </item>
     
     <item>
@@ -96,7 +90,7 @@ createDataPartition(y, times = 1, p = 0.5, list = TRUE, groups = min(5, length(y
       
       <guid>https://taoziyu97.github.io/post/2021-11-17_docall/</guid>
       <description>引言 使用do.call批量读入文件并合并。
-1. 基本处理步骤 source_dir &amp;lt;- &amp;#34;文件所在路径&amp;#34; file &amp;lt;- list.files(  path = source_dir,  pattern = &amp;#34;*.txt&amp;#34;, # 目标文件夹下需要的文件的格式  all.</description>
+1. 基本处理步骤 source_dir &amp;lt;- &amp;#34;文件所在路径&amp;#34; file &amp;lt;- list.files(  path = source_dir,  pattern = &amp;#34;*.</description>
     </item>
     
     <item>
@@ -117,7 +111,7 @@ createDataPartition(y, times = 1, p = 0.5, list = TRUE, groups = min(5, length(y
       <guid>https://taoziyu97.github.io/post/2021-7-24_stringr_stringi/</guid>
       <description>引言 stringr包是建立在stringi上的，stringi包使用ICU C库提供准确、快速的常见字符串操作，stringr提供了最重要和最常用的字符串处理函数。
 stringr stringr包中所有的函数都以str_开头，第一个参数为字符串向量。对应的在base函数中也有功能一致的函数，记得对比两者之间的异同。
-1. 找到自己需要的数据 tcga_mut &amp;lt;- read.csv2(&amp;#34;/home/tzy/projects/CNX-method/data/TCGA/mc3.v0.2.8.PUBLIC.nonsilentGene.xena&amp;#34;,sep = &amp;#34;\t&amp;#34;)  saveRDS(tcga_mut, file = &amp;#34;/home/tzy/projects/CNX-method/data/TCGA/tcga_mut.rds&amp;#34;) save(tcga_mut, file = &amp;#34;/home/tzy/projects/CNX-method/data/TCGA/tcga_mut.</description>
+1. 找到自己需要的数据 tcga_mut &amp;lt;- read.csv2(&amp;#34;/home/tzy/projects/CNX-method/data/TCGA/mc3.v0.2.8.PUBLIC.nonsilentGene.xena&amp;#34;,sep = &amp;#34;\t&amp;#34;)  saveRDS(tcga_mut, file = &amp;#34;/home/tzy/projects/CNX-method/data/TCGA/tcga_mut.</description>
     </item>
     
     <item>
@@ -127,7 +121,7 @@ stringr stringr包中所有的函数都以str_开头，第一个参数为字符�
       
       <guid>https://taoziyu97.github.io/post/2021-7-20_rdata/</guid>
       <description>引言 rds比RData省空间，为什么？
-步骤 1. 找到自己需要的数据 tcga_mut &amp;lt;- read.csv2(&amp;#34;/home/tzy/projects/CNX-method/data/TCGA/mc3.v0.2.8.PUBLIC.nonsilentGene.xena&amp;#34;,sep = &amp;#34;\t&amp;#34;)  saveRDS(tcga_mut, file = &amp;#34;/home/tzy/projects/CNX-method/data/TCGA/tcga_mut.rds&amp;#34;) save(tcga_mut, file = &amp;#34;/home/tzy/projects/CNX-method/data/TCGA/tcga_mut.RData&amp;#34;) 参考  biostars-How to install gdc-client in Ubnutu  </description>
+步骤 1. 找到自己需要的数据 tcga_mut &amp;lt;- read.csv2(&amp;#34;/home/tzy/projects/CNX-method/data/TCGA/mc3.v0.2.8.PUBLIC.nonsilentGene.xena&amp;#34;,sep = &amp;#34;\t&amp;#34;)  saveRDS(tcga_mut, file = &amp;#34;/home/tzy/projects/CNX-method/data/TCGA/tcga_mut.rds&amp;#34;) save(tcga_mut, file = &amp;#34;/home/tzy/projects/CNX-method/data/TCGA/tcga_mut.</description>
     </item>
     
   </channel>

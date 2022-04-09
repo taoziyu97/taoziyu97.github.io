@@ -18,9 +18,7 @@
   txt和csv文件的读入
   文件的写出
   批量读入数据并合并
-  RData和rds的储存形式
-  read.csv和read.csv2的区别
-  Excel文件的读入 在R语言实战实战这本书中表示，读取Excel文件最好的方式，是在Excel中将其导出为一个逗号分隔文件（csv），并使用读取csv的方法读取数据。或者采用xlsx包直接读取数据。xlsx包可以用来对Exceln97/2000/XP/2003/2007文件进行读取、写入和格式转换。还可以使用readxl包来读取Excel的.</description>
+  RData和rds的储存形式</description>
     </item>
     
     <item>
@@ -30,7 +28,7 @@
       
       <guid>https://taoziyu97.github.io/post/2021-11-17_docall/</guid>
       <description>引言 使用do.call批量读入文件并合并。
-1. 基本处理步骤 source_dir &amp;lt;- &amp;#34;文件所在路径&amp;#34; file &amp;lt;- list.files(  path = source_dir,  pattern = &amp;#34;*.txt&amp;#34;, # 目标文件夹下需要的文件的格式  all.</description>
+1. 基本处理步骤 source_dir &amp;lt;- &amp;#34;文件所在路径&amp;#34; file &amp;lt;- list.files(  path = source_dir,  pattern = &amp;#34;*.</description>
     </item>
     
     <item>
@@ -41,7 +39,7 @@
       <guid>https://taoziyu97.github.io/post/2021-7-24_stringr_stringi/</guid>
       <description>引言 stringr包是建立在stringi上的，stringi包使用ICU C库提供准确、快速的常见字符串操作，stringr提供了最重要和最常用的字符串处理函数。
 stringr stringr包中所有的函数都以str_开头，第一个参数为字符串向量。对应的在base函数中也有功能一致的函数，记得对比两者之间的异同。
-1. 找到自己需要的数据 tcga_mut &amp;lt;- read.csv2(&amp;#34;/home/tzy/projects/CNX-method/data/TCGA/mc3.v0.2.8.PUBLIC.nonsilentGene.xena&amp;#34;,sep = &amp;#34;\t&amp;#34;)  saveRDS(tcga_mut, file = &amp;#34;/home/tzy/projects/CNX-method/data/TCGA/tcga_mut.rds&amp;#34;) save(tcga_mut, file = &amp;#34;/home/tzy/projects/CNX-method/data/TCGA/tcga_mut.</description>
+1. 找到自己需要的数据 tcga_mut &amp;lt;- read.csv2(&amp;#34;/home/tzy/projects/CNX-method/data/TCGA/mc3.v0.2.8.PUBLIC.nonsilentGene.xena&amp;#34;,sep = &amp;#34;\t&amp;#34;)  saveRDS(tcga_mut, file = &amp;#34;/home/tzy/projects/CNX-method/data/TCGA/tcga_mut.</description>
     </item>
     
     <item>
@@ -51,7 +49,7 @@ stringr stringr包中所有的函数都以str_开头，第一个参数为字符�
       
       <guid>https://taoziyu97.github.io/post/2021-7-20_rdata/</guid>
       <description>引言 rds比RData省空间，为什么？
-步骤 1. 找到自己需要的数据 tcga_mut &amp;lt;- read.csv2(&amp;#34;/home/tzy/projects/CNX-method/data/TCGA/mc3.v0.2.8.PUBLIC.nonsilentGene.xena&amp;#34;,sep = &amp;#34;\t&amp;#34;)  saveRDS(tcga_mut, file = &amp;#34;/home/tzy/projects/CNX-method/data/TCGA/tcga_mut.rds&amp;#34;) save(tcga_mut, file = &amp;#34;/home/tzy/projects/CNX-method/data/TCGA/tcga_mut.RData&amp;#34;) 参考  biostars-How to install gdc-client in Ubnutu  </description>
+步骤 1. 找到自己需要的数据 tcga_mut &amp;lt;- read.csv2(&amp;#34;/home/tzy/projects/CNX-method/data/TCGA/mc3.v0.2.8.PUBLIC.nonsilentGene.xena&amp;#34;,sep = &amp;#34;\t&amp;#34;)  saveRDS(tcga_mut, file = &amp;#34;/home/tzy/projects/CNX-method/data/TCGA/tcga_mut.rds&amp;#34;) save(tcga_mut, file = &amp;#34;/home/tzy/projects/CNX-method/data/TCGA/tcga_mut.</description>
     </item>
     
   </channel>

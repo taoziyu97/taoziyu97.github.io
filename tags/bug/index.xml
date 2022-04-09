@@ -18,9 +18,7 @@
 解决bug思路   发现依赖torch1.5.1版本
   通过pip install安装失败
   使用whl安装发现没有对应python3.9的版本
-  根据版本推测1.5.1不能在python3.9安装
-  重建新环境，安装python3.8，进而安装1.5.1
-  成功</description>
+  根据版本推测1.</description>
     </item>
     
   </channel>

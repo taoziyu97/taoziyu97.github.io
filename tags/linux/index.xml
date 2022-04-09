@@ -19,9 +19,7 @@
 点击数据下载地址发现出现如下界面，其中id就是使用gdc-client下载的文件对应的id
 对于Open access data，使用这两种方法下载
 下载了MAC的Client版本
-2. 安装 解压下载的文件，如果双击会发现出现erro：
-且常规的对~/.bash_profile文件添加环境变量也不可以，正确做法是：
-./gdc-client #(to verify that program works) cp -pi .</description>
+2. 安装 解压下载的文件，如果双击会发现出现erro：</description>
     </item>
     
   </channel>

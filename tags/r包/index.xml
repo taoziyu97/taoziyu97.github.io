@@ -7,7 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Design By [Themefisher](https://themefisher.com/) Develop By [Gethugothemes](https://gethugothemes.com/)</copyright>
-    <lastBuildDate>Thu, 24 Feb 2022 15:40:24 +0600</lastBuildDate><atom:link href="https://taoziyu97.github.io/tags/r%E5%8C%85/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 19 Mar 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://taoziyu97.github.io/tags/r%E5%8C%85/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>聚类分析之cola包【没写完】</title>
+      <link>https://taoziyu97.github.io/post/2022-3-24_cluster/</link>
+      <pubDate>Sat, 19 Mar 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://taoziyu97.github.io/post/2022-3-24_cluster/</guid>
+      <description>自问   是否有方法的比较
+  比较的标准是什么，如何判断应该使用哪种
+  聚类的共性如何展示
+  核心的算法是什么
+  仔细分析这个包的目的是什么？【一个包为什么可以被开发出来的，开发出来使用的优势在于？一个包可以包含的内容，一个包为了一种类型的分析可以提供哪些？】</description>
+    </item>
+    
     <item>
       <title>R包mlr3基本功能【1】——R6类——需要修订</title>
       <link>https://taoziyu97.github.io/post/2022-2-24_mlr31/</link>
