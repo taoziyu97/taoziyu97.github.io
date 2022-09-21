@@ -7,7 +7,230 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Design By [Themefisher](https://themefisher.com/) Develop By [Gethugothemes](https://gethugothemes.com/)</copyright>
-    <lastBuildDate>Thu, 07 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://taoziyu97.github.io/tags/shell/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 21 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://taoziyu97.github.io/tags/shell/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CIN and aneuploidy</title>
+      <link>https://taoziyu97.github.io/post/2022-9-14_aneuploidyandcin-copy/</link>
+      <pubDate>Wed, 21 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://taoziyu97.github.io/post/2022-9-14_aneuploidyandcin-copy/</guid>
+      <description>&lt;p&gt;介绍癌症中的结构变异。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>拷贝数变异内容汇总</title>
+      <link>https://taoziyu97.github.io/post/2022-9-14_cnvcombine/</link>
+      <pubDate>Wed, 21 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://taoziyu97.github.io/post/2022-9-14_cnvcombine/</guid>
+      <description>&lt;p&gt;汇总关于拷贝数变异的笔记。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>GSA申请数据下载</title>
+      <link>https://taoziyu97.github.io/post/2022-9-14_gsa%E6%95%B0%E6%8D%AE%E4%B8%8B%E8%BD%BD/</link>
+      <pubDate>Wed, 14 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://taoziyu97.github.io/post/2022-9-14_gsa%E6%95%B0%E6%8D%AE%E4%B8%8B%E8%BD%BD/</guid>
+      <description>&lt;p&gt;介绍如何下载GSA数据库需要申请的数据。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>R——因子</title>
+      <link>https://taoziyu97.github.io/post/2022-8-31_factor/</link>
+      <pubDate>Thu, 08 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://taoziyu97.github.io/post/2022-8-31_factor/</guid>
+      <description>&lt;p&gt;介绍R语言中的因子。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>使用pyEGA3下载EGA数据</title>
+      <link>https://taoziyu97.github.io/post/2022-9-01_ega/</link>
+      <pubDate>Thu, 01 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://taoziyu97.github.io/post/2022-9-01_ega/</guid>
+      <description>&lt;p&gt;介绍如何使用pyEGA3下载EGA数据。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>AUC</title>
+      <link>https://taoziyu97.github.io/post/2022-8-31_auc/</link>
+      <pubDate>Tue, 23 Aug 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://taoziyu97.github.io/post/2022-8-31_auc/</guid>
+      <description>&lt;p&gt;介绍混淆矩阵，准确率，召回率，ROC曲线以及AUC面积。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>rCGH包</title>
+      <link>https://taoziyu97.github.io/post/2022-8-22_rcgh/</link>
+      <pubDate>Mon, 22 Aug 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://taoziyu97.github.io/post/2022-8-22_rcgh/</guid>
+      <description>&lt;p&gt;介绍rCGH包的使用方法。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>【聚类1】——介绍</title>
+      <link>https://taoziyu97.github.io/post/2022-8-10_%E8%81%9A%E7%B1%BB/</link>
+      <pubDate>Tue, 21 Jun 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://taoziyu97.github.io/post/2022-8-10_%E8%81%9A%E7%B1%BB/</guid>
+      <description>&lt;p&gt;介绍聚类的含义，聚类能够解决的问题，以及聚类性能的度量。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>【聚类2】——kmeans聚类</title>
+      <link>https://taoziyu97.github.io/post/2022-8-10_%E8%81%9A%E7%B1%BB-copy/</link>
+      <pubDate>Mon, 20 Jun 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://taoziyu97.github.io/post/2022-8-10_%E8%81%9A%E7%B1%BB-copy/</guid>
+      <description>&lt;p&gt;介绍kmeans分类。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>【2021NCI】signature讲座</title>
+      <link>https://taoziyu97.github.io/post/2022-6-10_analytical/</link>
+      <pubDate>Thu, 09 Jun 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://taoziyu97.github.io/post/2022-6-10_analytical/</guid>
+      <description>该部分会议内容如下：
+  一、Teresa Przytycka 突变模式可以作为一种工具来研究环境、细胞过程和疾病之间的关联，其中包含：
+  signature和分子通路之间的关联
+  突变过程和突变过程之间的关联
+  1. 突变过程和分子通路/突变过程的关联 研究的问题是吸烟和COVID-19易感。</description>
+    </item>
+    
+    <item>
+      <title>【2021NCI】signature讲座</title>
+      <link>https://taoziyu97.github.io/post/2022-6-10_normal_tumor/</link>
+      <pubDate>Thu, 09 Jun 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://taoziyu97.github.io/post/2022-6-10_normal_tumor/</guid>
+      <description>该部分会议内容如下：
+  来源   会议安排
+  会议内容
+  会议公开视频
+  </description>
+    </item>
+    
+    <item>
+      <title>【2021NCI】signature讲座</title>
+      <link>https://taoziyu97.github.io/post/2022-6-10_process/</link>
+      <pubDate>Thu, 09 Jun 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://taoziyu97.github.io/post/2022-6-10_process/</guid>
+      <description>该部分会议内容如下：
+  【Steven Rozen】 Two signatures: one important for public health, one important for DNA damage and repair</description>
+    </item>
+    
+    <item>
+      <title>【2021NCI】signature讲座</title>
+      <link>https://taoziyu97.github.io/post/2022-6-10_translational/</link>
+      <pubDate>Thu, 09 Jun 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://taoziyu97.github.io/post/2022-6-10_translational/</guid>
+      <description>该部分会议内容如下：
+  来源   会议安排
+  会议内容
+  会议公开视频
+  </description>
+    </item>
+    
+    <item>
+      <title>【2021NCI】signature讲座-Opening Session</title>
+      <link>https://taoziyu97.github.io/post/2022-6-10_open_session/</link>
+      <pubDate>Thu, 09 Jun 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://taoziyu97.github.io/post/2022-6-10_open_session/</guid>
+      <description>该部分会议内容如下：
+  somatic mutations in ageing and disease 1. 背景 对良性组织测序（non-malignant tissue）比较困难，这里使用的是laser capture microdissection，把组织切得更小，这样每次测序大概是200个样本，不需要任何预先对DNA进行扩增，这样可以获得很高质量的基因组。</description>
+    </item>
+    
+    <item>
+      <title>非线性规划</title>
+      <link>https://taoziyu97.github.io/post/2022-6-09_quangrop/</link>
+      <pubDate>Thu, 09 Jun 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://taoziyu97.github.io/post/2022-6-09_quangrop/</guid>
+      <description>很多实际问题可以归结为线性规划问题，其目标函数和约束条件都是自变量的一次函数。但是存在另外一些应用也很广泛的问题，目标函数和（或）约束条件很难用线性函数表达，如果目标函数或约束条件中含有非线性函数，就称这种规划问题为非线性规划问题。
+由于非线性函数的复杂性，解非线性规划问题要比解线性规划问题困难得多，而且也不能像线性规划有通用解法，目前还没有适用于解决各种问题的一般算法，各个方法都有自己特定的适用范围。
+一、基本概念 目标函数，或约束条件中含有非线性函数，就称这种规划问题为非线性规划问题。
+1. 非线性规划问题的数学模型 https://blog-1310600458.cos.ap-shanghai.myqcloud.com/10001654751778_.pic.jpg
+二、 无约束问题 1. 极值问题 1.1 局部极值和全局极值 由于线性规划的目标函数为线性函数，可行域为凸集（没有空洞和凹入部分的集合叫做凸集），因而求出的最优解就是在整个可行域上的全局最优解。
+非线性规划却不是这样，有时求出的某个解虽是一部分可行域上的极值点，但是却不一定是整个可行域上的全局最优解。</description>
+    </item>
+    
+    <item>
+      <title>fit算法</title>
+      <link>https://taoziyu97.github.io/post/2022-6-07_fit_algorithm/</link>
+      <pubDate>Tue, 07 Jun 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://taoziyu97.github.io/post/2022-6-07_fit_algorithm/</guid>
+      <description>NMF（非负矩阵分解）  NMF in mutational signature
+ 当得到大量样本时，根据k个分类，可以创建一个计数矩阵M，包含每个样本在每个分类的计数，该矩阵可以通过非负矩阵分解为两个矩阵，这两个矩阵一个代表signature的分类图谱，一个代表每个样本的signature数值。
+而当我们只有一个样本时，则不能通过NMF分解来获得以上提到的两个矩阵，但是可以通过确定的signature图谱矩阵，来推测该样本的signature的exposure。这个步骤就是fitting。
+ fitting方法 $$ M \approx P\times E $$</description>
+    </item>
+    
+    <item>
+      <title>参加读书活动</title>
+      <link>https://taoziyu97.github.io/post/2022-4-12_read/</link>
+      <pubDate>Sat, 23 Apr 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://taoziyu97.github.io/post/2022-4-12_read/</guid>
+      <description>步骤   安装网易mumu, 通过应用中心安装微信读书
+  安装python包：uiautomator
+  安装adb连接mumu
+  运行python脚本
+   安装网易mumu 网页mumu下载地址: http://mumu.</description>
+    </item>
+    
+    <item>
+      <title>定量拷贝数变异</title>
+      <link>https://taoziyu97.github.io/post/2022-4-12_qunatify_cnv/</link>
+      <pubDate>Mon, 11 Apr 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://taoziyu97.github.io/post/2022-4-12_qunatify_cnv/</guid>
+      <description> 
+    cna burden
+    参考资料    </description>
+    </item>
+    
+    <item>
+      <title>生存分析</title>
+      <link>https://taoziyu97.github.io/post/2022-4-10_survival_analysis/</link>
+      <pubDate>Mon, 11 Apr 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://taoziyu97.github.io/post/2022-4-10_survival_analysis/</guid>
+      <description>本文主要参考：Survival Analysis Part I: Basic concepts and first analyses
+生存分析基本介绍 大多数的癌症研究中使用：
+  Kaplan-Meier plots</description>
+    </item>
+    
+    <item>
+      <title>C index</title>
+      <link>https://taoziyu97.github.io/post/2022-4-10_c_index/</link>
+      <pubDate>Sun, 10 Apr 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://taoziyu97.github.io/post/2022-4-10_c_index/</guid>
+      <description> C index介绍 C index 是AUC的扩展，AUC是C index的特殊。
+ 
+ 参考资料  已经猴年马月了，你还不知道C-index？！  </description>
+    </item>
+    
+    <item>
+      <title>Multimodal deep learning</title>
+      <link>https://taoziyu97.github.io/post/2022-4-10_multimodel_dl/</link>
+      <pubDate>Sun, 10 Apr 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://taoziyu97.github.io/post/2022-4-10_multimodel_dl/</guid>
+      <description>Multimodal data 首先我们应该明确什么是multimodal data?
+事物发生或经历时，或者是研究问题包含了多模态。我们通过看、听、闻来体会世界时，就是一种多模态。
+ Modality refers to the way in which something happens or is experienced and a research problem is characterized as multimodal when it includes multiple such modalities.</description>
+    </item>
+    
     <item>
       <title>如何去除文本注释</title>
       <link>https://taoziyu97.github.io/post/2022-4-06_%E6%B3%A8%E9%87%8A/</link>

@@ -30,7 +30,7 @@
       <description>R包开发的各种细节。
 1. 命名   尽量避免同时使用大小写字母
   使用该包测试命名是否能用（？？？）。
-  library(available) available(&amp;#34;doofus&amp;#34;) 2. 依赖包 如果只是使用其他的包中的少量函数时，建议在DESCRIPTION文件中的Imports:中标注包的名称，并且在使用函数过程中使用pkg::fun()。如果需要重复使用函数，可以避免繁琐的::可以@importFrom pkg fun，这样可以更快速，因为::增加了5us去使用函数，管道符号也可以使用同样的方法使用@importFrom magrittr %&amp;gt;%。如果重复使用很多其他包中的函数，可以把这个包中所有的函数全部导入@import pkg，不过这样会使得包的代码比较不容易阅读。</description>
+  library(available)  available(&amp;#34;doofus&amp;#34;) 2. 依赖包 如果只是使用其他的包中的少量函数时，建议在DESCRIPTION文件中的Imports:中标注包的名称，并且在使用函数过程中使用pkg::fun()。如果需要重复使用函数，可以避免繁琐的::可以@importFrom pkg fun，这样可以更快速，因为::增加了5us去使用函数，管道符号也可以使用同样的方法使用@importFrom magrittr %&amp;gt;%。如果重复使用很多其他包中的函数，可以把这个包中所有的函数全部导入@import pkg，不过这样会使得包的代码比较不容易阅读。</description>
     </item>
     
     <item>

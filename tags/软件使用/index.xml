@@ -16,7 +16,7 @@
       <guid>https://taoziyu97.github.io/post/2022-2-24_caret1/</guid>
       <description>介绍机器学习R包。
 1. 数据分割 基于输出变量的分割 在建模之前，需要对样本数据进行分割分为训练集和测试集。在之前建模过程中，我发现我使用sample进行分割存在一定的问题，比如我分割出来的数据中response的占比在训练集和测试集中差别很大等等。caret包中可以解决这个问题，通过设置p值，同时确定训练集和测试集的占比，并各个因子水平下取占比（表述的有点问题）。
-createDataPartition(y, times = 1, p = 0.5, list = TRUE, groups = min(5, length(y))) 2.</description>
+createDataPartition(y,  times = 1,  p = 0.5,  list = TRUE,  groups = min(5, length(y))) 2.</description>
     </item>
     
     <item>
