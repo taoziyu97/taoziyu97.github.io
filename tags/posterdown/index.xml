@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>posterdown on Ziyu&#39;s Blog | Welcome to my world!</title>
-    <link>https://taoziyu97.github.io/tags/posterdown/</link>
+    <link>https://taozyblog.com.cn/tags/posterdown/</link>
     <description>Recent content in posterdown on Ziyu&#39;s Blog | Welcome to my world!</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Design By [Themefisher](https://themefisher.com/) Develop By [Gethugothemes](https://gethugothemes.com/)</copyright>
-    <lastBuildDate>Wed, 15 Dec 2021 15:40:24 +0600</lastBuildDate><atom:link href="https://taoziyu97.github.io/tags/posterdown/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 15 Dec 2021 15:40:24 +0600</lastBuildDate><atom:link href="https://taozyblog.com.cn/tags/posterdown/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>使用posterdown制作学术海报</title>
-      <link>https://taoziyu97.github.io/post/2021-12-15_posterdown/</link>
+      <link>https://taozyblog.com.cn/post/2021-12-15_posterdown/</link>
       <pubDate>Wed, 15 Dec 2021 15:40:24 +0600</pubDate>
       
-      <guid>https://taoziyu97.github.io/post/2021-12-15_posterdown/</guid>
+      <guid>https://taozyblog.com.cn/post/2021-12-15_posterdown/</guid>
       <description>引言 posterdown自动排版，通过调节参数满足个人制作海报的需要。
 1. 介绍 目前posterdown支持3种风格的海报模板：posterdown_html、posterdown_betterland和posterdown_betterport。以posterdown_betterport为例进行阐述。
  目前支持的三种模板风格

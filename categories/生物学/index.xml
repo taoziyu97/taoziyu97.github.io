@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>生物学 on Ziyu&#39;s Blog | Welcome to my world!</title>
-    <link>https://taoziyu97.github.io/categories/%E7%94%9F%E7%89%A9%E5%AD%A6/</link>
+    <link>https://taozyblog.com.cn/categories/%E7%94%9F%E7%89%A9%E5%AD%A6/</link>
     <description>Recent content in 生物学 on Ziyu&#39;s Blog | Welcome to my world!</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Design By [Themefisher](https://themefisher.com/) Develop By [Gethugothemes](https://gethugothemes.com/)</copyright>
-    <lastBuildDate>Sun, 03 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://taoziyu97.github.io/categories/%E7%94%9F%E7%89%A9%E5%AD%A6/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 03 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://taozyblog.com.cn/categories/%E7%94%9F%E7%89%A9%E5%AD%A6/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>癌症预后</title>
-      <link>https://taoziyu97.github.io/post/2022-3-21_prognosis/</link>
+      <link>https://taozyblog.com.cn/post/2022-3-21_prognosis/</link>
       <pubDate>Sun, 03 Apr 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://taoziyu97.github.io/post/2022-3-21_prognosis/</guid>
+      <guid>https://taozyblog.com.cn/post/2022-3-21_prognosis/</guid>
       <description>基本框架（按照从大到细）   预后标志物背景介绍
   预后标志物的类型（分类标准有作用；存在性质等等），主要关注基因组预后标志物
   泛癌、特定癌种的预后标志物，这部分聚焦于特定的例子
@@ -23,10 +23,10 @@
     
     <item>
       <title>拷贝数变异机制</title>
-      <link>https://taoziyu97.github.io/post/2022-3-16_mechanism_of_cnv/</link>
+      <link>https://taozyblog.com.cn/post/2022-3-16_mechanism_of_cnv/</link>
       <pubDate>Wed, 16 Mar 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://taoziyu97.github.io/post/2022-3-16_mechanism_of_cnv/</guid>
+      <guid>https://taozyblog.com.cn/post/2022-3-16_mechanism_of_cnv/</guid>
       <description>基本框架 拷贝数变异的博客框架：
   介绍拷贝数变异的从属关系，和结构变异的关系；克隆性拷贝数变异和亚克隆拷贝数变异
   拷贝数变异检测手段，拷贝数变异检测方法/算法（这个比较多，可以分多点讲）
