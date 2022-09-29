@@ -98,8 +98,8 @@
 
 
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://blog-1310600458.cos.ap-shanghai.myqcloud.com/in_logo.png" />
-<meta property="og:image" content="https://blog-1310600458.cos.ap-shanghai.myqcloud.com/in_logo.png" />
+<meta name="twitter:image" content="https://blog-1310600458.cos.ap-shanghai.myqcloud.com/Macdo2022-09-29 16.11.29.png" />
+<meta property="og:image" content="https://blog-1310600458.cos.ap-shanghai.myqcloud.com/Macdo2022-09-29 16.11.29.png" />
  
 
 
@@ -439,7 +439,7 @@
 </ul>
 <h2 id="二数据下载">二、数据下载</h2>
 <h3 id="21-ncbi">2.1 NCBI</h3>
-<p>官网：https://www.ncbi.nlm.nih.gov/</p>
+<p>官网：<a href="https://www.ncbi.nlm.nih.gov/" target="_blank">https://www.ncbi.nlm.nih.gov/</a></p>
 <ol>
 <li>数据范围</li>
 </ol>
@@ -452,9 +452,9 @@
 <li>下载方式</li>
 </ol>
 <p>我平时主要使用dbGAP去申请数据，所以着重介绍一下如何下载dbGAP数据：</p>
-<p><a href="https://taozyblog.com.cn/post/2022-9-14_datadownload/" target="_blank">下载dbGAP数据</a></p>
+<p><a href="https://taozyblog.com.cn/post/2022-9-14_dbgap/" target="_blank">下载dbGAP数据</a></p>
 <h3 id="22-ucsc-xena">2.2 UCSC Xena</h3>
-<p>官网：http://xena.ucsc.edu/</p>
+<p>官网：<a href="http://xena.ucsc.edu/" target="_blank">http://xena.ucsc.edu/</a></p>
 <p>包含1500+的数据集和50+种癌症类型，支持几乎任何基因组数据，提供简单的数据分析和数据下载。</p>
 <ol>
 <li>数据范围</li>
@@ -466,7 +466,7 @@
 </ol>
 <ul>
 <li>
-<p>直接通过网页访问和下载：https://xenabrowser.net/datapages/</p>
+<p>直接通过网页访问和下载：<a href="https://xenabrowser.net/datapages/" target="_blank">https://xenabrowser.net/datapages/</a></p>
 </li>
 <li>
 <p>R包：UCSCXenaTools</p>
@@ -480,7 +480,7 @@
 </span></span><span style="display:flex;"><span># 3 get all datasets containing BRCA
 </span></span><span style="display:flex;"><span>XenaGenerate(subset = grepl(&#34;BRCA&#34;, XenaCohorts))
 </span></span></code></pre></div><h3 id="23-ega">2.3 EGA</h3>
-<p>官网：https://ega-archive.org/</p>
+<p>官网：<a href="https://ega-archive.org/" target="_blank">https://ega-archive.org/</a></p>
 <ol>
 <li>数据范围</li>
 </ol>
@@ -494,37 +494,42 @@
 </ol>
 <p><a href="https://taozyblog.com.cn/post/2022-9-01_ega/" target="_blank">下载EGA数据</a></p>
 <h3 id="24-ngdc">2.4 NGDC</h3>
-<p>官网：https://ngdc.cncb.ac.cn/</p>
+<p>官网：<a href="https://ngdc.cncb.ac.cn/" target="_blank">https://ngdc.cncb.ac.cn/</a></p>
 <ol>
-<li>
-<p>数据范围</p>
-</li>
-<li>
-<p>下载方式</p>
-</li>
+<li>数据范围</li>
+</ol>
+<center>
+      <img src= "https://blog-1310600458.cos.ap-shanghai.myqcloud.com/Macdo2022-09-29 16.32.10.png" width="800"/>
+      <p><font color="grey"></font></p>
+  </center>
+<ol start="2">
+<li>下载方式</li>
 </ol>
 <p>GSA：人类遗传资源组学原始数据归档库，是NGDC的一部分。</p>
 <p><a href="https://taozyblog.com.cn/post/2022-9-14_gsa%e6%95%b0%e6%8d%ae%e4%b8%8b%e8%bd%bd/" target="_blank">下载GSA数据</a></p>
 <h3 id="25-uk-biobank">2.5 UK biobank</h3>
-<p>官网：https://www.ukbiobank.ac.uk/</p>
+<p>官网：<a href="https://www.ukbiobank.ac.uk/" target="_blank">https://www.ukbiobank.ac.uk/</a></p>
 <p>需要所在机构给UK biobank提出申请，才能够申请，数据分为4个等级，影像学数据可以提供下载，基因组数据需要通过dnanexus分析。</p>
 <ol>
-<li>
-<p>数据范围</p>
-</li>
-<li>
-<p>下载方式</p>
-</li>
+<li>数据范围</li>
 </ol>
+<center>
+      <img src= "https://blog-1310600458.cos.ap-shanghai.myqcloud.com/pmed.1001779.t001.png" width="800"/>
+      <p><font color="grey"></font></p>
+  </center>
+<p>包含全基因组测序，全外显子组测序，影像学数据，临床数据等等。</p>
+<ol start="2">
+<li>下载方式</li>
+</ol>
+<p>影像学数据可以下载，基因组数据不提供下载，允许在dnanexus云平台分析。</p>
 <h3 id="26-cbioportal">2.6 cbioportal</h3>
 <p>官网：https://www.cbioportal.org/</p>
 <ol>
-<li>
-<p>数据范围</p>
-</li>
-<li>
-<p>下载方式</p>
-</li>
+<li>数据范围</li>
+</ol>
+<p>多维度癌症基因集数据。整合了包括体细胞突变、DNA拷贝数变异、mRNA和miRNA表达量、DNA甲基化、蛋白质丰度、临床信息等数据类型，能够对数据进行可视化和分析。</p>
+<ol start="2">
+<li>下载方式</li>
 </ol>
 <p><a href="https://www.cbioportal.org/" target="_blank">下载cbioportal数据</a></p>
 <h3 id="27-tcga">2.7 TCGA</h3>
@@ -675,6 +680,9 @@
 </li>
 <li>
 <p><a href="https://kasperdanielhansen.github.io/genbioconductor/html/GEOquery.html" target="_blank">GEOquery</a></p>
+</li>
+<li>
+<p>UK Biobank: An Open Access Resource for Identifying the Causes of a Wide Range of Complex Diseases of Middle and Old Age</p>
 </li>
 </ul></div>
       </div>
