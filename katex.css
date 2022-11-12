@@ -1075,5 +1075,6 @@
 }
 body {
   counter-reset: katexEqnNo mmlEqnNo;
+  position: relative;
 }
 
