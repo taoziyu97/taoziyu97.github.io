@@ -528,7 +528,7 @@
 </span></span></code></pre></div><p>.toc-nav a.nav-link:hover是鼠标滑过时toc标题产生颜色变化。</p>
 <p>media是设置小屏幕不显示toc</p>
 <ol start="3">
-<li>在layouts/_default/single.html中加入以下内容，放在了</article>和comment之间。</li>
+<li>在layouts/_default/single.html中加入以下内容，放在了 <code>&lt;/article&gt;</code> 和comment之间。</li>
 </ol>
 <div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>{{ if .Site.Params.toc | default true }}
 </span></span><span style="display:flex;"><span>{{ partial &#34;toc&#34; . }}
