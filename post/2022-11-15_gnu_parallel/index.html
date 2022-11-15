@@ -17,7 +17,7 @@
 </script>
 
 <meta charset="utf-8">
-<title>技术</title>
+<title>使用GUN Parallele并行计算</title>
 
 
 
@@ -25,7 +25,7 @@
 
 
 
-<link rel="canonical" href="https://taozyblog.com.cn/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" />
+<link rel="canonical" href="https://taozyblog.com.cn/post/2022-11-15_gnu_parallel/" itemprop="url" />
 
 
 <link rel="manifest" href="/manifest.webmanifest">
@@ -92,50 +92,27 @@
 
 
 
+
+
+
+
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://blog-1310600458.cos.ap-shanghai.myqcloud.com/logo-gray&#43;black300.png" />
+<meta property="og:image" content="https://blog-1310600458.cos.ap-shanghai.myqcloud.com/logo-gray&#43;black300.png" />
  
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
-<meta property="og:image:width" content="96">
-<meta property="og:image:height" content="96">
- 
-
-<meta property="og:image:type" content="image/.png">
- 
-
- 
-
-
-
-
-<meta property="og:title" content="技术" />
-<meta property="og:description" content="This is meta description" />
+<meta property="og:title" content="使用GUN Parallele并行计算" />
+<meta property="og:description" content="介绍如何使用GUN Parallele在shell中并行计算。" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://taozyblog.com.cn/categories/%E6%8A%80%E6%9C%AF/" />
+<meta property="og:url" content="https://taozyblog.com.cn/post/2022-11-15_gnu_parallel/" />
 
 
-<meta name="twitter:title" content="技术" />
-<meta name="twitter:description" content="This is meta description" />
+<meta name="twitter:title" content="使用GUN Parallele并行计算" />
+<meta name="twitter:description" content="介绍如何使用GUN Parallele在shell中并行计算。" />
 
 
 
@@ -393,392 +370,574 @@
 
 
 
-
-<section class="section-sm pb-0">
-  <div class="container">
-    <div class="row">
-      <div class="col-12">
-        <div class="title-bordered">
-          <h1 class="h4">Showing items from <span class="text-primary">技术</span></h1>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-
-
-
-
-
-
 <section class="section">
   <div class="container">
-    <div class="row">
-      
-      
-      
-
-      
-      <div class="col-lg-8  mb-5 mb-lg-0">
-        
-        
-        <div class="row">
-          
-          <div class="col-md-6">
-            <article class="card mb-4 border-0">
-              
-              
-              <div class="post-slider slider-sm">
-                
-                
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<picture>
-  <source srcset="/images/post/post-1_hu771f7caf30f5a18d8db2d2d1d07622b1_361879_545x0_resize_q90_h2_box.webp" media="(max-width: 575px)">
-  <source srcset="/images/post/post-1_hu771f7caf30f5a18d8db2d2d1d07622b1_361879_600x0_resize_q90_h2_box.webp" media="(max-width: 767px)">
-  <source srcset="/images/post/post-1_hu771f7caf30f5a18d8db2d2d1d07622b1_361879_700x0_resize_q90_h2_box.webp" media="(max-width: 991px)">
-  <source srcset="/images/post/post-1_hu771f7caf30f5a18d8db2d2d1d07622b1_361879_1110x0_resize_q90_h2_box.webp">
-  <img loading="lazy" decoding="async" class="img-fluid w-100" src="/images/post/post-1_hu771f7caf30f5a18d8db2d2d1d07622b1_361879_1110x0_resize_q90_box.jpg" alt="" width="1403" height="638">
-</picture>
- 
- 
- 
-
-
-                
-              </div>
-              
-              
-              <div class="card-body">
-                <h3 class="h4"><a class="post-title" href="/post/2021-1-11-build_blog/">Hugo&#43;Github&#43;阿里云域名搭建个人博客（附Netlify部署方法）</a></h3>
-                <ul class="list-inline post-meta mb-4">
-                  <li class="list-inline-item"><i class="fas fa-user mr-2"></i>
-                    <a href="/author/ziyu/">Ziyu</a>
-                  </li>
-                  <li class="list-inline-item">Date : January 21, 2021</li>
-                  <li class="list-inline-item">Categories :
-                    <a
-                      href="/categories/%e6%8a%80%e6%9c%af" class="ml-1">技术
-                    </a>
-                    </li>
-                  <li class="list-inline-item">Tags :
-                    <a
-                      href="/tags/%e5%8d%9a%e5%ae%a2" class="ml-1">博客 </a>
-                    ,<a
-                      href="/tags/markdown" class="ml-1">Markdown </a>
-                    
-                  </li>
-                </ul>
-                <p><h2 id="前言">前言</h2>
-<p>最近师兄和涛哥都分享了这个流程：如何使用了R包blogdown搭建个人博客，但是我和轩哥在使用的过程中发现一个小问题，有一些主题似乎并不能很好的被blogdown安装的hugo来应用，几番求解无果，暂时将这个问题搁置，因为太喜欢这个theme不想放弃，所以找了一种不用blogdown的方法去搭 …</p></p>
-                <a href="/post/2021-1-11-build_blog/" class="btn btn-outline-primary">Continue Reading</a>
-              </div>
-            </article>
-          </div>
-          
-        </div>
-        
-        
-
-        
-        
-        
-        
-        
-        
-        
-        <ul class="pagination ">
-          
-          
-          <li class="page-item">
-            <a href="/categories/%E6%8A%80%E6%9C%AF/" class="page-link">&laquo;</a>
+    <article class="row mb-4">
+      <div class="col-lg-10 mx-auto mb-4">
+        <h1 class="h2 mb-3">使用GUN Parallele并行计算</h1>
+        <ul class="list-inline post-meta mb-3">
+          <li class="list-inline-item"><i class="fas fa-user mr-2"></i>
+            <a href="/author/ziyu/">Ziyu</a>
           </li>
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          <li class="page-item">
-            <a href="/categories/%E6%8A%80%E6%9C%AF/" class="page-link">
-              1
-            </a>
+          <li class="list-inline-item">Date : November 14, 2022</li>
+          <li class="list-inline-item">Categories :
+            <a
+              href="/categories/shell" class="ml-1">Shell </a>
+            </li>
+          <li class="list-inline-item">Tags : <a
+              href="/tags/shell" class="ml-1">Shell </a> 
           </li>
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          <li class="page-item page-item active ">
-            <a href="/categories/%E6%8A%80%E6%9C%AF/page/2/" class="page-link">
-              2
-            </a>
-          </li>
-          
-          
-          
-          
         </ul>
-        
-        
       </div>
-      
+      <div class="col-lg-10 mx-auto">
+        <div class="content" ><p>介绍如何使用GUN Parallele在shell中并行计算。</p>
+<h2 id="前言">前言</h2>
+<p>并行指的是每个线程分配给独立的核心，线程同时运行，最大程度的使用所有CPU的核。GUN Parallele是一种shell工具，作业可以是单个命令或脚本。输入是文件列表、主机列表、用户列表、url列表或表列表等等。GNU Parallele分割输入，并行地将其输送到命令中。</p>
+<h2 id="1-安装">1. 安装</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>wget http://ftp.gnu.org/gnu/parallel/parallel-latest.tar.bz2
+</span></span><span style="display:flex;"><span>tar xjf parallel-latest.tar.bz2
+</span></span><span style="display:flex;"><span>cd parallel-20211022/
+</span></span><span style="display:flex;"><span>./configure --prefix=$HOME
+</span></span><span style="display:flex;"><span>make &amp; make install
+</span></span></code></pre></div><h2 id="2-gun-parallele语法介绍">2. GUN Parallele语法介绍</h2>
+<p>GNU parallel可以读入文件，命令行，以及stdin（标准输入或管道）。</p>
+<h4 id="单个输入">单个输入</h4>
+<p>输入</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>parallel <span style="color:#366">echo</span> ::: A B C
+</span></span></code></pre></div><p>输出</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>A
+</span></span><span style="display:flex;"><span>B
+</span></span><span style="display:flex;"><span>C
+</span></span></code></pre></div><h4 id="多个输入">多个输入</h4>
+<p>输入：</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>parallel <span style="color:#366">echo</span> ::: A B C ::: D E F
+</span></span><span style="display:flex;"><span><span style="color:#09f;font-style:italic"># 或者</span>
+</span></span><span style="display:flex;"><span>parallel -a abc-file -a def-file <span style="color:#366">echo</span>
+</span></span></code></pre></div><p>输出：</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>A D
+</span></span><span style="display:flex;"><span>A E
+</span></span><span style="display:flex;"><span>A F
+</span></span><span style="display:flex;"><span>B D
+</span></span><span style="display:flex;"><span>B E
+</span></span><span style="display:flex;"><span>B F
+</span></span><span style="display:flex;"><span>C D
+</span></span><span style="display:flex;"><span>C E
+</span></span><span style="display:flex;"><span>C F
+</span></span></code></pre></div><h4 id="连接方式">连接方式</h4>
+<ul>
+<li>&ndash;link 一对一连接</li>
+</ul>
+<p>输入：</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>parallel --link <span style="color:#366">echo</span> ::: A B C ::: D E F
+</span></span></code></pre></div><p>输出：</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>A D
+</span></span><span style="display:flex;"><span>B E
+</span></span><span style="display:flex;"><span>C F
+</span></span></code></pre></div><ul>
+<li>&ndash;verbose：在本地显示命令，可以在运行前打印出命令，展现出实际上脚本是怎么跑的。</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>parallel --verbose <span style="color:#366">echo</span> <span style="color:#555">{}</span> ::: A B C
+</span></span></code></pre></div><p>输出：</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#366">echo</span> A
+</span></span><span style="display:flex;"><span><span style="color:#366">echo</span> B
+</span></span><span style="display:flex;"><span>A
+</span></span><span style="display:flex;"><span><span style="color:#366">echo</span> C
+</span></span><span style="display:flex;"><span>B
+</span></span><span style="display:flex;"><span>C
+</span></span></code></pre></div><ul>
+<li>:::和::::</li>
+</ul>
+<p>:::是连接变量，::::是连接文件或目录</p>
+<ul>
+<li>-j/-jobs 设置并行任务数目，默认jobs和CPU的核数目相同。</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>perl -e <span style="color:#c30">&#39;for(1..128){print &#34;$_\n&#34;}&#39;</span> &gt; num128
+</span></span><span style="display:flex;"><span>/usr/bin/time parallel -N0 -j64 sleep <span style="color:#f60">1</span> :::: num128
+</span></span><span style="display:flex;"><span><span style="color:#09f;font-style:italic"># 64个并行任务，sleep是啥用处</span>
+</span></span></code></pre></div><h4 id="在函数中使用并行">在函数中使用并行</h4>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#09f;font-style:italic"># Only works in Bash</span>
+</span></span><span style="display:flex;"><span>my_func<span style="color:#555">()</span> <span style="color:#555">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#366">echo</span> in my_func <span style="color:#033">$1</span>
+</span></span><span style="display:flex;"><span><span style="color:#555">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#366">export</span> -f my_func
+</span></span><span style="display:flex;"><span>parallel my_func ::: <span style="color:#f60">1</span> <span style="color:#f60">2</span> <span style="color:#f60">3</span>
+</span></span></code></pre></div><p>输出：</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>in my_func 1
+</span></span><span style="display:flex;"><span>in my_func 2
+</span></span><span style="display:flex;"><span>in my_func 3
+</span></span></code></pre></div><h4 id="对命令行使用">对命令行使用</h4>
+<p>基本语法：</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cat file | parallel <span style="color:#366">command</span>
+</span></span></code></pre></div><p>将file的每一行，传输给需要批量运行的命令来并行运算。</p>
+<p>示例：</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>parallel -k echo ::: {1..21} X Y &gt; contig # 先生成每条条染色体的编号
+</span></span><span style="display:flex;"><span>T=/public3/home/sch7779/taozy/sclust_data/HRR232650_bqsr.bam
+</span></span><span style="display:flex;"><span>N=/public3/home/sch7779/taozy/sclust_data/HRR232651_bqsr.bam
+</span></span><span style="display:flex;"><span>config=/public3/home/sch7779/taozy/script/config
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>normal=$(basename &#34;$T&#34; _bqsr.bam)
+</span></span><span style="display:flex;"><span>tumor=$(basename &#34;$N&#34; _bqsr.bam)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>cat ${config} | parallel -j 24 Sclust bamprocess -t ${T} -n ${N} -o ./${tumor} -part 2 -build hg19 -r chr{}
+</span></span></code></pre></div><p>每条染色体的编号并行传入{}位置，24个并行任务（注意查看运算节点有多少核可以使用），这样就可以对每个样本的所有的染色体同时进行处理。</p>
+<h4 id="对脚本使用">对脚本使用</h4>
+<p>示例：并行call mutation</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>#PBS -N mutect_split1
+</span></span><span style="display:flex;"><span>#PBS -l nodes=1:ppn=28 # 学校的1个节点上只有28个核，该任务似乎不可以跨节点运行（检查一下）
+</span></span><span style="display:flex;"><span>#PBS -S /bin/bash
+</span></span><span style="display:flex;"><span>#PBS -j oe
+</span></span><span style="display:flex;"><span>#PBS -q slst_fat
+</span></span><span style="display:flex;"><span>#PBS -o /public/home/liuxs/taozy/project/CRCsig/GSA-HRA000873/6.mutect/result
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>start=`date +%s` # 计时
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>source /public/home/liuxs/anaconda3/bin/activate
+</span></span><span style="display:flex;"><span>source activate wes
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>GATK=/public/home/liuxs/anaconda3/envs/wes/share/gatk4-4.1.3.0-0/gatk-package-4.1.3.0-local.jar
+</span></span><span style="display:flex;"><span>ref=/public/home/liuxs/taozy/project/CRCsig/GSA-HRA000873/one_sample/result/ucsc.hg19/ucsc.hg19.fasta
+</span></span><span style="display:flex;"><span>bed=/public/home/liuxs/taozy/project/CRCsig/GSA-HRA000873/one_sample/result/ucsc.hg19/hg19.exon.bed
+</span></span><span style="display:flex;"><span>path=/public/home/liuxs/taozy/data/GSA-HRA000873/HRA000873/raw_data1
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>export GATK # This is critical! 一定要记得把所有并行需要用到的变量和函数export，且函数需要添加参数-f
+</span></span><span style="display:flex;"><span>export ref
+</span></span><span style="display:flex;"><span>export bed
+</span></span><span style="display:flex;"><span>export path
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># 构建函数
+</span></span><span style="display:flex;"><span>function parallel_call { 
+</span></span><span style="display:flex;"><span># 检查$1和$2是否分别对应normal和tumor样本
+</span></span><span style="display:flex;"><span># $1表示传给shell的第1个参数，$2类推
+</span></span><span style="display:flex;"><span>echo &#34;normal is $1&#34;
+</span></span><span style="display:flex;"><span>echo &#34;tumor is $2&#34;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># 检查是否有tmp文件夹，没有则创建
+</span></span><span style="display:flex;"><span>if [ ! -d &#34;./mutect_tmp/&#34; ];then
+</span></span><span style="display:flex;"><span>    mkdir mutect_tmp
+</span></span><span style="display:flex;"><span>fi
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>java -jar -Xmx20G -Djava.io.tmpdir=/public/home/liuxs/taozy/data/GSA-HRA000873/HRA000873/raw_data1/$2/mutect_tmp $GATK   Mutect2 -R ${ref} \
+</span></span><span style="display:flex;"><span>-I ${path}/$2/$2_bqsr.bam -tumor $2 \
+</span></span><span style="display:flex;"><span>-I ${path}/$1/$1_bqsr.bam -normal $1 \
+</span></span><span style="display:flex;"><span>-L ${bed} \
+</span></span><span style="display:flex;"><span>-O ${path}/$2/$2_mutect2.vcf
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>cd /public/home/liuxs/taozy/data/GSA-HRA000873/HRA000873/raw_data1/$2
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>if [ ! -d &#34;./filmut_tmp/&#34; ];then
+</span></span><span style="display:flex;"><span>    mkdir filmut_tmp
+</span></span><span style="display:flex;"><span>fi
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>java -jar -Xmx20G -Djava.io.tmpdir=/public/home/liuxs/taozy/data/GSA-HRA000873/HRA000873/raw_data1/$2/filmut_tmp $GATK  FilterMutectCalls \
+</span></span><span style="display:flex;"><span>-R ${ref} \
+</span></span><span style="display:flex;"><span>-V ${path}/$2/$2_mutect2.vcf \
+</span></span><span style="display:flex;"><span>-O ${path}/$2/$2_somatic.vcf
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>cat ${path}/$2/$2_somatic.vcf | perl -alne &#39;{if(/^#/){print}else{next unless $F[6] eq &#34;PASS&#34;;next if $F[0] =~/_/;print } }&#39; &gt; ${path}/$2/${2}_filter.vcf
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>export -f parallel_call # export -f 特指函数
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># split是把需要运行的样本切割成多份，方便批量提交任务到集群
+</span></span><span style="display:flex;"><span>split=/public/home/liuxs/taozy/project/CRCsig/GSA-HRA000873/6.mutect/script/split_sample
+</span></span><span style="display:flex;"><span>export split
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>normal=$(awk -F&#39;,&#39; &#39;{print $1}&#39; $split)
+</span></span><span style="display:flex;"><span>tumor=$(awk -F&#39;,&#39; &#39;{print $3}&#39; $split)
+</span></span><span style="display:flex;"><span>export normal
+</span></span><span style="display:flex;"><span>export tumor
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># --link保证正常样本和肿瘤样本一对一匹配运行
+</span></span><span style="display:flex;"><span># --verbose 显示将运行的命令
+</span></span><span style="display:flex;"><span>parallel --verbose -j 28 --link parallel_call ::: ${normal} ::: ${tumor}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>end=`date +%s`
+</span></span><span style="display:flex;"><span>time=`echo $start $end | awk &#39;{print $2-$1}&#39;`
+</span></span><span style="display:flex;"><span>echo $time
+</span></span></code></pre></div><h2 id="参考资料">参考资料</h2>
+<ul>
+<li>
+<p><a href="https://www.gnu.org/software/parallel/parallel_tutorial.html" target="_blank">GNU Parallel Tutorial</a></p>
+</li>
+<li>
+<p><a href="https://www.yuque.com/biotrainee/wes/ngqr3b" target="_blank">肿瘤外显子数据分析</a></p>
+</li>
+</ul></div>
+      </div>
+    </article>
 
-      
-      
-      <aside class="col-lg-4">
-        <div class="pl-0 pl-lg-4"><!-- Search -->
 
-<div class="widget">
-  <h5 class="widget-title"><span>Search</span></h5>
-  <form action="/search" class="widget-search">
-    <input id="search-query" name="s" type="search" placeholder="Type &amp; Hit Enter...">
-    <button type="submit" class="btn btn-primary" aria-label="Search Post"><i class="fas fa-search"></i></button>
-  </form>
-</div>
-<!-- about me -->
-<div class="widget widget-about">
-  
-  <h5 class="widget-title"><span>Hi, I Am Ziyu Tao</span></h5>
-  <div class="d-flex">
 
-    
-    
-    
-    
-    
-    <img class="img-fluid widget-about-image" loading="lazy" src="https://blog-1310600458.cos.ap-shanghai.myqcloud.com/20220408140841.png" alt="">
-    
 
-    <div class="mb-2">
-      <span class="d-block">上海科技大学在读博士生。
-研究方向：癌症基因组学。
-Find your passion and then aim to be the best on the …</span>
-      
-      <ul class="list-inline social-icons mb-1 mt-2">
+
+
+
+
+
+
+
+<div class="toc">
+
+    <div class="page-header"><strong> 目    录 </strong></div>
+
+
+    <div id="page-scrollspy" class="toc-nav">
+
         
-        <li class="list-inline-item"><a href="https://facebook.com"><i class="fab fa-facebook"></i></a></li>
         
-      </ul>
-      <a href="/about/" class="btn btn-sm btn-primary p-1 px-3 rounded mt-2">About Me</a>
+            
+                
+                
+                    
+                    <ul class="nav">
+                    
+                    <ul class="nav">
+                    
+                    
+                        <li class="nav-item">
+                            <a class="nav-link text-left" href="#%e5%89%8d%e8%a8%80">
+                            前言
+                            </a>
+                        </li>
+                    
+                    
+                    </ul>
+                    
+                    </ul>
+                    
+                
+            
+        
+        
+            
+                
+                
+                    
+                    <ul class="nav">
+                    
+                    <ul class="nav">
+                    
+                    
+                        <li class="nav-item">
+                            <a class="nav-link text-left" href="#1-%e5%ae%89%e8%a3%85">
+                            1. 安装
+                            </a>
+                        </li>
+                    
+                    
+                    </ul>
+                    
+                    </ul>
+                    
+                
+            
+        
+        
+            
+                
+                
+                    
+                    <ul class="nav">
+                    
+                    <ul class="nav">
+                    
+                    
+                        <li class="nav-item">
+                            <a class="nav-link text-left" href="#2-gun-parallele%e8%af%ad%e6%b3%95%e4%bb%8b%e7%bb%8d">
+                            2. GUN Parallele语法介绍
+                            </a>
+                        </li>
+                    
+                    
+                    </ul>
+                    
+                    </ul>
+                    
+                
+            
+        
+        
+            
+                
+                
+                    
+                    <ul class="nav">
+                    
+                    <ul class="nav">
+                    
+                    <ul class="nav">
+                    
+                    <ul class="nav">
+                    
+                    
+                        <li class="nav-item">
+                            <a class="nav-link text-left" href="#%e5%8d%95%e4%b8%aa%e8%be%93%e5%85%a5">
+                            单个输入
+                            </a>
+                        </li>
+                    
+                    
+                    </ul>
+                    
+                    </ul>
+                    
+                    </ul>
+                    
+                    </ul>
+                    
+                
+            
+        
+        
+            
+                
+                
+                    
+                    <ul class="nav">
+                    
+                    <ul class="nav">
+                    
+                    <ul class="nav">
+                    
+                    <ul class="nav">
+                    
+                    
+                        <li class="nav-item">
+                            <a class="nav-link text-left" href="#%e5%a4%9a%e4%b8%aa%e8%be%93%e5%85%a5">
+                            多个输入
+                            </a>
+                        </li>
+                    
+                    
+                    </ul>
+                    
+                    </ul>
+                    
+                    </ul>
+                    
+                    </ul>
+                    
+                
+            
+        
+        
+            
+                
+                
+                    
+                    <ul class="nav">
+                    
+                    <ul class="nav">
+                    
+                    <ul class="nav">
+                    
+                    <ul class="nav">
+                    
+                    
+                        <li class="nav-item">
+                            <a class="nav-link text-left" href="#%e8%bf%9e%e6%8e%a5%e6%96%b9%e5%bc%8f">
+                            连接方式
+                            </a>
+                        </li>
+                    
+                    
+                    </ul>
+                    
+                    </ul>
+                    
+                    </ul>
+                    
+                    </ul>
+                    
+                
+            
+        
+        
+            
+                
+                
+                    
+                    <ul class="nav">
+                    
+                    <ul class="nav">
+                    
+                    <ul class="nav">
+                    
+                    <ul class="nav">
+                    
+                    
+                        <li class="nav-item">
+                            <a class="nav-link text-left" href="#%e5%9c%a8%e5%87%bd%e6%95%b0%e4%b8%ad%e4%bd%bf%e7%94%a8%e5%b9%b6%e8%a1%8c">
+                            在函数中使用并行
+                            </a>
+                        </li>
+                    
+                    
+                    </ul>
+                    
+                    </ul>
+                    
+                    </ul>
+                    
+                    </ul>
+                    
+                
+            
+        
+        
+            
+                
+                
+                    
+                    <ul class="nav">
+                    
+                    <ul class="nav">
+                    
+                    <ul class="nav">
+                    
+                    <ul class="nav">
+                    
+                    
+                        <li class="nav-item">
+                            <a class="nav-link text-left" href="#%e5%af%b9%e5%91%bd%e4%bb%a4%e8%a1%8c%e4%bd%bf%e7%94%a8">
+                            对命令行使用
+                            </a>
+                        </li>
+                    
+                    
+                    </ul>
+                    
+                    </ul>
+                    
+                    </ul>
+                    
+                    </ul>
+                    
+                
+            
+        
+        
+            
+                
+                
+                    
+                    <ul class="nav">
+                    
+                    <ul class="nav">
+                    
+                    <ul class="nav">
+                    
+                    <ul class="nav">
+                    
+                    
+                        <li class="nav-item">
+                            <a class="nav-link text-left" href="#%e5%af%b9%e8%84%9a%e6%9c%ac%e4%bd%bf%e7%94%a8">
+                            对脚本使用
+                            </a>
+                        </li>
+                    
+                    
+                    </ul>
+                    
+                    </ul>
+                    
+                    </ul>
+                    
+                    </ul>
+                    
+                
+            
+        
+        
+            
+                
+                
+                    
+                    <ul class="nav">
+                    
+                    <ul class="nav">
+                    
+                    
+                        <li class="nav-item">
+                            <a class="nav-link text-left" href="#%e5%8f%82%e8%80%83%e8%b5%84%e6%96%99">
+                            参考资料
+                            </a>
+                        </li>
+                    
+                    
+                    </ul>
+                    
+                    </ul>
+                    
+                
+            
+        
+
     </div>
-  </div>
-  
-  
-</div><!-- Promotion -->
 
-<div class="promotion">
-  
-  
-  <img loading="lazy" decoding="async" class="w-100" width="330" height="390" src="/images/promotion_hu6a90c30421148ac00753954565e9ea00_18207_330x0_resize_q90_h2_box.webp" alt="promotion-image">
-  <div class="promotion-content">
-    <h5 class="text-white mb-3">Create Stunning Website!!</h5>
-    <p class="text-white mb-4">Lorem ipsum dolor sit amet, consectetur sociis. Etiam nunc amet id dignissim. Feugiat id tempor vel sit ornare.</p>
-    <a href="https://themefisher.com/" class="btn btn-primary">Get Started</a>
-  </div>
-</div>
-<!-- Search -->
-
-
-<div class="widget">
-  <h5 class="widget-title"><span>Subscribe Newsletter</span></h5>
-  <form action="https://gmail.us4.list-manage.com/subscribe/post?u=463ee871f45d2d93748e77cad&amp;amp;id=a0a2c6d074" method="post" name="mc-embedded-subscribe-form" target="_blank"
-    class="widget-search">
-    <input class="mb-3" id="search-query" name="s" type="search" placeholder="Your Email Address">
-    <i class="ti-email"></i>
-    <button type="submit" class="btn btn-primary" name="subscribe" aria-label="Subscribe Newsletter"><i class="fas fa-paper-plane"></i></button>
-    <div style="position: absolute; left: -5000px;" aria-hidden="true">
-      <input type="text" name="b_463ee871f45d2d93748e77cad_a0a2c6d074" tabindex="-1">
-    </div>
-  </form>
 </div>
 
-<!-- categories -->
-<div class="widget">
-  <h5 class="widget-title"><span>Categories</span></h5>
-  <ul class="list-unstyled widget-list">
-    <li><a href="/categories/bug" class="d-flex">Bug
-        <small class="ml-auto">(1)</small></a></li>
-    <li><a href="/categories/photography" class="d-flex">Photography
-        <small class="ml-auto">(1)</small></a></li>
-    <li><a href="/categories/r" class="d-flex">R
-        <small class="ml-auto">(12)</small></a></li>
-    <li><a href="/categories/shell" class="d-flex">Shell
-        <small class="ml-auto">(25)</small></a></li>
-    <li><a href="/categories/%e5%8f%af%e8%a7%86%e5%8c%96" class="d-flex">可视化
-        <small class="ml-auto">(1)</small></a></li>
-    <li><a href="/categories/%e5%a6%82%e4%bd%95%e7%a7%91%e7%a0%94" class="d-flex">如何科研
-        <small class="ml-auto">(1)</small></a></li>
-    <li><a href="/categories/%e6%8a%80%e6%9c%af" class="d-flex">技术
-        <small class="ml-auto">(7)</small></a></li>
-    <li><a href="/categories/%e6%9c%ba%e5%99%a8%e5%ad%a6%e4%b9%a0" class="d-flex">机器学习
-        <small class="ml-auto">(3)</small></a></li>
-    <li><a href="/categories/%e7%94%9f%e4%bf%a1" class="d-flex">生信
-        <small class="ml-auto">(8)</small></a></li>
-    <li><a href="/categories/%e7%94%9f%e7%89%a9%e5%ad%a6" class="d-flex">生物学
-        <small class="ml-auto">(5)</small></a></li>
-    <li><a href="/categories/%e7%94%9f%e7%89%a9%e7%bb%9f%e8%ae%a1" class="d-flex">生物统计
-        <small class="ml-auto">(4)</small></a></li>
-    <li><a href="/categories/%e7%99%8c%e7%97%87%e5%9f%ba%e5%9b%a0%e7%bb%84%e5%ad%a6" class="d-flex">癌症基因组学
-        <small class="ml-auto">(6)</small></a></li>
-    <li><a href="/categories/%e7%ae%97%e6%b3%95" class="d-flex">算法
-        <small class="ml-auto">(3)</small></a></li>
-    <li><a href="/categories/%e8%ae%a1%e7%ae%97%e6%9c%ba%e5%9f%ba%e7%a1%80" class="d-flex">计算机基础
-        <small class="ml-auto">(2)</small></a></li>
-  </ul>
-</div><!-- latest post -->
-<div class="widget">
-  <h5 class="widget-title"><span>Latest Article</span></h5>
-  <!-- post-item -->
-  <ul class="list-unstyled widget-list mb-0">
-  
-    <li class="media widget-post align-items-center">
-      <a href="https://taozyblog.com.cn/post/2022-11-15_gnu_parallel/">        
-        
-        
-        
-        <img loading="lazy" class="mr-3" src="https://blog-1310600458.cos.ap-shanghai.myqcloud.com/logo-gray&#43;black300.png" alt="post image">
-        
-        
-        
-      </a>
-      <div class="media-body">
-        <h5 class="h6 mb-0"><a href="https://taozyblog.com.cn/post/2022-11-15_gnu_parallel/">使用GUN Parallele并行计算</a></h5>
-        <small>November 14, 2022</small>
+
+
+
+    
+    
+    <div class="row">
+      <div class="col-lg-10 mx-auto">
+        <div class="mt-5">
+          <div id="disqus_thread"></div>
+<script type="application/javascript">
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "themefisher-template" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        </div>
       </div>
-    </li>
-  
-    <li class="media widget-post align-items-center">
-      <a href="https://taozyblog.com.cn/post/2022-9-01_ega/">        
-        
-        
-        
-        <img loading="lazy" class="mr-3" src="https://blog-1310600458.cos.ap-shanghai.myqcloud.com/social_media_logo.png" alt="post image">
-        
-        
-        
-      </a>
-      <div class="media-body">
-        <h5 class="h6 mb-0"><a href="https://taozyblog.com.cn/post/2022-9-01_ega/">使用pyEGA3下载EGA数据</a></h5>
-        <small>September 28, 2022</small>
-      </div>
-    </li>
-  
-    <li class="media widget-post align-items-center">
-      <a href="https://taozyblog.com.cn/post/2022-9-14_dbgap/">        
-        
-        
-        
-        <img loading="lazy" class="mr-3" src="https://blog-1310600458.cos.ap-shanghai.myqcloud.com/dbGaP_logo_final.jpeg" alt="post image">
-        
-        
-        
-      </a>
-      <div class="media-body">
-        <h5 class="h6 mb-0"><a href="https://taozyblog.com.cn/post/2022-9-14_dbgap/">下载dbgap数据</a></h5>
-        <small>September 26, 2022</small>
-      </div>
-    </li>
-  
-  </ul>
-</div><!-- tags -->
-<div class="widget">
-  <h5 class="widget-title"><span>Tags</span></h5>
-  <ul class="list-inline widget-list-inline">
-    <li class="list-inline-item"><a href="/tags/bug">Bug</a></li>
-    <li class="list-inline-item"><a href="/tags/excel">Excel</a></li>
-    <li class="list-inline-item"><a href="/tags/image">Image</a></li>
-    <li class="list-inline-item"><a href="/tags/latex">Latex</a></li>
-    <li class="list-inline-item"><a href="/tags/linux">Linux</a></li>
-    <li class="list-inline-item"><a href="/tags/markdown">Markdown</a></li>
-    <li class="list-inline-item"><a href="/tags/photo">Photo</a></li>
-    <li class="list-inline-item"><a href="/tags/posterdown">Posterdown</a></li>
-    <li class="list-inline-item"><a href="/tags/r">R</a></li>
-    <li class="list-inline-item"><a href="/tags/r%e5%8c%85">R包</a></li>
-    <li class="list-inline-item"><a href="/tags/r%e5%8c%85%e5%bc%80%e5%8f%91">R包开发</a></li>
-    <li class="list-inline-item"><a href="/tags/shell">Shell</a></li>
-    <li class="list-inline-item"><a href="/tags/%e5%8d%9a%e5%ae%a2">博客</a></li>
-    <li class="list-inline-item"><a href="/tags/%e5%8f%af%e8%a7%86%e5%8c%96">可视化</a></li>
-    <li class="list-inline-item"><a href="/tags/%e6%8b%b7%e8%b4%9d%e6%95%b0%e5%8f%98%e5%bc%82">拷贝数变异</a></li>
-    <li class="list-inline-item"><a href="/tags/%e6%95%b0%e6%8d%ae%e5%a4%84%e7%90%86">数据处理</a></li>
-    <li class="list-inline-item"><a href="/tags/%e6%9c%ba%e5%99%a8%e5%ad%a6%e4%b9%a0">机器学习</a></li>
-    <li class="list-inline-item"><a href="/tags/%e7%94%9f%e7%89%a9%e6%a0%87%e5%bf%97%e7%89%a9">生物标志物</a></li>
-    <li class="list-inline-item"><a href="/tags/%e7%94%9f%e7%89%a9%e7%bb%9f%e8%ae%a1">生物统计</a></li>
-    <li class="list-inline-item"><a href="/tags/%e7%99%8c%e7%97%87%e5%9f%ba%e5%9b%a0%e7%bb%84%e5%ad%a6">癌症基因组学</a></li>
-    <li class="list-inline-item"><a href="/tags/%e7%a7%91%e7%a0%94%e5%86%99%e4%bd%9c">科研写作</a></li>
-    <li class="list-inline-item"><a href="/tags/%e7%ae%97%e6%b3%95">算法</a></li>
-    <li class="list-inline-item"><a href="/tags/%e8%ae%a1%e7%ae%97%e6%9c%ba%e5%9f%ba%e7%a1%80">计算机基础</a></li>
-    <li class="list-inline-item"><a href="/tags/%e8%bd%af%e4%bb%b6%e4%bd%bf%e7%94%a8">软件使用</a></li>
-  </ul>
-</div><!-- Social -->
-<div class="widget">
-  <h5 class="widget-title"><span>Social Links</span></h5>
-  <ul class="list-inline widget-list-inline mb-3">
-    
-    <li class="list-inline-item"><a href="#" style="padding:5px 15px"><i class="fab fa-facebook"></i></a></li>
-    
-    <li class="list-inline-item"><a href="#" style="padding:5px 15px"><i class="fab fa-twitter"></i></a></li>
-    
-    <li class="list-inline-item"><a href="#" style="padding:5px 15px"><i class="fab fa-linkedin-in"></i></a></li>
-    
-    <li class="list-inline-item"><a href="#" style="padding:5px 15px"><i class="fab fa-github"></i></a></li>
-    
-  </ul>
-</div></div>
-      </aside>
-      
-      
     </div>
+    
   </div>
 </section>
 
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https:\/\/taozyblog.com.cn\/post\/2022-11-15_gnu_parallel\/"
+    },
+    "headline": "使用GUN Parallele并行计算",
+    "description": "",
+    "image": "",  
+    "author": {
+      "@type": "Person",
+      "name": "Ziyu"
+    },  
+    "publisher": {
+      "@type": "Organization",
+      "name": "",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "images\/logo.png"
+      }
+    },
+    "datePublished": "2022-11-14"
+  }
+  
+</script>
 
 
 
