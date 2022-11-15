@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>R包开发 on Ziyu&#39;s Blog | Welcome to my world!</title>
-    <link>https://taoziyu97.github.io/tags/r%E5%8C%85%E5%BC%80%E5%8F%91/</link>
+    <link>https://taozyblog.com.cn/tags/r%E5%8C%85%E5%BC%80%E5%8F%91/</link>
     <description>Recent content in R包开发 on Ziyu&#39;s Blog | Welcome to my world!</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Design By [Themefisher](https://themefisher.com/) Develop By [Gethugothemes](https://gethugothemes.com/)</copyright>
-    <lastBuildDate>Wed, 23 Feb 2022 15:40:24 +0600</lastBuildDate><atom:link href="https://taoziyu97.github.io/tags/r%E5%8C%85%E5%BC%80%E5%8F%91/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 23 Feb 2022 15:40:24 +0600</lastBuildDate><atom:link href="https://taozyblog.com.cn/tags/r%E5%8C%85%E5%BC%80%E5%8F%91/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>R包开发【2】——编写函数</title>
-      <link>https://taoziyu97.github.io/post/2022-2-23_function/</link>
+      <link>https://taozyblog.com.cn/post/2022-2-23_function/</link>
       <pubDate>Wed, 23 Feb 2022 15:40:24 +0600</pubDate>
       
-      <guid>https://taoziyu97.github.io/post/2022-2-23_function/</guid>
+      <guid>https://taozyblog.com.cn/post/2022-2-23_function/</guid>
       <description>R包功能的实现需要各种函数，函数应该如何编写？什么样的步骤可以被包括在函数里？函数需要哪些基本的功能？函数应该如何命名？函数可以通过调用函数并且给定参数来代替对代码的重复操作（当一个操作需要重复2次时），通过自定义的函数命名来使得功能易懂，并且方便后续的更新和更改，对功能进行更改只需要变更函数，而非在所有的代码中一一修改。
 1. 基本步骤 写函数的基本步骤如下：
 1.1 函数命名   命名要尽量短，而且指示函数的功能，长一点能够清楚的展示功能也无妨。
@@ -23,10 +23,10 @@
     
     <item>
       <title>R包开发【3】——R包开发细节</title>
-      <link>https://taoziyu97.github.io/post/2022-2-23_rpkg2/</link>
+      <link>https://taozyblog.com.cn/post/2022-2-23_rpkg2/</link>
       <pubDate>Wed, 23 Feb 2022 15:40:24 +0600</pubDate>
       
-      <guid>https://taoziyu97.github.io/post/2022-2-23_rpkg2/</guid>
+      <guid>https://taozyblog.com.cn/post/2022-2-23_rpkg2/</guid>
       <description>R包开发的各种细节。
 1. 命名   尽量避免同时使用大小写字母
   使用该包测试命名是否能用（？？？）。
@@ -35,10 +35,10 @@
     
     <item>
       <title>R包开发【1】——基本流程</title>
-      <link>https://taoziyu97.github.io/post/2022-2-22_rpkg/</link>
+      <link>https://taozyblog.com.cn/post/2022-2-22_rpkg/</link>
       <pubDate>Tue, 22 Feb 2022 15:40:24 +0600</pubDate>
       
-      <guid>https://taoziyu97.github.io/post/2022-2-22_rpkg/</guid>
+      <guid>https://taozyblog.com.cn/post/2022-2-22_rpkg/</guid>
       <description>任何可以被自动化的，都应该让它自动化，给自己省时间，也可以方便任何人使用。devtools的目的是使得开发工具变得容易，囊括了多个包来支持开发的各个功能。
 前言：R包开发书籍的基本内容   第二章 示例包
   第三章 为包开发准备系统
