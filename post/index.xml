@@ -7,16 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Design By [Themefisher](https://themefisher.com/) Develop By [Gethugothemes](https://gethugothemes.com/)</copyright>
-    <lastBuildDate>Tue, 15 Nov 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://taozyblog.com.cn/post/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>使用Sclust提取拷贝数</title>
-      <link>https://taozyblog.com.cn/post/2022-11-15_sclust/</link>
-      <pubDate>Tue, 15 Nov 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://taozyblog.com.cn/post/2022-11-15_sclust/</guid>
-      <description>&lt;p&gt;介绍如何使用Sclust提取绝对拷贝数。&lt;/p&gt;</description>
-    </item>
-    
+    <lastBuildDate>Mon, 14 Nov 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://taozyblog.com.cn/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>使用GUN Parallele并行计算</title>
       <link>https://taozyblog.com.cn/post/2022-11-15_gnu_parallel/</link>
@@ -24,6 +15,15 @@
       
       <guid>https://taozyblog.com.cn/post/2022-11-15_gnu_parallel/</guid>
       <description>&lt;p&gt;介绍如何使用GUN Parallele在shell中并行计算。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>使用Sclust提取拷贝数</title>
+      <link>https://taozyblog.com.cn/post/2022-11-15_sclust/</link>
+      <pubDate>Mon, 14 Nov 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://taozyblog.com.cn/post/2022-11-15_sclust/</guid>
+      <description>&lt;p&gt;介绍如何使用Sclust提取绝对拷贝数。&lt;/p&gt;</description>
     </item>
     
     <item>
