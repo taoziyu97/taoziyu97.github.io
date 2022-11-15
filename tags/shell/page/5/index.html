@@ -17,7 +17,7 @@
 </script>
 
 <meta charset="utf-8">
-<title>使用Latex写论文</title>
+<title>shell</title>
 
 
 
@@ -25,7 +25,7 @@
 
 
 
-<link rel="canonical" href="https://taozyblog.com.cn/post/2021-3-05-latex_blog/" itemprop="url" />
+<link rel="canonical" href="https://taozyblog.com.cn/tags/shell/" itemprop="url" />
 
 
 <link rel="manifest" href="/manifest.webmanifest">
@@ -44,7 +44,7 @@
 
 
 
-<meta name="description" content="使用Latex写论文可以减少排版的时间，它对文献的引用以及排序非常友好">
+<meta name="description" content="This is meta description">
 
 
 <meta name="author" content="Themefisher">
@@ -92,10 +92,6 @@
 
 
 
-
-
-
-
  
 
 
@@ -119,16 +115,12 @@
 
 
 
-
-<meta property="og:image" content="/images/post/post-4.jpg" />
-<meta name="twitter:image" content="/images/post/post-4.jpg" />
-<meta name="twitter:card" content="summary_large_image">
  
-<meta property="og:image:width" content="1359">
-<meta property="og:image:height" content="618">
+<meta property="og:image:width" content="96">
+<meta property="og:image:height" content="96">
  
 
-<meta property="og:image:type" content="image/.jpg">
+<meta property="og:image:type" content="image/.png">
  
 
  
@@ -136,14 +128,14 @@
 
 
 
-<meta property="og:title" content="使用Latex写论文" />
-<meta property="og:description" content="使用Latex写论文可以减少排版的时间，它对文献的引用以及排序非常友好" />
+<meta property="og:title" content="shell" />
+<meta property="og:description" content="This is meta description" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://taozyblog.com.cn/post/2021-3-05-latex_blog/" />
+<meta property="og:url" content="https://taozyblog.com.cn/tags/shell/" />
 
 
-<meta name="twitter:title" content="使用Latex写论文" />
-<meta name="twitter:description" content="使用Latex写论文可以减少排版的时间，它对文献的引用以及排序非常友好" />
+<meta name="twitter:title" content="shell" />
+<meta name="twitter:description" content="This is meta description" />
 
 
 
@@ -401,946 +393,396 @@
 
 
 
-<section class="section">
+
+<section class="section-sm pb-0">
   <div class="container">
-    <article class="row mb-4">
-      <div class="col-lg-10 mx-auto mb-4">
-        <h1 class="h2 mb-3">使用Latex写论文</h1>
-        <ul class="list-inline post-meta mb-3">
-          <li class="list-inline-item"><i class="fas fa-user mr-2"></i>
-            <a href="/author/ziyu/">Ziyu</a>
-          </li>
-          <li class="list-inline-item">Date : March 5, 2021</li>
-          <li class="list-inline-item">Categories :
-            <a
-              href="/categories/%e6%8a%80%e6%9c%af" class="ml-1">技术 </a>
-            </li>
-          <li class="list-inline-item">Tags : <a
-              href="/tags/latex" class="ml-1">Latex </a> 
-          </li>
-        </ul>
-      </div>
-      <div class="col-lg-10 mx-auto">
-        <div class="content" ><h2 id="前言">前言</h2>
-<p>最近写文章的时候，发现修改时调整参考文献的引用，是一件非常麻烦的事情，于是找到了一种简便的方法进行调整，发现了用Latex写论文原来这么好用（据涛哥和翔哥说，word也可以自动调整引用文献顺序，而我一直不知道&hellip;）。</p>
-<h2 id="主要内容">主要内容</h2>
-<ul>
-<li>LaTex基本语法</li>
-<li>模板的使用</li>
-<li>文献的引用</li>
-<li>排版的调整</li>
-<li>特殊符号的引用</li>
-<li>图片表格的插入</li>
-</ul>
-<h2 id="使用的工具">使用的工具</h2>
-<ul>
-<li>Oneleaf —— Online LaTeX Editor（推荐）</li>
-</ul>
-<p>优点：不用本地搭建环境；在线编辑并渲染；部分投稿期刊直接提供链接模板。</p>
-<ul>
-<li>MacTeX—— For mac</li>
-</ul>
-<p>mac的我还没有安过，仅列出来供参考。</p>
-<ul>
-<li>TexWorks —— For windows（我觉得很好用）。</li>
-</ul>
-<p>除了上面列出来的，还有很多其他的，根据自己的喜好使用吧。</p>
-<h2 id="基本语法">基本语法</h2>
-<ul>
-<li>整体框架</li>
-</ul>
-<p>注意到一个部分有开始也有结束，中间就是这个部分的内容。</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>\documentclass{article}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>\<span style="color:#069;font-weight:bold">begin</span>{document}
-</span></span><span style="display:flex;"><span>First document. This is a simple example, with no 
-</span></span><span style="display:flex;"><span>extra parameters or packages included.
-</span></span><span style="display:flex;"><span>\<span style="color:#069;font-weight:bold">end</span>{document}
-</span></span></code></pre></div><ul>
-<li>preamble</li>
-</ul>
-<p>在LaTex中，所有在document内容之前的都称为<strong>preamble</strong>,在<strong>preamble</strong>中可以定义整个文档的格式、使用的语言、你需要使用到的宏包、以及其他的元素。举例：</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>\documentclass[12pt, letterpaper]{article} <span style="color:#069;font-weight:bold">%</span>设置
-</span></span><span style="display:flex;"><span>\usepackage<span style="color:#360">[utf8]</span>{inputenc} <span style="color:#069;font-weight:bold">%</span>加载了名叫inputenc的宏包<span style="color:#a00;background-color:#faa">，</span>设置使用utf-8来编码<span style="color:#a00;background-color:#faa">。</span>
-</span></span></code></pre></div><p>在<code>[]</code>方括号中都是一些参数的选择，<strong>documentclass</strong>中设置了字体大小为12pt（默认的字体大小是10pt），纸张大小为信纸，其他的设置可以看<a href="https://www.overleaf.com/learn/latex/Page_size_and_margins" target="_blank">&lt;font color=blue&gt;Oneleaf的文档说明&lt;/font&gt;</a>。</p>
-<p>这些内容也属于preamble：</p>
-<p>标题</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>\title{First document}
-</span></span></code></pre></div><p>作者</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>\author{cat}
-</span></span></code></pre></div><p>日期</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>\date{March 2021}
-</span></span></code></pre></div><p>谢言</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>\thanks{funded by the Overleaf team}
-</span></span></code></pre></div><ul>
-<li>document内容</li>
-</ul>
-<p>字体的简单格式可以通过以下代码实现：</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Some of the \textbf{greatest} <span style="color:#069;font-weight:bold">%</span>字体加粗
-</span></span><span style="display:flex;"><span>discoveries <span style="color:#069;font-weight:bold">in</span> \underline{science} <span style="color:#069;font-weight:bold">%</span>加入下划线
-</span></span><span style="display:flex;"><span>were made by \textbf{\textit{accident}}. <span style="color:#069;font-weight:bold">%</span>斜体
-</span></span></code></pre></div><center>
-    <img src= "https://i.loli.net/2021/03/06/TwKB3A8SGqklEPn.png" width="800"/>
-</center>
-<p>还有更多的字体变换可以更改，具体参考<a href="https://www.overleaf.com/learn/latex/Bold,_italics_and_underlining" target="_blank">&lt;font color=blue&gt;字体格式&lt;/font&gt;</a>，来个简单的应用示例感受一下它的实用性。</p>
-<h2 id="oneleaf-示例">Oneleaf 示例</h2>
-<h3 id="1-模板的使用">1. 模板的使用</h3>
-<h4 id="进入-font-colorblueoneleaf模板fonthttpswwwoverleafcomlatextemplates选择合适的模板">进入 <a href="https://www.overleaf.com/latex/templates" target="_blank">&lt;font color=blue&gt;Oneleaf模板&lt;/font&gt;</a>，选择合适的模板</h4>
-<p>这其中包括<a href="https://www.overleaf.com/latex/templates/thesis-template-for-the-university-of-chinese-academy-of-sciences/fhbvbjrrgtwx" target="_blank">&lt;font color=blue&gt;国科大的毕业论文模板&lt;/font&gt;</a>、<a href="https://www.overleaf.com/latex/templates/research-proposal-template-for-ucas/tcjqfcxgsbfr" target="_blank">&lt;font color=blue&gt;开题报告模板&lt;/font&gt;</a>，以及各种杂志期刊、简历、信件、海报、报告、作业和写书的模板等等（部分期刊杂志会提供Oneleaf的模板）。</p>
-<center class="half">
-    <img src="https://i.loli.net/2021/03/05/SoAgT5dBGfaK3Y1.png" width="400"/>
-    <img src="https://i.loli.net/2021/03/05/osz41c38kgprZf6.png" width="400"/>
-</center>
-<h4 id="以论文写作为例">以论文写作为例</h4>
-<p>随便打开一个<a href="https://www.overleaf.com/latex/templates/submission-template-for-journal-of-photonics-research/jhgrbsdsmdpw" target="_blank">&lt;font color=blue&gt;模板&lt;/font&gt;</a>，最右边是实时的渲染结果，中间是可以编辑的部分，左边是模板的目录下文件。</p>
-<center>
-    <img src= "https://i.loli.net/2021/03/05/VEvczSxWZDHLP4m.png" width="800"/>
-</center>
-<p>左边的目录下存储了4个文件：</p>
-<ul>
-<li>以<code>.bib</code>结尾的文件</li>
-</ul>
-<p>通常用来存储引用文献的信息，其中引用文献需要用特定的格式——BibTex存储，可以通过谷歌学术、百度学术或者其它方式进行导出（谷歌学术的导出功能经常会崩溃），如何使用Bibtex格式进行文献引用请跳转
-<a href="#jump">&lt;font color=blue&gt;点击跳转&lt;/font&gt;</a>。</p>
-<ul>
-<li>以<code>.bst</code>结尾的文件</li>
-</ul>
-<p>这个文件通常由期刊或杂志提供，设置了参考文献出现的文章结尾的方式，比如：设置排序方式，设置作者名称是缩写还是全称，标题的大小写等等，一般不需要自行维护，而且可以根据自己的需求来在<code>.tex</code>中重新调整。</p>
-<ul>
-<li>以<code>.tex</code>结尾的文件</li>
-</ul>
-<p>这个是进行文档内容编辑的文件，可以在这个文件中加载宏包，进行内容以及格式的更改。</p>
-<ul>
-<li>以<code>.cls</code>结尾的文件</li>
-</ul>
-<p>这个文件通常是类文件，通过文档最前面的<code>\documentclass</code>导入，这里的<code>\documentclass[options]{class}</code>是用来指定文档类型的，可以通过options参数来定制文档类的属性，不同的选项之间需要用逗号隔开，比如这里的<code>\documentclass[final,3p]{CSP}</code>，其中<code>final</code>指的不在页面的边缘标记一个黑色框，这个3p对它的解释是：</p>
-<blockquote>
-<p>formats the article to the look and feel of the final format of model 3+ journals.</p>
-</blockquote>
-<p>我没明白这个3+model是什么意思，但是通过调试，发现这个数字越大，页面距就越大。</p>
-<p>另外别的模板中还存在这些文件：</p>
-<ul>
-<li><code>.bbl</code>文件</li>
-</ul>
-<p>这是编译之后形成的文件，这里直接就显示了编译后的形式，可以直接下载PDF文件。</p>
-<ul>
-<li><code>.sty</code>文件</li>
-</ul>
-<p>这是包文件，通常使用<code>\usepackage</code>导入。</p>
-<h3 id="2-内容的编辑以及参考文献的引用">2. 内容的编辑以及参考文献的引用</h3>
-<h4 id="内容的编辑">内容的编辑</h4>
-<p>载入宏包的方法是在文档开始前<code>\begin{document}</code>，写入<code>\usepackage{package}</code></p>
-<p>这里介绍几个常用的宏包：</p>
-<ul>
-<li>
-<p>数学公式 - amsmath</p>
-</li>
-<li>
-<p>插图 - graphicx</p>
-</li>
-<li>
-<p>颜色 - xcolor</p>
-</li>
-<li>
-<p>表格 - array</p>
-</li>
-<li>
-<p>中文 - ctex, xecjk</p>
-</li>
-<li>
-<p>西文 otf 字体 - fontspec</p>
-</li>
-<li>
-<p>英文下划线 - geometry</p>
-</li>
-</ul>
-<p>特别的，当要使用英文下划线<code>-</code>时，比如写入sigminer包中的函数名<code>read_maf</code>时，并不能直接识别下划线，需要载入该包来处理，或者给每处下划线改成<code>\_</code>也可以不用载入包来识别。</p>
-<ul>
-<li>超链接 - hyperref</li>
-</ul>
-<p>语法：<code>\usepackage[options]{hyperref}</code></p>
-<p>示例：加入超链接，同时将文献也超链接到reference中，并且设置超链接的颜色，常用的设为蓝色或者黑色。</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>\usepackage[backref, colorlinks,linkcolor=blue]{hyperref}
-</span></span></code></pre></div><center>
-    <img src= "https://i.loli.net/2021/03/05/SOYXw9Rno5UtEp8.png" width="600"/>
-</center>
-<p><span id="jump"></span></p>
-<h4 id="文献的引用">文献的引用</h4>
-<ul>
-<li>保存引用文献信息(google)</li>
-</ul>
-<p>如下图所示，谷歌学术中可以直接得到BibTex这种引用格式，将文献信息存储在<code>.txt</code>中，然后更改后缀为<code>.bib</code>即可。</p>
-<center>
-    <img src= "https://i.loli.net/2021/03/05/axyi3UvhgADkQHP.png" width="800"/>
-</center>
-<p>点击 <strong>BibTex</strong> 后会弹出下图所示页面，复制内容至<code>.bib</code>文件内即可。</p>
-<center>
-    <img src= "https://i.loli.net/2021/03/06/tQrgZIBhNTMbuwa.png" width="650"/>
-</center>
-<ul>
-<li>在<strong>tex</strong>文件中对引用格式进行设置</li>
-</ul>
-<p>在文档结束位置<code>\end{document}</code>前，增加对参考文献格式以及引用的设置，比如：</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>\bibliographystyle{bibft}\it
-</span></span><span style="display:flex;"><span>\bibliography{bibfile}
-</span></span></code></pre></div><p><strong>bibft</strong>是模板自带并自己命名的格式文件，这是由<code>.cls</code>文件定义的，bibfile就是制作好的<strong>bibtex</strong>文件，</p>
-<p>注意这里的文献引用格式有很多种，除了模板中定义的格式，可以通过参数的调整将格式更改为自己想要的，比如常用的，在方括号中标注数字，并且根据文献引用的先后顺序对reference排序：</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>\<span style="color:#069;font-weight:bold">begin</span>{document}
-</span></span><span style="display:flex;"><span>\bibliographystyle{unsrt}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>\bibliographystyle{unsrt} <span style="color:#069;font-weight:bold">%</span>根据引用顺序自动排序
-</span></span><span style="display:flex;"><span>\bibliography{bibfile.bib} <span style="color:#069;font-weight:bold">%</span>引用文献的文件
-</span></span><span style="display:flex;"><span>\<span style="color:#069;font-weight:bold">end</span>{document}
-</span></span></code></pre></div><p>我认为最方便的地方就是这里，<font color=red>能够根据文献引用的顺序对reference进行自动排序</font>。</p>
-<ul>
-<li>保存引用文献信息(zotero)</li>
-</ul>
-<p>在zotero中设置导出为BibTex，在zotero中通过command+shift+c就可以直接复制出该文献的BibTex引用格式。</p>
-<center>
-    <img src= "https://i.loli.net/2021/03/09/4AIkUPxQ71yEziL.png" width="650"/>
-</center>
-<ul>
-<li>在<strong>tex</strong>文件中进行引用</li>
-</ul>
-<p>通常在正文中有很常见的几种文献引用格式：
-温哥华格式（上标形式）
-哈佛格式（直接显示作者和发表年份）
-IEEE 格式（方括号内标注引用顺序）</p>
-<p>在文中一般使用<code>\cite{}</code>进行引用，括号中的内容就是BibTex中的第一个参数，这个是可以自定义的，通常都是作者的姓或者名+发表年份+论文题目的首个单词。</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#033">@inproceedings</span>{song2013hierarchical,
-</span></span><span style="display:flex;"><span>  title={Hierarchical representation using NMF},
-</span></span><span style="display:flex;"><span>  author={Song, Hyun Ah and Lee, <span style="color:#366">Soo-Young</span>},
-</span></span><span style="display:flex;"><span>  booktitle={International conference on neural information processing},
-</span></span><span style="display:flex;"><span>  pages={466--473},
-</span></span><span style="display:flex;"><span>  year={2013},
-</span></span><span style="display:flex;"><span>  organization={Springer}
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><p>另外还有宏包<code>natbib</code>，通过不同形式的cite比如：</p>
-<p><code>\citet</code>：</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>\citet{jon90}
-</span></span><span style="display:flex;"><span><span style="color:#09f;font-style:italic">##</span>
-</span></span><span style="display:flex;"><span>Jones et al. (1990)
-</span></span></code></pre></div><p><code>\citep</code>：</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>\citep{jon90}	
-</span></span><span style="display:flex;"><span><span style="color:#09f;font-style:italic">##</span>
-</span></span><span style="display:flex;"><span>(Jones et al., 1990)
-</span></span></code></pre></div><p><code>\citeyear</code>：</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>\citeyearpar{jon90}
-</span></span><span style="display:flex;"><span><span style="color:#09f;font-style:italic">##</span>
-</span></span><span style="display:flex;"><span>(1990)
-</span></span></code></pre></div><p>&hellip;&hellip;</p>
-<p>该宏包的使用方式如下。</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>\usepackage<span style="color:#360">[option]</span>{natbib}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>\bibliographystyle{natbib}
-</span></span><span style="display:flex;"><span>\bibliography{bibfile}
-</span></span></code></pre></div><h3 id="3-表格的制作">3. 表格的制作</h3>
-<p>分为以下两个部分：</p>
-<ul>
-<li>手动输入表格（适合小型表格）</li>
-<li>其他工具进行表格转换</li>
-</ul>
-<ol>
-<li>Excel中的表格</li>
-</ol>
-<p>可以在Excel中使用插件：<strong>Excel2Latex</strong>，该插件能够将Excel表格转化为LaTex的表格形式。</p>
-<ol start="2">
-<li>Word中的表格</li>
-</ol>
-<p>可以使用pandoc直接转换为<code>.tex</code>格式，不过转换之后不是完美的，可能需要手动调整一下。</p>
-<p>示例：</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>pandoc test.docx -o test.tex
-</span></span></code></pre></div><ol start="3">
-<li>其他文件形式的表格</li>
-</ol>
-<p>比如在R当中得到的表格，可以使用<code>stargazer</code>包把结果输出为LaTex格式，或者<code>xtable</code>包。</p>
-<p>以<code>xtable</code>包为例：</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span><span style="color:#555">&gt;</span> <span style="color:#c0f">install.packages</span>(<span style="color:#c30">&#34;xtable&#34;</span>) <span style="color:#09f;font-style:italic">#安装xtable</span>
-</span></span><span style="display:flex;"><span><span style="color:#555">&gt;</span> <span style="color:#c0f">library</span>(xtable) <span style="color:#09f;font-style:italic">#载入</span>
-</span></span><span style="display:flex;"><span><span style="color:#555">&gt;</span> <span style="color:#c0f">data</span>(iris) <span style="color:#09f;font-style:italic"># 示例数据</span>
-</span></span><span style="display:flex;"><span><span style="color:#555">&gt;</span> <span style="color:#c0f">xtable</span>(<span style="color:#c0f">head</span>(iris),digits<span style="color:#555">=</span><span style="color:#f60">3</span>,caption<span style="color:#555">=</span><span style="color:#c30">&#34;Head of Iris Data&#34;</span>)
-</span></span><span style="display:flex;"><span><span style="color:#09f;font-style:italic">#将iris数据前6行</span>
-</span></span><span style="display:flex;"><span><span style="color:#09f;font-style:italic"># 保留三位小数</span>
-</span></span><span style="display:flex;"><span><span style="color:#09f;font-style:italic">#标题设为&#34;Head of Iris Data&#34;，导出为LaTex格式</span>
-</span></span><span style="display:flex;"><span><span style="color:#555">% latex table generated in R 4.0.2 by xtable 1.8-4 package
-</span></span></span><span style="display:flex;"><span><span style="color:#555">%</span> Sat Mar  <span style="color:#f60">6</span> <span style="color:#f60">20</span><span style="color:#555">:</span><span style="color:#f60">04</span><span style="color:#555">:</span><span style="color:#f60">47</span> <span style="color:#f60">2021</span>
-</span></span><span style="display:flex;"><span>\begin{table}[ht]
-</span></span><span style="display:flex;"><span>\centering
-</span></span><span style="display:flex;"><span>\begin{tabular}{rrrrrl}
-</span></span><span style="display:flex;"><span>  \hline
-</span></span><span style="display:flex;"><span> <span style="color:#555">&amp;</span> Sepal.Length <span style="color:#555">&amp;</span> Sepal.Width <span style="color:#555">&amp;</span> Petal.Length <span style="color:#555">&amp;</span> Petal.Width <span style="color:#555">&amp;</span> Species \\ 
-</span></span><span style="display:flex;"><span>  \hline
-</span></span><span style="display:flex;"><span><span style="color:#f60">1</span> <span style="color:#555">&amp;</span> <span style="color:#f60">5.100</span> <span style="color:#555">&amp;</span> <span style="color:#f60">3.500</span> <span style="color:#555">&amp;</span> <span style="color:#f60">1.400</span> <span style="color:#555">&amp;</span> <span style="color:#f60">0.200</span> <span style="color:#555">&amp;</span> setosa \\ 
-</span></span><span style="display:flex;"><span>  <span style="color:#f60">2</span> <span style="color:#555">&amp;</span> <span style="color:#f60">4.900</span> <span style="color:#555">&amp;</span> <span style="color:#f60">3.000</span> <span style="color:#555">&amp;</span> <span style="color:#f60">1.400</span> <span style="color:#555">&amp;</span> <span style="color:#f60">0.200</span> <span style="color:#555">&amp;</span> setosa \\ 
-</span></span><span style="display:flex;"><span>  <span style="color:#f60">3</span> <span style="color:#555">&amp;</span> <span style="color:#f60">4.700</span> <span style="color:#555">&amp;</span> <span style="color:#f60">3.200</span> <span style="color:#555">&amp;</span> <span style="color:#f60">1.300</span> <span style="color:#555">&amp;</span> <span style="color:#f60">0.200</span> <span style="color:#555">&amp;</span> setosa \\ 
-</span></span><span style="display:flex;"><span>  <span style="color:#f60">4</span> <span style="color:#555">&amp;</span> <span style="color:#f60">4.600</span> <span style="color:#555">&amp;</span> <span style="color:#f60">3.100</span> <span style="color:#555">&amp;</span> <span style="color:#f60">1.500</span> <span style="color:#555">&amp;</span> <span style="color:#f60">0.200</span> <span style="color:#555">&amp;</span> setosa \\ 
-</span></span><span style="display:flex;"><span>  <span style="color:#f60">5</span> <span style="color:#555">&amp;</span> <span style="color:#f60">5.000</span> <span style="color:#555">&amp;</span> <span style="color:#f60">3.600</span> <span style="color:#555">&amp;</span> <span style="color:#f60">1.400</span> <span style="color:#555">&amp;</span> <span style="color:#f60">0.200</span> <span style="color:#555">&amp;</span> setosa \\ 
-</span></span><span style="display:flex;"><span>  <span style="color:#f60">6</span> <span style="color:#555">&amp;</span> <span style="color:#f60">5.400</span> <span style="color:#555">&amp;</span> <span style="color:#f60">3.900</span> <span style="color:#555">&amp;</span> <span style="color:#f60">1.700</span> <span style="color:#555">&amp;</span> <span style="color:#f60">0.400</span> <span style="color:#555">&amp;</span> setosa \\ 
-</span></span><span style="display:flex;"><span>   \hline
-</span></span><span style="display:flex;"><span>\end{tabular}
-</span></span><span style="display:flex;"><span>\caption{Head of Iris Data} 
-</span></span><span style="display:flex;"><span>\end{table}
-</span></span></code></pre></div><h4 id="表格的介绍">表格的介绍</h4>
-<p>表格的基本格式和要素如下（2行2列表格）：</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>\documentclass{article} 
-</span></span><span style="display:flex;"><span>\usepackage{float}<span style="color:#069;font-weight:bold">%</span>提供float浮动环境
-</span></span><span style="display:flex;"><span>\usepackage{makecell} %<span style="color:#069;font-weight:bold">%</span>用来基线
-</span></span><span style="display:flex;"><span>\<span style="color:#069;font-weight:bold">begin</span>{table}<span style="color:#360">[h]</span>
-</span></span><span style="display:flex;"><span>\centering %<span style="color:#069;font-weight:bold">%</span>表居中
-</span></span><span style="display:flex;"><span>\caption{table} %<span style="color:#069;font-weight:bold">%</span>表格标题
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>\<span style="color:#069;font-weight:bold">begin</span>{tabular}{|c|c|} %%{cc} 表示各列元素对齐方式<span style="color:#a00;background-color:#faa">，</span><span style="color:#366">left-l</span>,<span style="color:#366">right-r</span>,<span style="color:#366">center-c</span><span style="color:#a00;background-color:#faa">，</span>两个c表示两列<span style="color:#a00;background-color:#faa">，｜</span>表示增加垂直方向基线
-</span></span><span style="display:flex;"><span>\hline %%\hline 在此行下面画一横线
-</span></span><span style="display:flex;"><span>a &amp; b \\\hline
-</span></span><span style="display:flex;"><span>c &amp; d\\
-</span></span><span style="display:flex;"><span>\hline
-</span></span><span style="display:flex;"><span>\<span style="color:#069;font-weight:bold">end</span>{tabular}
-</span></span><span style="display:flex;"><span>\<span style="color:#069;font-weight:bold">end</span>{table}
-</span></span><span style="display:flex;"><span> 
-</span></span><span style="display:flex;"><span>\<span style="color:#069;font-weight:bold">end</span>{document}
-</span></span></code></pre></div><center>
-    <img src= "https://i.loli.net/2021/03/05/NL1CgnIHEfRGp9k.png" width="400"/>
-</center>
-<p>当表格太大或者太小的时候，有非常多的解决办法，可以通过调整字体的长或宽，也可以直接整体调整表格的大小，本质都是通过在<code>tabular</code>类外，套上调整表格的参数设置。</p>
-<p>通过调整字体的宽度（mm是百分比，60mm就是60%）：</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>\resizebox{\textwidth}{60mm}{}
-</span></span></code></pre></div><p>通过调整表格的大小：</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>\usepackage{graphicx}
-</span></span><span style="display:flex;"><span>\<span style="color:#069;font-weight:bold">begin</span>{table}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>\caption{表格标题}
-</span></span><span style="display:flex;"><span>\scalebox{0.9}{ <span style="color:#069;font-weight:bold">%</span>缩小至原来的90%
-</span></span><span style="display:flex;"><span>\<span style="color:#069;font-weight:bold">begin</span>{tabular}
-</span></span><span style="display:flex;"><span><span style="color:#a00;background-color:#faa">……</span>
-</span></span><span style="display:flex;"><span>\<span style="color:#069;font-weight:bold">end</span>{tabular}}
-</span></span><span style="display:flex;"><span>\<span style="color:#069;font-weight:bold">end</span>{table}
-</span></span></code></pre></div><p>文献中常用的三线表可以通过以下Latex实现：</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>\documentclass{article} 
-</span></span><span style="display:flex;"><span>\usepackage{float}<span style="color:#069;font-weight:bold">%</span>提供float浮动环境
-</span></span><span style="display:flex;"><span>\usepackage{booktabs} %<span style="color:#069;font-weight:bold">%</span>提供命令\toprule<span style="color:#a00;background-color:#faa">、</span>\midrule<span style="color:#a00;background-color:#faa">、</span>\bottomrule
-</span></span><span style="display:flex;"><span>\usepackage{makecell} %<span style="color:#069;font-weight:bold">%</span>用来基线
-</span></span><span style="display:flex;"><span>\usepackage{geometry}
-</span></span><span style="display:flex;"><span>\usepackage{amsmath}
-</span></span><span style="display:flex;"><span>%\geometry{papersize={40cm,80cm}}
-</span></span><span style="display:flex;"><span>\geometry{left=1cm,right=1cm,top=3cm,bottom=1cm}
-</span></span><span style="display:flex;"><span>\<span style="color:#069;font-weight:bold">begin</span>{document}
-</span></span><span style="display:flex;"><span> 
-</span></span><span style="display:flex;"><span><span style="color:#069;font-weight:bold">%</span>经典三线表
-</span></span><span style="display:flex;"><span>\<span style="color:#069;font-weight:bold">begin</span>{table}<span style="color:#360">[H]</span> %<span style="color:#069;font-weight:bold">%</span>H为当前位置
-</span></span><span style="display:flex;"><span>\caption{\textbf{test title}}<span style="color:#069;font-weight:bold">%</span>标题
-</span></span><span style="display:flex;"><span>\centering<span style="color:#069;font-weight:bold">%</span>把表居中
-</span></span><span style="display:flex;"><span>\<span style="color:#069;font-weight:bold">begin</span>{tabular}{ccc}<span style="color:#069;font-weight:bold">%</span>四个c代表该表一共四列<span style="color:#a00;background-color:#faa">，</span>内容全部居中
-</span></span><span style="display:flex;"><span>\toprule[1.5pt]<span style="color:#069;font-weight:bold">%</span>第一道横线
-</span></span><span style="display:flex;"><span>year &amp; month &amp; day \\
-</span></span><span style="display:flex;"><span>\midrule<span style="color:#069;font-weight:bold">%</span>第二道横线 
-</span></span><span style="display:flex;"><span>2021 &amp; 3 &amp; 5 \\
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>\bottomrule[1.5pt]<span style="color:#069;font-weight:bold">%</span>第三道横线
-</span></span><span style="display:flex;"><span>\<span style="color:#069;font-weight:bold">end</span>{tabular}
-</span></span><span style="display:flex;"><span>\<span style="color:#069;font-weight:bold">end</span>{table}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>\<span style="color:#069;font-weight:bold">end</span>{document}
-</span></span></code></pre></div><center>
-    <img src= "https://i.loli.net/2021/03/05/1CZlSqB8jIXNmED.png" width="400"/>
-</center>
-<h3 id="4-图片的引入">4. 图片的引入</h3>
-<p>LaTeX插入图片时，支持格式有各种：png, pdf, jpg, eps等等。</p>
-<ul>
-<li>准备图片</li>
-</ul>
-<p>将图片全部保存在目录下的同一个文件夹下，方便查找，注意图片的命名尽量避免中文，特殊字符等等(这里就只用了一个文件，我就直接放在目录下了)。</p>
-<ul>
-<li>图片基本语法</li>
-</ul>
-<p>必须加载graphicx等包来支持图片的导入。</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>\documentclass{article}
-</span></span><span style="display:flex;"><span>\usepackage{graphicx}
-</span></span><span style="display:flex;"><span>\graphicspath{ {images/} }
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>\begin{document}
-</span></span><span style="display:flex;"><span>The universe is immense and it seems to be homogeneous, 
-</span></span><span style="display:flex;"><span>in a large scale, everywhere we look at.
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>\includegraphics{universe}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>There&#39;s a picture of a galaxy above
-</span></span><span style="display:flex;"><span>\end{document}
-</span></span></code></pre></div><ul>
-<li>给图片进行排版（排版有很多种，现在展示的是两个图片并排）</li>
-</ul>
-<center>
-    <img src= "https://i.loli.net/2021/03/05/FdrtzSjuc7I9mDg.png" width="400"/>
-</center>
-<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>\usepackage{graphicx} %<span style="color:#069;font-weight:bold">%</span>插入图片的宏包
-</span></span><span style="display:flex;"><span>\usepackage{float} %<span style="color:#069;font-weight:bold">%</span>设置图片浮动位置的宏包
-</span></span><span style="display:flex;"><span>\usepackage{subfigure} %<span style="color:#069;font-weight:bold">%</span>插入多图时用子图显示的宏包
-</span></span><span style="display:flex;"><span>\<span style="color:#069;font-weight:bold">begin</span>{figure}   %<span style="color:#069;font-weight:bold">%</span>旋转子系统姿态角
-</span></span><span style="display:flex;"><span>  \centering
-</span></span><span style="display:flex;"><span>  \subfigure{
-</span></span><span style="display:flex;"><span>    \label{fig<span style="color:#a00;background-color:#faa">:</span>subfig<span style="color:#a00;background-color:#faa">:</span>a} %% label <span style="color:#069;font-weight:bold">for</span> first subfigure
-</span></span><span style="display:flex;"><span>    \includegraphics[width=4cm,height=4cm]{taoziyu.jpg}}
-</span></span><span style="display:flex;"><span>  \hspace{1in}
-</span></span><span style="display:flex;"><span>  \subfigure{
-</span></span><span style="display:flex;"><span>    \label{fig<span style="color:#a00;background-color:#faa">:</span>subfig<span style="color:#a00;background-color:#faa">:</span>b} % label <span style="color:#069;font-weight:bold">for</span> second subfigure
-</span></span><span style="display:flex;"><span>    \includegraphics[width=4cm,height=4cm]{taoziyu.jpg}}
-</span></span><span style="display:flex;"><span>  \caption{The same cute <span style="color:#366">cat </span>(a) cute cat1. (b) cute cat2.}
-</span></span><span style="display:flex;"><span>  %% caption用于图表的标题
-</span></span><span style="display:flex;"><span>  \label{fig<span style="color:#a00;background-color:#faa">:</span>attitude}  %% label <span style="color:#069;font-weight:bold">for</span> entire figure
-</span></span><span style="display:flex;"><span>\<span style="color:#069;font-weight:bold">end</span>{figure}
-</span></span></code></pre></div><h2 id="参考资料">参考资料</h2>
-<ul>
-<li><a href="https://www.overleaf.com/learn" target="_blank">&lt;font color=blue&gt;Oneleaf官方文档&lt;/font&gt;</a></li>
-<li><a href="https://www.cnblogs.com/parrynee/archive/2010/03/02/1676369.html" target="_blank">&lt;font color=blue&gt;BibTex的使用方法&lt;/font&gt;</a></li>
-<li><a href="https://blog.csdn.net/wei_love_2017/article/details/86617235" target="_blank">&lt;font color=blue&gt;latex documentclass 及相关布局&lt;/font&gt;</a></li>
-<li><a href="https://latexref.xyz/Document-class-options.html" target="_blank">&lt;font color=blue&gt;document class&lt;/font&gt;</a></li>
-<li><a href="https://zhuanlan.zhihu.com/p/43981639" target="_blank">&lt;font color=blue&gt;LaTex - 从出门到掉到坑&lt;/font&gt;</a></li>
-<li><a href="https://blog.csdn.net/miracle_fans/article/details/78233304" target="_blank">&lt;font color=blue&gt;LaTex插入图形，表格&lt;/font&gt;</a></li>
-<li><a href="https://zhuanlan.zhihu.com/p/32925549" target="_blank">&lt;font color=blue&gt;LaTeX排版札记&lt;/font&gt;</a></li>
-<li><a href="https://blog.csdn.net/joshua_hit/article/details/60608787" target="_blank">&lt;font color=blue&gt;用R语言快速生成Latex表格&lt;/font&gt;</a></li>
-<li><a href="https://www.jianshu.com/p/60de8893f731" target="_blank">&lt;font color=blue&gt;LaTeX高效写作系列：word表格转LaTeX&lt;/font&gt;</a></li>
-</ul>
-<h2 id="题外之言">题外之言</h2>
-<p>该markdown文档中新使用了以下几个有趣的功能：</p>
-<ul>
-<li>自定义锚实现页内跳转</li>
-</ul>
-<p>在跳转目的地附近加上<code>&lt;span id=&quot;jump&quot;&gt;目的地&lt;/span&gt;</code>，在需要点击跳转的地方加上<code>[点击跳转](#jump)</code></p>
-<ul>
-<li>
-<p>更改超链接颜色，更改字体颜色</p>
-</li>
-<li>
-<p>多图片并列</p>
-</li>
-</ul></div>
-      </div>
-    </article>
-
-
-
-
-
-
-
-
-
-
-
-<div class="toc">
-
-    <div class="page-header"><strong> 目    录 </strong></div>
-
-
-    <div id="page-scrollspy" class="toc-nav">
-
-        
-        
-            
-                
-                
-                    
-                    <ul class="nav">
-                    
-                    <ul class="nav">
-                    
-                    
-                        <li class="nav-item">
-                            <a class="nav-link text-left" href="#%e5%89%8d%e8%a8%80">
-                            前言
-                            </a>
-                        </li>
-                    
-                    
-                    </ul>
-                    
-                    </ul>
-                    
-                
-            
-        
-        
-            
-                
-                
-                    
-                    <ul class="nav">
-                    
-                    <ul class="nav">
-                    
-                    
-                        <li class="nav-item">
-                            <a class="nav-link text-left" href="#%e4%b8%bb%e8%a6%81%e5%86%85%e5%ae%b9">
-                            主要内容
-                            </a>
-                        </li>
-                    
-                    
-                    </ul>
-                    
-                    </ul>
-                    
-                
-            
-        
-        
-            
-                
-                
-                    
-                    <ul class="nav">
-                    
-                    <ul class="nav">
-                    
-                    
-                        <li class="nav-item">
-                            <a class="nav-link text-left" href="#%e4%bd%bf%e7%94%a8%e7%9a%84%e5%b7%a5%e5%85%b7">
-                            使用的工具
-                            </a>
-                        </li>
-                    
-                    
-                    </ul>
-                    
-                    </ul>
-                    
-                
-            
-        
-        
-            
-                
-                
-                    
-                    <ul class="nav">
-                    
-                    <ul class="nav">
-                    
-                    
-                        <li class="nav-item">
-                            <a class="nav-link text-left" href="#%e5%9f%ba%e6%9c%ac%e8%af%ad%e6%b3%95">
-                            基本语法
-                            </a>
-                        </li>
-                    
-                    
-                    </ul>
-                    
-                    </ul>
-                    
-                
-            
-        
-        
-            
-                
-                
-                    
-                    <ul class="nav">
-                    
-                    <ul class="nav">
-                    
-                    
-                        <li class="nav-item">
-                            <a class="nav-link text-left" href="#oneleaf-%e7%a4%ba%e4%be%8b">
-                            Oneleaf 示例
-                            </a>
-                        </li>
-                    
-                    
-                    </ul>
-                    
-                    </ul>
-                    
-                
-            
-        
-        
-            
-                
-                
-                    
-                    <ul class="nav">
-                    
-                    <ul class="nav">
-                    
-                    <ul class="nav">
-                    
-                    
-                        <li class="nav-item">
-                            <a class="nav-link text-left" href="#1-%e6%a8%a1%e6%9d%bf%e7%9a%84%e4%bd%bf%e7%94%a8">
-                            1. 模板的使用
-                            </a>
-                        </li>
-                    
-                    
-                    </ul>
-                    
-                    </ul>
-                    
-                    </ul>
-                    
-                
-            
-        
-        
-            
-                
-                
-                    
-                    <ul class="nav">
-                    
-                    <ul class="nav">
-                    
-                    <ul class="nav">
-                    
-                    <ul class="nav">
-                    
-                    
-                        <li class="nav-item">
-                            <a class="nav-link text-left" href="#%e8%bf%9b%e5%85%a5-font-colorblueoneleaf%e6%a8%a1%e6%9d%bffonthttpswwwoverleafcomlatextemplates%e9%80%89%e6%8b%a9%e5%90%88%e9%80%82%e7%9a%84%e6%a8%a1%e6%9d%bf">
-                            进入 &lt;font color=blue&gt;Oneleaf模板&lt;/font&gt;，选择合适的模板
-                            </a>
-                        </li>
-                    
-                    
-                    </ul>
-                    
-                    </ul>
-                    
-                    </ul>
-                    
-                    </ul>
-                    
-                
-            
-        
-        
-            
-                
-                
-                    
-                    <ul class="nav">
-                    
-                    <ul class="nav">
-                    
-                    <ul class="nav">
-                    
-                    <ul class="nav">
-                    
-                    
-                        <li class="nav-item">
-                            <a class="nav-link text-left" href="#%e4%bb%a5%e8%ae%ba%e6%96%87%e5%86%99%e4%bd%9c%e4%b8%ba%e4%be%8b">
-                            以论文写作为例
-                            </a>
-                        </li>
-                    
-                    
-                    </ul>
-                    
-                    </ul>
-                    
-                    </ul>
-                    
-                    </ul>
-                    
-                
-            
-        
-        
-            
-                
-                
-                    
-                    <ul class="nav">
-                    
-                    <ul class="nav">
-                    
-                    <ul class="nav">
-                    
-                    
-                        <li class="nav-item">
-                            <a class="nav-link text-left" href="#2-%e5%86%85%e5%ae%b9%e7%9a%84%e7%bc%96%e8%be%91%e4%bb%a5%e5%8f%8a%e5%8f%82%e8%80%83%e6%96%87%e7%8c%ae%e7%9a%84%e5%bc%95%e7%94%a8">
-                            2. 内容的编辑以及参考文献的引用
-                            </a>
-                        </li>
-                    
-                    
-                    </ul>
-                    
-                    </ul>
-                    
-                    </ul>
-                    
-                
-            
-        
-        
-            
-                
-                
-                    
-                    <ul class="nav">
-                    
-                    <ul class="nav">
-                    
-                    <ul class="nav">
-                    
-                    <ul class="nav">
-                    
-                    
-                        <li class="nav-item">
-                            <a class="nav-link text-left" href="#%e5%86%85%e5%ae%b9%e7%9a%84%e7%bc%96%e8%be%91">
-                            内容的编辑
-                            </a>
-                        </li>
-                    
-                    
-                    </ul>
-                    
-                    </ul>
-                    
-                    </ul>
-                    
-                    </ul>
-                    
-                
-            
-        
-        
-            
-                
-                
-                    
-                    <ul class="nav">
-                    
-                    <ul class="nav">
-                    
-                    <ul class="nav">
-                    
-                    <ul class="nav">
-                    
-                    
-                        <li class="nav-item">
-                            <a class="nav-link text-left" href="#%e6%96%87%e7%8c%ae%e7%9a%84%e5%bc%95%e7%94%a8">
-                            文献的引用
-                            </a>
-                        </li>
-                    
-                    
-                    </ul>
-                    
-                    </ul>
-                    
-                    </ul>
-                    
-                    </ul>
-                    
-                
-            
-        
-        
-            
-                
-                
-                    
-                    <ul class="nav">
-                    
-                    <ul class="nav">
-                    
-                    <ul class="nav">
-                    
-                    
-                        <li class="nav-item">
-                            <a class="nav-link text-left" href="#3-%e8%a1%a8%e6%a0%bc%e7%9a%84%e5%88%b6%e4%bd%9c">
-                            3. 表格的制作
-                            </a>
-                        </li>
-                    
-                    
-                    </ul>
-                    
-                    </ul>
-                    
-                    </ul>
-                    
-                
-            
-        
-        
-            
-                
-                
-                    
-                    <ul class="nav">
-                    
-                    <ul class="nav">
-                    
-                    <ul class="nav">
-                    
-                    <ul class="nav">
-                    
-                    
-                        <li class="nav-item">
-                            <a class="nav-link text-left" href="#%e8%a1%a8%e6%a0%bc%e7%9a%84%e4%bb%8b%e7%bb%8d">
-                            表格的介绍
-                            </a>
-                        </li>
-                    
-                    
-                    </ul>
-                    
-                    </ul>
-                    
-                    </ul>
-                    
-                    </ul>
-                    
-                
-            
-        
-        
-            
-                
-                
-                    
-                    <ul class="nav">
-                    
-                    <ul class="nav">
-                    
-                    <ul class="nav">
-                    
-                    
-                        <li class="nav-item">
-                            <a class="nav-link text-left" href="#4-%e5%9b%be%e7%89%87%e7%9a%84%e5%bc%95%e5%85%a5">
-                            4. 图片的引入
-                            </a>
-                        </li>
-                    
-                    
-                    </ul>
-                    
-                    </ul>
-                    
-                    </ul>
-                    
-                
-            
-        
-        
-            
-                
-                
-                    
-                    <ul class="nav">
-                    
-                    <ul class="nav">
-                    
-                    
-                        <li class="nav-item">
-                            <a class="nav-link text-left" href="#%e5%8f%82%e8%80%83%e8%b5%84%e6%96%99">
-                            参考资料
-                            </a>
-                        </li>
-                    
-                    
-                    </ul>
-                    
-                    </ul>
-                    
-                
-            
-        
-        
-            
-                
-                
-                    
-                    <ul class="nav">
-                    
-                    <ul class="nav">
-                    
-                    
-                        <li class="nav-item">
-                            <a class="nav-link text-left" href="#%e9%a2%98%e5%a4%96%e4%b9%8b%e8%a8%80">
-                            题外之言
-                            </a>
-                        </li>
-                    
-                    
-                    </ul>
-                    
-                    </ul>
-                    
-                
-            
-        
-
-    </div>
-
-</div>
-
-
-
-
-    
-    
     <div class="row">
-      <div class="col-lg-10 mx-auto">
-        <div class="mt-5">
-          <div id="disqus_thread"></div>
-<script type="application/javascript">
-    window.disqus_config = function () {
-    
-    
-    
-    };
-    (function() {
-        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
-            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
-            return;
-        }
-        var d = document, s = d.createElement('script'); s.async = true;
-        s.src = '//' + "themefisher-template" + '.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+      <div class="col-12">
+        <div class="title-bordered">
+          <h1 class="h4">Showing items from <span class="text-primary">shell</span></h1>
         </div>
       </div>
     </div>
-    
   </div>
 </section>
 
-<script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "mainEntityOfPage": {
-      "@type": "WebPage",
-      "@id": "https:\/\/taozyblog.com.cn\/post\/2021-3-05-latex_blog\/"
-    },
-    "headline": "使用Latex写论文",
-    "description": "使用Latex写论文可以减少排版的时间，它对文献的引用以及排序非常友好",
-    "image": "",  
-    "author": {
-      "@type": "Person",
-      "name": "Ziyu"
-    },  
-    "publisher": {
-      "@type": "Organization",
-      "name": "",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "images\/logo.png"
-      }
-    },
-    "datePublished": "2021-03-05"
-  }
+
+
+
+
+
+
+
+<section class="section">
+  <div class="container">
+    <div class="row">
+      
+      
+      
+
+      
+      <div class="col-lg-8  mb-5 mb-lg-0">
+        
+        
+        <div class="row">
+          
+          <div class="col-md-6">
+            <article class="card mb-4 border-0">
+              
+              
+              <div class="post-slider slider-sm">
+                
+                
+
+
+
+
+
+
+
+
+
+<img loading="lazy" decoding="async" src="https://blog-1310600458.cos.ap-shanghai.myqcloud.com/%e6%88%aa%e5%b1%8f2022-04-06%20%e4%b8%8b%e5%8d%884.14.49.png" alt="" class="img-fluid w-100" height="" width="">
+
+                
+              </div>
+              
+              
+              <div class="card-body">
+                <h3 class="h4"><a class="post-title" href="/post/2022-4-06_%E6%B3%A8%E9%87%8A/">如何去除文本注释</a></h3>
+                <ul class="list-inline post-meta mb-4">
+                  <li class="list-inline-item"><i class="fas fa-user mr-2"></i>
+                    <a href="/author/ziyu/">Ziyu</a>
+                  </li>
+                  <li class="list-inline-item">Date : April 7, 2022</li>
+                  <li class="list-inline-item">Categories :
+                    <a
+                      href="/categories/shell" class="ml-1">Shell
+                    </a>
+                    </li>
+                  <li class="list-inline-item">Tags :
+                    <a
+                      href="/tags/shell" class="ml-1">Shell </a>
+                    
+                  </li>
+                </ul>
+                <p>注释类型 首先我们应该明确注释是在什么样的文件中？
+1．代码中的注释
+2．文本中的注释
+其次我们应该明确，我们需要去除的注释都是什么样子的？
+1．注释行前有特定字符，比如R代码中的注释#
+2．注释被包含在特定字符之间，比如Python代码中的 ```，以及SRIM软件输出结果开头的注释包含的两 …</p>
+                <a href="/post/2022-4-06_%E6%B3%A8%E9%87%8A/" class="btn btn-outline-primary">Continue Reading</a>
+              </div>
+            </article>
+          </div>
+          
+        </div>
+        
+        
+
+        
+        
+        
+        
+        
+        
+        
+        <ul class="pagination ">
+          
+          
+          <li class="page-item">
+            <a href="/tags/shell/page/4/" class="page-link">&laquo;</a>
+          </li>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <li class="page-item">
+            <a href="/tags/shell/" class="page-link">
+              1
+            </a>
+          </li>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <li class="page-item">
+            <a href="/tags/shell/page/2/" class="page-link">
+              2
+            </a>
+          </li>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <li class="page-item">
+            <a href="/tags/shell/page/3/" class="page-link">
+              3
+            </a>
+          </li>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <li class="page-item">
+            <a href="/tags/shell/page/4/" class="page-link">
+              4
+            </a>
+          </li>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <li class="page-item page-item active ">
+            <a href="/tags/shell/page/5/" class="page-link">
+              5
+            </a>
+          </li>
+          
+          
+          
+          
+        </ul>
+        
+        
+      </div>
+      
+
+      
+      
+      <aside class="col-lg-4">
+        <div class="pl-0 pl-lg-4"><!-- Search -->
+
+<div class="widget">
+  <h5 class="widget-title"><span>Search</span></h5>
+  <form action="/search" class="widget-search">
+    <input id="search-query" name="s" type="search" placeholder="Type &amp; Hit Enter...">
+    <button type="submit" class="btn btn-primary" aria-label="Search Post"><i class="fas fa-search"></i></button>
+  </form>
+</div>
+<!-- about me -->
+<div class="widget widget-about">
   
-</script>
+  <h5 class="widget-title"><span>Hi, I Am Ziyu Tao</span></h5>
+  <div class="d-flex">
+
+    
+    
+    
+    
+    
+    <img class="img-fluid widget-about-image" loading="lazy" src="https://blog-1310600458.cos.ap-shanghai.myqcloud.com/20220408140841.png" alt="">
+    
+
+    <div class="mb-2">
+      <span class="d-block">上海科技大学在读博士生。
+研究方向：癌症基因组学。
+Find your passion and then aim to be the best on the …</span>
+      
+      <ul class="list-inline social-icons mb-1 mt-2">
+        
+        <li class="list-inline-item"><a href="https://facebook.com"><i class="fab fa-facebook"></i></a></li>
+        
+      </ul>
+      <a href="/about/" class="btn btn-sm btn-primary p-1 px-3 rounded mt-2">About Me</a>
+    </div>
+  </div>
+  
+  
+</div><!-- Promotion -->
+
+<div class="promotion">
+  
+  
+  <img loading="lazy" decoding="async" class="w-100" width="330" height="390" src="/images/promotion_hu6a90c30421148ac00753954565e9ea00_18207_330x0_resize_q90_h2_box.webp" alt="promotion-image">
+  <div class="promotion-content">
+    <h5 class="text-white mb-3">Create Stunning Website!!</h5>
+    <p class="text-white mb-4">Lorem ipsum dolor sit amet, consectetur sociis. Etiam nunc amet id dignissim. Feugiat id tempor vel sit ornare.</p>
+    <a href="https://themefisher.com/" class="btn btn-primary">Get Started</a>
+  </div>
+</div>
+<!-- Search -->
+
+
+<div class="widget">
+  <h5 class="widget-title"><span>Subscribe Newsletter</span></h5>
+  <form action="https://gmail.us4.list-manage.com/subscribe/post?u=463ee871f45d2d93748e77cad&amp;amp;id=a0a2c6d074" method="post" name="mc-embedded-subscribe-form" target="_blank"
+    class="widget-search">
+    <input class="mb-3" id="search-query" name="s" type="search" placeholder="Your Email Address">
+    <i class="ti-email"></i>
+    <button type="submit" class="btn btn-primary" name="subscribe" aria-label="Subscribe Newsletter"><i class="fas fa-paper-plane"></i></button>
+    <div style="position: absolute; left: -5000px;" aria-hidden="true">
+      <input type="text" name="b_463ee871f45d2d93748e77cad_a0a2c6d074" tabindex="-1">
+    </div>
+  </form>
+</div>
+
+<!-- categories -->
+<div class="widget">
+  <h5 class="widget-title"><span>Categories</span></h5>
+  <ul class="list-unstyled widget-list">
+    <li><a href="/categories/bug" class="d-flex">Bug
+        <small class="ml-auto">(1)</small></a></li>
+    <li><a href="/categories/photography" class="d-flex">Photography
+        <small class="ml-auto">(1)</small></a></li>
+    <li><a href="/categories/r" class="d-flex">R
+        <small class="ml-auto">(12)</small></a></li>
+    <li><a href="/categories/shell" class="d-flex">Shell
+        <small class="ml-auto">(25)</small></a></li>
+    <li><a href="/categories/%e5%8f%af%e8%a7%86%e5%8c%96" class="d-flex">可视化
+        <small class="ml-auto">(1)</small></a></li>
+    <li><a href="/categories/%e5%a6%82%e4%bd%95%e7%a7%91%e7%a0%94" class="d-flex">如何科研
+        <small class="ml-auto">(1)</small></a></li>
+    <li><a href="/categories/%e6%8a%80%e6%9c%af" class="d-flex">技术
+        <small class="ml-auto">(7)</small></a></li>
+    <li><a href="/categories/%e6%9c%ba%e5%99%a8%e5%ad%a6%e4%b9%a0" class="d-flex">机器学习
+        <small class="ml-auto">(3)</small></a></li>
+    <li><a href="/categories/%e7%94%9f%e4%bf%a1" class="d-flex">生信
+        <small class="ml-auto">(8)</small></a></li>
+    <li><a href="/categories/%e7%94%9f%e7%89%a9%e5%ad%a6" class="d-flex">生物学
+        <small class="ml-auto">(5)</small></a></li>
+    <li><a href="/categories/%e7%94%9f%e7%89%a9%e7%bb%9f%e8%ae%a1" class="d-flex">生物统计
+        <small class="ml-auto">(4)</small></a></li>
+    <li><a href="/categories/%e7%99%8c%e7%97%87%e5%9f%ba%e5%9b%a0%e7%bb%84%e5%ad%a6" class="d-flex">癌症基因组学
+        <small class="ml-auto">(6)</small></a></li>
+    <li><a href="/categories/%e7%ae%97%e6%b3%95" class="d-flex">算法
+        <small class="ml-auto">(3)</small></a></li>
+    <li><a href="/categories/%e8%ae%a1%e7%ae%97%e6%9c%ba%e5%9f%ba%e7%a1%80" class="d-flex">计算机基础
+        <small class="ml-auto">(2)</small></a></li>
+  </ul>
+</div><!-- latest post -->
+<div class="widget">
+  <h5 class="widget-title"><span>Latest Article</span></h5>
+  <!-- post-item -->
+  <ul class="list-unstyled widget-list mb-0">
+  
+    <li class="media widget-post align-items-center">
+      <a href="https://taozyblog.com.cn/post/2022-11-15_gnu_parallel/">        
+        
+        
+        
+        <img loading="lazy" class="mr-3" src="https://blog-1310600458.cos.ap-shanghai.myqcloud.com/logo-gray&#43;black300.png" alt="post image">
+        
+        
+        
+      </a>
+      <div class="media-body">
+        <h5 class="h6 mb-0"><a href="https://taozyblog.com.cn/post/2022-11-15_gnu_parallel/">使用GUN Parallele并行计算</a></h5>
+        <small>November 14, 2022</small>
+      </div>
+    </li>
+  
+    <li class="media widget-post align-items-center">
+      <a href="https://taozyblog.com.cn/post/2022-9-01_ega/">        
+        
+        
+        
+        <img loading="lazy" class="mr-3" src="https://blog-1310600458.cos.ap-shanghai.myqcloud.com/social_media_logo.png" alt="post image">
+        
+        
+        
+      </a>
+      <div class="media-body">
+        <h5 class="h6 mb-0"><a href="https://taozyblog.com.cn/post/2022-9-01_ega/">使用pyEGA3下载EGA数据</a></h5>
+        <small>September 28, 2022</small>
+      </div>
+    </li>
+  
+    <li class="media widget-post align-items-center">
+      <a href="https://taozyblog.com.cn/post/2022-9-14_dbgap/">        
+        
+        
+        
+        <img loading="lazy" class="mr-3" src="https://blog-1310600458.cos.ap-shanghai.myqcloud.com/dbGaP_logo_final.jpeg" alt="post image">
+        
+        
+        
+      </a>
+      <div class="media-body">
+        <h5 class="h6 mb-0"><a href="https://taozyblog.com.cn/post/2022-9-14_dbgap/">下载dbgap数据</a></h5>
+        <small>September 26, 2022</small>
+      </div>
+    </li>
+  
+  </ul>
+</div><!-- tags -->
+<div class="widget">
+  <h5 class="widget-title"><span>Tags</span></h5>
+  <ul class="list-inline widget-list-inline">
+    <li class="list-inline-item"><a href="/tags/bug">Bug</a></li>
+    <li class="list-inline-item"><a href="/tags/excel">Excel</a></li>
+    <li class="list-inline-item"><a href="/tags/image">Image</a></li>
+    <li class="list-inline-item"><a href="/tags/latex">Latex</a></li>
+    <li class="list-inline-item"><a href="/tags/linux">Linux</a></li>
+    <li class="list-inline-item"><a href="/tags/markdown">Markdown</a></li>
+    <li class="list-inline-item"><a href="/tags/photo">Photo</a></li>
+    <li class="list-inline-item"><a href="/tags/posterdown">Posterdown</a></li>
+    <li class="list-inline-item"><a href="/tags/r">R</a></li>
+    <li class="list-inline-item"><a href="/tags/r%e5%8c%85">R包</a></li>
+    <li class="list-inline-item"><a href="/tags/r%e5%8c%85%e5%bc%80%e5%8f%91">R包开发</a></li>
+    <li class="list-inline-item"><a href="/tags/shell">Shell</a></li>
+    <li class="list-inline-item"><a href="/tags/%e5%8d%9a%e5%ae%a2">博客</a></li>
+    <li class="list-inline-item"><a href="/tags/%e5%8f%af%e8%a7%86%e5%8c%96">可视化</a></li>
+    <li class="list-inline-item"><a href="/tags/%e6%8b%b7%e8%b4%9d%e6%95%b0%e5%8f%98%e5%bc%82">拷贝数变异</a></li>
+    <li class="list-inline-item"><a href="/tags/%e6%95%b0%e6%8d%ae%e5%a4%84%e7%90%86">数据处理</a></li>
+    <li class="list-inline-item"><a href="/tags/%e6%9c%ba%e5%99%a8%e5%ad%a6%e4%b9%a0">机器学习</a></li>
+    <li class="list-inline-item"><a href="/tags/%e7%94%9f%e7%89%a9%e6%a0%87%e5%bf%97%e7%89%a9">生物标志物</a></li>
+    <li class="list-inline-item"><a href="/tags/%e7%94%9f%e7%89%a9%e7%bb%9f%e8%ae%a1">生物统计</a></li>
+    <li class="list-inline-item"><a href="/tags/%e7%99%8c%e7%97%87%e5%9f%ba%e5%9b%a0%e7%bb%84%e5%ad%a6">癌症基因组学</a></li>
+    <li class="list-inline-item"><a href="/tags/%e7%a7%91%e7%a0%94%e5%86%99%e4%bd%9c">科研写作</a></li>
+    <li class="list-inline-item"><a href="/tags/%e7%ae%97%e6%b3%95">算法</a></li>
+    <li class="list-inline-item"><a href="/tags/%e8%ae%a1%e7%ae%97%e6%9c%ba%e5%9f%ba%e7%a1%80">计算机基础</a></li>
+    <li class="list-inline-item"><a href="/tags/%e8%bd%af%e4%bb%b6%e4%bd%bf%e7%94%a8">软件使用</a></li>
+  </ul>
+</div><!-- Social -->
+<div class="widget">
+  <h5 class="widget-title"><span>Social Links</span></h5>
+  <ul class="list-inline widget-list-inline mb-3">
+    
+    <li class="list-inline-item"><a href="#" style="padding:5px 15px"><i class="fab fa-facebook"></i></a></li>
+    
+    <li class="list-inline-item"><a href="#" style="padding:5px 15px"><i class="fab fa-twitter"></i></a></li>
+    
+    <li class="list-inline-item"><a href="#" style="padding:5px 15px"><i class="fab fa-linkedin-in"></i></a></li>
+    
+    <li class="list-inline-item"><a href="#" style="padding:5px 15px"><i class="fab fa-github"></i></a></li>
+    
+  </ul>
+</div></div>
+      </aside>
+      
+      
+    </div>
+  </div>
+</section>
+
 
 
 
