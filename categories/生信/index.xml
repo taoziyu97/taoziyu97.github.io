@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>生信 on Ziyu&#39;s Blog | Welcome to my world!</title>
-    <link>https://taozyblog.com.cn/categories/%E7%94%9F%E4%BF%A1/</link>
+    <link>https://taoziyu97.github.io/categories/%E7%94%9F%E4%BF%A1/</link>
     <description>Recent content in 生信 on Ziyu&#39;s Blog | Welcome to my world!</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Design By [Themefisher](https://themefisher.com/) Develop By [Gethugothemes](https://gethugothemes.com/)</copyright>
-    <lastBuildDate>Sat, 19 Mar 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://taozyblog.com.cn/categories/%E7%94%9F%E4%BF%A1/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 19 Mar 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://taoziyu97.github.io/categories/%E7%94%9F%E4%BF%A1/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>聚类分析之cola包【没写完】</title>
-      <link>https://taozyblog.com.cn/post/2022-3-24_cluster/</link>
+      <link>https://taoziyu97.github.io/post/2022-3-24_cluster/</link>
       <pubDate>Sat, 19 Mar 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://taozyblog.com.cn/post/2022-3-24_cluster/</guid>
+      <guid>https://taoziyu97.github.io/post/2022-3-24_cluster/</guid>
       <description>自问   是否有方法的比较
   比较的标准是什么，如何判断应该使用哪种
   聚类的共性如何展示
@@ -23,10 +23,10 @@
     
     <item>
       <title>检测拷贝数变异的工具及算法【2】-ABSOLUTE</title>
-      <link>https://taozyblog.com.cn/post/2021-12-19_cnv_tools2/</link>
+      <link>https://taoziyu97.github.io/post/2021-12-19_cnv_tools2/</link>
       <pubDate>Sun, 19 Dec 2021 15:40:24 +0600</pubDate>
       
-      <guid>https://taozyblog.com.cn/post/2021-12-19_cnv_tools2/</guid>
+      <guid>https://taoziyu97.github.io/post/2021-12-19_cnv_tools2/</guid>
       <description>背景介绍 1. 获取绝对拷贝数数值的难点 （1）采样过程中癌细胞混合了未知比例的正常细胞——肿瘤纯度；
 （2）由于染色体数量和结构异常导致的癌细胞的实际DNA含量(倍性)是未知的；
 （3）由于正在进行的亚克隆进化，癌细胞群可能是异质性的。
@@ -36,10 +36,10 @@
     
     <item>
       <title>检测拷贝数变异的工具及算法【1】-PCAWG consensus copy number</title>
-      <link>https://taozyblog.com.cn/post/2021-12-16_cnv_tools/</link>
+      <link>https://taoziyu97.github.io/post/2021-12-16_cnv_tools/</link>
       <pubDate>Thu, 16 Dec 2021 15:40:24 +0600</pubDate>
       
-      <guid>https://taozyblog.com.cn/post/2021-12-16_cnv_tools/</guid>
+      <guid>https://taoziyu97.github.io/post/2021-12-16_cnv_tools/</guid>
       <description>引言 PCAWG提供的拷贝数变异文件是综合6种不同的拷贝数变异提取工具的结果：
   ABSOLUTE
   ACEseq
@@ -50,20 +50,20 @@
     
     <item>
       <title>潜在语义分析（LSA）</title>
-      <link>https://taozyblog.com.cn/post/2021-11-26_statistic-lsa/</link>
+      <link>https://taoziyu97.github.io/post/2021-11-26_statistic-lsa/</link>
       <pubDate>Fri, 26 Nov 2021 15:40:24 +0600</pubDate>
       
-      <guid>https://taozyblog.com.cn/post/2021-11-26_statistic-lsa/</guid>
+      <guid>https://taoziyu97.github.io/post/2021-11-26_statistic-lsa/</guid>
       <description>引言 潜在语义分析（Latent sematic analysis, LSA）是一种无监督的学习方法。特点是通过矩阵分解来完成，使用的是非概率的话题分析模型，可以通过奇异值分解的方法进行矩阵因子分解，特点是分解的矩阵正交，非负矩阵分解是另一种矩阵的因子分解方法，特点是分解的矩阵非负。
 1. 单词向量空间和话题向量空间 1.1 单词向量空间 给定一个含有 \( n \)个文本的集合\( D=\left { d_1,d_2,&amp;hellip;,d_n \right } \)，在所有文本中出现的\( m \)个单词的集合\( W=\left { w_1,w_2,&amp;hellip;,w_m \right } \)，将单词在文本中出现的数据用一个单词-文本矩阵表示，记作\( X \): $$ \begin{bmatrix} x_{11} &amp;amp;x_{12} &amp;amp;&amp;hellip; &amp;amp;x_{1n} \ x_{21} &amp;amp;x_{22} &amp;amp;&amp;hellip; &amp;amp;x_{2n} \ \vdots &amp;amp;\vdots &amp;amp; &amp;amp;\vdots \ x_{m1} &amp;amp;x_{m2} &amp;amp;&amp;hellip; &amp;amp;x_{mn} \end{bmatrix} $$</description>
     </item>
     
     <item>
       <title>隐马尔可夫模型（HMM）</title>
-      <link>https://taozyblog.com.cn/post/2021-11-19_hmm/</link>
+      <link>https://taoziyu97.github.io/post/2021-11-19_hmm/</link>
       <pubDate>Fri, 19 Nov 2021 15:40:24 +0600</pubDate>
       
-      <guid>https://taozyblog.com.cn/post/2021-11-19_hmm/</guid>
+      <guid>https://taoziyu97.github.io/post/2021-11-19_hmm/</guid>
       <description>引言 1. 马尔可夫模型的基本概念 来对2段氨基酸序列x和y进行残基比对，认为存在3种比对关系的状态：
  M：残基能够比对上但不一定相等 X：序列x的残基比对到1个空位，或x上发生了1次插入 Y：序列y的残基比对到1个空位，或y上发生了1次插入  序列比对就是在上述3个状态中不断转换的过程：
  \( M(i,j) \) : \( x_i \)比对到\( y_j \)时，序列x从1到\( i \)和序列\( y \)从1到\( j \)最好的比对分数 \( X(i,j) \) : \( x_i \)比对到空位时，序列x从1到\( i \)最好的比对分数 \( Y(i,j) \) : \( y_j \)比对到空位时，序列y从1到\( j \)最好的比对分数  转移（从一个状态到另外一个状态）概率：</description>
@@ -71,20 +71,20 @@
     
     <item>
       <title>synapser</title>
-      <link>https://taozyblog.com.cn/post/2021-8-31_synapser/</link>
+      <link>https://taoziyu97.github.io/post/2021-8-31_synapser/</link>
       <pubDate>Sat, 24 Jul 2021 15:40:24 +0600</pubDate>
       
-      <guid>https://taozyblog.com.cn/post/2021-8-31_synapser/</guid>
+      <guid>https://taoziyu97.github.io/post/2021-8-31_synapser/</guid>
       <description>引言 一个提供批量下载Synapser数据的R包。
 1. 登陆 synLogin(&amp;#34;baomihai@sina.com&amp;#34;,&amp;#34;******&amp;#34;) Welcome, baomihai@sina.com!NULL 参考  biostars-How to install gdc-client in Ubnutu  </description>
     </item>
     
     <item>
       <title>gdc-client</title>
-      <link>https://taozyblog.com.cn/post/2021-7-20_gdc_client/</link>
+      <link>https://taoziyu97.github.io/post/2021-7-20_gdc_client/</link>
       <pubDate>Tue, 20 Jul 2021 15:40:24 +0600</pubDate>
       
-      <guid>https://taozyblog.com.cn/post/2021-7-20_gdc_client/</guid>
+      <guid>https://taoziyu97.github.io/post/2021-7-20_gdc_client/</guid>
       <description>引言 之前一直用别的方法下载数据，这次使用了gdc-client命令行去下载GDC上TCGA driver gene mutation的一批数据。
 步骤 1. 找到自己需要的数据 这是我本次要下载的数据
 点击数据下载地址发现出现如下界面，其中id就是使用gdc-client下载的文件对应的id
@@ -95,10 +95,10 @@
     
     <item>
       <title>使用CIBERSORTx网页版分析免疫浸润</title>
-      <link>https://taozyblog.com.cn/post/2021-4-06-cibersort/</link>
+      <link>https://taoziyu97.github.io/post/2021-4-06-cibersort/</link>
       <pubDate>Tue, 06 Apr 2021 15:40:24 +0600</pubDate>
       
-      <guid>https://taozyblog.com.cn/post/2021-4-06-cibersort/</guid>
+      <guid>https://taoziyu97.github.io/post/2021-4-06-cibersort/</guid>
       <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
 &lt;p&gt;最近需要对TCGA和PCAWG的表达数据进行免疫浸润水平分析，使用了R包immunedeconv,其中TCGA已经有文献的supplement给出了不同免疫浸润工具进行分析的结果，PCAWG需要自己手动分析，其中CIBERSORT在immunedeconv包中运行需要两个文件：&lt;code&gt;LM22.txt&lt;/code&gt;，&lt;code&gt;CIBERSORT.R&lt;/code&gt;，需要在官网：https://cibersortx.stanford.edu/ 进行申请。&lt;/p&gt;</description>
     </item>
