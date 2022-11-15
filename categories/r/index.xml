@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>R on Ziyu&#39;s Blog | Welcome to my world!</title>
-    <link>https://taoziyu97.github.io/categories/r/</link>
+    <link>https://taozyblog.com.cn/categories/r/</link>
     <description>Recent content in R on Ziyu&#39;s Blog | Welcome to my world!</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Design By [Themefisher](https://themefisher.com/) Develop By [Gethugothemes](https://gethugothemes.com/)</copyright>
-    <lastBuildDate>Sat, 19 Mar 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://taoziyu97.github.io/categories/r/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 19 Mar 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://taozyblog.com.cn/categories/r/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>聚类分析之cola包【没写完】</title>
-      <link>https://taoziyu97.github.io/post/2022-3-24_cluster/</link>
+      <link>https://taozyblog.com.cn/post/2022-3-24_cluster/</link>
       <pubDate>Sat, 19 Mar 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://taoziyu97.github.io/post/2022-3-24_cluster/</guid>
+      <guid>https://taozyblog.com.cn/post/2022-3-24_cluster/</guid>
       <description>自问   是否有方法的比较
   比较的标准是什么，如何判断应该使用哪种
   聚类的共性如何展示
@@ -23,10 +23,10 @@
     
     <item>
       <title>R包caret基本功能【1】——六种基本功能</title>
-      <link>https://taoziyu97.github.io/post/2022-2-24_caret1/</link>
+      <link>https://taozyblog.com.cn/post/2022-2-24_caret1/</link>
       <pubDate>Thu, 24 Feb 2022 15:40:24 +0600</pubDate>
       
-      <guid>https://taoziyu97.github.io/post/2022-2-24_caret1/</guid>
+      <guid>https://taozyblog.com.cn/post/2022-2-24_caret1/</guid>
       <description>介绍机器学习R包。
 1. 数据分割 基于输出变量的分割 在建模之前，需要对样本数据进行分割分为训练集和测试集。在之前建模过程中，我发现我使用sample进行分割存在一定的问题，比如我分割出来的数据中response的占比在训练集和测试集中差别很大等等。caret包中可以解决这个问题，通过设置p值，同时确定训练集和测试集的占比，并各个因子水平下取占比（表述的有点问题）。
 createDataPartition(y,  times = 1,  p = 0.5,  list = TRUE,  groups = min(5, length(y))) 2.</description>
@@ -34,10 +34,10 @@ createDataPartition(y,  times = 1,  p = 0.5,  list = TRUE,  groups = min(5, leng
     
     <item>
       <title>R包mlr3基本功能【1】——R6类——需要修订</title>
-      <link>https://taoziyu97.github.io/post/2022-2-24_mlr31/</link>
+      <link>https://taozyblog.com.cn/post/2022-2-24_mlr31/</link>
       <pubDate>Thu, 24 Feb 2022 15:40:24 +0600</pubDate>
       
-      <guid>https://taoziyu97.github.io/post/2022-2-24_mlr31/</guid>
+      <guid>https://taozyblog.com.cn/post/2022-2-24_mlr31/</guid>
       <description>介绍机器学习R包mlr3，该包提供了分类、回归、生存分析以及其他的机器学习任务，包含超参的调节以及特征的选择，本地支持很多操作的并行化。
 1. mlr3 Quickstart install.packages(&amp;#34;mlr3&amp;#34;) 对iris数据集的前120行训练一个决策树，并且对后30行进行最终的预测，最后判断预测模型的准确性。
 library(&amp;#34;mlr3&amp;#34;) task = tsk(&amp;#34;iris&amp;#34;) learner = lrn(&amp;#34;classif.rpart&amp;#34;)  # train a model of this learner for a subset of the task learner$train(task, row_ids = 1:120) # this is what the decision tree looks like learner$model 预测</description>
@@ -45,10 +45,10 @@ library(&amp;#34;mlr3&amp;#34;) task = tsk(&amp;#34;iris&amp;#34;) learner = lrn
     
     <item>
       <title>R包开发【2】——编写函数</title>
-      <link>https://taoziyu97.github.io/post/2022-2-23_function/</link>
+      <link>https://taozyblog.com.cn/post/2022-2-23_function/</link>
       <pubDate>Wed, 23 Feb 2022 15:40:24 +0600</pubDate>
       
-      <guid>https://taoziyu97.github.io/post/2022-2-23_function/</guid>
+      <guid>https://taozyblog.com.cn/post/2022-2-23_function/</guid>
       <description>R包功能的实现需要各种函数，函数应该如何编写？什么样的步骤可以被包括在函数里？函数需要哪些基本的功能？函数应该如何命名？函数可以通过调用函数并且给定参数来代替对代码的重复操作（当一个操作需要重复2次时），通过自定义的函数命名来使得功能易懂，并且方便后续的更新和更改，对功能进行更改只需要变更函数，而非在所有的代码中一一修改。
 1. 基本步骤 写函数的基本步骤如下：
 1.1 函数命名   命名要尽量短，而且指示函数的功能，长一点能够清楚的展示功能也无妨。
@@ -58,10 +58,10 @@ library(&amp;#34;mlr3&amp;#34;) task = tsk(&amp;#34;iris&amp;#34;) learner = lrn
     
     <item>
       <title>R包开发【3】——R包开发细节</title>
-      <link>https://taoziyu97.github.io/post/2022-2-23_rpkg2/</link>
+      <link>https://taozyblog.com.cn/post/2022-2-23_rpkg2/</link>
       <pubDate>Wed, 23 Feb 2022 15:40:24 +0600</pubDate>
       
-      <guid>https://taoziyu97.github.io/post/2022-2-23_rpkg2/</guid>
+      <guid>https://taozyblog.com.cn/post/2022-2-23_rpkg2/</guid>
       <description>R包开发的各种细节。
 1. 命名   尽量避免同时使用大小写字母
   使用该包测试命名是否能用（？？？）。
@@ -70,10 +70,10 @@ library(&amp;#34;mlr3&amp;#34;) task = tsk(&amp;#34;iris&amp;#34;) learner = lrn
     
     <item>
       <title>R包开发【1】——基本流程</title>
-      <link>https://taoziyu97.github.io/post/2022-2-22_rpkg/</link>
+      <link>https://taozyblog.com.cn/post/2022-2-22_rpkg/</link>
       <pubDate>Tue, 22 Feb 2022 15:40:24 +0600</pubDate>
       
-      <guid>https://taoziyu97.github.io/post/2022-2-22_rpkg/</guid>
+      <guid>https://taozyblog.com.cn/post/2022-2-22_rpkg/</guid>
       <description>任何可以被自动化的，都应该让它自动化，给自己省时间，也可以方便任何人使用。devtools的目的是使得开发工具变得容易，囊括了多个包来支持开发的各个功能。
 前言：R包开发书籍的基本内容   第二章 示例包
   第三章 为包开发准备系统
@@ -83,10 +83,10 @@ library(&amp;#34;mlr3&amp;#34;) task = tsk(&amp;#34;iris&amp;#34;) learner = lrn
     
     <item>
       <title>R基础——读入和写出数据</title>
-      <link>https://taoziyu97.github.io/post/2021-12-23_basic_r/</link>
+      <link>https://taozyblog.com.cn/post/2021-12-23_basic_r/</link>
       <pubDate>Thu, 23 Dec 2021 15:40:24 +0600</pubDate>
       
-      <guid>https://taoziyu97.github.io/post/2021-12-23_basic_r/</guid>
+      <guid>https://taozyblog.com.cn/post/2021-12-23_basic_r/</guid>
       <description>基本内容   Excel文件的读入
   txt和csv文件的读入
   文件的写出
@@ -96,10 +96,10 @@ library(&amp;#34;mlr3&amp;#34;) task = tsk(&amp;#34;iris&amp;#34;) learner = lrn
     
     <item>
       <title>使用posterdown制作学术海报</title>
-      <link>https://taoziyu97.github.io/post/2021-12-15_posterdown/</link>
+      <link>https://taozyblog.com.cn/post/2021-12-15_posterdown/</link>
       <pubDate>Wed, 15 Dec 2021 15:40:24 +0600</pubDate>
       
-      <guid>https://taoziyu97.github.io/post/2021-12-15_posterdown/</guid>
+      <guid>https://taozyblog.com.cn/post/2021-12-15_posterdown/</guid>
       <description>引言 posterdown自动排版，通过调节参数满足个人制作海报的需要。
 1. 介绍 目前posterdown支持3种风格的海报模板：posterdown_html、posterdown_betterland和posterdown_betterport。以posterdown_betterport为例进行阐述。
  目前支持的三种模板风格
@@ -109,30 +109,30 @@ library(&amp;#34;mlr3&amp;#34;) task = tsk(&amp;#34;iris&amp;#34;) learner = lrn
     
     <item>
       <title>R：批量读入文件并合并</title>
-      <link>https://taoziyu97.github.io/post/2021-11-17_docall/</link>
+      <link>https://taozyblog.com.cn/post/2021-11-17_docall/</link>
       <pubDate>Wed, 17 Nov 2021 15:40:24 +0600</pubDate>
       
-      <guid>https://taoziyu97.github.io/post/2021-11-17_docall/</guid>
+      <guid>https://taozyblog.com.cn/post/2021-11-17_docall/</guid>
       <description>引言 使用do.call批量读入文件并合并。
 1. 基本处理步骤 source_dir &amp;lt;- &amp;#34;文件所在路径&amp;#34; file &amp;lt;- list.files(  path = source_dir,  pattern = &amp;#34;*.</description>
     </item>
     
     <item>
       <title>synapser</title>
-      <link>https://taoziyu97.github.io/post/2021-8-31_synapser/</link>
+      <link>https://taozyblog.com.cn/post/2021-8-31_synapser/</link>
       <pubDate>Sat, 24 Jul 2021 15:40:24 +0600</pubDate>
       
-      <guid>https://taoziyu97.github.io/post/2021-8-31_synapser/</guid>
+      <guid>https://taozyblog.com.cn/post/2021-8-31_synapser/</guid>
       <description>引言 一个提供批量下载Synapser数据的R包。
 1. 登陆 synLogin(&amp;#34;baomihai@sina.com&amp;#34;,&amp;#34;******&amp;#34;) Welcome, baomihai@sina.com!NULL 参考  biostars-How to install gdc-client in Ubnutu  </description>
     </item>
     
     <item>
       <title>处理字符串的两个R包:stringi和stringr</title>
-      <link>https://taoziyu97.github.io/post/2021-7-24_stringr_stringi/</link>
+      <link>https://taozyblog.com.cn/post/2021-7-24_stringr_stringi/</link>
       <pubDate>Sat, 24 Jul 2021 15:40:24 +0600</pubDate>
       
-      <guid>https://taoziyu97.github.io/post/2021-7-24_stringr_stringi/</guid>
+      <guid>https://taozyblog.com.cn/post/2021-7-24_stringr_stringi/</guid>
       <description>引言 stringr包是建立在stringi上的，stringi包使用ICU C库提供准确、快速的常见字符串操作，stringr提供了最重要和最常用的字符串处理函数。
 stringr stringr包中所有的函数都以str_开头，第一个参数为字符串向量。对应的在base函数中也有功能一致的函数，记得对比两者之间的异同。
 1. 找到自己需要的数据 tcga_mut &amp;lt;- read.csv2(&amp;#34;/home/tzy/projects/CNX-method/data/TCGA/mc3.v0.2.8.PUBLIC.nonsilentGene.xena&amp;#34;,sep = &amp;#34;\t&amp;#34;)  saveRDS(tcga_mut, file = &amp;#34;/home/tzy/projects/CNX-method/data/TCGA/tcga_mut.</description>
@@ -140,10 +140,10 @@ stringr stringr包中所有的函数都以str_开头，第一个参数为字符�
     
     <item>
       <title>R储存数据</title>
-      <link>https://taoziyu97.github.io/post/2021-7-20_rdata/</link>
+      <link>https://taozyblog.com.cn/post/2021-7-20_rdata/</link>
       <pubDate>Tue, 20 Jul 2021 15:40:24 +0600</pubDate>
       
-      <guid>https://taoziyu97.github.io/post/2021-7-20_rdata/</guid>
+      <guid>https://taozyblog.com.cn/post/2021-7-20_rdata/</guid>
       <description>引言 rds比RData省空间，为什么？
 步骤 1. 找到自己需要的数据 tcga_mut &amp;lt;- read.csv2(&amp;#34;/home/tzy/projects/CNX-method/data/TCGA/mc3.v0.2.8.PUBLIC.nonsilentGene.xena&amp;#34;,sep = &amp;#34;\t&amp;#34;)  saveRDS(tcga_mut, file = &amp;#34;/home/tzy/projects/CNX-method/data/TCGA/tcga_mut.rds&amp;#34;) save(tcga_mut, file = &amp;#34;/home/tzy/projects/CNX-method/data/TCGA/tcga_mut.</description>
     </item>

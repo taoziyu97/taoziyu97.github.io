@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>linux on Ziyu&#39;s Blog | Welcome to my world!</title>
-    <link>https://taoziyu97.github.io/tags/linux/</link>
+    <link>https://taozyblog.com.cn/tags/linux/</link>
     <description>Recent content in linux on Ziyu&#39;s Blog | Welcome to my world!</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Design By [Themefisher](https://themefisher.com/) Develop By [Gethugothemes](https://gethugothemes.com/)</copyright>
-    <lastBuildDate>Tue, 20 Jul 2021 15:40:24 +0600</lastBuildDate><atom:link href="https://taoziyu97.github.io/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 20 Jul 2021 15:40:24 +0600</lastBuildDate><atom:link href="https://taozyblog.com.cn/tags/linux/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>gdc-client</title>
-      <link>https://taoziyu97.github.io/post/2021-7-20_gdc_client/</link>
+      <link>https://taozyblog.com.cn/post/2021-7-20_gdc_client/</link>
       <pubDate>Tue, 20 Jul 2021 15:40:24 +0600</pubDate>
       
-      <guid>https://taoziyu97.github.io/post/2021-7-20_gdc_client/</guid>
+      <guid>https://taozyblog.com.cn/post/2021-7-20_gdc_client/</guid>
       <description>引言 之前一直用别的方法下载数据，这次使用了gdc-client命令行去下载GDC上TCGA driver gene mutation的一批数据。
 步骤 1. 找到自己需要的数据 这是我本次要下载的数据
 点击数据下载地址发现出现如下界面，其中id就是使用gdc-client下载的文件对应的id
