@@ -2,163 +2,199 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Blogs on Ziyu&#39;s Blog | Welcome to my world!</title>
-    <link>https://taozyblog.com.cn/post/</link>
+    <link>https://taoziyu97.github.io/post/</link>
     <description>Recent content in Blogs on Ziyu&#39;s Blog | Welcome to my world!</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Design By [Themefisher](https://themefisher.com/) Develop By [Gethugothemes](https://gethugothemes.com/)</copyright>
-    <lastBuildDate>Tue, 15 Nov 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://taozyblog.com.cn/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 21 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://taoziyu97.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>使用Sclust提取拷贝数</title>
-      <link>https://taozyblog.com.cn/post/2022-11-15_sclust/</link>
-      <pubDate>Tue, 15 Nov 2022 00:00:00 +0000</pubDate>
+      <title>使用ACE提取拷贝数变异</title>
+      <link>https://taoziyu97.github.io/post/2023-09-21_freec-copy/</link>
+      <pubDate>Thu, 21 Sep 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://taozyblog.com.cn/post/2022-11-15_sclust/</guid>
-      <description>&lt;p&gt;介绍如何使用Sclust提取绝对拷贝数。&lt;/p&gt;</description>
+      <guid>https://taoziyu97.github.io/post/2023-09-21_freec-copy/</guid>
+      <description>&lt;p&gt;使用ACE提取浅全基因组测序数据的拷贝数变异。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>使用FREEC提取拷贝数变异</title>
+      <link>https://taoziyu97.github.io/post/2023-09-21_freec/</link>
+      <pubDate>Wed, 20 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://taoziyu97.github.io/post/2023-09-21_freec/</guid>
+      <description>&lt;p&gt;使用FREEC提取浅全基因组测序数据的拷贝数变异。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>使用QDNAseq提取拷贝数变异</title>
+      <link>https://taoziyu97.github.io/post/2023-09-21_qdnaseq/</link>
+      <pubDate>Wed, 20 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://taoziyu97.github.io/post/2023-09-21_qdnaseq/</guid>
+      <description>&lt;p&gt;使用QDNAseq提取浅全基因组测序数据的拷贝数变异。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>提取拷贝数变异基本思路</title>
+      <link>https://taoziyu97.github.io/post/2023-09-19_cnvcall_1/</link>
+      <pubDate>Tue, 19 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://taoziyu97.github.io/post/2023-09-19_cnvcall_1/</guid>
+      <description>&lt;p&gt;以Canvas工具为例阐述提取拷贝数变异的基本思路。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>使用GUN Parallele并行计算</title>
-      <link>https://taozyblog.com.cn/post/2022-11-15_gnu_parallel/</link>
+      <link>https://taoziyu97.github.io/post/2022-11-15_gnu_parallel/</link>
       <pubDate>Mon, 14 Nov 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://taozyblog.com.cn/post/2022-11-15_gnu_parallel/</guid>
+      <guid>https://taoziyu97.github.io/post/2022-11-15_gnu_parallel/</guid>
       <description>&lt;p&gt;介绍如何使用GUN Parallele在shell中并行计算。&lt;/p&gt;</description>
     </item>
     
     <item>
+      <title>使用Sclust提取拷贝数</title>
+      <link>https://taoziyu97.github.io/post/2022-11-15_sclust/</link>
+      <pubDate>Mon, 14 Nov 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://taoziyu97.github.io/post/2022-11-15_sclust/</guid>
+      <description>&lt;p&gt;介绍如何使用Sclust提取绝对拷贝数。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>使用pyEGA3下载EGA数据</title>
-      <link>https://taozyblog.com.cn/post/2022-9-01_ega/</link>
+      <link>https://taoziyu97.github.io/post/2022-9-01_ega/</link>
       <pubDate>Wed, 28 Sep 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://taozyblog.com.cn/post/2022-9-01_ega/</guid>
+      <guid>https://taoziyu97.github.io/post/2022-9-01_ega/</guid>
       <description>&lt;p&gt;介绍如何使用pyEGA3下载EGA数据。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>下载dbgap数据</title>
-      <link>https://taozyblog.com.cn/post/2022-9-14_dbgap/</link>
+      <link>https://taoziyu97.github.io/post/2022-9-14_dbgap/</link>
       <pubDate>Mon, 26 Sep 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://taozyblog.com.cn/post/2022-9-14_dbgap/</guid>
+      <guid>https://taoziyu97.github.io/post/2022-9-14_dbgap/</guid>
       <description>&lt;p&gt;介绍如何下载dbGAP数据库需要申请的数据。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>数据收集、申请和下载</title>
-      <link>https://taozyblog.com.cn/post/2022-9-14_datadownload/</link>
+      <link>https://taoziyu97.github.io/post/2022-9-14_datadownload/</link>
       <pubDate>Mon, 26 Sep 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://taozyblog.com.cn/post/2022-9-14_datadownload/</guid>
+      <guid>https://taoziyu97.github.io/post/2022-9-14_datadownload/</guid>
       <description>&lt;p&gt;介绍经常使用的数据库，以及数据的申请和下载。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>【异倍性系列1】——易混淆概念</title>
-      <link>https://taozyblog.com.cn/post/2022-9-14_cnv1/</link>
+      <link>https://taoziyu97.github.io/post/2022-9-14_cnv1/</link>
       <pubDate>Wed, 21 Sep 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://taozyblog.com.cn/post/2022-9-14_cnv1/</guid>
+      <guid>https://taoziyu97.github.io/post/2022-9-14_cnv1/</guid>
       <description>&lt;p&gt;介绍易混淆的概念。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>【异倍性系列2】——异倍性（aneuploidy）</title>
-      <link>https://taozyblog.com.cn/post/2022-9-14_cnv2/</link>
+      <link>https://taoziyu97.github.io/post/2022-9-14_cnv2/</link>
       <pubDate>Wed, 21 Sep 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://taozyblog.com.cn/post/2022-9-14_cnv2/</guid>
+      <guid>https://taoziyu97.github.io/post/2022-9-14_cnv2/</guid>
       <description>&lt;p&gt;介绍异倍性的概念。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>【异倍性系列3】——chromosome instability 染色体不稳定性 (CIN)</title>
-      <link>https://taozyblog.com.cn/post/2022-9-14_cnv3/</link>
+      <link>https://taoziyu97.github.io/post/2022-9-14_cnv3/</link>
       <pubDate>Wed, 21 Sep 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://taozyblog.com.cn/post/2022-9-14_cnv3/</guid>
+      <guid>https://taoziyu97.github.io/post/2022-9-14_cnv3/</guid>
       <description>&lt;p&gt;介绍染色体不稳定性的机制。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>拷贝数变异内容汇总</title>
-      <link>https://taozyblog.com.cn/post/2022-9-14_cnvcombine/</link>
+      <link>https://taoziyu97.github.io/post/2022-9-14_cnvcombine/</link>
       <pubDate>Wed, 21 Sep 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://taozyblog.com.cn/post/2022-9-14_cnvcombine/</guid>
+      <guid>https://taoziyu97.github.io/post/2022-9-14_cnvcombine/</guid>
       <description>&lt;p&gt;拷贝数变异内容汇。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>GSA申请数据下载</title>
-      <link>https://taozyblog.com.cn/post/2022-9-14_gsa%E6%95%B0%E6%8D%AE%E4%B8%8B%E8%BD%BD/</link>
+      <link>https://taoziyu97.github.io/post/2022-9-14_gsa%E6%95%B0%E6%8D%AE%E4%B8%8B%E8%BD%BD/</link>
       <pubDate>Wed, 14 Sep 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://taozyblog.com.cn/post/2022-9-14_gsa%E6%95%B0%E6%8D%AE%E4%B8%8B%E8%BD%BD/</guid>
+      <guid>https://taoziyu97.github.io/post/2022-9-14_gsa%E6%95%B0%E6%8D%AE%E4%B8%8B%E8%BD%BD/</guid>
       <description>&lt;p&gt;介绍如何下载GSA数据库需要申请的数据。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>【临床系列】——名词解释</title>
-      <link>https://taozyblog.com.cn/post/2022-9-14_%E4%B8%B4%E5%BA%8A%E4%BF%A1%E6%81%AF%E5%90%8D%E8%AF%8D/</link>
+      <link>https://taoziyu97.github.io/post/2022-9-14_%E4%B8%B4%E5%BA%8A%E4%BF%A1%E6%81%AF%E5%90%8D%E8%AF%8D/</link>
       <pubDate>Wed, 14 Sep 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://taozyblog.com.cn/post/2022-9-14_%E4%B8%B4%E5%BA%8A%E4%BF%A1%E6%81%AF%E5%90%8D%E8%AF%8D/</guid>
+      <guid>https://taoziyu97.github.io/post/2022-9-14_%E4%B8%B4%E5%BA%8A%E4%BF%A1%E6%81%AF%E5%90%8D%E8%AF%8D/</guid>
       <description>recurrence-free survival  从开始治疗到没有癌症迹象存在。
  disease-specific survival  从检测或开始治疗到病人死亡之前的时间。</description>
     </item>
     
     <item>
       <title>R——因子</title>
-      <link>https://taozyblog.com.cn/post/2022-8-31_factor/</link>
+      <link>https://taoziyu97.github.io/post/2022-8-31_factor/</link>
       <pubDate>Thu, 08 Sep 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://taozyblog.com.cn/post/2022-8-31_factor/</guid>
+      <guid>https://taoziyu97.github.io/post/2022-8-31_factor/</guid>
       <description>&lt;p&gt;介绍R语言中的因子。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>AUC</title>
-      <link>https://taozyblog.com.cn/post/2022-8-31_auc/</link>
+      <link>https://taoziyu97.github.io/post/2022-8-31_auc/</link>
       <pubDate>Tue, 23 Aug 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://taozyblog.com.cn/post/2022-8-31_auc/</guid>
+      <guid>https://taoziyu97.github.io/post/2022-8-31_auc/</guid>
       <description>&lt;p&gt;介绍混淆矩阵，准确率，召回率，ROC曲线以及AUC面积。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>rCGH包</title>
-      <link>https://taozyblog.com.cn/post/2022-8-22_rcgh/</link>
+      <link>https://taoziyu97.github.io/post/2022-8-22_rcgh/</link>
       <pubDate>Mon, 22 Aug 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://taozyblog.com.cn/post/2022-8-22_rcgh/</guid>
+      <guid>https://taoziyu97.github.io/post/2022-8-22_rcgh/</guid>
       <description>&lt;p&gt;介绍rCGH包的使用方法。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>【聚类1】——介绍</title>
-      <link>https://taozyblog.com.cn/post/2022-8-10_%E8%81%9A%E7%B1%BB/</link>
+      <link>https://taoziyu97.github.io/post/2022-8-10_%E8%81%9A%E7%B1%BB/</link>
       <pubDate>Tue, 21 Jun 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://taozyblog.com.cn/post/2022-8-10_%E8%81%9A%E7%B1%BB/</guid>
+      <guid>https://taoziyu97.github.io/post/2022-8-10_%E8%81%9A%E7%B1%BB/</guid>
       <description>&lt;p&gt;介绍聚类的含义，聚类能够解决的问题，以及聚类性能的度量。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>【聚类2】——kmeans聚类</title>
-      <link>https://taozyblog.com.cn/post/2022-8-10_%E8%81%9A%E7%B1%BB-copy/</link>
+      <link>https://taoziyu97.github.io/post/2022-8-10_%E8%81%9A%E7%B1%BB-copy/</link>
       <pubDate>Mon, 20 Jun 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://taozyblog.com.cn/post/2022-8-10_%E8%81%9A%E7%B1%BB-copy/</guid>
+      <guid>https://taoziyu97.github.io/post/2022-8-10_%E8%81%9A%E7%B1%BB-copy/</guid>
       <description>&lt;p&gt;介绍kmeans分类。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>【2021NCI】signature讲座</title>
-      <link>https://taozyblog.com.cn/post/2022-6-10_analytical/</link>
+      <link>https://taoziyu97.github.io/post/2022-6-10_analytical/</link>
       <pubDate>Thu, 09 Jun 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://taozyblog.com.cn/post/2022-6-10_analytical/</guid>
+      <guid>https://taoziyu97.github.io/post/2022-6-10_analytical/</guid>
       <description>该部分会议内容如下：
   一、Teresa Przytycka 突变模式可以作为一种工具来研究环境、细胞过程和疾病之间的关联，其中包含：
   signature和分子通路之间的关联
@@ -168,10 +204,10 @@
     
     <item>
       <title>【2021NCI】signature讲座</title>
-      <link>https://taozyblog.com.cn/post/2022-6-10_normal_tumor/</link>
+      <link>https://taoziyu97.github.io/post/2022-6-10_normal_tumor/</link>
       <pubDate>Thu, 09 Jun 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://taozyblog.com.cn/post/2022-6-10_normal_tumor/</guid>
+      <guid>https://taoziyu97.github.io/post/2022-6-10_normal_tumor/</guid>
       <description>该部分会议内容如下：
   来源   会议安排
   会议内容
@@ -181,20 +217,20 @@
     
     <item>
       <title>【2021NCI】signature讲座</title>
-      <link>https://taozyblog.com.cn/post/2022-6-10_process/</link>
+      <link>https://taoziyu97.github.io/post/2022-6-10_process/</link>
       <pubDate>Thu, 09 Jun 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://taozyblog.com.cn/post/2022-6-10_process/</guid>
+      <guid>https://taoziyu97.github.io/post/2022-6-10_process/</guid>
       <description>该部分会议内容如下：
   【Steven Rozen】 Two signatures: one important for public health, one important for DNA damage and repair</description>
     </item>
     
     <item>
       <title>【2021NCI】signature讲座</title>
-      <link>https://taozyblog.com.cn/post/2022-6-10_translational/</link>
+      <link>https://taoziyu97.github.io/post/2022-6-10_translational/</link>
       <pubDate>Thu, 09 Jun 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://taozyblog.com.cn/post/2022-6-10_translational/</guid>
+      <guid>https://taoziyu97.github.io/post/2022-6-10_translational/</guid>
       <description>该部分会议内容如下：
   来源   会议安排
   会议内容
@@ -204,20 +240,20 @@
     
     <item>
       <title>【2021NCI】signature讲座-Opening Session</title>
-      <link>https://taozyblog.com.cn/post/2022-6-10_open_session/</link>
+      <link>https://taoziyu97.github.io/post/2022-6-10_open_session/</link>
       <pubDate>Thu, 09 Jun 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://taozyblog.com.cn/post/2022-6-10_open_session/</guid>
+      <guid>https://taoziyu97.github.io/post/2022-6-10_open_session/</guid>
       <description>该部分会议内容如下：
   somatic mutations in ageing and disease 1. 背景 对良性组织测序（non-malignant tissue）比较困难，这里使用的是laser capture microdissection，把组织切得更小，这样每次测序大概是200个样本，不需要任何预先对DNA进行扩增，这样可以获得很高质量的基因组。</description>
     </item>
     
     <item>
       <title>非线性规划</title>
-      <link>https://taozyblog.com.cn/post/2022-6-09_quangrop/</link>
+      <link>https://taoziyu97.github.io/post/2022-6-09_quangrop/</link>
       <pubDate>Thu, 09 Jun 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://taozyblog.com.cn/post/2022-6-09_quangrop/</guid>
+      <guid>https://taoziyu97.github.io/post/2022-6-09_quangrop/</guid>
       <description>很多实际问题可以归结为线性规划问题，其目标函数和约束条件都是自变量的一次函数。但是存在另外一些应用也很广泛的问题，目标函数和（或）约束条件很难用线性函数表达，如果目标函数或约束条件中含有非线性函数，就称这种规划问题为非线性规划问题。
 由于非线性函数的复杂性，解非线性规划问题要比解线性规划问题困难得多，而且也不能像线性规划有通用解法，目前还没有适用于解决各种问题的一般算法，各个方法都有自己特定的适用范围。
 一、基本概念 目标函数，或约束条件中含有非线性函数，就称这种规划问题为非线性规划问题。
@@ -228,10 +264,10 @@
     
     <item>
       <title>fit算法</title>
-      <link>https://taozyblog.com.cn/post/2022-6-07_fit_algorithm/</link>
+      <link>https://taoziyu97.github.io/post/2022-6-07_fit_algorithm/</link>
       <pubDate>Tue, 07 Jun 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://taozyblog.com.cn/post/2022-6-07_fit_algorithm/</guid>
+      <guid>https://taoziyu97.github.io/post/2022-6-07_fit_algorithm/</guid>
       <description>NMF（非负矩阵分解）  NMF in mutational signature
  当得到大量样本时，根据k个分类，可以创建一个计数矩阵M，包含每个样本在每个分类的计数，该矩阵可以通过非负矩阵分解为两个矩阵，这两个矩阵一个代表signature的分类图谱，一个代表每个样本的signature数值。
 而当我们只有一个样本时，则不能通过NMF分解来获得以上提到的两个矩阵，但是可以通过确定的signature图谱矩阵，来推测该样本的signature的exposure。这个步骤就是fitting。
@@ -240,10 +276,10 @@
     
     <item>
       <title>参加读书活动</title>
-      <link>https://taozyblog.com.cn/post/2022-4-12_read/</link>
+      <link>https://taoziyu97.github.io/post/2022-4-12_read/</link>
       <pubDate>Sat, 23 Apr 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://taozyblog.com.cn/post/2022-4-12_read/</guid>
+      <guid>https://taoziyu97.github.io/post/2022-4-12_read/</guid>
       <description>步骤   安装网易mumu, 通过应用中心安装微信读书
   安装python包：uiautomator
   安装adb连接mumu
@@ -253,10 +289,10 @@
     
     <item>
       <title>定量拷贝数变异</title>
-      <link>https://taozyblog.com.cn/post/2022-4-12_qunatify_cnv/</link>
+      <link>https://taoziyu97.github.io/post/2022-4-12_qunatify_cnv/</link>
       <pubDate>Mon, 11 Apr 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://taozyblog.com.cn/post/2022-4-12_qunatify_cnv/</guid>
+      <guid>https://taoziyu97.github.io/post/2022-4-12_qunatify_cnv/</guid>
       <description> 
     cna burden
     参考资料    </description>
@@ -264,10 +300,10 @@
     
     <item>
       <title>生存分析</title>
-      <link>https://taozyblog.com.cn/post/2022-4-10_survival_analysis/</link>
+      <link>https://taoziyu97.github.io/post/2022-4-10_survival_analysis/</link>
       <pubDate>Mon, 11 Apr 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://taozyblog.com.cn/post/2022-4-10_survival_analysis/</guid>
+      <guid>https://taoziyu97.github.io/post/2022-4-10_survival_analysis/</guid>
       <description>本文主要参考：Survival Analysis Part I: Basic concepts and first analyses
 生存分析基本介绍 大多数的癌症研究中使用：
   Kaplan-Meier plots</description>
@@ -275,10 +311,10 @@
     
     <item>
       <title>C index</title>
-      <link>https://taozyblog.com.cn/post/2022-4-10_c_index/</link>
+      <link>https://taoziyu97.github.io/post/2022-4-10_c_index/</link>
       <pubDate>Sun, 10 Apr 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://taozyblog.com.cn/post/2022-4-10_c_index/</guid>
+      <guid>https://taoziyu97.github.io/post/2022-4-10_c_index/</guid>
       <description> C index介绍 C index 是AUC的扩展，AUC是C index的特殊。
  
  参考资料  已经猴年马月了，你还不知道C-index？！  </description>
@@ -286,10 +322,10 @@
     
     <item>
       <title>Multimodal deep learning</title>
-      <link>https://taozyblog.com.cn/post/2022-4-10_multimodel_dl/</link>
+      <link>https://taoziyu97.github.io/post/2022-4-10_multimodel_dl/</link>
       <pubDate>Sun, 10 Apr 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://taozyblog.com.cn/post/2022-4-10_multimodel_dl/</guid>
+      <guid>https://taoziyu97.github.io/post/2022-4-10_multimodel_dl/</guid>
       <description>Multimodal data 首先我们应该明确什么是multimodal data?
 事物发生或经历时，或者是研究问题包含了多模态。我们通过看、听、闻来体会世界时，就是一种多模态。
  Modality refers to the way in which something happens or is experienced and a research problem is characterized as multimodal when it includes multiple such modalities.</description>
@@ -297,10 +333,10 @@
     
     <item>
       <title>如何去除文本注释</title>
-      <link>https://taozyblog.com.cn/post/2022-4-06_%E6%B3%A8%E9%87%8A/</link>
+      <link>https://taoziyu97.github.io/post/2022-4-06_%E6%B3%A8%E9%87%8A/</link>
       <pubDate>Thu, 07 Apr 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://taozyblog.com.cn/post/2022-4-06_%E6%B3%A8%E9%87%8A/</guid>
+      <guid>https://taoziyu97.github.io/post/2022-4-06_%E6%B3%A8%E9%87%8A/</guid>
       <description>注释类型 首先我们应该明确注释是在什么样的文件中？
 1．代码中的注释
 2．文本中的注释
@@ -314,10 +350,10 @@
     
     <item>
       <title>癌症预后</title>
-      <link>https://taozyblog.com.cn/post/2022-3-21_prognosis/</link>
+      <link>https://taoziyu97.github.io/post/2022-3-21_prognosis/</link>
       <pubDate>Sun, 03 Apr 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://taozyblog.com.cn/post/2022-3-21_prognosis/</guid>
+      <guid>https://taoziyu97.github.io/post/2022-3-21_prognosis/</guid>
       <description>基本框架（按照从大到细）   预后标志物背景介绍
   预后标志物的类型（分类标准有作用；存在性质等等），主要关注基因组预后标志物
   泛癌、特定癌种的预后标志物，这部分聚焦于特定的例子
@@ -327,10 +363,10 @@
     
     <item>
       <title>CNV</title>
-      <link>https://taozyblog.com.cn/post/2022-3-29_cnv/</link>
+      <link>https://taoziyu97.github.io/post/2022-3-29_cnv/</link>
       <pubDate>Sat, 19 Mar 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://taozyblog.com.cn/post/2022-3-29_cnv/</guid>
+      <guid>https://taoziyu97.github.io/post/2022-3-29_cnv/</guid>
       <description>一、 拷贝数变异的介绍 1.1 结构变异和拷贝数变异 结构变异（structure variation, SV）是指基因组上大片段碱基的缺失、插入、重复、倒位和易位。这部分变异的频率，和疾病或者表型的关系等等都不明确，另外还有一部分的变异也属于结构变异，比如异态性（heteromorphisms），脆性位点（fragile sites），marker染色体，等臂染色体（isochromosomes），双微体（double minutes）等等，这部分的结构不正常和疾病有关。
  等臂染色体，是两条基因和形态都一致的染色体臂。
 双微体，是无着丝粒的，染色体外扩增的核染色质，通常包含特定的染色体片段或基因，在癌细胞中常出现。
@@ -340,10 +376,10 @@ marker染色体，也被称为结构外异常染色体或“多余”染色体�
     
     <item>
       <title>如何进行科研写作——【转载】</title>
-      <link>https://taozyblog.com.cn/post/2022-3-28_%E7%A7%91%E7%A0%94%E5%86%99%E4%BD%9C/</link>
+      <link>https://taoziyu97.github.io/post/2022-3-28_%E7%A7%91%E7%A0%94%E5%86%99%E4%BD%9C/</link>
       <pubDate>Sat, 19 Mar 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://taozyblog.com.cn/post/2022-3-28_%E7%A7%91%E7%A0%94%E5%86%99%E4%BD%9C/</guid>
+      <guid>https://taoziyu97.github.io/post/2022-3-28_%E7%A7%91%E7%A0%94%E5%86%99%E4%BD%9C/</guid>
       <description>最近在修改文章，感觉自己的英文表达能力和学术写作能力太弱，刚巧看到施一公教授分享的公众号文章，觉得收获很大，记录一下。
 如何写论文 1．要写好科研论文，必须先养成读英文文章的习惯，争取每天30-60分钟。刚开始可以选择以读英文报纸、英文新闻为主，逐渐转为读专业杂志。我会在近期专门写一篇博客文章介绍一套行之有效的增强读专业杂志能力的办法。
 2．写科研论文，最重要的是逻辑。逻辑的形成来自对实验数据的总体分析。必须先讨论出一套清晰的思路，然后按照思路来做图(Figures)，最后才能执笔。
@@ -353,10 +389,10 @@ marker染色体，也被称为结构外异常染色体或“多余”染色体�
     
     <item>
       <title>聚类分析之cola包【没写完】</title>
-      <link>https://taozyblog.com.cn/post/2022-3-24_cluster/</link>
+      <link>https://taoziyu97.github.io/post/2022-3-24_cluster/</link>
       <pubDate>Sat, 19 Mar 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://taozyblog.com.cn/post/2022-3-24_cluster/</guid>
+      <guid>https://taoziyu97.github.io/post/2022-3-24_cluster/</guid>
       <description>自问   是否有方法的比较
   比较的标准是什么，如何判断应该使用哪种
   聚类的共性如何展示
@@ -366,10 +402,10 @@ marker染色体，也被称为结构外异常染色体或“多余”染色体�
     
     <item>
       <title>Python实现自动定场</title>
-      <link>https://taozyblog.com.cn/post/2022-3-17_sport/</link>
+      <link>https://taoziyu97.github.io/post/2022-3-17_sport/</link>
       <pubDate>Wed, 16 Mar 2022 15:40:24 +0600</pubDate>
       
-      <guid>https://taozyblog.com.cn/post/2022-3-17_sport/</guid>
+      <guid>https://taoziyu97.github.io/post/2022-3-17_sport/</guid>
       <description>安装包   pyexecjs：这个库主要是将 JS 代码运行在本地的 JS 环境中
   lxml
   参考资料：   https://juejin.</description>
@@ -377,10 +413,10 @@ marker染色体，也被称为结构外异常染色体或“多余”染色体�
     
     <item>
       <title>拷贝数变异机制</title>
-      <link>https://taozyblog.com.cn/post/2022-3-16_mechanism_of_cnv/</link>
+      <link>https://taoziyu97.github.io/post/2022-3-16_mechanism_of_cnv/</link>
       <pubDate>Wed, 16 Mar 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://taozyblog.com.cn/post/2022-3-16_mechanism_of_cnv/</guid>
+      <guid>https://taoziyu97.github.io/post/2022-3-16_mechanism_of_cnv/</guid>
       <description>基本框架 拷贝数变异的博客框架：
   介绍拷贝数变异的从属关系，和结构变异的关系；克隆性拷贝数变异和亚克隆拷贝数变异
   拷贝数变异检测手段，拷贝数变异检测方法/算法（这个比较多，可以分多点讲）
@@ -391,10 +427,10 @@ marker染色体，也被称为结构外异常染色体或“多余”染色体�
     
     <item>
       <title>什么是鲁棒性(robustness)</title>
-      <link>https://taozyblog.com.cn/post/2022-3-15_robustness/</link>
+      <link>https://taoziyu97.github.io/post/2022-3-15_robustness/</link>
       <pubDate>Tue, 15 Mar 2022 15:40:24 +0600</pubDate>
       
-      <guid>https://taozyblog.com.cn/post/2022-3-15_robustness/</guid>
+      <guid>https://taoziyu97.github.io/post/2022-3-15_robustness/</guid>
       <description>通过搜索发现，鲁棒性是一个应用很广泛的词汇，我们主要关注它在计算机科学的算法和统计学中代表的含义。
 维基百科上这样描述：稳健性（英语：Robustness）是指一个计算机系统在执行过程中处理错误，以及算法在遭遇输入、运算等异常时继续正常运行的能力。
  Robustness is the capacity of a method to remain unaffected by small, deliberate variations in method parameters.</description>
@@ -402,10 +438,10 @@ marker染色体，也被称为结构外异常染色体或“多余”染色体�
     
     <item>
       <title>R包caret基本功能【1】——六种基本功能</title>
-      <link>https://taozyblog.com.cn/post/2022-2-24_caret1/</link>
+      <link>https://taoziyu97.github.io/post/2022-2-24_caret1/</link>
       <pubDate>Thu, 24 Feb 2022 15:40:24 +0600</pubDate>
       
-      <guid>https://taozyblog.com.cn/post/2022-2-24_caret1/</guid>
+      <guid>https://taoziyu97.github.io/post/2022-2-24_caret1/</guid>
       <description>介绍机器学习R包。
 1. 数据分割 基于输出变量的分割 在建模之前，需要对样本数据进行分割分为训练集和测试集。在之前建模过程中，我发现我使用sample进行分割存在一定的问题，比如我分割出来的数据中response的占比在训练集和测试集中差别很大等等。caret包中可以解决这个问题，通过设置p值，同时确定训练集和测试集的占比，并各个因子水平下取占比（表述的有点问题）。
 createDataPartition(y,  times = 1,  p = 0.5,  list = TRUE,  groups = min(5, length(y))) 2.</description>
@@ -413,10 +449,10 @@ createDataPartition(y,  times = 1,  p = 0.5,  list = TRUE,  groups = min(5, leng
     
     <item>
       <title>R包mlr3基本功能【1】——R6类——需要修订</title>
-      <link>https://taozyblog.com.cn/post/2022-2-24_mlr31/</link>
+      <link>https://taoziyu97.github.io/post/2022-2-24_mlr31/</link>
       <pubDate>Thu, 24 Feb 2022 15:40:24 +0600</pubDate>
       
-      <guid>https://taozyblog.com.cn/post/2022-2-24_mlr31/</guid>
+      <guid>https://taoziyu97.github.io/post/2022-2-24_mlr31/</guid>
       <description>介绍机器学习R包mlr3，该包提供了分类、回归、生存分析以及其他的机器学习任务，包含超参的调节以及特征的选择，本地支持很多操作的并行化。
 1. mlr3 Quickstart install.packages(&amp;#34;mlr3&amp;#34;) 对iris数据集的前120行训练一个决策树，并且对后30行进行最终的预测，最后判断预测模型的准确性。
 library(&amp;#34;mlr3&amp;#34;) task = tsk(&amp;#34;iris&amp;#34;) learner = lrn(&amp;#34;classif.rpart&amp;#34;)  # train a model of this learner for a subset of the task learner$train(task, row_ids = 1:120) # this is what the decision tree looks like learner$model 预测</description>
@@ -424,10 +460,10 @@ library(&amp;#34;mlr3&amp;#34;) task = tsk(&amp;#34;iris&amp;#34;) learner = lrn
     
     <item>
       <title>R包开发【2】——编写函数</title>
-      <link>https://taozyblog.com.cn/post/2022-2-23_function/</link>
+      <link>https://taoziyu97.github.io/post/2022-2-23_function/</link>
       <pubDate>Wed, 23 Feb 2022 15:40:24 +0600</pubDate>
       
-      <guid>https://taozyblog.com.cn/post/2022-2-23_function/</guid>
+      <guid>https://taoziyu97.github.io/post/2022-2-23_function/</guid>
       <description>R包功能的实现需要各种函数，函数应该如何编写？什么样的步骤可以被包括在函数里？函数需要哪些基本的功能？函数应该如何命名？函数可以通过调用函数并且给定参数来代替对代码的重复操作（当一个操作需要重复2次时），通过自定义的函数命名来使得功能易懂，并且方便后续的更新和更改，对功能进行更改只需要变更函数，而非在所有的代码中一一修改。
 1. 基本步骤 写函数的基本步骤如下：
 1.1 函数命名   命名要尽量短，而且指示函数的功能，长一点能够清楚的展示功能也无妨。
@@ -437,10 +473,10 @@ library(&amp;#34;mlr3&amp;#34;) task = tsk(&amp;#34;iris&amp;#34;) learner = lrn
     
     <item>
       <title>R包开发【3】——R包开发细节</title>
-      <link>https://taozyblog.com.cn/post/2022-2-23_rpkg2/</link>
+      <link>https://taoziyu97.github.io/post/2022-2-23_rpkg2/</link>
       <pubDate>Wed, 23 Feb 2022 15:40:24 +0600</pubDate>
       
-      <guid>https://taozyblog.com.cn/post/2022-2-23_rpkg2/</guid>
+      <guid>https://taoziyu97.github.io/post/2022-2-23_rpkg2/</guid>
       <description>R包开发的各种细节。
 1. 命名   尽量避免同时使用大小写字母
   使用该包测试命名是否能用（？？？）。
@@ -449,10 +485,10 @@ library(&amp;#34;mlr3&amp;#34;) task = tsk(&amp;#34;iris&amp;#34;) learner = lrn
     
     <item>
       <title>R包开发【1】——基本流程</title>
-      <link>https://taozyblog.com.cn/post/2022-2-22_rpkg/</link>
+      <link>https://taoziyu97.github.io/post/2022-2-22_rpkg/</link>
       <pubDate>Tue, 22 Feb 2022 15:40:24 +0600</pubDate>
       
-      <guid>https://taozyblog.com.cn/post/2022-2-22_rpkg/</guid>
+      <guid>https://taoziyu97.github.io/post/2022-2-22_rpkg/</guid>
       <description>任何可以被自动化的，都应该让它自动化，给自己省时间，也可以方便任何人使用。devtools的目的是使得开发工具变得容易，囊括了多个包来支持开发的各个功能。
 前言：R包开发书籍的基本内容   第二章 示例包
   第三章 为包开发准备系统
@@ -462,10 +498,10 @@ library(&amp;#34;mlr3&amp;#34;) task = tsk(&amp;#34;iris&amp;#34;) learner = lrn
     
     <item>
       <title>R基础——读入和写出数据</title>
-      <link>https://taozyblog.com.cn/post/2021-12-23_basic_r/</link>
+      <link>https://taoziyu97.github.io/post/2021-12-23_basic_r/</link>
       <pubDate>Thu, 23 Dec 2021 15:40:24 +0600</pubDate>
       
-      <guid>https://taozyblog.com.cn/post/2021-12-23_basic_r/</guid>
+      <guid>https://taoziyu97.github.io/post/2021-12-23_basic_r/</guid>
       <description>基本内容   Excel文件的读入
   txt和csv文件的读入
   文件的写出
@@ -475,10 +511,10 @@ library(&amp;#34;mlr3&amp;#34;) task = tsk(&amp;#34;iris&amp;#34;) learner = lrn
     
     <item>
       <title>检测拷贝数变异的工具及算法【2】-ABSOLUTE</title>
-      <link>https://taozyblog.com.cn/post/2021-12-19_cnv_tools2/</link>
+      <link>https://taoziyu97.github.io/post/2021-12-19_cnv_tools2/</link>
       <pubDate>Sun, 19 Dec 2021 15:40:24 +0600</pubDate>
       
-      <guid>https://taozyblog.com.cn/post/2021-12-19_cnv_tools2/</guid>
+      <guid>https://taoziyu97.github.io/post/2021-12-19_cnv_tools2/</guid>
       <description>背景介绍 1. 获取绝对拷贝数数值的难点 （1）采样过程中癌细胞混合了未知比例的正常细胞——肿瘤纯度；
 （2）由于染色体数量和结构异常导致的癌细胞的实际DNA含量(倍性)是未知的；
 （3）由于正在进行的亚克隆进化，癌细胞群可能是异质性的。
@@ -488,10 +524,10 @@ library(&amp;#34;mlr3&amp;#34;) task = tsk(&amp;#34;iris&amp;#34;) learner = lrn
     
     <item>
       <title>检测拷贝数变异的工具及算法【1】-PCAWG consensus copy number</title>
-      <link>https://taozyblog.com.cn/post/2021-12-16_cnv_tools/</link>
+      <link>https://taoziyu97.github.io/post/2021-12-16_cnv_tools/</link>
       <pubDate>Thu, 16 Dec 2021 15:40:24 +0600</pubDate>
       
-      <guid>https://taozyblog.com.cn/post/2021-12-16_cnv_tools/</guid>
+      <guid>https://taoziyu97.github.io/post/2021-12-16_cnv_tools/</guid>
       <description>引言 PCAWG提供的拷贝数变异文件是综合6种不同的拷贝数变异提取工具的结果：
   ABSOLUTE
   ACEseq
@@ -502,10 +538,10 @@ library(&amp;#34;mlr3&amp;#34;) task = tsk(&amp;#34;iris&amp;#34;) learner = lrn
     
     <item>
       <title>使用posterdown制作学术海报</title>
-      <link>https://taozyblog.com.cn/post/2021-12-15_posterdown/</link>
+      <link>https://taoziyu97.github.io/post/2021-12-15_posterdown/</link>
       <pubDate>Wed, 15 Dec 2021 15:40:24 +0600</pubDate>
       
-      <guid>https://taozyblog.com.cn/post/2021-12-15_posterdown/</guid>
+      <guid>https://taoziyu97.github.io/post/2021-12-15_posterdown/</guid>
       <description>引言 posterdown自动排版，通过调节参数满足个人制作海报的需要。
 1. 介绍 目前posterdown支持3种风格的海报模板：posterdown_html、posterdown_betterland和posterdown_betterport。以posterdown_betterport为例进行阐述。
  目前支持的三种模板风格
@@ -515,10 +551,10 @@ library(&amp;#34;mlr3&amp;#34;) task = tsk(&amp;#34;iris&amp;#34;) learner = lrn
     
     <item>
       <title>计算机组成</title>
-      <link>https://taozyblog.com.cn/post/2021-12-06_consist_of_computer/</link>
+      <link>https://taoziyu97.github.io/post/2021-12-06_consist_of_computer/</link>
       <pubDate>Mon, 06 Dec 2021 15:40:24 +0600</pubDate>
       
-      <guid>https://taozyblog.com.cn/post/2021-12-06_consist_of_computer/</guid>
+      <guid>https://taoziyu97.github.io/post/2021-12-06_consist_of_computer/</guid>
       <description>引言 1. 计算机组成 计算机的组成部件可以分为三大类：中央处理单元（CPU）、主存储器和输入/输出子系统。
 中央处理单元 用于数据的运算。在大多数体系结构中，它有3个组成部分：算术逻辑单元（ALU）、控制单元、寄存器组、快速存储定位。
   算术逻辑单元
@@ -530,20 +566,20 @@ library(&amp;#34;mlr3&amp;#34;) task = tsk(&amp;#34;iris&amp;#34;) learner = lrn
     
     <item>
       <title>潜在语义分析（LSA）</title>
-      <link>https://taozyblog.com.cn/post/2021-11-26_statistic-lsa/</link>
+      <link>https://taoziyu97.github.io/post/2021-11-26_statistic-lsa/</link>
       <pubDate>Fri, 26 Nov 2021 15:40:24 +0600</pubDate>
       
-      <guid>https://taozyblog.com.cn/post/2021-11-26_statistic-lsa/</guid>
+      <guid>https://taoziyu97.github.io/post/2021-11-26_statistic-lsa/</guid>
       <description>引言 潜在语义分析（Latent sematic analysis, LSA）是一种无监督的学习方法。特点是通过矩阵分解来完成，使用的是非概率的话题分析模型，可以通过奇异值分解的方法进行矩阵因子分解，特点是分解的矩阵正交，非负矩阵分解是另一种矩阵的因子分解方法，特点是分解的矩阵非负。
 1. 单词向量空间和话题向量空间 1.1 单词向量空间 给定一个含有 \( n \)个文本的集合\( D=\left { d_1,d_2,&amp;hellip;,d_n \right } \)，在所有文本中出现的\( m \)个单词的集合\( W=\left { w_1,w_2,&amp;hellip;,w_m \right } \)，将单词在文本中出现的数据用一个单词-文本矩阵表示，记作\( X \): $$ \begin{bmatrix} x_{11} &amp;amp;x_{12} &amp;amp;&amp;hellip; &amp;amp;x_{1n} \ x_{21} &amp;amp;x_{22} &amp;amp;&amp;hellip; &amp;amp;x_{2n} \ \vdots &amp;amp;\vdots &amp;amp; &amp;amp;\vdots \ x_{m1} &amp;amp;x_{m2} &amp;amp;&amp;hellip; &amp;amp;x_{mn} \end{bmatrix} $$</description>
     </item>
     
     <item>
       <title>隐马尔可夫模型（HMM）</title>
-      <link>https://taozyblog.com.cn/post/2021-11-19_hmm/</link>
+      <link>https://taoziyu97.github.io/post/2021-11-19_hmm/</link>
       <pubDate>Fri, 19 Nov 2021 15:40:24 +0600</pubDate>
       
-      <guid>https://taozyblog.com.cn/post/2021-11-19_hmm/</guid>
+      <guid>https://taoziyu97.github.io/post/2021-11-19_hmm/</guid>
       <description>引言 1. 马尔可夫模型的基本概念 来对2段氨基酸序列x和y进行残基比对，认为存在3种比对关系的状态：
  M：残基能够比对上但不一定相等 X：序列x的残基比对到1个空位，或x上发生了1次插入 Y：序列y的残基比对到1个空位，或y上发生了1次插入  序列比对就是在上述3个状态中不断转换的过程：
  \( M(i,j) \) : \( x_i \)比对到\( y_j \)时，序列x从1到\( i \)和序列\( y \)从1到\( j \)最好的比对分数 \( X(i,j) \) : \( x_i \)比对到空位时，序列x从1到\( i \)最好的比对分数 \( Y(i,j) \) : \( y_j \)比对到空位时，序列y从1到\( j \)最好的比对分数  转移（从一个状态到另外一个状态）概率：</description>
@@ -551,30 +587,30 @@ library(&amp;#34;mlr3&amp;#34;) task = tsk(&amp;#34;iris&amp;#34;) learner = lrn
     
     <item>
       <title>R：批量读入文件并合并</title>
-      <link>https://taozyblog.com.cn/post/2021-11-17_docall/</link>
+      <link>https://taoziyu97.github.io/post/2021-11-17_docall/</link>
       <pubDate>Wed, 17 Nov 2021 15:40:24 +0600</pubDate>
       
-      <guid>https://taozyblog.com.cn/post/2021-11-17_docall/</guid>
+      <guid>https://taoziyu97.github.io/post/2021-11-17_docall/</guid>
       <description>引言 使用do.call批量读入文件并合并。
 1. 基本处理步骤 source_dir &amp;lt;- &amp;#34;文件所在路径&amp;#34; file &amp;lt;- list.files(  path = source_dir,  pattern = &amp;#34;*.</description>
     </item>
     
     <item>
       <title>synapser</title>
-      <link>https://taozyblog.com.cn/post/2021-8-31_synapser/</link>
+      <link>https://taoziyu97.github.io/post/2021-8-31_synapser/</link>
       <pubDate>Sat, 24 Jul 2021 15:40:24 +0600</pubDate>
       
-      <guid>https://taozyblog.com.cn/post/2021-8-31_synapser/</guid>
+      <guid>https://taoziyu97.github.io/post/2021-8-31_synapser/</guid>
       <description>引言 一个提供批量下载Synapser数据的R包。
 1. 登陆 synLogin(&amp;#34;baomihai@sina.com&amp;#34;,&amp;#34;******&amp;#34;) Welcome, baomihai@sina.com!NULL 参考  biostars-How to install gdc-client in Ubnutu  </description>
     </item>
     
     <item>
       <title>处理字符串的两个R包:stringi和stringr</title>
-      <link>https://taozyblog.com.cn/post/2021-7-24_stringr_stringi/</link>
+      <link>https://taoziyu97.github.io/post/2021-7-24_stringr_stringi/</link>
       <pubDate>Sat, 24 Jul 2021 15:40:24 +0600</pubDate>
       
-      <guid>https://taozyblog.com.cn/post/2021-7-24_stringr_stringi/</guid>
+      <guid>https://taoziyu97.github.io/post/2021-7-24_stringr_stringi/</guid>
       <description>引言 stringr包是建立在stringi上的，stringi包使用ICU C库提供准确、快速的常见字符串操作，stringr提供了最重要和最常用的字符串处理函数。
 stringr stringr包中所有的函数都以str_开头，第一个参数为字符串向量。对应的在base函数中也有功能一致的函数，记得对比两者之间的异同。
 1. 找到自己需要的数据 tcga_mut &amp;lt;- read.csv2(&amp;#34;/home/tzy/projects/CNX-method/data/TCGA/mc3.v0.2.8.PUBLIC.nonsilentGene.xena&amp;#34;,sep = &amp;#34;\t&amp;#34;)  saveRDS(tcga_mut, file = &amp;#34;/home/tzy/projects/CNX-method/data/TCGA/tcga_mut.</description>
@@ -582,10 +618,10 @@ stringr stringr包中所有的函数都以str_开头，第一个参数为字符�
     
     <item>
       <title>gdc-client</title>
-      <link>https://taozyblog.com.cn/post/2021-7-20_gdc_client/</link>
+      <link>https://taoziyu97.github.io/post/2021-7-20_gdc_client/</link>
       <pubDate>Tue, 20 Jul 2021 15:40:24 +0600</pubDate>
       
-      <guid>https://taozyblog.com.cn/post/2021-7-20_gdc_client/</guid>
+      <guid>https://taoziyu97.github.io/post/2021-7-20_gdc_client/</guid>
       <description>引言 之前一直用别的方法下载数据，这次使用了gdc-client命令行去下载GDC上TCGA driver gene mutation的一批数据。
 步骤 1. 找到自己需要的数据 这是我本次要下载的数据
 点击数据下载地址发现出现如下界面，其中id就是使用gdc-client下载的文件对应的id
@@ -596,20 +632,20 @@ stringr stringr包中所有的函数都以str_开头，第一个参数为字符�
     
     <item>
       <title>R储存数据</title>
-      <link>https://taozyblog.com.cn/post/2021-7-20_rdata/</link>
+      <link>https://taoziyu97.github.io/post/2021-7-20_rdata/</link>
       <pubDate>Tue, 20 Jul 2021 15:40:24 +0600</pubDate>
       
-      <guid>https://taozyblog.com.cn/post/2021-7-20_rdata/</guid>
+      <guid>https://taoziyu97.github.io/post/2021-7-20_rdata/</guid>
       <description>引言 rds比RData省空间，为什么？
 步骤 1. 找到自己需要的数据 tcga_mut &amp;lt;- read.csv2(&amp;#34;/home/tzy/projects/CNX-method/data/TCGA/mc3.v0.2.8.PUBLIC.nonsilentGene.xena&amp;#34;,sep = &amp;#34;\t&amp;#34;)  saveRDS(tcga_mut, file = &amp;#34;/home/tzy/projects/CNX-method/data/TCGA/tcga_mut.rds&amp;#34;) save(tcga_mut, file = &amp;#34;/home/tzy/projects/CNX-method/data/TCGA/tcga_mut.</description>
     </item>
     
     <item>
       <title>hugo主题增加valine评论功能_test</title>
-      <link>https://taozyblog.com.cn/post/2021-6-8_comment/</link>
+      <link>https://taoziyu97.github.io/post/2021-6-8_comment/</link>
       <pubDate>Tue, 08 Jun 2021 15:40:24 +0600</pubDate>
       
-      <guid>https://taozyblog.com.cn/post/2021-6-8_comment/</guid>
+      <guid>https://taoziyu97.github.io/post/2021-6-8_comment/</guid>
       <description>步骤 1. 配置Leancloud 这部分详细参考：hugo博客添加评论系统Valine
 2. 更改 comments.html 文件 将整体内容替换成如下代码：
 &amp;lt;!-- valine change from origin code--&amp;gt;  {{- if .</description>
@@ -617,10 +653,10 @@ stringr stringr包中所有的函数都以str_开头，第一个参数为字符�
     
     <item>
       <title>hugo增加TOC</title>
-      <link>https://taozyblog.com.cn/post/2021-6-8_toc/</link>
+      <link>https://taoziyu97.github.io/post/2021-6-8_toc/</link>
       <pubDate>Tue, 08 Jun 2021 15:40:24 +0600</pubDate>
       
-      <guid>https://taozyblog.com.cn/post/2021-6-8_toc/</guid>
+      <guid>https://taoziyu97.github.io/post/2021-6-8_toc/</guid>
       <description>引言 根据hugo-future-imperfect-slim主题中issue提到的TOC更改版本，改进后进行配置应用。
 步骤 1. 更改 config.html 文件 在[params] 内容下加入以下参数：
  toc = true # 默认显示toc  tocWords = 400 #超过400字显示toc 2.</description>
@@ -628,10 +664,10 @@ stringr stringr包中所有的函数都以str_开头，第一个参数为字符�
     
     <item>
       <title>博客优化计划</title>
-      <link>https://taozyblog.com.cn/post/2021-6-8_optimization_of_the_blog/</link>
+      <link>https://taoziyu97.github.io/post/2021-6-8_optimization_of_the_blog/</link>
       <pubDate>Tue, 08 Jun 2021 15:40:24 +0600</pubDate>
       
-      <guid>https://taozyblog.com.cn/post/2021-6-8_optimization_of_the_blog/</guid>
+      <guid>https://taoziyu97.github.io/post/2021-6-8_optimization_of_the_blog/</guid>
       <description>引言 分为功能改进、美观改进。
 1. 博客功能改进   个人博客归档（已完成）
   date的时间更换成自动化填充，每次手动填写很麻烦
@@ -641,10 +677,10 @@ stringr stringr包中所有的函数都以str_开头，第一个参数为字符�
     
     <item>
       <title>hugo博客配置归档页面</title>
-      <link>https://taozyblog.com.cn/post/2021-6-7_%E9%85%8D%E7%BD%AE%E5%BD%92%E6%A1%A3/</link>
+      <link>https://taoziyu97.github.io/post/2021-6-7_%E9%85%8D%E7%BD%AE%E5%BD%92%E6%A1%A3/</link>
       <pubDate>Mon, 07 Jun 2021 15:40:24 +0600</pubDate>
       
-      <guid>https://taozyblog.com.cn/post/2021-6-7_%E9%85%8D%E7%BD%AE%E5%BD%92%E6%A1%A3/</guid>
+      <guid>https://taoziyu97.github.io/post/2021-6-7_%E9%85%8D%E7%BD%AE%E5%BD%92%E6%A1%A3/</guid>
       <description>引言 hugo没有自带的归档设置，需要手动添加。
 操作步骤   在taozy_blog/layouts/_default/目录下创建 archives.html 文件
   将taozy_blog/layouts/_default/目录下的 single.html 内容复制进 archives.html 文件（single.html的格式就是每篇博文的格式，也可以采用主题的contact.html的格式或者about.html的格式）</description>
@@ -652,10 +688,10 @@ stringr stringr包中所有的函数都以str_开头，第一个参数为字符�
     
     <item>
       <title>ERROR: Could not find a version that satisfies the requirement torch==1.5.1</title>
-      <link>https://taozyblog.com.cn/post/2021-6-4_torch1.5.1_error/</link>
+      <link>https://taoziyu97.github.io/post/2021-6-4_torch1.5.1_error/</link>
       <pubDate>Fri, 04 Jun 2021 15:40:24 +0600</pubDate>
       
-      <guid>https://taozyblog.com.cn/post/2021-6-4_torch1.5.1_error/</guid>
+      <guid>https://taoziyu97.github.io/post/2021-6-4_torch1.5.1_error/</guid>
       <description>引言 为了在集群上跑1000个模拟样本的SigprofilerExtractor工具，在集群上自己新建的环境里安装，解决安装bug，并成功使用。
 解决bug思路   发现依赖torch1.5.1版本
   通过pip install安装失败
@@ -665,10 +701,10 @@ stringr stringr包中所有的函数都以str_开头，第一个参数为字符�
     
     <item>
       <title>Excel数字长度超13位尾号变0</title>
-      <link>https://taozyblog.com.cn/post/2021-5-27_excel_number/</link>
+      <link>https://taoziyu97.github.io/post/2021-5-27_excel_number/</link>
       <pubDate>Thu, 27 May 2021 15:40:24 +0600</pubDate>
       
-      <guid>https://taozyblog.com.cn/post/2021-5-27_excel_number/</guid>
+      <guid>https://taoziyu97.github.io/post/2021-5-27_excel_number/</guid>
       <description>引言 小雨毕业填各种表格，发现数字很长的时候会直接用0替代超长位数的数字，检索之后，给她解决了这个小问题。
 操作方法 设置数字格式，在自定义中输入@
  重新输入可以发现已经可以了
@@ -677,10 +713,10 @@ stringr stringr包中所有的函数都以str_开头，第一个参数为字符�
     
     <item>
       <title>线程和进程</title>
-      <link>https://taozyblog.com.cn/post/2021-5-24_threads_and_processes/</link>
+      <link>https://taoziyu97.github.io/post/2021-5-24_threads_and_processes/</link>
       <pubDate>Mon, 24 May 2021 15:40:24 +0600</pubDate>
       
-      <guid>https://taozyblog.com.cn/post/2021-5-24_threads_and_processes/</guid>
+      <guid>https://taoziyu97.github.io/post/2021-5-24_threads_and_processes/</guid>
       <description>引言 看了一下廖雪峰的官方网站中对多线程和多进程的讲解，写的真是又简洁又明了，结合今天workshop中zk提到的并行计算，简单汇总写个学习笔记。
 操作系统可以同时执行多任务，比如同时运行浏览器、QQ和word，CPU执行代码是按照顺序一条条的执行。
 操作系统执行多任务是让CPU对多个任务轮流进行交替执行，比如让浏览器执行0.1秒，让word执行0.1秒。
@@ -694,10 +730,10 @@ stringr stringr包中所有的函数都以str_开头，第一个参数为字符�
     
     <item>
       <title>p值</title>
-      <link>https://taozyblog.com.cn/post/2021-4-07_p%E5%80%BC/</link>
+      <link>https://taoziyu97.github.io/post/2021-4-07_p%E5%80%BC/</link>
       <pubDate>Sat, 10 Apr 2021 15:40:24 +0600</pubDate>
       
-      <guid>https://taozyblog.com.cn/post/2021-4-07_p%E5%80%BC/</guid>
+      <guid>https://taoziyu97.github.io/post/2021-4-07_p%E5%80%BC/</guid>
       <description>介绍  p值的含义    假设存在药物A和药物B，想知道两种药物的区别？
 维基百科定义：p值是假设检验中假设零假设为真时观测到至少与实际观测样本相同极端的样本的概率（似乎很拗口）。
 p值是介于0-1之间的数字，量化我们相信两种药物不同的信心，p值越接近0，越相信两者不同。当p的阈值为0.05意味着，假设两种药物之间没有差异，执行多次且相同的实验，那么只有5%的实验会得出错误决定，简单来说，p值是对意外的测量。
@@ -707,20 +743,20 @@ p值能够帮助确定两种药物是否不同，但是不能告诉我们有什�
     
     <item>
       <title>使用CIBERSORTx网页版分析免疫浸润</title>
-      <link>https://taozyblog.com.cn/post/2021-4-06-cibersort/</link>
+      <link>https://taoziyu97.github.io/post/2021-4-06-cibersort/</link>
       <pubDate>Tue, 06 Apr 2021 15:40:24 +0600</pubDate>
       
-      <guid>https://taozyblog.com.cn/post/2021-4-06-cibersort/</guid>
+      <guid>https://taoziyu97.github.io/post/2021-4-06-cibersort/</guid>
       <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
 &lt;p&gt;最近需要对TCGA和PCAWG的表达数据进行免疫浸润水平分析，使用了R包immunedeconv,其中TCGA已经有文献的supplement给出了不同免疫浸润工具进行分析的结果，PCAWG需要自己手动分析，其中CIBERSORT在immunedeconv包中运行需要两个文件：&lt;code&gt;LM22.txt&lt;/code&gt;，&lt;code&gt;CIBERSORT.R&lt;/code&gt;，需要在官网：https://cibersortx.stanford.edu/ 进行申请。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>逻辑回归</title>
-      <link>https://taozyblog.com.cn/post/2021-4-11_%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92/</link>
+      <link>https://taoziyu97.github.io/post/2021-4-11_%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92/</link>
       <pubDate>Tue, 06 Apr 2021 15:40:24 +0600</pubDate>
       
-      <guid>https://taozyblog.com.cn/post/2021-4-11_%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92/</guid>
+      <guid>https://taoziyu97.github.io/post/2021-4-11_%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92/</guid>
       <description>引言  线性回归  假设数据包含 尺寸 和 重量 两组，根据这两组数据用 最小二乘法 拟合一条线后，我们可以做如下的事情：
   计算r平方来确定两个变量是否相关
   计算p值确定R平方是否具有统计显著性</description>
@@ -728,30 +764,30 @@ p值能够帮助确定两种药物是否不同，但是不能告诉我们有什�
     
     <item>
       <title>使用Latex写论文</title>
-      <link>https://taozyblog.com.cn/post/2021-3-05-latex_blog/</link>
+      <link>https://taoziyu97.github.io/post/2021-3-05-latex_blog/</link>
       <pubDate>Fri, 05 Mar 2021 15:40:24 +0600</pubDate>
       
-      <guid>https://taozyblog.com.cn/post/2021-3-05-latex_blog/</guid>
+      <guid>https://taoziyu97.github.io/post/2021-3-05-latex_blog/</guid>
       <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
 &lt;p&gt;最近写文章的时候，发现修改时调整参考文献的引用，是一件非常麻烦的事情，于是找到了一种简便的方法进行调整，发现了用Latex写论文原来这么好用（据涛哥和翔哥说，word也可以自动调整引用文献顺序，而我一直不知道&amp;hellip;）。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Hugo&#43;Github&#43;阿里云域名搭建个人博客（附Netlify部署方法）</title>
-      <link>https://taozyblog.com.cn/post/2021-1-11-build_blog/</link>
+      <link>https://taoziyu97.github.io/post/2021-1-11-build_blog/</link>
       <pubDate>Thu, 21 Jan 2021 15:40:24 +0600</pubDate>
       
-      <guid>https://taozyblog.com.cn/post/2021-1-11-build_blog/</guid>
+      <guid>https://taoziyu97.github.io/post/2021-1-11-build_blog/</guid>
       <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
 &lt;p&gt;最近师兄和涛哥都分享了这个流程：如何使用了R包blogdown搭建个人博客，但是我和轩哥在使用的过程中发现一个小问题，有一些主题似乎并不能很好的被blogdown安装的hugo来应用，几番求解无果，暂时将这个问题搁置，因为太喜欢这个theme不想放弃，所以找了一种不用blogdown的方法去搭建，终于取得成果。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Elements That You Can Use To Create A New Post On This Template.</title>
-      <link>https://taozyblog.com.cn/post/elements/</link>
+      <link>https://taoziyu97.github.io/post/elements/</link>
       <pubDate>Fri, 01 Jan 2021 15:40:24 +0600</pubDate>
       
-      <guid>https://taozyblog.com.cn/post/elements/</guid>
+      <guid>https://taoziyu97.github.io/post/elements/</guid>
       <description>Heading example Here is example of hedings. You can use this heading by following markdownify rules.</description>
     </item>
     

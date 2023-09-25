@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>计算机基础 on Ziyu&#39;s Blog | Welcome to my world!</title>
-    <link>https://taozyblog.com.cn/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/</link>
+    <link>https://taoziyu97.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/</link>
     <description>Recent content in 计算机基础 on Ziyu&#39;s Blog | Welcome to my world!</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Design By [Themefisher](https://themefisher.com/) Develop By [Gethugothemes](https://gethugothemes.com/)</copyright>
-    <lastBuildDate>Mon, 06 Dec 2021 15:40:24 +0600</lastBuildDate><atom:link href="https://taozyblog.com.cn/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 06 Dec 2021 15:40:24 +0600</lastBuildDate><atom:link href="https://taoziyu97.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>计算机组成</title>
-      <link>https://taozyblog.com.cn/post/2021-12-06_consist_of_computer/</link>
+      <link>https://taoziyu97.github.io/post/2021-12-06_consist_of_computer/</link>
       <pubDate>Mon, 06 Dec 2021 15:40:24 +0600</pubDate>
       
-      <guid>https://taozyblog.com.cn/post/2021-12-06_consist_of_computer/</guid>
+      <guid>https://taoziyu97.github.io/post/2021-12-06_consist_of_computer/</guid>
       <description>引言 1. 计算机组成 计算机的组成部件可以分为三大类：中央处理单元（CPU）、主存储器和输入/输出子系统。
 中央处理单元 用于数据的运算。在大多数体系结构中，它有3个组成部分：算术逻辑单元（ALU）、控制单元、寄存器组、快速存储定位。
   算术逻辑单元
@@ -25,10 +25,10 @@
     
     <item>
       <title>线程和进程</title>
-      <link>https://taozyblog.com.cn/post/2021-5-24_threads_and_processes/</link>
+      <link>https://taoziyu97.github.io/post/2021-5-24_threads_and_processes/</link>
       <pubDate>Mon, 24 May 2021 15:40:24 +0600</pubDate>
       
-      <guid>https://taozyblog.com.cn/post/2021-5-24_threads_and_processes/</guid>
+      <guid>https://taoziyu97.github.io/post/2021-5-24_threads_and_processes/</guid>
       <description>引言 看了一下廖雪峰的官方网站中对多线程和多进程的讲解，写的真是又简洁又明了，结合今天workshop中zk提到的并行计算，简单汇总写个学习笔记。
 操作系统可以同时执行多任务，比如同时运行浏览器、QQ和word，CPU执行代码是按照顺序一条条的执行。
 操作系统执行多任务是让CPU对多个任务轮流进行交替执行，比如让浏览器执行0.1秒，让word执行0.1秒。

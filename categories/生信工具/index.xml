@@ -2,18 +2,54 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>生信工具 on Ziyu&#39;s Blog | Welcome to my world!</title>
-    <link>https://taozyblog.com.cn/categories/%E7%94%9F%E4%BF%A1%E5%B7%A5%E5%85%B7/</link>
+    <link>https://taoziyu97.github.io/categories/%E7%94%9F%E4%BF%A1%E5%B7%A5%E5%85%B7/</link>
     <description>Recent content in 生信工具 on Ziyu&#39;s Blog | Welcome to my world!</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Design By [Themefisher](https://themefisher.com/) Develop By [Gethugothemes](https://gethugothemes.com/)</copyright>
-    <lastBuildDate>Tue, 15 Nov 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://taozyblog.com.cn/categories/%E7%94%9F%E4%BF%A1%E5%B7%A5%E5%85%B7/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 21 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://taoziyu97.github.io/categories/%E7%94%9F%E4%BF%A1%E5%B7%A5%E5%85%B7/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>使用ACE提取拷贝数变异</title>
+      <link>https://taoziyu97.github.io/post/2023-09-21_freec-copy/</link>
+      <pubDate>Thu, 21 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://taoziyu97.github.io/post/2023-09-21_freec-copy/</guid>
+      <description>&lt;p&gt;使用ACE提取浅全基因组测序数据的拷贝数变异。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>使用FREEC提取拷贝数变异</title>
+      <link>https://taoziyu97.github.io/post/2023-09-21_freec/</link>
+      <pubDate>Wed, 20 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://taoziyu97.github.io/post/2023-09-21_freec/</guid>
+      <description>&lt;p&gt;使用FREEC提取浅全基因组测序数据的拷贝数变异。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>使用QDNAseq提取拷贝数变异</title>
+      <link>https://taoziyu97.github.io/post/2023-09-21_qdnaseq/</link>
+      <pubDate>Wed, 20 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://taoziyu97.github.io/post/2023-09-21_qdnaseq/</guid>
+      <description>&lt;p&gt;使用QDNAseq提取浅全基因组测序数据的拷贝数变异。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>提取拷贝数变异基本思路</title>
+      <link>https://taoziyu97.github.io/post/2023-09-19_cnvcall_1/</link>
+      <pubDate>Tue, 19 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://taoziyu97.github.io/post/2023-09-19_cnvcall_1/</guid>
+      <description>&lt;p&gt;以Canvas工具为例阐述提取拷贝数变异的基本思路。&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>使用Sclust提取拷贝数</title>
-      <link>https://taozyblog.com.cn/post/2022-11-15_sclust/</link>
-      <pubDate>Tue, 15 Nov 2022 00:00:00 +0000</pubDate>
+      <link>https://taoziyu97.github.io/post/2022-11-15_sclust/</link>
+      <pubDate>Mon, 14 Nov 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://taozyblog.com.cn/post/2022-11-15_sclust/</guid>
+      <guid>https://taoziyu97.github.io/post/2022-11-15_sclust/</guid>
       <description>&lt;p&gt;介绍如何使用Sclust提取绝对拷贝数。&lt;/p&gt;</description>
     </item>
     
