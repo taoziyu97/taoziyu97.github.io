@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Design By [Themefisher](https://themefisher.com/) Develop By [Gethugothemes](https://gethugothemes.com/)</copyright>
-    <lastBuildDate>Thu, 12 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://taoziyu97.github.io/categories/%E7%94%9F%E4%BF%A1%E5%B7%A5%E5%85%B7/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 13 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://taoziyu97.github.io/categories/%E7%94%9F%E4%BF%A1%E5%B7%A5%E5%85%B7/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>基因组数据降采样</title>
+      <link>https://taoziyu97.github.io/post/2023-10-13_downsample/</link>
+      <pubDate>Fri, 13 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://taoziyu97.github.io/post/2023-10-13_downsample/</guid>
+      <description>&lt;p&gt;我的学习目的：开发工具的过程中需要去对深测序和浅测序样本进行转换。&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>NA12878样本下载和处理</title>
       <link>https://taoziyu97.github.io/post/2023-10-11_na12878/</link>
