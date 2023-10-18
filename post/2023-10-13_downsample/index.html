@@ -403,6 +403,10 @@
 <p>对mutation数据进行降采样，文献中没有给出方法[1]。</p>
 </li>
 </ol>
+<p>以及一个问题：为什么我们需要降采样？可能是：</p>
+<ol>
+<li>这次使用深度测序，下次是否通过更浅的测序可以得到类似的结果，从而降低成本？</li>
+</ol>
 <h2 id="picard下载">Picard下载</h2>
 <div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>git clone https://github.com/broadinstitute/picard.git
 </span></span><span style="display:flex;"><span>cd picard/
@@ -459,7 +463,7 @@
 </span></span></span><span style="display:flex;"><span><span style="color:#c30;font-weight:bold"></span><span style="color:#033">P</span><span style="color:#555">=</span>0.04
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#09f;font-style:italic"># 记录结束时间</span>
-</span></span><span style="display:flex;"><span><span style="color:#033">end_time</span><span style="color:#555">=</span><span style="color:#069;font-weight:bold">$(</span>date +%s<span style="color:#069;font-weight:bold">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#033">end_time</span><span style="color:#555">=</span><span style="color:#069;font-weight:bold">$(</span>date +%s<span style="color:#069;font-weight:bold">)</span> 　 
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#09f;font-style:italic"># 计算总时间</span>
 </span></span><span style="display:flex;"><span><span style="color:#033">elapsed_time</span><span style="color:#555">=</span><span style="color:#069;font-weight:bold">$((</span>end_time <span style="color:#555">-</span> start_time<span style="color:#069;font-weight:bold">))</span>

@@ -7,7 +7,34 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Design By [Themefisher](https://themefisher.com/) Develop By [Gethugothemes](https://gethugothemes.com/)</copyright>
-    <lastBuildDate>Fri, 13 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://taoziyu97.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 18 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://taoziyu97.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>【shell脚本】——实验室服务器批量运行任务</title>
+      <link>https://taoziyu97.github.io/post/2023-10-18_shell%E8%84%9A%E6%9C%AC/</link>
+      <pubDate>Wed, 18 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://taoziyu97.github.io/post/2023-10-18_shell%E8%84%9A%E6%9C%AC/</guid>
+      <description>&lt;p&gt;记录实验室服务器批量运行任务的脚本。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>生信工具开发——Java【1】helloworld</title>
+      <link>https://taoziyu97.github.io/post/2023-10-17_javahelloworld/</link>
+      <pubDate>Tue, 17 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://taoziyu97.github.io/post/2023-10-17_javahelloworld/</guid>
+      <description>&lt;p&gt;我的学习目的：模仿Picard写一个对BAM文件进行处理的生信工具。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>生信工具开发——Java【2】</title>
+      <link>https://taoziyu97.github.io/post/2023-10-17_java1/</link>
+      <pubDate>Tue, 17 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://taoziyu97.github.io/post/2023-10-17_java1/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>基因组数据降采样</title>
       <link>https://taoziyu97.github.io/post/2023-10-13_downsample/</link>
