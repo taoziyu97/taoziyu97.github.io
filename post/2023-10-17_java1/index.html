@@ -98,21 +98,21 @@
 
 
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://blog-1310600458.cos.ap-shanghai.myqcloud.com/Macdo2023-10-13%2014.15.01.png" />
-<meta property="og:image" content="https://blog-1310600458.cos.ap-shanghai.myqcloud.com/Macdo2023-10-13%2014.15.01.png" />
+<meta name="twitter:image" content="https://blog-1310600458.cos.ap-shanghai.myqcloud.com/java.png" />
+<meta property="og:image" content="https://blog-1310600458.cos.ap-shanghai.myqcloud.com/java.png" />
  
 
 
 
 
 <meta property="og:title" content="生信工具开发——Java【2】" />
-<meta property="og:description" content="" />
+<meta property="og:description" content="介绍一些基本概念。" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://taoziyu97.github.io/post/2023-10-17_java1/" />
 
 
 <meta name="twitter:title" content="生信工具开发——Java【2】" />
-<meta name="twitter:description" content="" />
+<meta name="twitter:description" content="介绍一些基本概念。" />
 
 
 
@@ -392,14 +392,8 @@
         </ul>
       </div>
       <div class="col-lg-10 mx-auto">
-        <div class="content" ><h2 id="内容">内容</h2>
-<ol>
-<li>
-<p>Java的程序结构等基本概念</p>
-</li>
-<li></li>
-</ol>
-<h2 id="基本概念">基本概念</h2>
+        <div class="content" ><p>介绍一些基本概念。</p>
+<h2 id="源文件类方法">源文件，类，方法</h2>
 <ul>
 <li>源文件（source file），扩展名为<code>.java</code>，是带有类的定义。类用来表示程序的一个组件，程序或许只有一个类。类的内容必须在括号内。</li>
 </ul>
@@ -426,9 +420,7 @@
 </span></span><span style="display:flex;"><span>        statement2;
 </span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>)
-</span></span></code></pre></div><ul>
-<li>如何编写和执行Java程序</li>
-</ul>
+</span></span></code></pre></div><h2 id="如何编写和执行java程序">如何编写和执行Java程序</h2>
 <p>java中所有的东西都会属于某个类。建立源文件（扩展名为.java），然后将其编译为新的类文件（扩展名为.class），真正被执行的是类。</p>
 <p>不管程序有多大（不管有多少个类），一定会有一个main()来作程序的起点。</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>public class MyFirstApp {
@@ -442,7 +434,8 @@
 <div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>%java MyFirstApp
 </span></span><span style="display:flex;"><span>I Rule!
 </span></span><span style="display:flex;"><span>The World
-</span></span></code></pre></div><ul>
+</span></span></code></pre></div><h2 id="jvm和jdk">JVM和JDK</h2>
+<ul>
 <li>java虚拟机（JVM）</li>
 </ul>
 <p>Java虚拟机是Java的核心技术，它使Java程序能够跨平台运行，并提供了许多重要功能，如内存管理、多线程支持和安全性，以支持Java应用程序的执行。著名的JVM实现包括Oracle HotSpot、OpenJ9、GraalVM等。JVM的主要目标是实现Java的&quot;一次编写，到处运行&quot;（Write Once, Run Anywhere）的理念，使开发人员能够编写Java应用程序，而这些应用程序可以在不同操作系统上无需任何修改就能运行。</p>
@@ -452,9 +445,7 @@
 <p>Java编译器是一种用于将Java源代码文件（通常以.java为扩展名）转换为字节码文件（通常以.class为扩展名）的工具。它是Java编程语言中的一个关键组件，用于将高级的Java源代码翻译成可以在Java虚拟机（JVM）上运行的字节码。</p>
 <p>标准的Java编译器是 javac，它是Java Development Kit（JDK）的一部分，可以从Oracle或其他JDK提供商获得。编译Java代码的基本语法是在命令行中使用 javac 命令：</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>javac YourJavaFile.java
-</span></span></code></pre></div><ul>
-<li>面对对象的继承（inheritance）</li>
-</ul>
+</span></span></code></pre></div><h2 id="面对对象的继承inheritance">面对对象的继承（inheritance）</h2>
 <p>举个例子：要求对正方形，圆形，三角形，和阿米巴虫，实现点击图像后旋转并播放对应音效。可以通过程序写4个类：</p>
 <center>
       <img src= "https://blog-1310600458.cos.ap-shanghai.myqcloud.com/Macdo2023-10-17%2022.12.50.png" width="800"/>
@@ -476,6 +467,8 @@
       <img src= "https://blog-1310600458.cos.ap-shanghai.myqcloud.com/Macdo2023-10-17%2022.24.40.png" width="800"/>
       <p><font color="grey"></font></p>
 </center>
+<h2 id="类和对象的异同">类和对象的异同</h2>
+<p>对象是靠类的模型塑造出来的。对象本身已知的事物被称为实例变量（instance variable），对象可以执行的动作称为方法。类会告诉虚拟机创建某种类型的对象。举例：通讯录里的每张卡片都有相同的空白字段标注姓名、电话、邮件，它们是实例变量，填入新的联络人就仿佛创建新的实例（对象）。卡片类上的方法就是对卡片做的事情，比如getTel(),changeAddress(),deleteCard()等等。每张卡片能够执行相同的动作，但是得到的结果是各自独立的。</p>
 <h2 id="参考资料">参考资料</h2>
 <ul>
 <li>Head First Java - Kathy Sierra &amp; Bert Bates</li>
@@ -512,8 +505,8 @@
                     
                     
                         <li class="nav-item">
-                            <a class="nav-link text-left" href="#%e5%86%85%e5%ae%b9">
-                            内容
+                            <a class="nav-link text-left" href="#%e6%ba%90%e6%96%87%e4%bb%b6%e7%b1%bb%e6%96%b9%e6%b3%95">
+                            源文件，类，方法
                             </a>
                         </li>
                     
@@ -536,8 +529,80 @@
                     
                     
                         <li class="nav-item">
-                            <a class="nav-link text-left" href="#%e5%9f%ba%e6%9c%ac%e6%a6%82%e5%bf%b5">
-                            基本概念
+                            <a class="nav-link text-left" href="#%e5%a6%82%e4%bd%95%e7%bc%96%e5%86%99%e5%92%8c%e6%89%a7%e8%a1%8cjava%e7%a8%8b%e5%ba%8f">
+                            如何编写和执行Java程序
+                            </a>
+                        </li>
+                    
+                    
+                    </ul>
+                    
+                    </ul>
+                    
+                
+            
+        
+        
+            
+                
+                
+                    
+                    <ul class="nav">
+                    
+                    <ul class="nav">
+                    
+                    
+                        <li class="nav-item">
+                            <a class="nav-link text-left" href="#jvm%e5%92%8cjdk">
+                            JVM和JDK
+                            </a>
+                        </li>
+                    
+                    
+                    </ul>
+                    
+                    </ul>
+                    
+                
+            
+        
+        
+            
+                
+                
+                    
+                    <ul class="nav">
+                    
+                    <ul class="nav">
+                    
+                    
+                        <li class="nav-item">
+                            <a class="nav-link text-left" href="#%e9%9d%a2%e5%af%b9%e5%af%b9%e8%b1%a1%e7%9a%84%e7%bb%a7%e6%89%bfinheritance">
+                            面对对象的继承（inheritance）
+                            </a>
+                        </li>
+                    
+                    
+                    </ul>
+                    
+                    </ul>
+                    
+                
+            
+        
+        
+            
+                
+                
+                    
+                    <ul class="nav">
+                    
+                    <ul class="nav">
+                    
+                    
+                        <li class="nav-item">
+                            <a class="nav-link text-left" href="#%e7%b1%bb%e5%92%8c%e5%af%b9%e8%b1%a1%e7%9a%84%e5%bc%82%e5%90%8c">
+                            类和对象的异同
                             </a>
                         </li>
                     

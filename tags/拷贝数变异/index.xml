@@ -18,12 +18,21 @@
     </item>
     
     <item>
+      <title>【实验室服务器】——检查限制任务运行原因【top部分均来源于转载】</title>
+      <link>https://taoziyu97.github.io/post/2023-10-18_highio/</link>
+      <pubDate>Wed, 18 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://taoziyu97.github.io/post/2023-10-18_highio/</guid>
+      <description>&lt;p&gt;维护。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>生信工具开发——Java【1】helloworld</title>
       <link>https://taoziyu97.github.io/post/2023-10-17_javahelloworld/</link>
       <pubDate>Tue, 17 Oct 2023 00:00:00 +0000</pubDate>
       
       <guid>https://taoziyu97.github.io/post/2023-10-17_javahelloworld/</guid>
-      <description>&lt;p&gt;我的学习目的：模仿Picard写一个对BAM文件进行处理的生信工具。&lt;/p&gt;</description>
+      <description>&lt;p&gt;我的学习目的：模仿Picard写一个对BAM文件进行处理的生信工具。【思考了一下，感觉这个工具没必要写，就简单记录一下学的东西吧】&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -32,7 +41,7 @@
       <pubDate>Tue, 17 Oct 2023 00:00:00 +0000</pubDate>
       
       <guid>https://taoziyu97.github.io/post/2023-10-17_java1/</guid>
-      <description></description>
+      <description>&lt;p&gt;介绍一些基本概念。&lt;/p&gt;</description>
     </item>
     
     <item>

@@ -98,8 +98,8 @@
 
 
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://blog-1310600458.cos.ap-shanghai.myqcloud.com/Macdo2023-10-13%2014.15.01.png" />
-<meta property="og:image" content="https://blog-1310600458.cos.ap-shanghai.myqcloud.com/Macdo2023-10-13%2014.15.01.png" />
+<meta name="twitter:image" content="https://blog-1310600458.cos.ap-shanghai.myqcloud.com/free-batch-run.webp" />
+<meta property="og:image" content="https://blog-1310600458.cos.ap-shanghai.myqcloud.com/free-batch-run.webp" />
  
 
 
@@ -424,8 +424,8 @@
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#069;font-weight:bold">for</span><span style="color:#bbb"> </span>i<span style="color:#bbb"> </span><span style="color:#069;font-weight:bold">in</span><span style="color:#bbb"> </span><span style="color:#555">`</span>ls<span style="color:#bbb"> </span>.<span style="color:#555">/`</span>;do<span style="color:#bbb"> </span>mv<span style="color:#bbb"> </span><span style="color:#a00;background-color:#faa">$</span>i<span style="color:#bbb"> </span><span style="color:#a00;background-color:#faa">${</span>i<span style="color:#555">%%</span>.<span style="color:#555">*</span><span style="color:#a00;background-color:#faa">}</span>.sh;done<span style="color:#bbb">
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb">
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#09f;font-style:italic">### batch run script
-</span></span></span><span style="display:flex;"><span><span style="color:#09f;font-style:italic"></span>chmod<span style="color:#bbb"> </span><span style="color:#555">-</span>R<span style="color:#bbb"> </span><span style="color:#f60">777</span><span style="color:#bbb"> </span><span style="color:#a00;background-color:#faa">$</span>path<span style="color:#555">/</span>colon_sh<span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#069;font-weight:bold">for</span><span style="color:#bbb"> </span>i<span style="color:#bbb"> </span><span style="color:#069;font-weight:bold">in</span><span style="color:#bbb"> </span><span style="color:#555">`</span>ls<span style="color:#555">`</span>;<span style="color:#bbb"> </span>do<span style="color:#bbb"> </span>sudo<span style="color:#bbb"> </span>echo<span style="color:#bbb"> </span><span style="color:#c30">&#34;nohup $path/colon_sh/$i &amp;&#34;</span><span style="color:#555">|</span>bash;done<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#09f;font-style:italic"></span>chmod<span style="color:#bbb"> </span><span style="color:#555">-</span>R<span style="color:#bbb"> </span><span style="color:#f60">777</span><span style="color:#bbb"> </span><span style="color:#a00;background-color:#faa">$</span>outpath<span style="color:#555">/</span>colon_sh<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#069;font-weight:bold">for</span><span style="color:#bbb"> </span>i<span style="color:#bbb"> </span><span style="color:#069;font-weight:bold">in</span><span style="color:#bbb"> </span><span style="color:#555">`</span>ls<span style="color:#555">`</span>;<span style="color:#bbb"> </span>do<span style="color:#bbb"> </span>sudo<span style="color:#bbb"> </span>echo<span style="color:#bbb"> </span><span style="color:#c30">&#34;nohup $outpath/colon_sh/$i &amp;&#34;</span><span style="color:#555">|</span>bash;done<span style="color:#bbb">
 </span></span></span></code></pre></div></div>
       </div>
     </article>
