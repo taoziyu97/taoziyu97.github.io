@@ -511,7 +511,14 @@
 </span></span><span style="display:flex;"><span>| Claws | Gwen   | cat     | m    | 1994-03-17 | NULL  |
 </span></span><span style="display:flex;"><span>| Buffy | Harold | dog     | f    | 1989-05-13 | NULL  |
 </span></span><span style="display:flex;"><span>+-------+--------+---------+------+------------+-------+
-</span></span></code></pre></div><h2 id="5-筛选列">5. 筛选列</h2>
+</span></span></code></pre></div><ul>
+<li>组合条件筛选，使用IN来选择包含在指定变量中的内容</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>SELECT *
+</span></span><span style="display:flex;"><span>FROM your_table
+</span></span><span style="display:flex;"><span>WHERE column_name IN (&#39;a1&#39;, &#39;a2&#39;, &#39;a3&#39;);
+</span></span></code></pre></div><p>特别注意：IN后面的格式一个都不能少，比如a1两边的<code>''</code>以及不同变量之间的<code>,</code>，以及所有变量外面的括号。</p>
+<h2 id="5-筛选列">5. 筛选列</h2>
 <ul>
 <li>根据列名</li>
 </ul>
@@ -741,7 +748,7 @@
 <div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>SELECT * FROM pet WHERE REGEXP_LIKE(name, &#39;^.....$&#39;);
 </span></span></code></pre></div><p>或者使用：</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>SELECT * FROM pet WHERE REGEXP_LIKE(name, &#39;^.{5}$&#39;);
-</span></span></code></pre></div><h2 id="9-计算行数">9. 计算行数</h2>
+</span></span></code></pre></div><h2 id="9-计算行列数">9. 计算行列数</h2>
 <p>使用COUNT计算表格pet的行数：</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>SELECT COUNT(*) FROM pet;
 </span></span><span style="display:flex;"><span>+----------+
@@ -749,6 +756,8 @@
 </span></span><span style="display:flex;"><span>+----------+
 </span></span><span style="display:flex;"><span>|        9 |
 </span></span><span style="display:flex;"><span>+----------+
+</span></span></code></pre></div><p>使用SHOW COLUMNS计算表格的列数：</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>SHOW COLUMNS FROM table_name;
 </span></span></code></pre></div><p>每个人owner有多少宠物pet：</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>SELECT owner, COUNT(*) FROM pet GROUP BY owner;
 </span></span></code></pre></div><p>组合species和sex计数：</p>
@@ -795,7 +804,82 @@
 </li>
 </ul>
 <p>除此之外还可以对同一个表格中的内容进行关联。此处省去这部分的介绍。</p>
-<h2 id="参考资料">参考资料</h2>
+<h2 id="11-关闭数据库连接">11. 关闭数据库连接</h2>
+<p>再R中用完MySQL数据库后应及时关闭数据库连接，比如：</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>library(RMySQL)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># 创建MySQL连接
+</span></span><span style="display:flex;"><span>con &lt;- dbConnect(MySQL(), user = &#34;your_username&#34;, password = &#34;your_password&#34;, dbname = &#34;your_database&#34;)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># 这将关闭名为&#39;con&#39;的连接
+</span></span><span style="display:flex;"><span>dbDisconnect(con)
+</span></span></code></pre></div><p>如果每次使用的时候都没有关闭，那么使用次数超过16次后（默认）则无法再打开，出现以下报错：</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>Error in .local(drv, ...) :  Cannot allocate a new connection: 16 connections already opened
+</span></span></code></pre></div><p>此时可以列出所有连接并关闭：</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>library(RMySQL)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># 列出所有的连接
+</span></span><span style="display:flex;"><span>open_connections &lt;- dbListConnections(MySQL())
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># 关闭所有连接
+</span></span><span style="display:flex;"><span>for (conn in open_connections) {
+</span></span><span style="display:flex;"><span>  dbDisconnect(conn)
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># 验证所有连接已关闭
+</span></span><span style="display:flex;"><span>open_connections &lt;- dbListConnections(MySQL())
+</span></span><span style="display:flex;"><span>if (length(open_connections) == 0) {
+</span></span><span style="display:flex;"><span>  cat(&#34;All database connections have been closed.\n&#34;)
+</span></span><span style="display:flex;"><span>} else {
+</span></span><span style="display:flex;"><span>  cat(&#34;Some database connections were not closed.\n&#34;)
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="统计某列中不重复数值">统计某列中不重复数值</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>dbGetQuery(
+</span></span><span style="display:flex;"><span>  con, 
+</span></span><span style="display:flex;"><span>  &#34;SELECT COUNT(DISTINCT `Sample.ID`) FROM cbioportal;&#34;
+</span></span><span style="display:flex;"><span>) %&gt;% as.numeric()
+</span></span></code></pre></div><h2 id="sql语句中引入变量">SQL语句中引入变量</h2>
+<p>使用sprintf和%s配套使用，在SQL语句中引用变量：</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>library(tidyverse)
+</span></span><span style="display:flex;"><span>library(RMySQL)
+</span></span><span style="display:flex;"><span>db_password &lt;- Sys.getenv(&#34;MYSQL_PASSWORD&#34;)
+</span></span><span style="display:flex;"><span>con &lt;- dbConnect(MySQL(),
+</span></span><span style="display:flex;"><span>                 user=&#34;root&#34;,
+</span></span><span style="display:flex;"><span>                 password=XXX,
+</span></span><span style="display:flex;"><span>                 dbname=&#34;XXX&#34;
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>term &lt;- &#34;column_name_of_dataframe&#34;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># 使用参数化查询来引用R中的变量
+</span></span><span style="display:flex;"><span>query &lt;- sprintf(&#34;SELECT COUNT(DISTINCT `%s`) FROM cbioportal;&#34;, term)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>out &lt;- dbGetQuery(con, query) %&gt;% as.numeric()
+</span></span></code></pre></div><h2 id="根据查询结果生成新数据">根据查询结果生成新数据</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>-- 创建新表
+</span></span><span style="display:flex;"><span>CREATE TABLE new_table (
+</span></span><span style="display:flex;"><span>    column1 datatype,
+</span></span><span style="display:flex;"><span>    column2 datatype,
+</span></span><span style="display:flex;"><span>    -- 添加更多列
+</span></span><span style="display:flex;"><span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>-- 将查询结果插入到新表
+</span></span><span style="display:flex;"><span>INSERT INTO new_table
+</span></span><span style="display:flex;"><span>SELECT column1, column2
+</span></span><span style="display:flex;"><span>FROM your_table
+</span></span><span style="display:flex;"><span>WHERE condition; -- 可选的筛选条件
+</span></span></code></pre></div><h2 id="检索提速-添加索引">检索提速-添加索引</h2>
+<ul>
+<li>查看已经存在的索引</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>SHOW INDEX FROM table_name;
+</span></span></code></pre></div><ul>
+<li>删除索引</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>DROP INDEX index_name ON table_name;
+</span></span></code></pre></div><p>应用场景：我有上百万行的数据，想要按照某几列的内容检索，并且输出满足条件的行。此时通过设定这几列的索引，再通过分页的方法可以使得结果输出在1s以内。注意组合使用效果比较好。举例：</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>CREATE INDEX index_name ON table_name (column1); # 多列(column1, column2, ...)
+</span></span><span style="display:flex;"><span>SELECT * FROM cbioportal WHERE `sequencing.platform` IN (&#39;Wes&#39;) limit 1000,100;
+</span></span></code></pre></div><h2 id="参考资料">参考资料</h2>
 <ul>
 <li><a href="https://dev.mysql.com/doc/refman/8.0/en/sorting-rows.html" target="_blank">Retrieving Information from a Table</a></li>
 </ul></div>
@@ -1047,8 +1131,8 @@
                     
                     
                         <li class="nav-item">
-                            <a class="nav-link text-left" href="#9-%e8%ae%a1%e7%ae%97%e8%a1%8c%e6%95%b0">
-                            9. 计算行数
+                            <a class="nav-link text-left" href="#9-%e8%ae%a1%e7%ae%97%e8%a1%8c%e5%88%97%e6%95%b0">
+                            9. 计算行列数
                             </a>
                         </li>
                     
@@ -1073,6 +1157,126 @@
                         <li class="nav-item">
                             <a class="nav-link text-left" href="#10-%e4%bd%bf%e7%94%a8%e5%a4%9a%e4%b8%aa%e8%a1%a8%e6%a0%bc">
                             10. 使用多个表格
+                            </a>
+                        </li>
+                    
+                    
+                    </ul>
+                    
+                    </ul>
+                    
+                
+            
+        
+        
+            
+                
+                
+                    
+                    <ul class="nav">
+                    
+                    <ul class="nav">
+                    
+                    
+                        <li class="nav-item">
+                            <a class="nav-link text-left" href="#11-%e5%85%b3%e9%97%ad%e6%95%b0%e6%8d%ae%e5%ba%93%e8%bf%9e%e6%8e%a5">
+                            11. 关闭数据库连接
+                            </a>
+                        </li>
+                    
+                    
+                    </ul>
+                    
+                    </ul>
+                    
+                
+            
+        
+        
+            
+                
+                
+                    
+                    <ul class="nav">
+                    
+                    <ul class="nav">
+                    
+                    
+                        <li class="nav-item">
+                            <a class="nav-link text-left" href="#%e7%bb%9f%e8%ae%a1%e6%9f%90%e5%88%97%e4%b8%ad%e4%b8%8d%e9%87%8d%e5%a4%8d%e6%95%b0%e5%80%bc">
+                            统计某列中不重复数值
+                            </a>
+                        </li>
+                    
+                    
+                    </ul>
+                    
+                    </ul>
+                    
+                
+            
+        
+        
+            
+                
+                
+                    
+                    <ul class="nav">
+                    
+                    <ul class="nav">
+                    
+                    
+                        <li class="nav-item">
+                            <a class="nav-link text-left" href="#sql%e8%af%ad%e5%8f%a5%e4%b8%ad%e5%bc%95%e5%85%a5%e5%8f%98%e9%87%8f">
+                            SQL语句中引入变量
+                            </a>
+                        </li>
+                    
+                    
+                    </ul>
+                    
+                    </ul>
+                    
+                
+            
+        
+        
+            
+                
+                
+                    
+                    <ul class="nav">
+                    
+                    <ul class="nav">
+                    
+                    
+                        <li class="nav-item">
+                            <a class="nav-link text-left" href="#%e6%a0%b9%e6%8d%ae%e6%9f%a5%e8%af%a2%e7%bb%93%e6%9e%9c%e7%94%9f%e6%88%90%e6%96%b0%e6%95%b0%e6%8d%ae">
+                            根据查询结果生成新数据
+                            </a>
+                        </li>
+                    
+                    
+                    </ul>
+                    
+                    </ul>
+                    
+                
+            
+        
+        
+            
+                
+                
+                    
+                    <ul class="nav">
+                    
+                    <ul class="nav">
+                    
+                    
+                        <li class="nav-item">
+                            <a class="nav-link text-left" href="#%e6%a3%80%e7%b4%a2%e6%8f%90%e9%80%9f-%e6%b7%bb%e5%8a%a0%e7%b4%a2%e5%bc%95">
+                            检索提速-添加索引
                             </a>
                         </li>
                     
