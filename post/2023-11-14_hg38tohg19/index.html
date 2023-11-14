@@ -397,14 +397,18 @@
 <h2 id="1-在网页中使用">1. 在网页中使用</h2>
 <p>可以使用网页版的LiftOver，网页版注意数据格式为<code>chrom:start-end</code>，例如：</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>chr1:7570073-7571526
-</span></span></code></pre></div><p>LiftOver网址：https://genome.ucsc.edu/cgi-bin/hgLiftOver，需要选择需要新旧转化的参考基因组。</p>
+</span></span></code></pre></div><p>LiftOver网址：<a href="https://genome.ucsc.edu/cgi-bin/hgLiftOver" target="_blank">https://genome.ucsc.edu/cgi-bin/hgLiftOver</a>，需要选择需要新旧转化的参考基因组。</p>
 <center>
       <img src= "https://blog-1310600458.cos.ap-shanghai.myqcloud.com/Macdo2023-11-14%2022.49.18.png" width="1000"/>
       <p><font color="grey"></font></p>
 </center>
 <p>如果使用R处理了数据，导出时注意去除引号，导出为txt时可以参考以下代码：</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>write.table(
-</span></span><span style="display:flex;"><span>  NA12878cn, # object
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>NA12878cn &lt;- read.csv2(&#34;~/mmc4.txt&#34;, sep = &#34;\t&#34;)
+</span></span><span style="display:flex;"><span>NA12878cn$Chromosome &lt;- paste0(&#34;chr&#34;,NA12878cn$Chromosome)
+</span></span><span style="display:flex;"><span>NA12878cn$start &lt;- paste0(NA12878cn$Chromosome,sep=&#34;:&#34;,NA12878cn$Start.position)
+</span></span><span style="display:flex;"><span>NA12878cn$start &lt;- paste0(NA12878cn$start,sep=&#34;-&#34;,NA12878cn$End.position)
+</span></span><span style="display:flex;"><span>write.table(
+</span></span><span style="display:flex;"><span>  NA12878cn$start, # object
 </span></span><span style="display:flex;"><span>  &#34;~/NA12878cn.txt&#34;, # path to save
 </span></span><span style="display:flex;"><span>  sep = &#34;\t&#34;, 
 </span></span><span style="display:flex;"><span>  row.names = FALSE, 
@@ -421,7 +425,7 @@
 </span></span></code></pre></div><ul>
 <li>下载参考基因组</li>
 </ul>
-<p>从哪个基因组转出就到哪个目录下找chain文件，http://hgdownload.soe.ucsc.edu/downloads.html#liftover</p>
+<p>从哪个基因组转出就到哪个目录下找chain文件，<a href="http://hgdownload.soe.ucsc.edu/downloads.html#liftover" target="_blank">http://hgdownload.soe.ucsc.edu/downloads.html#liftover</a></p>
 <p>例如：我需要把坐标从hg19的转化成hg38，下载文件：</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>wget --timestamping &#39;ftp://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToHg19.over.chain.gz&#39; -O hg19ToHg38.over.chain.gz
 </span></span><span style="display:flex;"><span>gunzip hg19ToHg38.over.chain.gz
@@ -432,7 +436,7 @@
 </span></span><span style="display:flex;"><span>NA12878cn &lt;- read.csv2(&#34;~/mmc4.txt&#34;, sep = &#34;\t&#34;)
 </span></span><span style="display:flex;"><span>chain &lt;- import.chain(&#39;~/hg19ToHg38.over.chain&#39;)
 </span></span><span style="display:flex;"><span># From data.frame to GRanges
-</span></span><span style="display:flex;"><span>hg38cn &lt;- as(na12878cn, &#34;GRanges&#34;)
+</span></span><span style="display:flex;"><span>hg38cn &lt;- as(NA12878cn, &#34;GRanges&#34;)
 </span></span><span style="display:flex;"><span>hg19.gr &lt;- liftOver(hg38cn, chain)
 </span></span><span style="display:flex;"><span>out &lt;- invertStrand(hg19.gr) %&gt;% as.data.frame()
 </span></span></code></pre></div><p>读取的数据<code>NA12878cn</code>需要转化为GRanges格式。</p>
