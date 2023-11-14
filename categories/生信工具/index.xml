@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Design By [Themefisher](https://themefisher.com/) Develop By [Gethugothemes](https://gethugothemes.com/)</copyright>
-    <lastBuildDate>Thu, 02 Nov 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://taoziyu97.github.io/categories/%E7%94%9F%E4%BF%A1%E5%B7%A5%E5%85%B7/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 14 Nov 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://taoziyu97.github.io/categories/%E7%94%9F%E4%BF%A1%E5%B7%A5%E5%85%B7/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>使用LiftOver转换不同版本参考基因组坐标</title>
+      <link>https://taoziyu97.github.io/post/2023-11-14_hg38tohg19/</link>
+      <pubDate>Tue, 14 Nov 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://taoziyu97.github.io/post/2023-11-14_hg38tohg19/</guid>
+      <description>&lt;p&gt;使用LiftOver转换不同版本参考基因组坐标。&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>shiny【3】——动态</title>
       <link>https://taoziyu97.github.io/post/2023-10-23_shiny3/</link>
