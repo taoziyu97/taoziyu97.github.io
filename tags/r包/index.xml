@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>R包 on Ziyu&#39;s Blog | Welcome to my world!</title>
-    <link>https://taoziyu97.github.io/tags/r%E5%8C%85/</link>
+    <link>https://taozyblog.com.cn/tags/r%E5%8C%85/</link>
     <description>Recent content in R包 on Ziyu&#39;s Blog | Welcome to my world!</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Design By [Themefisher](https://themefisher.com/) Develop By [Gethugothemes](https://gethugothemes.com/)</copyright>
-    <lastBuildDate>Sat, 19 Mar 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://taoziyu97.github.io/tags/r%E5%8C%85/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 19 Mar 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://taozyblog.com.cn/tags/r%E5%8C%85/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>聚类分析之cola包【没写完】</title>
-      <link>https://taoziyu97.github.io/post/2022-3-24_cluster/</link>
+      <link>https://taozyblog.com.cn/post/2022-3-24_cluster/</link>
       <pubDate>Sat, 19 Mar 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://taoziyu97.github.io/post/2022-3-24_cluster/</guid>
+      <guid>https://taozyblog.com.cn/post/2022-3-24_cluster/</guid>
       <description>自问   是否有方法的比较
   比较的标准是什么，如何判断应该使用哪种
   聚类的共性如何展示
@@ -23,10 +23,10 @@
     
     <item>
       <title>R包mlr3基本功能【1】——R6类——需要修订</title>
-      <link>https://taoziyu97.github.io/post/2022-2-24_mlr31/</link>
+      <link>https://taozyblog.com.cn/post/2022-2-24_mlr31/</link>
       <pubDate>Thu, 24 Feb 2022 15:40:24 +0600</pubDate>
       
-      <guid>https://taoziyu97.github.io/post/2022-2-24_mlr31/</guid>
+      <guid>https://taozyblog.com.cn/post/2022-2-24_mlr31/</guid>
       <description>介绍机器学习R包mlr3，该包提供了分类、回归、生存分析以及其他的机器学习任务，包含超参的调节以及特征的选择，本地支持很多操作的并行化。
 1. mlr3 Quickstart install.packages(&amp;#34;mlr3&amp;#34;) 对iris数据集的前120行训练一个决策树，并且对后30行进行最终的预测，最后判断预测模型的准确性。
 library(&amp;#34;mlr3&amp;#34;) task = tsk(&amp;#34;iris&amp;#34;) learner = lrn(&amp;#34;classif.rpart&amp;#34;)  # train a model of this learner for a subset of the task learner$train(task, row_ids = 1:120) # this is what the decision tree looks like learner$model 预测</description>

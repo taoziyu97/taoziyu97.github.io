@@ -2,90 +2,90 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>拷贝数变异 on Ziyu&#39;s Blog | Welcome to my world!</title>
-    <link>https://taoziyu97.github.io/tags/%E6%8B%B7%E8%B4%9D%E6%95%B0%E5%8F%98%E5%BC%82/</link>
+    <link>https://taozyblog.com.cn/tags/%E6%8B%B7%E8%B4%9D%E6%95%B0%E5%8F%98%E5%BC%82/</link>
     <description>Recent content in 拷贝数变异 on Ziyu&#39;s Blog | Welcome to my world!</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Design By [Themefisher](https://themefisher.com/) Develop By [Gethugothemes](https://gethugothemes.com/)</copyright>
-    <lastBuildDate>Wed, 18 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://taoziyu97.github.io/tags/%E6%8B%B7%E8%B4%9D%E6%95%B0%E5%8F%98%E5%BC%82/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 18 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://taozyblog.com.cn/tags/%E6%8B%B7%E8%B4%9D%E6%95%B0%E5%8F%98%E5%BC%82/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>【shell脚本】——实验室服务器批量运行任务</title>
-      <link>https://taoziyu97.github.io/post/2023-10-18_shell%E8%84%9A%E6%9C%AC/</link>
+      <link>https://taozyblog.com.cn/post/2023-10-18_shell%E8%84%9A%E6%9C%AC/</link>
       <pubDate>Wed, 18 Oct 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://taoziyu97.github.io/post/2023-10-18_shell%E8%84%9A%E6%9C%AC/</guid>
+      <guid>https://taozyblog.com.cn/post/2023-10-18_shell%E8%84%9A%E6%9C%AC/</guid>
       <description>&lt;p&gt;记录实验室服务器批量运行任务的脚本。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>【实验室服务器】——检查限制任务运行原因【top部分均来源于转载】</title>
-      <link>https://taoziyu97.github.io/post/2023-10-18_highio/</link>
+      <link>https://taozyblog.com.cn/post/2023-10-18_highio/</link>
       <pubDate>Wed, 18 Oct 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://taoziyu97.github.io/post/2023-10-18_highio/</guid>
+      <guid>https://taozyblog.com.cn/post/2023-10-18_highio/</guid>
       <description>&lt;p&gt;维护。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>生信工具开发——Java【1】helloworld</title>
-      <link>https://taoziyu97.github.io/post/2023-10-17_javahelloworld/</link>
+      <link>https://taozyblog.com.cn/post/2023-10-17_javahelloworld/</link>
       <pubDate>Tue, 17 Oct 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://taoziyu97.github.io/post/2023-10-17_javahelloworld/</guid>
+      <guid>https://taozyblog.com.cn/post/2023-10-17_javahelloworld/</guid>
       <description>&lt;p&gt;我的学习目的：模仿Picard写一个对BAM文件进行处理的生信工具。【思考了一下，感觉这个工具没必要写，就简单记录一下学的东西吧】&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>生信工具开发——Java【2】</title>
-      <link>https://taoziyu97.github.io/post/2023-10-17_java1/</link>
+      <link>https://taozyblog.com.cn/post/2023-10-17_java1/</link>
       <pubDate>Tue, 17 Oct 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://taoziyu97.github.io/post/2023-10-17_java1/</guid>
+      <guid>https://taozyblog.com.cn/post/2023-10-17_java1/</guid>
       <description>&lt;p&gt;介绍一些基本概念。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>基因组数据降采样</title>
-      <link>https://taoziyu97.github.io/post/2023-10-13_downsample/</link>
+      <link>https://taozyblog.com.cn/post/2023-10-13_downsample/</link>
       <pubDate>Fri, 13 Oct 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://taoziyu97.github.io/post/2023-10-13_downsample/</guid>
+      <guid>https://taozyblog.com.cn/post/2023-10-13_downsample/</guid>
       <description>&lt;p&gt;我的学习目的：开发工具的过程中需要去对深测序和浅测序样本进行转换。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>NA12878样本下载和处理</title>
-      <link>https://taoziyu97.github.io/post/2023-10-11_na12878/</link>
+      <link>https://taozyblog.com.cn/post/2023-10-11_na12878/</link>
       <pubDate>Thu, 12 Oct 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://taoziyu97.github.io/post/2023-10-11_na12878/</guid>
+      <guid>https://taozyblog.com.cn/post/2023-10-11_na12878/</guid>
       <description>&lt;p&gt;NA12878样本常被用来作为benchmark的参考，介绍一下该样本基因组序列的下载和处理。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>使用score-client下载ICGC数据</title>
-      <link>https://taoziyu97.github.io/post/2023-10-11_icgcdownload/</link>
+      <link>https://taozyblog.com.cn/post/2023-10-11_icgcdownload/</link>
       <pubDate>Thu, 12 Oct 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://taoziyu97.github.io/post/2023-10-11_icgcdownload/</guid>
+      <guid>https://taozyblog.com.cn/post/2023-10-11_icgcdownload/</guid>
       <description></description>
     </item>
     
     <item>
       <title>机器学习——性能度量</title>
-      <link>https://taoziyu97.github.io/post/2023-10-08_ml/</link>
+      <link>https://taozyblog.com.cn/post/2023-10-08_ml/</link>
       <pubDate>Wed, 11 Oct 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://taoziyu97.github.io/post/2023-10-08_ml/</guid>
+      <guid>https://taozyblog.com.cn/post/2023-10-08_ml/</guid>
       <description>&lt;p&gt;对模型的泛化性能进行评估，需要有衡量模型泛化能力的评价标准。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>生存分析——KM曲线</title>
-      <link>https://taoziyu97.github.io/post/2023-09-25_kmcurve/</link>
+      <link>https://taozyblog.com.cn/post/2023-09-25_kmcurve/</link>
       <pubDate>Mon, 25 Sep 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://taoziyu97.github.io/post/2023-09-25_kmcurve/</guid>
+      <guid>https://taozyblog.com.cn/post/2023-09-25_kmcurve/</guid>
       <description>&lt;p&gt;罗列生存分析中最常用的2个绘图方法：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
@@ -99,82 +99,82 @@
     
     <item>
       <title>使用ACE提取拷贝数变异</title>
-      <link>https://taoziyu97.github.io/post/2023-09-21_ace/</link>
+      <link>https://taozyblog.com.cn/post/2023-09-21_ace/</link>
       <pubDate>Thu, 21 Sep 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://taoziyu97.github.io/post/2023-09-21_ace/</guid>
+      <guid>https://taozyblog.com.cn/post/2023-09-21_ace/</guid>
       <description>&lt;p&gt;使用ACE提取浅全基因组测序数据的拷贝数变异。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>使用FREEC提取拷贝数变异</title>
-      <link>https://taoziyu97.github.io/post/2023-09-21_freec/</link>
+      <link>https://taozyblog.com.cn/post/2023-09-21_freec/</link>
       <pubDate>Wed, 20 Sep 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://taoziyu97.github.io/post/2023-09-21_freec/</guid>
+      <guid>https://taozyblog.com.cn/post/2023-09-21_freec/</guid>
       <description>&lt;p&gt;使用FREEC提取浅全基因组测序数据的拷贝数变异。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>使用QDNAseq提取拷贝数变异</title>
-      <link>https://taoziyu97.github.io/post/2023-09-21_qdnaseq/</link>
+      <link>https://taozyblog.com.cn/post/2023-09-21_qdnaseq/</link>
       <pubDate>Wed, 20 Sep 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://taoziyu97.github.io/post/2023-09-21_qdnaseq/</guid>
+      <guid>https://taozyblog.com.cn/post/2023-09-21_qdnaseq/</guid>
       <description>&lt;p&gt;使用QDNAseq提取浅全基因组测序数据的拷贝数变异。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>提取拷贝数变异基本思路</title>
-      <link>https://taoziyu97.github.io/post/2023-09-19_cnvcall_1/</link>
+      <link>https://taozyblog.com.cn/post/2023-09-19_cnvcall_1/</link>
       <pubDate>Tue, 19 Sep 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://taoziyu97.github.io/post/2023-09-19_cnvcall_1/</guid>
+      <guid>https://taozyblog.com.cn/post/2023-09-19_cnvcall_1/</guid>
       <description>&lt;p&gt;以Canvas工具为例阐述提取拷贝数变异的基本思路。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>使用Sclust提取拷贝数</title>
-      <link>https://taoziyu97.github.io/post/2022-11-15_sclust/</link>
+      <link>https://taozyblog.com.cn/post/2022-11-15_sclust/</link>
       <pubDate>Mon, 14 Nov 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://taoziyu97.github.io/post/2022-11-15_sclust/</guid>
+      <guid>https://taozyblog.com.cn/post/2022-11-15_sclust/</guid>
       <description>&lt;p&gt;介绍如何使用Sclust提取绝对拷贝数。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>【异倍性系列1】——易混淆概念</title>
-      <link>https://taoziyu97.github.io/post/2022-9-14_cnv1/</link>
+      <link>https://taozyblog.com.cn/post/2022-9-14_cnv1/</link>
       <pubDate>Wed, 21 Sep 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://taoziyu97.github.io/post/2022-9-14_cnv1/</guid>
+      <guid>https://taozyblog.com.cn/post/2022-9-14_cnv1/</guid>
       <description>&lt;p&gt;介绍易混淆的概念。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>【异倍性系列2】——异倍性（aneuploidy）</title>
-      <link>https://taoziyu97.github.io/post/2022-9-14_cnv2/</link>
+      <link>https://taozyblog.com.cn/post/2022-9-14_cnv2/</link>
       <pubDate>Wed, 21 Sep 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://taoziyu97.github.io/post/2022-9-14_cnv2/</guid>
+      <guid>https://taozyblog.com.cn/post/2022-9-14_cnv2/</guid>
       <description>&lt;p&gt;介绍异倍性的概念。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>【异倍性系列3】——chromosome instability 染色体不稳定性 (CIN)</title>
-      <link>https://taoziyu97.github.io/post/2022-9-14_cnv3/</link>
+      <link>https://taozyblog.com.cn/post/2022-9-14_cnv3/</link>
       <pubDate>Wed, 21 Sep 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://taoziyu97.github.io/post/2022-9-14_cnv3/</guid>
+      <guid>https://taozyblog.com.cn/post/2022-9-14_cnv3/</guid>
       <description>&lt;p&gt;介绍染色体不稳定性的机制。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>CNV</title>
-      <link>https://taoziyu97.github.io/post/2022-3-29_cnv/</link>
+      <link>https://taozyblog.com.cn/post/2022-3-29_cnv/</link>
       <pubDate>Sat, 19 Mar 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://taoziyu97.github.io/post/2022-3-29_cnv/</guid>
+      <guid>https://taozyblog.com.cn/post/2022-3-29_cnv/</guid>
       <description>一、 拷贝数变异的介绍 1.1 结构变异和拷贝数变异 结构变异（structure variation, SV）是指基因组上大片段碱基的缺失、插入、重复、倒位和易位。这部分变异的频率，和疾病或者表型的关系等等都不明确，另外还有一部分的变异也属于结构变异，比如异态性（heteromorphisms），脆性位点（fragile sites），marker染色体，等臂染色体（isochromosomes），双微体（double minutes）等等，这部分的结构不正常和疾病有关。
  等臂染色体，是两条基因和形态都一致的染色体臂。
 双微体，是无着丝粒的，染色体外扩增的核染色质，通常包含特定的染色体片段或基因，在癌细胞中常出现。
@@ -184,10 +184,10 @@ marker染色体，也被称为结构外异常染色体或“多余”染色体�
     
     <item>
       <title>拷贝数变异机制</title>
-      <link>https://taoziyu97.github.io/post/2022-3-16_mechanism_of_cnv/</link>
+      <link>https://taozyblog.com.cn/post/2022-3-16_mechanism_of_cnv/</link>
       <pubDate>Wed, 16 Mar 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://taoziyu97.github.io/post/2022-3-16_mechanism_of_cnv/</guid>
+      <guid>https://taozyblog.com.cn/post/2022-3-16_mechanism_of_cnv/</guid>
       <description>基本框架 拷贝数变异的博客框架：
   介绍拷贝数变异的从属关系，和结构变异的关系；克隆性拷贝数变异和亚克隆拷贝数变异
   拷贝数变异检测手段，拷贝数变异检测方法/算法（这个比较多，可以分多点讲）
