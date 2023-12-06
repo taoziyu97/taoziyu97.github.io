@@ -472,7 +472,65 @@
 </span></span></code></pre></div><p>run:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>nohup bash downsample.sh &gt; nohup.downsample.out &amp;
 </span></span></code></pre></div><p>总时长花了2个小时左右。</p>
-<h2 id="参考资料">参考资料</h2>
+<h2 id="批量并行">批量并行</h2>
+<p>任务目标：</p>
+<ul>
+<li>depth_level记录了降采样目标：0.5X, 1X, 2X, 5X, 10X</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>0.5
+</span></span><span style="display:flex;"><span>1
+</span></span><span style="display:flex;"><span>2
+</span></span><span style="display:flex;"><span>5
+</span></span><span style="display:flex;"><span>10
+</span></span></code></pre></div><ul>
+<li>ERR174341.ave_depth.txt 记录的是samtools获得的深度，文件内容是</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>Average depth:  11.5458
+</span></span></code></pre></div><ul>
+<li>想通过depth_level除以ERR174341.ave_depth.txt中的深度，来分别降采样，并以新的降采样深度命名。</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>data=&#34;/home/data/sdb/tzy/NA12878/raw_data/ERR174341&#34; 
+</span></span><span style="display:flex;"><span>depth=&#34;/home/tzy/project/CNbenchmark/script/ERR174341/depth_level&#34;
+</span></span><span style="display:flex;"><span>average_file=&#34;/home/data/sdb/tzy/NA12878/raw_data/ERR174341/ERR174341.ave_depth.txt&#34;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>export data
+</span></span><span style="display:flex;"><span>export depth
+</span></span><span style="display:flex;"><span>export average_file
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># 提取 ERR174341.ave_depth.txt 文件中的数字部分
+</span></span><span style="display:flex;"><span>average=$(grep -oE &#39;[0-9]+([.][0-9]+)?&#39; &#34;${average_file}&#34;)
+</span></span><span style="display:flex;"><span>export average
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>function parallel_down {
+</span></span><span style="display:flex;"><span>start_time=$(date +%s)
+</span></span><span style="display:flex;"><span>echo &#34;This is $1&#34;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>number=$(echo &#34;$1&#34; | awk -v num=&#34;${average}&#34; &#39;{ if (num != 0) printf &#34;%.2f\n&#34;, $1/num }&#39;)
+</span></span><span style="display:flex;"><span>echo &#34;$number&#34;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>java -jar /home/tzy/tools/picard/build/libs/picard.jar DownsampleSam \
+</span></span><span style="display:flex;"><span>I=$data/ERR174341.hg19.bam \
+</span></span><span style="display:flex;"><span>O=$data/ERR174341.hg19.$1.bam \
+</span></span><span style="display:flex;"><span>P=${number}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># 记录结束时间
+</span></span><span style="display:flex;"><span>end_time=$(date +%s) 　
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># 计算总时间
+</span></span><span style="display:flex;"><span>elapsed_time=$((end_time - start_time))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>echo &#34;进程执行时间为 $elapsed_time 秒&#34;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>export -f parallel_down
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>parallel --link parallel_down :::: ${depth}
+</span></span></code></pre></div><p>最终并行生成以下文件，且不需要人为指定DownsampleSam中的P参数（P=目标深度/当前深度）</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>ERR174341.hg19.0.5.bam
+</span></span><span style="display:flex;"><span>ERR174341.hg19.1.bam
+</span></span><span style="display:flex;"><span>ERR174341.hg19.2.bam
+</span></span><span style="display:flex;"><span>ERR174341.hg19.5.bam
+</span></span><span style="display:flex;"><span>ERR174341.hg19.10.bam
+</span></span></code></pre></div><h2 id="参考资料">参考资料</h2>
 <ul>
 <li>
 <p><a href="https://gatk.broadinstitute.org/hc/en-us/articles/360046788192-DownsampleSam-Picard-" target="_blank">DownsampleSam (Picard)</a></p>
@@ -569,6 +627,30 @@
                         <li class="nav-item">
                             <a class="nav-link text-left" href="#%e4%bd%bf%e7%94%a8picard">
                             使用Picard
+                            </a>
+                        </li>
+                    
+                    
+                    </ul>
+                    
+                    </ul>
+                    
+                
+            
+        
+        
+            
+                
+                
+                    
+                    <ul class="nav">
+                    
+                    <ul class="nav">
+                    
+                    
+                        <li class="nav-item">
+                            <a class="nav-link text-left" href="#%e6%89%b9%e9%87%8f%e5%b9%b6%e8%a1%8c">
+                            批量并行
                             </a>
                         </li>
                     

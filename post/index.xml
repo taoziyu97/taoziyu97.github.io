@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Design By [Themefisher](https://themefisher.com/) Develop By [Gethugothemes](https://gethugothemes.com/)</copyright>
-    <lastBuildDate>Tue, 14 Nov 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://taozyblog.com.cn/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 06 Dec 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://taozyblog.com.cn/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>NA12878多种来源数据下载[参考Kamatani 2019 Genome Biology]</title>
+      <link>https://taozyblog.com.cn/post/2023-11-14_na12878_all/</link>
+      <pubDate>Wed, 06 Dec 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://taozyblog.com.cn/post/2023-11-14_na12878_all/</guid>
+      <description>&lt;p&gt;参考一篇做的比较全面的结构变异工具比较类文章中使用到的标准数据的获取和提取。&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>使用LiftOver转换不同版本参考基因组坐标</title>
       <link>https://taozyblog.com.cn/post/2023-11-14_hg38tohg19/</link>
