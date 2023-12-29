@@ -17,7 +17,7 @@
 </script>
 
 <meta charset="utf-8">
-<title>如何进行科研写作——【转载】</title>
+<title>使用R绘制类内组间比较热图</title>
 
 
 
@@ -25,7 +25,7 @@
 
 
 
-<link rel="canonical" href="https://taozyblog.com.cn/post/2022-3-28_%E7%A7%91%E7%A0%94%E5%86%99%E4%BD%9C/" itemprop="url" />
+<link rel="canonical" href="https://taozyblog.com.cn/post/2023-12-29_plot_pairheatmap/" itemprop="url" />
 
 
 <link rel="manifest" href="/manifest.webmanifest">
@@ -44,7 +44,7 @@
 
 
 
-<meta name="description" content="科研写作">
+<meta name="description" content="This is meta description">
 
 
 <meta name="author" content="Themefisher">
@@ -98,21 +98,21 @@
 
 
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://blog-1310600458.cos.ap-shanghai.myqcloud.com/5f1f772e55a70e0fad13530e.jpeg" />
-<meta property="og:image" content="https://blog-1310600458.cos.ap-shanghai.myqcloud.com/5f1f772e55a70e0fad13530e.jpeg" />
+<meta name="twitter:image" content="https://blog-1310600458.cos.ap-shanghai.myqcloud.com/Macdo2023-12-29%2013.59.11.png" />
+<meta property="og:image" content="https://blog-1310600458.cos.ap-shanghai.myqcloud.com/Macdo2023-12-29%2013.59.11.png" />
  
 
 
 
 
-<meta property="og:title" content="如何进行科研写作——【转载】" />
-<meta property="og:description" content="科研写作" />
+<meta property="og:title" content="使用R绘制类内组间比较热图" />
+<meta property="og:description" content="使用R绘制类内组间比较热图，这里所使用的R包plotool我目前还没上传。" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://taozyblog.com.cn/post/2022-3-28_%E7%A7%91%E7%A0%94%E5%86%99%E4%BD%9C/" />
+<meta property="og:url" content="https://taozyblog.com.cn/post/2023-12-29_plot_pairheatmap/" />
 
 
-<meta name="twitter:title" content="如何进行科研写作——【转载】" />
-<meta name="twitter:description" content="科研写作" />
+<meta name="twitter:title" content="使用R绘制类内组间比较热图" />
+<meta name="twitter:description" content="使用R绘制类内组间比较热图，这里所使用的R包plotool我目前还没上传。" />
 
 
 
@@ -352,47 +352,143 @@
   <div class="container">
     <article class="row mb-4">
       <div class="col-lg-10 mx-auto mb-4">
-        <h1 class="h2 mb-3">如何进行科研写作——【转载】</h1>
+        <h1 class="h2 mb-3">使用R绘制类内组间比较热图</h1>
         <ul class="list-inline post-meta mb-3">
           <li class="list-inline-item"><i class="fas fa-user mr-2"></i>
             <a href="/author/ziyu/">Ziyu</a>
           </li>
-          <li class="list-inline-item">Date : March 19, 2022</li>
+          <li class="list-inline-item">Date : December 29, 2023</li>
           <li class="list-inline-item">Categories :
             <a
-              href="/categories/%e5%a6%82%e4%bd%95%e7%a7%91%e7%a0%94" class="ml-1">如何科研 </a>
+              href="/categories/%e5%8f%af%e8%a7%86%e5%8c%96" class="ml-1">可视化 </a>
             </li>
           <li class="list-inline-item">Tags : <a
-              href="/tags/%e7%a7%91%e7%a0%94%e5%86%99%e4%bd%9c" class="ml-1">科研写作 </a> 
+              href="/tags/%e5%8f%af%e8%a7%86%e5%8c%96" class="ml-1">可视化 </a> 
           </li>
         </ul>
       </div>
       <div class="col-lg-10 mx-auto">
-        <div class="content" ><p>最近在修改文章，感觉自己的英文表达能力和学术写作能力太弱，刚巧看到施一公教授分享的公众号文章，觉得收获很大，记录一下。</p>
-<h4 id="如何写论文">如何写论文</h4>
-<p>1．<code>要写好科研论文，必须先养成读英文文章的习惯，争取每天30-60分钟。</code>刚开始可以选择以读英文报纸、英文新闻为主，逐渐转为读专业杂志。我会在近期专门写一篇博客文章介绍一套行之有效的增强读专业杂志能力的办法。</p>
-<p>2．<code>写科研论文，最重要的是逻辑。</code>逻辑的形成来自对实验数据的总体分析。必须先讨论出一套清晰的思路，然后按照思路来做图(Figures)，最后才能执笔。</p>
-<p>3．<code>具体写作时，先按照思路（即Figures）写一个以subheading为主的框架，然后开始具体写作。</code>第一稿，切忌追求每一句话的完美，更不要追求词语的华丽，而主要留心逻辑（logic flow），注意前后句的逻辑关系、相邻两段的逻辑关系。写作时，全力以赴，尽可能不受外界事情干扰（关闭手机、座机），争取在最短时间内拿出第一稿。还要注意：一句话不可太长。</p>
-<p>4．<code>学会照葫芦画瓢。</code>没有人天生会写优秀的科研论文，都是从别人那里学来的。学习别人的文章要注意专业领域的不同，有些领域（包括我所在的结构生物学）有它内在的写作规律。科研文章里的一些话是定式，比如 “To investigate the mechanism of …, we performed …”, “These results support the former, but not the latter, hypothesis …”, “Despite recent progress, how … remains to be elucidated …” 等等。用两次以后，就逐渐学会灵活运用了。在向别人学习时，切忌抄袭。在美国一些机构，连续7个英文单词在一起和别人的完全一样，原则上就被认为抄袭（plagiarism）。</p>
-<p>5．<code>第一稿写完后，给自己不要超过一天的休息时间，开始修改第二稿。</code>修改时，还是以逻辑为主，但对每一句话都要推敲一下，对abstract和正文中的关键语句要字斟句酌。学会用“Thesaurus”（同义词替换）以避免过多重复。第二稿的修改极为关键，再往后就不会大改了。</p>
-<p>6．<code>第二稿以后的修改，主要注重具体的字句，不会改变整体逻辑了。</code>投稿前，一定要整体读一遍，对个别词句略作改动。记住：学术期刊一般不会因为具体的语法错误拒绝一篇文章，但一定会因为逻辑混乱而拒绝一篇文章。</p>
-<p>用最简单的话表达最明白的意思，但一定要逻辑严谨！</p>
-<hr>
-<h4 id="一些细节">一些细节</h4>
-<ul>
-<li>odds ratio而不是odd ratio。</li>
-</ul>
-<hr>
-<h3 id="参考资料">参考资料</h3>
+        <div class="content" ><p>使用R绘制类内组间比较热图，这里所使用的R包plotool我目前还没上传。</p>
+<p>模仿&quot;Pan-cancer whole-genome comparison of primary and metastatic solid tumours&quot;这篇文章的figure1d绘制热图。</p>
+<center>
+      <img src= "https://blog-1310600458.cos.ap-shanghai.myqcloud.com/Macdo2023-12-29%2013.59.11.png" width="800"/>
+      <p><font color="grey"></font></p>
+</center>
+<p>该图是：比较多种癌症类型内，原发瘤和转移瘤之间的染色体臂的倍性（经过标准化），矫正后p值小于0.01的标记为显著<code>*</code>。</p>
+<p>写了一个自用的R包<code>plotool</code>，里面的函数如下：</p>
+<center>
+      <img src= "https://blog-1310600458.cos.ap-shanghai.myqcloud.com/Macdo2023-12-29%2014.31.33.png" width="500"/>
+      <p><font color="grey"></font></p>
+</center>
+<h2 id="示例数据">示例数据</h2>
+<p>构建示例数据，根据示例数据绘制示例图。</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span># 设置种子以便复现结果
+</span></span><span style="display:flex;"><span>set.seed(123)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>samples &lt;- paste0(&#34;Sample&#34;, 1:200)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># 生成列名为 feature1 到 feature10 的多个特征列
+</span></span><span style="display:flex;"><span>num_features &lt;- 20
+</span></span><span style="display:flex;"><span>feature_data &lt;- matrix(rnorm(length(samples) * num_features), ncol = num_features)
+</span></span><span style="display:flex;"><span>colnames(feature_data) &lt;- paste0(&#34;feature&#34;, 1:num_features)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># 创建数据框
+</span></span><span style="display:flex;"><span>data &lt;- data.frame(
+</span></span><span style="display:flex;"><span>  sample = paste0(&#34;Sample&#34;, 1:200), # 生成样本名称
+</span></span><span style="display:flex;"><span>  type = sample(c(paste0(&#34;class&#34;,LETTERS[1:10])), 200, replace = TRUE), # 生成type数据
+</span></span><span style="display:flex;"><span>  pair = sample(c(&#34;primary&#34;, &#34;metastasis&#34;), 200, replace = TRUE), # 生成pair数据
+</span></span><span style="display:flex;"><span>  feature_data
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>types &lt;- unique(data$type)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># get table
+</span></span><span style="display:flex;"><span>pair.df &lt;- plotool::get_pair_table(
+</span></span><span style="display:flex;"><span>  data = data,
+</span></span><span style="display:flex;"><span>  type = types,
+</span></span><span style="display:flex;"><span>  feature = colnames(feature_data),
+</span></span><span style="display:flex;"><span>  q_val_cutoff = 0.5,
+</span></span><span style="display:flex;"><span>  cal_fun = &#34;mean&#34;
+</span></span><span style="display:flex;"><span>) %&gt;%
+</span></span><span style="display:flex;"><span>  dplyr::mutate(
+</span></span><span style="display:flex;"><span>    feature = factor(
+</span></span><span style="display:flex;"><span>      x = feature,
+</span></span><span style="display:flex;"><span>      levels = paste0(&#34;feature&#34;, 1:num_features)
+</span></span><span style="display:flex;"><span>    )
+</span></span><span style="display:flex;"><span>  )
+</span></span></code></pre></div><p>q_val_cutoff这里为了方便展示，把矫正后的p值q_val_cutoff参数设为了0.5。</p>
+<p>绘图：上面是primary，下面是metastatic。</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span># plot
+</span></span><span style="display:flex;"><span>out &lt;- plotool::pair_feature_heatmap(
+</span></span><span style="display:flex;"><span>  df = pair.df,
+</span></span><span style="display:flex;"><span>  feature = colnames(feature_data),
+</span></span><span style="display:flex;"><span>  title = &#34;Type average-normalized feature value&#34;,
+</span></span><span style="display:flex;"><span>  title.position = &#34;top&#34;,
+</span></span><span style="display:flex;"><span>  xlab = &#34;Features&#34;
+</span></span><span style="display:flex;"><span>  )
+</span></span><span style="display:flex;"><span>out
+</span></span></code></pre></div><br>
+<center>
+      <img src= "https://blog-1310600458.cos.ap-shanghai.myqcloud.com/Macdo2023-12-29%2015.26.32.png" width="800"/>
+      <p><font color="grey"></font></p>
+</center>
+<h2 id="get_pair_table">get_pair_table</h2>
+<p>获得显著性标记，计算每组每个特征在热图中展示的数值，生成用于绘图的数据，</p>
 <ul>
 <li>
-<p><a href="https://mp.weixin.qq.com/s/wI5BjSXo5e-snG01vW-ijQ" target="_blank">施一公：如何一个通宵写出一篇Nature？</a> <a href="https://blog.sciencenet.cn/blog-46212-349932.html" class="btn btn-primary text-white"  target="_blank" rel="noopener" >点击原文</a></p>
+<p>data：必须包含：sample，type，pair（比如原发和转移，反应和不反应等分组标签）和各种feature数值的宽数据，列名要对应上</p>
 </li>
 <li>
-<p><a href="https://www.natureindex.com/news-blog/how-to-write-a-good-research-science-academic-paper-title" target="_blank">Nature:How to write a good research paper title</a></p>
+<p>type：类别名，字符串，比如这里的class</p>
+</li>
+<li>
+<p>featurea：特征名，字符串，比如这里的feature123</p>
+</li>
+<li>
+<p>q_val_cutoff = NULL：当q值没有设置时，使用p值的cutoff作为筛选的条件来标注显著性</p>
+</li>
+<li>
+<p>pvalue_cutoff = 0.05：默认p值的cutoff来标注显著性，小于该值标记显著</p>
+</li>
+<li>
+<p>cal_fun = c(&ldquo;mean&rdquo;, &ldquo;median&rdquo;, &ldquo;sum&rdquo;)：计算展示数据的方式，分别对应：均值，中位数，总和</p>
 </li>
 </ul>
-</div>
+<h2 id="pair_feature_heatmap">pair_feature_heatmap</h2>
+<p>用于绘制热图。</p>
+<ul>
+<li>
+<p>df：get_pair_table的输出作为该函数的输入</p>
+</li>
+<li>
+<p>feature：特征名字符串</p>
+</li>
+<li>
+<p>tile_colors = c(&rsquo;#000080&rsquo;,&rsquo;#009ACD&rsquo;,&rsquo;#B2DFEE&rsquo;,&rsquo;#FFFFFF&rsquo;,&rsquo;#FF758C&rsquo;,&rsquo;#FF007F&rsquo;,&rsquo;#A8152E&rsquo;)：颜色设置</p>
+</li>
+<li>
+<p>breaks = c(seq(-1, -0.1, by = 0.1), seq(0.1, 1, by = 0.1))：对应颜色的数值范围划分</p>
+</li>
+<li>
+<p>title = &ldquo;Title&rdquo;：图注的标题</p>
+</li>
+<li>
+<p>title.position = &ldquo;top&rdquo;：图注的位置</p>
+</li>
+<li>
+<p>xlab = &ldquo;feature&rdquo;：横坐标名</p>
+</li>
+</ul>
+<h2 id="参考资料">参考资料：</h2>
+<ul>
+<li>
+<p><a href="https://github.com/UMCUGenetics/primary-met-wgs-comparison" target="_blank">Pan-cancer whole-genome comparison of primary and metastatic solid tumours的github文档</a></p>
+</li>
+<li>
+<p>R包plotool还未公开</p>
+</li>
+</ul></div>
       </div>
     </article>
 
@@ -423,14 +519,10 @@
                     
                     <ul class="nav">
                     
-                    <ul class="nav">
-                    
-                    <ul class="nav">
-                    
                     
                         <li class="nav-item">
-                            <a class="nav-link text-left" href="#%e5%a6%82%e4%bd%95%e5%86%99%e8%ae%ba%e6%96%87">
-                            如何写论文
+                            <a class="nav-link text-left" href="#%e7%a4%ba%e4%be%8b%e6%95%b0%e6%8d%ae">
+                            示例数据
                             </a>
                         </li>
                     
@@ -439,10 +531,6 @@
                     
                     </ul>
                     
-                    </ul>
-                    
-                    </ul>
-                    
                 
             
         
@@ -450,10 +538,6 @@
             
                 
                 
-                    
-                    <ul class="nav">
-                    
-                    <ul class="nav">
                     
                     <ul class="nav">
                     
@@ -461,8 +545,8 @@
                     
                     
                         <li class="nav-item">
-                            <a class="nav-link text-left" href="#%e4%b8%80%e4%ba%9b%e7%bb%86%e8%8a%82">
-                            一些细节
+                            <a class="nav-link text-left" href="#get_pair_table">
+                            get_pair_table
                             </a>
                         </li>
                     
@@ -471,10 +555,6 @@
                     
                     </ul>
                     
-                    </ul>
-                    
-                    </ul>
-                    
                 
             
         
@@ -484,6 +564,28 @@
                 
                     
                     <ul class="nav">
+                    
+                    <ul class="nav">
+                    
+                    
+                        <li class="nav-item">
+                            <a class="nav-link text-left" href="#pair_feature_heatmap">
+                            pair_feature_heatmap
+                            </a>
+                        </li>
+                    
+                    
+                    </ul>
+                    
+                    </ul>
+                    
+                
+            
+        
+        
+            
+                
+                
                     
                     <ul class="nav">
                     
@@ -492,12 +594,10 @@
                     
                         <li class="nav-item">
                             <a class="nav-link text-left" href="#%e5%8f%82%e8%80%83%e8%b5%84%e6%96%99">
-                            参考资料
+                            参考资料：
                             </a>
                         </li>
                     
-                    
-                    </ul>
                     
                     </ul>
                     
@@ -552,10 +652,10 @@
     "@type": "Article",
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "https:\/\/taozyblog.com.cn\/post\/2022-3-28_%E7%A7%91%E7%A0%94%E5%86%99%E4%BD%9C\/"
+      "@id": "https:\/\/taozyblog.com.cn\/post\/2023-12-29_plot_pairheatmap\/"
     },
-    "headline": "如何进行科研写作——【转载】",
-    "description": "科研写作",
+    "headline": "使用R绘制类内组间比较热图",
+    "description": "",
     "image": "",  
     "author": {
       "@type": "Person",
@@ -569,7 +669,7 @@
         "url": "images\/logo.png"
       }
     },
-    "datePublished": "2022-03-19"
+    "datePublished": "2023-12-29"
   }
   
 </script>
