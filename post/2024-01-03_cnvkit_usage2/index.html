@@ -17,7 +17,7 @@
 </script>
 
 <meta charset="utf-8">
-<title>生物统计</title>
+<title>CNVKit使用方法【2】</title>
 
 
 
@@ -25,7 +25,7 @@
 
 
 
-<link rel="canonical" href="https://taozyblog.com.cn/tags/%E7%94%9F%E7%89%A9%E7%BB%9F%E8%AE%A1/" itemprop="url" />
+<link rel="canonical" href="https://taozyblog.com.cn/post/2024-01-03_cnvkit_usage2/" itemprop="url" />
 
 
 <link rel="manifest" href="/manifest.webmanifest">
@@ -92,50 +92,29 @@
 
 
 
+
+
+
+
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://blog-1310600458.cos.ap-shanghai.myqcloud.com/pcbi.1004873.g001.png" />
+<meta property="og:image" content="https://blog-1310600458.cos.ap-shanghai.myqcloud.com/pcbi.1004873.g001.png" />
  
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
-<meta property="og:image:width" content="96">
-<meta property="og:image:height" content="96">
- 
-
-<meta property="og:image:type" content="image/.png">
- 
-
- 
-
-
-
-
-<meta property="og:title" content="生物统计" />
-<meta property="og:description" content="This is meta description" />
+<meta property="og:title" content="CNVKit使用方法【2】" />
+<meta property="og:description" content="介绍cnvkit的使用方法和原理。
+" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://taozyblog.com.cn/tags/%E7%94%9F%E7%89%A9%E7%BB%9F%E8%AE%A1/" />
+<meta property="og:url" content="https://taozyblog.com.cn/post/2024-01-03_cnvkit_usage2/" />
 
 
-<meta name="twitter:title" content="生物统计" />
-<meta name="twitter:description" content="This is meta description" />
+<meta name="twitter:title" content="CNVKit使用方法【2】" />
+<meta name="twitter:description" content="介绍cnvkit的使用方法和原理。
+" />
 
 
 
@@ -371,513 +350,824 @@
 
 
 
-
-<section class="section-sm pb-0">
-  <div class="container">
-    <div class="row">
-      <div class="col-12">
-        <div class="title-bordered">
-          <h1 class="h4">Showing items from <span class="text-primary">生物统计</span></h1>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-
-
-
-
-
-
 <section class="section">
   <div class="container">
+    <article class="row mb-4">
+      <div class="col-lg-10 mx-auto mb-4">
+        <h1 class="h2 mb-3">CNVKit使用方法【2】</h1>
+        <ul class="list-inline post-meta mb-3">
+          <li class="list-inline-item"><i class="fas fa-user mr-2"></i>
+            <a href="/author/ziyu/">Ziyu</a>
+          </li>
+          <li class="list-inline-item">Date : January 3, 2024</li>
+          <li class="list-inline-item">Categories :
+            <a
+              href="/categories/bug" class="ml-1">Bug </a>
+            </li>
+          <li class="list-inline-item">Tags : <a
+              href="/tags/bug" class="ml-1">Bug </a> 
+          </li>
+        </ul>
+      </div>
+      <div class="col-lg-10 mx-auto">
+        <div class="content" ><p>介绍cnvkit的使用方法和原理。</p>
+<hr>
+<h3 id="fix">fix</h3>
+<p>合并未校正的target和antitarget coverage tables（.cnn），并根据给定的参考来校正区域覆盖和GC含量的偏差。输出一个拷贝数比率的表格（.cnr）。</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>cnvkit.py fix Sample.targetcoverage.cnn Sample.antitargetcoverage.cnn Reference.cnn -o Sample.cnr
+</span></span></code></pre></div><p>“观察到”的on-target和off-target读深度分别进行中位数居中和偏差校正，就像构建参考时一样。然后，从参考中得到相应的“预期”归一化的log2读深度值，并对每组区间进行相减。</p>
+<p>偏差校正使用参考.cnn文件中“gc”和“rmask”列的GC和RepeatMasker信息；如果这些信息缺失（即参考是在没有这些校正的情况下构建的），fix命令也会跳过这些校正（并发出警告）。如果构建了参考，但随后使用不同的偏差校正标志调用了fix命令，可能会在测试样本中过度或不足地校正偏差，因此，需要一致地使用选项&ndash;no-gc、&ndash;no-rmask和&ndash;no-edge，或者完全不使用这些选项。</p>
+<p>CNVkit会过滤掉未达到某些预定义标准的bin：参考log2读深度低于阈值（默认为-5）或者参考中所有正常样本的读深度扩展（spread）超过阈值（默认为1.0）的bin。</p>
+<p>给剩余bin分配权重，考虑以下因素：</p>
+<ol>
+<li>
+<p>bin的大小；</p>
+</li>
+<li>
+<p>bin在参考中log2值偏离0的程度；</p>
+</li>
+<li>
+<p>bin在参考中的“扩展”（spread）程度。</p>
+</li>
+</ol>
+<p>后两者仅在至少使用一个正常/对照样本构建参考时适用。</p>
+<p>最后，修正后的on-target和off-target bin级别的拷贝比率以及相关权重被串联、排序，并写入一个.cnr文件。</p>
+<h3 id="segment">segment</h3>
+<p>从给定的coverage表格中推断离散的拷贝数segment：</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>cnvkit.py segment Sample.cnr -o Sample.cns
+</span></span></code></pre></div><p>segmentation对每个染色体臂单独运行，可以使用<code>-p</code>来并行（除了HMM方法），类似于batch。segment或断点的显著性阈值通过&ndash;threshold/-t选项传递给底层方法，通常是p值或q值的cutoff，或者底层方法用于调整灵敏度的任何参数。</p>
+<ol>
+<li>segmentation方法</li>
+</ol>
+<p>以下分割算法可以通过-m选项指定：</p>
+<ul>
+<li>
+<p>cbs：默认值，循环二分法分割（CBS）。在中等大小的target panel和外显子组中，该方法在作者的benchmark测试中表现最佳。需要R包DNAcopy。</p>
+</li>
+<li>
+<p>haar：HaarSeg的纯Python实现，是基于小波的方法，非常快速，在small panel上表现合理，但在大型数据集上容易过度分割。</p>
+</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>小波分析，这是一种信号处理技术，可以将信号分解成不同频率范围的组成部分。小波分析对于检测信号中的突变或突发性变化（例如，拷贝数变异）以及信号的局部特征非常有效。在基因组分析中，基于小波的方法可以用于检测基因组中的拷贝数变异或其他结构变化，通过对信号进行多尺度分解，捕获不同频率范围内的变化模式，以便更好地识别基因组的特定区域或变异模式。
+</span></span></code></pre></div><ul>
+<li>
+<p>hmm（实验性）：适用于大多数样本的3状态隐马尔可夫模型。比CBS更快，比Haar更慢但更准确。需要Python包pomegranate，以及下面两种方法。</p>
+</li>
+<li>
+<p>hmm-tumor（实验性）：适用于优质肿瘤样本更细的分割，5状态隐马尔可夫模型。该方法能够检测到更大规模的，更小幅度的拷贝数扩增，或者在大规模hemizygous loss中检测到局部深度缺失。训练该模型比简单的hmm方法需要更多CPU。【怎么判断肿瘤样本的优质程度】</p>
+</li>
+<li>
+<p>hmm-germline（实验性）：一个具有固定删除、中性和扩增状态的3状态隐马尔可夫模型，对应于绝对拷贝数为1、2和3。适用于生殖细胞样本和大多数二倍体基因组的单细胞测序样本。</p>
+</li>
+<li>
+<p>none：简单地计算每个染色体臂的加权平均log2值。用于测试、调试，或作为其他方法基准测试的基线。</p>
+</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>hemizygous loss
+</span></span></code></pre></div><p>第一个方法cbs在内部使用了R，如果是conda安装的，依赖会自动安装，源码安装的需要另外安装R和R包依赖（即DNAcopy）。如果在非默认位置安装了R包，可以使用&ndash;rscript-path选项指定Rscript可执行文件的位置。HMM方法hmm、hmm-tumor和hmm-germline是在CNVkit v.0.9.2中暂时引入的，可能会在新版本中进行更改。它们依赖于Python包pomegranate，可以通过conda和pip获取。</p>
+<p>haar和none方法除了基本的CNVkit安装外，没有任何额外的依赖。</p>
+<ol start="2">
+<li>bin filtering</li>
+</ol>
+<p>权重为0的bin在segmentation之前会被分割，额外的筛选条件：</p>
+<ul>
+<li>
+<p>&ndash;drop-low-coverage：去除读深为0的或接近0的bin，在肿瘤样本中使用。</p>
+</li>
+<li>
+<p>&ndash;drop-outliers：考虑到局部变异，去除和rolling平均值太远的log2值的区间，默认情况下使用。</p>
+</li>
+</ul>
+<ol start="3">
+<li>SNP allele frequencies</li>
+</ol>
+<p>如果使用&ndash;vcf选项提供了VCF文件（以及相关选项 -i、-n、-z 和 &ndash;min-variant-depth，其工作方式与其他命令相同），则在分段log2比率后，将从VCF中加载的SNP等位基因频率进行每个基于log2比率的segmentation的第二次分割。</p>
+<p>另请参考(获取拷贝数扩增和删除章节)[https://cnvkit.readthedocs.io/en/stable/calling.html]来获取有关如何解释和后处理生成的片段的建议。</p>
+<h3 id="call">call</h3>
+<ol>
+<li>基于给定的segmented log2 ratio估计<code>.cns</code>，获取每个segment的绝对整数拷贝数：</li>
+</ol>
+<ul>
+<li>对于每个拷贝数状态，使用阈值log2值的列表（-m threshold）进行判定。或者，通过重新缩放（根据已知的肿瘤细胞比例和正常倍性），然后简单地四舍五入到最接近的整数拷贝数（-m clonal）。</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>cnvkit.py call Sample.cns -o Sample.call.cns
+</span></span><span style="display:flex;"><span>cnvkit.py call Sample.cns -y -m threshold -t=-1.1,-0.4,0.3,0.7 -o Sample.call.cns
+</span></span><span style="display:flex;"><span>cnvkit.py call Sample.cns -y -m clonal --purity 0.65 -o Sample.call.cns
+</span></span><span style="display:flex;"><span>cnvkit.py call Sample.cns -y -v Sample.vcf -m clonal --purity 0.7 -o Sample.call.cns
+</span></span></code></pre></div><p>输出是另一个.cns文件，其中包含一个额外的“cn”列，列出了每个片段的绝对整数拷贝数。这个.cns文件仍然与其他接受.cns文件的CNVkit命令兼容，并且可以使用scatter、heatmap和diagram命令以相同的方式绘制。要以其他格式（如BED或VCF）获取这些拷贝数值，参考export命令。</p>
+<p>对于具有SNV的VCF文件（-v/&ndash;vcf），会提取肿瘤样本中SNP的b-等位基因频率，并对每个片段进行平均化：</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>cnvkit.py call Sample.cns -y -v Sample.vcf -o Sample.call.cns
+</span></span></code></pre></div><p>分段的b-等位基因频率也用于计算主要和次要等位特异性的整数拷贝数（见下文）。</p>
+<p>另外，选项 `-m none`` 执行重新缩放、重新居中，并从VCF中提取b-等位基因频率（如果需要），但不添加“cn”列或等位拷贝数：</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>cnvkit.py call Sample.cns -v Sample.vcf --purity 0.8 -m none -o Sample.call.cns
+</span></span></code></pre></div><ol start="2">
+<li>Transformations</li>
+</ol>
+<p>如果在分析的肿瘤样本中存在已知水平的正常细胞DNA污染（请参阅肿瘤异质性页面），您可以选择重新缩放您的 .cnr 或 .cns 文件中的log2拷贝比率估计，以消除这种污染的影响，使文件中的结果log2比率值与完全纯净的肿瘤样本观察到的值相匹配。</p>
+<p>通过&ndash;purity选项，log2比率重新缩放为在完全纯净、未污染样本中观察到的值。.cns输入文件中观察到的log2比率被视为某一部分肿瘤细胞（由&ndash;purity指定），可能具有改变的拷贝数，以及剩余的具有中性拷贝数的正常细胞（&ndash;ploidy指定常染色体；默认情况下，常染色体是二倍体，单倍体Y或X/Y取决于参考性别）。该结果被重新排列以找到仅肿瘤细胞的绝对拷贝数，四舍五入到最近的整数。</p>
+<p>不同性染色体（X和Y染色体）的理论值和观察值存在不同，因此如果在构建参考时使用了 -y / &ndash;male-reference / &ndash;haploid-x-reference 选项，则在此处重要的是指定同样的选项。如果已知样本性别，则可以指定样本性别，否则将从染色体X的平均log2比率中猜测样本性别。（另请参阅：染色体性别）。</p>
+<p>当使用 -v/&ndash;vcf 选项提供了同一肿瘤样本（可选包含匹配的正常）的SNV调用的VCF文件时，落在每个片段内的杂合性、非体细胞SNV的b-等位基因频率（BAFs）被mirrored、平均，并列在输出的 .cns 文件中作为额外的“baf”列（使用与<code>export nexus-ogt</code>相同的逻辑）。如果指定了 &ndash;purity，则还将重新缩放BAF值。</p>
+<p>call命令还可以选择重新居中log2值，尽管当归一化到参考并纠正偏差时，.cnr文件通常不需要这样做，因为fix命令会自动将其进行中位数居中。但是，如果分析的基因组高度非等倍性，并且包含广泛的不平衡拷贝数删除或扩增，那么默认的中位数居中可能会使拷贝数中性区域略高于或略低于期望的log2值0。针对这种情况，可以使用 &ndash;center 选项指定替代的居中方法：</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>cnvkit.py call -m none Sample.cns --center mode
+</span></span></code></pre></div><ol start="3">
+<li>Calling methods</li>
+</ol>
+<p>经过上面的矫正后，threshold和clonal方法对每个segment计算绝对整数拷贝数值。</p>
+<p>clonal方法通过给定&ndash;ploidy把log2值转换成绝对值，随后简单的把绝对拷贝数数值四舍五入到最邻近的整数上，该方法对种系(germline)样本、纯度很高的肿瘤样本（比如细胞系等等），或者当肿瘤占比是已知的并且通过&ndash;purity指定的情况下是合理的。</p>
+<p>threshold方法对每个整数拷贝数状态应用固定的log2比率cutoff值，这种方法可以作为指定和矫正肿瘤细胞占比或纯度的替代方法，一旦指定了&ndash;purity，在应用拷贝数cutoff之前仍然会对log2值进行重新的缩放。</p>
+<p>默认的阈值对于至少30%纯度的肿瘤样本是“安全”的。+0.2和-0.25的内部截断值足够敏感，可以在纯度（或亚克隆细胞比例）仅为30%的二倍体肿瘤中检测到单拷贝扩增或删除。但-1.1和+0.7的外部截断值假设100%的纯度，因此更极端的拷贝数，即纯合性缺失（0拷贝）或多拷贝扩增（4+拷贝），只有在有强有力的证据支持时才会被分配给拷贝数变异。对于生殖细胞样本，下面显示的-t值（或-m clonal）可能会产生更精确的结果。</p>
+<p>下表中阈值按顺序映射到整数拷贝数：</p>
+<center>
+      <img src= "https://blog-1310600458.cos.ap-shanghai.myqcloud.com/Macdo2024-01-03%2013.45.35.png" width="600"/>
+      <p><font color="grey"></font></p>
+</center>
+<p>对于已知倍性的homogeneous样本，可以通过：对感兴趣的整数拷贝数值进行对数转换，加上0.5（用于四舍五入），然后除以倍性来计算cutoff。对于二倍体基因组：</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>&gt; log2( (0:4 + .5) / 2)
+</span></span><span style="display:flex;"><span>[1] -2.0000000 -0.4150375  0.3219281  0.8073549  1.1699250
+</span></span></code></pre></div><p>对于任意纯度和倍性：</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>&gt; purity = 0.6
+</span></span><span style="display:flex;"><span>&gt; ploidy = 4
+</span></span><span style="display:flex;"><span>&gt; log2( (1 - purity) + purity * (0:6 + .5) / ploidy )
+</span></span><span style="display:flex;"><span>[1] -1.0740006 -0.6780719 -0.3677318 -0.1124747  0.1043367  0.2927817  0.4594316
+</span></span></code></pre></div><ol start="4">
+<li>等位频率和计数</li>
+</ol>
+<p>如果使用 -v/&ndash;vcf 选项提供了VCF文件，则针对VCF中包含SNV的每个片段，计算该片段内的平均b-等位频率（BAF），并将其输出到“baf”列。然后，从总拷贝数和BAF推断出等位特异性的整数拷贝数值，并输出到“cn1”和“cn2”列。此计算使用与PSCBS相同的方法：总拷贝数乘以BAF，四舍五入至最近的整数。</p>
+<p>当一个片段的“cn1”和“cn2”字段具有不同值时，会显示等位失衡情况，包括拷贝数中性的等位基因丢失（LOH）。</p>
+<ol start="5">
+<li>片段过滤（自版本0.8.0起）</li>
+</ol>
+<p>最后，可以根据多个标准对片段进行过滤，这些标准可以组合使用：</p>
+<ul>
+<li>
+<p>整数拷贝数（cn），合并相邻的相同调用值。</p>
+</li>
+<li>
+<p>仅保留高水平的扩增（5个或更多拷贝）和纯合性缺失（0拷贝）（ampdel）。</p>
+</li>
+<li>
+<p>置信区间与零重叠（ci）。</p>
+</li>
+<li>
+<p>平均标准误差（sem），参数估计的置信区间，其行为类似。</p>
+</li>
+</ul>
+<p>在每种情况下，根据给定标准具有相同值的相邻片段将被合并在一起，并且列值将被适当地重新计算。即使总拷贝数相同，不同染色体上的片段或具有不同等位特异性拷贝数值的片段也不会被合并。</p>
+<h2 id="针对wgs和target-amplicon-capture">针对WGS和target amplicon capture</h2>
+<p>CNVkit最初是基于hybrid capture测序数据设计的，即存在off-target read并提升拷贝数估计。不过，CNVkit仍可用于WGS和targeted amplicon sequencing（TAS）数据。</p>
+<h3 id="wgs">WGS</h3>
+<p>CNVkit把WGS数据，当作给定参考基因组区域为“target”，没有&quot;antitarget&quot;区域的数据，对应命令为“batch &ndash;method wgs”，因为输入没有包含有用的per-target gene label，需要给定gene annotation数据集并在输出中使用标记的基因。</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>cnvkit.py batch Sample1.bam Sample2.bam -n Control1.bam Control2.bam \
+</span></span><span style="display:flex;"><span>        -m wgs -f hg19.fasta --annotate refFlat.txt
+</span></span></code></pre></div><p>为了快速或提升WGS分析的准确性，可以尝试以下方法：</p>
+<ul>
+<li>
+<p>不必分析整个基因组，可以使用“target” BED文件将分析限制在基因区域。例如，您可以从UCSC基因组浏览器获取这样的BED文件。</p>
+</li>
+<li>
+<p>增加“target”的平均bin大小（&ndash;target-avg-size），例如，至少1000个碱基适用于30倍覆盖度，或者对于覆盖度较低的测序，按比例增加更多。【cnvkit是否对浅测序有推荐的碱基数目】</p>
+</li>
+<li>
+<p>指定较小的p值阈值（segment -t）。对于CBS方法，1e-6可能效果不错。或者，尝试hmm分割方法。</p>
+</li>
+<li>
+<p>在batch、coverage和segment命令中使用 -p/&ndash;processes 选项，以确保利用所有可用的CPU。</p>
+</li>
+<li>
+<p>确保您使用的是CNVkit的最新版本。每个版本都包含一些性能改进。</p>
+</li>
+<li>
+<p>关闭reference和fix命令中的“edge”偏差校正（&ndash;no-edge）。</p>
+</li>
+</ul>
+<p><code>batch -m wgs</code>选项自动执行了所有这些操作，除了第一个。</p>
+<h3 id="target-amplicon-sequencing-tas">Target amplicon sequencing (TAS)</h3>
+<p>当目标捕获方法是amplicon sequencing时，不会对off-target区域进行测序。虽然这相对于杂交捕获限制了测序数据中可用的拷贝数信息，但CNVkit可以仅使用on-target覆盖度并从分析中排除所有off-target区域来分析TAS数据。</p>
+<p><code>batch -m amplicon</code>选项使用给定的target推断覆盖度，忽略off-target区域：</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>cnvkit.py batch -m amplicon -t targets.bed *.bam
+</span></span></code></pre></div><p>等同于：</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>cnvkit.py target targets.bed --split -o targets.split.bed
+</span></span><span style="display:flex;"><span># Create a blank file to substitute for antitargets
+</span></span><span style="display:flex;"><span>touch MT
+</span></span><span style="display:flex;"><span># For each sample
+</span></span><span style="display:flex;"><span>cnvkit.py coverage Sample.bam targets.split.bed -p 0 -o Sample.targetcoverage.cnn
+</span></span><span style="display:flex;"><span>cnvkit.py reference *.targetcoverage.cnn --no-edge -o ref-tas.cnn
+</span></span><span style="display:flex;"><span>cnvkit.py fix Sample.targetcoverage.cnn MT ref-tas.cnn --no-edge
+</span></span></code></pre></div><p>这种方法不收集on-target区域之间的任何拷贝数信息，因此只有在确实使用了target amplicon sequencing protocol 准备样本时才应使用，且该方法不尝试在基因水平进一步对每个引物进行规范化，可能会在CNVkit的未来版本中解决。</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>不要在使用此方法测序的样本的BAM文件中标记重复项。
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Picard MarkDuplicates、samtools rmdup等工具旨在标记可能的PCR重复（最初用于WGS数据集，但对于杂交捕获也很有用）。诸如GATK和CNVkit之类的变异调用器会在其内部计算中忽略这些读取，认为这些读取是非独立的测量。（这个SeqAnswers主题提供了详细背景信息）。
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>在目标引物测序中，实际上所有放大的读取都是设计上的PCR重复。通过标记和因此省略这些读取，剩余的覆盖度将会很低，就像没有进行放大一样。
+</span></span></code></pre></div><h3 id="肿瘤样本">肿瘤样本</h3>
+<p>CNVkit广泛应用于实体瘤样本的target panel测序，或全外显子组测序protocol，有几种选项和方法可支持这种情况的使用：</p>
+<ul>
+<li>
+<p>有非成对的肿瘤样本，或者没有在相同平台上测序的正常样本，参考“reference”命令提到的方法。</p>
+</li>
+<li>
+<p>使用&quot;&ndash;drop-low-coverage&quot;选项忽略log2归一化覆盖值低于-15的区间。几乎所有肿瘤样本，甚至是癌细胞系，都不是完全同质的。即使在最大的肿瘤细胞克隆群体的同源性缺失区域，也会从未缺失的污染正常细胞中获得一些测序读数。因此，极低的log2拷贝比值值并不表示同源性缺失，而是失败的测序或匹配，无论该位点的拷贝数状态如何都不是有效信息。该选项在批处理命令中适用于segmentation；也可在segment、metrics、segmetrics、genemetrics和肿瘤异质性命令中使用。</p>
+</li>
+</ul>
+<p>为什么是-15？用于零覆盖bin的空log2值是-20（大约是平均bin覆盖度的百万分之一），通过归一化到参考值可以引入的最大正偏移是5（对于覆盖度为平均覆盖度的1/32的区间；低于此值的区间会被参考所屏蔽）。在.cnr文件中，任何log2值低于-15的区间可能基于对应于零覆盖（可能是无法匹配）的虚拟值，而不是真实观察到的。</p>
+<ul>
+<li>batch命令不直接输出整数拷贝数调用（参考肿瘤异质性）。而是使用call中的&ndash;ploidy和&ndash;purity选项来根据已知或估计的肿瘤细胞比例为每个样本单独计算拷贝数。还考虑在高度非整倍体样本中使用&ndash;center median将真正中性区域的log2值向零点调整，因为初始值可能略有偏差。</li>
+</ul>
+<p>如果有VCF格式的SNV调用，则在call和scatter命令中使用-v/&ndash;vcf选项计算或绘制每个片段的b等位基因频率。这些值显示了等位基因失衡和杂合性失调（LOH），支持和扩展了推断的CNV。</p>
+<h4 id="肿瘤异质性">肿瘤异质性</h4>
+<p>DNA样本从实体瘤中提取很少是纯净的，即样本中通常存在基质或其他正常细胞以及不同亚克隆肿瘤细胞群，这可能会导致分段的log2比值拟合到绝对整数拷贝数过程中出现混乱。</p>
+<p>CNVkit提供了与现有工具和方法整合的多个点，以处理肿瘤异质性和正常细胞污染。</p>
+<h4 id="估计肿瘤纯度和正常污染">估计肿瘤纯度和正常污染</h4>
+<p>通常可以使用以下一种或多种方法大致估计肿瘤纯度：</p>
+<ul>
+<li>
+<p>病理学家可以通过显微镜下检查固体肿瘤的样本来直观估计样本的纯度，计数基质细胞和肿瘤细胞。</p>
+</li>
+<li>
+<p>如果认为肿瘤由体细胞突变驱动，例如黑色素瘤中的BRAF V600E突变，则假定该突变完全是克隆的，其等位基因频率表示肿瘤纯度。这可能会受到同一位点的拷贝数变化以及点突变是纯合性还是杂合性的影响，但同一样本中其他体细胞突变的频率可能会解决这个问题。</p>
+</li>
+<li>
+<p>覆盖了种系杂合性SNP的较大规模hemizygous loss会改变样本中相同SNP的等位基因频率。例如，在50%纯度的肿瘤样本中，这些SNP的等位基因频率将从50%变为67%或33%，假设是二倍体样本（即来自正常样本的2/2拷贝中的1/2，来自肿瘤的0或1拷贝，取决于变异等位基因是丢失还是保留）。一般的计算比#1或#2更为复杂，类似地也可以用于拷贝数增加和纯合性缺失。</p>
+</li>
+<li>
+<p>肿瘤样本中的拷贝数变化的log2比值对应于肿瘤细胞中的整数拷贝数，而这些log2值总体上将聚集在表明亚克隆种群的数值周围，每个亚克隆种群具有特定的多倍体和克隆性。例如，在纯度为50%的肿瘤样本中，单拷贝缺失会有中性位点（2/2正常拷贝，1/2肿瘤拷贝）3/4的覆盖度，因此log2值为log2(.75) = -0.415。这种计算也可以推广到其他拷贝数状态。</p>
+</li>
+</ul>
+<p>后三种方法的工具实现可直接用于DNA测序数据。</p>
+<h4 id="从测序推断肿瘤纯度和亚克隆种群分数">从测序推断肿瘤纯度和亚克隆种群分数</h4>
+<p>目前，推断肿瘤种群结构不在CNVkit的范围内，但可以使用其他第三方工具，例如PureCN、THetA2、PyClone或BubbleTree来完成这项工作。每个工具都可用于估计样本中的肿瘤细胞含量和推断肿瘤亚克隆的整数拷贝数。PureCN可直接接受CNVKit的.cnn和.cnr文件作为输入，推荐使用。</p>
+<h4 id="使用cnvkit与theta2">使用CNVkit与THetA2</h4>
+<p>CNVkit提供了将.cns片段导出为THetA2的输入格式，以及将THetA2的结果文件导入为CNVkit的分段.cns文件的命令。有关使用说明，参考theta和import-theta命令。</p>
+<p>在对样本运行CNVkit并联合对肿瘤和正常样本的SNV之后，可从.cns和.vcf文件生成THetA2的输入文件：</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>cnvkit.py export theta Sample_T.cns reference.cnn -v Sample_Paired.vcf
+</span></span></code></pre></div><p>这将生成三个输出文件：<code>Sample_T.interval_count</code>、<code>Sample_T.tumor.snp_formatted.txt</code>和<code>Sample_T.normal.snp_formatted.txt</code>。</p>
+<p>然后，运行THetA2（假设程序解压在/path/to/theta2/）：</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-mysql" data-lang="mysql"><span style="display:flex;"><span><span style="color:#09f;font-style:italic"># 生成Sample_T.BEST.results：
+</span></span></span><span style="display:flex;"><span><span style="color:#09f;font-style:italic"></span><span style="color:#555">/</span>path<span style="color:#555">/</span><span style="color:#069;font-weight:bold">to</span><span style="color:#555">/</span>theta2<span style="color:#555">/</span>bin<span style="color:#555">/</span>RunTHetA<span style="color:#bbb"> </span>Sample_T.interval_count<span style="color:#bbb"> </span><span style="color:#a00;background-color:#faa">\</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#555">--</span>TUMOR_FILE<span style="color:#bbb"> </span>Sample_T.tumor.snp_formatted.txt<span style="color:#bbb"> </span><span style="color:#a00;background-color:#faa">\</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#555">--</span>NORMAL_FILE<span style="color:#bbb"> </span>Sample_T.normal.snp_formatted.txt<span style="color:#bbb"> </span><span style="color:#a00;background-color:#faa">\</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#555">--</span>BAF<span style="color:#bbb"> </span><span style="color:#555">--</span>NUM_PROCESSES<span style="color:#bbb"> </span><span style="color:#555">`</span>nproc<span style="color:#555">`</span><span style="color:#bbb"> </span><span style="color:#555">--</span><span style="color:#069;font-weight:bold">FORCE</span><span style="color:#bbb">
+</span></span></span></code></pre></div><p>最后，将THetA2的结果导入回CNVkit的.cns格式，把原始分段（.cns）匹配到THetA2推测的绝对拷贝数数值上：</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>cnvkit.py import-theta Sample_T.cns Sample_T.BEST.results
+</span></span></code></pre></div><p>THetA2会调整分段的log2值以符合每个检测到的亚克隆细胞群的推断细胞含量（cellularity）；如果检测到多个克隆性肿瘤细胞群，则可能会产生一个或两个代表亚克隆的.cns文件。THetA2还对每个表示CNA的分段执行一些显著性检验，因此THetA2得出的分段数可能比CNVkit最初发现的分段数要少。</p>
+<p>结果中的.cns文件的segment数值仍然经过log2转换，以方便使用CNVkit进行绘图等操作。这些文件也可以使用export命令轻松转换为其他格式。</p>
+<h4 id="针对正常细胞污染情况调整拷贝数率和segment">针对正常细胞污染情况调整拷贝数率和segment</h4>
+<p>CNVkit的call命令使用肿瘤分数的估计值（任何来源的估计）来直接重新调整分段的log2比值以及存在的SNV b-等位基因频率，使其达到在完全纯净、无污染样本中的值。以下是一个例子，肿瘤纯度为60%，参考样本为男性：</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>cnvkit.py call -m none Sample.cns --purity 0.6 -y -o Sample.call.cns
+</span></span></code></pre></div><p>call命令还可以将分段的log2比率估计转换为绝对整数拷贝数。如果肿瘤细胞比例已经明确，可以使用“-m clonal”方法将log2比率四舍五入至最接近的整数拷贝数。另一种方法是使用“-m threshold”方法来应用硬阈值。需要注意的是，针对纯度的重新缩放是可选的；不管怎样，除非使用“-m none”选项跳过，否则都会产生整数拷贝数。</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>cnvkit.py call -m clonal Sample.cns -y --purity 0.65 -o Sample.call.cns
+</span></span><span style="display:flex;"><span># Or, if already rescaled
+</span></span><span style="display:flex;"><span>cnvkit.py call -m clonal Sample.call.cns -y -o Sample.call.cns
+</span></span><span style="display:flex;"><span># With CNVkit&#39;s default cutoffs
+</span></span><span style="display:flex;"><span>cnvkit.py call -m threshold Sample.cns -y -o Sample.call.cns
+</span></span><span style="display:flex;"><span># Or, using a custom set of cutoffs
+</span></span><span style="display:flex;"><span>cnvkit.py call -t=-1.1,-0.4,0.3,0.7 Sample.cns -y -o Sample.call.cns
+</span></span></code></pre></div><h2 id="导出">导出</h2>
+<p>导出整数拷贝数为BED或VCF格式。</p>
+<p>“export bed”和“export vcf”命令会以标准的BED或VCF格式输出整数拷贝数调用。</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>cnvkit.py export bed Sample.call.cns -y -o Sample.bed
+</span></span><span style="display:flex;"><span>cnvkit.py export vcf Sample.call.cns -y -o Sample.vcf
+</span></span></code></pre></div><p>如果是通过call命令生成的.call.cns文件，其中计算的整数拷贝数也会被导出。</p>
+<h3 id="germline分析">germline分析</h3>
+<p>CNVkit可以用于constitutional sample（非肿瘤）样本的外显子测序一起使用，例如用于检测与遗传状况相关的生殖系拷贝数变异。然而，请注意，CNVkit在检测小于1Mbp的CNV时精度较低，通常只能检测跨越多个外显子或捕获区域的变异。当用于外显子或target panel数据集时，CNVkit将无法检测人群中更常见的小型CNV。</p>
+<p>要使用CNVkit检测constitutional样本中的中型到大型CNV或非平0衡结构变异，请按照以下步骤操作：</p>
+<ul>
+<li>
+<p>可以直接使用call命令，无需指定&ndash;purity和&ndash;ploidy值，因为默认值对于哺乳动物细胞是正确的（对于非二倍体物种，需要使用正确的&ndash;ploidy）。默认的&ndash;method threshold类似于&ndash;method clonal，但对于获取单拷贝变化，有更小的阈值。默认的阈值允许CNV中的镶嵌现象（mosaicism），其对应的log2值比单拷贝CNV所指示的要小。（它们比通常认为的更常见。）</p>
+</li>
+<li>
+<p>&ndash;filter选项在调用中可用于减少返回的假阳性分段数量。要使用ci（推荐）或sem过滤器，首先将每个样本的分段.cns文件通过segmetrics处理，并使用&ndash;ci选项，这将在.cns输出中添加上限和下限置信限，然后call &ndash;filter ci可以使用这些置信限。</p>
+</li>
+<li>
+<p>不应使用&ndash;drop-low-coverage选项（参考肿瘤分析）；它通常会完全删除生殖系深度缺失，这是不可取的。</p>
+</li>
+</ul>
+<p>对于使用CNVkit与全基因组测序数据集，参考全基因组测序和靶向引物捕获。</p>
+<h2 id="参考资料">参考资料</h2>
+<ul>
+<li>
+<p><a href="https://github.com/etal/cnvkit" target="_blank">cnvkit github page</a></p>
+</li>
+<li>
+<p><a href="https://cnvkit.readthedocs.io/en/stable/quickstart.html" target="_blank">cnvkit官方指南</a></p>
+</li>
+</ul></div>
+      </div>
+    </article>
+
+
+
+
+
+
+
+
+
+
+
+<div class="toc">
+
+    <div class="page-header"><strong> 目    录 </strong></div>
+
+
+    <div id="page-scrollspy" class="toc-nav">
+
+        
+        
+            
+                
+                
+                    
+                    <ul class="nav">
+                    
+                    <ul class="nav">
+                    
+                    <ul class="nav">
+                    
+                    
+                        <li class="nav-item">
+                            <a class="nav-link text-left" href="#fix">
+                            fix
+                            </a>
+                        </li>
+                    
+                    
+                    </ul>
+                    
+                    </ul>
+                    
+                    </ul>
+                    
+                
+            
+        
+        
+            
+                
+                
+                    
+                    <ul class="nav">
+                    
+                    <ul class="nav">
+                    
+                    <ul class="nav">
+                    
+                    
+                        <li class="nav-item">
+                            <a class="nav-link text-left" href="#segment">
+                            segment
+                            </a>
+                        </li>
+                    
+                    
+                    </ul>
+                    
+                    </ul>
+                    
+                    </ul>
+                    
+                
+            
+        
+        
+            
+                
+                
+                    
+                    <ul class="nav">
+                    
+                    <ul class="nav">
+                    
+                    <ul class="nav">
+                    
+                    
+                        <li class="nav-item">
+                            <a class="nav-link text-left" href="#call">
+                            call
+                            </a>
+                        </li>
+                    
+                    
+                    </ul>
+                    
+                    </ul>
+                    
+                    </ul>
+                    
+                
+            
+        
+        
+            
+                
+                
+                    
+                    <ul class="nav">
+                    
+                    <ul class="nav">
+                    
+                    
+                        <li class="nav-item">
+                            <a class="nav-link text-left" href="#%e9%92%88%e5%af%b9wgs%e5%92%8ctarget-amplicon-capture">
+                            针对WGS和target amplicon capture
+                            </a>
+                        </li>
+                    
+                    
+                    </ul>
+                    
+                    </ul>
+                    
+                
+            
+        
+        
+            
+                
+                
+                    
+                    <ul class="nav">
+                    
+                    <ul class="nav">
+                    
+                    <ul class="nav">
+                    
+                    
+                        <li class="nav-item">
+                            <a class="nav-link text-left" href="#wgs">
+                            WGS
+                            </a>
+                        </li>
+                    
+                    
+                    </ul>
+                    
+                    </ul>
+                    
+                    </ul>
+                    
+                
+            
+        
+        
+            
+                
+                
+                    
+                    <ul class="nav">
+                    
+                    <ul class="nav">
+                    
+                    <ul class="nav">
+                    
+                    
+                        <li class="nav-item">
+                            <a class="nav-link text-left" href="#target-amplicon-sequencing-tas">
+                            Target amplicon sequencing (TAS)
+                            </a>
+                        </li>
+                    
+                    
+                    </ul>
+                    
+                    </ul>
+                    
+                    </ul>
+                    
+                
+            
+        
+        
+            
+                
+                
+                    
+                    <ul class="nav">
+                    
+                    <ul class="nav">
+                    
+                    <ul class="nav">
+                    
+                    
+                        <li class="nav-item">
+                            <a class="nav-link text-left" href="#%e8%82%bf%e7%98%a4%e6%a0%b7%e6%9c%ac">
+                            肿瘤样本
+                            </a>
+                        </li>
+                    
+                    
+                    </ul>
+                    
+                    </ul>
+                    
+                    </ul>
+                    
+                
+            
+        
+        
+            
+                
+                
+                    
+                    <ul class="nav">
+                    
+                    <ul class="nav">
+                    
+                    <ul class="nav">
+                    
+                    <ul class="nav">
+                    
+                    
+                        <li class="nav-item">
+                            <a class="nav-link text-left" href="#%e8%82%bf%e7%98%a4%e5%bc%82%e8%b4%a8%e6%80%a7">
+                            肿瘤异质性
+                            </a>
+                        </li>
+                    
+                    
+                    </ul>
+                    
+                    </ul>
+                    
+                    </ul>
+                    
+                    </ul>
+                    
+                
+            
+        
+        
+            
+                
+                
+                    
+                    <ul class="nav">
+                    
+                    <ul class="nav">
+                    
+                    <ul class="nav">
+                    
+                    <ul class="nav">
+                    
+                    
+                        <li class="nav-item">
+                            <a class="nav-link text-left" href="#%e4%bc%b0%e8%ae%a1%e8%82%bf%e7%98%a4%e7%ba%af%e5%ba%a6%e5%92%8c%e6%ad%a3%e5%b8%b8%e6%b1%a1%e6%9f%93">
+                            估计肿瘤纯度和正常污染
+                            </a>
+                        </li>
+                    
+                    
+                    </ul>
+                    
+                    </ul>
+                    
+                    </ul>
+                    
+                    </ul>
+                    
+                
+            
+        
+        
+            
+                
+                
+                    
+                    <ul class="nav">
+                    
+                    <ul class="nav">
+                    
+                    <ul class="nav">
+                    
+                    <ul class="nav">
+                    
+                    
+                        <li class="nav-item">
+                            <a class="nav-link text-left" href="#%e4%bb%8e%e6%b5%8b%e5%ba%8f%e6%8e%a8%e6%96%ad%e8%82%bf%e7%98%a4%e7%ba%af%e5%ba%a6%e5%92%8c%e4%ba%9a%e5%85%8b%e9%9a%86%e7%a7%8d%e7%be%a4%e5%88%86%e6%95%b0">
+                            从测序推断肿瘤纯度和亚克隆种群分数
+                            </a>
+                        </li>
+                    
+                    
+                    </ul>
+                    
+                    </ul>
+                    
+                    </ul>
+                    
+                    </ul>
+                    
+                
+            
+        
+        
+            
+                
+                
+                    
+                    <ul class="nav">
+                    
+                    <ul class="nav">
+                    
+                    <ul class="nav">
+                    
+                    <ul class="nav">
+                    
+                    
+                        <li class="nav-item">
+                            <a class="nav-link text-left" href="#%e4%bd%bf%e7%94%a8cnvkit%e4%b8%8etheta2">
+                            使用CNVkit与THetA2
+                            </a>
+                        </li>
+                    
+                    
+                    </ul>
+                    
+                    </ul>
+                    
+                    </ul>
+                    
+                    </ul>
+                    
+                
+            
+        
+        
+            
+                
+                
+                    
+                    <ul class="nav">
+                    
+                    <ul class="nav">
+                    
+                    <ul class="nav">
+                    
+                    <ul class="nav">
+                    
+                    
+                        <li class="nav-item">
+                            <a class="nav-link text-left" href="#%e9%92%88%e5%af%b9%e6%ad%a3%e5%b8%b8%e7%bb%86%e8%83%9e%e6%b1%a1%e6%9f%93%e6%83%85%e5%86%b5%e8%b0%83%e6%95%b4%e6%8b%b7%e8%b4%9d%e6%95%b0%e7%8e%87%e5%92%8csegment">
+                            针对正常细胞污染情况调整拷贝数率和segment
+                            </a>
+                        </li>
+                    
+                    
+                    </ul>
+                    
+                    </ul>
+                    
+                    </ul>
+                    
+                    </ul>
+                    
+                
+            
+        
+        
+            
+                
+                
+                    
+                    <ul class="nav">
+                    
+                    <ul class="nav">
+                    
+                    
+                        <li class="nav-item">
+                            <a class="nav-link text-left" href="#%e5%af%bc%e5%87%ba">
+                            导出
+                            </a>
+                        </li>
+                    
+                    
+                    </ul>
+                    
+                    </ul>
+                    
+                
+            
+        
+        
+            
+                
+                
+                    
+                    <ul class="nav">
+                    
+                    <ul class="nav">
+                    
+                    <ul class="nav">
+                    
+                    
+                        <li class="nav-item">
+                            <a class="nav-link text-left" href="#germline%e5%88%86%e6%9e%90">
+                            germline分析
+                            </a>
+                        </li>
+                    
+                    
+                    </ul>
+                    
+                    </ul>
+                    
+                    </ul>
+                    
+                
+            
+        
+        
+            
+                
+                
+                    
+                    <ul class="nav">
+                    
+                    <ul class="nav">
+                    
+                    
+                        <li class="nav-item">
+                            <a class="nav-link text-left" href="#%e5%8f%82%e8%80%83%e8%b5%84%e6%96%99">
+                            参考资料
+                            </a>
+                        </li>
+                    
+                    
+                    </ul>
+                    
+                    </ul>
+                    
+                
+            
+        
+
+    </div>
+
+</div>
+
+
+
+
+    
+    
     <div class="row">
-      
-      
-      
-
-      
-      <div class="col-lg-8  mb-5 mb-lg-0">
-        
-        
-        <div class="row">
-          
-          <div class="col-md-6">
-            <article class="card mb-4 border-0">
-              
-              
-              <div class="post-slider slider-sm">
-                
-                
-
-
-
-
-
-
-
-
-
-<img loading="lazy" decoding="async" src="https://i.loli.net/2021/11/26/qgC23iprGfZ1Wkt.png" alt="" class="img-fluid w-100" height="" width="">
-
-                
-              </div>
-              
-              
-              <div class="card-body">
-                <h3 class="h4"><a class="post-title" href="/post/2021-11-26_statistic-lsa/">潜在语义分析（LSA）</a></h3>
-                <ul class="list-inline post-meta mb-4">
-                  <li class="list-inline-item"><i class="fas fa-user mr-2"></i>
-                    <a href="/author/ziyu/">Ziyu</a>
-                  </li>
-                  <li class="list-inline-item">Date : November 26, 2021</li>
-                  <li class="list-inline-item">Categories :
-                    <a
-                      href="/categories/%e7%94%9f%e4%bf%a1" class="ml-1">生信
-                    </a>
-                    ,<a
-                      href="/categories/%e7%ae%97%e6%b3%95" class="ml-1">算法
-                    </a>
-                    ,<a
-                      href="/categories/%e7%94%9f%e7%89%a9%e7%bb%9f%e8%ae%a1" class="ml-1">生物统计
-                    </a>
-                    </li>
-                  <li class="list-inline-item">Tags :
-                    <a
-                      href="/tags/%e7%ae%97%e6%b3%95" class="ml-1">算法 </a>
-                    ,<a
-                      href="/tags/%e7%94%9f%e7%89%a9%e7%bb%9f%e8%ae%a1" class="ml-1">生物统计 </a>
-                    
-                  </li>
-                </ul>
-                <p>引言 潜在语义分析（Latent sematic analysis, LSA）是一种无监督的学习方法。特点是通过矩阵分解来完成，使用的是非概率的话题分析模型，可以通过奇异值分解的方法进行矩阵因子分解，特点是分解的矩阵正交，非负矩阵分解是另一种矩阵的因子分解方法，特点是分解的矩阵非负。
-1. 单词向量 …</p>
-                <a href="/post/2021-11-26_statistic-lsa/" class="btn btn-outline-primary">Continue Reading</a>
-              </div>
-            </article>
-          </div>
-          
-          <div class="col-md-6">
-            <article class="card mb-4 border-0">
-              
-              
-              <div class="post-slider slider-sm">
-                
-                
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<picture>
-  <source srcset="/images/post/post-2_hu52d922f08eb8074328849650ddc4504d_195923_545x0_resize_q90_h2_box.webp" media="(max-width: 575px)">
-  <source srcset="/images/post/post-2_hu52d922f08eb8074328849650ddc4504d_195923_600x0_resize_q90_h2_box.webp" media="(max-width: 767px)">
-  <source srcset="/images/post/post-2_hu52d922f08eb8074328849650ddc4504d_195923_700x0_resize_q90_h2_box.webp" media="(max-width: 991px)">
-  <source srcset="/images/post/post-2_hu52d922f08eb8074328849650ddc4504d_195923_1110x0_resize_q90_h2_box.webp">
-  <img loading="lazy" decoding="async" class="img-fluid w-100" src="/images/post/post-2_hu52d922f08eb8074328849650ddc4504d_195923_1110x0_resize_q90_box.jpg" alt="" width="1382" height="628">
-</picture>
- 
- 
- 
-
-
-                
-              </div>
-              
-              
-              <div class="card-body">
-                <h3 class="h4"><a class="post-title" href="/post/2021-11-19_hmm/">隐马尔可夫模型（HMM）</a></h3>
-                <ul class="list-inline post-meta mb-4">
-                  <li class="list-inline-item"><i class="fas fa-user mr-2"></i>
-                    <a href="/author/ziyu/">Ziyu</a>
-                  </li>
-                  <li class="list-inline-item">Date : November 19, 2021</li>
-                  <li class="list-inline-item">Categories :
-                    <a
-                      href="/categories/%e7%94%9f%e4%bf%a1" class="ml-1">生信
-                    </a>
-                    ,<a
-                      href="/categories/%e7%ae%97%e6%b3%95" class="ml-1">算法
-                    </a>
-                    ,<a
-                      href="/categories/%e7%94%9f%e7%89%a9%e7%bb%9f%e8%ae%a1" class="ml-1">生物统计
-                    </a>
-                    </li>
-                  <li class="list-inline-item">Tags :
-                    <a
-                      href="/tags/%e7%94%9f%e7%89%a9%e7%bb%9f%e8%ae%a1" class="ml-1">生物统计 </a>
-                    ,<a
-                      href="/tags/%e7%ae%97%e6%b3%95" class="ml-1">算法 </a>
-                    
-                  </li>
-                </ul>
-                <p>引言 1. 马尔可夫模型的基本概念 来对2段氨基酸序列x和y进行残基比对，认为存在3种比对关系的状态：
- M：残基能够比对上但不一定相等 X：序列x的残基比对到1个空位，或x上发生了1次插入 Y：序列y的残基比对到1个空位，或y上发生了1次插入  序列比对就是在上述3个状态中不断转换的过程：
- \( …</p>
-                <a href="/post/2021-11-19_hmm/" class="btn btn-outline-primary">Continue Reading</a>
-              </div>
-            </article>
-          </div>
-          
-          <div class="col-md-6">
-            <article class="card mb-4 border-0">
-              
-              
-              <div class="post-slider slider-sm">
-                
-                
-
-
-
-
-
-
-
-
-
-<img loading="lazy" decoding="async" src="https://i.loli.net/2021/04/10/kCqSWDjp8VZaI9A.png" alt="" class="img-fluid w-100" height="" width="">
-
-                
-              </div>
-              
-              
-              <div class="card-body">
-                <h3 class="h4"><a class="post-title" href="/post/2021-4-07_p%E5%80%BC/">p值</a></h3>
-                <ul class="list-inline post-meta mb-4">
-                  <li class="list-inline-item"><i class="fas fa-user mr-2"></i>
-                    <a href="/author/ziyu/">Ziyu</a>
-                  </li>
-                  <li class="list-inline-item">Date : April 10, 2021</li>
-                  <li class="list-inline-item">Categories :
-                    <a
-                      href="/categories/%e7%94%9f%e7%89%a9%e7%bb%9f%e8%ae%a1" class="ml-1">生物统计
-                    </a>
-                    </li>
-                  <li class="list-inline-item">Tags :
-                    <a
-                      href="/tags/%e7%94%9f%e7%89%a9%e7%bb%9f%e8%ae%a1" class="ml-1">生物统计 </a>
-                    
-                  </li>
-                </ul>
-                <p>介绍  p值的含义    假设存在药物A和药物B，想知道两种药物的区别？
-维基百科定义：p值是假设检验中假设零假设为真时观测到至少与实际观测样本相同极端的样本的概率（似乎很拗口）。
-p值是介于0-1之间的数字，量化我们相信两种药物不同的信心，p值越接近0，越相信两者不同。当p的阈值为0.05意味着， …</p>
-                <a href="/post/2021-4-07_p%E5%80%BC/" class="btn btn-outline-primary">Continue Reading</a>
-              </div>
-            </article>
-          </div>
-          
-          <div class="col-md-6">
-            <article class="card mb-4 border-0">
-              
-              
-              <div class="post-slider slider-sm">
-                
-                
-
-
-
-
-
-
-
-
-
-<img loading="lazy" decoding="async" src="https://i.loli.net/2021/04/15/FMqBY6morl1hzvD.png" alt="" class="img-fluid w-100" height="" width="">
-
-                
-              </div>
-              
-              
-              <div class="card-body">
-                <h3 class="h4"><a class="post-title" href="/post/2021-4-11_%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92/">逻辑回归</a></h3>
-                <ul class="list-inline post-meta mb-4">
-                  <li class="list-inline-item"><i class="fas fa-user mr-2"></i>
-                    <a href="/author/ziyu/">Ziyu</a>
-                  </li>
-                  <li class="list-inline-item">Date : April 6, 2021</li>
-                  <li class="list-inline-item">Categories :
-                    <a
-                      href="/categories/%e7%94%9f%e7%89%a9%e7%bb%9f%e8%ae%a1" class="ml-1">生物统计
-                    </a>
-                    </li>
-                  <li class="list-inline-item">Tags :
-                    <a
-                      href="/tags/%e7%94%9f%e7%89%a9%e7%bb%9f%e8%ae%a1" class="ml-1">生物统计 </a>
-                    
-                  </li>
-                </ul>
-                <p>引言  线性回归  假设数据包含 尺寸 和 重量 两组，根据这两组数据用 最小二乘法 拟合一条线后，我们可以做如下的事情：
-  计算r平方来确定两个变量是否相关
-  计算p值确定R平方是否具有统计显著性</p>
-                <a href="/post/2021-4-11_%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92/" class="btn btn-outline-primary">Continue Reading</a>
-              </div>
-            </article>
-          </div>
-          
+      <div class="col-lg-10 mx-auto">
+        <div class="mt-5">
+          <div id="disqus_thread"></div>
+<script type="application/javascript">
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "themefisher-template" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
         </div>
-        
-        
-
-        
-        
-        
-        
-        
-        
-        
-        
       </div>
-      
-
-      
-      
-      <aside class="col-lg-4">
-        <div class="pl-0 pl-lg-4"><!-- Search -->
-
-<div class="widget">
-  <h5 class="widget-title"><span>Search</span></h5>
-  <form action="/search" class="widget-search">
-    <input id="search-query" name="s" type="search" placeholder="Type &amp; Hit Enter...">
-    <button type="submit" class="btn btn-primary" aria-label="Search Post"><i class="fas fa-search"></i></button>
-  </form>
-</div>
-<!-- about me -->
-<div class="widget widget-about">
-  
-  <h5 class="widget-title"><span>Hi, I Am Ziyu Tao</span></h5>
-  <div class="d-flex">
-
-    
-    
-    
-    
-    
-    <img class="img-fluid widget-about-image" loading="lazy" src="https://blog-1310600458.cos.ap-shanghai.myqcloud.com/20220408140841.png" alt="">
-    
-
-    <div class="mb-2">
-      <span class="d-block">上海科技大学在读博士生。
-研究方向：癌症基因组学。
-Find your passion and then aim to be the best on the …</span>
-      
-      <ul class="list-inline social-icons mb-1 mt-2">
-        
-        <li class="list-inline-item"><a href="https://facebook.com"><i class="fab fa-facebook"></i></a></li>
-        
-      </ul>
-      <a href="/about/" class="btn btn-sm btn-primary p-1 px-3 rounded mt-2">About Me</a>
     </div>
-  </div>
-  
-  
-</div><!-- Promotion -->
-
-<div class="promotion">
-  
-  
-  <img loading="lazy" decoding="async" class="w-100" width="330" height="390" src="/images/promotion_hu6a90c30421148ac00753954565e9ea00_18207_330x0_resize_q90_h2_box.webp" alt="promotion-image">
-  <div class="promotion-content">
-    <h5 class="text-white mb-3">Create Stunning Website!!</h5>
-    <p class="text-white mb-4">Lorem ipsum dolor sit amet, consectetur sociis. Etiam nunc amet id dignissim. Feugiat id tempor vel sit ornare.</p>
-    <a href="https://themefisher.com/" class="btn btn-primary">Get Started</a>
-  </div>
-</div>
-<!-- Search -->
-
-
-<div class="widget">
-  <h5 class="widget-title"><span>Subscribe Newsletter</span></h5>
-  <form action="https://gmail.us4.list-manage.com/subscribe/post?u=463ee871f45d2d93748e77cad&amp;amp;id=a0a2c6d074" method="post" name="mc-embedded-subscribe-form" target="_blank"
-    class="widget-search">
-    <input class="mb-3" id="search-query" name="s" type="search" placeholder="Your Email Address">
-    <i class="ti-email"></i>
-    <button type="submit" class="btn btn-primary" name="subscribe" aria-label="Subscribe Newsletter"><i class="fas fa-paper-plane"></i></button>
-    <div style="position: absolute; left: -5000px;" aria-hidden="true">
-      <input type="text" name="b_463ee871f45d2d93748e77cad_a0a2c6d074" tabindex="-1">
-    </div>
-  </form>
-</div>
-
-<!-- categories -->
-<div class="widget">
-  <h5 class="widget-title"><span>Categories</span></h5>
-  <ul class="list-unstyled widget-list">
-    <li><a href="/categories/bug" class="d-flex">Bug
-        <small class="ml-auto">(4)</small></a></li>
-    <li><a href="/categories/photography" class="d-flex">Photography
-        <small class="ml-auto">(1)</small></a></li>
-    <li><a href="/categories/r" class="d-flex">R
-        <small class="ml-auto">(13)</small></a></li>
-    <li><a href="/categories/shell" class="d-flex">Shell
-        <small class="ml-auto">(25)</small></a></li>
-    <li><a href="/categories/%e5%8f%af%e8%a7%86%e5%8c%96" class="d-flex">可视化
-        <small class="ml-auto">(2)</small></a></li>
-    <li><a href="/categories/%e5%a6%82%e4%bd%95%e7%a7%91%e7%a0%94" class="d-flex">如何科研
-        <small class="ml-auto">(1)</small></a></li>
-    <li><a href="/categories/%e6%8a%80%e6%9c%af" class="d-flex">技术
-        <small class="ml-auto">(7)</small></a></li>
-    <li><a href="/categories/%e6%9c%ba%e5%99%a8%e5%ad%a6%e4%b9%a0" class="d-flex">机器学习
-        <small class="ml-auto">(3)</small></a></li>
-    <li><a href="/categories/%e7%94%9f%e4%bf%a1" class="d-flex">生信
-        <small class="ml-auto">(8)</small></a></li>
-    <li><a href="/categories/%e7%94%9f%e4%bf%a1%e5%b7%a5%e5%85%b7" class="d-flex">生信工具
-        <small class="ml-auto">(27)</small></a></li>
-    <li><a href="/categories/%e7%94%9f%e7%89%a9%e5%ad%a6" class="d-flex">生物学
-        <small class="ml-auto">(5)</small></a></li>
-    <li><a href="/categories/%e7%94%9f%e7%89%a9%e7%bb%9f%e8%ae%a1" class="d-flex">生物统计
-        <small class="ml-auto">(4)</small></a></li>
-    <li><a href="/categories/%e7%99%8c%e7%97%87%e5%9f%ba%e5%9b%a0%e7%bb%84%e5%ad%a6" class="d-flex">癌症基因组学
-        <small class="ml-auto">(6)</small></a></li>
-    <li><a href="/categories/%e7%ae%97%e6%b3%95" class="d-flex">算法
-        <small class="ml-auto">(3)</small></a></li>
-    <li><a href="/categories/%e8%ae%a1%e7%ae%97%e6%9c%ba%e5%9f%ba%e7%a1%80" class="d-flex">计算机基础
-        <small class="ml-auto">(2)</small></a></li>
-  </ul>
-</div><!-- latest post -->
-<div class="widget">
-  <h5 class="widget-title"><span>Latest Article</span></h5>
-  <!-- post-item -->
-  <ul class="list-unstyled widget-list mb-0">
-  
-    <li class="media widget-post align-items-center">
-      <a href="https://taozyblog.com.cn/post/2024-01-03_cnvkit_usage/">        
-        
-        
-        
-        <img loading="lazy" class="mr-3" src="https://blog-1310600458.cos.ap-shanghai.myqcloud.com/pcbi.1004873.g001.png" alt="post image">
-        
-        
-        
-      </a>
-      <div class="media-body">
-        <h5 class="h6 mb-0"><a href="https://taozyblog.com.cn/post/2024-01-03_cnvkit_usage/">CNVKit使用方法【1】</a></h5>
-        <small>January 3, 2024</small>
-      </div>
-    </li>
-  
-    <li class="media widget-post align-items-center">
-      <a href="https://taozyblog.com.cn/post/2024-01-03_cnvkit_usage2/">        
-        
-        
-        
-        <img loading="lazy" class="mr-3" src="https://blog-1310600458.cos.ap-shanghai.myqcloud.com/pcbi.1004873.g001.png" alt="post image">
-        
-        
-        
-      </a>
-      <div class="media-body">
-        <h5 class="h6 mb-0"><a href="https://taozyblog.com.cn/post/2024-01-03_cnvkit_usage2/">CNVKit使用方法【2】</a></h5>
-        <small>January 3, 2024</small>
-      </div>
-    </li>
-  
-    <li class="media widget-post align-items-center">
-      <a href="https://taozyblog.com.cn/post/2024-01-02_cnvkit_install_error/">        
-        
-        
-        
-        <img loading="lazy" class="mr-3" src="https://blog-1310600458.cos.ap-shanghai.myqcloud.com/Macdo2024-01-02%2012.49.04.png" alt="post image">
-        
-        
-        
-      </a>
-      <div class="media-body">
-        <h5 class="h6 mb-0"><a href="https://taozyblog.com.cn/post/2024-01-02_cnvkit_install_error/">CNVKit：ImportError: cannot import name &#39;Int64Index&#39; from &#39;pandas&#39;</a></h5>
-        <small>January 2, 2024</small>
-      </div>
-    </li>
-  
-  </ul>
-</div><!-- tags -->
-<div class="widget">
-  <h5 class="widget-title"><span>Tags</span></h5>
-  <ul class="list-inline widget-list-inline">
-    <li class="list-inline-item"><a href="/tags/bug">Bug</a></li>
-    <li class="list-inline-item"><a href="/tags/excel">Excel</a></li>
-    <li class="list-inline-item"><a href="/tags/image">Image</a></li>
-    <li class="list-inline-item"><a href="/tags/latex">Latex</a></li>
-    <li class="list-inline-item"><a href="/tags/linux">Linux</a></li>
-    <li class="list-inline-item"><a href="/tags/markdown">Markdown</a></li>
-    <li class="list-inline-item"><a href="/tags/mysql">Mysql</a></li>
-    <li class="list-inline-item"><a href="/tags/photo">Photo</a></li>
-    <li class="list-inline-item"><a href="/tags/posterdown">Posterdown</a></li>
-    <li class="list-inline-item"><a href="/tags/r">R</a></li>
-    <li class="list-inline-item"><a href="/tags/r%e5%8c%85">R包</a></li>
-    <li class="list-inline-item"><a href="/tags/r%e5%8c%85%e5%bc%80%e5%8f%91">R包开发</a></li>
-    <li class="list-inline-item"><a href="/tags/shell">Shell</a></li>
-    <li class="list-inline-item"><a href="/tags/%e5%8d%9a%e5%ae%a2">博客</a></li>
-    <li class="list-inline-item"><a href="/tags/%e5%8e%9f%e5%a7%8b%e6%95%b0%e6%8d%ae%e5%a4%84%e7%90%86">原始数据处理</a></li>
-    <li class="list-inline-item"><a href="/tags/%e5%8f%af%e8%a7%86%e5%8c%96">可视化</a></li>
-    <li class="list-inline-item"><a href="/tags/%e6%8b%b7%e8%b4%9d%e6%95%b0%e5%8f%98%e5%bc%82">拷贝数变异</a></li>
-    <li class="list-inline-item"><a href="/tags/%e6%95%b0%e6%8d%ae%e5%a4%84%e7%90%86">数据处理</a></li>
-    <li class="list-inline-item"><a href="/tags/%e6%9c%ba%e5%99%a8%e5%ad%a6%e4%b9%a0">机器学习</a></li>
-    <li class="list-inline-item"><a href="/tags/%e7%94%9f%e7%89%a9%e6%a0%87%e5%bf%97%e7%89%a9">生物标志物</a></li>
-    <li class="list-inline-item"><a href="/tags/%e7%94%9f%e7%89%a9%e7%bb%9f%e8%ae%a1">生物统计</a></li>
-    <li class="list-inline-item"><a href="/tags/%e7%99%8c%e7%97%87%e5%9f%ba%e5%9b%a0%e7%bb%84%e5%ad%a6">癌症基因组学</a></li>
-    <li class="list-inline-item"><a href="/tags/%e7%a7%91%e7%a0%94%e5%86%99%e4%bd%9c">科研写作</a></li>
-    <li class="list-inline-item"><a href="/tags/%e7%ae%97%e6%b3%95">算法</a></li>
-    <li class="list-inline-item"><a href="/tags/%e8%ae%a1%e7%ae%97%e6%9c%ba%e5%9f%ba%e7%a1%80">计算机基础</a></li>
-    <li class="list-inline-item"><a href="/tags/%e8%bd%af%e4%bb%b6%e4%bd%bf%e7%94%a8">软件使用</a></li>
-  </ul>
-</div><!-- Social -->
-<div class="widget">
-  <h5 class="widget-title"><span>Social Links</span></h5>
-  <ul class="list-inline widget-list-inline mb-3">
     
-    <li class="list-inline-item"><a href="#" style="padding:5px 15px"><i class="fab fa-facebook"></i></a></li>
-    
-    <li class="list-inline-item"><a href="#" style="padding:5px 15px"><i class="fab fa-twitter"></i></a></li>
-    
-    <li class="list-inline-item"><a href="#" style="padding:5px 15px"><i class="fab fa-linkedin-in"></i></a></li>
-    
-    <li class="list-inline-item"><a href="#" style="padding:5px 15px"><i class="fab fa-github"></i></a></li>
-    
-  </ul>
-</div></div>
-      </aside>
-      
-      
-    </div>
   </div>
 </section>
 
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https:\/\/taozyblog.com.cn\/post\/2024-01-03_cnvkit_usage2\/"
+    },
+    "headline": "CNVKit使用方法【2】",
+    "description": "",
+    "image": "",  
+    "author": {
+      "@type": "Person",
+      "name": "Ziyu"
+    },  
+    "publisher": {
+      "@type": "Organization",
+      "name": "",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "images\/logo.png"
+      }
+    },
+    "datePublished": "2024-01-03"
+  }
+  
+</script>
 
 
 
