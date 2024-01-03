@@ -3,16 +3,31 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://taozyblog.com.cn/post/</loc>
-    <lastmod>2023-12-29T00:00:00+00:00</lastmod>
+    <lastmod>2024-01-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://taozyblog.com.cn/tags/bug/</loc>
+    <lastmod>2024-01-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://taozyblog.com.cn/categories/bug/</loc>
+    <lastmod>2024-01-03T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://taozyblog.com.cn/categories/</loc>
-    <lastmod>2023-12-29T00:00:00+00:00</lastmod>
+    <lastmod>2024-01-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://taozyblog.com.cn/post/2024-01-03_cnvkit_usage/</loc>
+    <lastmod>2024-01-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://taozyblog.com.cn/post/2024-01-03_cnvkit_usage-copy/</loc>
+    <lastmod>2024-01-03T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://taozyblog.com.cn/tags/</loc>
-    <lastmod>2023-12-29T00:00:00+00:00</lastmod>
+    <lastmod>2024-01-03T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://taozyblog.com.cn/</loc>
-    <lastmod>2023-12-29T00:00:00+00:00</lastmod>
+    <lastmod>2024-01-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://taozyblog.com.cn/post/2024-01-02_cnvkit_install_error/</loc>
+    <lastmod>2024-01-02T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://taozyblog.com.cn/post/2023-12-29_plot_pairheatmap/</loc>
     <lastmod>2023-12-29T00:00:00+00:00</lastmod>
@@ -367,12 +382,6 @@
   </url><url>
     <loc>https://taozyblog.com.cn/post/2021-6-7_%E9%85%8D%E7%BD%AE%E5%BD%92%E6%A1%A3/</loc>
     <lastmod>2021-06-07T15:40:24+06:00</lastmod>
-  </url><url>
-    <loc>https://taozyblog.com.cn/tags/bug/</loc>
-    <lastmod>2021-06-04T15:40:24+06:00</lastmod>
-  </url><url>
-    <loc>https://taozyblog.com.cn/categories/bug/</loc>
-    <lastmod>2021-06-04T15:40:24+06:00</lastmod>
   </url><url>
     <loc>https://taozyblog.com.cn/post/2021-6-4_torch1.5.1_error/</loc>
     <lastmod>2021-06-04T15:40:24+06:00</lastmod>
