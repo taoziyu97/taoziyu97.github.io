@@ -7,13 +7,13 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Design By [Themefisher](https://themefisher.com/) Develop By [Gethugothemes](https://gethugothemes.com/)</copyright>
-    <lastBuildDate>Wed, 03 Jan 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://taozyblog.com.cn/categories/bug/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 04 Jan 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://taozyblog.com.cn/categories/bug/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>CNVKit使用方法【1】</title>
-      <link>https://taozyblog.com.cn/post/2024-01-03_cnvkit_usage/</link>
-      <pubDate>Wed, 03 Jan 2024 00:00:00 +0000</pubDate>
+      <link>https://taozyblog.com.cn/post/2024-01-04_cnvkit_usage/</link>
+      <pubDate>Thu, 04 Jan 2024 00:00:00 +0000</pubDate>
       
-      <guid>https://taozyblog.com.cn/post/2024-01-03_cnvkit_usage/</guid>
+      <guid>https://taozyblog.com.cn/post/2024-01-04_cnvkit_usage/</guid>
       <description>&lt;p&gt;介绍cnvkit的使用方法和原理。示例是：使用WGS测序数据从fastq到绝对拷贝数结果的例子。&lt;/p&gt;
 &lt;hr&gt;</description>
     </item>
@@ -35,6 +35,16 @@
       
       <guid>https://taozyblog.com.cn/post/2024-01-02_cnvkit_install_error/</guid>
       <description>&lt;p&gt;解决使用cnvkit中出现的报错。&lt;/p&gt;
+&lt;hr&gt;</description>
+    </item>
+    
+    <item>
+      <title>TypeError: batch_run_sample() takes from 16 to 17 positional arguments but 18 were given</title>
+      <link>https://taozyblog.com.cn/post/2024-01-02_cnvkit_error/</link>
+      <pubDate>Tue, 02 Jan 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://taozyblog.com.cn/post/2024-01-02_cnvkit_error/</guid>
+      <description>&lt;p&gt;解决使用cnvkit运行中出现的报错。&lt;/p&gt;
 &lt;hr&gt;</description>
     </item>
     
