@@ -106,14 +106,14 @@
 
 
 <meta property="og:title" content="CNVKit使用方法【1】" />
-<meta property="og:description" content="介绍cnvkit的使用方法和原理。
+<meta property="og:description" content="介绍cnvkit的使用方法和原理。示例是：使用WGS测序数据从fastq到绝对拷贝数结果的例子。
 " />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://taozyblog.com.cn/post/2024-01-03_cnvkit_usage/" />
 
 
 <meta name="twitter:title" content="CNVKit使用方法【1】" />
-<meta name="twitter:description" content="介绍cnvkit的使用方法和原理。
+<meta name="twitter:description" content="介绍cnvkit的使用方法和原理。示例是：使用WGS测序数据从fastq到绝对拷贝数结果的例子。
 " />
 
 
@@ -370,7 +370,7 @@
         </ul>
       </div>
       <div class="col-lg-10 mx-auto">
-        <div class="content" ><p>介绍cnvkit的使用方法和原理。</p>
+        <div class="content" ><p>介绍cnvkit的使用方法和原理。示例是：使用WGS测序数据从fastq到绝对拷贝数结果的例子。</p>
 <hr>
 <p>CNVkit解决的问题范畴：</p>
 <ul>
@@ -407,6 +407,9 @@
 </span></span></code></pre></div><p>cnvkit的子命令的参数也通过-h来查询：</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>cnvkit.py -h
 </span></span><span style="display:flex;"><span>cnvkit.py target -h
+</span></span></code></pre></div><p>注意使用2pip3或源码安装时，要额外安装R和R包DNAcopy。</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>conda install r-base
+</span></span><span style="display:flex;"><span>conda install bioconda::bioconductor-dnacopy
 </span></span></code></pre></div><h2 id="1-参考基因组下载">1. 参考基因组下载</h2>
 <ol>
 <li>
@@ -578,7 +581,7 @@
 <p>如果提供了参考基因组的FASTA文件，对于每个基因组bin，计算并存储GC的比例（子序列中“G”和“C”字符占所有“A”、“T”、“G”和“C”字符的比例，忽略“N”和任何其他模糊字符）和重复掩码值&quot;repeat-masked&quot;（序列中小写的非“N”字符的比例）作为“reference.cnn”文件的“gc”和“rmask”列。为了提高效率，samtools FASTA索引文件（.fai）用于定位FASTA文件中的binned序列区域。如果使用&ndash;no-gc或&ndash;no-rmask选项跳过GC或RepeatMasker偏差校正，则输出文件中将省略这些列；如果两者都被跳过，则根本不检查基因组FASTA文件。</p>
 <p>最终得到的是一个参考拷贝数profile文件，可以用于校正其他单个样本。</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>&#34;Repeat-masked&#34; 是指在基因组序列中屏蔽掉重复序列部分的过程。基因组中存在许多重复性序列，这些序列可能在不同区域重复出现，包括转座子、重复元件等。为了避免这些重复序列对分析造成影响，通常会对基因组序列进行“掩盖”（mask），即将这些重复序列的部分标记为无效或不参与分析的区域。这通常以特殊的字符标记或将其标记为小写字母来实现，在分析过程中会忽略这些标记的区域，从而更准确地分析非重复部分的基因组序列。
-</span></span></code></pre></div><h2 id="示例">示例</h2>
+</span></span></code></pre></div><h2 id="示例对wgs测序数据使用cnvkit提取cna">示例：对WGS测序数据使用cnvkit提取CNA</h2>
 <ul>
 <li>bam文件的准备</li>
 </ul>
@@ -587,18 +590,45 @@
 <p>使用samtools view命令将bwa mem比对得到的SAM格式的数据转换为BAM格式，选项-Shu -表示输入来自标准输入，然后使用samtools sort命令对BAM文件进行排序。选项-m 4G指定排序时使用的内存大小为4G，-@4指定使用4个线程，并将排序后的结果输出到./out_raw/SRR8236745.cs.bam文件中。</p>
 <p>执行过程中的错误信息通过2&gt;重定向到./out_raw/SRR8236745_aln_stage.stderr文件中。</p>
 <ul>
-<li>使用cnvkik提取SRR8236745的拷贝数变异</li>
+<li>使用cnvkik提取没有配对样本的肿瘤样本拷贝数变异</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>python3 cnvkit.py batch \
-</span></span><span style="display:flex;"><span>-m wgs \
-</span></span><span style="display:flex;"><span>-r /data_repo/GRCh38/GRCh38_cnvkit_filtered_ref.cnn \
-</span></span><span style="display:flex;"><span>-p 50 \
-</span></span><span style="display:flex;"><span>-d ./out_raw/SRR8236745_cnvkit_output/ ./out_raw/SRR8236745.cs.rmdup.bam
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>ref=/public/home/chengjing2/taozy/ecDNA/data_repo/GRCh37
+</span></span><span style="display:flex;"><span>tumor=/public/home/sample
+</span></span><span style="display:flex;"><span>out=/public/home/cnvkit/result
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>python3 cnvkit.py segment ./out_raw/SRR8236745_cnvkit_output/SRR8236745.cs.rmdup.cnr  \
-</span></span><span style="display:flex;"><span>-p 50 \
-</span></span><span style="display:flex;"><span>-m cbs \
-</span></span><span style="display:flex;"><span>-o ./out_raw/SRR8236745_cnvkit_output/SRR8236745.cs.rmdup.cns
+</span></span><span style="display:flex;"><span>cnvkit.py batch $tumor/tumor.bam \
+</span></span><span style="display:flex;"><span>-m wgs \
+</span></span><span style="display:flex;"><span>-n \ 
+</span></span><span style="display:flex;"><span>-f $ref/hs37d5.fa \
+</span></span><span style="display:flex;"><span>-d $out/
+</span></span></code></pre></div><p>注意，batch的命令实际上完成了以下所有的内容：</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>cnvkit.py access hg19.fa -o access.hg19.bed
+</span></span><span style="display:flex;"><span>cnvkit.py autobin *.bam -t baits.bed -g access.hg19.bed [--annotate refFlat.txt --short-names]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># For each sample...
+</span></span><span style="display:flex;"><span>cnvkit.py coverage Sample.bam baits.target.bed -o Sample.targetcoverage.cnn
+</span></span><span style="display:flex;"><span>cnvkit.py coverage Sample.bam baits.antitarget.bed -o Sample.antitargetcoverage.cnn
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># With all normal samples...
+</span></span><span style="display:flex;"><span>cnvkit.py reference *Normal.{,anti}targetcoverage.cnn --fasta hg19.fa -o my_reference.cnn
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># For each tumor sample...
+</span></span><span style="display:flex;"><span>cnvkit.py fix Sample.targetcoverage.cnn Sample.antitargetcoverage.cnn my_reference.cnn -o Sample.cnr
+</span></span><span style="display:flex;"><span>cnvkit.py segment Sample.cnr -o Sample.cns
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># Optionally, with --scatter and --diagram
+</span></span><span style="display:flex;"><span>cnvkit.py scatter Sample.cnr -s Sample.cns -o Sample-scatter.pdf
+</span></span><span style="display:flex;"><span>cnvkit.py diagram Sample.cnr -s Sample.cns -o Sample-diagram.pdf
+</span></span></code></pre></div><p>输出文件夹中内容：</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>hs37d5.antitarget.bed
+</span></span><span style="display:flex;"><span>hs37d5.target.bed
+</span></span><span style="display:flex;"><span>tumor.antitargetcoverage.cnn  
+</span></span><span style="display:flex;"><span>tumor.cnr                 
+</span></span><span style="display:flex;"><span>tumor.bintest.cns             
+</span></span><span style="display:flex;"><span>tumor.cns                 
+</span></span><span style="display:flex;"><span>tumor.call.cns                
+</span></span><span style="display:flex;"><span>tumor.targetcoverage.cnn  
+</span></span><span style="display:flex;"><span>reference.cnn
 </span></span></code></pre></div><h2 id="参考资料">参考资料</h2>
 <ul>
 <li>
@@ -1096,8 +1126,8 @@
                     
                     
                         <li class="nav-item">
-                            <a class="nav-link text-left" href="#%e7%a4%ba%e4%be%8b">
-                            示例
+                            <a class="nav-link text-left" href="#%e7%a4%ba%e4%be%8b%e5%af%b9wgs%e6%b5%8b%e5%ba%8f%e6%95%b0%e6%8d%ae%e4%bd%bf%e7%94%a8cnvkit%e6%8f%90%e5%8f%96cna">
+                            示例：对WGS测序数据使用cnvkit提取CNA
                             </a>
                         </li>
                     
