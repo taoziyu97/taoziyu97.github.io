@@ -752,21 +752,40 @@
 </span></span><span style="display:flex;"><span>| dog     | f    |        1 |
 </span></span><span style="display:flex;"><span>| dog     | m    |        2 |
 </span></span><span style="display:flex;"><span>+---------+------+----------+
-</span></span></code></pre></div><h2 id="10-使用多个表格">10. 使用多个表格</h2>
-<p>举例：存在两个表格：pet和event，使用pet中的YEAR，birth，date来计算age，</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>mysql&gt; SELECT pet.name,
-</span></span><span style="display:flex;"><span>       TIMESTAMPDIFF(YEAR,birth,date) AS age,
-</span></span><span style="display:flex;"><span>       remark
-</span></span><span style="display:flex;"><span>       FROM pet INNER JOIN event
-</span></span><span style="display:flex;"><span>         ON pet.name = event.name
-</span></span><span style="display:flex;"><span>       WHERE event.type = &#39;litter&#39;;
-</span></span><span style="display:flex;"><span>+--------+------+-----------------------------+
-</span></span><span style="display:flex;"><span>| name   | age  | remark                      |
-</span></span><span style="display:flex;"><span>+--------+------+-----------------------------+
-</span></span><span style="display:flex;"><span>| Fluffy |    2 | 4 kittens, 3 female, 1 male |
-</span></span><span style="display:flex;"><span>| Buffy  |    4 | 5 puppies, 2 female, 3 male |
-</span></span><span style="display:flex;"><span>| Buffy  |    5 | 3 puppies, 3 female         |
-</span></span><span style="display:flex;"><span>+--------+------+-----------------------------+
+</span></span></code></pre></div><h2 id="10-使用多个表格多表查询">10. 使用多个表格：多表查询</h2>
+<p>注意，多表查询需要有连接条件，否则会出现笛卡尔积的错误。</p>
+<ol>
+<li>等值连接</li>
+</ol>
+<p>举例：使用iGMDR数据库中内容：</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>drug_gene &lt;- dbGetQuery(con,&#39;select * from drug_gene&#39;)
+</span></span><span style="display:flex;"><span>gene_info &lt;- dbGetQuery(con,&#39;select * from gene_info&#39;)
+</span></span></code></pre></div><center>
+      <img src= "https://blog-1310600458.cos.ap-shanghai.myqcloud.com/Macdo2024-01-04%2016.09.09.png" width="150"/>
+      <img src= "https://blog-1310600458.cos.ap-shanghai.myqcloud.com/Macdo2024-01-04%2016.08.59.png" width="400"/>
+      <p><font color="grey">左：drug_gene, 右：gene_info</font></p>
+</center>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>multitable &lt;- dbGetQuery(
+</span></span><span style="display:flex;"><span>  con,
+</span></span><span style="display:flex;"><span>  &#39;SELECT *
+</span></span><span style="display:flex;"><span>  FROM gene_info, drug_gene
+</span></span><span style="display:flex;"><span>  WHERE gene_info.gene_id = drug_gene.gene_id AND gene_info.gene_id = 5789
+</span></span><span style="display:flex;"><span>  LIMIT 3&#39;
+</span></span><span style="display:flex;"><span>  )
+</span></span></code></pre></div><center>
+      <img src= "https://blog-1310600458.cos.ap-shanghai.myqcloud.com/Macdo2024-01-04%2016.14.34.png" width="400"/>
+      <p><font color="grey"></font></p>
+</center>
+<ol start="2">
+<li>非等值连接</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>multitable.unequal &lt;- dbGetQuery(
+</span></span><span style="display:flex;"><span>  con,
+</span></span><span style="display:flex;"><span>  &#39;SELECT *
+</span></span><span style="display:flex;"><span>  FROM gene_info, drug_gene
+</span></span><span style="display:flex;"><span>  WHERE gene_info.gene_id BETWEEN 5789 AND 5800
+</span></span><span style="display:flex;"><span>  LIMIT 3&#39;
+</span></span><span style="display:flex;"><span>)
 </span></span></code></pre></div><ul>
 <li>
 <p>FROM连接两个表中的信息，两个表中的name</p>
@@ -781,7 +800,6 @@
 <p>由于名称列出现在两个表中，因此在引用该列时必须具体说明所指的是哪个表。 这是通过将表名添加到列名之前来完成的。</p>
 </li>
 </ul>
-<p>除此之外还可以对同一个表格中的内容进行关联。此处省去这部分的介绍。</p>
 <h2 id="11-关闭数据库连接">11. 关闭数据库连接</h2>
 <p>再R中用完MySQL数据库后应及时关闭数据库连接，比如：</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>library(RMySQL)
@@ -1133,8 +1151,8 @@
                     
                     
                         <li class="nav-item">
-                            <a class="nav-link text-left" href="#10-%e4%bd%bf%e7%94%a8%e5%a4%9a%e4%b8%aa%e8%a1%a8%e6%a0%bc">
-                            10. 使用多个表格
+                            <a class="nav-link text-left" href="#10-%e4%bd%bf%e7%94%a8%e5%a4%9a%e4%b8%aa%e8%a1%a8%e6%a0%bc%e5%a4%9a%e8%a1%a8%e6%9f%a5%e8%af%a2">
+                            10. 使用多个表格：多表查询
                             </a>
                         </li>
                     
