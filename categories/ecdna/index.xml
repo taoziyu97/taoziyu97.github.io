@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ecDNA on Ziyu&#39;s Blog | Welcome to my world!</title>
+    <link>https://taozyblog.com.cn/categories/ecdna/</link>
+    <description>Recent content in ecDNA on Ziyu&#39;s Blog | Welcome to my world!</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Design By [Themefisher](https://themefisher.com/) Develop By [Gethugothemes](https://gethugothemes.com/)</copyright>
+    <lastBuildDate>Fri, 05 Jan 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://taozyblog.com.cn/categories/ecdna/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AmpliconArchitect介绍【1】输出文件解读</title>
+      <link>https://taozyblog.com.cn/post/2024-01-05_aa_1/</link>
+      <pubDate>Fri, 05 Jan 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://taozyblog.com.cn/post/2024-01-05_aa_1/</guid>
+      <description>&lt;p&gt;对AmpliconArchitect得到的ecDNA结果进行解读。&lt;/p&gt;
+&lt;hr&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
