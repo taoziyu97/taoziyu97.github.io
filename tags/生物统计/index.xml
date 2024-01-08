@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>生物统计 on Ziyu&#39;s Blog | Welcome to my world!</title>
+    <link>https://taozyblog.com.cn/tags/%E7%94%9F%E7%89%A9%E7%BB%9F%E8%AE%A1/</link>
+    <description>Recent content in 生物统计 on Ziyu&#39;s Blog | Welcome to my world!</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Design By [Themefisher](https://themefisher.com/) Develop By [Gethugothemes](https://gethugothemes.com/)</copyright>
+    <lastBuildDate>Fri, 26 Nov 2021 15:40:24 +0600</lastBuildDate><atom:link href="https://taozyblog.com.cn/tags/%E7%94%9F%E7%89%A9%E7%BB%9F%E8%AE%A1/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>潜在语义分析（LSA）</title>
+      <link>https://taozyblog.com.cn/post/2021-11-26_statistic-lsa/</link>
+      <pubDate>Fri, 26 Nov 2021 15:40:24 +0600</pubDate>
+      
+      <guid>https://taozyblog.com.cn/post/2021-11-26_statistic-lsa/</guid>
+      <description>引言 潜在语义分析（Latent sematic analysis, LSA）是一种无监督的学习方法。特点是通过矩阵分解来完成，使用的是非概率的话题分析模型，可以通过奇异值分解的方法进行矩阵因子分解，特点是分解的矩阵正交，非负矩阵分解是另一种矩阵的因子分解方法，特点是分解的矩阵非负。
+1. 单词向量空间和话题向量空间 1.1 单词向量空间 给定一个含有 \( n \)个文本的集合\( D=\left { d_1,d_2,&amp;hellip;,d_n \right } \)，在所有文本中出现的\( m \)个单词的集合\( W=\left { w_1,w_2,&amp;hellip;,w_m \right } \)，将单词在文本中出现的数据用一个单词-文本矩阵表示，记作\( X \): $$ \begin{bmatrix} x_{11} &amp;amp;x_{12} &amp;amp;&amp;hellip; &amp;amp;x_{1n} \ x_{21} &amp;amp;x_{22} &amp;amp;&amp;hellip; &amp;amp;x_{2n} \ \vdots &amp;amp;\vdots &amp;amp; &amp;amp;\vdots \ x_{m1} &amp;amp;x_{m2} &amp;amp;&amp;hellip; &amp;amp;x_{mn} \end{bmatrix} $$</description>
+    </item>
+    
+    <item>
+      <title>隐马尔可夫模型（HMM）</title>
+      <link>https://taozyblog.com.cn/post/2021-11-19_hmm/</link>
+      <pubDate>Fri, 19 Nov 2021 15:40:24 +0600</pubDate>
+      
+      <guid>https://taozyblog.com.cn/post/2021-11-19_hmm/</guid>
+      <description>引言 1. 马尔可夫模型的基本概念 来对2段氨基酸序列x和y进行残基比对，认为存在3种比对关系的状态：
+ M：残基能够比对上但不一定相等 X：序列x的残基比对到1个空位，或x上发生了1次插入 Y：序列y的残基比对到1个空位，或y上发生了1次插入  序列比对就是在上述3个状态中不断转换的过程：
+ \( M(i,j) \) : \( x_i \)比对到\( y_j \)时，序列x从1到\( i \)和序列\( y \)从1到\( j \)最好的比对分数 \( X(i,j) \) : \( x_i \)比对到空位时，序列x从1到\( i \)最好的比对分数 \( Y(i,j) \) : \( y_j \)比对到空位时，序列y从1到\( j \)最好的比对分数  转移（从一个状态到另外一个状态）概率：</description>
+    </item>
+    
+    <item>
+      <title>p值</title>
+      <link>https://taozyblog.com.cn/post/2021-4-07_p%E5%80%BC/</link>
+      <pubDate>Sat, 10 Apr 2021 15:40:24 +0600</pubDate>
+      
+      <guid>https://taozyblog.com.cn/post/2021-4-07_p%E5%80%BC/</guid>
+      <description>介绍  p值的含义    假设存在药物A和药物B，想知道两种药物的区别？
+维基百科定义：p值是假设检验中假设零假设为真时观测到至少与实际观测样本相同极端的样本的概率（似乎很拗口）。
+p值是介于0-1之间的数字，量化我们相信两种药物不同的信心，p值越接近0，越相信两者不同。当p的阈值为0.05意味着，假设两种药物之间没有差异，执行多次且相同的实验，那么只有5%的实验会得出错误决定，简单来说，p值是对意外的测量。
+p值能够帮助确定两种药物是否不同，但是不能告诉我们有什么不同，不管差异是都大还是小，都可以使用较小的p值，即较小的p值不代表差异是大还是小，只是代表意外的结果概率更小 。
+ 阈值0.05的由来  不出于逻辑或统计原因，只是科学惯例。</description>
+    </item>
+    
+    <item>
+      <title>逻辑回归</title>
+      <link>https://taozyblog.com.cn/post/2021-4-11_%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92/</link>
+      <pubDate>Tue, 06 Apr 2021 15:40:24 +0600</pubDate>
+      
+      <guid>https://taozyblog.com.cn/post/2021-4-11_%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92/</guid>
+      <description>引言  线性回归  假设数据包含 尺寸 和 重量 两组，根据这两组数据用 最小二乘法 拟合一条线后，我们可以做如下的事情：
+  计算r平方来确定两个变量是否相关
+  计算p值确定R平方是否具有统计显著性</description>
+    </item>
+    
+  </channel>
+</rss>

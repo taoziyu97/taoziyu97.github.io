@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>数据处理 on Ziyu&#39;s Blog | Welcome to my world!</title>
+    <link>https://taozyblog.com.cn/tags/%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/</link>
+    <description>Recent content in 数据处理 on Ziyu&#39;s Blog | Welcome to my world!</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Design By [Themefisher](https://themefisher.com/) Develop By [Gethugothemes](https://gethugothemes.com/)</copyright>
+    <lastBuildDate>Thu, 23 Dec 2021 15:40:24 +0600</lastBuildDate><atom:link href="https://taozyblog.com.cn/tags/%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>R基础——读入和写出数据</title>
+      <link>https://taozyblog.com.cn/post/2021-12-23_basic_r/</link>
+      <pubDate>Thu, 23 Dec 2021 15:40:24 +0600</pubDate>
+      
+      <guid>https://taozyblog.com.cn/post/2021-12-23_basic_r/</guid>
+      <description>基本内容   Excel文件的读入
+  txt和csv文件的读入
+  文件的写出
+  批量读入数据并合并
+  RData和rds的储存形式</description>
+    </item>
+    
+    <item>
+      <title>R：批量读入文件并合并</title>
+      <link>https://taozyblog.com.cn/post/2021-11-17_docall/</link>
+      <pubDate>Wed, 17 Nov 2021 15:40:24 +0600</pubDate>
+      
+      <guid>https://taozyblog.com.cn/post/2021-11-17_docall/</guid>
+      <description>引言 使用do.call批量读入文件并合并。
+1. 基本处理步骤 source_dir &amp;lt;- &amp;#34;文件所在路径&amp;#34; file &amp;lt;- list.files(  path = source_dir,  pattern = &amp;#34;*.</description>
+    </item>
+    
+    <item>
+      <title>处理字符串的两个R包:stringi和stringr</title>
+      <link>https://taozyblog.com.cn/post/2021-7-24_stringr_stringi/</link>
+      <pubDate>Sat, 24 Jul 2021 15:40:24 +0600</pubDate>
+      
+      <guid>https://taozyblog.com.cn/post/2021-7-24_stringr_stringi/</guid>
+      <description>引言 stringr包是建立在stringi上的，stringi包使用ICU C库提供准确、快速的常见字符串操作，stringr提供了最重要和最常用的字符串处理函数。
+stringr stringr包中所有的函数都以str_开头，第一个参数为字符串向量。对应的在base函数中也有功能一致的函数，记得对比两者之间的异同。
+1. 找到自己需要的数据 tcga_mut &amp;lt;- read.csv2(&amp;#34;/home/tzy/projects/CNX-method/data/TCGA/mc3.v0.2.8.PUBLIC.nonsilentGene.xena&amp;#34;,sep = &amp;#34;\t&amp;#34;)  saveRDS(tcga_mut, file = &amp;#34;/home/tzy/projects/CNX-method/data/TCGA/tcga_mut.</description>
+    </item>
+    
+    <item>
+      <title>R储存数据</title>
+      <link>https://taozyblog.com.cn/post/2021-7-20_rdata/</link>
+      <pubDate>Tue, 20 Jul 2021 15:40:24 +0600</pubDate>
+      
+      <guid>https://taozyblog.com.cn/post/2021-7-20_rdata/</guid>
+      <description>引言 rds比RData省空间，为什么？
+步骤 1. 找到自己需要的数据 tcga_mut &amp;lt;- read.csv2(&amp;#34;/home/tzy/projects/CNX-method/data/TCGA/mc3.v0.2.8.PUBLIC.nonsilentGene.xena&amp;#34;,sep = &amp;#34;\t&amp;#34;)  saveRDS(tcga_mut, file = &amp;#34;/home/tzy/projects/CNX-method/data/TCGA/tcga_mut.rds&amp;#34;) save(tcga_mut, file = &amp;#34;/home/tzy/projects/CNX-method/data/TCGA/tcga_mut.</description>
+    </item>
+    
+  </channel>
+</rss>

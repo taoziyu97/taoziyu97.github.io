@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>软件使用 on Ziyu&#39;s Blog | Welcome to my world!</title>
+    <link>https://taozyblog.com.cn/tags/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/</link>
+    <description>Recent content in 软件使用 on Ziyu&#39;s Blog | Welcome to my world!</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Design By [Themefisher](https://themefisher.com/) Develop By [Gethugothemes](https://gethugothemes.com/)</copyright>
+    <lastBuildDate>Thu, 24 Feb 2022 15:40:24 +0600</lastBuildDate><atom:link href="https://taozyblog.com.cn/tags/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>R包caret基本功能【1】——六种基本功能</title>
+      <link>https://taozyblog.com.cn/post/2022-2-24_caret1/</link>
+      <pubDate>Thu, 24 Feb 2022 15:40:24 +0600</pubDate>
+      
+      <guid>https://taozyblog.com.cn/post/2022-2-24_caret1/</guid>
+      <description>介绍机器学习R包。
+1. 数据分割 基于输出变量的分割 在建模之前，需要对样本数据进行分割分为训练集和测试集。在之前建模过程中，我发现我使用sample进行分割存在一定的问题，比如我分割出来的数据中response的占比在训练集和测试集中差别很大等等。caret包中可以解决这个问题，通过设置p值，同时确定训练集和测试集的占比，并各个因子水平下取占比（表述的有点问题）。
+createDataPartition(y,  times = 1,  p = 0.5,  list = TRUE,  groups = min(5, length(y))) 2.</description>
+    </item>
+    
+    <item>
+      <title>检测拷贝数变异的工具及算法【2】-ABSOLUTE</title>
+      <link>https://taozyblog.com.cn/post/2021-12-19_cnv_tools2/</link>
+      <pubDate>Sun, 19 Dec 2021 15:40:24 +0600</pubDate>
+      
+      <guid>https://taozyblog.com.cn/post/2021-12-19_cnv_tools2/</guid>
+      <description>背景介绍 1. 获取绝对拷贝数数值的难点 （1）采样过程中癌细胞混合了未知比例的正常细胞——肿瘤纯度；
+（2）由于染色体数量和结构异常导致的癌细胞的实际DNA含量(倍性)是未知的；
+（3）由于正在进行的亚克隆进化，癌细胞群可能是异质性的。
+理论上，如果知道每个肿瘤细胞中DNA的含量，则可通过测得的相对拷贝数获得绝对拷贝数，或者通过单细胞测序技术解决。
+2. 芯片原始原始数据格式.CEL 对于芯片数据来说，Affymetrix SNP芯片的原始文件为CEL文件，一个CEL文件即是一个个体的全部SNP分型结果。Affymetrix基因芯片是一种生物芯片，它包含一个对一个实验有效的微阵列。为了制造这些芯片，玻璃或硅载玻片上排列有探针，根据它们是否与原始DNA样本互补，探针将表达水平(强度)报告为完全匹配(PM)和不匹配(MM)值。.CEL文件格式有多个版本，使用不同的格式。例如，版本3使用ASCII文本格式，而版本4使用二进制格式。 注意：.CEL 文件需要相应的.CDF 文件，它是存储在.CEL文件中的原始探测级数据的字典。MATLAB有一个名为affyread的内置函数，可以用来读取Windows版本软件中的.CEL 文件。</description>
+    </item>
+    
+    <item>
+      <title>检测拷贝数变异的工具及算法【1】-PCAWG consensus copy number</title>
+      <link>https://taozyblog.com.cn/post/2021-12-16_cnv_tools/</link>
+      <pubDate>Thu, 16 Dec 2021 15:40:24 +0600</pubDate>
+      
+      <guid>https://taozyblog.com.cn/post/2021-12-16_cnv_tools/</guid>
+      <description>引言 PCAWG提供的拷贝数变异文件是综合6种不同的拷贝数变异提取工具的结果：
+  ABSOLUTE
+  ACEseq
+  Battenberg
+  CloneHD
+  JaBbA</description>
+    </item>
+    
+    <item>
+      <title>synapser</title>
+      <link>https://taozyblog.com.cn/post/2021-8-31_synapser/</link>
+      <pubDate>Sat, 24 Jul 2021 15:40:24 +0600</pubDate>
+      
+      <guid>https://taozyblog.com.cn/post/2021-8-31_synapser/</guid>
+      <description>引言 一个提供批量下载Synapser数据的R包。
+1. 登陆 synLogin(&amp;#34;baomihai@sina.com&amp;#34;,&amp;#34;******&amp;#34;) Welcome, baomihai@sina.com!NULL 参考  biostars-How to install gdc-client in Ubnutu  </description>
+    </item>
+    
+    <item>
+      <title>gdc-client</title>
+      <link>https://taozyblog.com.cn/post/2021-7-20_gdc_client/</link>
+      <pubDate>Tue, 20 Jul 2021 15:40:24 +0600</pubDate>
+      
+      <guid>https://taozyblog.com.cn/post/2021-7-20_gdc_client/</guid>
+      <description>引言 之前一直用别的方法下载数据，这次使用了gdc-client命令行去下载GDC上TCGA driver gene mutation的一批数据。
+步骤 1. 找到自己需要的数据 这是我本次要下载的数据
+点击数据下载地址发现出现如下界面，其中id就是使用gdc-client下载的文件对应的id
+对于Open access data，使用这两种方法下载
+下载了MAC的Client版本
+2. 安装 解压下载的文件，如果双击会发现出现erro：</description>
+    </item>
+    
+    <item>
+      <title>使用CIBERSORTx网页版分析免疫浸润</title>
+      <link>https://taozyblog.com.cn/post/2021-4-06-cibersort/</link>
+      <pubDate>Tue, 06 Apr 2021 15:40:24 +0600</pubDate>
+      
+      <guid>https://taozyblog.com.cn/post/2021-4-06-cibersort/</guid>
+      <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
+&lt;p&gt;最近需要对TCGA和PCAWG的表达数据进行免疫浸润水平分析，使用了R包immunedeconv,其中TCGA已经有文献的supplement给出了不同免疫浸润工具进行分析的结果，PCAWG需要自己手动分析，其中CIBERSORT在immunedeconv包中运行需要两个文件：&lt;code&gt;LM22.txt&lt;/code&gt;，&lt;code&gt;CIBERSORT.R&lt;/code&gt;，需要在官网：https://cibersortx.stanford.edu/ 进行申请。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
