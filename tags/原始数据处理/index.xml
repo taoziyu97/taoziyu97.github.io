@@ -7,7 +7,27 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Design By [Themefisher](https://themefisher.com/) Develop By [Gethugothemes](https://gethugothemes.com/)</copyright>
-    <lastBuildDate>Wed, 06 Dec 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://taozyblog.com.cn/tags/%E5%8E%9F%E5%A7%8B%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 10 Jan 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://taozyblog.com.cn/tags/%E5%8E%9F%E5%A7%8B%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>下载数据目录</title>
+      <link>https://taozyblog.com.cn/post/2024-01-10_download_folder/</link>
+      <pubDate>Wed, 10 Jan 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://taozyblog.com.cn/post/2024-01-10_download_folder/</guid>
+      <description>&lt;p&gt;下载目录及其子目录中的内容。&lt;/p&gt;
+&lt;hr&gt;</description>
+    </item>
+    
+    <item>
+      <title>使用snakemake构建分析流程</title>
+      <link>https://taozyblog.com.cn/post/2024-01-09_snakemake1/</link>
+      <pubDate>Tue, 09 Jan 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://taozyblog.com.cn/post/2024-01-09_snakemake1/</guid>
+      <description>&lt;p&gt;介绍使用snakemake分析数据流程。&lt;/p&gt;
+&lt;hr&gt;</description>
+    </item>
+    
     <item>
       <title>NA12878多种来源数据下载[参考Kamatani 2019 Genome Biology]</title>
       <link>https://taozyblog.com.cn/post/2023-11-14_na12878_all/</link>

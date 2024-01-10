@@ -17,7 +17,7 @@
 </script>
 
 <meta charset="utf-8">
-<title>Ziyu&#39;s Blog | Welcome to my world!</title>
+<title>使用snakemake构建分析流程</title>
 
 
 
@@ -25,7 +25,7 @@
 
 
 
-<link rel="canonical" href="https://taozyblog.com.cn/" itemprop="url" />
+<link rel="canonical" href="https://taozyblog.com.cn/post/2024-01-09_snakemake1/" itemprop="url" />
 
 
 <link rel="manifest" href="/manifest.webmanifest">
@@ -92,50 +92,29 @@
 
 
 
+
+
+
+
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://blog-1310600458.cos.ap-shanghai.myqcloud.com/Macdo2024-01-09%2014.06.32.png" />
+<meta property="og:image" content="https://blog-1310600458.cos.ap-shanghai.myqcloud.com/Macdo2024-01-09%2014.06.32.png" />
  
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
-<meta property="og:image:width" content="96">
-<meta property="og:image:height" content="96">
- 
-
-<meta property="og:image:type" content="image/.png">
- 
-
- 
-
-
-
-
-<meta property="og:title" content="Ziyu&#39;s Blog | Welcome to my world!" />
-<meta property="og:description" content="This is meta description" />
+<meta property="og:title" content="使用snakemake构建分析流程" />
+<meta property="og:description" content="介绍使用snakemake分析数据流程。
+" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://taozyblog.com.cn/" />
+<meta property="og:url" content="https://taozyblog.com.cn/post/2024-01-09_snakemake1/" />
 
 
-<meta name="twitter:title" content="Ziyu&#39;s Blog | Welcome to my world!" />
-<meta name="twitter:description" content="This is meta description" />
+<meta name="twitter:title" content="使用snakemake构建分析流程" />
+<meta name="twitter:description" content="介绍使用snakemake分析数据流程。
+" />
 
 
 
@@ -372,967 +351,993 @@
 		
 
 
-<section class="section-sm pb-0">
-  <div class="container">
-    <div class="featured-post-slider rounded-lg overflow-hidden">
-      
-      <div class="featured-post">
-
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        <picture>
-          <source srcset="/images/post/post-2_hu52d922f08eb8074328849650ddc4504d_195923_545x0_resize_q90_h2_box.webp" media="(max-width: 575px)">
-          <source srcset="/images/post/post-2_hu52d922f08eb8074328849650ddc4504d_195923_600x0_resize_q90_h2_box.webp" media="(max-width: 767px)">
-          <source srcset="/images/post/post-2_hu52d922f08eb8074328849650ddc4504d_195923_650x0_resize_q90_h2_box.webp" media="(max-width: 991px)">
-          <source srcset="/images/post/post-2_hu52d922f08eb8074328849650ddc4504d_195923_1110x0_resize_q90_h2_box.webp" media="(max-width: 1200px)">
-          <source srcset="/images/post/post-2_hu52d922f08eb8074328849650ddc4504d_195923_1110x0_resize_q90_h2_box.webp">
-          <img loading="lazy" class="img-fluid w-100 featured-post-img" src="/images/post/post-2_hu52d922f08eb8074328849650ddc4504d_195923_1110x0_resize_q90_h2_box.webp" alt="post image" width="1382" height="628">
-        </picture>
-        
-        
-        
-
-        <div class="featured-post-overlay">
-          <div class="featured-post-content">
-            <h2 class="mb-3"><a href="/post/2021-11-19_hmm/" class="post-title">隐马尔可夫模型（HMM）</a></h2>
-            <ul class="list-inline post-meta mb-5">
-              <li class="list-inline-item"><i class="fas fa-user mr-2"></i><a
-                  href="/author/ziyu/">Ziyu</a></li>
-              <li class="list-inline-item">Date : November 19, 2021</li>
-              <li class="list-inline-item">Categories :
-                <a
-                  href="/categories/%e7%94%9f%e4%bf%a1" class="ml-1">生信 </a>
-                ,<a
-                  href="/categories/%e7%ae%97%e6%b3%95" class="ml-1">算法 </a>
-                ,<a
-                  href="/categories/%e7%94%9f%e7%89%a9%e7%bb%9f%e8%ae%a1" class="ml-1">生物统计 </a>
-                </li>
-              <li class="list-inline-item">Tags : <a
-                  href="/tags/%e7%94%9f%e7%89%a9%e7%bb%9f%e8%ae%a1" class="ml-1">生物统计 </a> ,<a
-                  href="/tags/%e7%ae%97%e6%b3%95" class="ml-1">算法 </a> 
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      
-      <div class="featured-post">
-
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        <picture>
-          <source srcset="/images/post/post-4_huf10e9f47160d4dcabc8f729ce564018d_334600_545x0_resize_q90_h2_box.webp" media="(max-width: 575px)">
-          <source srcset="/images/post/post-4_huf10e9f47160d4dcabc8f729ce564018d_334600_600x0_resize_q90_h2_box.webp" media="(max-width: 767px)">
-          <source srcset="/images/post/post-4_huf10e9f47160d4dcabc8f729ce564018d_334600_650x0_resize_q90_h2_box.webp" media="(max-width: 991px)">
-          <source srcset="/images/post/post-4_huf10e9f47160d4dcabc8f729ce564018d_334600_1110x0_resize_q90_h2_box.webp" media="(max-width: 1200px)">
-          <source srcset="/images/post/post-4_huf10e9f47160d4dcabc8f729ce564018d_334600_1110x0_resize_q90_h2_box.webp">
-          <img loading="lazy" class="img-fluid w-100 featured-post-img" src="/images/post/post-4_huf10e9f47160d4dcabc8f729ce564018d_334600_1110x0_resize_q90_h2_box.webp" alt="post image" width="1359" height="618">
-        </picture>
-        
-        
-        
-
-        <div class="featured-post-overlay">
-          <div class="featured-post-content">
-            <h2 class="mb-3"><a href="/post/2021-3-05-latex_blog/" class="post-title">使用Latex写论文</a></h2>
-            <ul class="list-inline post-meta mb-5">
-              <li class="list-inline-item"><i class="fas fa-user mr-2"></i><a
-                  href="/author/ziyu/">Ziyu</a></li>
-              <li class="list-inline-item">Date : March 5, 2021</li>
-              <li class="list-inline-item">Categories :
-                <a
-                  href="/categories/%e6%8a%80%e6%9c%af" class="ml-1">技术 </a>
-                </li>
-              <li class="list-inline-item">Tags : <a
-                  href="/tags/latex" class="ml-1">Latex </a> 
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      
-      <div class="featured-post">
-
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        <picture>
-          <source srcset="/images/post/post-1_hu771f7caf30f5a18d8db2d2d1d07622b1_361879_545x0_resize_q90_h2_box.webp" media="(max-width: 575px)">
-          <source srcset="/images/post/post-1_hu771f7caf30f5a18d8db2d2d1d07622b1_361879_600x0_resize_q90_h2_box.webp" media="(max-width: 767px)">
-          <source srcset="/images/post/post-1_hu771f7caf30f5a18d8db2d2d1d07622b1_361879_650x0_resize_q90_h2_box.webp" media="(max-width: 991px)">
-          <source srcset="/images/post/post-1_hu771f7caf30f5a18d8db2d2d1d07622b1_361879_1110x0_resize_q90_h2_box.webp" media="(max-width: 1200px)">
-          <source srcset="/images/post/post-1_hu771f7caf30f5a18d8db2d2d1d07622b1_361879_1110x0_resize_q90_h2_box.webp">
-          <img loading="lazy" class="img-fluid w-100 featured-post-img" src="/images/post/post-1_hu771f7caf30f5a18d8db2d2d1d07622b1_361879_1110x0_resize_q90_h2_box.webp" alt="post image" width="1403" height="638">
-        </picture>
-        
-        
-        
-
-        <div class="featured-post-overlay">
-          <div class="featured-post-content">
-            <h2 class="mb-3"><a href="/post/2021-1-11-build_blog/" class="post-title">Hugo+Github+阿里云域名搭建个人博客（附Netlify部署方法）</a></h2>
-            <ul class="list-inline post-meta mb-5">
-              <li class="list-inline-item"><i class="fas fa-user mr-2"></i><a
-                  href="/author/ziyu/">Ziyu</a></li>
-              <li class="list-inline-item">Date : January 21, 2021</li>
-              <li class="list-inline-item">Categories :
-                <a
-                  href="/categories/%e6%8a%80%e6%9c%af" class="ml-1">技术 </a>
-                </li>
-              <li class="list-inline-item">Tags : <a
-                  href="/tags/%e5%8d%9a%e5%ae%a2" class="ml-1">博客 </a> ,<a
-                  href="/tags/markdown" class="ml-1">Markdown </a> 
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      
-    </div>
-  </div>
-</section>
-
-
-
-
-
-
-
-
 
 <section class="section">
   <div class="container">
-    <div class="row">
-      
-      
-      
-
-      
-      <div class="col-lg-8  mb-5 mb-lg-0">
-        
-        
-        <div class="row">
-          
-          <div class="col-md-6">
-            <article class="card mb-4 border-0">
-              
-              
-              <div class="post-slider slider-sm">
-                
-                
-
-
-
-
-
-
-
-
-
-<img loading="lazy" decoding="async" src="https://blog-1310600458.cos.ap-shanghai.myqcloud.com/Aneuploidy-CIN-and-GIN-loop-together-to-tumorigenesis-Aneuploidy-results-in-direct.png" alt="" class="img-fluid w-100" height="" width="">
-
-                
-              </div>
-              
-              
-              <div class="card-body">
-                <h3 class="h4"><a class="post-title" href="/post/2022-9-14_cnv2/">【异倍性系列2】——异倍性（aneuploidy）</a></h3>
-                <ul class="list-inline post-meta mb-4">
-                  <li class="list-inline-item"><i class="fas fa-user mr-2"></i>
-                    <a href="/author/ziyu/">Ziyu</a>
-                  </li>
-                  <li class="list-inline-item">Date : September 21, 2022</li>
-                  <li class="list-inline-item">Categories :
-                    <a
-                      href="/categories/%e7%99%8c%e7%97%87%e5%9f%ba%e5%9b%a0%e7%bb%84%e5%ad%a6" class="ml-1">癌症基因组学
-                    </a>
-                    ,<a
-                      href="/categories/%e7%94%9f%e7%89%a9%e5%ad%a6" class="ml-1">生物学
-                    </a>
-                    </li>
-                  <li class="list-inline-item">Tags :
-                    <a
-                      href="/tags/%e7%99%8c%e7%97%87%e5%9f%ba%e5%9b%a0%e7%bb%84%e5%ad%a6" class="ml-1">癌症基因组学 </a>
-                    ,<a
-                      href="/tags/%e6%8b%b7%e8%b4%9d%e6%95%b0%e5%8f%98%e5%bc%82" class="ml-1">拷贝数变异 </a>
-                    
-                  </li>
-                </ul>
-                <p><p>介绍异倍性的概念。</p></p>
-                <a href="/post/2022-9-14_cnv2/" class="btn btn-outline-primary">Continue Reading</a>
-              </div>
-            </article>
-          </div>
-          
-          <div class="col-md-6">
-            <article class="card mb-4 border-0">
-              
-              
-              <div class="post-slider slider-sm">
-                
-                
-
-
-
-
-
-
-
-
-
-<img loading="lazy" decoding="async" src="https://blog-1310600458.cos.ap-shanghai.myqcloud.com/Macdo2022-09-21%2014.56.32.png" alt="" class="img-fluid w-100" height="" width="">
-
-                
-              </div>
-              
-              
-              <div class="card-body">
-                <h3 class="h4"><a class="post-title" href="/post/2022-9-14_cnv3/">【异倍性系列3】——chromosome instability 染色体不稳定性 (CIN)</a></h3>
-                <ul class="list-inline post-meta mb-4">
-                  <li class="list-inline-item"><i class="fas fa-user mr-2"></i>
-                    <a href="/author/ziyu/">Ziyu</a>
-                  </li>
-                  <li class="list-inline-item">Date : September 21, 2022</li>
-                  <li class="list-inline-item">Categories :
-                    <a
-                      href="/categories/%e7%99%8c%e7%97%87%e5%9f%ba%e5%9b%a0%e7%bb%84%e5%ad%a6" class="ml-1">癌症基因组学
-                    </a>
-                    ,<a
-                      href="/categories/%e7%94%9f%e7%89%a9%e5%ad%a6" class="ml-1">生物学
-                    </a>
-                    </li>
-                  <li class="list-inline-item">Tags :
-                    <a
-                      href="/tags/%e7%99%8c%e7%97%87%e5%9f%ba%e5%9b%a0%e7%bb%84%e5%ad%a6" class="ml-1">癌症基因组学 </a>
-                    ,<a
-                      href="/tags/%e6%8b%b7%e8%b4%9d%e6%95%b0%e5%8f%98%e5%bc%82" class="ml-1">拷贝数变异 </a>
-                    
-                  </li>
-                </ul>
-                <p><p>介绍染色体不稳定性的机制。</p></p>
-                <a href="/post/2022-9-14_cnv3/" class="btn btn-outline-primary">Continue Reading</a>
-              </div>
-            </article>
-          </div>
-          
-          <div class="col-md-6">
-            <article class="card mb-4 border-0">
-              
-              
-              <div class="post-slider slider-sm">
-                
-                
-
-
-
-
-
-
-
-
-
-<img loading="lazy" decoding="async" src="https://blog-1310600458.cos.ap-shanghai.myqcloud.com/Macdo2022-09-21%2014.55.28.png" alt="" class="img-fluid w-100" height="" width="">
-
-                
-              </div>
-              
-              
-              <div class="card-body">
-                <h3 class="h4"><a class="post-title" href="/post/2022-9-14_cnvcombine/">拷贝数变异内容汇总</a></h3>
-                <ul class="list-inline post-meta mb-4">
-                  <li class="list-inline-item"><i class="fas fa-user mr-2"></i>
-                    <a href="/author/ziyu/">Ziyu</a>
-                  </li>
-                  <li class="list-inline-item">Date : September 21, 2022</li>
-                  <li class="list-inline-item">Categories :
-                    <a
-                      href="/categories/shell" class="ml-1">Shell
-                    </a>
-                    </li>
-                  <li class="list-inline-item">Tags :
-                    <a
-                      href="/tags/shell" class="ml-1">Shell </a>
-                    
-                  </li>
-                </ul>
-                <p><p>拷贝数变异内容汇。</p></p>
-                <a href="/post/2022-9-14_cnvcombine/" class="btn btn-outline-primary">Continue Reading</a>
-              </div>
-            </article>
-          </div>
-          
-          <div class="col-md-6">
-            <article class="card mb-4 border-0">
-              
-              
-              <div class="post-slider slider-sm">
-                
-                
-
-
-
-
-
-
-
-
-
-<img loading="lazy" decoding="async" src="https://blog-1310600458.cos.ap-shanghai.myqcloud.com/in_logo.png" alt="" class="img-fluid w-100" height="" width="">
-
-                
-              </div>
-              
-              
-              <div class="card-body">
-                <h3 class="h4"><a class="post-title" href="/post/2022-9-14_gsa%E6%95%B0%E6%8D%AE%E4%B8%8B%E8%BD%BD/">GSA申请数据下载</a></h3>
-                <ul class="list-inline post-meta mb-4">
-                  <li class="list-inline-item"><i class="fas fa-user mr-2"></i>
-                    <a href="/author/ziyu/">Ziyu</a>
-                  </li>
-                  <li class="list-inline-item">Date : September 14, 2022</li>
-                  <li class="list-inline-item">Categories :
-                    <a
-                      href="/categories/shell" class="ml-1">Shell
-                    </a>
-                    </li>
-                  <li class="list-inline-item">Tags :
-                    <a
-                      href="/tags/shell" class="ml-1">Shell </a>
-                    
-                  </li>
-                </ul>
-                <p><p>介绍如何下载GSA数据库需要申请的数据。</p></p>
-                <a href="/post/2022-9-14_gsa%E6%95%B0%E6%8D%AE%E4%B8%8B%E8%BD%BD/" class="btn btn-outline-primary">Continue Reading</a>
-              </div>
-            </article>
-          </div>
-          
-          <div class="col-md-6">
-            <article class="card mb-4 border-0">
-              
-              
-              <div class="post-slider slider-sm">
-                
-                
-
-
-
-
-
-
-
-
-
-<img loading="lazy" decoding="async" src="https://blog-1310600458.cos.ap-shanghai.myqcloud.com/in_logo.png" alt="" class="img-fluid w-100" height="" width="">
-
-                
-              </div>
-              
-              
-              <div class="card-body">
-                <h3 class="h4"><a class="post-title" href="/post/2022-9-14_%E4%B8%B4%E5%BA%8A%E4%BF%A1%E6%81%AF%E5%90%8D%E8%AF%8D/">【临床系列】——名词解释</a></h3>
-                <ul class="list-inline post-meta mb-4">
-                  <li class="list-inline-item"><i class="fas fa-user mr-2"></i>
-                    <a href="/author/ziyu/">Ziyu</a>
-                  </li>
-                  <li class="list-inline-item">Date : September 14, 2022</li>
-                  <li class="list-inline-item">Categories :
-                    <a
-                      href="/categories/shell" class="ml-1">Shell
-                    </a>
-                    </li>
-                  <li class="list-inline-item">Tags :
-                    <a
-                      href="/tags/shell" class="ml-1">Shell </a>
-                    
-                  </li>
-                </ul>
-                <p>recurrence-free survival  从开始治疗到没有癌症迹象存在。
- disease-specific survival  从检测或开始治疗到病人死亡之前的时间。</p>
-                <a href="/post/2022-9-14_%E4%B8%B4%E5%BA%8A%E4%BF%A1%E6%81%AF%E5%90%8D%E8%AF%8D/" class="btn btn-outline-primary">Continue Reading</a>
-              </div>
-            </article>
-          </div>
-          
-          <div class="col-md-6">
-            <article class="card mb-4 border-0">
-              
-              
-              <div class="post-slider slider-sm">
-                
-                
-
-
-
-
-
-
-
-
-
-<img loading="lazy" decoding="async" src="https://blog-1310600458.cos.ap-shanghai.myqcloud.com/r-factors.png" alt="" class="img-fluid w-100" height="" width="">
-
-                
-              </div>
-              
-              
-              <div class="card-body">
-                <h3 class="h4"><a class="post-title" href="/post/2022-8-31_factor/">R——因子</a></h3>
-                <ul class="list-inline post-meta mb-4">
-                  <li class="list-inline-item"><i class="fas fa-user mr-2"></i>
-                    <a href="/author/ziyu/">Ziyu</a>
-                  </li>
-                  <li class="list-inline-item">Date : September 8, 2022</li>
-                  <li class="list-inline-item">Categories :
-                    <a
-                      href="/categories/shell" class="ml-1">Shell
-                    </a>
-                    </li>
-                  <li class="list-inline-item">Tags :
-                    <a
-                      href="/tags/shell" class="ml-1">Shell </a>
-                    
-                  </li>
-                </ul>
-                <p><p>介绍R语言中的因子。</p></p>
-                <a href="/post/2022-8-31_factor/" class="btn btn-outline-primary">Continue Reading</a>
-              </div>
-            </article>
-          </div>
-          
-        </div>
-        
-        
-
-        
-        
-        
-        
-        
-        
-        
-        <ul class="pagination ">
-          
-          
-          <li class="page-item">
-            <a href="/page/7/" class="page-link">&laquo;</a>
+    <article class="row mb-4">
+      <div class="col-lg-10 mx-auto mb-4">
+        <h1 class="h2 mb-3">使用snakemake构建分析流程</h1>
+        <ul class="list-inline post-meta mb-3">
+          <li class="list-inline-item"><i class="fas fa-user mr-2"></i>
+            <a href="/author/ziyu/">Ziyu</a>
           </li>
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          <li class="page-item">
-            <a href="/page/6/" class="page-link">
-              6
-            </a>
+          <li class="list-inline-item">Date : January 9, 2024</li>
+          <li class="list-inline-item">Categories :
+            <a
+              href="/categories/%e7%94%9f%e4%bf%a1%e5%b7%a5%e5%85%b7" class="ml-1">生信工具 </a>
+            </li>
+          <li class="list-inline-item">Tags : <a
+              href="/tags/%e5%8e%9f%e5%a7%8b%e6%95%b0%e6%8d%ae%e5%a4%84%e7%90%86" class="ml-1">原始数据处理 </a> 
           </li>
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          <li class="page-item">
-            <a href="/page/7/" class="page-link">
-              7
-            </a>
-          </li>
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          <li class="page-item page-item active ">
-            <a href="/page/8/" class="page-link">
-              8
-            </a>
-          </li>
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          <li class="page-item">
-            <a href="/page/9/" class="page-link">
-              9
-            </a>
-          </li>
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          <li class="page-item">
-            <a href="/page/10/" class="page-link">
-              10
-            </a>
-          </li>
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          <li class="page-item">
-            <a href="/page/9/" class="page-link">
-              &raquo;
-            </a>
-          </li>
-          
         </ul>
-        
-        
       </div>
-      
+      <div class="col-lg-10 mx-auto">
+        <div class="content" ><p>介绍使用snakemake分析数据流程。</p>
+<hr>
+<p>最近又要对原始数据进行分析，以前都是一个步骤建一个文件夹或者把所有步骤放在整个脚本中分析数据，现在想试试snakemake。</p>
+<h2 id="1-安装">1. 安装</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>conda install bioconda::snakemake-minimal
+</span></span></code></pre></div><h2 id="2-示例测试">2. 示例测试</h2>
+<p>通过创建虚假的文件来熟悉一下该工具的使用，示例：对Tumor/Normal匹配的两个样本，经过DNA双端测序得到的fastq文件，比对到参考基因组的fasta文件上，输出bam文件（示例仅传达这个意思，并没有真实的进行比对）。</p>
+<ol>
+<li>构建虚假的数据：</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span># Create a toy folder where we will run our commands: 
+</span></span><span style="display:flex;"><span>mkdir toy-example
+</span></span><span style="display:flex;"><span>cd toy-example
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># Make a fake reference genome 
+</span></span><span style="display:flex;"><span>touch genome.fa
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># Make fake fastq data
+</span></span><span style="display:flex;"><span>mkdir fastq
+</span></span><span style="display:flex;"><span>touch fastq/tumor.R1.fastq.gz fastq/tumor.R2.fastq.gz 
+</span></span><span style="display:flex;"><span>touch fastq/normal.R1.fastq.gz fastq/normal.R2.fastq.gz 
+</span></span></code></pre></div><ol start="2">
+<li>创建Snakefile文件</li>
+</ol>
+<p>创建Snakefile文件，文件内容如下：</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>SAMPLES = [&#39;tumor&#39;, &#39;normal&#39;]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>rule all:
+</span></span><span style="display:flex;"><span>    input:
+</span></span><span style="display:flex;"><span>        expand(&#39;{sample}.bam&#39;, sample=SAMPLES)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>rule bwa:
+</span></span><span style="display:flex;"><span>    input:
+</span></span><span style="display:flex;"><span>        genome = &#39;genome.fa&#39;,
+</span></span><span style="display:flex;"><span>        r1 = &#39;fastq/{sample}.R1.fastq.gz&#39;,
+</span></span><span style="display:flex;"><span>        r2 = &#39;fastq/{sample}.R2.fastq.gz&#39;
+</span></span><span style="display:flex;"><span>    output:
+</span></span><span style="display:flex;"><span>        &#39;{sample}.bam&#39;
+</span></span><span style="display:flex;"><span>    shell:
+</span></span><span style="display:flex;"><span>        &#39;echo {input.genome} {input.r1} {input.r2} &gt; {output}&#39;
+</span></span></code></pre></div><ol start="3">
+<li>逐层理解</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>SAMPLES = [&#39;tumor&#39;, &#39;normal&#39;]
+</span></span></code></pre></div><p>定义了字符串列表<code>SAMPLES</code>，内容是样本名。</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>rule all:
+</span></span><span style="display:flex;"><span>    input:
+</span></span><span style="display:flex;"><span>        expand(&#39;{sample}.bam&#39;, sample=SAMPLES)
+</span></span></code></pre></div><p><code>rule all</code>中的input代表了pipeline的最终输出文件，这里最终输出是两个文件<code>tumor.bam</code>和<code>normal.bam</code>，<code>expand()</code>是特定的函数能够根据SAMPLES的内容把<code>{sample}.bam</code>扩充为<code>['tumor.txt','normal.txt']</code>。</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>rule bwa:
+</span></span><span style="display:flex;"><span>    input:
+</span></span><span style="display:flex;"><span>        genome = &#39;genome.fa&#39;,
+</span></span><span style="display:flex;"><span>        r1 = &#39;fastq/{sample}.R1.fastq.gz&#39;,
+</span></span><span style="display:flex;"><span>        r2 = &#39;fastq/{sample}.R2.fastq.gz&#39;
+</span></span><span style="display:flex;"><span>    output:
+</span></span><span style="display:flex;"><span>        &#39;{sample}.bam&#39;
+</span></span><span style="display:flex;"><span>    shell:
+</span></span><span style="display:flex;"><span>        &#39;echo {input.genome} {input.r1} {input.r2} &gt; {output}&#39;
+</span></span></code></pre></div><p>因为设定了<code>tumor.bam</code>和<code>normal.bam</code>是最终的输出，需要规则来创建这些文件，当Snakemake识别<code>{sample}.bam</code>时，会把sample替换为SAMPLES的内容来创建结果。</p>
+<ol start="4">
+<li>运行Snakemake</li>
+</ol>
+<p>直接调用<code>snakemake</code>来运行流程，它会自动寻找当前目录下名为<code>Snakefile</code>的文件，也可以通过参数<code>--snakefile</code>来指定文件：</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>snakemake --cores 1
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>Building DAG of jobs...
+</span></span><span style="display:flex;"><span>Using shell: /usr/bin/bash
+</span></span><span style="display:flex;"><span>Provided cores: 1 (use --cores to define parallelism)
+</span></span><span style="display:flex;"><span>Rules claiming more threads will be scaled down.
+</span></span><span style="display:flex;"><span>Job stats:
+</span></span><span style="display:flex;"><span>job      count
+</span></span><span style="display:flex;"><span>-----  -------
+</span></span><span style="display:flex;"><span>all          1
+</span></span><span style="display:flex;"><span>bwa          2
+</span></span><span style="display:flex;"><span>total        3
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Select jobs to execute...
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[Tue Jan  9 14:24:04 2024]
+</span></span><span style="display:flex;"><span>rule bwa:
+</span></span><span style="display:flex;"><span>    input: genome.fa, fastq/normal.R1.fastq.gz, fastq/normal.R2.fastq.gz
+</span></span><span style="display:flex;"><span>    output: normal.bam
+</span></span><span style="display:flex;"><span>    jobid: 2
+</span></span><span style="display:flex;"><span>    reason: Missing output files: normal.bam
+</span></span><span style="display:flex;"><span>    wildcards: sample=normal
+</span></span><span style="display:flex;"><span>    resources: tmpdir=/tmp
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[Tue Jan  9 14:24:04 2024]
+</span></span><span style="display:flex;"><span>Finished job 2.
+</span></span><span style="display:flex;"><span>1 of 3 steps (33%) done
+</span></span><span style="display:flex;"><span>Select jobs to execute...
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[Tue Jan  9 14:24:04 2024]
+</span></span><span style="display:flex;"><span>rule bwa:
+</span></span><span style="display:flex;"><span>    input: genome.fa, fastq/tumor.R1.fastq.gz, fastq/tumor.R2.fastq.gz
+</span></span><span style="display:flex;"><span>    output: tumor.bam
+</span></span><span style="display:flex;"><span>    jobid: 1
+</span></span><span style="display:flex;"><span>    reason: Missing output files: tumor.bam
+</span></span><span style="display:flex;"><span>    wildcards: sample=tumor
+</span></span><span style="display:flex;"><span>    resources: tmpdir=/tmp
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[Tue Jan  9 14:24:04 2024]
+</span></span><span style="display:flex;"><span>Finished job 1.
+</span></span><span style="display:flex;"><span>2 of 3 steps (67%) done
+</span></span><span style="display:flex;"><span>Select jobs to execute...
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[Tue Jan  9 14:24:04 2024]
+</span></span><span style="display:flex;"><span>localrule all:
+</span></span><span style="display:flex;"><span>    input: tumor.bam, normal.bam
+</span></span><span style="display:flex;"><span>    jobid: 0
+</span></span><span style="display:flex;"><span>    reason: Input files updated by another job: normal.bam, tumor.bam
+</span></span><span style="display:flex;"><span>    resources: tmpdir=/tmp
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[Tue Jan  9 14:24:04 2024]
+</span></span><span style="display:flex;"><span>Finished job 0.
+</span></span><span style="display:flex;"><span>3 of 3 steps (100%) done
+</span></span><span style="display:flex;"><span>Complete log: .snakemake/log/2024-01-09T142402.506612.snakemake.log
+</span></span></code></pre></div><ol start="5">
+<li>检查结果</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>head Sample?.txt
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>genome.fa fastq/tumor.R1.fastq.gz fastq/tumor.R2.fastq.gz
+</span></span><span style="display:flex;"><span>genome.fa fastq/normal.R1.fastq.gz fastq/normal.R2.fastq.gz
+</span></span></code></pre></div><p>还可以把流程图形化：</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>snakemake --forceall --dag | dot -Tpng &gt; dag1.png
+</span></span></code></pre></div><h2 id="3-功能">3. 功能</h2>
+<h3 id="代码质量检查">代码质量检查</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>snakemake --lint
+</span></span></code></pre></div><p>在5.11版本之后可以对代码质量检查，强烈推荐在发布任何工作流之前使用linter检查质量。</p>
+<h3 id="多线程">多线程</h3>
+<p>通过在Snakefile中加入如下参数设置可以使用多线程，如果没有指定那么默认是单线程：</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>threads: 8
+</span></span></code></pre></div><p>注意，在执行工作流程时，Snakemake调度器会考虑作业所需的线程数。特别是：确保同时运行的所有作业的线程总和不超过给定的可用CPU核心数。通过参数<code>--cores</code>给出，这里rule需要8个线程，因此同一时间只能运行一个rule的作业，而 Snakemake 调度器将尝试用其他作业填满剩余的核心。当提供的core少于thread时，规则使用的thread将被减少到提供的core。</p>
+<blockquote>
+<p>在没有超线程技术的情况下，一个CPU核心只能同时执行一个线程。这意味着每个物理核心只能处理一个指令流。在这种情况下，一个CPU核心实际上只有一个线程。</p>
+</blockquote>
+<ul>
+<li>
+<p>&ndash;force, -f 参数：不考虑已经创建的输出，强制执行所选目标或第一个rule。（默认值：False）</p>
+</li>
+<li>
+<p>&ndash;forceall, -F 参数：不考虑已经创建的输出，强制执行所选（或第一个）rule以及其所有依赖的rule。（默认值：False）</p>
+</li>
+</ul>
+<h3 id="config文件">config文件</h3>
+<p>指定样本时可以通过上述创建Python列表来制定，但为了适应使流程更方便使用新的数据，可以通过创建config文件，该文件可以是<code>JSON</code>或者<code>YAML</code>格式，可以通过在<code>Snakefile</code>文件开头通过参数<code>configfile</code>直接使用：</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>configfile: &#34;config.yaml&#34;
+</span></span></code></pre></div><p>Snakemake会载入config文件并把把内容存储在全局的字典中<code>config</code>，<code>config.yaml</code>的内容如下：</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>samples:
+</span></span><span style="display:flex;"><span>    A: data/samples/A.fastq
+</span></span><span style="display:flex;"><span>    B: data/samples/B.fastq
+</span></span></code></pre></div><p>可以把上述的SAMPLES去掉来优化Snakefile：</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>rule bcftools_call:
+</span></span><span style="display:flex;"><span>    input:
+</span></span><span style="display:flex;"><span>        fa=&#34;data/genome.fa&#34;,
+</span></span><span style="display:flex;"><span>        bam=expand(&#34;sorted_reads/{sample}.bam&#34;, sample=config[&#34;samples&#34;]),
+</span></span><span style="display:flex;"><span>        bai=expand(&#34;sorted_reads/{sample}.bam.bai&#34;, sample=config[&#34;samples&#34;])
+</span></span><span style="display:flex;"><span>    output:
+</span></span><span style="display:flex;"><span>        &#34;calls/all.vcf&#34;
+</span></span><span style="display:flex;"><span>    shell:
+</span></span><span style="display:flex;"><span>        &#34;bcftools mpileup -f {input.fa} {input.bam} | &#34;
+</span></span><span style="display:flex;"><span>        &#34;bcftools call -mv - &gt; {output}&#34;
+</span></span></code></pre></div><h3 id="输入函数">输入函数</h3>
+<p>上面在config文件中存储了FASTQ文件的路径，还可以通过以下方法来使用路径，先介绍一下Snakemake工作流的三段：</p>
+<ol>
+<li>
+<p>initialization段：解析定义工作流的文件并实例化所有rule</p>
+</li>
+<li>
+<p>DAG段：填充通配符并根据输入文件和输出文件匹配</p>
+</li>
+<li>
+<p>scheduling段：根据可用资源启动作业，执行作业的DAG</p>
+</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>def get_bwa_map_input_fastqs(wildcards):
+</span></span><span style="display:flex;"><span>    return config[&#34;samples&#34;][wildcards.sample]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>rule bwa_map:
+</span></span><span style="display:flex;"><span>    input:
+</span></span><span style="display:flex;"><span>        &#34;data/genome.fa&#34;,
+</span></span><span style="display:flex;"><span>        get_bwa_map_input_fastqs
+</span></span><span style="display:flex;"><span>    output:
+</span></span><span style="display:flex;"><span>        &#34;mapped_reads/{sample}.bam&#34;
+</span></span><span style="display:flex;"><span>    threads: 8
+</span></span><span style="display:flex;"><span>    shell:
+</span></span><span style="display:flex;"><span>        &#34;bwa mem -t {threads} {input} | samtools view -Sb - &gt; {output}&#34;
+</span></span></code></pre></div><h3 id="参数">参数</h3>
+<p>shell命令可能不止由输入和输出文件组成，存在其他的参数，可能这些参数依赖于通配符的值，Snakemake允许通过参数<code>params</code>直接定义任何参数，举例：</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>rule bwa_map:
+</span></span><span style="display:flex;"><span>    input:
+</span></span><span style="display:flex;"><span>        &#34;data/genome.fa&#34;,
+</span></span><span style="display:flex;"><span>        get_bwa_map_input_fastqs
+</span></span><span style="display:flex;"><span>    output:
+</span></span><span style="display:flex;"><span>        &#34;mapped_reads/{sample}.bam&#34;
+</span></span><span style="display:flex;"><span>    params:
+</span></span><span style="display:flex;"><span>        rg=r&#34;@RG\tID:{sample}\tSM:{sample}&#34;
+</span></span><span style="display:flex;"><span>    threads: 8
+</span></span><span style="display:flex;"><span>    shell:
+</span></span><span style="display:flex;"><span>        &#34;bwa mem -R &#39;{params.rg}&#39; -t {threads} {input} | samtools view -Sb - &gt; {output}&#34;
+</span></span></code></pre></div><h3 id="保存log文件">保存log文件</h3>
+<p>存储每个job的log输出，而不是直接在终端输出，并行调用脚本的时候容易出现混乱。Snakemake允许直接通过参数<code>log</code>指定log文件，举例：</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>rule bwa_map:
+</span></span><span style="display:flex;"><span>    input:
+</span></span><span style="display:flex;"><span>        &#34;data/genome.fa&#34;,
+</span></span><span style="display:flex;"><span>        get_bwa_map_input_fastqs
+</span></span><span style="display:flex;"><span>    output:
+</span></span><span style="display:flex;"><span>        &#34;mapped_reads/{sample}.bam&#34;
+</span></span><span style="display:flex;"><span>    params:
+</span></span><span style="display:flex;"><span>        rg=r&#34;@RG\tID:{sample}\tSM:{sample}&#34;
+</span></span><span style="display:flex;"><span>    log:
+</span></span><span style="display:flex;"><span>        &#34;logs/bwa_mem/{sample}.log&#34;
+</span></span><span style="display:flex;"><span>    threads: 8
+</span></span><span style="display:flex;"><span>    shell:
+</span></span><span style="display:flex;"><span>        &#34;(bwa mem -R &#39;{params.rg}&#39; -t {threads} {input} | &#34;
+</span></span><span style="display:flex;"><span>        &#34;samtools view -Sb - &gt; {output}) 2&gt; {log}&#34;
+</span></span></code></pre></div><p>注意，为了整洁最好创建一个log文件夹存储所有的log文件。</p>
+<h3 id="临时文件和保护文件">临时文件和保护文件</h3>
+<p>在处理原始数据的过程中，从fastq到最后的变异的提取，中途会产生BAM文件，BAM文件通常很大，可以在<code>output</code>中标记输出文件是临时文件，当执行完所有需要该临时文件作为输入的命令之后，snakemake将会删除标记的临时文件，示例：</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>rule bwa_map:
+</span></span><span style="display:flex;"><span>    input:
+</span></span><span style="display:flex;"><span>        &#34;data/genome.fa&#34;,
+</span></span><span style="display:flex;"><span>        get_bwa_map_input_fastqs
+</span></span><span style="display:flex;"><span>    output:
+</span></span><span style="display:flex;"><span>        temp(&#34;mapped_reads/{sample}.bam&#34;)
+</span></span><span style="display:flex;"><span>    params:
+</span></span><span style="display:flex;"><span>        rg=r&#34;@RG\tID:{sample}\tSM:{sample}&#34;
+</span></span><span style="display:flex;"><span>    log:
+</span></span><span style="display:flex;"><span>        &#34;logs/bwa_mem/{sample}.log&#34;
+</span></span><span style="display:flex;"><span>    threads: 8
+</span></span><span style="display:flex;"><span>    shell:
+</span></span><span style="display:flex;"><span>        &#34;(bwa mem -R &#39;{params.rg}&#39; -t {threads} {input} | &#34;
+</span></span><span style="display:flex;"><span>        &#34;samtools view -Sb - &gt; {output}) 2&gt; {log}&#34;
+</span></span></code></pre></div><p>另外，由于创建BAM文件耗费了大量的资源，也可以对最终生成的BAM文件进行保护，以防意外的删除或修改，举例：</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>rule samtools_sort:
+</span></span><span style="display:flex;"><span>    input:
+</span></span><span style="display:flex;"><span>        &#34;mapped_reads/{sample}.bam&#34;
+</span></span><span style="display:flex;"><span>    output:
+</span></span><span style="display:flex;"><span>        protected(&#34;sorted_reads/{sample}.bam&#34;)
+</span></span><span style="display:flex;"><span>    shell:
+</span></span><span style="display:flex;"><span>        &#34;samtools sort -T sorted_reads/{wildcards.sample} &#34;
+</span></span><span style="display:flex;"><span>        &#34;-O bam {input} &gt; {output}&#34;
+</span></span></code></pre></div><p>在成功执行任务之后，Snakemake会对输出文件进行<code>写</code>保护。</p>
+<h3 id="资源消耗测试">资源消耗测试</h3>
+<p>使用benchmark指令来自动监控计算rule的资源消耗，示例：</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>rule bwa_map:
+</span></span><span style="display:flex;"><span>    input:
+</span></span><span style="display:flex;"><span>        &#34;data/genome.fa&#34;,
+</span></span><span style="display:flex;"><span>        lambda wildcards: config[&#34;samples&#34;][wildcards.sample]
+</span></span><span style="display:flex;"><span>    output:
+</span></span><span style="display:flex;"><span>        temp(&#34;mapped_reads/{sample}.bam&#34;)
+</span></span><span style="display:flex;"><span>    params:
+</span></span><span style="display:flex;"><span>        rg=&#34;@RG\tID:{sample}\tSM:{sample}&#34;
+</span></span><span style="display:flex;"><span>    log:
+</span></span><span style="display:flex;"><span>        &#34;logs/bwa_mem/{sample}.log&#34;
+</span></span><span style="display:flex;"><span>    benchmark:
+</span></span><span style="display:flex;"><span>        &#34;benchmarks/{sample}.bwa.benchmark.txt&#34;
+</span></span><span style="display:flex;"><span>    threads: 8
+</span></span><span style="display:flex;"><span>    shell:
+</span></span><span style="display:flex;"><span>        &#34;(bwa mem -R &#39;{params.rg}&#39; -t {threads} {input} | &#34;
+</span></span><span style="display:flex;"><span>        &#34;samtools view -Sb - &gt; {output}) 2&gt; {log}&#34;
+</span></span></code></pre></div><p>另外可以重复多次进行测试，比如重复3次：<code>repeat(&quot;benchmarks/{sample}.bwa.benchmark.txt&quot;, 3)</code></p>
+<h3 id="模块化">模块化</h3>
+<p>为了重新调用或者简化大型的工作流，可以把工作流拆分成多个模块(module)，提供<code>include</code>来直接把其他的Snakemake文件导入当前文件：</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>include: &#34;path/to/other.smk&#34;
+</span></span></code></pre></div><p>主文件是Snakefile，其他的文件是<code>.smk</code>。另外，Snakmake允许定义子工作流（sub-workflows），子工作流指的是包含完整Snakemake工作流的工作目录，子工作流的输出文件可以用于当前的Snakefile，当运行时，Snakemake确保了子工作流的输出文件是最新的，这种做法在想要重复之前的分析时特别有用。</p>
+<h2 id="自动部署软件依赖">自动部署软件依赖</h2>
+<p>为了数据分析的可重复性，可以指定每个rule的环境：</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>rule samtools_index:
+</span></span><span style="display:flex;"><span>  input:
+</span></span><span style="display:flex;"><span>      &#34;sorted_reads/{sample}.bam&#34;
+</span></span><span style="display:flex;"><span>  output:
+</span></span><span style="display:flex;"><span>      &#34;sorted_reads/{sample}.bam.bai&#34;
+</span></span><span style="display:flex;"><span>  conda:
+</span></span><span style="display:flex;"><span>      &#34;envs/samtools.yaml&#34;
+</span></span><span style="display:flex;"><span>  shell:
+</span></span><span style="display:flex;"><span>      &#34;samtools index {input}&#34;
+</span></span></code></pre></div><p>定义<code>envs/samtools.yaml</code></p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>channels:
+</span></span><span style="display:flex;"><span>  - bioconda
+</span></span><span style="display:flex;"><span>  - conda-forge
+</span></span><span style="display:flex;"><span>dependencies:
+</span></span><span style="display:flex;"><span>  - samtools =1.9
+</span></span></code></pre></div><p>运行Snakemake：</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>snakemake --software-deployment-method conda --cores 1
+</span></span><span style="display:flex;"><span>#or the short form
+</span></span><span style="display:flex;"><span>  snakemake --sdm conda -c 1
+</span></span></code></pre></div><p>这样就可以在任务运行前自动地创建需要的环境并激活它们，这样有两个优点：</p>
+<ul>
+<li>
+<p>工作流会记录所有使用的工具版本</p>
+</li>
+<li>
+<p>工作流可以在无需管理员权限的系统下重新运行，不需要额外安装除了Snakemake和Miniconda以外的条件</p>
+</li>
+</ul>
+<p>注意：</p>
+<p>conda不能和<code>run</code>结合使用，因为conda需要和周围的Snakemake共享同一个Python环境，</p>
+<h3 id="工具包">工具包</h3>
+<p>对于常用工具，可以简化对它们的使用。Snakemake提供了名叫<a href="https://snakemake-wrappers.readthedocs.io/" target="_blank">wrapper</a>的仓库，一个wrapper是一段包装命令行应用的代码可以直接在Snakemake里调用，示例：</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>rule bwa_mem:
+</span></span><span style="display:flex;"><span>  input:
+</span></span><span style="display:flex;"><span>      ref=&#34;data/genome.fa&#34;,
+</span></span><span style="display:flex;"><span>      sample=lambda wildcards: config[&#34;samples&#34;][wildcards.sample]
+</span></span><span style="display:flex;"><span>  output:
+</span></span><span style="display:flex;"><span>      temp(&#34;mapped_reads/{sample}.bam&#34;)
+</span></span><span style="display:flex;"><span>  log:
+</span></span><span style="display:flex;"><span>      &#34;logs/bwa_mem/{sample}.log&#34;
+</span></span><span style="display:flex;"><span>  params:
+</span></span><span style="display:flex;"><span>      &#34;-R &#39;@RG\tID:{sample}\tSM:{sample}&#39;&#34;
+</span></span><span style="display:flex;"><span>  threads: 8
+</span></span><span style="display:flex;"><span>  wrapper:
+</span></span><span style="display:flex;"><span>      &#34;0.15.3/bio/bwa/mem&#34;
+</span></span></code></pre></div><p>这里的URL第一部分是git版本，调用后，Snakemake会自动下载所需版本的wrapper。另外结合<code>--software-deployment-method conda</code>执行前会自动部署所需要的工具。</p>
+<h3 id="在集群上执行">在集群上执行</h3>
+<p>Snakemake可以在分布式环境中运行，比如集群。如果节点共享公共文件系统，Snakemake提供三种替代执行模式：</p>
+<ol>
+<li>在集群环境中，任务通常通过shell脚本的方式<code>qsub</code>提交到节点上：</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>snakemake --cluster qsub --jobs 100
+</span></span></code></pre></div><p>每个任务被编译成一个shell脚本，这里通过qsub提交。<code>--jobs</code>限制了并行提交的作业数量，这个基本的模式假设提交命令在提交完作业后立刻返回。</p>
+<ol start="2">
+<li>有些集群允许以同步模式运行提交命令，即等待作业执行完毕。在这种情况下，我们可以调用例如：</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>snakemake --cluster-sync &#34;qsub -sync yes&#34; --jobs 100
+</span></span></code></pre></div><p>指定的提交命令也可以使用从提交作业中获取的其他参数进行修饰。例如，可以使用大括号访问已使用线程的数量，类似于shell命令的格式化，例如。</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>snakemake --cluster &#34;qsub -pe threaded {threads}&#34; --jobs 100
+</span></span></code></pre></div><ol start="3">
+<li>另外，snake也可以使用分布式资源管理应用程序API (DRMAA)。该API提供了一个公共接口来控制各种资源管理系统。DRMAA支持可以通过如下调用snake来激活:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>snakemake --drmaa --jobs 100
+</span></span></code></pre></div><p>如果可用，DRMAA比一般集群模式更好，因为它提供了更好的控制和错误处理。其他用于特定集群的参数，可以通过工作流的profile(参考Profiles部分)来补充Snakefile。</p>
+<h3 id="-cluster-status">-cluster-status</h3>
+<p>判断集群任务是否成功完成、失败还是仍在继续，<code>--cluster</code>进行的错误检测可以改进边缘情况，比如超时和超过内存的作业被排队系统静默终止。这可以通过<code>--cluster-status</code>选项实现。该选项的值应为可执行脚本，该脚本以作业ID作为第一个参数，并仅在标准输出中打印 [running|success|failed] 中的一个。Snakemake接收到的信息不单单是作业ID，想要单独获得作业ID，有三种潜在的解决方案：解析脚本接收的字符串并在脚本中提取作业ID，包装提交工具以拦截其标准输出并仅返回作业代码，或者最理想的情况是，集群可以提供一个选项，以在提交时仅返回作业ID，然后您可以指示Snakemake使用该选项。对于SGE，这看起来像是 snakemake &ndash;cluster &ldquo;qsub -terse&rdquo;。</p>
+<p>以下（简化的）脚本可用于在给定的SLURM集群上检测作业状态（需要版本 &gt;= 14.03.0rc1 以支持 &ndash;parsable）。</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>#!/usr/bin/env python
+</span></span><span style="display:flex;"><span>import subprocess
+</span></span><span style="display:flex;"><span>import sys
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>jobid = sys.argv[1]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>output = str(subprocess.check_output(&#34;sacct -j %s --format State --noheader | head -1 | awk &#39;{print $1}&#39;&#34; % jobid, shell=True).strip())
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>running_status=[&#34;PENDING&#34;, &#34;CONFIGURING&#34;, &#34;COMPLETING&#34;, &#34;RUNNING&#34;, &#34;SUSPENDED&#34;]
+</span></span><span style="display:flex;"><span>if &#34;COMPLETED&#34; in output:
+</span></span><span style="display:flex;"><span>  print(&#34;success&#34;)
+</span></span><span style="display:flex;"><span>elif any(r in output for r in running_status):
+</span></span><span style="display:flex;"><span>  print(&#34;running&#34;)
+</span></span><span style="display:flex;"><span>else:
+</span></span><span style="display:flex;"><span>  print(&#34;failed&#34;)
+</span></span></code></pre></div><p>要使用此脚本，请调用snakemake类似于以下方式，其中status.py是上述提到的脚本：</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>snakemake all --jobs 100 --cluster &#34;sbatch --cpus-per-task=1 --parsable&#34; --cluster-status ./status.py
+</span></span></code></pre></div><p>当通过按Ctrl-C终止snakemake时，使用 &ndash;drmaa 时，它将取消所有当前运行的节点。您可以通过添加 &ndash;cluster-cancel 并传递一个用于按作业ID取消作业的命令（例如，对于SLURM是 scancel，对于SGE是 qdel）来实现相同的行为，即在使用 &ndash;cluster 时也会发生这种情况。大多数作业调度程序都可以传递多个作业ID，您可以使用 &ndash;cluster-cancel-nargs 来限制参数的数量（默认值是1000，对于大多数调度程序来说是合理的）。</p>
+<h2 id="有趣的资源">有趣的资源</h2>
+<ul>
+<li><a href="https://snakemake-wrappers.readthedocs.io/en/stable/" target="_blank">The Snakemake Wrappers repository</a></li>
+</ul>
+<p>使用snakemake规则和流程来快速的调用常用的工具，举个例子：</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>rule samtools_sort:
+</span></span><span style="display:flex;"><span>    input:
+</span></span><span style="display:flex;"><span>        &#34;mapped/{sample}.bam&#34;
+</span></span><span style="display:flex;"><span>    output:
+</span></span><span style="display:flex;"><span>        &#34;mapped/{sample}.sorted.bam&#34;
+</span></span><span style="display:flex;"><span>    params:
+</span></span><span style="display:flex;"><span>        &#34;-m 4G&#34;
+</span></span><span style="display:flex;"><span>    threads: 8
+</span></span><span style="display:flex;"><span>    wrapper:
+</span></span><span style="display:flex;"><span>        &#34;https://github.com/snakemake/snakemake-wrappers/raw/0.2.0/bio/samtools/sort&#34;
+</span></span></code></pre></div><ul>
+<li><a href="https://github.com/snakemake-workflows/docs" target="_blank">The Snakemake-Workflows project</a></li>
+</ul>
+<p>目前已有的流程：</p>
+<center>
+      <img src= "https://blog-1310600458.cos.ap-shanghai.myqcloud.com/Macdo2024-01-09%2014.45.45.png" width="600"/>
+      <p><font color="grey"></font></p>
+</center>
+<ul>
+<li><a href="https://snakemake.github.io/snakemake-workflow-catalog/" target="_blank">Snakemake Workflows Project</a></li>
+</ul>
+<p>包含很多常用的流程</p>
+<ul>
+<li><a href="https://conda-forge.org/" target="_blank">conda-forge</a></li>
+</ul>
+<p>创建可重建的工作流程</p>
+<ul>
+<li><a href="https://snakemake-api.readthedocs.io/" target="_blank">Snakemake API documentation</a></li>
+</ul>
+<h2 id="参考资料">参考资料</h2>
+<ul>
+<li>
+<p><a href="https://anaconda.org/bioconda/snakemake-minimal" target="_blank">conda snakemake</a></p>
+</li>
+<li>
+<p><a href="https://slowkow.com/notes/snakemake-tutorial/" target="_blank">Build bioinformatics pipelines with Snakemake</a></p>
+</li>
+</ul></div>
+      </div>
+    </article>
 
-      
-      
-      <aside class="col-lg-4">
-        <div class="pl-0 pl-lg-4"><!-- Search -->
 
-<div class="widget">
-  <h5 class="widget-title"><span>Search</span></h5>
-  <form action="/search" class="widget-search">
-    <input id="search-query" name="s" type="search" placeholder="Type &amp; Hit Enter...">
-    <button type="submit" class="btn btn-primary" aria-label="Search Post"><i class="fas fa-search"></i></button>
-  </form>
-</div>
-<!-- about me -->
-<div class="widget widget-about">
-  
-  <h5 class="widget-title"><span>Hi, I Am Ziyu Tao</span></h5>
-  <div class="d-flex">
 
-    
-    
-    
-    
-    
-    <img class="img-fluid widget-about-image" loading="lazy" src="https://blog-1310600458.cos.ap-shanghai.myqcloud.com/20220408140841.png" alt="">
-    
 
-    <div class="mb-2">
-      <span class="d-block">上海科技大学在读博士生。
-研究方向：癌症基因组学。
-Find your passion and then aim to be the best on the …</span>
-      
-      <ul class="list-inline social-icons mb-1 mt-2">
+
+
+
+
+
+
+
+<div class="toc">
+
+    <div class="page-header"><strong> 目    录 </strong></div>
+
+
+    <div id="page-scrollspy" class="toc-nav">
+
         
-        <li class="list-inline-item"><a href="https://facebook.com"><i class="fab fa-facebook"></i></a></li>
         
-      </ul>
-      <a href="/about/" class="btn btn-sm btn-primary p-1 px-3 rounded mt-2">About Me</a>
+            
+                
+                
+                    
+                    <ul class="nav">
+                    
+                    <ul class="nav">
+                    
+                    
+                        <li class="nav-item">
+                            <a class="nav-link text-left" href="#1-%e5%ae%89%e8%a3%85">
+                            1. 安装
+                            </a>
+                        </li>
+                    
+                    
+                    </ul>
+                    
+                    </ul>
+                    
+                
+            
+        
+        
+            
+                
+                
+                    
+                    <ul class="nav">
+                    
+                    <ul class="nav">
+                    
+                    
+                        <li class="nav-item">
+                            <a class="nav-link text-left" href="#2-%e7%a4%ba%e4%be%8b%e6%b5%8b%e8%af%95">
+                            2. 示例测试
+                            </a>
+                        </li>
+                    
+                    
+                    </ul>
+                    
+                    </ul>
+                    
+                
+            
+        
+        
+            
+                
+                
+                    
+                    <ul class="nav">
+                    
+                    <ul class="nav">
+                    
+                    
+                        <li class="nav-item">
+                            <a class="nav-link text-left" href="#3-%e5%8a%9f%e8%83%bd">
+                            3. 功能
+                            </a>
+                        </li>
+                    
+                    
+                    </ul>
+                    
+                    </ul>
+                    
+                
+            
+        
+        
+            
+                
+                
+                    
+                    <ul class="nav">
+                    
+                    <ul class="nav">
+                    
+                    <ul class="nav">
+                    
+                    
+                        <li class="nav-item">
+                            <a class="nav-link text-left" href="#%e4%bb%a3%e7%a0%81%e8%b4%a8%e9%87%8f%e6%a3%80%e6%9f%a5">
+                            代码质量检查
+                            </a>
+                        </li>
+                    
+                    
+                    </ul>
+                    
+                    </ul>
+                    
+                    </ul>
+                    
+                
+            
+        
+        
+            
+                
+                
+                    
+                    <ul class="nav">
+                    
+                    <ul class="nav">
+                    
+                    <ul class="nav">
+                    
+                    
+                        <li class="nav-item">
+                            <a class="nav-link text-left" href="#%e5%a4%9a%e7%ba%bf%e7%a8%8b">
+                            多线程
+                            </a>
+                        </li>
+                    
+                    
+                    </ul>
+                    
+                    </ul>
+                    
+                    </ul>
+                    
+                
+            
+        
+        
+            
+                
+                
+                    
+                    <ul class="nav">
+                    
+                    <ul class="nav">
+                    
+                    <ul class="nav">
+                    
+                    
+                        <li class="nav-item">
+                            <a class="nav-link text-left" href="#config%e6%96%87%e4%bb%b6">
+                            config文件
+                            </a>
+                        </li>
+                    
+                    
+                    </ul>
+                    
+                    </ul>
+                    
+                    </ul>
+                    
+                
+            
+        
+        
+            
+                
+                
+                    
+                    <ul class="nav">
+                    
+                    <ul class="nav">
+                    
+                    <ul class="nav">
+                    
+                    
+                        <li class="nav-item">
+                            <a class="nav-link text-left" href="#%e8%be%93%e5%85%a5%e5%87%bd%e6%95%b0">
+                            输入函数
+                            </a>
+                        </li>
+                    
+                    
+                    </ul>
+                    
+                    </ul>
+                    
+                    </ul>
+                    
+                
+            
+        
+        
+            
+                
+                
+                    
+                    <ul class="nav">
+                    
+                    <ul class="nav">
+                    
+                    <ul class="nav">
+                    
+                    
+                        <li class="nav-item">
+                            <a class="nav-link text-left" href="#%e5%8f%82%e6%95%b0">
+                            参数
+                            </a>
+                        </li>
+                    
+                    
+                    </ul>
+                    
+                    </ul>
+                    
+                    </ul>
+                    
+                
+            
+        
+        
+            
+                
+                
+                    
+                    <ul class="nav">
+                    
+                    <ul class="nav">
+                    
+                    <ul class="nav">
+                    
+                    
+                        <li class="nav-item">
+                            <a class="nav-link text-left" href="#%e4%bf%9d%e5%ad%98log%e6%96%87%e4%bb%b6">
+                            保存log文件
+                            </a>
+                        </li>
+                    
+                    
+                    </ul>
+                    
+                    </ul>
+                    
+                    </ul>
+                    
+                
+            
+        
+        
+            
+                
+                
+                    
+                    <ul class="nav">
+                    
+                    <ul class="nav">
+                    
+                    <ul class="nav">
+                    
+                    
+                        <li class="nav-item">
+                            <a class="nav-link text-left" href="#%e4%b8%b4%e6%97%b6%e6%96%87%e4%bb%b6%e5%92%8c%e4%bf%9d%e6%8a%a4%e6%96%87%e4%bb%b6">
+                            临时文件和保护文件
+                            </a>
+                        </li>
+                    
+                    
+                    </ul>
+                    
+                    </ul>
+                    
+                    </ul>
+                    
+                
+            
+        
+        
+            
+                
+                
+                    
+                    <ul class="nav">
+                    
+                    <ul class="nav">
+                    
+                    <ul class="nav">
+                    
+                    
+                        <li class="nav-item">
+                            <a class="nav-link text-left" href="#%e8%b5%84%e6%ba%90%e6%b6%88%e8%80%97%e6%b5%8b%e8%af%95">
+                            资源消耗测试
+                            </a>
+                        </li>
+                    
+                    
+                    </ul>
+                    
+                    </ul>
+                    
+                    </ul>
+                    
+                
+            
+        
+        
+            
+                
+                
+                    
+                    <ul class="nav">
+                    
+                    <ul class="nav">
+                    
+                    <ul class="nav">
+                    
+                    
+                        <li class="nav-item">
+                            <a class="nav-link text-left" href="#%e6%a8%a1%e5%9d%97%e5%8c%96">
+                            模块化
+                            </a>
+                        </li>
+                    
+                    
+                    </ul>
+                    
+                    </ul>
+                    
+                    </ul>
+                    
+                
+            
+        
+        
+            
+                
+                
+                    
+                    <ul class="nav">
+                    
+                    <ul class="nav">
+                    
+                    
+                        <li class="nav-item">
+                            <a class="nav-link text-left" href="#%e8%87%aa%e5%8a%a8%e9%83%a8%e7%bd%b2%e8%bd%af%e4%bb%b6%e4%be%9d%e8%b5%96">
+                            自动部署软件依赖
+                            </a>
+                        </li>
+                    
+                    
+                    </ul>
+                    
+                    </ul>
+                    
+                
+            
+        
+        
+            
+                
+                
+                    
+                    <ul class="nav">
+                    
+                    <ul class="nav">
+                    
+                    <ul class="nav">
+                    
+                    
+                        <li class="nav-item">
+                            <a class="nav-link text-left" href="#%e5%b7%a5%e5%85%b7%e5%8c%85">
+                            工具包
+                            </a>
+                        </li>
+                    
+                    
+                    </ul>
+                    
+                    </ul>
+                    
+                    </ul>
+                    
+                
+            
+        
+        
+            
+                
+                
+                    
+                    <ul class="nav">
+                    
+                    <ul class="nav">
+                    
+                    <ul class="nav">
+                    
+                    
+                        <li class="nav-item">
+                            <a class="nav-link text-left" href="#%e5%9c%a8%e9%9b%86%e7%be%a4%e4%b8%8a%e6%89%a7%e8%a1%8c">
+                            在集群上执行
+                            </a>
+                        </li>
+                    
+                    
+                    </ul>
+                    
+                    </ul>
+                    
+                    </ul>
+                    
+                
+            
+        
+        
+            
+                
+                
+                    
+                    <ul class="nav">
+                    
+                    <ul class="nav">
+                    
+                    <ul class="nav">
+                    
+                    
+                        <li class="nav-item">
+                            <a class="nav-link text-left" href="#-cluster-status">
+                            -cluster-status
+                            </a>
+                        </li>
+                    
+                    
+                    </ul>
+                    
+                    </ul>
+                    
+                    </ul>
+                    
+                
+            
+        
+        
+            
+                
+                
+                    
+                    <ul class="nav">
+                    
+                    <ul class="nav">
+                    
+                    
+                        <li class="nav-item">
+                            <a class="nav-link text-left" href="#%e6%9c%89%e8%b6%a3%e7%9a%84%e8%b5%84%e6%ba%90">
+                            有趣的资源
+                            </a>
+                        </li>
+                    
+                    
+                    </ul>
+                    
+                    </ul>
+                    
+                
+            
+        
+        
+            
+                
+                
+                    
+                    <ul class="nav">
+                    
+                    <ul class="nav">
+                    
+                    
+                        <li class="nav-item">
+                            <a class="nav-link text-left" href="#%e5%8f%82%e8%80%83%e8%b5%84%e6%96%99">
+                            参考资料
+                            </a>
+                        </li>
+                    
+                    
+                    </ul>
+                    
+                    </ul>
+                    
+                
+            
+        
+
     </div>
-  </div>
-  
-  
-</div><!-- Promotion -->
 
-<div class="promotion">
-  
-  
-  <img loading="lazy" decoding="async" class="w-100" width="330" height="390" src="/images/promotion_hu6a90c30421148ac00753954565e9ea00_18207_330x0_resize_q90_h2_box.webp" alt="promotion-image">
-  <div class="promotion-content">
-    <h5 class="text-white mb-3">Create Stunning Website!!</h5>
-    <p class="text-white mb-4">Lorem ipsum dolor sit amet, consectetur sociis. Etiam nunc amet id dignissim. Feugiat id tempor vel sit ornare.</p>
-    <a href="https://themefisher.com/" class="btn btn-primary">Get Started</a>
-  </div>
-</div>
-<!-- Search -->
-
-
-<div class="widget">
-  <h5 class="widget-title"><span>Subscribe Newsletter</span></h5>
-  <form action="https://gmail.us4.list-manage.com/subscribe/post?u=463ee871f45d2d93748e77cad&amp;amp;id=a0a2c6d074" method="post" name="mc-embedded-subscribe-form" target="_blank"
-    class="widget-search">
-    <input class="mb-3" id="search-query" name="s" type="search" placeholder="Your Email Address">
-    <i class="ti-email"></i>
-    <button type="submit" class="btn btn-primary" name="subscribe" aria-label="Subscribe Newsletter"><i class="fas fa-paper-plane"></i></button>
-    <div style="position: absolute; left: -5000px;" aria-hidden="true">
-      <input type="text" name="b_463ee871f45d2d93748e77cad_a0a2c6d074" tabindex="-1">
-    </div>
-  </form>
 </div>
 
-<!-- categories -->
-<div class="widget">
-  <h5 class="widget-title"><span>Categories</span></h5>
-  <ul class="list-unstyled widget-list">
-    <li><a href="/categories/bug" class="d-flex">Bug
-        <small class="ml-auto">(5)</small></a></li>
-    <li><a href="/categories/dna_damage" class="d-flex">Dna damage
-        <small class="ml-auto">(1)</small></a></li>
-    <li><a href="/categories/ecdna" class="d-flex">Ecdna
-        <small class="ml-auto">(1)</small></a></li>
-    <li><a href="/categories/photography" class="d-flex">Photography
-        <small class="ml-auto">(1)</small></a></li>
-    <li><a href="/categories/r" class="d-flex">R
-        <small class="ml-auto">(13)</small></a></li>
-    <li><a href="/categories/shell" class="d-flex">Shell
-        <small class="ml-auto">(25)</small></a></li>
-    <li><a href="/categories/%e5%8f%af%e8%a7%86%e5%8c%96" class="d-flex">可视化
-        <small class="ml-auto">(2)</small></a></li>
-    <li><a href="/categories/%e5%a6%82%e4%bd%95%e7%a7%91%e7%a0%94" class="d-flex">如何科研
-        <small class="ml-auto">(1)</small></a></li>
-    <li><a href="/categories/%e6%8a%80%e6%9c%af" class="d-flex">技术
-        <small class="ml-auto">(7)</small></a></li>
-    <li><a href="/categories/%e6%9c%ba%e5%99%a8%e5%ad%a6%e4%b9%a0" class="d-flex">机器学习
-        <small class="ml-auto">(3)</small></a></li>
-    <li><a href="/categories/%e7%94%9f%e4%bf%a1" class="d-flex">生信
-        <small class="ml-auto">(8)</small></a></li>
-    <li><a href="/categories/%e7%94%9f%e4%bf%a1%e5%b7%a5%e5%85%b7" class="d-flex">生信工具
-        <small class="ml-auto">(29)</small></a></li>
-    <li><a href="/categories/%e7%94%9f%e7%89%a9%e5%ad%a6" class="d-flex">生物学
-        <small class="ml-auto">(5)</small></a></li>
-    <li><a href="/categories/%e7%94%9f%e7%89%a9%e7%bb%9f%e8%ae%a1" class="d-flex">生物统计
-        <small class="ml-auto">(4)</small></a></li>
-    <li><a href="/categories/%e7%99%8c%e7%97%87%e5%9f%ba%e5%9b%a0%e7%bb%84%e5%ad%a6" class="d-flex">癌症基因组学
-        <small class="ml-auto">(6)</small></a></li>
-    <li><a href="/categories/%e7%ae%97%e6%b3%95" class="d-flex">算法
-        <small class="ml-auto">(3)</small></a></li>
-    <li><a href="/categories/%e8%ae%a1%e7%ae%97%e6%9c%ba%e5%9f%ba%e7%a1%80" class="d-flex">计算机基础
-        <small class="ml-auto">(2)</small></a></li>
-  </ul>
-</div><!-- latest post -->
-<div class="widget">
-  <h5 class="widget-title"><span>Latest Article</span></h5>
-  <!-- post-item -->
-  <ul class="list-unstyled widget-list mb-0">
-  
-    <li class="media widget-post align-items-center">
-      <a href="https://taozyblog.com.cn/post/2024-01-10_download_folder/">        
-        
-        
-        
-        <img loading="lazy" class="mr-3" src="https://blog-1310600458.cos.ap-shanghai.myqcloud.com/Macdo2024-01-09%2014.06.32.png" alt="post image">
-        
-        
-        
-      </a>
-      <div class="media-body">
-        <h5 class="h6 mb-0"><a href="https://taozyblog.com.cn/post/2024-01-10_download_folder/">下载数据目录</a></h5>
-        <small>January 10, 2024</small>
+
+
+
+    
+    
+    <div class="row">
+      <div class="col-lg-10 mx-auto">
+        <div class="mt-5">
+          <div id="disqus_thread"></div>
+<script type="application/javascript">
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "themefisher-template" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        </div>
       </div>
-    </li>
-  
-    <li class="media widget-post align-items-center">
-      <a href="https://taozyblog.com.cn/post/2024-01-09_snakemake1/">        
-        
-        
-        
-        <img loading="lazy" class="mr-3" src="https://blog-1310600458.cos.ap-shanghai.myqcloud.com/Macdo2024-01-09%2014.06.32.png" alt="post image">
-        
-        
-        
-      </a>
-      <div class="media-body">
-        <h5 class="h6 mb-0"><a href="https://taozyblog.com.cn/post/2024-01-09_snakemake1/">使用snakemake构建分析流程</a></h5>
-        <small>January 9, 2024</small>
-      </div>
-    </li>
-  
-    <li class="media widget-post align-items-center">
-      <a href="https://taozyblog.com.cn/post/2024-01-08_givscore_publish/">        
-        
-        
-        
-        <img loading="lazy" class="mr-3" src="https://blog-1310600458.cos.ap-shanghai.myqcloud.com/Macdo2024-01-08%2021.02.41.png" alt="post image">
-        
-        
-        
-      </a>
-      <div class="media-body">
-        <h5 class="h6 mb-0"><a href="https://taozyblog.com.cn/post/2024-01-08_givscore_publish/">DNA损伤指标：GIV score</a></h5>
-        <small>January 8, 2024</small>
-      </div>
-    </li>
-  
-  </ul>
-</div><!-- tags -->
-<div class="widget">
-  <h5 class="widget-title"><span>Tags</span></h5>
-  <ul class="list-inline widget-list-inline">
-    <li class="list-inline-item"><a href="/tags/bug">Bug</a></li>
-    <li class="list-inline-item"><a href="/tags/dna_damage">Dna damage</a></li>
-    <li class="list-inline-item"><a href="/tags/ecdna">Ecdna</a></li>
-    <li class="list-inline-item"><a href="/tags/excel">Excel</a></li>
-    <li class="list-inline-item"><a href="/tags/image">Image</a></li>
-    <li class="list-inline-item"><a href="/tags/latex">Latex</a></li>
-    <li class="list-inline-item"><a href="/tags/linux">Linux</a></li>
-    <li class="list-inline-item"><a href="/tags/markdown">Markdown</a></li>
-    <li class="list-inline-item"><a href="/tags/mysql">Mysql</a></li>
-    <li class="list-inline-item"><a href="/tags/photo">Photo</a></li>
-    <li class="list-inline-item"><a href="/tags/posterdown">Posterdown</a></li>
-    <li class="list-inline-item"><a href="/tags/r">R</a></li>
-    <li class="list-inline-item"><a href="/tags/r%e5%8c%85">R包</a></li>
-    <li class="list-inline-item"><a href="/tags/r%e5%8c%85%e5%bc%80%e5%8f%91">R包开发</a></li>
-    <li class="list-inline-item"><a href="/tags/shell">Shell</a></li>
-    <li class="list-inline-item"><a href="/tags/shiny">Shiny</a></li>
-    <li class="list-inline-item"><a href="/tags/%e5%8d%9a%e5%ae%a2">博客</a></li>
-    <li class="list-inline-item"><a href="/tags/%e5%8e%9f%e5%a7%8b%e6%95%b0%e6%8d%ae%e5%a4%84%e7%90%86">原始数据处理</a></li>
-    <li class="list-inline-item"><a href="/tags/%e5%8f%af%e8%a7%86%e5%8c%96">可视化</a></li>
-    <li class="list-inline-item"><a href="/tags/%e6%8b%b7%e8%b4%9d%e6%95%b0%e5%8f%98%e5%bc%82">拷贝数变异</a></li>
-    <li class="list-inline-item"><a href="/tags/%e6%95%b0%e6%8d%ae%e5%a4%84%e7%90%86">数据处理</a></li>
-    <li class="list-inline-item"><a href="/tags/%e6%9c%ba%e5%99%a8%e5%ad%a6%e4%b9%a0">机器学习</a></li>
-    <li class="list-inline-item"><a href="/tags/%e7%94%9f%e7%89%a9%e6%a0%87%e5%bf%97%e7%89%a9">生物标志物</a></li>
-    <li class="list-inline-item"><a href="/tags/%e7%94%9f%e7%89%a9%e7%bb%9f%e8%ae%a1">生物统计</a></li>
-    <li class="list-inline-item"><a href="/tags/%e7%99%8c%e7%97%87%e5%9f%ba%e5%9b%a0%e7%bb%84%e5%ad%a6">癌症基因组学</a></li>
-    <li class="list-inline-item"><a href="/tags/%e7%a7%91%e7%a0%94%e5%86%99%e4%bd%9c">科研写作</a></li>
-    <li class="list-inline-item"><a href="/tags/%e7%ae%97%e6%b3%95">算法</a></li>
-    <li class="list-inline-item"><a href="/tags/%e8%ae%a1%e7%ae%97%e6%9c%ba%e5%9f%ba%e7%a1%80">计算机基础</a></li>
-    <li class="list-inline-item"><a href="/tags/%e8%bd%af%e4%bb%b6%e4%bd%bf%e7%94%a8">软件使用</a></li>
-  </ul>
-</div><!-- Social -->
-<div class="widget">
-  <h5 class="widget-title"><span>Social Links</span></h5>
-  <ul class="list-inline widget-list-inline mb-3">
-    
-    <li class="list-inline-item"><a href="#" style="padding:5px 15px"><i class="fab fa-facebook"></i></a></li>
-    
-    <li class="list-inline-item"><a href="#" style="padding:5px 15px"><i class="fab fa-twitter"></i></a></li>
-    
-    <li class="list-inline-item"><a href="#" style="padding:5px 15px"><i class="fab fa-linkedin-in"></i></a></li>
-    
-    <li class="list-inline-item"><a href="#" style="padding:5px 15px"><i class="fab fa-github"></i></a></li>
-    
-  </ul>
-</div></div>
-      </aside>
-      
-      
     </div>
+    
   </div>
 </section>
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https:\/\/taozyblog.com.cn\/post\/2024-01-09_snakemake1\/"
+    },
+    "headline": "使用snakemake构建分析流程",
+    "description": "",
+    "image": "",  
+    "author": {
+      "@type": "Person",
+      "name": "Ziyu"
+    },  
+    "publisher": {
+      "@type": "Organization",
+      "name": "",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "images\/logo.png"
+      }
+    },
+    "datePublished": "2024-01-09"
+  }
+  
+</script>
+
+
+
 
 
 	</main>

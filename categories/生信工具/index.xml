@@ -7,7 +7,27 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Design By [Themefisher](https://themefisher.com/) Develop By [Gethugothemes](https://gethugothemes.com/)</copyright>
-    <lastBuildDate>Fri, 08 Dec 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://taozyblog.com.cn/categories/%E7%94%9F%E4%BF%A1%E5%B7%A5%E5%85%B7/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 10 Jan 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://taozyblog.com.cn/categories/%E7%94%9F%E4%BF%A1%E5%B7%A5%E5%85%B7/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>下载数据目录</title>
+      <link>https://taozyblog.com.cn/post/2024-01-10_download_folder/</link>
+      <pubDate>Wed, 10 Jan 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://taozyblog.com.cn/post/2024-01-10_download_folder/</guid>
+      <description>&lt;p&gt;下载目录及其子目录中的内容。&lt;/p&gt;
+&lt;hr&gt;</description>
+    </item>
+    
+    <item>
+      <title>使用snakemake构建分析流程</title>
+      <link>https://taozyblog.com.cn/post/2024-01-09_snakemake1/</link>
+      <pubDate>Tue, 09 Jan 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://taozyblog.com.cn/post/2024-01-09_snakemake1/</guid>
+      <description>&lt;p&gt;介绍使用snakemake分析数据流程。&lt;/p&gt;
+&lt;hr&gt;</description>
+    </item>
+    
     <item>
       <title>使用BICseq2提取拷贝数变异</title>
       <link>https://taozyblog.com.cn/post/2023-12-08_%E6%B5%85%E6%B5%8B%E5%BA%8F%E6%8B%B7%E8%B4%9D%E6%95%B0%E5%8F%98%E5%BC%82%E5%B7%A5%E5%85%B7/</link>
