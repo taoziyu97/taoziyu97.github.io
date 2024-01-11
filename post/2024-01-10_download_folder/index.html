@@ -374,7 +374,7 @@
       <div class="col-lg-10 mx-auto">
         <div class="content" ><p>下载目录及其子目录中的内容。</p>
 <hr>
-<h2 id="lftp">lftp</h2>
+<h2 id="方法1lftp">方法1：lftp</h2>
 <p>我的目标数据：</p>
 <center>
       <img src= "https://blog-1310600458.cos.ap-shanghai.myqcloud.com/Macdo2024-01-10%2013.10.05.png" width="600"/>
@@ -384,7 +384,34 @@
 <div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>lftp https://ftp-trace.ncbi.nlm.nih.gov
 </span></span><span style="display:flex;"><span>cd ReferenceSamples/seqc/Somatic_Mutation_WG/analysis/CNVs/
 </span></span><span style="display:flex;"><span>mirror --verbose
-</span></span></code></pre></div><h2 id="参考资料">参考资料</h2></div>
+</span></span></code></pre></div><ul>
+<li>lftp非sudo用户安装</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>wget http://lftp.yar.ru/ftp/lftp-4.9.2.tar.gz
+</span></span><span style="display:flex;"><span>tar -xvf lftp-4.9.2.tar.gz
+</span></span><span style="display:flex;"><span>./configure 
+</span></span><span style="display:flex;"><span>make 
+</span></span><span style="display:flex;"><span>make install
+</span></span></code></pre></div><h2 id="方法2wget">方法2：wget</h2>
+<p>wget不能直接下载整个文件夹，但是可以对单个文件进行下载，可以把需要下载的文件名存在filename.txt文件中，按行读取文件名来实现该目录下目标文件的获取：</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#099">#!/bin/bash
+</span></span></span><span style="display:flex;"><span><span style="color:#099"></span>
+</span></span><span style="display:flex;"><span><span style="color:#09f;font-style:italic"># 读取文件列表</span>
+</span></span><span style="display:flex;"><span><span style="color:#069;font-weight:bold">while</span> <span style="color:#033">IFS</span><span style="color:#555">=</span> <span style="color:#366">read</span> -r line; <span style="color:#069;font-weight:bold">do</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#09f;font-style:italic"># 提取文件名和下载链接</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#033">filename</span><span style="color:#555">=</span><span style="color:#069;font-weight:bold">$(</span><span style="color:#366">echo</span> <span style="color:#c30">&#34;</span><span style="color:#033">$line</span><span style="color:#c30">&#34;</span> | awk <span style="color:#c30">&#39;{print $1}&#39;</span><span style="color:#069;font-weight:bold">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#09f;font-style:italic"># 下载文件</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#366">echo</span> <span style="color:#c30">&#34;start download </span><span style="color:#033">$filename</span><span style="color:#c30">&#34;</span>
+</span></span><span style="display:flex;"><span>    wget https://ftp-trace.ncbi.nlm.nih.gov/ReferenceSamples/seqc/Somatic_Mutation_WG/data/WGS/<span style="color:#033">$filename</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#069;font-weight:bold">done</span> &lt; filelist.txt
+</span></span></code></pre></div><p>假设filelist.txt内容：</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>WGS_EA_T_1.bwa.dedup.bai                         2021-02-22 11:10  9.3M  
+</span></span><span style="display:flex;"><span>WGS_EA_T_1.bwa.dedup.bam                         2021-02-18 11:33  107G  
+</span></span><span style="display:flex;"><span>WGS_FD_T_1.bwa.dedup.bai                         2021-02-22 11:10  9.0M  
+</span></span><span style="display:flex;"><span>WGS_FD_T_1.bwa.dedup.bam                         2021-02-18 10:02   60G  
+</span></span></code></pre></div></div>
       </div>
     </article>
 
@@ -417,8 +444,8 @@
                     
                     
                         <li class="nav-item">
-                            <a class="nav-link text-left" href="#lftp">
-                            lftp
+                            <a class="nav-link text-left" href="#%e6%96%b9%e6%b3%951lftp">
+                            方法1：lftp
                             </a>
                         </li>
                     
@@ -441,8 +468,8 @@
                     
                     
                         <li class="nav-item">
-                            <a class="nav-link text-left" href="#%e5%8f%82%e8%80%83%e8%b5%84%e6%96%99">
-                            参考资料
+                            <a class="nav-link text-left" href="#%e6%96%b9%e6%b3%952wget">
+                            方法2：wget
                             </a>
                         </li>
                     
