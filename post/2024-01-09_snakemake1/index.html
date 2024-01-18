@@ -758,6 +758,137 @@
 <ul>
 <li><a href="https://snakemake-api.readthedocs.io/" target="_blank">Snakemake API documentation</a></li>
 </ul>
+<h2 id="我常用的功能">我常用的功能</h2>
+<ol>
+<li>多个样本并行提交任务，举例，Snakefile如下：</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>SAMPLES = [&#39;sample1&#39;, &#39;sample2&#39;]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>rule all:
+</span></span><span style="display:flex;"><span>    input:
+</span></span><span style="display:flex;"><span>        expand(&#39;{sample}.bam&#39;, sample=SAMPLES)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>rule bwa:
+</span></span><span style="display:flex;"><span>    input:
+</span></span><span style="display:flex;"><span>        genome = &#39;genome.fa&#39;,
+</span></span><span style="display:flex;"><span>        r1 = &#39;fastq/{sample}.R1.fastq.gz&#39;,
+</span></span><span style="display:flex;"><span>        r2 = &#39;fastq/{sample}.R2.fastq.gz&#39;
+</span></span><span style="display:flex;"><span>    output:
+</span></span><span style="display:flex;"><span>        &#39;{sample}.bam&#39;
+</span></span><span style="display:flex;"><span>    shell:
+</span></span><span style="display:flex;"><span>        &#39;echo {input.genome} {input.r1} {input.r2} &gt; {output}&#39;
+</span></span></code></pre></div><p>对每个样本单独提交pbs，可以使用</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>snakemake --cluster &#34;qsub -q slst_fat &#34; --jobs 2
+</span></span></code></pre></div><ol start="2">
+<li>如果不想用snakemake的这个功能，想单独对每个样本生成Snakemake，可以使用如下方法：</li>
+</ol>
+<ul>
+<li>
+<p>file.txt：存储所有的样本名</p>
+</li>
+<li>
+<p>run.py：对每个样本单独构建文件夹，每个文件夹内针对该样本生成Snakemake文件，之后可以批量提交</p>
+</li>
+</ul>
+
+
+<div class="border border-default collapse-wrapper">
+  <a class="d-flex p-2 collapse-head" data-toggle="collapse" href="#file-0" role="button">
+    file 0 <i class="fas fa-plus ml-auto"></i>
+  </a>
+  <div class="collapse" id="file-0"><div class="p-2"><div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>## bash run.sh
+</span></span><span style="display:flex;"><span>python3 run.py path_to_input path_to_output path_to_script
+</span></span></code></pre></div></div></div>
+</div>
+
+
+<div class="border border-default collapse-wrapper">
+  <a class="d-flex p-2 collapse-head" data-toggle="collapse" href="#file-1" role="button">
+    file 1 <i class="fas fa-plus ml-auto"></i>
+  </a>
+  <div class="collapse" id="file-1"><div class="p-2"><div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>## run.py
+</span></span><span style="display:flex;"><span>import os
+</span></span><span style="display:flex;"><span>import argparse
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># 创建 ArgumentParser 对象
+</span></span><span style="display:flex;"><span>parser = argparse.ArgumentParser(description=&#39;Description of your script.&#39;)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># 添加参数
+</span></span><span style="display:flex;"><span>parser.add_argument(&#39;path2sample&#39;, type=str, help=&#39;Path to input sample of fastq&#39;)
+</span></span><span style="display:flex;"><span>parser.add_argument(&#39;path2out&#39;, type=str, help=&#39;Path to output dir&#39;)
+</span></span><span style="display:flex;"><span>parser.add_argument(&#39;path2trim&#39;, type=str, help=&#39;Path to trim script&#39;)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># 解析命令行参数
+</span></span><span style="display:flex;"><span>args = parser.parse_args()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># 在脚本中使用参数
+</span></span><span style="display:flex;"><span>print(f&#34;Path to sample: {args.path2sample}&#34;)
+</span></span><span style="display:flex;"><span>print(f&#34;Path to file of output: {args.path2out}&#34;)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># 读取存储样本名的文件
+</span></span><span style="display:flex;"><span>with open(&#39;file.txt&#39;, &#39;r&#39;) as file:
+</span></span><span style="display:flex;"><span>    samples = [line.strip() for line in file]
+</span></span><span style="display:flex;"><span>print(samples)
+</span></span><span style="display:flex;"><span># 为每个样本生成文件夹和Snakefile
+</span></span><span style="display:flex;"><span>for sample in samples:
+</span></span><span style="display:flex;"><span>    # 创建文件夹
+</span></span><span style="display:flex;"><span>    print(sample)
+</span></span><span style="display:flex;"><span>    os.makedirs(sample, exist_ok=True)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    # 生成Snakefile内容
+</span></span><span style="display:flex;"><span>    snakefile_content = f&#34;&#34;&#34;
+</span></span><span style="display:flex;"><span>from snakemake.utils import R
+</span></span><span style="display:flex;"><span>import glob
+</span></span><span style="display:flex;"><span>import os
+</span></span><span style="display:flex;"><span>from os import listdir
+</span></span><span style="display:flex;"><span>from os.path import isfile, isdir, join
+</span></span><span style="display:flex;"><span>import os.path as path
+</span></span><span style="display:flex;"><span>import sys
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># 从配置文件中获取分析路径，并连接到 &#39;data&#39; 目录
+</span></span><span style="display:flex;"><span>data=&#34;{args.path2sample}&#34;
+</span></span><span style="display:flex;"><span>os.chdir(data)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>rule all:
+</span></span><span style="display:flex;"><span>    input:
+</span></span><span style="display:flex;"><span>        &#39;{args.path2out}/{sample}_R1_trimmed.fastq&#39;,
+</span></span><span style="display:flex;"><span>        &#39;{args.path2out}/{sample}_R2_trimmed.fastq&#39;,
+</span></span><span style="display:flex;"><span>        &#39;{args.path2out}/{sample}_R1_unpaired.fastq&#39;,
+</span></span><span style="display:flex;"><span>        &#39;{args.path2out}/{sample}_R2_unpaired.fastq&#39;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>rule trimmo:
+</span></span><span style="display:flex;"><span>    input: 
+</span></span><span style="display:flex;"><span>        R1 = &#39;{sample}_1.fastq&#39;, 
+</span></span><span style="display:flex;"><span>        R2 = &#39;{sample}_2.fastq&#39;
+</span></span><span style="display:flex;"><span>    output: 
+</span></span><span style="display:flex;"><span>        R1 = &#39;{args.path2out}/{sample}_R1_trimmed.fastq&#39;, 
+</span></span><span style="display:flex;"><span>        R2 = &#39;{args.path2out}/{sample}_R2_trimmed.fastq&#39;, 
+</span></span><span style="display:flex;"><span>        unpaired_R1 = &#39;{args.path2out}/{sample}_R1_unpaired.fastq&#39;, 
+</span></span><span style="display:flex;"><span>        unpaired_R2 = &#39;{args.path2out}/{sample}_R2_unpaired.fastq&#39;,
+</span></span><span style="display:flex;"><span>        logname = &#39;{args.path2out}/logs/{sample}_run_trimmomatic.err&#39;
+</span></span><span style="display:flex;"><span>    shell: 
+</span></span><span style="display:flex;"><span>        &#39;trimmomatic PE -threads 50 -phred33 {{input.R1}} {{input.R2}} {{output.R1}} {{output.unpaired_R1}} {{output.R2}} {{output.unpaired_R2}} ILLUMINACLIP:test:2:36:10 LEADING:10 TRAILING:10 MAXINFO:50:0.97 MINLEN:20 2&gt;{{output.logname}}&#39;
+</span></span><span style="display:flex;"><span>&#34;&#34;&#34;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    # 将Snakefile内容写入文件
+</span></span><span style="display:flex;"><span>    with open(f&#39;{sample}/Snakefile&#39;, &#39;w&#39;) as snakefile:
+</span></span><span style="display:flex;"><span>        snakefile.write(snakefile_content)
+</span></span></code></pre></div></div></div>
+</div>
+
+
+<div class="border border-default collapse-wrapper">
+  <a class="d-flex p-2 collapse-head" data-toggle="collapse" href="#file-2" role="button">
+    file 2 <i class="fas fa-plus ml-auto"></i>
+  </a>
+  <div class="collapse" id="file-2"><div class="p-2"><div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>## file.txt
+</span></span><span style="display:flex;"><span># all sample
+</span></span><span style="display:flex;"><span>sample1
+</span></span><span style="display:flex;"><span>sample2
+</span></span><span style="display:flex;"><span>sample3
+</span></span></code></pre></div></div></div>
+</div>
 <h2 id="参考资料">参考资料</h2>
 <ul>
 <li>
@@ -1233,6 +1364,30 @@
                         <li class="nav-item">
                             <a class="nav-link text-left" href="#%e6%9c%89%e8%b6%a3%e7%9a%84%e8%b5%84%e6%ba%90">
                             有趣的资源
+                            </a>
+                        </li>
+                    
+                    
+                    </ul>
+                    
+                    </ul>
+                    
+                
+            
+        
+        
+            
+                
+                
+                    
+                    <ul class="nav">
+                    
+                    <ul class="nav">
+                    
+                    
+                        <li class="nav-item">
+                            <a class="nav-link text-left" href="#%e6%88%91%e5%b8%b8%e7%94%a8%e7%9a%84%e5%8a%9f%e8%83%bd">
+                            我常用的功能
                             </a>
                         </li>
                     

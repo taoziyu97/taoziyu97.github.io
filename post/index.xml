@@ -7,7 +7,27 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Design By [Themefisher](https://themefisher.com/) Develop By [Gethugothemes](https://gethugothemes.com/)</copyright>
-    <lastBuildDate>Wed, 10 Jan 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://taozyblog.com.cn/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 18 Jan 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://taozyblog.com.cn/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>rclone下载数据</title>
+      <link>https://taozyblog.com.cn/post/2024-01-18_rclone/</link>
+      <pubDate>Thu, 18 Jan 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://taozyblog.com.cn/post/2024-01-18_rclone/</guid>
+      <description>&lt;p&gt;介绍如何使用rclone下载数据。&lt;/p&gt;
+&lt;hr&gt;</description>
+    </item>
+    
+    <item>
+      <title>介绍FFPE处理样本的特点</title>
+      <link>https://taozyblog.com.cn/post/2024-01-16_ffpe/</link>
+      <pubDate>Tue, 16 Jan 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://taozyblog.com.cn/post/2024-01-16_ffpe/</guid>
+      <description>&lt;p&gt;介绍FFPE处理样本的特点。&lt;/p&gt;
+&lt;hr&gt;</description>
+    </item>
+    
     <item>
       <title>下载数据目录</title>
       <link>https://taozyblog.com.cn/post/2024-01-10_download_folder/</link>

@@ -401,9 +401,28 @@
 </ul>
 <p>将含有多个文件的id和名字等信息的页面存储为txt，download加上-m，进行批量下载。</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#366">gdc-client</span> download -m ./<span style="color:#366">PanCan-Driver_Open_GDC</span>-Manifest.txt
+</span></span></code></pre></div><h3 id="token">token</h3>
+<center>
+      <img src= "https://blog-1310600458.cos.ap-shanghai.myqcloud.com/Macdo2024-01-16%2010.04.29.png" width="400"/>
+      <p><font color="grey"></font></p>
+</center>
+<p>对于需要使用token的数据，使用如下代码：</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>gdc-client download -m gdc_manifest_e24fac38d3b19f67facb74d3efa746e08b0c82c2.txt -t gdc-user-token.2015-06-17T09-10-02-04-00.txt
+</span></span></code></pre></div><p>保护token：</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>chmod 600 gdc-user-token.2015-06-17T09-10-02-04-00.txt
+</span></span></code></pre></div><p>下载最新的数据，加上<code>--latest</code>：</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>gdc-client download 426de656-7e34-4a49-b87e-6e2563fa3cdd --latest -t gdc-user-token.2018.txt
 </span></span></code></pre></div><h2 id="参考">参考</h2>
 <ul>
-<li><a href="https://www.biostars.org/p/207324/" target="_blank">biostars-How to install gdc-client in Ubnutu</a></li>
+<li>
+<p><a href="https://www.biostars.org/p/207324/" target="_blank">biostars-How to install gdc-client in Ubnutu</a></p>
+</li>
+<li>
+<p><a href="https://www.cancer.gov/ccg/research/genome-sequencing/tcga/using-tcga-data/types" target="_blank">TCGA提供的数据类型</a></p>
+</li>
+<li>
+<p><a href="https://docs.gdc.cancer.gov/Data_Transfer_Tool/Users_Guide/Data_Download_and_Upload/" target="_blank">官方指南：token的使用</a></p>
+</li>
 </ul>
 </div>
       </div>
@@ -546,6 +565,34 @@
                         <li class="nav-item">
                             <a class="nav-link text-left" href="#3-%e4%bd%bf%e7%94%a8">
                             3. 使用
+                            </a>
+                        </li>
+                    
+                    
+                    </ul>
+                    
+                    </ul>
+                    
+                    </ul>
+                    
+                
+            
+        
+        
+            
+                
+                
+                    
+                    <ul class="nav">
+                    
+                    <ul class="nav">
+                    
+                    <ul class="nav">
+                    
+                    
+                        <li class="nav-item">
+                            <a class="nav-link text-left" href="#token">
+                            token
                             </a>
                         </li>
                     
