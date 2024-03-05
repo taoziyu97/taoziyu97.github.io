@@ -430,13 +430,85 @@
 </ol>
 <div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>bin/score-client --profile collab download --manifest ./manifest.collaboratory.1697079740643.tsv --output-dir /home/data/sda/tzy/pcawg
 </span></span></code></pre></div><p>开始下载。</p>
-<h2 id="参考资料">参考资料</h2>
+<h3 id="collaboratory---toronto">Collaboratory - Toronto</h3>
+<p>Collaboratory - Toronto，使用上述的<code>score-client --profile collab download</code>结合manifest下载即可。</p>
+<h3 id="ega---hinxton">EGA - Hinxton</h3>
+<p>EGA - Hinxton，可以使用EGA的下载方式，下载的manifest``里面有EGA号，如下：</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>file_ids=&#34;EGAF00001198675&#34;
+</span></span><span style="display:flex;"><span>mapping=&#34;{EGAF00001198675=FI39832}&#34;
+</span></span></code></pre></div><p>使用该EGA号即可下载，不用修改下载得到的manifest文件填写账号密码：</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>pyega3 -c 20 -cf /home/tzy/tools/default_credential_file.json fetch EGAF00001156307
+</span></span></code></pre></div><h3 id="aws">AWS</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>$ curl &#34;https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip&#34; -o &#34;awscliv2.zip&#34;
+</span></span><span style="display:flex;"><span>unzip awscliv2.zip
+</span></span><span style="display:flex;"><span>sudo ./aws/install
+</span></span></code></pre></div><h2 id="pdc---chicago">PDC - Chicago</h2>
+<p>linux版本：</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>mkdir -p ~/.gen3
+</span></span><span style="display:flex;"><span>echo &#34;&#34; &gt;&gt; ~/.bashrc
+</span></span><span style="display:flex;"><span>echo &#34;export PATH=\$PATH:~/.gen3&#34; &gt;&gt; ~/.bashrc
+</span></span><span style="display:flex;"><span>wget https://github.com/uc-cdis/cdis-data-client/releases/download/1.2.0/dataclient_linux.zip
+</span></span><span style="display:flex;"><span>unzip dataclient_linux.zip
+</span></span><span style="display:flex;"><span>mv gen3-client ~/.gen3/
+</span></span><span style="display:flex;"><span>rm dataclient_linux.zip
+</span></span><span style="display:flex;"><span>source ~/.bashrc
+</span></span></code></pre></div><p>安装完毕。</p>
+<p>下载manifest，举例manifest.pdc.1706164029030.sh：</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#099">#!/bin/bash
+</span></span></span><span style="display:flex;"><span><span style="color:#099"></span><span style="color:#09f;font-style:italic">#</span>
+</span></span><span style="display:flex;"><span><span style="color:#09f;font-style:italic"># ICGC PDC Script Manifest</span>
+</span></span><span style="display:flex;"><span><span style="color:#09f;font-style:italic">#</span>
+</span></span><span style="display:flex;"><span><span style="color:#09f;font-style:italic"># Script to download ICGC files in PDC. Generated from https://dcc.icgc.org/repositories.</span>
+</span></span><span style="display:flex;"><span><span style="color:#09f;font-style:italic"># Requires AWS CLI to be installed:</span>
+</span></span><span style="display:flex;"><span><span style="color:#09f;font-style:italic">#</span>
+</span></span><span style="display:flex;"><span><span style="color:#09f;font-style:italic">#   https://aws.amazon.com/cli/</span>
+</span></span><span style="display:flex;"><span><span style="color:#09f;font-style:italic">#</span>
+</span></span><span style="display:flex;"><span><span style="color:#09f;font-style:italic"># For information on the PDC, please see:</span>
+</span></span><span style="display:flex;"><span><span style="color:#09f;font-style:italic">#</span>
+</span></span><span style="display:flex;"><span><span style="color:#09f;font-style:italic">#   https://bionimbus-pdc.opensciencedatacloud.org/</span>
+</span></span><span style="display:flex;"><span><span style="color:#09f;font-style:italic">#</span>
+</span></span><span style="display:flex;"><span><span style="color:#09f;font-style:italic"># Script assumes a valid ~/.aws/credentials file with a valid `pdc` profile:</span>
+</span></span><span style="display:flex;"><span><span style="color:#09f;font-style:italic"># </span>
+</span></span><span style="display:flex;"><span><span style="color:#09f;font-style:italic">#   $ cat ~/.aws/credentials</span>
+</span></span><span style="display:flex;"><span><span style="color:#09f;font-style:italic">#   [pdc]</span>
+</span></span><span style="display:flex;"><span><span style="color:#09f;font-style:italic">#   aws_access_key_id=&lt;your key id here&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#09f;font-style:italic">#   aws_secret_access_key=&lt;your secret here&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#09f;font-style:italic">#</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>aws --profile pdc --endpoint-url https://bionimbus-objstore-cs.opensciencedatacloud.org s3 cp s3://pcawg-tcga-read-us/637cddda-6b05-58cc-90a7-1c5cdbe6845e .
+</span></span></code></pre></div><p>先把该manifest转换成gen3-client识别的格式，下载脚本并转换：</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>wget https://raw.githubusercontent.com/uc-cdis/pdc_tools/1.0/dcc_manifest_conversion/dcc_to_gen3.py
+</span></span><span style="display:flex;"><span>python3 dcc_to_gen3.py --manifest manifest.pdc.1706164029030.sh
+</span></span></code></pre></div><p>生成gen3_manifest_manifest.pdc.1706164029030.sh.json文件。</p>
+<p>通过官网给定的方法得到API key获得<code>credentials.json</code>文件，将其重新命名：</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>gen3-client configure  --profile=icgc --cred=credentials.json --apiendpoint=https://icgc.bionimbus.org/
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># 2024/01/25 15:31:03 Profile &#39;icgc&#39; has been configured successfully.
+</span></span></code></pre></div><p>然后就可以下载了：</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>gen3-client download-multiple --profile=icgc --manifest=gen3_manifest_manifest.pdc.1706164029030.sh.json  --no-prompt
+</span></span></code></pre></div><p>下载速度很快。</p>
+<p>注意，2024-01-23版本的linux下载后实际上是OS版本，报错<code>-bash: /home/tzy/.gen3/gen3-clinet: cannot execute binary file: Exec format error</code>，可以通过如下方法检查是否为linux版本：</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>ldd /home/tzy/.gen3/gen3-clinet
+</span></span><span style="display:flex;"><span># not a dynamic executable
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>file /home/tzy/.gen3/gen3-clinet
+</span></span><span style="display:flex;"><span>#/home/tzy/.gen3/gen3-clinet: Mach-O 64-bit x86_64 executable
+</span></span></code></pre></div><p>正确的应该是：</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>file ./gen3-client 
+</span></span><span style="display:flex;"><span>#./gen3-client: ELF 64-bit LSB executable, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, Go BuildID=iNUQ0bctPp9-WreqEiYr/qISPwqavMmPLx4gTtDAt/Bg15GVruXZ8l7ngd0j56/FrgyY8yBc4w-JRhYoQsm, not stripped
+</span></span></code></pre></div><h2 id="参考资料">参考资料</h2>
 <ul>
 <li>
 <p><a href="https://docs.icgc-argo.org/docs/data-access/data-download" target="_blank">ICGC数据下载官方文档</a></p>
 </li>
 <li>
 <p><a href="https://docs.icgc.org/download/downloading-data/" target="_blank">ICGC工具官方文档</a></p>
+</li>
+<li>
+<p><a href="https://docs.icgc.org/pcawg/data/#download-from-pdc" target="_blank">ICGC多种来源数据下载官方文档</a></p>
+</li>
+<li>
+<p><a href="https://docs.icgc.org/download/downloading-data/" target="_blank">aws介绍</a></p>
 </li>
 </ul></div>
       </div>
@@ -459,6 +531,114 @@
 
     <div id="page-scrollspy" class="toc-nav">
 
+        
+        
+            
+                
+                
+                    
+                    <ul class="nav">
+                    
+                    <ul class="nav">
+                    
+                    <ul class="nav">
+                    
+                    
+                        <li class="nav-item">
+                            <a class="nav-link text-left" href="#collaboratory---toronto">
+                            Collaboratory - Toronto
+                            </a>
+                        </li>
+                    
+                    
+                    </ul>
+                    
+                    </ul>
+                    
+                    </ul>
+                    
+                
+            
+        
+        
+            
+                
+                
+                    
+                    <ul class="nav">
+                    
+                    <ul class="nav">
+                    
+                    <ul class="nav">
+                    
+                    
+                        <li class="nav-item">
+                            <a class="nav-link text-left" href="#ega---hinxton">
+                            EGA - Hinxton
+                            </a>
+                        </li>
+                    
+                    
+                    </ul>
+                    
+                    </ul>
+                    
+                    </ul>
+                    
+                
+            
+        
+        
+            
+                
+                
+                    
+                    <ul class="nav">
+                    
+                    <ul class="nav">
+                    
+                    <ul class="nav">
+                    
+                    
+                        <li class="nav-item">
+                            <a class="nav-link text-left" href="#aws">
+                            AWS
+                            </a>
+                        </li>
+                    
+                    
+                    </ul>
+                    
+                    </ul>
+                    
+                    </ul>
+                    
+                
+            
+        
+        
+            
+                
+                
+                    
+                    <ul class="nav">
+                    
+                    <ul class="nav">
+                    
+                    
+                        <li class="nav-item">
+                            <a class="nav-link text-left" href="#pdc---chicago">
+                            PDC - Chicago
+                            </a>
+                        </li>
+                    
+                    
+                    </ul>
+                    
+                    </ul>
+                    
+                
+            
         
         
             

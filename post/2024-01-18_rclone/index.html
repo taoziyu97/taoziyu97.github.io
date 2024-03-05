@@ -384,7 +384,12 @@
 </span></span></code></pre></div><ul>
 <li>/home/data/：结尾的斜杠加上表示下载该文件夹</li>
 </ul>
-<h2 id="简单语法">简单语法</h2>
+<h2 id="下载单个文件">下载单个文件</h2>
+<p>有时候只对单个的文件感兴趣，可以通过参数<code>--include</code>实现筛选，常规方法<code>*.txt</code>不适用：</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>rclone copy ftp:/home/data/ /local/data --include &#34;filename_R1.fq.gz&#34;
+</span></span></code></pre></div><p>以下代码也无法实现单个文件下载，可能报错<code>unsupported LIST line error</code>，如下：</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>rclone copy ftp:/home/data/ /local/data/filename_R1.fq.gz
+</span></span></code></pre></div><h2 id="简单语法">简单语法</h2>
 <p>查看当前目录下文件：</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>rclone ls ftp:
 </span></span></code></pre></div><p>查看当前目录下文件夹：</p>
@@ -472,6 +477,30 @@
                         <li class="nav-item">
                             <a class="nav-link text-left" href="#%e4%b8%8b%e8%bd%bd%e4%bb%bb%e5%8a%a1">
                             下载任务
+                            </a>
+                        </li>
+                    
+                    
+                    </ul>
+                    
+                    </ul>
+                    
+                
+            
+        
+        
+            
+                
+                
+                    
+                    <ul class="nav">
+                    
+                    <ul class="nav">
+                    
+                    
+                        <li class="nav-item">
+                            <a class="nav-link text-left" href="#%e4%b8%8b%e8%bd%bd%e5%8d%95%e4%b8%aa%e6%96%87%e4%bb%b6">
+                            下载单个文件
                             </a>
                         </li>
                     

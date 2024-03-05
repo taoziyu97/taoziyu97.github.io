@@ -7,20 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Design By [Themefisher](https://themefisher.com/) Develop By [Gethugothemes](https://gethugothemes.com/)</copyright>
-    <lastBuildDate>Sat, 19 Mar 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://taozyblog.com.cn/categories/%E7%94%9F%E4%BF%A1/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>聚类分析之cola包【没写完】</title>
-      <link>https://taozyblog.com.cn/post/2022-3-24_cluster/</link>
-      <pubDate>Sat, 19 Mar 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://taozyblog.com.cn/post/2022-3-24_cluster/</guid>
-      <description>自问   是否有方法的比较
-  比较的标准是什么，如何判断应该使用哪种
-  聚类的共性如何展示
-  核心的算法是什么
-  仔细分析这个包的目的是什么？【一个包为什么可以被开发出来的，开发出来使用的优势在于？一个包可以包含的内容，一个包为了一种类型的分析可以提供哪些？】</description>
-    </item>
-    
+    <lastBuildDate>Sun, 19 Dec 2021 15:40:24 +0600</lastBuildDate><atom:link href="https://taozyblog.com.cn/categories/%E7%94%9F%E4%BF%A1/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>检测拷贝数变异的工具及算法【2】-ABSOLUTE</title>
       <link>https://taozyblog.com.cn/post/2021-12-19_cnv_tools2/</link>

@@ -7,7 +7,47 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Design By [Themefisher](https://themefisher.com/) Develop By [Gethugothemes](https://gethugothemes.com/)</copyright>
-    <lastBuildDate>Thu, 18 Jan 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://taozyblog.com.cn/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 05 Mar 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://taozyblog.com.cn/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>评估生存模型的指标-cindex</title>
+      <link>https://taozyblog.com.cn/post/2024-03-05_cindex/</link>
+      <pubDate>Tue, 05 Mar 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://taozyblog.com.cn/post/2024-03-05_cindex/</guid>
+      <description>&lt;p&gt;介绍C指数/一致性统计量/C统计量。&lt;/p&gt;
+&lt;hr&gt;</description>
+    </item>
+    
+    <item>
+      <title>跑完上一个样本再跑下一个</title>
+      <link>https://taozyblog.com.cn/post/2024-02-29_%E8%B7%91%E5%AE%8C%E4%B8%8A%E4%B8%80%E4%B8%AA%E6%A0%B7%E6%9C%AC%E5%86%8D%E8%B7%91%E4%B8%8B%E4%B8%80%E4%B8%AA/</link>
+      <pubDate>Thu, 29 Feb 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://taozyblog.com.cn/post/2024-02-29_%E8%B7%91%E5%AE%8C%E4%B8%8A%E4%B8%80%E4%B8%AA%E6%A0%B7%E6%9C%AC%E5%86%8D%E8%B7%91%E4%B8%8B%E4%B8%80%E4%B8%AA/</guid>
+      <description>&lt;p&gt;非常简单。&lt;/p&gt;
+&lt;hr&gt;</description>
+    </item>
+    
+    <item>
+      <title>使用ASBOLUTE提取拷贝数并估计倍性和纯度</title>
+      <link>https://taozyblog.com.cn/post/2024-02-26_absolute/</link>
+      <pubDate>Mon, 26 Feb 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://taozyblog.com.cn/post/2024-02-26_absolute/</guid>
+      <description>&lt;p&gt;介绍如何使用MEDICC2检测全基因组扩增。&lt;/p&gt;
+&lt;hr&gt;</description>
+    </item>
+    
+    <item>
+      <title>MEDICC2:针对整个基因组倍增的癌症演化拷贝数谱系演化研究</title>
+      <link>https://taozyblog.com.cn/post/2024-01-26_medicc2/</link>
+      <pubDate>Fri, 26 Jan 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://taozyblog.com.cn/post/2024-01-26_medicc2/</guid>
+      <description>&lt;p&gt;介绍如何使用MEDICC2检测全基因组扩增。&lt;/p&gt;
+&lt;hr&gt;</description>
+    </item>
+    
     <item>
       <title>rclone下载数据</title>
       <link>https://taozyblog.com.cn/post/2024-01-18_rclone/</link>
@@ -15,6 +55,16 @@
       
       <guid>https://taozyblog.com.cn/post/2024-01-18_rclone/</guid>
       <description>&lt;p&gt;介绍如何使用rclone下载数据。&lt;/p&gt;
+&lt;hr&gt;</description>
+    </item>
+    
+    <item>
+      <title>展开多层json</title>
+      <link>https://taozyblog.com.cn/post/2024-01-18_json/</link>
+      <pubDate>Thu, 18 Jan 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://taozyblog.com.cn/post/2024-01-18_json/</guid>
+      <description>&lt;p&gt;介绍如何展开多层的JSON。&lt;/p&gt;
 &lt;hr&gt;</description>
     </item>
     
@@ -717,19 +767,6 @@ marker染色体，也被称为结构外异常染色体或“多余”染色体�
 2．写科研论文，最重要的是逻辑。逻辑的形成来自对实验数据的总体分析。必须先讨论出一套清晰的思路，然后按照思路来做图(Figures)，最后才能执笔。
 3．具体写作时，先按照思路（即Figures）写一个以subheading为主的框架，然后开始具体写作。第一稿，切忌追求每一句话的完美，更不要追求词语的华丽，而主要留心逻辑（logic flow），注意前后句的逻辑关系、相邻两段的逻辑关系。写作时，全力以赴，尽可能不受外界事情干扰（关闭手机、座机），争取在最短时间内拿出第一稿。还要注意：一句话不可太长。
 4．学会照葫芦画瓢。没有人天生会写优秀的科研论文，都是从别人那里学来的。学习别人的文章要注意专业领域的不同，有些领域（包括我所在的结构生物学）有它内在的写作规律。科研文章里的一些话是定式，比如 “To investigate the mechanism of …, we performed …”, “These results support the former, but not the latter, hypothesis …”, “Despite recent progress, how … remains to be elucidated …” 等等。用两次以后，就逐渐学会灵活运用了。在向别人学习时，切忌抄袭。在美国一些机构，连续7个英文单词在一起和别人的完全一样，原则上就被认为抄袭（plagiarism）。</description>
-    </item>
-    
-    <item>
-      <title>聚类分析之cola包【没写完】</title>
-      <link>https://taozyblog.com.cn/post/2022-3-24_cluster/</link>
-      <pubDate>Sat, 19 Mar 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://taozyblog.com.cn/post/2022-3-24_cluster/</guid>
-      <description>自问   是否有方法的比较
-  比较的标准是什么，如何判断应该使用哪种
-  聚类的共性如何展示
-  核心的算法是什么
-  仔细分析这个包的目的是什么？【一个包为什么可以被开发出来的，开发出来使用的优势在于？一个包可以包含的内容，一个包为了一种类型的分析可以提供哪些？】</description>
     </item>
     
     <item>
