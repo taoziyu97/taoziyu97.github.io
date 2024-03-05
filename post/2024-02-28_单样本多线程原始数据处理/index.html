@@ -17,7 +17,7 @@
 </script>
 
 <meta charset="utf-8">
-<title>shell</title>
+<title>单样本多线程的原始数据处理</title>
 
 
 
@@ -25,7 +25,7 @@
 
 
 
-<link rel="canonical" href="https://taozyblog.com.cn/tags/shell/" itemprop="url" />
+<link rel="canonical" href="https://taozyblog.com.cn/post/2024-02-28_%E5%8D%95%E6%A0%B7%E6%9C%AC%E5%A4%9A%E7%BA%BF%E7%A8%8B%E5%8E%9F%E5%A7%8B%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/" itemprop="url" />
 
 
 <link rel="manifest" href="/manifest.webmanifest">
@@ -92,50 +92,29 @@
 
 
 
+
+
+
+
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://blog-1310600458.cos.ap-shanghai.myqcloud.com/split3-mode.png" />
+<meta property="og:image" content="https://blog-1310600458.cos.ap-shanghai.myqcloud.com/split3-mode.png" />
  
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
-<meta property="og:image:width" content="96">
-<meta property="og:image:height" content="96">
- 
-
-<meta property="og:image:type" content="image/.png">
- 
-
- 
-
-
-
-
-<meta property="og:title" content="shell" />
-<meta property="og:description" content="This is meta description" />
+<meta property="og:title" content="单样本多线程的原始数据处理" />
+<meta property="og:description" content="介绍处理原始数据中涉及到的多线程。
+" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://taozyblog.com.cn/tags/shell/" />
+<meta property="og:url" content="https://taozyblog.com.cn/post/2024-02-28_%E5%8D%95%E6%A0%B7%E6%9C%AC%E5%A4%9A%E7%BA%BF%E7%A8%8B%E5%8E%9F%E5%A7%8B%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/" />
 
 
-<meta name="twitter:title" content="shell" />
-<meta name="twitter:description" content="This is meta description" />
+<meta name="twitter:title" content="单样本多线程的原始数据处理" />
+<meta name="twitter:description" content="介绍处理原始数据中涉及到的多线程。
+" />
 
 
 
@@ -373,410 +352,209 @@
 
 
 
-
-<section class="section-sm pb-0">
-  <div class="container">
-    <div class="row">
-      <div class="col-12">
-        <div class="title-bordered">
-          <h1 class="h4">Showing items from <span class="text-primary">shell</span></h1>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-
-
-
-
-
-
 <section class="section">
   <div class="container">
-    <div class="row">
-      
-      
-      
-
-      
-      <div class="col-lg-8  mb-5 mb-lg-0">
-        
-        
-        <div class="row">
-          
-          <div class="col-md-6">
-            <article class="card mb-4 border-0">
-              
-              
-              <div class="post-slider slider-sm">
-                
-                
-
-
-
-
-
-
-
-
-
-<img loading="lazy" decoding="async" src="https://blog-1310600458.cos.ap-shanghai.myqcloud.com/%e6%88%aa%e5%b1%8f2022-04-06%20%e4%b8%8b%e5%8d%884.14.49.png" alt="" class="img-fluid w-100" height="" width="">
-
-                
-              </div>
-              
-              
-              <div class="card-body">
-                <h3 class="h4"><a class="post-title" href="/post/2022-4-06_%E6%B3%A8%E9%87%8A/">如何去除文本注释</a></h3>
-                <ul class="list-inline post-meta mb-4">
-                  <li class="list-inline-item"><i class="fas fa-user mr-2"></i>
-                    <a href="/author/ziyu/">Ziyu</a>
-                  </li>
-                  <li class="list-inline-item">Date : April 7, 2022</li>
-                  <li class="list-inline-item">Categories :
-                    <a
-                      href="/categories/shell" class="ml-1">Shell
-                    </a>
-                    </li>
-                  <li class="list-inline-item">Tags :
-                    <a
-                      href="/tags/shell" class="ml-1">Shell </a>
-                    
-                  </li>
-                </ul>
-                <p>注释类型 首先我们应该明确注释是在什么样的文件中？
-1．代码中的注释
-2．文本中的注释
-其次我们应该明确，我们需要去除的注释都是什么样子的？
-1．注释行前有特定字符，比如R代码中的注释#
-2．注释被包含在特定字符之间，比如Python代码中的 ```，以及SRIM软件输出结果开头的注释包含的两 …</p>
-                <a href="/post/2022-4-06_%E6%B3%A8%E9%87%8A/" class="btn btn-outline-primary">Continue Reading</a>
-              </div>
-            </article>
-          </div>
-          
-        </div>
-        
-        
-
-        
-        
-        
-        
-        
-        
-        
-        <ul class="pagination ">
-          
-          
-          <li class="page-item">
-            <a href="/tags/shell/page/4/" class="page-link">&laquo;</a>
+    <article class="row mb-4">
+      <div class="col-lg-10 mx-auto mb-4">
+        <h1 class="h2 mb-3">单样本多线程的原始数据处理</h1>
+        <ul class="list-inline post-meta mb-3">
+          <li class="list-inline-item"><i class="fas fa-user mr-2"></i>
+            <a href="/author/ziyu/">Ziyu</a>
           </li>
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          <li class="page-item">
-            <a href="/tags/shell/" class="page-link">
-              1
-            </a>
+          <li class="list-inline-item">Date : February 28, 2024</li>
+          <li class="list-inline-item">Categories :
+            <a
+              href="/categories/%e7%94%9f%e4%bf%a1%e5%b7%a5%e5%85%b7" class="ml-1">生信工具 </a>
+            </li>
+          <li class="list-inline-item">Tags : <a
+              href="/tags/%e5%8e%9f%e5%a7%8b%e6%95%b0%e6%8d%ae%e5%a4%84%e7%90%86" class="ml-1">原始数据处理 </a> 
           </li>
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          <li class="page-item">
-            <a href="/tags/shell/page/2/" class="page-link">
-              2
-            </a>
-          </li>
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          <li class="page-item">
-            <a href="/tags/shell/page/3/" class="page-link">
-              3
-            </a>
-          </li>
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          <li class="page-item">
-            <a href="/tags/shell/page/4/" class="page-link">
-              4
-            </a>
-          </li>
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          <li class="page-item page-item active ">
-            <a href="/tags/shell/page/5/" class="page-link">
-              5
-            </a>
-          </li>
-          
-          
-          
-          
         </ul>
-        
-        
       </div>
-      
+      <div class="col-lg-10 mx-auto">
+        <div class="content" ><p>介绍处理原始数据中涉及到的多线程。</p>
+<hr>
+<h2 id="1-sra转fastq">1. sra转fastq</h2>
+<p>使用sratoolkit中的fasterq-dump，利用了临时文件和多线程的方式来提升提取fastq文件的速度，用法和fastq-dump一致，fasterq-dump不提供–gzip的参数来压缩文件。</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>## -e 线程
+</span></span><span style="display:flex;"><span>## --split-3 双端测序
+</span></span><span style="display:flex;"><span>patha=/public/home/chengjing2/taozy/CNbenchmark/ploidy/bam/SRR8670674
+</span></span><span style="display:flex;"><span>cd $patha
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>#fastq-dump --split-3 $patha
+</span></span><span style="display:flex;"><span>fasterq-dump --split-3 SRR8670674.sra -e 40 -p
+</span></span></code></pre></div><p>sra转sam再转bam的过程中，sra转sam没有找到多线程的方法。</p>
+<h2 id="注意细节">注意细节</h2>
+<p>小细节注意，unsort_bamz和一步骤一直出错，debug之后发现是因为$sample_sort被当成一个整体，但是$sample.sam以.来隔断的不会，注意_的使用。</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>sample=&#34;SRR8652108&#34;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>samtools view -@ 40 -bS /public/home/chengjing2/taozy/CNbenchmark/ploidy/bam/SRR8652108/bwa/SRR8652108.sam&gt; /public/home/chengjing2/taozy/CNbenchmark/ploidy/bam/SRR8652108/bam/.bam
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>samtools view -@ 40 -bS $workdir/$sample/bwa/$sample.sam&gt; $workdir/$sample/bam/$sample_unsort.bam
+</span></span></code></pre></div><h2 id="参考">参考</h2>
+<ul>
+<li><a href="https://github.com/ncbi/sra-tools/wiki/HowTo:-fasterq-dump" target="_blank">fasterq-dump</a></li>
+</ul></div>
+      </div>
+    </article>
 
-      
-      
-      <aside class="col-lg-4">
-        <div class="pl-0 pl-lg-4"><!-- Search -->
 
-<div class="widget">
-  <h5 class="widget-title"><span>Search</span></h5>
-  <form action="/search" class="widget-search">
-    <input id="search-query" name="s" type="search" placeholder="Type &amp; Hit Enter...">
-    <button type="submit" class="btn btn-primary" aria-label="Search Post"><i class="fas fa-search"></i></button>
-  </form>
-</div>
-<!-- about me -->
-<div class="widget widget-about">
-  
-  <h5 class="widget-title"><span>Hi, I Am Ziyu Tao</span></h5>
-  <div class="d-flex">
 
-    
-    
-    
-    
-    
-    <img class="img-fluid widget-about-image" loading="lazy" src="https://blog-1310600458.cos.ap-shanghai.myqcloud.com/20220408140841.png" alt="">
-    
 
-    <div class="mb-2">
-      <span class="d-block">上海科技大学在读博士生。
-研究方向：癌症基因组学。
-Find your passion and then aim to be the best on the …</span>
-      
-      <ul class="list-inline social-icons mb-1 mt-2">
+
+
+
+
+
+
+
+<div class="toc">
+
+    <div class="page-header"><strong> 目    录 </strong></div>
+
+
+    <div id="page-scrollspy" class="toc-nav">
+
         
-        <li class="list-inline-item"><a href="https://facebook.com"><i class="fab fa-facebook"></i></a></li>
         
-      </ul>
-      <a href="/about/" class="btn btn-sm btn-primary p-1 px-3 rounded mt-2">About Me</a>
+            
+                
+                
+                    
+                    <ul class="nav">
+                    
+                    <ul class="nav">
+                    
+                    
+                        <li class="nav-item">
+                            <a class="nav-link text-left" href="#1-sra%e8%bd%acfastq">
+                            1. sra转fastq
+                            </a>
+                        </li>
+                    
+                    
+                    </ul>
+                    
+                    </ul>
+                    
+                
+            
+        
+        
+            
+                
+                
+                    
+                    <ul class="nav">
+                    
+                    <ul class="nav">
+                    
+                    
+                        <li class="nav-item">
+                            <a class="nav-link text-left" href="#%e6%b3%a8%e6%84%8f%e7%bb%86%e8%8a%82">
+                            注意细节
+                            </a>
+                        </li>
+                    
+                    
+                    </ul>
+                    
+                    </ul>
+                    
+                
+            
+        
+        
+            
+                
+                
+                    
+                    <ul class="nav">
+                    
+                    <ul class="nav">
+                    
+                    
+                        <li class="nav-item">
+                            <a class="nav-link text-left" href="#%e5%8f%82%e8%80%83">
+                            参考
+                            </a>
+                        </li>
+                    
+                    
+                    </ul>
+                    
+                    </ul>
+                    
+                
+            
+        
+
     </div>
-  </div>
-  
-  
-</div><!-- Promotion -->
 
-<div class="promotion">
-  
-  
-  <img loading="lazy" decoding="async" class="w-100" width="330" height="390" src="/images/promotion_hu6a90c30421148ac00753954565e9ea00_18207_330x0_resize_q90_h2_box.webp" alt="promotion-image">
-  <div class="promotion-content">
-    <h5 class="text-white mb-3">Create Stunning Website!!</h5>
-    <p class="text-white mb-4">Lorem ipsum dolor sit amet, consectetur sociis. Etiam nunc amet id dignissim. Feugiat id tempor vel sit ornare.</p>
-    <a href="https://themefisher.com/" class="btn btn-primary">Get Started</a>
-  </div>
-</div>
-<!-- Search -->
-
-
-<div class="widget">
-  <h5 class="widget-title"><span>Subscribe Newsletter</span></h5>
-  <form action="https://gmail.us4.list-manage.com/subscribe/post?u=463ee871f45d2d93748e77cad&amp;amp;id=a0a2c6d074" method="post" name="mc-embedded-subscribe-form" target="_blank"
-    class="widget-search">
-    <input class="mb-3" id="search-query" name="s" type="search" placeholder="Your Email Address">
-    <i class="ti-email"></i>
-    <button type="submit" class="btn btn-primary" name="subscribe" aria-label="Subscribe Newsletter"><i class="fas fa-paper-plane"></i></button>
-    <div style="position: absolute; left: -5000px;" aria-hidden="true">
-      <input type="text" name="b_463ee871f45d2d93748e77cad_a0a2c6d074" tabindex="-1">
-    </div>
-  </form>
 </div>
 
-<!-- categories -->
-<div class="widget">
-  <h5 class="widget-title"><span>Categories</span></h5>
-  <ul class="list-unstyled widget-list">
-    <li><a href="/categories/bug" class="d-flex">Bug
-        <small class="ml-auto">(5)</small></a></li>
-    <li><a href="/categories/dna_damage" class="d-flex">Dna damage
-        <small class="ml-auto">(1)</small></a></li>
-    <li><a href="/categories/ecdna" class="d-flex">Ecdna
-        <small class="ml-auto">(1)</small></a></li>
-    <li><a href="/categories/photography" class="d-flex">Photography
-        <small class="ml-auto">(1)</small></a></li>
-    <li><a href="/categories/r" class="d-flex">R
-        <small class="ml-auto">(12)</small></a></li>
-    <li><a href="/categories/shell" class="d-flex">Shell
-        <small class="ml-auto">(25)</small></a></li>
-    <li><a href="/categories/%e5%8f%af%e8%a7%86%e5%8c%96" class="d-flex">可视化
-        <small class="ml-auto">(2)</small></a></li>
-    <li><a href="/categories/%e5%a6%82%e4%bd%95%e7%a7%91%e7%a0%94" class="d-flex">如何科研
-        <small class="ml-auto">(1)</small></a></li>
-    <li><a href="/categories/%e6%8a%80%e6%9c%af" class="d-flex">技术
-        <small class="ml-auto">(7)</small></a></li>
-    <li><a href="/categories/%e6%9c%ba%e5%99%a8%e5%ad%a6%e4%b9%a0" class="d-flex">机器学习
-        <small class="ml-auto">(3)</small></a></li>
-    <li><a href="/categories/%e7%94%9f%e4%bf%a1" class="d-flex">生信
-        <small class="ml-auto">(7)</small></a></li>
-    <li><a href="/categories/%e7%94%9f%e4%bf%a1%e5%b7%a5%e5%85%b7" class="d-flex">生信工具
-        <small class="ml-auto">(35)</small></a></li>
-    <li><a href="/categories/%e7%94%9f%e5%ad%98%e5%88%86%e6%9e%90" class="d-flex">生存分析
-        <small class="ml-auto">(1)</small></a></li>
-    <li><a href="/categories/%e7%94%9f%e7%89%a9%e5%ad%a6" class="d-flex">生物学
-        <small class="ml-auto">(5)</small></a></li>
-    <li><a href="/categories/%e7%94%9f%e7%89%a9%e7%bb%9f%e8%ae%a1" class="d-flex">生物统计
-        <small class="ml-auto">(4)</small></a></li>
-    <li><a href="/categories/%e7%99%8c%e7%97%87%e5%9f%ba%e5%9b%a0%e7%bb%84%e5%ad%a6" class="d-flex">癌症基因组学
-        <small class="ml-auto">(6)</small></a></li>
-    <li><a href="/categories/%e7%ae%97%e6%b3%95" class="d-flex">算法
-        <small class="ml-auto">(3)</small></a></li>
-    <li><a href="/categories/%e8%ae%a1%e7%ae%97%e6%9c%ba%e5%9f%ba%e7%a1%80" class="d-flex">计算机基础
-        <small class="ml-auto">(2)</small></a></li>
-  </ul>
-</div><!-- latest post -->
-<div class="widget">
-  <h5 class="widget-title"><span>Latest Article</span></h5>
-  <!-- post-item -->
-  <ul class="list-unstyled widget-list mb-0">
-  
-    <li class="media widget-post align-items-center">
-      <a href="https://taozyblog.com.cn/post/2024-03-05_cindex/">        
-        
-        
-        
-        <img loading="lazy" class="mr-3" src="https://blog-1310600458.cos.ap-shanghai.myqcloud.com/Macdo2024-03-05%2015.58.30.png" alt="post image">
-        
-        
-        
-      </a>
-      <div class="media-body">
-        <h5 class="h6 mb-0"><a href="https://taozyblog.com.cn/post/2024-03-05_cindex/">评估生存模型的指标-cindex</a></h5>
-        <small>March 5, 2024</small>
+
+
+
+    
+    
+    <div class="row">
+      <div class="col-lg-10 mx-auto">
+        <div class="mt-5">
+          <div id="disqus_thread"></div>
+<script type="application/javascript">
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "themefisher-template" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        </div>
       </div>
-    </li>
-  
-    <li class="media widget-post align-items-center">
-      <a href="https://taozyblog.com.cn/post/2024-02-29_%E8%B7%91%E5%AE%8C%E4%B8%8A%E4%B8%80%E4%B8%AA%E6%A0%B7%E6%9C%AC%E5%86%8D%E8%B7%91%E4%B8%8B%E4%B8%80%E4%B8%AA/">        
-        
-        
-        
-        <img loading="lazy" class="mr-3" src="https://blog-1310600458.cos.ap-shanghai.myqcloud.com/Macdo2024-03-05%2016.10.40.png" alt="post image">
-        
-        
-        
-      </a>
-      <div class="media-body">
-        <h5 class="h6 mb-0"><a href="https://taozyblog.com.cn/post/2024-02-29_%E8%B7%91%E5%AE%8C%E4%B8%8A%E4%B8%80%E4%B8%AA%E6%A0%B7%E6%9C%AC%E5%86%8D%E8%B7%91%E4%B8%8B%E4%B8%80%E4%B8%AA/">跑完上一次样本再跑下一个，只需要一行wait</a></h5>
-        <small>February 29, 2024</small>
-      </div>
-    </li>
-  
-    <li class="media widget-post align-items-center">
-      <a href="https://taozyblog.com.cn/post/2024-02-28_%E5%8D%95%E6%A0%B7%E6%9C%AC%E5%A4%9A%E7%BA%BF%E7%A8%8B%E5%8E%9F%E5%A7%8B%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/">        
-        
-        
-        
-        <img loading="lazy" class="mr-3" src="https://blog-1310600458.cos.ap-shanghai.myqcloud.com/split3-mode.png" alt="post image">
-        
-        
-        
-      </a>
-      <div class="media-body">
-        <h5 class="h6 mb-0"><a href="https://taozyblog.com.cn/post/2024-02-28_%E5%8D%95%E6%A0%B7%E6%9C%AC%E5%A4%9A%E7%BA%BF%E7%A8%8B%E5%8E%9F%E5%A7%8B%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/">单样本多线程的原始数据处理</a></h5>
-        <small>February 28, 2024</small>
-      </div>
-    </li>
-  
-  </ul>
-</div><!-- tags -->
-<div class="widget">
-  <h5 class="widget-title"><span>Tags</span></h5>
-  <ul class="list-inline widget-list-inline">
-    <li class="list-inline-item"><a href="/tags/bug">Bug</a></li>
-    <li class="list-inline-item"><a href="/tags/dna_damage">Dna damage</a></li>
-    <li class="list-inline-item"><a href="/tags/ecdna">Ecdna</a></li>
-    <li class="list-inline-item"><a href="/tags/excel">Excel</a></li>
-    <li class="list-inline-item"><a href="/tags/image">Image</a></li>
-    <li class="list-inline-item"><a href="/tags/latex">Latex</a></li>
-    <li class="list-inline-item"><a href="/tags/linux">Linux</a></li>
-    <li class="list-inline-item"><a href="/tags/markdown">Markdown</a></li>
-    <li class="list-inline-item"><a href="/tags/mysql">Mysql</a></li>
-    <li class="list-inline-item"><a href="/tags/photo">Photo</a></li>
-    <li class="list-inline-item"><a href="/tags/posterdown">Posterdown</a></li>
-    <li class="list-inline-item"><a href="/tags/r">R</a></li>
-    <li class="list-inline-item"><a href="/tags/r%e5%8c%85">R包</a></li>
-    <li class="list-inline-item"><a href="/tags/r%e5%8c%85%e5%bc%80%e5%8f%91">R包开发</a></li>
-    <li class="list-inline-item"><a href="/tags/shell">Shell</a></li>
-    <li class="list-inline-item"><a href="/tags/shiny">Shiny</a></li>
-    <li class="list-inline-item"><a href="/tags/%e5%8d%9a%e5%ae%a2">博客</a></li>
-    <li class="list-inline-item"><a href="/tags/%e5%8e%9f%e5%a7%8b%e6%95%b0%e6%8d%ae%e5%a4%84%e7%90%86">原始数据处理</a></li>
-    <li class="list-inline-item"><a href="/tags/%e5%8f%af%e8%a7%86%e5%8c%96">可视化</a></li>
-    <li class="list-inline-item"><a href="/tags/%e6%8b%b7%e8%b4%9d%e6%95%b0%e5%8f%98%e5%bc%82">拷贝数变异</a></li>
-    <li class="list-inline-item"><a href="/tags/%e6%95%b0%e6%8d%ae%e5%a4%84%e7%90%86">数据处理</a></li>
-    <li class="list-inline-item"><a href="/tags/%e6%9c%ba%e5%99%a8%e5%ad%a6%e4%b9%a0">机器学习</a></li>
-    <li class="list-inline-item"><a href="/tags/%e7%94%9f%e5%ad%98%e5%88%86%e6%9e%90">生存分析</a></li>
-    <li class="list-inline-item"><a href="/tags/%e7%94%9f%e7%89%a9%e6%a0%87%e5%bf%97%e7%89%a9">生物标志物</a></li>
-    <li class="list-inline-item"><a href="/tags/%e7%94%9f%e7%89%a9%e7%bb%9f%e8%ae%a1">生物统计</a></li>
-    <li class="list-inline-item"><a href="/tags/%e7%99%8c%e7%97%87%e5%9f%ba%e5%9b%a0%e7%bb%84%e5%ad%a6">癌症基因组学</a></li>
-    <li class="list-inline-item"><a href="/tags/%e7%a7%91%e7%a0%94%e5%86%99%e4%bd%9c">科研写作</a></li>
-    <li class="list-inline-item"><a href="/tags/%e7%ae%97%e6%b3%95">算法</a></li>
-    <li class="list-inline-item"><a href="/tags/%e8%ae%a1%e7%ae%97%e6%9c%ba%e5%9f%ba%e7%a1%80">计算机基础</a></li>
-    <li class="list-inline-item"><a href="/tags/%e8%bd%af%e4%bb%b6%e4%bd%bf%e7%94%a8">软件使用</a></li>
-  </ul>
-</div><!-- Social -->
-<div class="widget">
-  <h5 class="widget-title"><span>Social Links</span></h5>
-  <ul class="list-inline widget-list-inline mb-3">
-    
-    <li class="list-inline-item"><a href="#" style="padding:5px 15px"><i class="fab fa-facebook"></i></a></li>
-    
-    <li class="list-inline-item"><a href="#" style="padding:5px 15px"><i class="fab fa-twitter"></i></a></li>
-    
-    <li class="list-inline-item"><a href="#" style="padding:5px 15px"><i class="fab fa-linkedin-in"></i></a></li>
-    
-    <li class="list-inline-item"><a href="#" style="padding:5px 15px"><i class="fab fa-github"></i></a></li>
-    
-  </ul>
-</div></div>
-      </aside>
-      
-      
     </div>
+    
   </div>
 </section>
 
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https:\/\/taozyblog.com.cn\/post\/2024-02-28_%E5%8D%95%E6%A0%B7%E6%9C%AC%E5%A4%9A%E7%BA%BF%E7%A8%8B%E5%8E%9F%E5%A7%8B%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86\/"
+    },
+    "headline": "单样本多线程的原始数据处理",
+    "description": "",
+    "image": "",  
+    "author": {
+      "@type": "Person",
+      "name": "Ziyu"
+    },  
+    "publisher": {
+      "@type": "Organization",
+      "name": "",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "images\/logo.png"
+      }
+    },
+    "datePublished": "2024-02-28"
+  }
+  
+</script>
 
 
 
