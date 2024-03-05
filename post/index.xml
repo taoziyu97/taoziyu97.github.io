@@ -29,42 +29,12 @@
     </item>
     
     <item>
-      <title>使用ASBOLUTE提取拷贝数并估计倍性和纯度</title>
-      <link>https://taozyblog.com.cn/post/2024-02-26_absolute/</link>
-      <pubDate>Mon, 26 Feb 2024 00:00:00 +0000</pubDate>
-      
-      <guid>https://taozyblog.com.cn/post/2024-02-26_absolute/</guid>
-      <description>&lt;p&gt;介绍如何使用MEDICC2检测全基因组扩增。&lt;/p&gt;
-&lt;hr&gt;</description>
-    </item>
-    
-    <item>
-      <title>MEDICC2:针对整个基因组倍增的癌症演化拷贝数谱系演化研究</title>
-      <link>https://taozyblog.com.cn/post/2024-01-26_medicc2/</link>
-      <pubDate>Fri, 26 Jan 2024 00:00:00 +0000</pubDate>
-      
-      <guid>https://taozyblog.com.cn/post/2024-01-26_medicc2/</guid>
-      <description>&lt;p&gt;介绍如何使用MEDICC2检测全基因组扩增。&lt;/p&gt;
-&lt;hr&gt;</description>
-    </item>
-    
-    <item>
       <title>rclone下载数据</title>
       <link>https://taozyblog.com.cn/post/2024-01-18_rclone/</link>
       <pubDate>Thu, 18 Jan 2024 00:00:00 +0000</pubDate>
       
       <guid>https://taozyblog.com.cn/post/2024-01-18_rclone/</guid>
       <description>&lt;p&gt;介绍如何使用rclone下载数据。&lt;/p&gt;
-&lt;hr&gt;</description>
-    </item>
-    
-    <item>
-      <title>展开多层json</title>
-      <link>https://taozyblog.com.cn/post/2024-01-18_json/</link>
-      <pubDate>Thu, 18 Jan 2024 00:00:00 +0000</pubDate>
-      
-      <guid>https://taozyblog.com.cn/post/2024-01-18_json/</guid>
-      <description>&lt;p&gt;介绍如何展开多层的JSON。&lt;/p&gt;
 &lt;hr&gt;</description>
     </item>
     
